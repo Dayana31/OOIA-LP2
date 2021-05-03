@@ -1,5 +1,6 @@
 package pe.edu.pucp.gestion_tramites_academicos.model;
 
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,5 +12,5 @@ package pe.edu.pucp.gestion_tramites_academicos.model;
  * @author LENOVO
  */
 public enum TipoTramite {
-    
+    MATRICULA,CONTANCIAYCARTAS,NOTAS,GRADOSYTITULOS,EPAGOS
 }
