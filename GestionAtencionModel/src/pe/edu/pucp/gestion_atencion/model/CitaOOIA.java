@@ -1,7 +1,7 @@
 
 package pe.edu.pucp.gestion_atencion.model;
 import pe.edu.pucp.gestion_humana.model.Alumno;
-import pe.edu.pucp.gestion_humana.model.Horario;
+import pe.edu.pucp.gestion_academica.model.Horario;
 import pe.edu.pucp.gestion_humana.model.Persona;
 /**
  *
