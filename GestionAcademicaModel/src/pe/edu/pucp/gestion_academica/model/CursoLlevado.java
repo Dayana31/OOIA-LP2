@@ -1,6 +1,6 @@
 
 package pe.edu.pucp.gestion_academica.model;
-import pe.edu.pucp.gestion_humana.model.Profesor;
+
 /**
  *
  * @author DAYANA
@@ -9,13 +9,12 @@ public class CursoLlevado {
     private Curso curso;
     private String ciclo;
     private double notaFinal;
-    private Profesor profesor;
 
-    public CursoLlevado(Curso curso, String ciclo, double notaFinal, Profesor profesor) {
+    public CursoLlevado(Curso curso, String ciclo, double notaFinal) {
         this.curso = curso;
         this.ciclo = ciclo;
         this.notaFinal = notaFinal;
-        this.profesor = profesor;
+        
     }
 
     public Curso getCurso() {
@@ -42,14 +41,6 @@ public class CursoLlevado {
         this.notaFinal = notaFinal;
     }
 
-    public Profesor getProfesor() {
-        return profesor;
-    }
-
-    public void setProfesor(Profesor profesor) {
-        this.profesor = profesor;
-    }
-    
     
     
 }
