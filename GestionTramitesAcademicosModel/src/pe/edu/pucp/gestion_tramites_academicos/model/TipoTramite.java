@@ -12,5 +12,5 @@ package pe.edu.pucp.gestion_tramites_academicos.model;
  * @author LENOVO
  */
 public enum TipoTramite {
-    MATRICULA,CONTANCIAYCARTAS,NOTAS,GRADOSYTITULOS,EPAGOS
+    MATRICULA,CONTANCIAYCARTAS,NOTAS,GRADOSYTITULOS,EPAGOS;
 }
