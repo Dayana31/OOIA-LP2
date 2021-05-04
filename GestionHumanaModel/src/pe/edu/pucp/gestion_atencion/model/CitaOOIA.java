@@ -1,7 +1,5 @@
 
 package pe.edu.pucp.gestion_atencion.model;
-import pe.edu.pucp.gestion_humana.model.Alumno;
-import pe.edu.pucp.gestion_atencion.model.Horario;
 import pe.edu.pucp.gestion_humana.model.Persona;
 /**
  *
@@ -13,6 +11,8 @@ public class CitaOOIA {
     private Motivo motivo;
     private Persona asesor;
 
+    public CitaOOIA(){};
+    
     public CitaOOIA(int id_cita, Horario horario, Motivo motivo, Persona asesor) {
         this.id_cita = id_cita;
         this.horario = horario;

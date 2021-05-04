@@ -9,6 +9,9 @@ public abstract class Persona implements IConsultable {
     private String direccion;
     private ArrayList<String> correos;
 
+    public Persona() {
+    }
+
     public Persona(String dni, String nombre, int edad, String direccion) {
         this.dni = dni;
         this.nombre = nombre;

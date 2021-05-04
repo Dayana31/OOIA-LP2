@@ -10,6 +10,9 @@ public class Curso {
     private String codigoCurso;
     private String nombreCurso;
 
+    public Curso() {
+    }
+
     public Curso(int id_curso, String codigoCurso, String nombreCurso) {
         this.id_curso = id_curso;
         this.codigoCurso = codigoCurso;

@@ -10,6 +10,10 @@ public class CursoLlevado {
     private String ciclo;
     private double notaFinal;
 
+    public CursoLlevado() {
+    }
+    
+
     public CursoLlevado(Curso curso, String ciclo, double notaFinal) {
         this.curso = curso;
         this.ciclo = ciclo;

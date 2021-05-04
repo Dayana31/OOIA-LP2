@@ -13,6 +13,9 @@ public class Horario {
     private Date horaInicio;
     private Date horaFin;
 
+    public Horario() {
+    }
+    
     public Horario(int id_horario, Date fecha, Date horaInicio, Date horaFin) {
         this.id_horario = id_horario;
         this.fecha = fecha;
