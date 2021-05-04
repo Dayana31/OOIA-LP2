@@ -3,7 +3,7 @@ package pe.edu.pucp.gestion_humana.model;
 import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.gestion_academica.model.Curso;
-import pe.edu.pucp.gestion_academica.model.Horario;
+import pe.edu.pucp.gestion_atencion.model.Horario;
 
 public class Profesor extends MiembroPUCP {
     private int id_alumno;

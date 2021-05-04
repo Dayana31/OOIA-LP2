@@ -1,5 +1,5 @@
 
-package pe.edu.pucp.gestion_academica.model;
+package pe.edu.pucp.gestion_atencion.model;
 
 import java.util.Date;
 

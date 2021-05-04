@@ -1,5 +1,5 @@
 package pe.edu.pucp.gestion_humana.model;
-import pe.edu.pucp.gestion_academica.model.Horario;
+import pe.edu.pucp.gestion_atencion.model.Horario;
 import java.util.ArrayList;
 import java.util.Date;
 
