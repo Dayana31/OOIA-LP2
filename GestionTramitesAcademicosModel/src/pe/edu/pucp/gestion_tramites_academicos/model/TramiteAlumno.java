@@ -15,6 +15,7 @@ import pe.edu.pucp.gestion_humana.model.Alumno;
  * @author LENOVO
  */
 public class TramiteAlumno {
+    private int id_tramite;
     private Alumno alumno;
     private Tramite tramite;
     private ArrayList<File> archivos;
@@ -30,6 +31,22 @@ public class TramiteAlumno {
         requisitos=new ArrayList<>();
         this.alumno = alumno;
         this.tramite = tramite;
+    }
+
+    public TramiteAlumno(int id_tramite, Alumno alumno, Tramite tramite, ArrayList<File> archivos, ArrayList<String> requisitos) {
+        this.id_tramite = id_tramite;
+        this.alumno = alumno;
+        this.tramite = tramite;
+        this.archivos = archivos;
+        this.requisitos = requisitos;
+    }
+
+    public int getId_tramite() {
+        return id_tramite;
+    }
+
+    public void setId_tramite(int id_tramite) {
+        this.id_tramite = id_tramite;
     }
 
     public Alumno getAlumno() {
