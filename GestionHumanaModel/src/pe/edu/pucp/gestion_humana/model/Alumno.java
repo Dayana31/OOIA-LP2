@@ -8,6 +8,7 @@ public class Alumno extends MiembroPUCP {
     private int id_alumno;
     private String especialidad;
     private int escala;
+    private double craest;
     private ArrayList<CursoLlevado> historicoCursos;
     private ArrayList<CitaOOIA> historicoCitas;
 
@@ -82,4 +83,13 @@ public class Alumno extends MiembroPUCP {
         
         return creditosAprobados;
     }
+
+    public double getCraest() {
+        return craest;
+    }
+
+    public void setCraest(double craest) {
+        this.craest = craest;
+    }
+    
 }
