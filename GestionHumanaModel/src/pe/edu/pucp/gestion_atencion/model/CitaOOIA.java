@@ -10,6 +10,7 @@ public class CitaOOIA {
     private Horario horario;
     private Motivo motivo;
     private Persona asesor;
+    private boolean asistio;
 
     public CitaOOIA(){};
     
