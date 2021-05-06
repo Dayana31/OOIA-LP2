@@ -20,6 +20,7 @@ public class TramiteAlumno {
     private Tramite tramite;
     private ArrayList<File> archivos;
     private ArrayList<String> requisitos;
+    private boolean estado;
 
     public TramiteAlumno() {
         archivos=new ArrayList<>();
@@ -86,7 +87,17 @@ public class TramiteAlumno {
     public void agregarArchivo(File archivo){
         archivos.add(archivo);
     }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
     
-    
+    public int resultadoTramite(){
+        return 0;
+    }
     
 }

@@ -17,6 +17,7 @@ import pe.edu.pucp.interfaces.IConsultable;
  */
 public class Evento implements IConsultable{
     private int id_evento;
+    private int capacidad;
     private String nombre;
     private Date fecha;
     private Date duracion;
@@ -28,14 +29,23 @@ public class Evento implements IConsultable{
         organizadores=new ArrayList<>();
     }
 
-    public Evento(int id_evento,String nombre, Date fecha) {
+    public Evento(int id_evento,int capacidad, String nombre, Date fecha) {
         ponentes=new ArrayList<>();
         organizadores=new ArrayList<>();
         this.id_evento=id_evento;
         this.nombre = nombre;
         this.fecha = fecha;
+        this.capacidad = capacidad;
     }
 
+    public int getCapacidad() {
+        return capacidad;
+    }
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+    
     public String getNombre() {
         return nombre;
     }
