@@ -13,14 +13,16 @@ public class CitaOOIA {
     private boolean asistio;
 
     public CitaOOIA(){};
-    
-    public CitaOOIA(int id_cita, Horario horario, Motivo motivo, Persona asesor) {
+
+    public CitaOOIA(int id_cita, Horario horario, Motivo motivo, Persona asesor, boolean asistio) {
         this.id_cita = id_cita;
         this.horario = horario;
         this.motivo = motivo;
         this.asesor = asesor;
+        this.asistio = asistio;
     }
-
+    
+    
     public int getId_cita() {
         return id_cita;
     }
@@ -51,6 +53,14 @@ public class CitaOOIA {
 
     public void setAsesor(Persona asesor) {
         this.asesor = asesor;
+    }
+
+    public boolean isAsistio() {
+        return asistio;
+    }
+
+    public void setAsistio(boolean asistio) {
+        this.asistio = asistio;
     }
     
     
