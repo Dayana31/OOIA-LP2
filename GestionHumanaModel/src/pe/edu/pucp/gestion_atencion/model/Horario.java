@@ -3,7 +3,6 @@ package pe.edu.pucp.gestion_atencion.model;
 
 import java.util.Date;
 import pe.edu.pucp.gestion_humana.model.MiembroPUCP;
-import pe.edu.pucp.gestion_humana.model.Profesor;
 
 /**
  *
