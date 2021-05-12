@@ -21,7 +21,28 @@ public class CursoMySQL implements CursoDAO {
     
     @Override
     public ArrayList<Curso> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       ArrayList<Curso> cursos = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_CURSOS()}");
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Curso curso = new Curso();
+                curso.setId_curso(rs.getInt("id_curso"));
+                curso.setCodigoCurso(rs.getString("codigo_curso"));
+                curso.setNombreCurso(rs.getString("nombre_curso"));
+                curso.setEstado(1);
+                cursos.add(curso);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return cursos;
     }
 
     @Override

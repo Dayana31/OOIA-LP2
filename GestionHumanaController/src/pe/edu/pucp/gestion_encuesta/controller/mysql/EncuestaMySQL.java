@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_encuesta.controller.dao.EncuestaDAO;
 import pe.edu.pucp.gestion_encuesta.model.Encuesta;
+import pe.edu.pucp.gestion_humana.model.Alumno;
 
 /**
  *
@@ -21,8 +22,32 @@ public class EncuestaMySQL implements EncuestaDAO{
     CallableStatement cs;
     
     @Override
-    public ArrayList<Encuesta> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<Encuesta> listar(int id_asesor) {
+        ArrayList<Encuesta> encuestas = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_ENCUESTAS_ASESORES(?)}");
+            cs.setInt("_id_asesor",id_asesor);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Encuesta encuesta = new Encuesta();
+                encuesta.setId_encuesta(rs.getInt("id_encuesta"));
+                encuesta.setPuntaje(rs.getDouble("puntaje"));
+                encuesta.setDescripcion(rs.getString("descripcion"));
+                encuesta.setAlumno(new Alumno());
+                encuesta.getAlumno().setId_alumno(rs.getInt("fid_alumno"));
+      
+                encuestas.add(encuesta);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return encuestas;
     }
 
     @Override
@@ -31,7 +56,7 @@ public class EncuestaMySQL implements EncuestaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call INSERTAR_ENCUESTA(?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_ENCUESTA_ASESOR(?,?,?,?,?)}");
             cs.registerOutParameter("_id_encuesta", java.sql.Types.INTEGER);
             cs.setDouble("_puntaje", encuesta.getPuntaje());
             cs.setString("_descripcion", encuesta.getDescripcion());
@@ -55,7 +80,7 @@ public class EncuestaMySQL implements EncuestaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call MODIFICAR_ENCUESTA(?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_ENCUESTA_ASESOR(?,?,?,?,?)}");
             cs.setInt("_id_encuesta", encuesta.getId_encuesta());
             cs.setDouble("_puntaje", encuesta.getPuntaje());
             cs.setString("_descripcion", encuesta.getDescripcion());

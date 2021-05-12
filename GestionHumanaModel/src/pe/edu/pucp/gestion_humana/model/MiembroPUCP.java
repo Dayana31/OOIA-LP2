@@ -6,6 +6,8 @@ public abstract class MiembroPUCP extends Persona{
    private int id_miembro_pucp;
    private String usuario_pucp;
    private Date fecha_inclusion;
+   
+   public MiembroPUCP(){};
 
     public MiembroPUCP(int id_persona, String dni, String nombre, int edad, String direccion,
                        int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion) {

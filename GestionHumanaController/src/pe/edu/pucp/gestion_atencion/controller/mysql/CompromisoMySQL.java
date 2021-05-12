@@ -19,8 +19,29 @@ public class CompromisoMySQL  implements CompromisoDAO{
     CallableStatement cs;
     
     @Override
-    public ArrayList<Compromiso> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<Compromiso> listar(int id_cita) {
+        ArrayList<Compromiso> compromisos = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_COMPROMISOS(?)}");
+            cs.setInt("_id_cita",id_cita);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Compromiso compromiso = new Compromiso();
+                compromiso.setId_compromiso(rs.getInt("id_compromiso"));
+                compromiso.setDescripcion(rs.getString("descripcion"));
+
+                compromisos.add(compromiso);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return compromisos;
     }
 
     @Override

@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_academica.controller.dao.CursoLlevadoDAO;
+import pe.edu.pucp.gestion_academica.model.Curso;
 import pe.edu.pucp.gestion_academica.model.CursoLlevado;
 
 /**
@@ -20,8 +21,35 @@ public class CursoLlevadoMySQL implements CursoLlevadoDAO{
     CallableStatement cs;
     
     @Override
-    public ArrayList<CursoLlevado> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<CursoLlevado> listar(int id_alumno) {
+       ArrayList<CursoLlevado> cursos = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_CURSOSLLEVADOS(?)}");
+            cs.setInt("_id_alumno",id_alumno);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                CursoLlevado curso = new CursoLlevado();
+                curso.setId_curso_llevado(rs.getInt("id_curso_llevado"));
+                curso.setCurso(new Curso());
+                curso.getCurso().setId_curso(rs.getInt("fid_curso"));
+                curso.setCiclo(rs.getString("ciclo"));
+                curso.setVez(rs.getInt("vez"));
+                curso.setNotaFinal(rs.getDouble("nota_final"));
+                curso.setRetirado(rs.getBoolean("retirado"));
+                curso.setFormulaDeCalificacion(rs.getString("formula_de_calificacion"));
+   
+                cursos.add(curso);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return cursos;
     }
 
     @Override

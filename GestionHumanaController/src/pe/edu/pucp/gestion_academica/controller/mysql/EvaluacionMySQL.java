@@ -20,8 +20,31 @@ public class EvaluacionMySQL implements EvaluacionDAO{
     CallableStatement cs;
     
     @Override
-    public ArrayList<Evaluacion> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<Evaluacion> listar(int id_curso_llevado) {
+        ArrayList<Evaluacion> evaluaciones = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_EVALUACIONES(?)}");
+            cs.setInt("_id_evaluacion",id_curso_llevado);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Evaluacion evaluacion = new Evaluacion();
+                evaluacion.setId_evaluacion(rs.getInt("id_evaluacion"));
+                evaluacion.setCategoria(rs.getString("categoria"));
+                evaluacion.setNombre(rs.getString("nombre"));
+                evaluacion.setNota(rs.getInt("nota"));
+      
+                evaluaciones.add(evaluacion);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return evaluaciones;
     }
 
     @Override

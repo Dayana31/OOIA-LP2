@@ -9,7 +9,7 @@ import pe.edu.pucp.gestion_academica.model.Evaluacion;
  * @author DAYANA
  */
 public interface EvaluacionDAO {
-    public ArrayList<Evaluacion> listar();
+    public ArrayList<Evaluacion> listar(int id_curso_llevado);
     public int insertar(Evaluacion evaluacion);
     public int modificar(Evaluacion evaluacion);
     public int eliminar(int idEvaluacion);    

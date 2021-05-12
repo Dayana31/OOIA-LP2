@@ -9,6 +9,8 @@ public class Compromiso {
     private CitaOOIA cita;
     private String descripcion;
 
+    public Compromiso(){}
+    
     public Compromiso(CitaOOIA cita, String descripcion) {
         this.cita = cita;
         this.descripcion = descripcion;

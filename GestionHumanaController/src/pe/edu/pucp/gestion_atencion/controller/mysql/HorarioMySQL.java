@@ -22,8 +22,31 @@ public class HorarioMySQL implements HorarioDAO{
     
 
     @Override
-    public ArrayList<Horario> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<Horario> listar(int id_asesor) {
+        ArrayList<Horario> horarios = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_HORARIOS(?)}");
+            cs.setInt("_id_asesor",id_asesor);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Horario horario = new Horario();
+                horario.setId_horario(rs.getInt("id_horario"));
+                horario.setFecha(rs.getDate("fecha"));
+                horario.setHoraInicio(rs.getDate("hora_inicio"));
+                horario.setHoraFin(rs.getDate("hora_fin"));
+                horario.setEstado(1);
+                horarios.add(horario);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return horarios;
     }
 
     @Override

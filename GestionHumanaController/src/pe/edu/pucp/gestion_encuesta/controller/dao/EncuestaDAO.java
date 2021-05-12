@@ -9,7 +9,7 @@ import pe.edu.pucp.gestion_encuesta.model.Encuesta;
  * @author DAYANA
  */
 public interface EncuestaDAO {
-    public ArrayList<Encuesta> listar();
+    public ArrayList<Encuesta> listar(int id_asesor);
     public int insertar(Encuesta encuesta);
     public int modificar(Encuesta encuesta);    
 }

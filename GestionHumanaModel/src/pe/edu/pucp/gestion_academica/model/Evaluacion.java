@@ -20,6 +20,9 @@ public class Evaluacion {
         this.nota = nota;
     }
 
+    public Evaluacion() {
+    }
+
 
 
     public int getId_evaluacion() {

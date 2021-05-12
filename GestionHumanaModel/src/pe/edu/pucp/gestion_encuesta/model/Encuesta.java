@@ -20,6 +20,9 @@ public class Encuesta {
         this.asesor = asesor;
     }
 
+    public Encuesta() {
+    }
+
     public int getId_encuesta() {
         return id_encuesta;
     }

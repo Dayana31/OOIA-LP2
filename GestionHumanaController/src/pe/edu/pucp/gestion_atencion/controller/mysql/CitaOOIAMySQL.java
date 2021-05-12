@@ -20,8 +20,33 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
     CallableStatement cs;
     
     @Override
-    public ArrayList<CitaOOIA> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public ArrayList<CitaOOIA> listar(int id_alumno) {
+      ArrayList<CitaOOIA> citas = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_CITASOOIA(?)}");
+            cs.setInt("_id_alumno",id_alumno);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                CitaOOIA cita = new CitaOOIA();
+                cita.setId_cita(rs.getInt("id_cita"));
+                cita.setFechaRegistro(rs.getDate("fecha_registro"));
+                cita.getHorario().setId_horario(rs.getInt("fid_horario"));
+                cita.getMotivo().setId_motivo(rs.getInt("fid_motivo"));
+                cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                cita.setAsistio(rs.getBoolean("asistio"));
+                cita.setEstado(1);
+                citas.add(cita);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return citas;
     }
 
     @Override

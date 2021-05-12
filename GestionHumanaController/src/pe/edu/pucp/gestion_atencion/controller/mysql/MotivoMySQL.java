@@ -20,7 +20,28 @@ public class MotivoMySQL implements MotivoDAO {
     
     @Override
     public ArrayList<Motivo> listar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<Motivo> motivos = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_MOTIVOS()}");
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Motivo motivo = new Motivo();
+                motivo.setId_motivo(rs.getInt("id_motivo"));
+                motivo.setCodigoMotivo(rs.getString("codigo_motivo"));
+                motivo.setDescripcion(rs.getString("descripcion"));
+
+                motivos.add(motivo);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return motivos;
     }
 
     @Override

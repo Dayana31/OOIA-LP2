@@ -7,7 +7,7 @@ import pe.edu.pucp.gestion_academica.model.CursoLlevado;
  * @author DAYANA
  */
 public interface CursoLlevadoDAO {
-    public ArrayList<CursoLlevado> listar();
+    public ArrayList<CursoLlevado> listar(int id_alumno);
     public int insertar(CursoLlevado cursoLlevado);
     public int modificar(CursoLlevado cursoLlevado);
     
