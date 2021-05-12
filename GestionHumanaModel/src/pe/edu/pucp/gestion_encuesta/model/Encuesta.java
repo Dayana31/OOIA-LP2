@@ -1,32 +1,34 @@
-package pe.edu.pucp.gestion_opinion.model;
+package pe.edu.pucp.gestion_encuesta.model;
 import pe.edu.pucp.gestion_humana.model.Alumno;
 import pe.edu.pucp.gestion_humana.model.MiembroPUCP;
 /**
  *
  * @author DAYANA
  */
-public class Opinion {
-    private int id_opinion;
+public class Encuesta {
+    private int id_encuesta;
     private Alumno alumno;
     private double puntaje;
     private String descripcion;
     private MiembroPUCP asesor;
 
-    public Opinion(int id_opinion, Alumno alumno, double puntaje, String descripcion, MiembroPUCP asesor) {
-        this.id_opinion = id_opinion;
+    public Encuesta(int id_encuesta, Alumno alumno, double puntaje, String descripcion, MiembroPUCP asesor) {
+        this.id_encuesta = id_encuesta;
         this.alumno = alumno;
         this.puntaje = puntaje;
         this.descripcion = descripcion;
         this.asesor = asesor;
     }
 
-    public int getId_opinion() {
-        return id_opinion;
+    public int getId_encuesta() {
+        return id_encuesta;
     }
 
-    public void setId_opinion(int id_opinion) {
-        this.id_opinion = id_opinion;
+    public void setId_encuesta(int id_encuesta) {
+        this.id_encuesta = id_encuesta;
     }
+
+    
 
     public Alumno getAlumno() {
         return alumno;
