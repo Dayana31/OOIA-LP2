@@ -3,6 +3,7 @@ import pe.edu.pucp.interfaces.IConsultable;
 import java.util.ArrayList;
 
 public abstract class Persona implements IConsultable {
+    private int id_persona;
     private String dni;
     private String nombre;
     private int edad;
@@ -12,11 +13,20 @@ public abstract class Persona implements IConsultable {
     public Persona() {
     }
 
-    public Persona(String dni, String nombre, int edad, String direccion) {
+    public Persona(int id_persona, String dni, String nombre, int edad, String direccion) {
+        this.id_persona = id_persona;
         this.dni = dni;
         this.nombre = nombre;
         this.edad = edad;
         this.direccion = direccion;
+    }
+
+    public int getId_persona() {
+        return id_persona;
+    }
+
+    public void setId_persona(int id_persona) {
+        this.id_persona = id_persona;
     }
     
     public String getDni() {

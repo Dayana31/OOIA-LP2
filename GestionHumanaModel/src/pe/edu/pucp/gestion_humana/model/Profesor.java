@@ -6,27 +6,29 @@ import pe.edu.pucp.gestion_academica.model.Curso;
 import pe.edu.pucp.gestion_atencion.model.Horario;
 
 public class Profesor extends MiembroPUCP {
-    private int id_alumno;
+    private int id_profesor;
     private String especialidad;
     private String facultad;
     private String categoria;
     private ArrayList<Curso> cursosDicta;
     private ArrayList<Horario> horariosDisponibles;
 
-    public Profesor(int id_alumno, String especialidad, String facultad, String categoria, String dni, String nombre, int edad, String direccion, String codigoPUCP, Date fecha_inclusion) {
-        super(dni, nombre, edad, direccion, codigoPUCP, fecha_inclusion);
-        this.id_alumno = id_alumno;
+    public Profesor(int id_persona, String dni, String nombre, int edad, String direccion, 
+                    int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion, 
+                    int id_profesor, String especialidad, String facultad, String categoria) {
+        super(id_persona, dni, nombre, edad, direccion, id_miembro_pucp, usuario_pucp, fecha_inclusion);
+        this.id_profesor = id_profesor;
         this.especialidad = especialidad;
         this.facultad = facultad;
         this.categoria = categoria;
+    }    
+
+    public int getId_profesor() {
+        return id_profesor;
     }
 
-    public int getId_alumno() {
-        return id_alumno;
-    }
-
-    public void setId_alumno(int id_alumno) {
-        this.id_alumno = id_alumno;
+    public void setId_profesor(int id_alumno) {
+        this.id_profesor = id_alumno;
     }
 
     public String getEspecialidad() {

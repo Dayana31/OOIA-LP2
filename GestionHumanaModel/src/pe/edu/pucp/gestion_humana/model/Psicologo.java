@@ -7,10 +7,11 @@ public class Psicologo extends MiembroPUCP{
     private int id_psicologo;
     private ArrayList<Horario> horariosDisponibls;
 
-    public Psicologo(int id_psicologo, ArrayList<Horario> horariosDisponibls, String dni, String nombre, int edad, String direccion, String codigoPUCP, Date fecha_inclusion) {
-        super(dni, nombre, edad, direccion, codigoPUCP, fecha_inclusion);
+    public Psicologo(int id_persona, String dni, String nombre, int edad, String direccion, 
+                     int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion, 
+                     int id_psicologo) {
+        super(id_persona, dni, nombre, edad, direccion, id_miembro_pucp, usuario_pucp, fecha_inclusion);
         this.id_psicologo = id_psicologo;
-        this.horariosDisponibls = horariosDisponibls;
     }
 
     public int getId_psicologo() {
