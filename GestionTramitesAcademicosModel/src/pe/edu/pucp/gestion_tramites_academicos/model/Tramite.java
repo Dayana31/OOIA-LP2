@@ -1,5 +1,8 @@
 package pe.edu.pucp.gestion_tramites_academicos.model;
 
+import java.io.File;
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -14,16 +17,22 @@ public class Tramite {
     private int id_tramite;
     private TipoTramite tipoTramite;
     private String descripcion;
-    private String requisitos;
+    private ArrayList<File>archivos;
+    private ArrayList<Requisito> requisitos;
+    private ArrayList<PreguntaFrecuente>preguntas;
+    
 
     public Tramite() {
+        archivos=new ArrayList<>();
+        requisitos=new ArrayList<>();
+        preguntas=new ArrayList<>();
     }
 
-    public Tramite(int id_tramite, TipoTramite tipoTramite, String descripcion, String requisitos) {
+    public Tramite(int id_tramite, TipoTramite tipoTramite, String descripcion) {
         this.id_tramite = id_tramite;
         this.tipoTramite = tipoTramite;
         this.descripcion = descripcion;
-        this.requisitos = requisitos;
+        
     }
 
     public int getId_tramite() {
@@ -50,13 +59,31 @@ public class Tramite {
         this.descripcion = descripcion;
     }
 
-    public String getRequisitos() {
+    public ArrayList<File> getArchivos() {
+        return archivos;
+    }
+
+    public void setArchivos(ArrayList<File> archivos) {
+        this.archivos = archivos;
+    }
+
+    public ArrayList<Requisito> getRequisitos() {
         return requisitos;
     }
 
-    public void setRequisitos(String requisitos) {
+    public void setRequisitos(ArrayList<Requisito> requisitos) {
         this.requisitos = requisitos;
     }
+
+    public ArrayList<PreguntaFrecuente> getPreguntas() {
+        return preguntas;
+    }
+
+    public void setPreguntas(ArrayList<PreguntaFrecuente> preguntas) {
+        this.preguntas = preguntas;
+    }
+
+    
     
     
 }
