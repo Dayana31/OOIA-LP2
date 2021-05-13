@@ -13,6 +13,7 @@ public class PreguntaFrecuente {
     private int id_PreguntaFrecuente;
     private String pregunta;
     private String respuesta;
+    private boolean estado;
 
     public PreguntaFrecuente(int id_PreguntaFrecuente, String pregunta, String respuesta) {
         this.id_PreguntaFrecuente = id_PreguntaFrecuente;
@@ -45,6 +46,14 @@ public class PreguntaFrecuente {
 
     public void setRespuesta(String respuesta) {
         this.respuesta = respuesta;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
     
             

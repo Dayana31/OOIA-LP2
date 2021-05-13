@@ -21,7 +21,9 @@ public class TramiteAlumno {
     private boolean estado;
 
     
-
+    public TramiteAlumno() {
+    }
+    
     public TramiteAlumno(Alumno alumno, Tramite tramite) {
         this.alumno = alumno;
         this.tramite = tramite;

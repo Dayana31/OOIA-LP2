@@ -16,7 +16,7 @@ public class Requisito {
     private double creditosMin;
     private int estadoAlumno;
     private int escalaAlumno;
-
+    private boolean estado;
     public Requisito() {
     }
 
@@ -83,6 +83,14 @@ public class Requisito {
 
     public void setEscalaAlumno(int escalaAlumno) {
         this.escalaAlumno = escalaAlumno;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
     
 }

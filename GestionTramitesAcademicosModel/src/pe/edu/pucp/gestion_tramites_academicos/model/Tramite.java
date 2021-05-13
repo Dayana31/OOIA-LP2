@@ -20,6 +20,7 @@ public class Tramite {
     private ArrayList<File>archivos;
     private ArrayList<Requisito> requisitos;
     private ArrayList<PreguntaFrecuente>preguntas;
+    private boolean estado;
     
 
     public Tramite() {
@@ -29,6 +30,9 @@ public class Tramite {
     }
 
     public Tramite(int id_tramite, TipoTramite tipoTramite, String descripcion) {
+        archivos=new ArrayList<>();
+        requisitos=new ArrayList<>();
+        preguntas=new ArrayList<>();
         this.id_tramite = id_tramite;
         this.tipoTramite = tipoTramite;
         this.descripcion = descripcion;
@@ -81,6 +85,14 @@ public class Tramite {
 
     public void setPreguntas(ArrayList<PreguntaFrecuente> preguntas) {
         this.preguntas = preguntas;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 
     
