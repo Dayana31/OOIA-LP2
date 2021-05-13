@@ -1,43 +1,39 @@
-package pe.edu.pucp.gestion_atencion.controller.mysql;
+
+package pe.edu.pucp.gestion_academica.controller.mysql;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
-import pe.edu.pucp.gestion_atencion.controller.dao.HorarioDAO;
-import pe.edu.pucp.gestion_atencion.model.Horario;
-
+import pe.edu.pucp.gestion_academica.controller.dao.CursoDAO;
+import pe.edu.pucp.gestion_academica.model.Curso;
 
 /**
  *
  * @author DAYANA
  */
-public class HorarioMySQL implements HorarioDAO{
+public class CursoMySQL implements CursoDAO {
     Connection con; //java.sql.Connection
     ResultSet rs;
     CallableStatement cs;
     
-
     @Override
-    public ArrayList<Horario> listar(int id_asesor) {
-        ArrayList<Horario> horarios = new ArrayList<>();
+    public ArrayList<Curso> listar() {
+       ArrayList<Curso> cursos = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_HORARIOS(?)}");
-            cs.setInt("_id_asesor",id_asesor);
+            cs = con.prepareCall("{call LISTAR_CURSOS()}");
             rs = cs.executeQuery();
             while(rs.next()){
-                Horario horario = new Horario();
-                horario.setId_horario(rs.getInt("id_horario"));
-                horario.setFecha(rs.getDate("fecha"));
-                horario.setHoraInicio(rs.getDate("hora_inicio"));
-                horario.setHoraFin(rs.getDate("hora_fin"));
-                horario.setEstado(1);
-                horarios.add(horario);
+                Curso curso = new Curso();
+                curso.setId_curso(rs.getInt("id_curso"));
+                curso.setCodigoCurso(rs.getString("codigo_curso"));
+                curso.setNombreCurso(rs.getString("nombre_curso"));
+                curso.setEstado(1);
+                cursos.add(curso);
             }
             rs.close();
             cs.close();
@@ -46,11 +42,11 @@ public class HorarioMySQL implements HorarioDAO{
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        return horarios;
+        return cursos;
     }
 
     @Override
-    public int insertar(Horario horario) {
+    public int insertar(Curso curso) {
         int resultado=0;
         try{
             //registrar el driver
@@ -59,14 +55,12 @@ public class HorarioMySQL implements HorarioDAO{
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call INSERTAR_HORARIO(?,?,?,?,?)}");
-           cs.registerOutParameter("_id_horario",java.sql.Types.INTEGER);
-           cs.setDate("_fecha", (Date) horario.getFecha());
-           cs.setDate("_hora_inicio", (Date) horario.getFecha());
-           cs.setDate("_hora_fin", (Date) horario.getHoraInicio());
-           cs.setInt("_fid_asesor", horario.getAsesor().getId_miembro_pucp());
+           cs = con.prepareCall("{call INSERTAR_CURSO(?,?,?)}");
+           cs.registerOutParameter("_id_curso",java.sql.Types.INTEGER);
+           cs.setString("_codigo_curso",curso.getCodigoCurso());
+           cs.setString("_nombre_curso",curso.getNombreCurso());
            cs.executeUpdate();
-           horario.setId_horario(cs.getInt("_id_horario"));
+           curso.setId_curso(cs.getInt("_id_curso"));
            resultado=1;
            cs.close();
         }catch(Exception ex){
@@ -80,7 +74,7 @@ public class HorarioMySQL implements HorarioDAO{
     }
 
     @Override
-    public int modificar(Horario horario) {
+    public int modificar(Curso curso) {
         int resultado=0;
         try{
             //registrar el driver
@@ -89,12 +83,10 @@ public class HorarioMySQL implements HorarioDAO{
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call MODIFICAR_HORARIO(?,?,?,?,?)}");
-           cs.setInt("_id_horario",horario.getId_horario());
-           cs.setDate("_fecha", (Date) horario.getFecha());
-           cs.setDate("_hora_inicio", (Date) horario.getFecha());
-           cs.setDate("_hora_fin", (Date) horario.getHoraInicio());
-           cs.setInt("_fid_asesor", horario.getAsesor().getId_miembro_pucp());
+           cs = con.prepareCall("{call MODIFICAR_CURSO(?,?,?)}");
+           cs.setInt("_id_curso",curso.getId_curso());
+           cs.setString("_codigo_curso",curso.getCodigoCurso());
+           cs.setString("_nombre_curso",curso.getNombreCurso());
            cs.executeUpdate();
            resultado=1;
            cs.close();
@@ -109,7 +101,7 @@ public class HorarioMySQL implements HorarioDAO{
     }
 
     @Override
-    public int eliminar(int idHorario) {
+    public int eliminar(int idCurso) {
         int resultado=0;
         try{
             //registrar el driver
@@ -118,8 +110,8 @@ public class HorarioMySQL implements HorarioDAO{
             con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
             
-            cs = con.prepareCall("{call ELIMINAR_HORARIO(?)}");
-            cs.setInt("_id_horario",idHorario);
+            cs = con.prepareCall("{call ELIMINAR_CURSO(?)}");
+            cs.setInt("_id_curso",idCurso);
             cs.executeUpdate();
             resultado=1;
             cs.close();

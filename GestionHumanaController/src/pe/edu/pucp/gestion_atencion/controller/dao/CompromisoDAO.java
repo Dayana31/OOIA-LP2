@@ -9,7 +9,7 @@ import pe.edu.pucp.gestion_atencion.model.Compromiso;
  * @author DAYANA
  */
 public interface CompromisoDAO {
-    public ArrayList<Compromiso> listar();
+    public ArrayList<Compromiso> listar(int id_cita);
     public int insertar(Compromiso compromiso);
     public int modificar(Compromiso compromiso);
 }

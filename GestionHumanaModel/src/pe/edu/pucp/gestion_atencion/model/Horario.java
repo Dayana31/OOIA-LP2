@@ -2,6 +2,7 @@
 package pe.edu.pucp.gestion_atencion.model;
 
 import java.util.Date;
+import pe.edu.pucp.gestion_humana.model.MiembroPUCP;
 
 /**
  *
@@ -12,16 +13,22 @@ public class Horario {
     private Date fecha;
     private Date horaInicio;
     private Date horaFin;
+    private MiembroPUCP asesor;
+    private int estado;
 
     public Horario() {
-    }
-    
-    public Horario(int id_horario, Date fecha, Date horaInicio, Date horaFin) {
+    } 
+
+    public Horario(int id_horario, Date fecha, Date horaInicio, Date horaFin, MiembroPUCP asesor, int estado) {
         this.id_horario = id_horario;
         this.fecha = fecha;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
+        this.asesor = asesor;
+        this.estado = estado;
     }
+    
+
 
     public int getId_horario() {
         return id_horario;
@@ -53,6 +60,24 @@ public class Horario {
 
     public void setHoraFin(Date horaFin) {
         this.horaFin = horaFin;
+    }
+
+    public MiembroPUCP getAsesor() {
+        return asesor;
+    }
+
+    public void setAsesor(MiembroPUCP asesor) {
+        this.asesor = asesor;
+    }
+
+
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
     }
     
     
