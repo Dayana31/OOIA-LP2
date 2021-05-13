@@ -17,9 +17,9 @@ public class Alumno extends MiembroPUCP {
     private ArrayList<CursoLlevado> historicoCursos;
     private ArrayList<CitaOOIA> historicoCitas;   
 
-    public Alumno(){}
-
-    
+    public Alumno() {
+    }
+        
     public Alumno(int id_persona, String dni, String nombre, int edad, String direccion,
                   int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion,
                   int id_alumno, String codigo_pucp, String especialidad, int craest, int estado) {
