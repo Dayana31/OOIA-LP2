@@ -37,7 +37,7 @@ public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
                 coordinador.setDni(rs.getString("dni"));
                 coordinador.setEdad(rs.getInt("edad"));
                 coordinador.setDireccion(rs.getString("direccion"));
-                coordinador.setUsuarioPUCP(rs.getString("usuario_pucp"));
+                coordinador.setUsuario_pucp(rs.getString("usuario_pucp"));
                 coordinador.setFecha_inclusion(rs.getDate("fecha_inclusion"));
                 coordinador.setCorreo(rs.getString("correo"));
                 
@@ -73,7 +73,7 @@ public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
             cs.setInt("_edad", coordinador.getEdad());
             cs.setString("_direccion", coordinador.getDireccion());
             //Insertamos en miembro_pucp
-            cs.setString("_usuario_pucp", coordinador.getUsuarioPUCP());
+            cs.setString("_usuario_pucp", coordinador.getUsuario_pucp());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(coordinador.getFecha_inclusion().getTime()));
             
             //Ejecutamos el procedimiento
@@ -81,7 +81,7 @@ public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
             
             //Rescatamos los id's que se generaron automaticamente
             coordinador.setId_persona(cs.getInt("_id_persona"));
-            coordinador.setId_miembro_PUCP(cs.getInt("_id_coordinador"));
+            coordinador.setId_miembro_pucp(cs.getInt("_id_coordinador"));
             resultado = 1;
             cs.close();
         }catch(Exception ex){
@@ -105,13 +105,13 @@ public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
             
             //Modificamos en persona
             cs.setInt("_id_persona", coordinador.getId_persona());
-            cs.setInt("_id_coordinador", coordinador.getId_miembro_PUCP());
+            cs.setInt("_id_coordinador", coordinador.getId_miembro_pucp());
             cs.setString("_nombre", coordinador.getNombre());
             cs.setString("_dni", coordinador.getDni());
             cs.setInt("_edad", coordinador.getEdad());
             cs.setString("_direccion", coordinador.getDireccion());
             //Modificamos en miembro_pucp
-            cs.setString("_usuario_pucp", coordinador.getUsuarioPUCP());
+            cs.setString("_usuario_pucp", coordinador.getUsuario_pucp());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(coordinador.getFecha_inclusion().getTime()));
             
             //Ejecutamos el procedimiento

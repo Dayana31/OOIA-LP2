@@ -45,6 +45,10 @@ public abstract class Persona implements IConsultable {
         this.nombre = nombre;
     }
 
+    public void setCorreo(String correo){
+        correos.add(correo);
+    }
+    
     public ArrayList<String> getCorreos() {
         return correos;
     }
