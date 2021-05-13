@@ -10,18 +10,25 @@ public class Profesor extends MiembroPUCP {
     private String especialidad;
     private String facultad;
     private String categoria;
+    private int estado;
     private ArrayList<Curso> cursosDicta;
     private ArrayList<Horario> horariosDisponibles;
 
     public Profesor(int id_persona, String dni, String nombre, int edad, String direccion, 
                     int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion, 
-                    int id_profesor, String especialidad, String facultad, String categoria) {
+                    int id_profesor, String especialidad, String facultad, String categoria, int estado) {
         super(id_persona, dni, nombre, edad, direccion, id_miembro_pucp, usuario_pucp, fecha_inclusion);
         this.id_profesor = id_profesor;
         this.especialidad = especialidad;
         this.facultad = facultad;
         this.categoria = categoria;
+        this.estado = estado;
     }    
+
+    public Profesor() {
+        
+    }
+
 
     public int getId_profesor() {
         return id_profesor;
@@ -71,6 +78,15 @@ public class Profesor extends MiembroPUCP {
         this.horariosDisponibles = horariosDisponibles;
     }
 
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+
+    
     
     @Override
     public String consultarDatos() {

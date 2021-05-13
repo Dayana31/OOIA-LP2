@@ -76,7 +76,7 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_especialidad", alumno.getEspecialidad());
             cs.setDouble("_craest", alumno.getCraest());
             cs.executeUpdate();
-            alumno.setId_persona(cs.getInt("_id_empleado"));
+            alumno.setId_persona(cs.getInt("_id_psicologo"));
             resultado = 1;
             cs.close();
         }catch(Exception ex){
