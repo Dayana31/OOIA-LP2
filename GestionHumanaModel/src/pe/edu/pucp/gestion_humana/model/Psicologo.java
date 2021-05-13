@@ -14,6 +14,9 @@ public class Psicologo extends MiembroPUCP{
         this.id_psicologo = id_psicologo;
     }
 
+    public Psicologo() {
+    }
+
     public int getId_psicologo() {
         return id_psicologo;
     }
