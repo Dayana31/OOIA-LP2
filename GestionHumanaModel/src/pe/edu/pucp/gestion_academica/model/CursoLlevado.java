@@ -1,13 +1,15 @@
 
 package pe.edu.pucp.gestion_academica.model;
 
+import pe.edu.pucp.gestion_humana.model.Alumno;
+
 /**
  *
  * @author DAYANA
  */
 public class CursoLlevado {
     private int id_curso_llevado;
-    //private Alumno alumno;
+    private Alumno alumno;
     private Curso curso;
     private String ciclo;
     private int vez;
@@ -35,6 +37,14 @@ public class CursoLlevado {
 
     public void setId_curso_llevado(int id_curso_llevado) {
         this.id_curso_llevado = id_curso_llevado;
+    }
+
+    public Alumno getAlumno() {
+        return alumno;
+    }
+
+    public void setAlumno(Alumno alumno) {
+        this.alumno = alumno;
     }
     
     public Curso getCurso() {

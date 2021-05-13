@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_atencion.controller.dao.CitaOOIADAO;
 import pe.edu.pucp.gestion_atencion.model.CitaOOIA;
+import pe.edu.pucp.gestion_atencion.model.Horario;
+import pe.edu.pucp.gestion_atencion.model.Motivo;
 
 /**
  *
@@ -32,8 +34,11 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
                 CitaOOIA cita = new CitaOOIA();
                 cita.setId_cita(rs.getInt("id_cita"));
                 cita.setFechaRegistro(rs.getDate("fecha_registro"));
-                cita.getHorario().setId_horario(rs.getInt("fid_horario"));
-                cita.getMotivo().setId_motivo(rs.getInt("fid_motivo"));
+                cita.setHorario(new Horario());
+                cita.getHorario().setFecha(rs.getDate("fecha"));
+                cita.getHorario().setHoraInicio(rs.getDate("hora_inicio"));
+                cita.setMotivo(new Motivo());
+                cita.getMotivo().setDescripcion(rs.getString("descripcion"));
                 cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
                 cita.setAsistio(rs.getBoolean("asistio"));
                 cita.setEstado(1);
@@ -100,7 +105,7 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
            cs.setInt("_fid_asesor",citaOOIA.getAsesor().getId_miembro_pucp());
            cs.setBoolean("_asistio",citaOOIA.isAsistio());
            cs.executeUpdate();
-           citaOOIA.setId_cita(cs.getInt("_id_cita"));
+          
            resultado=1;
            cs.close();
         }catch(Exception ex){

@@ -33,7 +33,8 @@ public class CursoLlevadoMySQL implements CursoLlevadoDAO{
                 CursoLlevado curso = new CursoLlevado();
                 curso.setId_curso_llevado(rs.getInt("id_curso_llevado"));
                 curso.setCurso(new Curso());
-                curso.getCurso().setId_curso(rs.getInt("fid_curso"));
+                curso.getCurso().setCodigoCurso(rs.getString("codigo_curso"));
+                curso.getCurso().setNombreCurso(rs.getString("nombre_curso"));
                 curso.setCiclo(rs.getString("ciclo"));
                 curso.setVez(rs.getInt("vez"));
                 curso.setNotaFinal(rs.getDouble("nota_final"));
@@ -64,7 +65,7 @@ public class CursoLlevadoMySQL implements CursoLlevadoDAO{
           
            cs = con.prepareCall("{call INSERTAR_CURSOLLEVADO(?,?,?,?,?,?,?,?)}");
            cs.registerOutParameter("_id_curso_llevado",java.sql.Types.INTEGER);
-           //cs.setInt("_fid_alumno",cursoLlevado);
+           cs.setInt("_fid_alumno",cursoLlevado.getAlumno().getId_alumno());
            cs.setInt("_fid_curso",cursoLlevado.getCurso().getId_curso());
            cs.setString("_ciclo",cursoLlevado.getCiclo());
            cs.setInt("_vez",cursoLlevado.getVez());
@@ -97,7 +98,7 @@ public class CursoLlevadoMySQL implements CursoLlevadoDAO{
           
            cs = con.prepareCall("{call MODIFICAR_CURSOLLEVADO(?,?,?,?,?,?,?,?)}");
            cs.setInt("_id_curso_llevado",cursoLlevado.getId_curso_llevado());
-           //cs.setInt("_fid_alumno",cursoLlevado);
+           cs.setInt("_fid_alumno",cursoLlevado.getAlumno().getId_alumno());
            cs.setInt("_fid_curso",cursoLlevado.getCurso().getId_curso());
            cs.setString("_ciclo",cursoLlevado.getCiclo());
            cs.setInt("_vez",cursoLlevado.getVez());

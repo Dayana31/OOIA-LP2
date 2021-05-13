@@ -88,7 +88,7 @@ public class EvaluacionMySQL implements EvaluacionDAO{
                    DBManager.user,DBManager.password);
           
            cs = con.prepareCall("{call MODIFICAR_EVALUACION(?,?,?,?,?)}");
-           cs.registerOutParameter("_id_evaluacion",java.sql.Types.INTEGER);
+           cs.setInt("_id_evaluacion",evaluacion.getId_evaluacion());
            cs.setInt("_fid_curso_llevado",evaluacion.getCursoLlevado().getId_curso_llevado());
            cs.setString("_categoria",evaluacion.getCategoria());
            cs.setString("_nombre",evaluacion.getNombre());
@@ -106,9 +106,4 @@ public class EvaluacionMySQL implements EvaluacionDAO{
         return resultado;
     }
 
-    @Override
-    public int eliminar(int idEvaluacion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }
