@@ -11,8 +11,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_tramites_academicos.dao.PreguntaFrecuenteDAO;
 import pe.edu.pucp.gestion_tramites_academicos.model.PreguntaFrecuente;
@@ -26,7 +24,7 @@ public class PreguntaFrecuenteMySql implements PreguntaFrecuenteDAO{
     ResultSet rs;
     CallableStatement cs;
     @Override
-    public ArrayList<PreguntaFrecuente> listar(int id_tramite) {
+    public ArrayList<PreguntaFrecuente> listar(int id_tramite) { //agregar opcion si no ingresa tramite se listen todas las preguntas frecuentes que existan.
         ArrayList<PreguntaFrecuente> preguntas=new ArrayList<>();
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -66,7 +64,7 @@ public class PreguntaFrecuenteMySql implements PreguntaFrecuenteDAO{
             cs.setInt("_fid_tramite", id_tramite);
             cs.setString("_pregunta", pregunta.getPregunta());
             cs.setString("_respuesta", pregunta.getRespuesta());
-            cs.executeQuery();
+            cs.executeUpdate();
             pregunta.setId_PreguntaFrecuente(cs.getInt("_id_pregunta_frecuente"));
             resultado=1;
             cs.close();
