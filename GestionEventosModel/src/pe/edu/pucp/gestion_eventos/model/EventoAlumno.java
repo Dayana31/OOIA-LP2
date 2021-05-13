@@ -1,41 +1,62 @@
 package pe.edu.pucp.gestion_eventos.model;
 
+import java.util.ArrayList;
 import pe.edu.pucp.gestion_humana.model.Alumno;
 
 public class EventoAlumno{
-    private Evento evento;
-    private Alumno alumno;
     private int id_encuesta;
-    private int valoracionPonente;
+    private int id_alumno;
+    private int id_evento;
+    private int valoracionPonentes;
     private int valoracionEvento;
     private int valoracionUtilidad;
     private boolean asistio;
+    private String comentario;
 
-    public EventoAlumno(Evento evento, Alumno alumno, int id_encuesta, int valoracionPonente, int valoracionEvento, int valoracionUtilidad, boolean asistio) {
-        this.evento = evento;
-        this.alumno = alumno;
+    public EventoAlumno(){
+       
+    }
+
+    public EventoAlumno(int id_encuesta, int id_alumno, int id_evento, int valoracionPonentes, int valoracionEvento, int valoracionUtilidad, boolean asistio, String comentario) {
         this.id_encuesta = id_encuesta;
-        this.valoracionPonente = valoracionPonente;
+        this.id_alumno = id_alumno;
+        this.id_evento = id_evento;
+        this.valoracionPonentes = valoracionPonentes;
         this.valoracionEvento = valoracionEvento;
         this.valoracionUtilidad = valoracionUtilidad;
         this.asistio = asistio;
+        this.comentario = comentario;
     }
 
-    public Evento getEvento() {
-        return evento;
+    public int getValoracionPonentes() {
+        return valoracionPonentes;
     }
 
-    public void setEvento(Evento evento) {
-        this.evento = evento;
+    public void setValoracionPonentes(int valoracionPonentes) {
+        this.valoracionPonentes = valoracionPonentes;
+    }
+    
+    
+    
+    public int getId_alumno() {
+        return id_alumno;
     }
 
-    public Alumno getAlumno() {
-        return alumno;
+    public void setId_alumno(int id_alumno) {
+        this.id_alumno = id_alumno;
     }
 
-    public void setAlumno(Alumno alumno) {
-        this.alumno = alumno;
+    public int getId_evento() {
+        return id_evento;
     }
+
+    public void setId_evento(int id_evento) {
+        this.id_evento = id_evento;
+    }
+
+   
+
+    
 
     public int getId_encuesta() {
         return id_encuesta;
@@ -45,13 +66,6 @@ public class EventoAlumno{
         this.id_encuesta = id_encuesta;
     }
 
-    public int getValoracionPonente() {
-        return valoracionPonente;
-    }
-
-    public void setValoracionPonente(int valoracionPonente) {
-        this.valoracionPonente = valoracionPonente;
-    }
 
     public int getValoracionEvento() {
         return valoracionEvento;
@@ -76,10 +90,15 @@ public class EventoAlumno{
     public void setAsistio(boolean asistio) {
         this.asistio = asistio;
     }
-    
-    
-    
-    
-    
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+
     
 }
