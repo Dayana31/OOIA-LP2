@@ -71,12 +71,12 @@ public class ProfesorMySQL implements ProfesorDAO {
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", profesor.getUsuario_pucp());
             cs.setDate("_fecha_inclusion", new java.sql.Date(profesor.getFecha_inclusion().getTime()));
-            /*Alumno*/
+            /*Profesor*/
             cs.setString("_especialidad", profesor.getEspecialidad());
             cs.setString("_facultad", profesor.getFacultad());
             cs.setString("_categoria", profesor.getCategoria());
             cs.executeUpdate();
-            profesor.setId_persona(cs.getInt("_id_empleado"));
+            profesor.setId_persona(cs.getInt("_id_psicologo"));
             resultado = 1;
             cs.close();
         }catch(Exception ex){
