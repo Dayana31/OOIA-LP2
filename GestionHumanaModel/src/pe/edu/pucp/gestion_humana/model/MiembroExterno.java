@@ -6,6 +6,9 @@ public abstract class MiembroExterno extends Persona{
     private int telefono;
     private String ocupacion;
 
+    public MiembroExterno() {
+    }
+    
 
     public MiembroExterno(int id_persona, String dni, String nombre, int edad, String direccion,
                           int id_miembro_externo, int telefono, String ocupacion) {
