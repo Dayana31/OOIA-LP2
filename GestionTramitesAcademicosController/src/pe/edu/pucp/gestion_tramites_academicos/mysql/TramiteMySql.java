@@ -40,7 +40,7 @@ public class TramiteMySql implements TramiteDAO {
         try{ 
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url,DBManager.user,DBManager.password);
-            st=con.prepareCall("{call LISTAR_TRAMITE(?,?,?)}");
+            st=con.prepareCall("{call LISTAR_TRAMITE()}");
             rs=st.executeQuery();
             while(rs.next()){
                 Tramite aux=new Tramite();
@@ -64,9 +64,9 @@ public class TramiteMySql implements TramiteDAO {
                     aux.setTipoTramite(NOTAS);
                     break;    
             }
-             //aux.setArchivos(conseguirArchivos(aux));
-             //aux.setRequisitos(conseguirRequisitos(aux));
-             //aux.setPreguntas(conseguirPreguntas(aux));
+             aux.setArchivos(conseguirArchivos(aux));
+             aux.setRequisitos(conseguirRequisitos(aux));
+             aux.setPreguntas(conseguirPreguntas(aux));
             }
             
            
@@ -107,13 +107,14 @@ public class TramiteMySql implements TramiteDAO {
                     break;    
             }
             st.executeUpdate();
-             resultado=1;       
+            tramite.setId_tramite(st.getInt("_id_tramite"));
+             
              st.close();
              ArrayList<Requisito>lista=tramite.getRequisitos();
              for( Requisito aux :lista){
                  st=con.prepareCall("{call INSERTAR_TRAMITE_REQUISITO(?,?)}");
-                 st.setInt("_fid_tramite", aux.getId_requisito());
-                 st.setInt("_fid_requisito", tramite.getId_tramite());
+                 st.setInt("_fid_tramite",  tramite.getId_tramite());
+                 st.setInt("_fid_requisito",aux.getId_requisito());
                  st.executeUpdate();
                  st.close();
              }
@@ -131,7 +132,7 @@ public class TramiteMySql implements TramiteDAO {
                  st.executeUpdate();
                  st.close();
              }
-          
+          resultado=1;       
            
         }catch (Exception e) {
             System.out.println(e.getMessage());
@@ -199,24 +200,45 @@ public class TramiteMySql implements TramiteDAO {
             
     }
 
-//    private ArrayList<Requisito> conseguirRequisitos(Tramite aux) {
-//            ArrayList<Requisito> lista=new ArrayList<>();
-//            ArrayList<Requisito> listaTotal=new RequisitoMySql().listar();
-//            st=con.prepareCall("call LISTAR_REQUISITO_TRAMITE()");
-//            rs=st.executeQuery();
-//            while(rs.next()){
-//                if(rs.getInt("_fid_tramite")==aux.getId_tramite()){
-//                    //lista.add(new RequisitoMySql().);
-//                }
-//            }
-//            rs.close();
-//            st.close();
-//            return lista;
-//        
-//    }
+    private ArrayList<Requisito> conseguirRequisitos(Tramite aux) throws SQLException {
+        // se listan todos los requisitos que existen    
+        ArrayList<Requisito>lista=new RequisitoMySql().listar();
+        //variable que se va a devolver    
+        ArrayList<Requisito>devolver=new ArrayList<>();
+        //se lista todos los requisitos asociados a un tramite    
+        st=con.prepareCall("{call LISTAR_TRAMITE_REQUISITO(?)}");
+            st.setInt("_id_tramite", aux.getId_tramite());
+            rs=st.executeQuery();
+            int i=-1;
+            Requisito x;
+            //se busca y añade el requisito a la variable devolver
+            while(rs.next()){
+                i=estaRequisito(rs.getInt("fid_requisito"),lista);
+                if(i>=0){
+                    x=lista.get(i);
+                    devolver.add(lista.get(i));
+                    }
+            }
+            return devolver;
+        
+    }
 
     private ArrayList<PreguntaFrecuente> conseguirPreguntas(Tramite aux) {
-        return null;
+        return new PreguntaFrecuenteMySql().listar(aux.getId_tramite());
+        
     }
-    
+
+    private int estaRequisito(int aInt, ArrayList<Requisito> lista) {
+        int pos=-1;
+        for(int i=0;i<lista.size();i++)
+            if(aInt==lista.get(i).getId_requisito())
+                return i;
+        
+        return pos;
+        
+        
+    }
+
 }
+
+

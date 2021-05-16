@@ -60,14 +60,15 @@ public class RequisitoMySql implements RequisitoDAO{
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url,DBManager.user,DBManager.password);
-            cs= con.prepareCall("{call INSERTAR_REQUISITOS(?,?,?,?,?,?)}");
-            cs.registerOutParameter("_id_registro",  java.sql.Types.INTEGER);
+            cs= con.prepareCall("{call INSERTAR_REQUISITO(?,?,?,?,?,?)}");
+            cs.registerOutParameter("_id_requisito",  java.sql.Types.INTEGER);
             cs.setString("_descripcion", requisito.getDescripcion());
             cs.setDouble("_craestMin", requisito.getCraestMin());
             cs.setDouble("_creditosMin", requisito.getCreditosMin());
             cs.setInt("_estadoAlumno", requisito.getEstadoAlumno());
-            cs.setInt("_escalaAlumno", requisito.getEscalaAlumno());
+            cs.setInt("_escala_alumno", requisito.getEscalaAlumno());
             cs.executeUpdate();
+            requisito.setId_requisito(cs.getInt("_id_requisito"));
             resultado=1;
             cs.close();
         } catch (Exception e) {

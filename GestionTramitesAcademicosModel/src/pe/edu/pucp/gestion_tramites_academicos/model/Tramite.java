@@ -95,7 +95,16 @@ public class Tramite {
         this.estado = estado;
     }
 
+    public void agregarRequisito(Requisito a){
+        requisitos.add(a);
+    }
     
+    public void agregaArchivo(File e){
+        archivos.add(e);
+    }
     
+    public void agregarPreguntaFrecuente(PreguntaFrecuente e){
+        preguntas.add(e);
+    }
     
 }
