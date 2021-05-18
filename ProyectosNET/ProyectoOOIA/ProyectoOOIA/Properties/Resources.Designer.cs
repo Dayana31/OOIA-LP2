@@ -65,7 +65,7 @@ namespace ProyectoOOIA.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _013_mail {
             get {
-                object obj = ResourceManager.GetObject("013-mail", resourceCulture);
+                object obj = ResourceManager.GetObject("_013_mail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace ProyectoOOIA.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _017_mobile_phone {
             get {
-                object obj = ResourceManager.GetObject("017-mobile-phone", resourceCulture);
+                object obj = ResourceManager.GetObject("_017_mobile_phone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,7 +85,7 @@ namespace ProyectoOOIA.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _025_arroba {
             get {
-                object obj = ResourceManager.GetObject("025-arroba", resourceCulture);
+                object obj = ResourceManager.GetObject("_025_arroba", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +95,7 @@ namespace ProyectoOOIA.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _028_telephone_2 {
             get {
-                object obj = ResourceManager.GetObject("028-telephone-2", resourceCulture);
+                object obj = ResourceManager.GetObject("_028_telephone_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +105,17 @@ namespace ProyectoOOIA.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _1200px_PUCP_text_logo_svg {
             get {
-                object obj = ResourceManager.GetObject("1200px-PUCP_text_logo.svg", resourceCulture);
+                object obj = ResourceManager.GetObject("_1200px_PUCP_text_logo_svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap B2B_Appointment_Setting_Services {
+            get {
+                object obj = ResourceManager.GetObject("B2B_Appointment_Setting_Services", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +126,146 @@ namespace ProyectoOOIA.Properties {
         internal static System.Drawing.Bitmap EEGGCC {
             get {
                 object obj = ResourceManager.GetObject("EEGGCC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Estudiante {
+            get {
+                object obj = ResourceManager.GetObject("Estudiante", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Estudiante1 {
+            get {
+                object obj = ResourceManager.GetObject("Estudiante1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap foto_29 {
+            get {
+                object obj = ResourceManager.GetObject("foto_29", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Icono_Agenda_tu_Cita {
+            get {
+                object obj = ResourceManager.GetObject("Icono_Agenda_tu_Cita", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon log_out {
+            get {
+                object obj = ResourceManager.GetObject("log_out", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap log_out__1_ {
+            get {
+                object obj = ResourceManager.GetObject("log_out__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap log_out__2_ {
+            get {
+                object obj = ResourceManager.GetObject("log_out__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon log_out1 {
+            get {
+                object obj = ResourceManager.GetObject("log_out1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon log_out11 {
+            get {
+                object obj = ResourceManager.GetObject("log_out11", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon log_out12 {
+            get {
+                object obj = ResourceManager.GetObject("log_out12", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] log_out2 {
+            get {
+                object obj = ResourceManager.GetObject("log_out2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap log_out3 {
+            get {
+                object obj = ResourceManager.GetObject("log_out3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] log_out4 {
+            get {
+                object obj = ResourceManager.GetObject("log_out4", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_pixabay_261621 {
+            get {
+                object obj = ResourceManager.GetObject("pexels_pixabay_261621", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

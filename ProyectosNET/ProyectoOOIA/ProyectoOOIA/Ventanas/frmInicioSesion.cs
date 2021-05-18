@@ -29,10 +29,12 @@ namespace ProyectoOOIA.Ventanas
             System.Diagnostics.Process.Start("https://www.google.com/");
         }
 
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -57,6 +59,30 @@ namespace ProyectoOOIA.Ventanas
         private void linkContraseña_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new frmReestablecerContraseña().ShowDialog();                 
+        }
+
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            if (txtContraseña.Text == "") lblIncorrecto.Visible = true;
+            else
+            {
+                if(toggle1.Checked==false)
+                    new frmPrincipalAlumno().Show(); 
+                else
+                    new frmPrincipalProfesor().Show();
+                
+                this.Close();
+                
+            }
+
+
+            
+        }
+
+        private void frmInicioSesion_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

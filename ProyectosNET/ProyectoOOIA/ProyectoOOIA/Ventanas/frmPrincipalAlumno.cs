@@ -11,9 +11,9 @@ using System.Windows.Forms;
 namespace ProyectoOOIA.Ventanas
 
 {
-    public partial class frmPrincipal : Form
+    public partial class frmPrincipalAlumno : Form
     {
-        public frmPrincipal()
+        public frmPrincipalAlumno()
         {
             InitializeComponent();
             
@@ -37,6 +37,12 @@ namespace ProyectoOOIA.Ventanas
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new frmInicioSesion().Show();
+            this.Close();
         }
     }
 }

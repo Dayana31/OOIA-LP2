@@ -30,13 +30,9 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnCorreo = new System.Windows.Forms.ToolStripButton();
-            this.btnCelular = new System.Windows.Forms.ToolStripButton();
-            this.btnTelefono = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblIncorrecto = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkContraseña = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +40,15 @@ namespace ProyectoOOIA.Ventanas
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnCorreo = new System.Windows.Forms.ToolStripButton();
+            this.btnCelular = new System.Windows.Forms.ToolStripButton();
+            this.btnTelefono = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.toggle1 = new ProyectoOOIA.Componente.toggle();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -54,6 +58,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.toggle1);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.lblIncorrecto);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.linkContraseña);
             this.panel2.Controls.Add(this.label3);
@@ -66,6 +74,108 @@ namespace ProyectoOOIA.Ventanas
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(618, 523);
             this.panel2.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(343, 413);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "OOIA";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(214, 413);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Alumno";
+            // 
+            // lblIncorrecto
+            // 
+            this.lblIncorrecto.AutoSize = true;
+            this.lblIncorrecto.ForeColor = System.Drawing.Color.Red;
+            this.lblIncorrecto.Location = new System.Drawing.Point(233, 323);
+            this.lblIncorrecto.Name = "lblIncorrecto";
+            this.lblIncorrecto.Size = new System.Drawing.Size(112, 13);
+            this.lblIncorrecto.TabIndex = 7;
+            this.lblIncorrecto.Text = "Contraseña Incorrecta";
+            this.lblIncorrecto.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Leelawadee", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(171, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(281, 115);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "OOIA";
+            // 
+            // linkContraseña
+            // 
+            this.linkContraseña.ActiveLinkColor = System.Drawing.Color.DarkGray;
+            this.linkContraseña.AutoSize = true;
+            this.linkContraseña.DisabledLinkColor = System.Drawing.Color.Gray;
+            this.linkContraseña.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkContraseña.LinkColor = System.Drawing.Color.Gray;
+            this.linkContraseña.Location = new System.Drawing.Point(214, 448);
+            this.linkContraseña.Name = "linkContraseña";
+            this.linkContraseña.Size = new System.Drawing.Size(131, 13);
+            this.linkContraseña.TabIndex = 6;
+            this.linkContraseña.TabStop = true;
+            this.linkContraseña.Text = "¿Olvidaste tu contraseña?";
+            this.linkContraseña.VisitedLinkColor = System.Drawing.Color.Silver;
+            this.linkContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkContraseña_LinkClicked_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(129, 269);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(90, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Contrasela:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(129, 197);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Usuario:";
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Location = new System.Drawing.Point(269, 269);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(183, 20);
+            this.txtContraseña.TabIndex = 4;
+            this.txtContraseña.UseSystemPasswordChar = true;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(269, 199);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(183, 20);
+            this.txtUsuario.TabIndex = 3;
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnIngresar.Location = new System.Drawing.Point(246, 356);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(99, 36);
+            this.btnIngresar.TabIndex = 5;
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // panel1
             // 
@@ -144,78 +254,6 @@ namespace ProyectoOOIA.Ventanas
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Leelawadee", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 115);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "OOIA";
-            // 
-            // linkContraseña
-            // 
-            this.linkContraseña.ActiveLinkColor = System.Drawing.Color.DarkGray;
-            this.linkContraseña.AutoSize = true;
-            this.linkContraseña.DisabledLinkColor = System.Drawing.Color.Gray;
-            this.linkContraseña.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkContraseña.LinkColor = System.Drawing.Color.Gray;
-            this.linkContraseña.Location = new System.Drawing.Point(220, 387);
-            this.linkContraseña.Name = "linkContraseña";
-            this.linkContraseña.Size = new System.Drawing.Size(131, 13);
-            this.linkContraseña.TabIndex = 6;
-            this.linkContraseña.TabStop = true;
-            this.linkContraseña.Text = "¿Olvidaste tu contraseña?";
-            this.linkContraseña.VisitedLinkColor = System.Drawing.Color.Silver;
-            this.linkContraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkContraseña_LinkClicked_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(129, 269);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Contrasela:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(129, 197);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Usuario:";
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Location = new System.Drawing.Point(269, 269);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(183, 20);
-            this.txtContraseña.TabIndex = 4;
-            this.txtContraseña.UseSystemPasswordChar = true;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(269, 199);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(183, 20);
-            this.txtUsuario.TabIndex = 3;
-            // 
-            // btnIngresar
-            // 
-            this.btnIngresar.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btnIngresar.Location = new System.Drawing.Point(237, 333);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(99, 36);
-            this.btnIngresar.TabIndex = 5;
-            this.btnIngresar.Text = "Ingresar";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            // 
             // splitter1
             // 
             this.splitter1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -226,6 +264,17 @@ namespace ProyectoOOIA.Ventanas
             this.splitter1.Size = new System.Drawing.Size(1, 523);
             this.splitter1.TabIndex = 9;
             this.splitter1.TabStop = false;
+            // 
+            // toggle1
+            // 
+            this.toggle1.AutoSize = true;
+            this.toggle1.Location = new System.Drawing.Point(264, 406);
+            this.toggle1.Name = "toggle1";
+            this.toggle1.Padding = new System.Windows.Forms.Padding(6);
+            this.toggle1.Size = new System.Drawing.Size(73, 29);
+            this.toggle1.TabIndex = 11;
+            this.toggle1.Text = "toggle1";
+            this.toggle1.UseVisualStyleBackColor = true;
             // 
             // frmInicioSesion
             // 
@@ -253,6 +302,7 @@ namespace ProyectoOOIA.Ventanas
 
         #endregion
 
+
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkContraseña;
@@ -261,6 +311,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Button btnIngresar;
+
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnCorreo;
@@ -269,5 +320,13 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Splitter splitter1;
+
+
+        private System.Windows.Forms.Label lblIncorrecto;
+
+
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private Componente.toggle toggle1;
     }
 }
