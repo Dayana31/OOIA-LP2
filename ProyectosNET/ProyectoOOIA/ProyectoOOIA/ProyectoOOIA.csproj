@@ -49,42 +49,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Componente\OvalPictureBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Componente\toggle.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Componente\toggle.Designer.cs">
-      <DependentUpon>toggle.cs</DependentUpon>
-    </Compile>
     <Compile Include="Estado.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ventanas\frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmInicioSesion.designer.cs">
+    <Compile Include="Ventanas\frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmPrincipalAlumno.cs">
+    <Compile Include="Ventanas\frmListaCitas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmPrincipalAlumno.designer.cs">
-      <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
+    <Compile Include="Ventanas\frmListaCitas.Designer.cs">
+      <DependentUpon>frmListaCitas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmPrincipalProfesor.cs">
+    <Compile Include="Ventanas\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmPrincipalProfesor.designer.cs">
-      <DependentUpon>frmPrincipalProfesor.cs</DependentUpon>
+    <Compile Include="Ventanas\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ventanas\frmReestablecerContraseña.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmReestablecerContraseña.designer.cs">
+    <Compile Include="Ventanas\frmReestablecerContraseña.Designer.cs">
       <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ventanas\frmInicioSesion.resx">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmListaCitas.resx">
+      <DependentUpon>frmListaCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,15 +95,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Ventanas\frmInicioSesion.resx">
-      <DependentUpon>frmInicioSesion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmPrincipalAlumno.resx">
-      <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmPrincipalProfesor.resx">
-      <DependentUpon>frmPrincipalProfesor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmReestablecerContraseña.resx">
       <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,24 +124,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\013-mail.png" />
-    <Content Include="Resources\017-mobile-phone.png" />
-    <Content Include="Resources\025-arroba.png" />
-    <Content Include="Resources\028-telephone-2.png" />
-    <Content Include="Resources\1200px-PUCP_text_logo.svg.png" />
-    <Content Include="Resources\B2B-Appointment-Setting-Services.jpg" />
-    <Content Include="Resources\EEGGCC.jpg" />
-    <Content Include="Resources\Estudiante.jpg" />
-    <Content Include="Resources\Estudiante.png" />
-    <Content Include="Resources\foto-29.jpg" />
-    <Content Include="Resources\Icono-Agenda-tu-Cita.png" />
-    <Content Include="Resources\log-out %281%29.png" />
-    <Content Include="Resources\log-out %282%29.png" />
-    <Content Include="Resources\log-out.ico" />
-    <Content Include="Resources\log-out.png" />
-    <Content Include="Resources\log-out.svg" />
-    <Content Include="Resources\log-out1.ico" />
-    <Content Include="Resources\pexels-pixabay-261621.jpg" />
+    <None Include="Resources\1200px-PUCP_text_logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EEGGCC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\013-mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\017-mobile-phone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\025-arroba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\028-telephone-2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
