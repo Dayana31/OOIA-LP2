@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoOOIA
+namespace ProyectoOOIA.Ventanas
+
 {
     public partial class frmPrincipal : Form
     {
