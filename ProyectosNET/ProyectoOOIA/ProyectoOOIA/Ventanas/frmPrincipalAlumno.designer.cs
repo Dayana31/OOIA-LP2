@@ -52,6 +52,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtUsername.Size = new System.Drawing.Size(337, 37);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "Solorzano Tapia, José";
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
             // txtEventos
             // 
@@ -62,6 +63,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtEventos.Size = new System.Drawing.Size(78, 24);
             this.txtEventos.TabIndex = 8;
             this.txtEventos.Text = "Eventos";
+            this.txtEventos.Click += new System.EventHandler(this.txtEventos_Click);
             // 
             // txtCitas
             // 
@@ -84,6 +86,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtTramites.TabIndex = 9;
             this.txtTramites.Text = "Trámites";
             this.txtTramites.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.txtTramites.Click += new System.EventHandler(this.txtTramites_Click);
             // 
             // txtHorarios
             // 
@@ -95,6 +98,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtHorarios.TabIndex = 7;
             this.txtHorarios.Text = "Horarios";
             this.txtHorarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtHorarios.Click += new System.EventHandler(this.txtHorarios_Click);
             // 
             // btnAtras
             // 
@@ -125,6 +129,7 @@ namespace ProyectoOOIA.Ventanas
             this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ovalPictureBox1.TabIndex = 11;
             this.ovalPictureBox1.TabStop = false;
+            this.ovalPictureBox1.Click += new System.EventHandler(this.ovalPictureBox1_Click);
             // 
             // button1
             // 
@@ -141,6 +146,7 @@ namespace ProyectoOOIA.Ventanas
             this.button1.Size = new System.Drawing.Size(162, 145);
             this.button1.TabIndex = 13;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -157,6 +163,7 @@ namespace ProyectoOOIA.Ventanas
             this.button2.Size = new System.Drawing.Size(162, 145);
             this.button2.TabIndex = 14;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -173,6 +180,7 @@ namespace ProyectoOOIA.Ventanas
             this.button3.Size = new System.Drawing.Size(162, 145);
             this.button3.TabIndex = 15;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -189,6 +197,7 @@ namespace ProyectoOOIA.Ventanas
             this.button4.Size = new System.Drawing.Size(162, 145);
             this.button4.TabIndex = 16;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // frmPrincipalAlumno
             // 

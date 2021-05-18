@@ -16,5 +16,21 @@ namespace ProyectoOOIA.Ventanas
         {
             InitializeComponent();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            new frmInicioSesion().Show();
+            this.Close();
+        }
+
+        private void txtHorarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEventos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

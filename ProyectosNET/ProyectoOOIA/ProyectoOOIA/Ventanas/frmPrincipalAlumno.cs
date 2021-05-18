@@ -44,5 +44,50 @@ namespace ProyectoOOIA.Ventanas
             new frmInicioSesion().Show();
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ovalPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTramites_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEventos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHorarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
