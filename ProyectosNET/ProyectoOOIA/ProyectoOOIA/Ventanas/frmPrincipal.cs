@@ -15,6 +15,7 @@ namespace ProyectoOOIA
         public frmPrincipal()
         {
             InitializeComponent();
+            
         }
 
         private void pnlLeft_Paint(object sender, PaintEventArgs e)
