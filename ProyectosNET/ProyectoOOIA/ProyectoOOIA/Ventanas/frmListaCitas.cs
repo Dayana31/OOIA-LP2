@@ -16,5 +16,11 @@ namespace ProyectoOOIA.Ventanas
         {
             InitializeComponent();
         }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            new frmPrincipalAlumno().Show();
+            this.Close();
+        }
     }
 }
