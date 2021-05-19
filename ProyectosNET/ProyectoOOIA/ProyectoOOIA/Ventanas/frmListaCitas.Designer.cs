@@ -70,7 +70,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // ptbLogOut
             // 
-            this.ptbLogOut.Image = global::ProyectoOOIA.Properties.Resources.logout;
+            this.ptbLogOut.Image = global::ProyectoOOIA.Properties.Resources.log_out3;
             this.ptbLogOut.Location = new System.Drawing.Point(835, 24);
             this.ptbLogOut.Name = "ptbLogOut";
             this.ptbLogOut.Size = new System.Drawing.Size(42, 35);
