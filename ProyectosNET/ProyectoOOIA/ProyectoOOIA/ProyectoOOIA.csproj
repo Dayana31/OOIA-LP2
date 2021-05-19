@@ -65,6 +65,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
+    <Compile Include="Ventanas\frmDetCita_FichAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmDetCita_FichAlumnos.Designer.cs">
+      <DependentUpon>frmDetCita_FichAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmCancelarCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +95,11 @@
     <Compile Include="Ventanas\frmDetCita_DatAlumnos.Designer.cs">
       <DependentUpon>frmDetCita_DatAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmDetCita_FichAlumnos.cs">
+    <Compile Include="Ventanas\frmHistoriaAcademica.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmDetCita_FichAlumnos.Designer.cs">
-      <DependentUpon>frmDetCita_FichAlumnos.cs</DependentUpon>
+    <Compile Include="Ventanas\frmHistoriaAcademica.Designer.cs">
+      <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmHorarioCambiado.cs">
       <SubType>Form</SubType>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmDetalleCita.resx">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmHistoriaAcademica.resx">
+      <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHistorialCitas.resx">
       <DependentUpon>frmHistorialCitas.cs</DependentUpon>
