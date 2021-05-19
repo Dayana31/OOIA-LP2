@@ -141,7 +141,7 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(825, 284);
+            this.dataGridView1.Size = new System.Drawing.Size(808, 284);
             this.dataGridView1.TabIndex = 1;
             // 
             // ID
