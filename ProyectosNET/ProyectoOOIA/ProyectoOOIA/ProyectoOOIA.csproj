@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Componentes\Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\Card.Designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estado.cs" />
     <Compile Include="Componentes\OvalPictureBox.cs">
       <SubType>Component</SubType>
@@ -157,6 +163,9 @@
     <Compile Include="Ventanas\frmReestablecerContraseña.Designer.cs">
       <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Componentes\Card.resx">
+      <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmCancelarCita.resx">
       <DependentUpon>frmCancelarCita.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,18 +227,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\Roboto-Black.ttf" />
-    <None Include="Resources\Roboto-BlackItalic.ttf" />
-    <None Include="Resources\Roboto-Bold.ttf" />
-    <None Include="Resources\Roboto-BoldItalic.ttf" />
-    <None Include="Resources\Roboto-Italic.ttf" />
-    <None Include="Resources\Roboto-Light.ttf" />
-    <None Include="Resources\Roboto-LightItalic.ttf" />
-    <None Include="Resources\Roboto-Medium.ttf" />
-    <None Include="Resources\Roboto-MediumItalic.ttf" />
-    <None Include="Resources\Roboto-Regular.ttf" />
-    <None Include="Resources\Roboto-Thin.ttf" />
-    <None Include="Resources\Roboto-ThinItalic.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

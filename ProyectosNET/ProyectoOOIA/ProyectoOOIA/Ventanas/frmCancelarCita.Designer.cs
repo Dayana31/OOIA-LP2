@@ -92,7 +92,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnRegresar.TabIndex = 4;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.bthRegresar_Click);
+            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // btnCancelarCita
             // 
