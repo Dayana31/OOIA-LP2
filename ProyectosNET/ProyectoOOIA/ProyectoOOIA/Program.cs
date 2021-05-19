@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoOOIA.Componentes;
 using ProyectoOOIA.Ventanas;
 
 namespace ProyectoOOIA
@@ -18,8 +19,10 @@ namespace ProyectoOOIA
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmInicioSesion pantalla = new frmInicioSesion();
+            
             pantalla.FormClosed += MainForm_Closed;
             pantalla.Show();
+           
             Application.Run();
         }
         private static void MainForm_Closed(Object sender, FormClosedEventArgs e)

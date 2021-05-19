@@ -58,6 +58,7 @@ namespace ProyectoOOIA.Ventanas
             Card carta = (Card)sender;
             carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
             carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
+            carta.asignarClick(new frmOpiniones(),this);
         
 
         }
@@ -67,6 +68,7 @@ namespace ProyectoOOIA.Ventanas
             Card carta = (Card)sender;
             carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
             carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
+            carta.asignarClick(new frmOpiniones(), this);
         }
 
         private void card4_Load(object sender, EventArgs e)
@@ -74,6 +76,7 @@ namespace ProyectoOOIA.Ventanas
             Card carta = (Card)sender;
             carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
             carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
+            carta.asignarClick(new frmOpiniones(), this);
         }
 
         private void card5_Load(object sender, EventArgs e)
@@ -81,6 +84,7 @@ namespace ProyectoOOIA.Ventanas
             Card carta = (Card)sender;
             carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
             carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
+            carta.asignarClick(new frmOpiniones(), this);
         }
 
         private void card6_Load(object sender, EventArgs e)
@@ -88,13 +92,46 @@ namespace ProyectoOOIA.Ventanas
             Card carta = (Card)sender;
             carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
             carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
+            carta.asignarClick(new frmOpiniones(), this);
         }
         private void card7_Load(object sender, EventArgs e)
         {
             Card carta = (Card)sender;
             carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
             carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
+            carta.asignarClick(new frmOpiniones(), this);
         }
 
+        private void tabTutor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void card1_Load(object sender, EventArgs e)
+        {
+            Card carta = (Card)sender;
+            carta.insertarImagen(ProyectoOOIA.Properties.Resources.psicologo);
+            carta.insertarEtiquetas("Perez Quispe", "Ana", "Ingeniera Electrica");
+            carta.asignarClick(new frmOpiniones(), this);
+        }
+
+        private void card8_Load(object sender, EventArgs e)
+        {
+            Card carta = (Card)sender;
+            carta.insertarImagen(ProyectoOOIA.Properties.Resources.psicologo);
+            carta.insertarEtiquetas("Perez Quispe", "Ana", "Ingeniera Electrica");
+            carta.asignarClick(new frmOpiniones(), this);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new frmPrincipalAlumno().Show();
+            this.Close();
+        }
     }
 }

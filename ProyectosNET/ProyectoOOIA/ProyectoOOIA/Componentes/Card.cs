@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoOOIA.Ventanas;
 
 namespace ProyectoOOIA.Componentes
 {
     public partial class Card : UserControl
     {
+        
         public Card()
         {
             InitializeComponent();
@@ -36,6 +38,19 @@ namespace ProyectoOOIA.Componentes
         }
 
         private void Card_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void asignarClick(frmOpiniones op,frmListaTutores lt)
+        {
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler((sender, args) =>
+            {
+                op.Show();
+                lt.Close();
+            });
+        }
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }

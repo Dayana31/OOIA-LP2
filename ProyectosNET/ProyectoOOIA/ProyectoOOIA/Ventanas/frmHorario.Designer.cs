@@ -30,6 +30,12 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             this.dgvHorarioProf = new System.Windows.Forms.DataGridView();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LinkDetalles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
@@ -41,12 +47,6 @@ namespace ProyectoOOIA.Ventanas
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LinkDetalles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProf)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -66,6 +66,38 @@ namespace ProyectoOOIA.Ventanas
             this.dgvHorarioProf.Name = "dgvHorarioProf";
             this.dgvHorarioProf.Size = new System.Drawing.Size(753, 309);
             this.dgvHorarioProf.TabIndex = 0;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Hora
+            // 
+            this.Hora.HeaderText = "Hora";
+            this.Hora.Name = "Hora";
+            // 
+            // Especialidad
+            // 
+            this.Especialidad.HeaderText = "Especialidad";
+            this.Especialidad.Name = "Especialidad";
+            this.Especialidad.Width = 120;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre del Alumno";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 200;
+            // 
+            // LinkDetalles
+            // 
+            this.LinkDetalles.HeaderText = "Detalles";
+            this.LinkDetalles.Name = "LinkDetalles";
             // 
             // button1
             // 
@@ -171,38 +203,6 @@ namespace ProyectoOOIA.Ventanas
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Tipo de Horario";
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // Hora
-            // 
-            this.Hora.HeaderText = "Hora";
-            this.Hora.Name = "Hora";
-            // 
-            // Especialidad
-            // 
-            this.Especialidad.HeaderText = "Especialidad";
-            this.Especialidad.Name = "Especialidad";
-            this.Especialidad.Width = 120;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre del Alumno";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 200;
-            // 
-            // LinkDetalles
-            // 
-            this.LinkDetalles.HeaderText = "Detalles";
-            this.LinkDetalles.Name = "LinkDetalles";
             // 
             // frmHorario
             // 

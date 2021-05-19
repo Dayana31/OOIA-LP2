@@ -65,6 +65,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
+    <Compile Include="Ventanas\frmAccesoEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmAccesoEvento.Designer.cs">
+      <DependentUpon>frmAccesoEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmCancelarCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     <EmbeddedResource Include="Componentes\Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmAccesoEvento.resx">
+      <DependentUpon>frmAccesoEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmCancelarCita.resx">
       <DependentUpon>frmCancelarCita.cs</DependentUpon>
     </EmbeddedResource>
@@ -218,6 +227,7 @@
     <EmbeddedResource Include="Ventanas\frmReestablecerContraseña.resx">
       <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\MaterialSkin.Controls.MaterialCheckBox.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -254,6 +264,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\profesor.jpg" />
+    <Content Include="Resources\psicologo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

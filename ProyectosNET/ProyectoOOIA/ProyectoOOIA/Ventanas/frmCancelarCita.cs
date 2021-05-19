@@ -49,7 +49,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-             new frmConfirmarCancelar().Show();
+            new frmConfirmarCancelar().Show();
             this.Close();
 
         }
