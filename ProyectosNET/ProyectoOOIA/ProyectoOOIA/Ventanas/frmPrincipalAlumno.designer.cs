@@ -80,7 +80,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtTramites.AutoSize = true;
             this.txtTramites.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTramites.Location = new System.Drawing.Point(577, 314);
+            this.txtTramites.Location = new System.Drawing.Point(613, 314);
             this.txtTramites.Name = "txtTramites";
             this.txtTramites.Size = new System.Drawing.Size(82, 24);
             this.txtTramites.TabIndex = 9;
@@ -92,7 +92,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtHorarios.AutoSize = true;
             this.txtHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHorarios.Location = new System.Drawing.Point(577, 103);
+            this.txtHorarios.Location = new System.Drawing.Point(613, 103);
             this.txtHorarios.Name = "txtHorarios";
             this.txtHorarios.Size = new System.Drawing.Size(81, 24);
             this.txtHorarios.TabIndex = 7;
@@ -104,6 +104,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnAtras.BackColor = System.Drawing.Color.Transparent;
             this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnAtras.FlatAppearance.BorderSize = 0;
             this.btnAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -136,6 +137,7 @@ namespace ProyectoOOIA.Ventanas
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = global::ProyectoOOIA.Properties.Resources.B2B_Appointment_Setting_Services;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -157,7 +159,7 @@ namespace ProyectoOOIA.Ventanas
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(541, 143);
+            this.button2.Location = new System.Drawing.Point(577, 143);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button2.Size = new System.Drawing.Size(162, 145);
@@ -174,7 +176,7 @@ namespace ProyectoOOIA.Ventanas
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(541, 341);
+            this.button3.Location = new System.Drawing.Point(577, 341);
             this.button3.Name = "button3";
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button3.Size = new System.Drawing.Size(162, 145);

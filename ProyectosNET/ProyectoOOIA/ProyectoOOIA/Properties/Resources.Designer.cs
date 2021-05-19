@@ -133,16 +133,6 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Estudiante {
-            get {
-                object obj = ResourceManager.GetObject("Estudiante", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Estudiante1 {
             get {
                 object obj = ResourceManager.GetObject("Estudiante1", resourceCulture);
@@ -221,36 +211,6 @@ namespace ProyectoOOIA.Properties {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
-        /// </summary>
-        internal static System.Drawing.Icon log_out11 {
-            get {
-                object obj = ResourceManager.GetObject("log_out11", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
-        /// </summary>
-        internal static System.Drawing.Icon log_out12 {
-            get {
-                object obj = ResourceManager.GetObject("log_out12", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Byte[].
-        /// </summary>
-        internal static byte[] log_out2 {
-            get {
-                object obj = ResourceManager.GetObject("log_out2", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap log_out3 {
@@ -261,21 +221,11 @@ namespace ProyectoOOIA.Properties {
         }
         
         /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Byte[].
-        /// </summary>
-        internal static byte[] log_out4 {
-            get {
-                object obj = ResourceManager.GetObject("log_out4", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logout {
+        internal static System.Drawing.Bitmap pexels_pixabay_261621 {
             get {
-                object obj = ResourceManager.GetObject("logout", resourceCulture);
+                object obj = ResourceManager.GetObject("pexels_pixabay_261621", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,9 +233,9 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pexels_pixabay_261621 {
+        internal static System.Drawing.Bitmap profesor {
             get {
-                object obj = ResourceManager.GetObject("pexels_pixabay_261621", resourceCulture);
+                object obj = ResourceManager.GetObject("profesor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
