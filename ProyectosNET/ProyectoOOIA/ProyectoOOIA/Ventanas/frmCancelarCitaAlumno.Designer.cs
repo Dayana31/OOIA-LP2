@@ -48,12 +48,12 @@ namespace ProyectoOOIA.Ventanas
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(93, 34);
+            this.lblMensaje.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Location = new System.Drawing.Point(64, 34);
             this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensaje.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(307, 62);
+            this.lblMensaje.Size = new System.Drawing.Size(376, 78);
             this.lblMensaje.TabIndex = 5;
             this.lblMensaje.Text = "¿Está seguro que desea cancelar la cita?";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
