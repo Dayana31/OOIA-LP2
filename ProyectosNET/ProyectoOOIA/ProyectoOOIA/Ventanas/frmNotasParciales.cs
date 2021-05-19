@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmHorarioCambiado : Form
+    public partial class frmNotasParciales : Form
     {
-        public frmHorarioCambiado()
+        public frmNotasParciales()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -25,11 +25,6 @@ namespace ProyectoOOIA.Ventanas
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void frmHorarioCambiado_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

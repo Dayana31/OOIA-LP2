@@ -65,6 +65,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
+    <Compile Include="Ventanas\frmNotasParciales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmNotasParciales.Designer.cs">
+      <DependentUpon>frmNotasParciales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmCancelarCitaAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </Compile>
     <EmbeddedResource Include="Ventanas\frmListaTutores.resx">
       <DependentUpon>frmListaTutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmNotasParciales.resx">
+      <DependentUpon>frmNotasParciales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmOpiniones.resx">
       <DependentUpon>frmOpiniones.cs</DependentUpon>

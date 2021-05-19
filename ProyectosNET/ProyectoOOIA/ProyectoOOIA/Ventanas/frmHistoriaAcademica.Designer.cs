@@ -31,6 +31,12 @@ namespace ProyectoOOIA.Ventanas
         {
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vez = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NotaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblEstudiante = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -46,22 +52,16 @@ namespace ProyectoOOIA.Ventanas
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnNotasParciales = new System.Windows.Forms.Button();
-            this.Ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vez = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NotaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(239, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(197, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(180, 30);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Historia Académica";
             // 
@@ -80,164 +80,6 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridView1.Size = new System.Drawing.Size(633, 228);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // btnAceptar
-            // 
-            this.btnAceptar.Location = new System.Drawing.Point(292, 415);
-            this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 2;
-            this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // lblEstudiante
-            // 
-            this.lblEstudiante.AutoSize = true;
-            this.lblEstudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstudiante.Location = new System.Drawing.Point(12, 41);
-            this.lblEstudiante.Name = "lblEstudiante";
-            this.lblEstudiante.Size = new System.Drawing.Size(92, 18);
-            this.lblEstudiante.TabIndex = 3;
-            this.lblEstudiante.Text = "Estudiante:";
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(12, 59);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(67, 18);
-            this.lblCodigo.TabIndex = 4;
-            this.lblCodigo.Text = "Código:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 18);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Cursos llevados una vez:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(217, 18);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Cursos llevados dos veces:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(218, 18);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Cursos llevados tres veces:";
-            // 
-            // cbCiclo
-            // 
-            this.cbCiclo.FormattingEnabled = true;
-            this.cbCiclo.Location = new System.Drawing.Point(56, 156);
-            this.cbCiclo.Name = "cbCiclo";
-            this.cbCiclo.Size = new System.Drawing.Size(121, 21);
-            this.cbCiclo.TabIndex = 8;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(192, 154);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 9;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 157);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 16);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Ciclo";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(617, 95);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 18);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "00";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(617, 113);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 18);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "00";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(617, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 18);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "00";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(574, 59);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 18);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "20211234";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(563, 41);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 18);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Juan Perez";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // btnNotasParciales
-            // 
-            this.btnNotasParciales.Location = new System.Drawing.Point(546, 154);
-            this.btnNotasParciales.Name = "btnNotasParciales";
-            this.btnNotasParciales.Size = new System.Drawing.Size(100, 23);
-            this.btnNotasParciales.TabIndex = 16;
-            this.btnNotasParciales.Text = "Notas Parciales";
-            this.btnNotasParciales.UseVisualStyleBackColor = true;
             // 
             // Ciclo
             // 
@@ -275,7 +117,165 @@ namespace ProyectoOOIA.Ventanas
             this.NotaFinal.Name = "NotaFinal";
             this.NotaFinal.Width = 60;
             // 
-            // frmDetCita_FichAlumnos
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(292, 415);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 2;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblEstudiante
+            // 
+            this.lblEstudiante.AutoSize = true;
+            this.lblEstudiante.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstudiante.Location = new System.Drawing.Point(12, 41);
+            this.lblEstudiante.Name = "lblEstudiante";
+            this.lblEstudiante.Size = new System.Drawing.Size(89, 21);
+            this.lblEstudiante.TabIndex = 3;
+            this.lblEstudiante.Text = "Estudiante:";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(12, 59);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(64, 21);
+            this.lblCodigo.TabIndex = 4;
+            this.lblCodigo.Text = "Código:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 21);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Cursos llevados una vez:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(192, 21);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Cursos llevados dos veces:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(195, 21);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Cursos llevados tres veces:";
+            // 
+            // cbCiclo
+            // 
+            this.cbCiclo.FormattingEnabled = true;
+            this.cbCiclo.Location = new System.Drawing.Point(56, 156);
+            this.cbCiclo.Name = "cbCiclo";
+            this.cbCiclo.Size = new System.Drawing.Size(121, 21);
+            this.cbCiclo.TabIndex = 8;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(192, 154);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 157);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 16);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Ciclo";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(617, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 21);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "00";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(617, 113);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(26, 21);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "00";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(617, 77);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(26, 21);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "00";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(569, 59);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 21);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "20211234";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(569, 41);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(74, 21);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Juan Perez";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // btnNotasParciales
+            // 
+            this.btnNotasParciales.Location = new System.Drawing.Point(546, 154);
+            this.btnNotasParciales.Name = "btnNotasParciales";
+            this.btnNotasParciales.Size = new System.Drawing.Size(100, 23);
+            this.btnNotasParciales.TabIndex = 16;
+            this.btnNotasParciales.Text = "Notas Parciales";
+            this.btnNotasParciales.UseVisualStyleBackColor = true;
+            // 
+            // frmHistoriaAcademica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -297,7 +297,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblTitulo);
-            this.Name = "frmDetCita_FichAlumnos";
+            this.Name = "frmHistoriaAcademica";
             this.Text = "frmDetCita_FichAlumnos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
