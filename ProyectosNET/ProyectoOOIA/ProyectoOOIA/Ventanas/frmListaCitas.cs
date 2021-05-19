@@ -49,7 +49,7 @@ namespace ProyectoOOIA.Ventanas
         {
             //tenemos que almacenar los datos en la pantalla
             new frmDetalleCita().Show();
-            this.Close();
+            //this.Close();
             this.DialogResult = DialogResult.OK;
         }
 
