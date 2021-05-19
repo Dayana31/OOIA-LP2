@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmCancelarCita : Form
+    public partial class Opiniones : Form
     {
-        public frmCancelarCita()
+        public Opiniones()
         {
             InitializeComponent();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -22,21 +32,19 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvOpiniones_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void bthRegresar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnCancelarCita_Click(object sender, EventArgs e)
-        {
-            frmConfirmarCancelar confirmarCancelar = new frmConfirmarCancelar();
-            confirmarCancelar.ShowDialog();
-            this.Close();
         }
     }
 }
