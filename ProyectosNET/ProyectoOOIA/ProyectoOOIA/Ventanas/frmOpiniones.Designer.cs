@@ -3,6 +3,7 @@ namespace ProyectoOOIA.Ventanas
 {   /// <summary>
 /// Pantalla de opiniones 
 /// </summary>
+/// //raaaaa
     partial class Form1
     {
         /// <summary>
