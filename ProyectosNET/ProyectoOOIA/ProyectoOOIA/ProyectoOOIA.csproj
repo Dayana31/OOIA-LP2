@@ -59,11 +59,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
-    <Compile Include="Ventanas\frmOpiniones.cs">
+    <Compile Include="Ventanas\frmCitaRegistro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmOpiniones.Designer.cs">
-      <DependentUpon>frmOpiniones.cs</DependentUpon>
+    <Compile Include="Ventanas\frmCitaRegistro.Designer.cs">
+      <DependentUpon>frmCitaRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmHorario.cs">
       <SubType>Form</SubType>
@@ -115,6 +115,9 @@
     <Compile Include="Ventanas\frmReestablecerContraseña.Designer.cs">
       <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Ventanas\frmCitaRegistro.resx">
+      <DependentUpon>frmCitaRegistro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmDetalleCita.resx">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,9 +143,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Ventanas\frmOpiniones.resx">
-      <DependentUpon>frmOpiniones.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmPrincipalAlumno.resx">
       <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
     </EmbeddedResource>
