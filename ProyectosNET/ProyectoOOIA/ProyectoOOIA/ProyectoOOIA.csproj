@@ -59,6 +59,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
+    <Compile Include="Ventanas\frmOpiniones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmOpiniones.Designer.cs">
+      <DependentUpon>frmOpiniones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmHorario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Ventanas\frmOpiniones.resx">
+      <DependentUpon>frmOpiniones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmPrincipalAlumno.resx">
       <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
     </EmbeddedResource>
