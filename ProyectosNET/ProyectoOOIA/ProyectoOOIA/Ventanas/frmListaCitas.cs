@@ -15,12 +15,20 @@ namespace ProyectoOOIA.Ventanas
         public frmListaCitas()
         {
             InitializeComponent();
+            //esto hace que no se genere mas columnas de las que yo he 
+            //definido en la interfaz grafica
+            dgvCitasProgramadas.AutoGenerateColumns = false;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             new frmPrincipalAlumno().Show();
             this.Close();
+        }
+
+        private void btnEliminarCita_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Su cita ha sido cancelada con exito", "Mensaje de confirmacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
         }
     }
 }

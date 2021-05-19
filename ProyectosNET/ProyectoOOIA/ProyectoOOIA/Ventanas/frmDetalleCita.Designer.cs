@@ -45,9 +45,9 @@ namespace ProyectoOOIA.Ventanas
             this.label7 = new System.Windows.Forms.Label();
             this.txtMotivoConsulta = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -74,12 +74,14 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnRegresar
             // 
-            this.btnRegresar.Location = new System.Drawing.Point(760, 336);
+            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(0)))), ((int)(((byte)(31)))));
+            this.btnRegresar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnRegresar.Location = new System.Drawing.Point(723, 336);
             this.btnRegresar.Name = "btnRegresar";
-            this.btnRegresar.Size = new System.Drawing.Size(89, 27);
+            this.btnRegresar.Size = new System.Drawing.Size(126, 27);
             this.btnRegresar.TabIndex = 5;
             this.btnRegresar.Text = "Regresar";
-            this.btnRegresar.UseVisualStyleBackColor = true;
+            this.btnRegresar.UseVisualStyleBackColor = false;
             this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
             // 
             // label2
@@ -153,7 +155,7 @@ namespace ProyectoOOIA.Ventanas
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 301);
+            this.label6.Location = new System.Drawing.Point(426, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 17);
             this.label6.TabIndex = 14;
@@ -161,10 +163,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtCodigoAtencion
             // 
-            this.txtCodigoAtencion.Location = new System.Drawing.Point(29, 336);
+            this.txtCodigoAtencion.Location = new System.Drawing.Point(429, 238);
             this.txtCodigoAtencion.Name = "txtCodigoAtencion";
             this.txtCodigoAtencion.ReadOnly = true;
-            this.txtCodigoAtencion.Size = new System.Drawing.Size(326, 22);
+            this.txtCodigoAtencion.Size = new System.Drawing.Size(420, 22);
             this.txtCodigoAtencion.TabIndex = 15;
             // 
             // label7
@@ -189,6 +191,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.label8);
@@ -211,19 +214,21 @@ namespace ProyectoOOIA.Ventanas
             this.panel2.Size = new System.Drawing.Size(899, 400);
             this.panel2.TabIndex = 3;
             // 
-            // label8
+            // radioButton2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(426, 201);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 17);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Asistencia";
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(226, 294);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(47, 21);
+            this.radioButton2.TabIndex = 20;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "No";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(542, 201);
+            this.radioButton1.Location = new System.Drawing.Point(135, 296);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(41, 21);
             this.radioButton1.TabIndex = 19;
@@ -231,16 +236,14 @@ namespace ProyectoOOIA.Ventanas
             this.radioButton1.Text = "Sí";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // label8
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(627, 201);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(47, 21);
-            this.radioButton2.TabIndex = 20;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(26, 298);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 17);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Asistencia";
             // 
             // frmDetalleCita
             // 

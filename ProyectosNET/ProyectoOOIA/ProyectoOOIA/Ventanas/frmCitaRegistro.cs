@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmDetalleCita : Form
+    public partial class frmCitaRegistro : Form
     {
-        public frmDetalleCita()
+        public frmCitaRegistro()
         {
             InitializeComponent();
-            
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
