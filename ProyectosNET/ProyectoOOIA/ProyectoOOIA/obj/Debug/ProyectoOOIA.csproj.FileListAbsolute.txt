@@ -53,3 +53,21 @@ C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proyec
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleCita.resources
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHistorialCitas.resources
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorario.resources
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInicioSesion.resources
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmListaCitas.resources
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Properties.Resources.resources
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalAlumno.resources
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalProfesor.resources
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmReestablecerContraseña.resources
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.GenerateResource.cache
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CoreCompileInputs.cache
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
+D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
