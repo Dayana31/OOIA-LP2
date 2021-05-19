@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -45,15 +45,18 @@ namespace ProyectoOOIA.Ventanas
             this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVerDetalle = new System.Windows.Forms.Button();
+            this.ptbLogOut = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialCitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogOut)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.ptbLogOut);
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.label1);
@@ -121,13 +124,13 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.dgvHistorialCitas.AllowUserToAddRows = false;
             this.dgvHistorialCitas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorialCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorialCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHistorialCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -195,13 +198,25 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnVerDetalle
             // 
-            this.btnVerDetalle.Location = new System.Drawing.Point(761, 433);
+            this.btnVerDetalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(0)))), ((int)(((byte)(31)))));
+            this.btnVerDetalle.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnVerDetalle.Location = new System.Drawing.Point(722, 433);
             this.btnVerDetalle.Name = "btnVerDetalle";
-            this.btnVerDetalle.Size = new System.Drawing.Size(89, 27);
+            this.btnVerDetalle.Size = new System.Drawing.Size(128, 27);
             this.btnVerDetalle.TabIndex = 4;
             this.btnVerDetalle.Text = "Ver detalle";
-            this.btnVerDetalle.UseVisualStyleBackColor = true;
+            this.btnVerDetalle.UseVisualStyleBackColor = false;
             this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
+            // 
+            // ptbLogOut
+            // 
+            this.ptbLogOut.Image = global::ProyectoOOIA.Properties.Resources.logout;
+            this.ptbLogOut.Location = new System.Drawing.Point(845, 21);
+            this.ptbLogOut.Name = "ptbLogOut";
+            this.ptbLogOut.Size = new System.Drawing.Size(42, 35);
+            this.ptbLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbLogOut.TabIndex = 4;
+            this.ptbLogOut.TabStop = false;
             // 
             // frmHistorialCitas
             // 
@@ -219,6 +234,7 @@ namespace ProyectoOOIA.Ventanas
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialCitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogOut)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +256,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencia;
         private System.Windows.Forms.Button btnVerDetalle;
+        private System.Windows.Forms.PictureBox ptbLogOut;
     }
 }
