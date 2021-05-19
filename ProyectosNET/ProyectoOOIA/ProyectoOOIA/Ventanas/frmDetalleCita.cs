@@ -15,6 +15,7 @@ namespace ProyectoOOIA.Ventanas
         public frmDetalleCita()
         {
             InitializeComponent();
+            
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)

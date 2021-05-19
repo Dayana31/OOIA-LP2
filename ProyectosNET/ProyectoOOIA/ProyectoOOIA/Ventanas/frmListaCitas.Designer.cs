@@ -37,7 +37,7 @@ namespace ProyectoOOIA.Ventanas
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCitasProgramadas = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Orientador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,10 +45,12 @@ namespace ProyectoOOIA.Ventanas
             this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminarCita = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitasProgramadas)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -116,33 +118,33 @@ namespace ProyectoOOIA.Ventanas
             this.label1.TabIndex = 0;
             this.label1.Text = "Lista de citas";
             // 
-            // dataGridView1
+            // dgvCitasProgramadas
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dgvCitasProgramadas.AllowUserToAddRows = false;
+            this.dgvCitasProgramadas.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCitasProgramadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCitasProgramadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCitasProgramadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Orientador,
             this.Fecha,
             this.HoraInicio,
             this.HoraFin,
             this.Asistencia});
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(28, 121);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(808, 284);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvCitasProgramadas.EnableHeadersVisualStyles = false;
+            this.dgvCitasProgramadas.Location = new System.Drawing.Point(40, 25);
+            this.dgvCitasProgramadas.Name = "dgvCitasProgramadas";
+            this.dgvCitasProgramadas.ReadOnly = true;
+            this.dgvCitasProgramadas.RowHeadersWidth = 51;
+            this.dgvCitasProgramadas.RowTemplate.Height = 24;
+            this.dgvCitasProgramadas.Size = new System.Drawing.Size(808, 284);
+            this.dgvCitasProgramadas.TabIndex = 1;
             // 
             // ID
             // 
@@ -194,21 +196,34 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnEliminarCita
             // 
-            this.btnEliminarCita.Location = new System.Drawing.Point(747, 436);
+            this.btnEliminarCita.Location = new System.Drawing.Point(759, 339);
             this.btnEliminarCita.Name = "btnEliminarCita";
             this.btnEliminarCita.Size = new System.Drawing.Size(89, 27);
             this.btnEliminarCita.TabIndex = 2;
             this.btnEliminarCita.Text = "Eliminar";
             this.btnEliminarCita.UseVisualStyleBackColor = true;
+            this.btnEliminarCita.Click += new System.EventHandler(this.btnEliminarCita_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
+            this.panel2.Controls.Add(this.btnEliminarCita);
+            this.panel2.Controls.Add(this.dgvCitasProgramadas);
+            this.panel2.Location = new System.Drawing.Point(0, 96);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(899, 394);
+            this.panel2.TabIndex = 3;
             // 
             // frmListaCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(899, 490);
-            this.Controls.Add(this.btnEliminarCita);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "frmListaCitas";
             this.Text = "Lista de citas";
             this.panel1.ResumeLayout(false);
@@ -216,7 +231,8 @@ namespace ProyectoOOIA.Ventanas
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitasProgramadas)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -230,7 +246,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCitasProgramadas;
         private System.Windows.Forms.Button btnEliminarCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orientador;
@@ -238,5 +254,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencia;
+        private System.Windows.Forms.Panel panel2;
     }
 }
