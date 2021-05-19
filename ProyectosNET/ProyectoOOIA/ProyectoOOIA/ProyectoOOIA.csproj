@@ -65,6 +65,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
+    <Compile Include="Ventanas\frmConfirmacionCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmConfirmacionCita.Designer.cs">
+      <DependentUpon>frmConfirmacionCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmNotasParciales.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     <EmbeddedResource Include="Ventanas\frmCitaRegistro.resx">
       <DependentUpon>frmCitaRegistro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmConfirmacionCita.resx">
+      <DependentUpon>frmConfirmacionCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmConfirmarCancelar.resx">
       <DependentUpon>frmConfirmarCancelar.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +293,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
