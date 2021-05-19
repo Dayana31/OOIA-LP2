@@ -18,6 +18,12 @@ namespace ProyectoOOIA.Ventanas
             //esto hace que no se genere mas columnas de las que yo he 
             //definido en la interfaz grafica
             dgvCitasProgramadas.AutoGenerateColumns = false;
+            dgvHistorialCitas.AutoGenerateColumns = false;
+            tabCitasProgramadas.AutoScroll = false;
+            tabCitasProgramadas.HorizontalScroll.Enabled = false;
+            tabCitasProgramadas.HorizontalScroll.Visible = false;
+            tabCitasProgramadas.HorizontalScroll.Maximum = 0;
+            tabCitasProgramadas.AutoScroll = true;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -28,7 +34,16 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnEliminarCita_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Su cita ha sido cancelada con exito", "Mensaje de confirmacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            new frmCancelarCitaAlumno().Show();
+
+        }
+
+        private void btnVerDetalle_Click(object sender, EventArgs e)
+        {
+            //tenemos que almacenar los datos en la pantalla
+            new frmDetalleCita().Show();
+            this.Close();
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

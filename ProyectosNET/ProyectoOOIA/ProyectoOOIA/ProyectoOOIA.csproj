@@ -65,6 +65,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
+    <Compile Include="Ventanas\frmCancelarCitaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmCancelarCitaAlumno.Designer.cs">
+      <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmCancelarCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,12 +131,6 @@
     <Compile Include="Ventanas\frmDetalleCita.Designer.cs">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmHistorialCitas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmHistorialCitas.Designer.cs">
-      <DependentUpon>frmHistorialCitas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ventanas\frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +166,9 @@
     <EmbeddedResource Include="Componentes\Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmCancelarCitaAlumno.resx">
+      <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmCancelarCita.resx">
       <DependentUpon>frmCancelarCita.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmDetalleCita.resx">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmHistorialCitas.resx">
-      <DependentUpon>frmHistorialCitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHorario.resx">
       <DependentUpon>frmHorario.cs</DependentUpon>
