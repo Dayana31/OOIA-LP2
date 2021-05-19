@@ -31,6 +31,7 @@ namespace ProyectoOOIA.Ventanas
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ptbLogOut = new System.Windows.Forms.PictureBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -38,15 +39,16 @@ namespace ProyectoOOIA.Ventanas
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCitasProgramadas = new System.Windows.Forms.DataGridView();
+            this.btnEliminarCita = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Orientador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEliminarCita = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogOut)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitasProgramadas)).BeginInit();
@@ -55,33 +57,48 @@ namespace ProyectoOOIA.Ventanas
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(132)))), ((int)(((byte)(227)))));
+            this.panel1.Controls.Add(this.ptbLogOut);
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(899, 90);
+            this.panel1.Size = new System.Drawing.Size(899, 89);
             this.panel1.TabIndex = 0;
+            // 
+            // ptbLogOut
+            // 
+            this.ptbLogOut.Image = global::ProyectoOOIA.Properties.Resources.logout;
+            this.ptbLogOut.Location = new System.Drawing.Point(835, 24);
+            this.ptbLogOut.Name = "ptbLogOut";
+            this.ptbLogOut.Size = new System.Drawing.Size(42, 35);
+            this.ptbLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbLogOut.TabIndex = 3;
+            this.ptbLogOut.TabStop = false;
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
             this.toolStripSeparator1,
             this.toolStripLabel2});
-            this.toolStrip1.Location = new System.Drawing.Point(83, 48);
+            this.toolStrip1.Location = new System.Drawing.Point(84, 49);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(273, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(263, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
-            this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.toolStripLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.toolStripLabel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripLabel1.LinkVisited = true;
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(134, 22);
             this.toolStripLabel1.Text = "Citas programadas";
@@ -112,6 +129,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
             this.label1.Location = new System.Drawing.Point(23, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 25);
@@ -120,11 +138,11 @@ namespace ProyectoOOIA.Ventanas
             // 
             // dgvCitasProgramadas
             // 
-            this.dgvCitasProgramadas.AllowUserToAddRows = false;
             this.dgvCitasProgramadas.AllowUserToDeleteRows = false;
+            this.dgvCitasProgramadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(153)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -145,6 +163,32 @@ namespace ProyectoOOIA.Ventanas
             this.dgvCitasProgramadas.RowTemplate.Height = 24;
             this.dgvCitasProgramadas.Size = new System.Drawing.Size(808, 284);
             this.dgvCitasProgramadas.TabIndex = 1;
+            // 
+            // btnEliminarCita
+            // 
+            this.btnEliminarCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(0)))), ((int)(((byte)(31)))));
+            this.btnEliminarCita.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEliminarCita.Location = new System.Drawing.Point(725, 339);
+            this.btnEliminarCita.Name = "btnEliminarCita";
+            this.btnEliminarCita.Size = new System.Drawing.Size(123, 27);
+            this.btnEliminarCita.TabIndex = 2;
+            this.btnEliminarCita.Text = "Eliminar";
+            this.btnEliminarCita.UseVisualStyleBackColor = false;
+            this.btnEliminarCita.Click += new System.EventHandler(this.btnEliminarCita_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.Controls.Add(this.btnEliminarCita);
+            this.panel2.Controls.Add(this.dgvCitasProgramadas);
+            this.panel2.Location = new System.Drawing.Point(0, 80);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(899, 410);
+            this.panel2.TabIndex = 3;
             // 
             // ID
             // 
@@ -194,29 +238,6 @@ namespace ProyectoOOIA.Ventanas
             this.Asistencia.ReadOnly = true;
             this.Asistencia.Width = 125;
             // 
-            // btnEliminarCita
-            // 
-            this.btnEliminarCita.Location = new System.Drawing.Point(759, 339);
-            this.btnEliminarCita.Name = "btnEliminarCita";
-            this.btnEliminarCita.Size = new System.Drawing.Size(89, 27);
-            this.btnEliminarCita.TabIndex = 2;
-            this.btnEliminarCita.Text = "Eliminar";
-            this.btnEliminarCita.UseVisualStyleBackColor = true;
-            this.btnEliminarCita.Click += new System.EventHandler(this.btnEliminarCita_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.SystemColors.Window;
-            this.panel2.Controls.Add(this.btnEliminarCita);
-            this.panel2.Controls.Add(this.dgvCitasProgramadas);
-            this.panel2.Location = new System.Drawing.Point(0, 96);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(899, 394);
-            this.panel2.TabIndex = 3;
-            // 
             // frmListaCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -224,10 +245,12 @@ namespace ProyectoOOIA.Ventanas
             this.ClientSize = new System.Drawing.Size(899, 490);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmListaCitas";
             this.Text = "Lista de citas";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbLogOut)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
@@ -248,12 +271,13 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.DataGridView dgvCitasProgramadas;
         private System.Windows.Forms.Button btnEliminarCita;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox ptbLogOut;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orientador;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoraFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asistencia;
-        private System.Windows.Forms.Panel panel2;
     }
 }

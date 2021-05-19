@@ -28,7 +28,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnEliminarCita_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Su cita ha sido cancelada con exito", "Mensaje de confirmacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
         }
     }
 }
