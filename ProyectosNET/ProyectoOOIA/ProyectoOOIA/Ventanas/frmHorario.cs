@@ -36,5 +36,10 @@ namespace ProyectoOOIA.Ventanas
         {
 
         }
+
+        private void frmHorario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

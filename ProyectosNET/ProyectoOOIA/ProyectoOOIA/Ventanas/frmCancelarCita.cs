@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class Opiniones : Form
+    public partial class frmCancelarCita : Form
     {
-        public Opiniones()
+        public frmCancelarCita()
         {
             InitializeComponent();
         }
@@ -44,6 +44,19 @@ namespace ProyectoOOIA.Ventanas
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+             new frmConfirmarCancelar().Show();
+            this.Close();
+
+        }
+
+        private void btnCancelarCita_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
     }
