@@ -107,6 +107,12 @@
     <Compile Include="Ventanas\frmHorarioCambiado.Designer.cs">
       <DependentUpon>frmHorarioCambiado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmHorarioCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmHorarioCita.Designer.cs">
+      <DependentUpon>frmHorarioCita.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmListaTutores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     <EmbeddedResource Include="Ventanas\frmHorarioCambiado.resx">
       <DependentUpon>frmHorarioCambiado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmHorarioCita.resx">
+      <DependentUpon>frmHorarioCita.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
