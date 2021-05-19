@@ -169,6 +169,9 @@
     <EmbeddedResource Include="Ventanas\frmDetalleCita.resx">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmDetCita_DatAlumnos.resx">
+      <DependentUpon>frmDetCita_DatAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHistorialCitas.resx">
       <DependentUpon>frmHistorialCitas.cs</DependentUpon>
     </EmbeddedResource>
