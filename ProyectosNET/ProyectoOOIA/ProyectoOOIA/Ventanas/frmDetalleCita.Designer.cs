@@ -191,6 +191,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.label8);
