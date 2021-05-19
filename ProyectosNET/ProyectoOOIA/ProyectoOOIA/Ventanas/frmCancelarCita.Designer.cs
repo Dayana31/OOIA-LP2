@@ -118,7 +118,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.lblCancelarCitaDescripcion);
             this.Controls.Add(this.lblCancelarCitaTiulo);
             this.Name = "frmCancelarCita";
-            this.Text = "Form1";
+            this.Text = "Cancelar Cita";
             this.ResumeLayout(false);
             this.PerformLayout();
 

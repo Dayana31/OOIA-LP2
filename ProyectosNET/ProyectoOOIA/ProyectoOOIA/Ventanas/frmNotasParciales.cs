@@ -26,5 +26,10 @@ namespace ProyectoOOIA.Ventanas
         {
             this.Close();
         }
+
+        private void frmNotasParciales_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

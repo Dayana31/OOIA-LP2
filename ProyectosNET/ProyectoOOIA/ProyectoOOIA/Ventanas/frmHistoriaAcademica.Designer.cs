@@ -32,6 +32,12 @@ namespace ProyectoOOIA.Ventanas
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Vez = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NotaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lblEstudiante = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -47,12 +53,6 @@ namespace ProyectoOOIA.Ventanas
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnNotasParciales = new System.Windows.Forms.Button();
-            this.Ciclo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profesor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vez = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NotaFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,11 +86,48 @@ namespace ProyectoOOIA.Ventanas
             this.Profesor,
             this.Vez,
             this.NotaFinal});
+            this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(12, 181);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(668, 228);
+            this.dataGridView1.Size = new System.Drawing.Size(664, 228);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Ciclo
+            // 
+            this.Ciclo.HeaderText = "Ciclo";
+            this.Ciclo.Name = "Ciclo";
+            this.Ciclo.Width = 60;
+            // 
+            // Código
+            // 
+            this.Código.HeaderText = "Código";
+            this.Código.Name = "Código";
+            this.Código.Width = 60;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre del Curso";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 180;
+            // 
+            // Profesor
+            // 
+            this.Profesor.HeaderText = "Profesor";
+            this.Profesor.Name = "Profesor";
+            this.Profesor.Width = 180;
+            // 
+            // Vez
+            // 
+            this.Vez.HeaderText = "Vez";
+            this.Vez.Name = "Vez";
+            this.Vez.Width = 50;
+            // 
+            // NotaFinal
+            // 
+            this.NotaFinal.HeaderText = "Nota FInal";
+            this.NotaFinal.Name = "NotaFinal";
+            this.NotaFinal.Width = 90;
             // 
             // btnAceptar
             // 
@@ -250,42 +287,6 @@ namespace ProyectoOOIA.Ventanas
             this.btnNotasParciales.Text = "Notas Parciales";
             this.btnNotasParciales.UseVisualStyleBackColor = true;
             // 
-            // Ciclo
-            // 
-            this.Ciclo.HeaderText = "Ciclo";
-            this.Ciclo.Name = "Ciclo";
-            this.Ciclo.Width = 60;
-            // 
-            // Código
-            // 
-            this.Código.HeaderText = "Código";
-            this.Código.Name = "Código";
-            this.Código.Width = 60;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre del Curso";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 180;
-            // 
-            // Profesor
-            // 
-            this.Profesor.HeaderText = "Profesor";
-            this.Profesor.Name = "Profesor";
-            this.Profesor.Width = 180;
-            // 
-            // Vez
-            // 
-            this.Vez.HeaderText = "Vez";
-            this.Vez.Name = "Vez";
-            this.Vez.Width = 50;
-            // 
-            // NotaFinal
-            // 
-            this.NotaFinal.HeaderText = "Nota FInal";
-            this.NotaFinal.Name = "NotaFinal";
-            this.NotaFinal.Width = 90;
-            // 
             // frmHistoriaAcademica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,7 +311,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblTitulo);
             this.Name = "frmHistoriaAcademica";
-            this.Text = "frmDetCita_FichAlumnos";
+            this.Text = "Historia Academica";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
