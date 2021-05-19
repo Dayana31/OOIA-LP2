@@ -58,5 +58,10 @@ namespace ProyectoOOIA.Ventanas
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
+
+        private void dgvCitasProgramadas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

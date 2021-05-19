@@ -10,29 +10,25 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmDetCita_FichAlumnos : Form
+    public partial class frmPrincipalEventos : Form
     {
-        public frmDetCita_FichAlumnos()
+        public frmPrincipalEventos()
         {
             InitializeComponent();
+
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
+        private void frmPrincipalEventos_Load(object sender, EventArgs e)
         {
 
         }
