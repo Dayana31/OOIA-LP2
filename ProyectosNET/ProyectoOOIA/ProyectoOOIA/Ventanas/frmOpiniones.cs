@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class Form1 : Form
+    public partial class Opiniones : Form
     {
-        public Form1()
+        public Opiniones()
         {
             InitializeComponent();
         }

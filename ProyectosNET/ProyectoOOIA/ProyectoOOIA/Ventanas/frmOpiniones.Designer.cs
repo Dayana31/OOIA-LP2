@@ -4,7 +4,9 @@ namespace ProyectoOOIA.Ventanas
 /// Pantalla de opiniones 
 /// </summary>
 /// //raaaaa
-    partial class Form1
+/// //adasdasdasdasdasd
+/// asdasdasdada jjasdhahsdasd
+    partial class Opiniones
     {
         /// <summary>
         /// Required designer variable.
@@ -130,7 +132,7 @@ namespace ProyectoOOIA.Ventanas
             this.Opinion.ReadOnly = true;
             this.Opinion.Width = 380;
             // 
-            // Form1
+            // Opiniones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +143,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.lblBuscarOpinion);
             this.Controls.Add(this.lblOpiniones);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "Opiniones";
             this.Text = "Opiniones tutores y psicologos";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

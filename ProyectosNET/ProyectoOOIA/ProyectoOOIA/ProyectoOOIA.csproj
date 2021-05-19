@@ -59,6 +59,18 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
+    <Compile Include="Ventanas\frmDetCita_DatAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmDetCita_DatAlumnos.Designer.cs">
+      <DependentUpon>frmDetCita_DatAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmDetCita_FichAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmDetCita_FichAlumnos.Designer.cs">
+      <DependentUpon>frmDetCita_FichAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmOpiniones.cs">
       <SubType>Form</SubType>
     </Compile>
