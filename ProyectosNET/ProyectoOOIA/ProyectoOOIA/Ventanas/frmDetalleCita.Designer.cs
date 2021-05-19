@@ -54,28 +54,30 @@ namespace ProyectoOOIA.Ventanas
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(899, 90);
             this.panel1.TabIndex = 2;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 31);
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(24, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 29);
+            this.label1.Size = new System.Drawing.Size(237, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Detalle de la cita";
             // 
             // btnRegresar
             // 
-            this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(0)))), ((int)(((byte)(31)))));
-            this.btnRegresar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnRegresar.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnRegresar.Location = new System.Drawing.Point(723, 336);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(126, 27);
@@ -87,14 +89,16 @@ namespace ProyectoOOIA.Ventanas
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(26, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 17);
+            this.label2.Size = new System.Drawing.Size(101, 27);
             this.label2.TabIndex = 6;
             this.label2.Text = "Orientador";
             // 
             // txtOrientador
             // 
+            this.txtOrientador.Enabled = false;
             this.txtOrientador.Location = new System.Drawing.Point(29, 48);
             this.txtOrientador.Name = "txtOrientador";
             this.txtOrientador.ReadOnly = true;
@@ -104,14 +108,16 @@ namespace ProyectoOOIA.Ventanas
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(26, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.Size = new System.Drawing.Size(56, 27);
             this.label3.TabIndex = 8;
             this.label3.Text = "Fecha";
             // 
             // txtFecha
             // 
+            this.txtFecha.Enabled = false;
             this.txtFecha.Location = new System.Drawing.Point(29, 139);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.ReadOnly = true;
@@ -121,23 +127,26 @@ namespace ProyectoOOIA.Ventanas
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(27, 201);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 17);
+            this.label4.Size = new System.Drawing.Size(97, 27);
             this.label4.TabIndex = 10;
             this.label4.Text = "Hora inicio";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(215, 201);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.Size = new System.Drawing.Size(76, 27);
             this.label5.TabIndex = 11;
             this.label5.Text = "Hora fin";
             // 
             // txtHoraInicio
             // 
+            this.txtHoraInicio.Enabled = false;
             this.txtHoraInicio.Location = new System.Drawing.Point(29, 238);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.ReadOnly = true;
@@ -146,6 +155,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtHoraFin
             // 
+            this.txtHoraFin.Enabled = false;
             this.txtHoraFin.Location = new System.Drawing.Point(218, 238);
             this.txtHoraFin.Name = "txtHoraFin";
             this.txtHoraFin.ReadOnly = true;
@@ -155,14 +165,16 @@ namespace ProyectoOOIA.Ventanas
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(426, 201);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 17);
+            this.label6.Size = new System.Drawing.Size(161, 27);
             this.label6.TabIndex = 14;
             this.label6.Text = "Código de atención";
             // 
             // txtCodigoAtencion
             // 
+            this.txtCodigoAtencion.Enabled = false;
             this.txtCodigoAtencion.Location = new System.Drawing.Point(429, 238);
             this.txtCodigoAtencion.Name = "txtCodigoAtencion";
             this.txtCodigoAtencion.ReadOnly = true;
@@ -172,9 +184,10 @@ namespace ProyectoOOIA.Ventanas
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(426, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(126, 17);
+            this.label7.Size = new System.Drawing.Size(157, 27);
             this.label7.TabIndex = 16;
             this.label7.Text = "Motivo de consulta";
             // 
@@ -217,9 +230,11 @@ namespace ProyectoOOIA.Ventanas
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Enabled = false;
+            this.radioButton2.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.Location = new System.Drawing.Point(226, 294);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(47, 21);
+            this.radioButton2.Size = new System.Drawing.Size(58, 31);
             this.radioButton2.TabIndex = 20;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "No";
@@ -228,9 +243,11 @@ namespace ProyectoOOIA.Ventanas
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
+            this.radioButton1.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(135, 296);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(41, 21);
+            this.radioButton1.Size = new System.Drawing.Size(46, 31);
             this.radioButton1.TabIndex = 19;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Sí";
@@ -239,9 +256,10 @@ namespace ProyectoOOIA.Ventanas
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(26, 298);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 17);
+            this.label8.Size = new System.Drawing.Size(88, 27);
             this.label8.TabIndex = 18;
             this.label8.Text = "Asistencia";
             // 
@@ -252,6 +270,7 @@ namespace ProyectoOOIA.Ventanas
             this.ClientSize = new System.Drawing.Size(899, 490);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDetalleCita";
             this.Text = "frmDetalleCita";
             this.panel1.ResumeLayout(false);
