@@ -37,10 +37,10 @@ namespace ProyectoOOIA.Ventanas
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(81, 24);
+            this.lblTitulo.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(95, 24);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(233, 25);
+            this.lblTitulo.Size = new System.Drawing.Size(217, 30);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Disponibilidad Alterada";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -48,17 +48,17 @@ namespace ProyectoOOIA.Ventanas
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.lblMensaje.Location = new System.Drawing.Point(50, 65);
+            this.lblMensaje.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Location = new System.Drawing.Point(12, 68);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(290, 13);
+            this.lblMensaje.Size = new System.Drawing.Size(377, 21);
             this.lblMensaje.TabIndex = 1;
             this.lblMensaje.Text = "La disponibilidad de los horarios se cambiaron exitosamente.";
             this.lblMensaje.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(162, 109);
+            this.btnAceptar.Location = new System.Drawing.Point(161, 108);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 2;
@@ -66,16 +66,17 @@ namespace ProyectoOOIA.Ventanas
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // Form1
+            // frmHorarioCambiado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 163);
+            this.ClientSize = new System.Drawing.Size(404, 143);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.lblTitulo);
-            this.Name = "Form1";
+            this.Name = "frmHorarioCambiado";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmHorarioCambiado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

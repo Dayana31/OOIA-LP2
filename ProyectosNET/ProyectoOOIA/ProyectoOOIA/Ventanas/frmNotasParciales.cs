@@ -10,29 +10,24 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmDetCita_FichAlumnos : Form
+    public partial class frmNotasParciales : Form
     {
-        public frmDetCita_FichAlumnos()
+        public frmNotasParciales()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
+        private void frmNotasParciales_Load(object sender, EventArgs e)
         {
 
         }

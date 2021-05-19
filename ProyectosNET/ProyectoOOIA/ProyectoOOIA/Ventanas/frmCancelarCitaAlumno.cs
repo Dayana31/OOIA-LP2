@@ -10,26 +10,22 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmHorarioCambiado : Form
+    public partial class frmCancelarCitaAlumno : Form
     {
-        public frmHorarioCambiado()
+        public frmCancelarCitaAlumno()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAceptar_Click(object sender, EventArgs e)
+        private void btnNo_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void frmHorarioCambiado_Load(object sender, EventArgs e)
+        private void btnSi_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Su cita ha sido cancelada exitosamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
     }
 }
