@@ -20,7 +20,8 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-
+            new frmListaCitas().Show();
+            this.Close();
         }
     }
 }

@@ -65,11 +65,11 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
-    <Compile Include="Ventanas\frmDetCita_FichAlumnos.cs">
+    <Compile Include="Ventanas\frmCancelarCitaAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmDetCita_FichAlumnos.Designer.cs">
-      <DependentUpon>frmDetCita_FichAlumnos.cs</DependentUpon>
+    <Compile Include="Ventanas\frmCancelarCitaAlumno.Designer.cs">
+      <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmCancelarCita.cs">
       <SubType>Form</SubType>
@@ -95,17 +95,23 @@
     <Compile Include="Ventanas\frmDetCita_DatAlumnos.Designer.cs">
       <DependentUpon>frmDetCita_DatAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmHistoriaAcademica.cs">
+    <Compile Include="Ventanas\frmDetCita_FichAlumnos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmHistoriaAcademica.Designer.cs">
-      <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
+    <Compile Include="Ventanas\frmDetCita_FichAlumnos.Designer.cs">
+      <DependentUpon>frmDetCita_FichAlumnos.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmHorarioCambiado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\frmHorarioCambiado.Designer.cs">
       <DependentUpon>frmHorarioCambiado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmHorarioCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmHorarioCita.Designer.cs">
+      <DependentUpon>frmHorarioCita.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmListaTutores.cs">
       <SubType>Form</SubType>
@@ -130,12 +136,6 @@
     </Compile>
     <Compile Include="Ventanas\frmDetalleCita.Designer.cs">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventanas\frmHistorialCitas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmHistorialCitas.Designer.cs">
-      <DependentUpon>frmHistorialCitas.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmInicioSesion.cs">
       <SubType>Form</SubType>
@@ -172,6 +172,9 @@
     <EmbeddedResource Include="Componentes\Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmCancelarCitaAlumno.resx">
+      <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmCancelarCita.resx">
       <DependentUpon>frmCancelarCita.cs</DependentUpon>
     </EmbeddedResource>
@@ -184,17 +187,14 @@
     <EmbeddedResource Include="Ventanas\frmDetalleCita.resx">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmHistoriaAcademica.resx">
-      <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmHistorialCitas.resx">
-      <DependentUpon>frmHistorialCitas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHorario.resx">
       <DependentUpon>frmHorario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHorarioCambiado.resx">
       <DependentUpon>frmHorarioCambiado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmHorarioCita.resx">
+      <DependentUpon>frmHorarioCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
@@ -263,6 +263,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
