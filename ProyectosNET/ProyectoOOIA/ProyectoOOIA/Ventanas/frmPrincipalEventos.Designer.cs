@@ -63,6 +63,14 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button1
             // 
+            this.SuspendLayout();
+            // 
+            // frmPrincipalEventos
+            // 
+            this.ClientSize = new System.Drawing.Size(446, 404);
+            this.Name = "frmPrincipalEventos";
+            this.ResumeLayout(false);
+
             button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
             button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             button1.ForeColor = System.Drawing.Color.White;
