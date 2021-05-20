@@ -12,23 +12,25 @@ public class CitaOOIA {
     private Date fechaRegistro;
     private Alumno alumno;
     private Horario horario;
-    private Motivo motivo;
+    private CodigoAtencion codigo_atencion;
     private MiembroPUCP asesor;
+    private String motivo;
     private boolean asistio;
     private int estado;
 
     public CitaOOIA(){};
 
-    public CitaOOIA(int id_cita, Date fechaRegistro, Alumno alumno, Horario horario, Motivo motivo, MiembroPUCP asesor, boolean asistio, int estado) {
-        this.id_cita = id_cita;
+    public CitaOOIA(Date fechaRegistro, Alumno alumno, Horario horario, CodigoAtencion codigo_atencion, MiembroPUCP asesor, String motivo, boolean asistio, int estado) {
         this.fechaRegistro = fechaRegistro;
         this.alumno = alumno;
         this.horario = horario;
-        this.motivo = motivo;
+        this.codigo_atencion = codigo_atencion;
         this.asesor = asesor;
+        this.motivo = motivo;
         this.asistio = asistio;
         this.estado = estado;
     }
+
 
     
     
@@ -57,13 +59,22 @@ public class CitaOOIA {
         this.horario = horario;
     }
 
-    public Motivo getMotivo() {
+    public CodigoAtencion getCodigo_atencion() {
+        return codigo_atencion;
+    }
+
+    public void setCodigo_atencion(CodigoAtencion codigo_atencion) {
+        this.codigo_atencion = codigo_atencion;
+    }
+
+    public String getMotivo() {
         return motivo;
     }
 
-    public void setMotivo(Motivo motivo) {
+    public void setMotivo(String motivo) {
         this.motivo = motivo;
     }
+
 
     public Alumno getAlumno() {
         return alumno;
