@@ -37,6 +37,7 @@ namespace ProyectoOOIA.Ventanas
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtDuracion = new System.Windows.Forms.TextBox();
             this.txtCapacidad = new System.Windows.Forms.TextBox();
             this.txtOrganizador = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@ namespace ProyectoOOIA.Ventanas
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -59,9 +59,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(91, 28);
+            this.label1.Location = new System.Drawing.Point(121, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 45);
+            this.label1.Size = new System.Drawing.Size(317, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "Proximos Eventos";
             // 
@@ -69,9 +70,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(534, 29);
+            this.label2.Location = new System.Drawing.Point(712, 36);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 45);
+            this.label2.Size = new System.Drawing.Size(293, 55);
             this.label2.TabIndex = 1;
             this.label2.Text = "Registrar Evento";
             // 
@@ -81,9 +83,11 @@ namespace ProyectoOOIA.Ventanas
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(99, 103);
+            this.groupBox1.Location = new System.Drawing.Point(132, 127);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(337, 362);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(449, 446);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -93,9 +97,10 @@ namespace ProyectoOOIA.Ventanas
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(26, 277);
+            this.button4.Location = new System.Drawing.Point(35, 341);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(261, 57);
+            this.button4.Size = new System.Drawing.Size(348, 70);
             this.button4.TabIndex = 3;
             this.button4.Text = "Evento 1";
             this.button4.UseVisualStyleBackColor = false;
@@ -106,9 +111,10 @@ namespace ProyectoOOIA.Ventanas
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Gill Sans MT", 14F);
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(26, 193);
+            this.button3.Location = new System.Drawing.Point(35, 238);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(261, 57);
+            this.button3.Size = new System.Drawing.Size(348, 70);
             this.button3.TabIndex = 2;
             this.button3.Text = "Evento 1";
             this.button3.UseVisualStyleBackColor = false;
@@ -119,9 +125,10 @@ namespace ProyectoOOIA.Ventanas
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(26, 114);
+            this.button2.Location = new System.Drawing.Point(35, 140);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(261, 57);
+            this.button2.Size = new System.Drawing.Size(348, 70);
             this.button2.TabIndex = 1;
             this.button2.Text = "Evento 1";
             this.button2.UseVisualStyleBackColor = false;
@@ -132,9 +139,10 @@ namespace ProyectoOOIA.Ventanas
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(26, 31);
+            this.button1.Location = new System.Drawing.Point(35, 38);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(261, 57);
+            this.button1.Size = new System.Drawing.Size(348, 70);
             this.button1.TabIndex = 0;
             this.button1.Text = "Evento 1";
             this.button1.UseVisualStyleBackColor = false;
@@ -156,45 +164,60 @@ namespace ProyectoOOIA.Ventanas
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(494, 103);
+            this.groupBox2.Location = new System.Drawing.Point(659, 127);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(358, 362);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(477, 446);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(201, 185);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 27);
+            this.dateTimePicker1.TabIndex = 13;
+            // 
             // txtDuracion
             // 
-            this.txtDuracion.Location = new System.Drawing.Point(151, 216);
+            this.txtDuracion.Location = new System.Drawing.Point(201, 266);
+            this.txtDuracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDuracion.Name = "txtDuracion";
-            this.txtDuracion.Size = new System.Drawing.Size(175, 23);
+            this.txtDuracion.Size = new System.Drawing.Size(232, 27);
             this.txtDuracion.TabIndex = 12;
             // 
             // txtCapacidad
             // 
-            this.txtCapacidad.Location = new System.Drawing.Point(151, 184);
+            this.txtCapacidad.Location = new System.Drawing.Point(201, 226);
+            this.txtCapacidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCapacidad.Name = "txtCapacidad";
-            this.txtCapacidad.Size = new System.Drawing.Size(175, 23);
+            this.txtCapacidad.Size = new System.Drawing.Size(232, 27);
             this.txtCapacidad.TabIndex = 11;
             // 
             // txtOrganizador
             // 
-            this.txtOrganizador.Location = new System.Drawing.Point(151, 118);
+            this.txtOrganizador.Location = new System.Drawing.Point(201, 145);
+            this.txtOrganizador.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtOrganizador.Name = "txtOrganizador";
-            this.txtOrganizador.Size = new System.Drawing.Size(175, 23);
+            this.txtOrganizador.Size = new System.Drawing.Size(232, 27);
             this.txtOrganizador.TabIndex = 9;
             // 
             // txtPonente
             // 
-            this.txtPonente.Location = new System.Drawing.Point(151, 88);
+            this.txtPonente.Location = new System.Drawing.Point(201, 108);
+            this.txtPonente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPonente.Name = "txtPonente";
-            this.txtPonente.Size = new System.Drawing.Size(175, 23);
+            this.txtPonente.Size = new System.Drawing.Size(232, 27);
             this.txtPonente.TabIndex = 8;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(151, 54);
+            this.txtNombre.Location = new System.Drawing.Point(201, 66);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(175, 23);
+            this.txtNombre.Size = new System.Drawing.Size(232, 27);
             this.txtNombre.TabIndex = 7;
             // 
             // btnRegistro
@@ -203,9 +226,10 @@ namespace ProyectoOOIA.Ventanas
             this.btnRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegistro.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnRegistro.Location = new System.Drawing.Point(86, 279);
+            this.btnRegistro.Location = new System.Drawing.Point(115, 343);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegistro.Name = "btnRegistro";
-            this.btnRegistro.Size = new System.Drawing.Size(167, 53);
+            this.btnRegistro.Size = new System.Drawing.Size(223, 65);
             this.btnRegistro.TabIndex = 6;
             this.btnRegistro.Text = "Registrar Evento";
             this.btnRegistro.UseVisualStyleBackColor = false;
@@ -215,9 +239,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(16, 219);
+            this.label8.Location = new System.Drawing.Point(21, 270);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 21);
+            this.label8.Size = new System.Drawing.Size(81, 25);
             this.label8.TabIndex = 5;
             this.label8.Text = "Duración:";
             // 
@@ -225,9 +250,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 187);
+            this.label7.Location = new System.Drawing.Point(21, 230);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 21);
+            this.label7.Size = new System.Drawing.Size(87, 25);
             this.label7.TabIndex = 4;
             this.label7.Text = "Capacidad:";
             // 
@@ -235,9 +261,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 155);
+            this.label6.Location = new System.Drawing.Point(21, 191);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 21);
+            this.label6.Size = new System.Drawing.Size(55, 25);
             this.label6.TabIndex = 3;
             this.label6.Text = "Fecha:";
             // 
@@ -245,9 +272,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(16, 121);
+            this.label5.Location = new System.Drawing.Point(21, 149);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 21);
+            this.label5.Size = new System.Drawing.Size(104, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "Organizador:";
             // 
@@ -255,9 +283,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 91);
+            this.label4.Location = new System.Drawing.Point(21, 112);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 21);
+            this.label4.Size = new System.Drawing.Size(74, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "Ponente:";
             // 
@@ -265,9 +294,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 54);
+            this.label3.Location = new System.Drawing.Point(21, 66);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 21);
+            this.label3.Size = new System.Drawing.Size(154, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "Nombre del Evento:";
             // 
@@ -283,33 +313,28 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(32, 28);
+            this.btnAtras.Location = new System.Drawing.Point(43, 34);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(35, 34);
+            this.btnAtras.Size = new System.Drawing.Size(47, 42);
             this.btnAtras.TabIndex = 13;
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(151, 150);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 13;
-            // 
             // frmRegistroEvento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 523);
+            this.ClientSize = new System.Drawing.Size(1248, 644);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmRegistroEvento";
-            this.Text = "frmRegistroEvento";
+            this.Text = "Registro de Evento";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

@@ -43,9 +43,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(289, 29);
+            this.label1.Location = new System.Drawing.Point(385, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 45);
+            this.label1.Size = new System.Drawing.Size(391, 55);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del Evento";
             // 
@@ -53,9 +54,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(75, 104);
+            this.label2.Location = new System.Drawing.Point(100, 128);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 27);
+            this.label2.Size = new System.Drawing.Size(105, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ponentes";
             // 
@@ -63,18 +65,20 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(75, 271);
+            this.label4.Location = new System.Drawing.Point(100, 334);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 27);
+            this.label4.Size = new System.Drawing.Size(133, 34);
             this.label4.TabIndex = 3;
             this.label4.Text = "Descripción";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoOOIA.Properties.Resources.EEGGCC;
-            this.pictureBox1.Location = new System.Drawing.Point(540, 104);
+            this.pictureBox1.Location = new System.Drawing.Point(720, 128);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(329, 366);
+            this.pictureBox1.Size = new System.Drawing.Size(439, 450);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -91,19 +95,20 @@ namespace ProyectoOOIA.Ventanas
             "Ponente 1",
             "Ponente 2",
             "Ponente 3"});
-            this.checkedListBox1.Location = new System.Drawing.Point(80, 156);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.checkedListBox1.Location = new System.Drawing.Point(107, 192);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 88);
+            this.checkedListBox1.Size = new System.Drawing.Size(160, 108);
             this.checkedListBox1.TabIndex = 5;
             // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Location = new System.Drawing.Point(80, 327);
+            this.richTextBox1.Location = new System.Drawing.Point(107, 402);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(304, 143);
+            this.richTextBox1.Size = new System.Drawing.Size(404, 175);
             this.richTextBox1.TabIndex = 6;
             this.richTextBox1.Text = "Descripcion del evento";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
@@ -120,9 +125,10 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(31, 39);
+            this.btnAtras.Location = new System.Drawing.Point(41, 48);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(35, 34);
+            this.btnAtras.Size = new System.Drawing.Size(47, 42);
             this.btnAtras.TabIndex = 14;
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -130,9 +136,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             // frmInformacionEvento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 523);
+            this.ClientSize = new System.Drawing.Size(1248, 644);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.checkedListBox1);
@@ -140,8 +146,9 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmInformacionEvento";
-            this.Text = "frmInformacionEvento";
+            this.Text = "Informacion del evento";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
