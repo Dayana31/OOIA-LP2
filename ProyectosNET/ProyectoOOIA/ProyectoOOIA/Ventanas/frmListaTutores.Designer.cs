@@ -174,6 +174,7 @@ namespace ProyectoOOIA.Ventanas
             this.card3.Size = new System.Drawing.Size(327, 175);
             this.card3.TabIndex = 2;
             this.card3.Load += new System.EventHandler(this.card3_Load);
+            this.card3.Click += new System.EventHandler(this.card2_Click);
             // 
             // card2
             // 
