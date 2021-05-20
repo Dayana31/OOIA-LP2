@@ -57,6 +57,12 @@
     <Compile Include="Componentes\Card.Designer.cs">
       <DependentUpon>Card.cs</DependentUpon>
     </Compile>
+    <Compile Include="Componentes\Horario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\Horario.Designer.cs">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estado.cs" />
     <Compile Include="Componentes\OvalPictureBox.cs">
       <SubType>Component</SubType>
@@ -213,6 +219,9 @@
     </Compile>
     <EmbeddedResource Include="Componentes\Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\Horario.resx">
+      <DependentUpon>Horario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
