@@ -31,7 +31,7 @@ namespace ProyectoOOIA.Ventanas
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbBack = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -147,7 +147,7 @@ namespace ProyectoOOIA.Ventanas
             this.button82 = new System.Windows.Forms.Button();
             this.button83 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -157,7 +157,7 @@ namespace ProyectoOOIA.Ventanas
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.ptbBack);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -179,16 +179,16 @@ namespace ProyectoOOIA.Ventanas
             this.label1.TabIndex = 0;
             this.label1.Text = "Seleccionar horario";
             // 
-            // pictureBox1
+            // ptbBack
             // 
-            this.pictureBox1.Image = global::ProyectoOOIA.Properties.Resources.arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.ptbBack.Image = global::ProyectoOOIA.Properties.Resources.arrow;
+            this.ptbBack.Location = new System.Drawing.Point(28, 27);
+            this.ptbBack.Name = "ptbBack";
+            this.ptbBack.Size = new System.Drawing.Size(35, 27);
+            this.ptbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbBack.TabIndex = 1;
+            this.ptbBack.TabStop = false;
+            this.ptbBack.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label8
             // 
@@ -230,7 +230,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button2.Enabled = false;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Location = new System.Drawing.Point(46, 343);
@@ -241,7 +241,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button3.BackColor = System.Drawing.Color.SteelBlue;
             this.button3.Enabled = false;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Location = new System.Drawing.Point(46, 384);
@@ -420,6 +420,9 @@ namespace ProyectoOOIA.Ventanas
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.Window;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Window;
             this.button4.Location = new System.Drawing.Point(118, 28);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(120, 19);
@@ -736,12 +739,13 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button9.Location = new System.Drawing.Point(118, 53);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(120, 20);
             this.button9.TabIndex = 113;
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // button10
             // 
@@ -763,12 +767,13 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button12
             // 
+            this.button12.BackColor = System.Drawing.SystemColors.Window;
             this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button12.Location = new System.Drawing.Point(488, 53);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(114, 20);
             this.button12.TabIndex = 116;
-            this.button12.UseVisualStyleBackColor = true;
+            this.button12.UseVisualStyleBackColor = false;
             // 
             // button13
             // 
@@ -839,21 +844,24 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button17
             // 
+            this.button17.BackColor = System.Drawing.SystemColors.Window;
             this.button17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button17.Location = new System.Drawing.Point(488, 79);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(114, 21);
             this.button17.TabIndex = 121;
-            this.button17.UseVisualStyleBackColor = true;
+            this.button17.UseVisualStyleBackColor = false;
             // 
             // button18
             // 
+            this.button18.BackColor = System.Drawing.SystemColors.Window;
+            this.button18.Cursor = System.Windows.Forms.Cursors.Default;
             this.button18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button18.Location = new System.Drawing.Point(608, 79);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(108, 21);
             this.button18.TabIndex = 122;
-            this.button18.UseVisualStyleBackColor = true;
+            this.button18.UseVisualStyleBackColor = false;
             // 
             // button19
             // 
@@ -875,21 +883,23 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button21
             // 
+            this.button21.BackColor = System.Drawing.SystemColors.Window;
             this.button21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button21.Location = new System.Drawing.Point(372, 106);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(110, 21);
             this.button21.TabIndex = 125;
-            this.button21.UseVisualStyleBackColor = true;
+            this.button21.UseVisualStyleBackColor = false;
             // 
             // button22
             // 
+            this.button22.BackColor = System.Drawing.SystemColors.Window;
             this.button22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button22.Location = new System.Drawing.Point(488, 106);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(114, 21);
             this.button22.TabIndex = 126;
-            this.button22.UseVisualStyleBackColor = true;
+            this.button22.UseVisualStyleBackColor = false;
             // 
             // button23
             // 
@@ -983,12 +993,13 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button33
             // 
+            this.button33.BackColor = System.Drawing.Color.SteelBlue;
             this.button33.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button33.Location = new System.Drawing.Point(608, 159);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(108, 20);
             this.button33.TabIndex = 137;
-            this.button33.UseVisualStyleBackColor = true;
+            this.button33.UseVisualStyleBackColor = false;
             // 
             // button34
             // 
@@ -1451,7 +1462,7 @@ namespace ProyectoOOIA.Ventanas
             this.Text = "frmHorarioCita";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1465,7 +1476,7 @@ namespace ProyectoOOIA.Ventanas
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
