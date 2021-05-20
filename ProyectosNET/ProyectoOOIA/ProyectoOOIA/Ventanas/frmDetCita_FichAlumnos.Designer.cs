@@ -36,6 +36,12 @@ namespace ProyectoOOIA.Ventanas
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -48,13 +54,7 @@ namespace ProyectoOOIA.Ventanas
             this.label3 = new System.Windows.Forms.Label();
             this.lbNombreAlumno = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -145,6 +145,54 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Size = new System.Drawing.Size(767, 351);
             this.panel1.TabIndex = 25;
             // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(34, 499);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(381, 20);
+            this.textBox9.TabIndex = 65;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label10.Location = new System.Drawing.Point(13, 473);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(190, 23);
+            this.label10.TabIndex = 64;
+            this.label10.Text = "Fecha fin";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(34, 436);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(381, 20);
+            this.textBox8.TabIndex = 57;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label9.Location = new System.Drawing.Point(13, 410);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(190, 23);
+            this.label9.TabIndex = 56;
+            this.label9.Text = "Fecha inicio";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(34, 308);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(381, 20);
+            this.textBox6.TabIndex = 54;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(34, 369);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(381, 20);
+            this.textBox5.TabIndex = 53;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
@@ -230,7 +278,7 @@ namespace ProyectoOOIA.Ventanas
             // lbNombreAlumno
             // 
             this.lbNombreAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.lbNombreAlumno.Location = new System.Drawing.Point(3, 20);
+            this.lbNombreAlumno.Location = new System.Drawing.Point(3, 12);
             this.lbNombreAlumno.Name = "lbNombreAlumno";
             this.lbNombreAlumno.Size = new System.Drawing.Size(294, 23);
             this.lbNombreAlumno.TabIndex = 40;
@@ -239,27 +287,12 @@ namespace ProyectoOOIA.Ventanas
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.pictureBox2.Location = new System.Drawing.Point(512, 71);
+            this.pictureBox2.Location = new System.Drawing.Point(513, 26);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(234, 221);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 39;
             this.pictureBox2.TabStop = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(34, 369);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(381, 20);
-            this.textBox5.TabIndex = 53;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(34, 308);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(381, 20);
-            this.textBox6.TabIndex = 54;
             // 
             // textBox7
             // 
@@ -267,39 +300,6 @@ namespace ProyectoOOIA.Ventanas
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(381, 20);
             this.textBox7.TabIndex = 56;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(34, 436);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(381, 20);
-            this.textBox8.TabIndex = 57;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label9.Location = new System.Drawing.Point(13, 410);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(190, 23);
-            this.label9.TabIndex = 56;
-            this.label9.Text = "Fecha inicio";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(34, 499);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(381, 20);
-            this.textBox9.TabIndex = 65;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label10.Location = new System.Drawing.Point(13, 473);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(190, 23);
-            this.label10.TabIndex = 64;
-            this.label10.Text = "Fecha fin";
             // 
             // frmDetCita_FichAlumnos
             // 

@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas
 {
-    partial class frmDetCita_DatAlumnos
+    partial class frmDetCita_EventAlumnos
     {
         /// <summary>
         /// Required designer variable.
@@ -165,7 +165,7 @@ namespace ProyectoOOIA.Ventanas
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.pictureBox2.Location = new System.Drawing.Point(532, 19);
+            this.pictureBox2.Location = new System.Drawing.Point(529, 14);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(234, 221);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

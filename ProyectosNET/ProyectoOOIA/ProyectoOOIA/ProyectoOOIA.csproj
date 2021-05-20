@@ -173,12 +173,6 @@
     <Compile Include="Ventanas\frmDetalleCita.Designer.cs">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmHistorialCitas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmHistorialCitas.Designer.cs">
-      <DependentUpon>frmHistorialCitas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ventanas\frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,11 +241,11 @@
     <EmbeddedResource Include="Ventanas\frmDetCita_DatAlumnos.resx">
       <DependentUpon>frmDetCita_DatAlumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmDetCita_FichAlumnos.resx">
+      <DependentUpon>frmDetCita_FichAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHistoriaAcademica.resx">
       <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmHistorialCitas.resx">
-      <DependentUpon>frmHistorialCitas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHorario.resx">
       <DependentUpon>frmHorario.cs</DependentUpon>

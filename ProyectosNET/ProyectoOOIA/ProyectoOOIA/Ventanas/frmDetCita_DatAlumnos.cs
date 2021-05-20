@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmDetCita_DatAlumnos : Form
+    public partial class frmDetCita_EventAlumnos : Form
     {
-        public frmDetCita_DatAlumnos()
+        public frmDetCita_EventAlumnos()
         {
             InitializeComponent();
             
