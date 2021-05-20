@@ -36,9 +36,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnSi
             // 
-            this.btnSi.Location = new System.Drawing.Point(244, 137);
+            this.btnSi.Location = new System.Drawing.Point(325, 169);
+            this.btnSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSi.Name = "btnSi";
-            this.btnSi.Size = new System.Drawing.Size(98, 23);
+            this.btnSi.Size = new System.Drawing.Size(131, 28);
             this.btnSi.TabIndex = 0;
             this.btnSi.Text = "Si";
             this.btnSi.UseVisualStyleBackColor = true;
@@ -48,19 +49,21 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(68, 46);
-            this.lblMensaje.MaximumSize = new System.Drawing.Size(300, 0);
+            this.lblMensaje.Location = new System.Drawing.Point(91, 57);
+            this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMensaje.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(246, 50);
+            this.lblMensaje.Size = new System.Drawing.Size(307, 62);
             this.lblMensaje.TabIndex = 2;
             this.lblMensaje.Text = "¿Está seguro que desea cancelar la cita?";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(41, 137);
+            this.btnNo.Location = new System.Drawing.Point(55, 169);
+            this.btnNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(98, 23);
+            this.btnNo.Size = new System.Drawing.Size(131, 28);
             this.btnNo.TabIndex = 3;
             this.btnNo.Text = "No";
             this.btnNo.UseVisualStyleBackColor = true;
@@ -68,13 +71,14 @@ namespace ProyectoOOIA.Ventanas
             // 
             // frmConfirmarCancelar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(384, 189);
+            this.ClientSize = new System.Drawing.Size(512, 233);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnSi);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmConfirmarCancelar";
             this.Text = "Cancelar";
             this.ResumeLayout(false);
