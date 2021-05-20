@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button button1;
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -55,7 +55,6 @@ namespace ProyectoOOIA.Ventanas
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -63,23 +62,15 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button1
             // 
-            this.SuspendLayout();
-            // 
-            // frmPrincipalEventos
-            // 
-            this.ClientSize = new System.Drawing.Size(446, 404);
-            this.Name = "frmPrincipalEventos";
-            this.ResumeLayout(false);
-
-            button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            button1.ForeColor = System.Drawing.Color.White;
-            button1.Location = new System.Drawing.Point(536, 89);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(145, 56);
-            button1.TabIndex = 0;
-            button1.Text = "Categorias";
-            button1.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(536, 89);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 56);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Categorias";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -291,6 +282,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -298,7 +290,8 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(button1);
+            this.Controls.Add(this.button1);
+            this.MinimizeBox = false;
             this.Name = "frmPrincipalEventos";
             this.Text = "Vista principal de eventos";
             this.Load += new System.EventHandler(this.frmPrincipalEventos_Load);
@@ -338,5 +331,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.Button button1;
     }
 }
