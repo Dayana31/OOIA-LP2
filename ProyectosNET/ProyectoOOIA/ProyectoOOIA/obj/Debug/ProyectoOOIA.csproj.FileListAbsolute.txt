@@ -2,7 +2,6 @@ C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\b
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
-C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.frmPrincipal.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Properties.Resources.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.GenerateResource.cache
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CoreCompileInputs.cache
@@ -112,3 +111,33 @@ C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proyec
 C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmOpiniones.resources
 C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalEventos.resources
 C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRegistroEvento.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Card.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Horario.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmAccesoEvento.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCancelarCita.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCancelarCitaAlumno.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.CategoriasEventos.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCitaRegistro.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmConfirmacionCita.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmConfirmarCancelar.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleCita.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetCita_EventAlumnos.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHistoriaAcademica.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorario.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorarioCambiado.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorarioCita.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInicioSesion.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInscripcionEvento.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmListaCitas.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmListaDeEventos.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmListaTutores.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmNotasParciales.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmOpiniones.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalAlumno.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalEventos.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalProfesor.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmReestablecerContraseña.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRegistroEvento.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRespuestaAcceso.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmVistadeEvento.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
