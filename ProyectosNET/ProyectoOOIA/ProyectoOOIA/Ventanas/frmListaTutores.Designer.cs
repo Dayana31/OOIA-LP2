@@ -36,13 +36,13 @@ namespace ProyectoOOIA.Ventanas
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabTutor = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.card6 = new ProyectoOOIA.Componentes.Card();
             this.card7 = new ProyectoOOIA.Componentes.Card();
             this.card5 = new ProyectoOOIA.Componentes.Card();
             this.card4 = new ProyectoOOIA.Componentes.Card();
             this.card3 = new ProyectoOOIA.Componentes.Card();
             this.card2 = new ProyectoOOIA.Componentes.Card();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.card8 = new ProyectoOOIA.Componentes.Card();
             this.card1 = new ProyectoOOIA.Componentes.Card();
             this.panel1.SuspendLayout();
@@ -53,6 +53,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -68,9 +69,9 @@ namespace ProyectoOOIA.Ventanas
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(25, 35);
+            this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.Size = new System.Drawing.Size(55, 52);
             this.button1.TabIndex = 1;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
@@ -117,18 +118,6 @@ namespace ProyectoOOIA.Ventanas
             this.tabTutor.Text = "Tutores";
             this.tabTutor.UseVisualStyleBackColor = true;
             this.tabTutor.Click += new System.EventHandler(this.tabTutor_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.card8);
-            this.tabPage2.Controls.Add(this.card1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 36);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(928, 390);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Psicólogos";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // card6
             // 
@@ -183,6 +172,19 @@ namespace ProyectoOOIA.Ventanas
             this.card2.Size = new System.Drawing.Size(327, 175);
             this.card2.TabIndex = 0;
             this.card2.Load += new System.EventHandler(this.card2_Load);
+            this.card2.Click += new System.EventHandler(this.card2_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.card8);
+            this.tabPage2.Controls.Add(this.card1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 36);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(928, 390);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Psicólogos";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // card8
             // 

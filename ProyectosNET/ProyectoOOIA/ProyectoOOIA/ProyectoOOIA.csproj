@@ -57,6 +57,12 @@
     <Compile Include="Componentes\Card.Designer.cs">
       <DependentUpon>Card.cs</DependentUpon>
     </Compile>
+    <Compile Include="Componentes\Horario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\Horario.Designer.cs">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estado.cs" />
     <Compile Include="Componentes\OvalPictureBox.cs">
       <SubType>Component</SubType>
@@ -226,6 +232,9 @@
     <EmbeddedResource Include="Componentes\Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\Horario.resx">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,12 +356,10 @@
     <None Include="Resources\028-telephone-2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\home.png" />
     <Content Include="Resources\profesor.jpg" />
     <Content Include="Resources\psicologo.jpg" />
   </ItemGroup>
