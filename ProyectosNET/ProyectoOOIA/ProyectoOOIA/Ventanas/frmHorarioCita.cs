@@ -40,5 +40,10 @@ namespace ProyectoOOIA.Ventanas
             new frmCitaRegistro().Show();
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
