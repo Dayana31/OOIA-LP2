@@ -38,5 +38,16 @@ namespace ProyectoOOIA.Ventanas
             new frmHorario().Show();
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new frmRegistroEvento().Show();
+            this.Close();
+        }
     }
 }

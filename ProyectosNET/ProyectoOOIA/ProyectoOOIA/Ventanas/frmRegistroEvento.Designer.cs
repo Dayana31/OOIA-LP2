@@ -39,7 +39,6 @@ namespace ProyectoOOIA.Ventanas
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtDuracion = new System.Windows.Forms.TextBox();
             this.txtCapacidad = new System.Windows.Forms.TextBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
             this.txtOrganizador = new System.Windows.Forms.TextBox();
             this.txtPonente = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@ namespace ProyectoOOIA.Ventanas
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -142,9 +142,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.dateTimePicker1);
             this.groupBox2.Controls.Add(this.txtDuracion);
             this.groupBox2.Controls.Add(this.txtCapacidad);
-            this.groupBox2.Controls.Add(this.txtFecha);
             this.groupBox2.Controls.Add(this.txtOrganizador);
             this.groupBox2.Controls.Add(this.txtPonente);
             this.groupBox2.Controls.Add(this.txtNombre);
@@ -175,13 +175,6 @@ namespace ProyectoOOIA.Ventanas
             this.txtCapacidad.Name = "txtCapacidad";
             this.txtCapacidad.Size = new System.Drawing.Size(175, 23);
             this.txtCapacidad.TabIndex = 11;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Location = new System.Drawing.Point(151, 152);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(175, 23);
-            this.txtFecha.TabIndex = 10;
             // 
             // txtOrganizador
             // 
@@ -298,6 +291,13 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(151, 150);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.TabIndex = 13;
+            // 
             // frmRegistroEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,10 +337,10 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDuracion;
         private System.Windows.Forms.TextBox txtCapacidad;
-        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.TextBox txtOrganizador;
         private System.Windows.Forms.TextBox txtPonente;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnRegistro;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
