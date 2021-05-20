@@ -39,11 +39,11 @@ namespace ProyectoOOIA.Ventanas
             this.txtHorarios = new System.Windows.Forms.Label();
             this.txtCitas = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.Label();
-            this.ovalPictureBox1 = new OvalPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
+            this.ovalPictureBox1 = new OvalPictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -61,6 +61,7 @@ namespace ProyectoOOIA.Ventanas
             this.button4.Size = new System.Drawing.Size(162, 145);
             this.button4.TabIndex = 27;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -101,6 +102,7 @@ namespace ProyectoOOIA.Ventanas
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = global::ProyectoOOIA.Properties.Resources.B2B_Appointment_Setting_Services;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
@@ -111,6 +113,7 @@ namespace ProyectoOOIA.Ventanas
             this.button1.Size = new System.Drawing.Size(162, 145);
             this.button1.TabIndex = 24;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAtras
             // 
@@ -186,17 +189,6 @@ namespace ProyectoOOIA.Ventanas
             this.txtUsername.TabIndex = 17;
             this.txtUsername.Text = "Solorzano Tapia, José";
             // 
-            // ovalPictureBox1
-            // 
-            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.ovalPictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(38, 10);
-            this.ovalPictureBox1.Name = "ovalPictureBox1";
-            this.ovalPictureBox1.Size = new System.Drawing.Size(71, 71);
-            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ovalPictureBox1.TabIndex = 22;
-            this.ovalPictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
@@ -218,6 +210,17 @@ namespace ProyectoOOIA.Ventanas
             this.splitter1.TabIndex = 24;
             this.splitter1.TabStop = false;
             // 
+            // ovalPictureBox1
+            // 
+            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.ovalPictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
+            this.ovalPictureBox1.Location = new System.Drawing.Point(38, 10);
+            this.ovalPictureBox1.Name = "ovalPictureBox1";
+            this.ovalPictureBox1.Size = new System.Drawing.Size(71, 71);
+            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ovalPictureBox1.TabIndex = 22;
+            this.ovalPictureBox1.TabStop = false;
+            // 
             // frmPrincipalProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,9 +239,9 @@ namespace ProyectoOOIA.Ventanas
             this.MaximizeBox = false;
             this.Name = "frmPrincipalProfesor";
             this.Text = "Menú Principal";
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
