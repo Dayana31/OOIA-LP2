@@ -117,3 +117,7 @@ C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proyec
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRespuestaAcceso.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmVistadeEvento.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInformacionEvento.resources
+C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInformacionEvento.resources
+C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInscripcionEvento.resources
+C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRespuestaAcceso.resources
+C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmVistadeEvento.resources
