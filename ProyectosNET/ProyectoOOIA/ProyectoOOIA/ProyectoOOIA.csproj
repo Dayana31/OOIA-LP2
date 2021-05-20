@@ -223,6 +223,12 @@
     <Compile Include="Ventanas\frmRegistroEvento.Designer.cs">
       <DependentUpon>frmRegistroEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmRespuestaAcceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmRespuestaAcceso.Designer.cs">
+      <DependentUpon>frmRespuestaAcceso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmVistadeEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmRegistroEvento.resx">
       <DependentUpon>frmRegistroEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmRespuestaAcceso.resx">
+      <DependentUpon>frmRespuestaAcceso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmVistadeEvento.resx">
       <DependentUpon>frmVistadeEvento.cs</DependentUpon>
