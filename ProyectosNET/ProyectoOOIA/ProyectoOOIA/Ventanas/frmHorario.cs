@@ -41,5 +41,22 @@ namespace ProyectoOOIA.Ventanas
         {
 
         }
+
+        private void dgvHorarioProf_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new frmDetCita_EventAlumnos().Show();
+            this.Close();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            new frmPrincipalProfesor().Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new frmCancelarCita().ShowDialog();
+        }
     }
 }

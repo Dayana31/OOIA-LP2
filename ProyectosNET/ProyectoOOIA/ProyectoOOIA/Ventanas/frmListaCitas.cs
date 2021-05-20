@@ -66,8 +66,9 @@ namespace ProyectoOOIA.Ventanas
 
         private void ptbLogOut_Click(object sender, EventArgs e)
         {
-            this.Close();
+           
             new frmInicioSesion().Show();
+            this.Close();
         }
     }
 }

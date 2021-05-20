@@ -35,7 +35,8 @@ namespace ProyectoOOIA.Ventanas
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            new frmHorario().Show();
+            this.Close();
         }
     }
 }
