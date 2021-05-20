@@ -30,7 +30,6 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.toggle1 = new ProyectoOOIA.Componente.toggle();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblIncorrecto = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@ namespace ProyectoOOIA.Ventanas
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.toggle1 = new ProyectoOOIA.Componente.toggle();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,17 +73,7 @@ namespace ProyectoOOIA.Ventanas
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(618, 523);
             this.panel2.TabIndex = 8;
-            // 
-            // toggle1
-            // 
-            this.toggle1.AutoSize = true;
-            this.toggle1.Location = new System.Drawing.Point(264, 406);
-            this.toggle1.Name = "toggle1";
-            this.toggle1.Padding = new System.Windows.Forms.Padding(6);
-            this.toggle1.Size = new System.Drawing.Size(73, 29);
-            this.toggle1.TabIndex = 11;
-            this.toggle1.Text = "toggle1";
-            this.toggle1.UseVisualStyleBackColor = true;
+            this.panel2.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.panel2_PreviewKeyDown);
             // 
             // label5
             // 
@@ -216,23 +206,29 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(127, 480);
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::ProyectoOOIA.Properties.Resources._017_mobile_phone;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(66, 466);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(50, 38);
             this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::ProyectoOOIA.Properties.Resources._013_mail;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(33, 481);
+            this.button1.Location = new System.Drawing.Point(12, 466);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(48, 37);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
@@ -266,6 +262,17 @@ namespace ProyectoOOIA.Ventanas
             this.splitter1.TabIndex = 9;
             this.splitter1.TabStop = false;
             // 
+            // toggle1
+            // 
+            this.toggle1.AutoSize = true;
+            this.toggle1.Location = new System.Drawing.Point(264, 406);
+            this.toggle1.Name = "toggle1";
+            this.toggle1.Padding = new System.Windows.Forms.Padding(6);
+            this.toggle1.Size = new System.Drawing.Size(73, 29);
+            this.toggle1.TabIndex = 11;
+            this.toggle1.Text = "toggle1";
+            this.toggle1.UseVisualStyleBackColor = true;
+            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +286,7 @@ namespace ProyectoOOIA.Ventanas
             this.Name = "frmInicioSesion";
             this.Text = "Inicio de Sesion";
             this.Load += new System.EventHandler(this.frmInicioSesion_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmInicioSesion_KeyPress);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
