@@ -30,15 +30,6 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBox80 = new System.Windows.Forms.CheckBox();
             this.checkBox79 = new System.Windows.Forms.CheckBox();
@@ -142,14 +133,23 @@ namespace ProyectoOOIA.Ventanas
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -157,6 +157,7 @@ namespace ProyectoOOIA.Ventanas
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -167,113 +168,23 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1083, 647);
+            this.panel1.Size = new System.Drawing.Size(812, 526);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ProyectoOOIA.Properties.Resources.back;
-            this.pictureBox3.Location = new System.Drawing.Point(441, 94);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(47, 41);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProyectoOOIA.Properties.Resources.next;
-            this.pictureBox2.Location = new System.Drawing.Point(815, 94);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(46, 154);
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(120, 33);
-            this.btnSeleccionar.TabIndex = 10;
-            this.btnSeleccionar.Text = "Seleccionar";
-            this.btnSeleccionar.UseVisualStyleBackColor = true;
-            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.Enabled = false;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(46, 384);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(26, 20);
-            this.button3.TabIndex = 9;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.button2.Enabled = false;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(46, 343);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(26, 20);
-            this.button2.TabIndex = 8;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.Enabled = false;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(46, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 20);
-            this.button1.TabIndex = 7;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(88, 384);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(66, 17);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Ocupado";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(88, 343);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 17);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "No disponible";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(88, 305);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 17);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Libre";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
             this.tableLayoutPanel1.Controls.Add(this.checkBox80, 5, 16);
             this.tableLayoutPanel1.Controls.Add(this.checkBox79, 4, 16);
             this.tableLayoutPanel1.Controls.Add(this.checkBox78, 3, 16);
@@ -376,30 +287,30 @@ namespace ProyectoOOIA.Ventanas
             this.tableLayoutPanel1.Controls.Add(this.label26, 0, 15);
             this.tableLayoutPanel1.Controls.Add(this.label27, 0, 16);
             this.tableLayoutPanel1.Controls.Add(this.checkBox1, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(268, 154);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(209, 135);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 17;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(719, 444);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(539, 361);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // checkBox80
@@ -407,9 +318,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox80.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox80.AutoSize = true;
             this.checkBox80.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox80.Location = new System.Drawing.Point(608, 422);
+            this.checkBox80.Location = new System.Drawing.Point(453, 340);
+            this.checkBox80.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox80.Name = "checkBox80";
-            this.checkBox80.Size = new System.Drawing.Size(108, 19);
+            this.checkBox80.Size = new System.Drawing.Size(86, 21);
             this.checkBox80.TabIndex = 107;
             this.checkBox80.UseVisualStyleBackColor = true;
             // 
@@ -418,9 +330,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox79.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox79.AutoSize = true;
             this.checkBox79.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox79.Location = new System.Drawing.Point(488, 422);
+            this.checkBox79.Location = new System.Drawing.Point(363, 340);
+            this.checkBox79.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox79.Name = "checkBox79";
-            this.checkBox79.Size = new System.Drawing.Size(114, 19);
+            this.checkBox79.Size = new System.Drawing.Size(90, 21);
             this.checkBox79.TabIndex = 106;
             this.checkBox79.UseVisualStyleBackColor = true;
             // 
@@ -429,9 +342,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox78.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox78.AutoSize = true;
             this.checkBox78.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox78.Location = new System.Drawing.Point(372, 422);
+            this.checkBox78.Location = new System.Drawing.Point(276, 340);
+            this.checkBox78.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox78.Name = "checkBox78";
-            this.checkBox78.Size = new System.Drawing.Size(110, 19);
+            this.checkBox78.Size = new System.Drawing.Size(87, 21);
             this.checkBox78.TabIndex = 105;
             this.checkBox78.UseVisualStyleBackColor = true;
             // 
@@ -440,9 +354,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox77.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox77.AutoSize = true;
             this.checkBox77.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox77.Location = new System.Drawing.Point(244, 422);
+            this.checkBox77.Location = new System.Drawing.Point(180, 340);
+            this.checkBox77.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox77.Name = "checkBox77";
-            this.checkBox77.Size = new System.Drawing.Size(122, 19);
+            this.checkBox77.Size = new System.Drawing.Size(96, 21);
             this.checkBox77.TabIndex = 104;
             this.checkBox77.UseVisualStyleBackColor = true;
             // 
@@ -451,9 +366,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox76.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox76.AutoSize = true;
             this.checkBox76.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox76.Location = new System.Drawing.Point(118, 422);
+            this.checkBox76.Location = new System.Drawing.Point(86, 340);
+            this.checkBox76.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox76.Name = "checkBox76";
-            this.checkBox76.Size = new System.Drawing.Size(120, 19);
+            this.checkBox76.Size = new System.Drawing.Size(94, 21);
             this.checkBox76.TabIndex = 103;
             this.checkBox76.UseVisualStyleBackColor = true;
             // 
@@ -462,9 +378,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox75.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox75.AutoSize = true;
             this.checkBox75.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox75.Location = new System.Drawing.Point(608, 399);
+            this.checkBox75.Location = new System.Drawing.Point(453, 321);
+            this.checkBox75.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox75.Name = "checkBox75";
-            this.checkBox75.Size = new System.Drawing.Size(108, 17);
+            this.checkBox75.Size = new System.Drawing.Size(86, 19);
             this.checkBox75.TabIndex = 102;
             this.checkBox75.UseVisualStyleBackColor = true;
             // 
@@ -473,9 +390,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox74.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox74.AutoSize = true;
             this.checkBox74.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox74.Location = new System.Drawing.Point(488, 399);
+            this.checkBox74.Location = new System.Drawing.Point(363, 321);
+            this.checkBox74.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox74.Name = "checkBox74";
-            this.checkBox74.Size = new System.Drawing.Size(114, 17);
+            this.checkBox74.Size = new System.Drawing.Size(90, 19);
             this.checkBox74.TabIndex = 101;
             this.checkBox74.UseVisualStyleBackColor = true;
             // 
@@ -484,9 +402,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox73.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox73.AutoSize = true;
             this.checkBox73.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox73.Location = new System.Drawing.Point(372, 399);
+            this.checkBox73.Location = new System.Drawing.Point(276, 321);
+            this.checkBox73.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox73.Name = "checkBox73";
-            this.checkBox73.Size = new System.Drawing.Size(110, 17);
+            this.checkBox73.Size = new System.Drawing.Size(87, 19);
             this.checkBox73.TabIndex = 100;
             this.checkBox73.UseVisualStyleBackColor = true;
             // 
@@ -495,9 +414,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox72.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox72.AutoSize = true;
             this.checkBox72.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox72.Location = new System.Drawing.Point(244, 399);
+            this.checkBox72.Location = new System.Drawing.Point(180, 321);
+            this.checkBox72.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox72.Name = "checkBox72";
-            this.checkBox72.Size = new System.Drawing.Size(122, 17);
+            this.checkBox72.Size = new System.Drawing.Size(96, 19);
             this.checkBox72.TabIndex = 99;
             this.checkBox72.UseVisualStyleBackColor = true;
             // 
@@ -506,9 +426,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox71.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox71.AutoSize = true;
             this.checkBox71.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox71.Location = new System.Drawing.Point(118, 399);
+            this.checkBox71.Location = new System.Drawing.Point(86, 321);
+            this.checkBox71.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox71.Name = "checkBox71";
-            this.checkBox71.Size = new System.Drawing.Size(120, 17);
+            this.checkBox71.Size = new System.Drawing.Size(94, 19);
             this.checkBox71.TabIndex = 98;
             this.checkBox71.UseVisualStyleBackColor = true;
             // 
@@ -517,9 +438,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox70.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox70.AutoSize = true;
             this.checkBox70.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox70.Location = new System.Drawing.Point(608, 371);
+            this.checkBox70.Location = new System.Drawing.Point(453, 298);
+            this.checkBox70.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox70.Name = "checkBox70";
-            this.checkBox70.Size = new System.Drawing.Size(108, 22);
+            this.checkBox70.Size = new System.Drawing.Size(86, 23);
             this.checkBox70.TabIndex = 97;
             this.checkBox70.UseVisualStyleBackColor = true;
             // 
@@ -528,9 +450,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox69.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox69.AutoSize = true;
             this.checkBox69.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox69.Location = new System.Drawing.Point(488, 371);
+            this.checkBox69.Location = new System.Drawing.Point(363, 298);
+            this.checkBox69.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox69.Name = "checkBox69";
-            this.checkBox69.Size = new System.Drawing.Size(114, 22);
+            this.checkBox69.Size = new System.Drawing.Size(90, 23);
             this.checkBox69.TabIndex = 96;
             this.checkBox69.UseVisualStyleBackColor = true;
             // 
@@ -539,9 +462,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox68.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox68.AutoSize = true;
             this.checkBox68.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox68.Location = new System.Drawing.Point(372, 371);
+            this.checkBox68.Location = new System.Drawing.Point(276, 298);
+            this.checkBox68.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox68.Name = "checkBox68";
-            this.checkBox68.Size = new System.Drawing.Size(110, 22);
+            this.checkBox68.Size = new System.Drawing.Size(87, 23);
             this.checkBox68.TabIndex = 95;
             this.checkBox68.UseVisualStyleBackColor = true;
             // 
@@ -550,9 +474,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox67.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox67.AutoSize = true;
             this.checkBox67.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox67.Location = new System.Drawing.Point(244, 371);
+            this.checkBox67.Location = new System.Drawing.Point(180, 298);
+            this.checkBox67.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox67.Name = "checkBox67";
-            this.checkBox67.Size = new System.Drawing.Size(122, 22);
+            this.checkBox67.Size = new System.Drawing.Size(96, 23);
             this.checkBox67.TabIndex = 94;
             this.checkBox67.UseVisualStyleBackColor = true;
             // 
@@ -561,9 +486,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox66.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox66.AutoSize = true;
             this.checkBox66.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox66.Location = new System.Drawing.Point(118, 371);
+            this.checkBox66.Location = new System.Drawing.Point(86, 298);
+            this.checkBox66.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox66.Name = "checkBox66";
-            this.checkBox66.Size = new System.Drawing.Size(120, 22);
+            this.checkBox66.Size = new System.Drawing.Size(94, 23);
             this.checkBox66.TabIndex = 93;
             this.checkBox66.UseVisualStyleBackColor = true;
             // 
@@ -572,9 +498,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox65.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox65.AutoSize = true;
             this.checkBox65.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox65.Location = new System.Drawing.Point(608, 344);
+            this.checkBox65.Location = new System.Drawing.Point(453, 276);
+            this.checkBox65.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox65.Name = "checkBox65";
-            this.checkBox65.Size = new System.Drawing.Size(108, 21);
+            this.checkBox65.Size = new System.Drawing.Size(86, 22);
             this.checkBox65.TabIndex = 92;
             this.checkBox65.UseVisualStyleBackColor = true;
             // 
@@ -583,9 +510,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox64.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox64.AutoSize = true;
             this.checkBox64.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox64.Location = new System.Drawing.Point(488, 344);
+            this.checkBox64.Location = new System.Drawing.Point(363, 276);
+            this.checkBox64.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox64.Name = "checkBox64";
-            this.checkBox64.Size = new System.Drawing.Size(114, 21);
+            this.checkBox64.Size = new System.Drawing.Size(90, 22);
             this.checkBox64.TabIndex = 91;
             this.checkBox64.UseVisualStyleBackColor = true;
             // 
@@ -594,9 +522,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox63.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox63.AutoSize = true;
             this.checkBox63.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox63.Location = new System.Drawing.Point(372, 344);
+            this.checkBox63.Location = new System.Drawing.Point(276, 276);
+            this.checkBox63.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox63.Name = "checkBox63";
-            this.checkBox63.Size = new System.Drawing.Size(110, 21);
+            this.checkBox63.Size = new System.Drawing.Size(87, 22);
             this.checkBox63.TabIndex = 90;
             this.checkBox63.UseVisualStyleBackColor = true;
             // 
@@ -605,9 +534,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox62.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox62.AutoSize = true;
             this.checkBox62.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox62.Location = new System.Drawing.Point(244, 344);
+            this.checkBox62.Location = new System.Drawing.Point(180, 276);
+            this.checkBox62.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox62.Name = "checkBox62";
-            this.checkBox62.Size = new System.Drawing.Size(122, 21);
+            this.checkBox62.Size = new System.Drawing.Size(96, 22);
             this.checkBox62.TabIndex = 89;
             this.checkBox62.UseVisualStyleBackColor = true;
             // 
@@ -616,9 +546,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox61.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox61.AutoSize = true;
             this.checkBox61.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox61.Location = new System.Drawing.Point(118, 344);
+            this.checkBox61.Location = new System.Drawing.Point(86, 276);
+            this.checkBox61.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox61.Name = "checkBox61";
-            this.checkBox61.Size = new System.Drawing.Size(120, 21);
+            this.checkBox61.Size = new System.Drawing.Size(94, 22);
             this.checkBox61.TabIndex = 88;
             this.checkBox61.UseVisualStyleBackColor = true;
             // 
@@ -627,9 +558,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox60.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox60.AutoSize = true;
             this.checkBox60.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox60.Location = new System.Drawing.Point(608, 318);
+            this.checkBox60.Location = new System.Drawing.Point(453, 255);
+            this.checkBox60.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox60.Name = "checkBox60";
-            this.checkBox60.Size = new System.Drawing.Size(108, 20);
+            this.checkBox60.Size = new System.Drawing.Size(86, 21);
             this.checkBox60.TabIndex = 87;
             this.checkBox60.UseVisualStyleBackColor = true;
             // 
@@ -638,9 +570,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox59.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox59.AutoSize = true;
             this.checkBox59.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox59.Location = new System.Drawing.Point(488, 318);
+            this.checkBox59.Location = new System.Drawing.Point(363, 255);
+            this.checkBox59.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox59.Name = "checkBox59";
-            this.checkBox59.Size = new System.Drawing.Size(114, 20);
+            this.checkBox59.Size = new System.Drawing.Size(90, 21);
             this.checkBox59.TabIndex = 86;
             this.checkBox59.UseVisualStyleBackColor = true;
             // 
@@ -649,9 +582,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox58.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox58.AutoSize = true;
             this.checkBox58.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox58.Location = new System.Drawing.Point(372, 318);
+            this.checkBox58.Location = new System.Drawing.Point(276, 255);
+            this.checkBox58.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox58.Name = "checkBox58";
-            this.checkBox58.Size = new System.Drawing.Size(110, 20);
+            this.checkBox58.Size = new System.Drawing.Size(87, 21);
             this.checkBox58.TabIndex = 85;
             this.checkBox58.UseVisualStyleBackColor = true;
             // 
@@ -660,9 +594,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox57.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox57.AutoSize = true;
             this.checkBox57.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox57.Location = new System.Drawing.Point(244, 318);
+            this.checkBox57.Location = new System.Drawing.Point(180, 255);
+            this.checkBox57.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox57.Name = "checkBox57";
-            this.checkBox57.Size = new System.Drawing.Size(122, 20);
+            this.checkBox57.Size = new System.Drawing.Size(96, 21);
             this.checkBox57.TabIndex = 84;
             this.checkBox57.UseVisualStyleBackColor = true;
             // 
@@ -671,9 +606,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox56.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox56.AutoSize = true;
             this.checkBox56.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox56.Location = new System.Drawing.Point(118, 318);
+            this.checkBox56.Location = new System.Drawing.Point(86, 255);
+            this.checkBox56.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox56.Name = "checkBox56";
-            this.checkBox56.Size = new System.Drawing.Size(120, 20);
+            this.checkBox56.Size = new System.Drawing.Size(94, 21);
             this.checkBox56.TabIndex = 83;
             this.checkBox56.UseVisualStyleBackColor = true;
             // 
@@ -682,9 +618,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox55.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox55.AutoSize = true;
             this.checkBox55.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox55.Location = new System.Drawing.Point(608, 292);
+            this.checkBox55.Location = new System.Drawing.Point(453, 234);
+            this.checkBox55.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox55.Name = "checkBox55";
-            this.checkBox55.Size = new System.Drawing.Size(108, 20);
+            this.checkBox55.Size = new System.Drawing.Size(86, 21);
             this.checkBox55.TabIndex = 82;
             this.checkBox55.UseVisualStyleBackColor = true;
             // 
@@ -693,9 +630,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox54.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox54.AutoSize = true;
             this.checkBox54.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox54.Location = new System.Drawing.Point(488, 292);
+            this.checkBox54.Location = new System.Drawing.Point(363, 234);
+            this.checkBox54.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox54.Name = "checkBox54";
-            this.checkBox54.Size = new System.Drawing.Size(114, 20);
+            this.checkBox54.Size = new System.Drawing.Size(90, 21);
             this.checkBox54.TabIndex = 81;
             this.checkBox54.UseVisualStyleBackColor = true;
             // 
@@ -704,9 +642,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox53.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox53.AutoSize = true;
             this.checkBox53.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox53.Location = new System.Drawing.Point(372, 292);
+            this.checkBox53.Location = new System.Drawing.Point(276, 234);
+            this.checkBox53.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox53.Name = "checkBox53";
-            this.checkBox53.Size = new System.Drawing.Size(110, 20);
+            this.checkBox53.Size = new System.Drawing.Size(87, 21);
             this.checkBox53.TabIndex = 80;
             this.checkBox53.UseVisualStyleBackColor = true;
             // 
@@ -715,9 +654,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox52.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox52.AutoSize = true;
             this.checkBox52.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox52.Location = new System.Drawing.Point(244, 292);
+            this.checkBox52.Location = new System.Drawing.Point(180, 234);
+            this.checkBox52.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox52.Name = "checkBox52";
-            this.checkBox52.Size = new System.Drawing.Size(122, 20);
+            this.checkBox52.Size = new System.Drawing.Size(96, 21);
             this.checkBox52.TabIndex = 79;
             this.checkBox52.UseVisualStyleBackColor = true;
             // 
@@ -726,9 +666,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox51.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox51.AutoSize = true;
             this.checkBox51.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox51.Location = new System.Drawing.Point(118, 292);
+            this.checkBox51.Location = new System.Drawing.Point(86, 234);
+            this.checkBox51.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox51.Name = "checkBox51";
-            this.checkBox51.Size = new System.Drawing.Size(120, 20);
+            this.checkBox51.Size = new System.Drawing.Size(94, 21);
             this.checkBox51.TabIndex = 78;
             this.checkBox51.UseVisualStyleBackColor = true;
             // 
@@ -737,9 +678,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox50.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox50.AutoSize = true;
             this.checkBox50.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox50.Location = new System.Drawing.Point(608, 263);
+            this.checkBox50.Location = new System.Drawing.Point(453, 210);
+            this.checkBox50.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox50.Name = "checkBox50";
-            this.checkBox50.Size = new System.Drawing.Size(108, 23);
+            this.checkBox50.Size = new System.Drawing.Size(86, 24);
             this.checkBox50.TabIndex = 77;
             this.checkBox50.UseVisualStyleBackColor = true;
             // 
@@ -748,9 +690,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox49.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox49.AutoSize = true;
             this.checkBox49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox49.Location = new System.Drawing.Point(488, 263);
+            this.checkBox49.Location = new System.Drawing.Point(363, 210);
+            this.checkBox49.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox49.Name = "checkBox49";
-            this.checkBox49.Size = new System.Drawing.Size(114, 23);
+            this.checkBox49.Size = new System.Drawing.Size(90, 24);
             this.checkBox49.TabIndex = 76;
             this.checkBox49.UseVisualStyleBackColor = true;
             // 
@@ -759,9 +702,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox48.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox48.AutoSize = true;
             this.checkBox48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox48.Location = new System.Drawing.Point(372, 263);
+            this.checkBox48.Location = new System.Drawing.Point(276, 210);
+            this.checkBox48.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox48.Name = "checkBox48";
-            this.checkBox48.Size = new System.Drawing.Size(110, 23);
+            this.checkBox48.Size = new System.Drawing.Size(87, 24);
             this.checkBox48.TabIndex = 75;
             this.checkBox48.UseVisualStyleBackColor = true;
             // 
@@ -770,9 +714,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox47.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox47.AutoSize = true;
             this.checkBox47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox47.Location = new System.Drawing.Point(244, 263);
+            this.checkBox47.Location = new System.Drawing.Point(180, 210);
+            this.checkBox47.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox47.Name = "checkBox47";
-            this.checkBox47.Size = new System.Drawing.Size(122, 23);
+            this.checkBox47.Size = new System.Drawing.Size(96, 24);
             this.checkBox47.TabIndex = 74;
             this.checkBox47.UseVisualStyleBackColor = true;
             // 
@@ -781,9 +726,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox46.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox46.AutoSize = true;
             this.checkBox46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox46.Location = new System.Drawing.Point(118, 263);
+            this.checkBox46.Location = new System.Drawing.Point(86, 210);
+            this.checkBox46.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox46.Name = "checkBox46";
-            this.checkBox46.Size = new System.Drawing.Size(120, 23);
+            this.checkBox46.Size = new System.Drawing.Size(94, 24);
             this.checkBox46.TabIndex = 73;
             this.checkBox46.UseVisualStyleBackColor = true;
             // 
@@ -792,9 +738,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox45.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox45.AutoSize = true;
             this.checkBox45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox45.Location = new System.Drawing.Point(608, 238);
+            this.checkBox45.Location = new System.Drawing.Point(453, 190);
+            this.checkBox45.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox45.Name = "checkBox45";
-            this.checkBox45.Size = new System.Drawing.Size(108, 19);
+            this.checkBox45.Size = new System.Drawing.Size(86, 20);
             this.checkBox45.TabIndex = 72;
             this.checkBox45.UseVisualStyleBackColor = true;
             // 
@@ -803,9 +750,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox44.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox44.AutoSize = true;
             this.checkBox44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox44.Location = new System.Drawing.Point(488, 238);
+            this.checkBox44.Location = new System.Drawing.Point(363, 190);
+            this.checkBox44.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox44.Name = "checkBox44";
-            this.checkBox44.Size = new System.Drawing.Size(114, 19);
+            this.checkBox44.Size = new System.Drawing.Size(90, 20);
             this.checkBox44.TabIndex = 71;
             this.checkBox44.UseVisualStyleBackColor = true;
             // 
@@ -814,9 +762,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox43.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox43.AutoSize = true;
             this.checkBox43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox43.Location = new System.Drawing.Point(372, 238);
+            this.checkBox43.Location = new System.Drawing.Point(276, 190);
+            this.checkBox43.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox43.Name = "checkBox43";
-            this.checkBox43.Size = new System.Drawing.Size(110, 19);
+            this.checkBox43.Size = new System.Drawing.Size(87, 20);
             this.checkBox43.TabIndex = 70;
             this.checkBox43.UseVisualStyleBackColor = true;
             // 
@@ -825,9 +774,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox42.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox42.AutoSize = true;
             this.checkBox42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox42.Location = new System.Drawing.Point(244, 238);
+            this.checkBox42.Location = new System.Drawing.Point(180, 190);
+            this.checkBox42.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox42.Name = "checkBox42";
-            this.checkBox42.Size = new System.Drawing.Size(122, 19);
+            this.checkBox42.Size = new System.Drawing.Size(96, 20);
             this.checkBox42.TabIndex = 69;
             this.checkBox42.UseVisualStyleBackColor = true;
             // 
@@ -836,9 +786,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox41.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox41.AutoSize = true;
             this.checkBox41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox41.Location = new System.Drawing.Point(118, 238);
+            this.checkBox41.Location = new System.Drawing.Point(86, 190);
+            this.checkBox41.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox41.Name = "checkBox41";
-            this.checkBox41.Size = new System.Drawing.Size(120, 19);
+            this.checkBox41.Size = new System.Drawing.Size(94, 20);
             this.checkBox41.TabIndex = 68;
             this.checkBox41.UseVisualStyleBackColor = true;
             // 
@@ -847,9 +798,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox40.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox40.AutoSize = true;
             this.checkBox40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox40.Location = new System.Drawing.Point(608, 211);
+            this.checkBox40.Location = new System.Drawing.Point(453, 168);
+            this.checkBox40.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox40.Name = "checkBox40";
-            this.checkBox40.Size = new System.Drawing.Size(108, 21);
+            this.checkBox40.Size = new System.Drawing.Size(86, 22);
             this.checkBox40.TabIndex = 67;
             this.checkBox40.UseVisualStyleBackColor = true;
             // 
@@ -858,9 +810,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox39.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox39.AutoSize = true;
             this.checkBox39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox39.Location = new System.Drawing.Point(488, 211);
+            this.checkBox39.Location = new System.Drawing.Point(363, 168);
+            this.checkBox39.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox39.Name = "checkBox39";
-            this.checkBox39.Size = new System.Drawing.Size(114, 21);
+            this.checkBox39.Size = new System.Drawing.Size(90, 22);
             this.checkBox39.TabIndex = 66;
             this.checkBox39.UseVisualStyleBackColor = true;
             // 
@@ -869,9 +822,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox38.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox38.AutoSize = true;
             this.checkBox38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox38.Location = new System.Drawing.Point(372, 211);
+            this.checkBox38.Location = new System.Drawing.Point(276, 168);
+            this.checkBox38.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox38.Name = "checkBox38";
-            this.checkBox38.Size = new System.Drawing.Size(110, 21);
+            this.checkBox38.Size = new System.Drawing.Size(87, 22);
             this.checkBox38.TabIndex = 65;
             this.checkBox38.UseVisualStyleBackColor = true;
             // 
@@ -880,9 +834,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox37.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox37.AutoSize = true;
             this.checkBox37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox37.Location = new System.Drawing.Point(244, 211);
+            this.checkBox37.Location = new System.Drawing.Point(180, 168);
+            this.checkBox37.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox37.Name = "checkBox37";
-            this.checkBox37.Size = new System.Drawing.Size(122, 21);
+            this.checkBox37.Size = new System.Drawing.Size(96, 22);
             this.checkBox37.TabIndex = 64;
             this.checkBox37.UseVisualStyleBackColor = true;
             // 
@@ -891,9 +846,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox36.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox36.AutoSize = true;
             this.checkBox36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox36.Location = new System.Drawing.Point(118, 211);
+            this.checkBox36.Location = new System.Drawing.Point(86, 168);
+            this.checkBox36.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox36.Name = "checkBox36";
-            this.checkBox36.Size = new System.Drawing.Size(120, 21);
+            this.checkBox36.Size = new System.Drawing.Size(94, 22);
             this.checkBox36.TabIndex = 63;
             this.checkBox36.UseVisualStyleBackColor = true;
             // 
@@ -902,9 +858,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox35.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox35.AutoSize = true;
             this.checkBox35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox35.Location = new System.Drawing.Point(608, 185);
+            this.checkBox35.Location = new System.Drawing.Point(453, 147);
+            this.checkBox35.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox35.Name = "checkBox35";
-            this.checkBox35.Size = new System.Drawing.Size(108, 20);
+            this.checkBox35.Size = new System.Drawing.Size(86, 21);
             this.checkBox35.TabIndex = 62;
             this.checkBox35.UseVisualStyleBackColor = true;
             // 
@@ -913,9 +870,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox34.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox34.AutoSize = true;
             this.checkBox34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox34.Location = new System.Drawing.Point(488, 185);
+            this.checkBox34.Location = new System.Drawing.Point(363, 147);
+            this.checkBox34.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox34.Name = "checkBox34";
-            this.checkBox34.Size = new System.Drawing.Size(114, 20);
+            this.checkBox34.Size = new System.Drawing.Size(90, 21);
             this.checkBox34.TabIndex = 61;
             this.checkBox34.UseVisualStyleBackColor = true;
             // 
@@ -924,9 +882,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox33.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox33.AutoSize = true;
             this.checkBox33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox33.Location = new System.Drawing.Point(372, 185);
+            this.checkBox33.Location = new System.Drawing.Point(276, 147);
+            this.checkBox33.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox33.Name = "checkBox33";
-            this.checkBox33.Size = new System.Drawing.Size(110, 20);
+            this.checkBox33.Size = new System.Drawing.Size(87, 21);
             this.checkBox33.TabIndex = 60;
             this.checkBox33.UseVisualStyleBackColor = true;
             // 
@@ -935,9 +894,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox32.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox32.AutoSize = true;
             this.checkBox32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox32.Location = new System.Drawing.Point(244, 185);
+            this.checkBox32.Location = new System.Drawing.Point(180, 147);
+            this.checkBox32.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox32.Name = "checkBox32";
-            this.checkBox32.Size = new System.Drawing.Size(122, 20);
+            this.checkBox32.Size = new System.Drawing.Size(96, 21);
             this.checkBox32.TabIndex = 59;
             this.checkBox32.UseVisualStyleBackColor = true;
             // 
@@ -946,9 +906,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox31.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox31.AutoSize = true;
             this.checkBox31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox31.Location = new System.Drawing.Point(118, 185);
+            this.checkBox31.Location = new System.Drawing.Point(86, 147);
+            this.checkBox31.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox31.Name = "checkBox31";
-            this.checkBox31.Size = new System.Drawing.Size(120, 20);
+            this.checkBox31.Size = new System.Drawing.Size(94, 21);
             this.checkBox31.TabIndex = 58;
             this.checkBox31.UseVisualStyleBackColor = true;
             // 
@@ -957,9 +918,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox30.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox30.AutoSize = true;
             this.checkBox30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox30.Location = new System.Drawing.Point(608, 159);
+            this.checkBox30.Location = new System.Drawing.Point(453, 126);
+            this.checkBox30.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox30.Name = "checkBox30";
-            this.checkBox30.Size = new System.Drawing.Size(108, 20);
+            this.checkBox30.Size = new System.Drawing.Size(86, 21);
             this.checkBox30.TabIndex = 57;
             this.checkBox30.UseVisualStyleBackColor = true;
             // 
@@ -968,9 +930,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox29.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox29.AutoSize = true;
             this.checkBox29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox29.Location = new System.Drawing.Point(488, 159);
+            this.checkBox29.Location = new System.Drawing.Point(363, 126);
+            this.checkBox29.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox29.Name = "checkBox29";
-            this.checkBox29.Size = new System.Drawing.Size(114, 20);
+            this.checkBox29.Size = new System.Drawing.Size(90, 21);
             this.checkBox29.TabIndex = 56;
             this.checkBox29.UseVisualStyleBackColor = true;
             // 
@@ -979,9 +942,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox28.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox28.AutoSize = true;
             this.checkBox28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox28.Location = new System.Drawing.Point(372, 159);
+            this.checkBox28.Location = new System.Drawing.Point(276, 126);
+            this.checkBox28.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox28.Name = "checkBox28";
-            this.checkBox28.Size = new System.Drawing.Size(110, 20);
+            this.checkBox28.Size = new System.Drawing.Size(87, 21);
             this.checkBox28.TabIndex = 55;
             this.checkBox28.UseVisualStyleBackColor = true;
             // 
@@ -990,9 +954,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox27.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox27.AutoSize = true;
             this.checkBox27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox27.Location = new System.Drawing.Point(244, 159);
+            this.checkBox27.Location = new System.Drawing.Point(180, 126);
+            this.checkBox27.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(122, 20);
+            this.checkBox27.Size = new System.Drawing.Size(96, 21);
             this.checkBox27.TabIndex = 54;
             this.checkBox27.UseVisualStyleBackColor = true;
             // 
@@ -1001,9 +966,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox26.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox26.AutoSize = true;
             this.checkBox26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox26.Location = new System.Drawing.Point(118, 159);
+            this.checkBox26.Location = new System.Drawing.Point(86, 126);
+            this.checkBox26.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(120, 20);
+            this.checkBox26.Size = new System.Drawing.Size(94, 21);
             this.checkBox26.TabIndex = 53;
             this.checkBox26.UseVisualStyleBackColor = true;
             // 
@@ -1012,9 +978,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox25.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox25.AutoSize = true;
             this.checkBox25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox25.Location = new System.Drawing.Point(608, 133);
+            this.checkBox25.Location = new System.Drawing.Point(453, 105);
+            this.checkBox25.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(108, 20);
+            this.checkBox25.Size = new System.Drawing.Size(86, 21);
             this.checkBox25.TabIndex = 52;
             this.checkBox25.UseVisualStyleBackColor = true;
             // 
@@ -1023,9 +990,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox24.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox24.AutoSize = true;
             this.checkBox24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox24.Location = new System.Drawing.Point(488, 133);
+            this.checkBox24.Location = new System.Drawing.Point(363, 105);
+            this.checkBox24.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(114, 20);
+            this.checkBox24.Size = new System.Drawing.Size(90, 21);
             this.checkBox24.TabIndex = 51;
             this.checkBox24.UseVisualStyleBackColor = true;
             // 
@@ -1034,9 +1002,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox23.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox23.AutoSize = true;
             this.checkBox23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox23.Location = new System.Drawing.Point(372, 133);
+            this.checkBox23.Location = new System.Drawing.Point(276, 105);
+            this.checkBox23.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(110, 20);
+            this.checkBox23.Size = new System.Drawing.Size(87, 21);
             this.checkBox23.TabIndex = 50;
             this.checkBox23.UseVisualStyleBackColor = true;
             // 
@@ -1045,9 +1014,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox22.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox22.AutoSize = true;
             this.checkBox22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox22.Location = new System.Drawing.Point(244, 133);
+            this.checkBox22.Location = new System.Drawing.Point(180, 105);
+            this.checkBox22.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(122, 20);
+            this.checkBox22.Size = new System.Drawing.Size(96, 21);
             this.checkBox22.TabIndex = 49;
             this.checkBox22.UseVisualStyleBackColor = true;
             // 
@@ -1056,9 +1026,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox21.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox21.AutoSize = true;
             this.checkBox21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox21.Location = new System.Drawing.Point(118, 133);
+            this.checkBox21.Location = new System.Drawing.Point(86, 105);
+            this.checkBox21.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(120, 20);
+            this.checkBox21.Size = new System.Drawing.Size(94, 21);
             this.checkBox21.TabIndex = 48;
             this.checkBox21.UseVisualStyleBackColor = true;
             // 
@@ -1067,9 +1038,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox20.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox20.AutoSize = true;
             this.checkBox20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox20.Location = new System.Drawing.Point(608, 106);
+            this.checkBox20.Location = new System.Drawing.Point(453, 83);
+            this.checkBox20.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(108, 21);
+            this.checkBox20.Size = new System.Drawing.Size(86, 22);
             this.checkBox20.TabIndex = 47;
             this.checkBox20.UseVisualStyleBackColor = true;
             // 
@@ -1078,9 +1050,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox19.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox19.AutoSize = true;
             this.checkBox19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox19.Location = new System.Drawing.Point(488, 106);
+            this.checkBox19.Location = new System.Drawing.Point(363, 83);
+            this.checkBox19.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(114, 21);
+            this.checkBox19.Size = new System.Drawing.Size(90, 22);
             this.checkBox19.TabIndex = 46;
             this.checkBox19.UseVisualStyleBackColor = true;
             // 
@@ -1089,9 +1062,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox18.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox18.AutoSize = true;
             this.checkBox18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox18.Location = new System.Drawing.Point(372, 106);
+            this.checkBox18.Location = new System.Drawing.Point(276, 83);
+            this.checkBox18.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(110, 21);
+            this.checkBox18.Size = new System.Drawing.Size(87, 22);
             this.checkBox18.TabIndex = 45;
             this.checkBox18.UseVisualStyleBackColor = true;
             // 
@@ -1100,9 +1074,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox17.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox17.AutoSize = true;
             this.checkBox17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox17.Location = new System.Drawing.Point(244, 106);
+            this.checkBox17.Location = new System.Drawing.Point(180, 83);
+            this.checkBox17.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(122, 21);
+            this.checkBox17.Size = new System.Drawing.Size(96, 22);
             this.checkBox17.TabIndex = 44;
             this.checkBox17.UseVisualStyleBackColor = true;
             // 
@@ -1111,9 +1086,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox16.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox16.AutoSize = true;
             this.checkBox16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox16.Location = new System.Drawing.Point(118, 106);
+            this.checkBox16.Location = new System.Drawing.Point(86, 83);
+            this.checkBox16.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(120, 21);
+            this.checkBox16.Size = new System.Drawing.Size(94, 22);
             this.checkBox16.TabIndex = 43;
             this.checkBox16.UseVisualStyleBackColor = true;
             // 
@@ -1122,9 +1098,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox15.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox15.AutoSize = true;
             this.checkBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox15.Location = new System.Drawing.Point(608, 79);
+            this.checkBox15.Location = new System.Drawing.Point(453, 61);
+            this.checkBox15.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(108, 21);
+            this.checkBox15.Size = new System.Drawing.Size(86, 22);
             this.checkBox15.TabIndex = 42;
             this.checkBox15.UseVisualStyleBackColor = true;
             // 
@@ -1133,9 +1110,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox14.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox14.AutoSize = true;
             this.checkBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox14.Location = new System.Drawing.Point(488, 79);
+            this.checkBox14.Location = new System.Drawing.Point(363, 61);
+            this.checkBox14.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(114, 21);
+            this.checkBox14.Size = new System.Drawing.Size(90, 22);
             this.checkBox14.TabIndex = 41;
             this.checkBox14.UseVisualStyleBackColor = true;
             // 
@@ -1144,9 +1122,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox13.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox13.AutoSize = true;
             this.checkBox13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox13.Location = new System.Drawing.Point(372, 79);
+            this.checkBox13.Location = new System.Drawing.Point(276, 61);
+            this.checkBox13.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(110, 21);
+            this.checkBox13.Size = new System.Drawing.Size(87, 22);
             this.checkBox13.TabIndex = 40;
             this.checkBox13.UseVisualStyleBackColor = true;
             // 
@@ -1155,9 +1134,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox12.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox12.AutoSize = true;
             this.checkBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox12.Location = new System.Drawing.Point(244, 79);
+            this.checkBox12.Location = new System.Drawing.Point(180, 61);
+            this.checkBox12.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(122, 21);
+            this.checkBox12.Size = new System.Drawing.Size(96, 22);
             this.checkBox12.TabIndex = 39;
             this.checkBox12.UseVisualStyleBackColor = true;
             // 
@@ -1166,9 +1146,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox11.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox11.AutoSize = true;
             this.checkBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox11.Location = new System.Drawing.Point(118, 79);
+            this.checkBox11.Location = new System.Drawing.Point(86, 61);
+            this.checkBox11.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(120, 21);
+            this.checkBox11.Size = new System.Drawing.Size(94, 22);
             this.checkBox11.TabIndex = 38;
             this.checkBox11.UseVisualStyleBackColor = true;
             // 
@@ -1177,9 +1158,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox10.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox10.AutoSize = true;
             this.checkBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox10.Location = new System.Drawing.Point(608, 53);
+            this.checkBox10.Location = new System.Drawing.Point(453, 40);
+            this.checkBox10.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(108, 20);
+            this.checkBox10.Size = new System.Drawing.Size(86, 21);
             this.checkBox10.TabIndex = 37;
             this.checkBox10.UseVisualStyleBackColor = true;
             // 
@@ -1188,9 +1170,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox9.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox9.AutoSize = true;
             this.checkBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox9.Location = new System.Drawing.Point(488, 53);
+            this.checkBox9.Location = new System.Drawing.Point(363, 40);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(114, 20);
+            this.checkBox9.Size = new System.Drawing.Size(90, 21);
             this.checkBox9.TabIndex = 36;
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
@@ -1199,9 +1182,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox8.AutoSize = true;
             this.checkBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox8.Location = new System.Drawing.Point(372, 53);
+            this.checkBox8.Location = new System.Drawing.Point(276, 40);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(110, 20);
+            this.checkBox8.Size = new System.Drawing.Size(87, 21);
             this.checkBox8.TabIndex = 35;
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
@@ -1210,9 +1194,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox7.AutoSize = true;
             this.checkBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox7.Location = new System.Drawing.Point(244, 53);
+            this.checkBox7.Location = new System.Drawing.Point(180, 40);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(122, 20);
+            this.checkBox7.Size = new System.Drawing.Size(96, 21);
             this.checkBox7.TabIndex = 34;
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
@@ -1221,9 +1206,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox6.AutoSize = true;
             this.checkBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox6.Location = new System.Drawing.Point(118, 53);
+            this.checkBox6.Location = new System.Drawing.Point(86, 40);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(120, 20);
+            this.checkBox6.Size = new System.Drawing.Size(94, 21);
             this.checkBox6.TabIndex = 33;
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
@@ -1232,9 +1218,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox5.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox5.AutoSize = true;
             this.checkBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox5.Location = new System.Drawing.Point(608, 28);
+            this.checkBox5.Location = new System.Drawing.Point(453, 20);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(108, 19);
+            this.checkBox5.Size = new System.Drawing.Size(86, 20);
             this.checkBox5.TabIndex = 32;
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
@@ -1243,9 +1230,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox4.AutoSize = true;
             this.checkBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox4.Location = new System.Drawing.Point(488, 28);
+            this.checkBox4.Location = new System.Drawing.Point(363, 20);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(114, 19);
+            this.checkBox4.Size = new System.Drawing.Size(90, 20);
             this.checkBox4.TabIndex = 31;
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
@@ -1254,9 +1242,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox3.AutoSize = true;
             this.checkBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox3.Location = new System.Drawing.Point(372, 28);
+            this.checkBox3.Location = new System.Drawing.Point(276, 20);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(110, 19);
+            this.checkBox3.Size = new System.Drawing.Size(87, 20);
             this.checkBox3.TabIndex = 30;
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
@@ -1265,9 +1254,10 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox2.AutoSize = true;
             this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox2.Location = new System.Drawing.Point(244, 28);
+            this.checkBox2.Location = new System.Drawing.Point(180, 20);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(122, 19);
+            this.checkBox2.Size = new System.Drawing.Size(96, 20);
             this.checkBox2.TabIndex = 29;
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
@@ -1277,9 +1267,10 @@ namespace ProyectoOOIA.Ventanas
             this.label6.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(608, 0);
+            this.label6.Location = new System.Drawing.Point(455, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 25);
+            this.label6.Size = new System.Drawing.Size(82, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Viernes";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1290,9 +1281,10 @@ namespace ProyectoOOIA.Ventanas
             this.label5.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
-            this.label5.Location = new System.Drawing.Point(488, 0);
+            this.label5.Location = new System.Drawing.Point(365, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 25);
+            this.label5.Size = new System.Drawing.Size(86, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Jueves";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1303,9 +1295,10 @@ namespace ProyectoOOIA.Ventanas
             this.label2.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(118, 0);
+            this.label2.Location = new System.Drawing.Point(88, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 25);
+            this.label2.Size = new System.Drawing.Size(90, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Lunes";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1316,9 +1309,10 @@ namespace ProyectoOOIA.Ventanas
             this.label3.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(244, 0);
+            this.label3.Location = new System.Drawing.Point(182, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 25);
+            this.label3.Size = new System.Drawing.Size(92, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Martes";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1329,9 +1323,10 @@ namespace ProyectoOOIA.Ventanas
             this.label4.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(372, 0);
+            this.label4.Location = new System.Drawing.Point(278, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 25);
+            this.label4.Size = new System.Drawing.Size(83, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Miércoles";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1342,9 +1337,10 @@ namespace ProyectoOOIA.Ventanas
             this.label7.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Location = new System.Drawing.Point(2, 0);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 25);
+            this.label7.Size = new System.Drawing.Size(82, 20);
             this.label7.TabIndex = 6;
             this.label7.Text = "Hora";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1355,9 +1351,10 @@ namespace ProyectoOOIA.Ventanas
             this.label12.BackColor = System.Drawing.Color.LightGreen;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Location = new System.Drawing.Point(3, 25);
+            this.label12.Location = new System.Drawing.Point(2, 20);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 25);
+            this.label12.Size = new System.Drawing.Size(82, 20);
             this.label12.TabIndex = 12;
             this.label12.Text = "8:00 am";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1368,9 +1365,10 @@ namespace ProyectoOOIA.Ventanas
             this.label13.BackColor = System.Drawing.Color.LightGreen;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label13.Location = new System.Drawing.Point(3, 50);
+            this.label13.Location = new System.Drawing.Point(2, 40);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 26);
+            this.label13.Size = new System.Drawing.Size(82, 21);
             this.label13.TabIndex = 13;
             this.label13.Text = "8:30 am";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1380,9 +1378,10 @@ namespace ProyectoOOIA.Ventanas
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.LightGreen;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(3, 76);
+            this.label14.Location = new System.Drawing.Point(2, 61);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(109, 27);
+            this.label14.Size = new System.Drawing.Size(82, 22);
             this.label14.TabIndex = 14;
             this.label14.Text = "9:00 am";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1392,9 +1391,10 @@ namespace ProyectoOOIA.Ventanas
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.LightGreen;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(3, 103);
+            this.label15.Location = new System.Drawing.Point(2, 83);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(109, 27);
+            this.label15.Size = new System.Drawing.Size(82, 22);
             this.label15.TabIndex = 15;
             this.label15.Text = "9:30 am";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1404,9 +1404,10 @@ namespace ProyectoOOIA.Ventanas
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.LightGreen;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(3, 130);
+            this.label16.Location = new System.Drawing.Point(2, 105);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 26);
+            this.label16.Size = new System.Drawing.Size(82, 21);
             this.label16.TabIndex = 16;
             this.label16.Text = "10:00 am";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1416,9 +1417,10 @@ namespace ProyectoOOIA.Ventanas
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.LightGreen;
             this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(3, 156);
+            this.label17.Location = new System.Drawing.Point(2, 126);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(109, 26);
+            this.label17.Size = new System.Drawing.Size(82, 21);
             this.label17.TabIndex = 17;
             this.label17.Text = "11:00 am";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1428,9 +1430,10 @@ namespace ProyectoOOIA.Ventanas
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.LightGreen;
             this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(3, 182);
+            this.label18.Location = new System.Drawing.Point(2, 147);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(109, 26);
+            this.label18.Size = new System.Drawing.Size(82, 21);
             this.label18.TabIndex = 18;
             this.label18.Text = "11:30 am";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1440,9 +1443,10 @@ namespace ProyectoOOIA.Ventanas
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.LightGreen;
             this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Location = new System.Drawing.Point(3, 208);
+            this.label19.Location = new System.Drawing.Point(2, 168);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(109, 27);
+            this.label19.Size = new System.Drawing.Size(82, 22);
             this.label19.TabIndex = 19;
             this.label19.Text = "12:00 pm";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1452,9 +1456,10 @@ namespace ProyectoOOIA.Ventanas
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.LightGreen;
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(3, 235);
+            this.label20.Location = new System.Drawing.Point(2, 190);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(109, 25);
+            this.label20.Size = new System.Drawing.Size(82, 20);
             this.label20.TabIndex = 20;
             this.label20.Text = "12:30 pm";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1464,9 +1469,10 @@ namespace ProyectoOOIA.Ventanas
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.LightGreen;
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Location = new System.Drawing.Point(3, 260);
+            this.label21.Location = new System.Drawing.Point(2, 210);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(109, 29);
+            this.label21.Size = new System.Drawing.Size(82, 24);
             this.label21.TabIndex = 21;
             this.label21.Text = "1:00 pm";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1476,9 +1482,10 @@ namespace ProyectoOOIA.Ventanas
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.LightGreen;
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(3, 289);
+            this.label22.Location = new System.Drawing.Point(2, 234);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(109, 26);
+            this.label22.Size = new System.Drawing.Size(82, 21);
             this.label22.TabIndex = 22;
             this.label22.Text = "1:30 pm";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1488,9 +1495,10 @@ namespace ProyectoOOIA.Ventanas
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.LightGreen;
             this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(3, 315);
+            this.label23.Location = new System.Drawing.Point(2, 255);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(109, 26);
+            this.label23.Size = new System.Drawing.Size(82, 21);
             this.label23.TabIndex = 23;
             this.label23.Text = "2:00 pm";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1500,9 +1508,10 @@ namespace ProyectoOOIA.Ventanas
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.LightGreen;
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Location = new System.Drawing.Point(3, 341);
+            this.label24.Location = new System.Drawing.Point(2, 276);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(109, 27);
+            this.label24.Size = new System.Drawing.Size(82, 22);
             this.label24.TabIndex = 24;
             this.label24.Text = "2:30 pm";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1512,9 +1521,10 @@ namespace ProyectoOOIA.Ventanas
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.LightGreen;
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Location = new System.Drawing.Point(3, 368);
+            this.label25.Location = new System.Drawing.Point(2, 298);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(109, 28);
+            this.label25.Size = new System.Drawing.Size(82, 23);
             this.label25.TabIndex = 25;
             this.label25.Text = "3:00 pm";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1524,9 +1534,10 @@ namespace ProyectoOOIA.Ventanas
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.LightGreen;
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Location = new System.Drawing.Point(3, 396);
+            this.label26.Location = new System.Drawing.Point(2, 321);
+            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(109, 23);
+            this.label26.Size = new System.Drawing.Size(82, 19);
             this.label26.TabIndex = 26;
             this.label26.Text = "3:30 pm";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1536,9 +1547,10 @@ namespace ProyectoOOIA.Ventanas
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.LightGreen;
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(3, 419);
+            this.label27.Location = new System.Drawing.Point(2, 340);
+            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(109, 25);
+            this.label27.Size = new System.Drawing.Size(82, 21);
             this.label27.TabIndex = 27;
             this.label27.Text = "4:00 pm";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1548,11 +1560,122 @@ namespace ProyectoOOIA.Ventanas
             this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBox1.AutoSize = true;
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox1.Location = new System.Drawing.Point(118, 28);
+            this.checkBox1.Location = new System.Drawing.Point(86, 20);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(120, 19);
+            this.checkBox1.Size = new System.Drawing.Size(94, 20);
             this.checkBox1.TabIndex = 28;
             this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(370, 78);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(248, 31);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "17 de Mayo al 21 de Mayo";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProyectoOOIA.Properties.Resources.back;
+            this.pictureBox3.Location = new System.Drawing.Point(331, 76);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(35, 33);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoOOIA.Properties.Resources.next;
+            this.pictureBox2.Location = new System.Drawing.Point(611, 76);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(35, 33);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Location = new System.Drawing.Point(34, 125);
+            this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(90, 27);
+            this.btnSeleccionar.TabIndex = 10;
+            this.btnSeleccionar.Text = "Seleccionar";
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button3.Enabled = false;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Location = new System.Drawing.Point(34, 312);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(20, 16);
+            this.button3.TabIndex = 9;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.button2.Enabled = false;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Location = new System.Drawing.Point(34, 279);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(20, 16);
+            this.button2.TabIndex = 8;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Window;
+            this.button1.Enabled = false;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(34, 248);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(20, 16);
+            this.button1.TabIndex = 7;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(66, 312);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Ocupado";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(66, 279);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(71, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "No disponible";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(66, 248);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Libre";
             // 
             // panel2
             // 
@@ -1561,59 +1684,50 @@ namespace ProyectoOOIA.Ventanas
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1083, 74);
+            this.panel2.Size = new System.Drawing.Size(812, 60);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ProyectoOOIA.Properties.Resources.arrow;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 22);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 27);
+            this.pictureBox1.Size = new System.Drawing.Size(26, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(81, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(61, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 39);
+            this.label1.Size = new System.Drawing.Size(216, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Seleccionar horario";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(494, 96);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(315, 39);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "17 de Mayo al 21 de Mayo";
-            // 
             // frmHorarioCita
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 647);
+            this.ClientSize = new System.Drawing.Size(812, 526);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmHorarioCita";
             this.Text = "frmHorarioCita";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1627,35 +1741,17 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.CheckBox checkBox80;
         private System.Windows.Forms.CheckBox checkBox79;
         private System.Windows.Forms.CheckBox checkBox78;
@@ -1735,10 +1831,28 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button btnSeleccionar;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label11;
     }
 }

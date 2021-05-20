@@ -35,14 +35,14 @@ namespace ProyectoOOIA.Ventanas
             this.txtTramites = new System.Windows.Forms.Label();
             this.txtHorarios = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.ovalPictureBox1 = new OvalPictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
+            this.ovalPictureBox1 = new OvalPictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtUsername
@@ -74,11 +74,11 @@ namespace ProyectoOOIA.Ventanas
             this.txtCitas.AutoSize = true;
             this.txtCitas.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCitas.ForeColor = System.Drawing.Color.Black;
-            this.txtCitas.Location = new System.Drawing.Point(219, 116);
+            this.txtCitas.Location = new System.Drawing.Point(188, 113);
             this.txtCitas.Name = "txtCitas";
-            this.txtCitas.Size = new System.Drawing.Size(58, 27);
+            this.txtCitas.Size = new System.Drawing.Size(145, 27);
             this.txtCitas.TabIndex = 6;
-            this.txtCitas.Text = "Citas";
+            this.txtCitas.Text = "Registrar Citas";
             this.txtCitas.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtTramites
@@ -99,11 +99,11 @@ namespace ProyectoOOIA.Ventanas
             this.txtHorarios.AutoSize = true;
             this.txtHorarios.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHorarios.ForeColor = System.Drawing.Color.Black;
-            this.txtHorarios.Location = new System.Drawing.Point(613, 116);
+            this.txtHorarios.Location = new System.Drawing.Point(592, 113);
             this.txtHorarios.Name = "txtHorarios";
-            this.txtHorarios.Size = new System.Drawing.Size(91, 27);
+            this.txtHorarios.Size = new System.Drawing.Size(135, 27);
             this.txtHorarios.TabIndex = 7;
-            this.txtHorarios.Text = "Horarios";
+            this.txtHorarios.Text = "Mostrar Citas";
             this.txtHorarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.txtHorarios.Click += new System.EventHandler(this.txtHorarios_Click);
             // 
@@ -127,18 +127,6 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ovalPictureBox1
-            // 
-            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.ovalPictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(34, 10);
-            this.ovalPictureBox1.Name = "ovalPictureBox1";
-            this.ovalPictureBox1.Size = new System.Drawing.Size(75, 71);
-            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ovalPictureBox1.TabIndex = 11;
-            this.ovalPictureBox1.TabStop = false;
-            this.ovalPictureBox1.Click += new System.EventHandler(this.ovalPictureBox1_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
@@ -155,7 +143,7 @@ namespace ProyectoOOIA.Ventanas
             this.button1.Size = new System.Drawing.Size(162, 145);
             this.button1.TabIndex = 13;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button2_Click);
             // 
             // button2
             // 
@@ -172,7 +160,7 @@ namespace ProyectoOOIA.Ventanas
             this.button2.Size = new System.Drawing.Size(162, 145);
             this.button2.TabIndex = 14;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button3_Click);
             // 
             // button3
             // 
@@ -220,6 +208,18 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Size = new System.Drawing.Size(936, 83);
             this.panel1.TabIndex = 17;
             // 
+            // ovalPictureBox1
+            // 
+            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.ovalPictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
+            this.ovalPictureBox1.Location = new System.Drawing.Point(34, 10);
+            this.ovalPictureBox1.Name = "ovalPictureBox1";
+            this.ovalPictureBox1.Size = new System.Drawing.Size(75, 71);
+            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ovalPictureBox1.TabIndex = 11;
+            this.ovalPictureBox1.TabStop = false;
+            this.ovalPictureBox1.Click += new System.EventHandler(this.ovalPictureBox1_Click);
+            // 
             // frmPrincipalAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,9 +240,9 @@ namespace ProyectoOOIA.Ventanas
             this.Name = "frmPrincipalAlumno";
             this.Text = "Menú principal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

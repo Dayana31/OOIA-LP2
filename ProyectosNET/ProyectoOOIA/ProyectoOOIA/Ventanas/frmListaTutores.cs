@@ -133,5 +133,17 @@ namespace ProyectoOOIA.Ventanas
             new frmPrincipalAlumno().Show();
             this.Close();
         }
+
+        private void card2_Click(object sender, EventArgs e)
+        {
+            new frmHorarioCita().ShowDialog();
+            
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            new frmPrincipalAlumno().Show();
+            this.Close();
+        }
     }
 }

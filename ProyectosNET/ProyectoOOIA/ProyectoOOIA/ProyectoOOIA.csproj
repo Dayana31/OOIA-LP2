@@ -57,6 +57,12 @@
     <Compile Include="Componentes\Card.Designer.cs">
       <DependentUpon>Card.cs</DependentUpon>
     </Compile>
+    <Compile Include="Componentes\Horario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\Horario.Designer.cs">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estado.cs" />
     <Compile Include="Componentes\OvalPictureBox.cs">
       <SubType>Component</SubType>
@@ -107,17 +113,11 @@
     <Compile Include="Ventanas\frmConfirmarCancelar.Designer.cs">
       <DependentUpon>frmConfirmarCancelar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmDetCita_DatAlumnos.cs">
+    <Compile Include="Ventanas\frmDetalleDeCitaTutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmDetCita_DatAlumnos.Designer.cs">
-      <DependentUpon>frmDetCita_DatAlumnos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventanas\frmDetCita_FichAlumnos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmDetCita_FichAlumnos.Designer.cs">
-      <DependentUpon>frmDetCita_FichAlumnos.cs</DependentUpon>
+    <Compile Include="Ventanas\frmDetalleDeCitaTutor.Designer.cs">
+      <DependentUpon>frmDetalleDeCitaTutor.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmHistoriaAcademica.cs">
       <SubType>Form</SubType>
@@ -211,8 +211,17 @@
     <Compile Include="Ventanas\frmReestablecerContraseña.Designer.cs">
       <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmRegistroEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmRegistroEvento.Designer.cs">
+      <DependentUpon>frmRegistroEvento.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Componentes\Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\Horario.resx">
+      <DependentUpon>Horario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
@@ -238,11 +247,8 @@
     <EmbeddedResource Include="Ventanas\frmDetalleCita.resx">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmDetCita_DatAlumnos.resx">
-      <DependentUpon>frmDetCita_DatAlumnos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmDetCita_FichAlumnos.resx">
-      <DependentUpon>frmDetCita_FichAlumnos.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\frmDetalleDeCitaTutor.resx">
+      <DependentUpon>frmDetalleDeCitaTutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHistoriaAcademica.resx">
       <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
@@ -296,6 +302,9 @@
     <EmbeddedResource Include="Ventanas\frmReestablecerContraseña.resx">
       <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmRegistroEvento.resx">
+      <DependentUpon>frmRegistroEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\MaterialSkin.Controls.MaterialCheckBox.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -329,12 +338,10 @@
     <None Include="Resources\028-telephone-2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\home.png" />
     <Content Include="Resources\profesor.jpg" />
     <Content Include="Resources\psicologo.jpg" />
   </ItemGroup>
