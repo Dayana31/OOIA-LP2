@@ -18,12 +18,12 @@ import pe.edu.pucp.gestion_humana.model.Alumno;
 import pe.edu.pucp.gestion_tramites_academicos.dao.TramiteDAO;
 import pe.edu.pucp.gestion_tramites_academicos.model.PreguntaFrecuente;
 import pe.edu.pucp.gestion_tramites_academicos.model.Requisito;
-import pe.edu.pucp.gestion_tramites_academicos.model.TipoTramite.*;
-import static pe.edu.pucp.gestion_tramites_academicos.model.TipoTramite.CONTANCIAYCARTAS;
-import static pe.edu.pucp.gestion_tramites_academicos.model.TipoTramite.EPAGOS;
-import static pe.edu.pucp.gestion_tramites_academicos.model.TipoTramite.GRADOSYTITULOS;
-import static pe.edu.pucp.gestion_tramites_academicos.model.TipoTramite.MATRICULA;
-import static pe.edu.pucp.gestion_tramites_academicos.model.TipoTramite.NOTAS;
+import pe.edu.pucp.gestion_tramites_academicos.model.TipoTramiteEnum.*;
+import static pe.edu.pucp.gestion_tramites_academicos.model.TipoTramiteEnum.CONTANCIAYCARTAS;
+import static pe.edu.pucp.gestion_tramites_academicos.model.TipoTramiteEnum.EPAGOS;
+import static pe.edu.pucp.gestion_tramites_academicos.model.TipoTramiteEnum.GRADOSYTITULOS;
+import static pe.edu.pucp.gestion_tramites_academicos.model.TipoTramiteEnum.MATRICULA;
+import static pe.edu.pucp.gestion_tramites_academicos.model.TipoTramiteEnum.NOTAS;
 import pe.edu.pucp.gestion_tramites_academicos.model.Tramite;
 
 /**

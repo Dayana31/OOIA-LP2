@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class Tramite {
     private int id_tramite;
-    private TipoTramite tipoTramite;
+    private TipoTramiteEnum tipoTramite;
     private String descripcion;
     private ArrayList<File>archivos;
     private ArrayList<Requisito> requisitos;
@@ -29,7 +29,7 @@ public class Tramite {
         preguntas=new ArrayList<>();
     }
 
-    public Tramite(int id_tramite, TipoTramite tipoTramite, String descripcion) {
+    public Tramite(int id_tramite, TipoTramiteEnum tipoTramite, String descripcion) {
         archivos=new ArrayList<>();
         requisitos=new ArrayList<>();
         preguntas=new ArrayList<>();
@@ -47,11 +47,11 @@ public class Tramite {
         this.id_tramite = id_tramite;
     }
 
-    public TipoTramite getTipoTramite() {
+    public TipoTramiteEnum getTipoTramite() {
         return tipoTramite;
     }
 
-    public void setTipoTramite(TipoTramite tipoTramite) {
+    public void setTipoTramite(TipoTramiteEnum tipoTramite) {
         this.tipoTramite = tipoTramite;
     }
 
