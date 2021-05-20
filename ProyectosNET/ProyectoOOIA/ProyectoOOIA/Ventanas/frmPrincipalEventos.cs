@@ -32,5 +32,17 @@ namespace ProyectoOOIA.Ventanas
         {
 
         }
+
+        //private void InitializeComponent()
+        //{
+        //    this.SuspendLayout();
+        //    // 
+        //    // frmPrincipalEventos
+        //    // 
+        //    this.ClientSize = new System.Drawing.Size(446, 404);
+        //    this.Name = "frmPrincipalEventos";
+        //    this.ResumeLayout(false);
+
+        //}
     }
 }

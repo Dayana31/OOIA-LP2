@@ -112,12 +112,14 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbOpiniones);
+            this.MaximizeBox = false;
             this.Name = "frmOpiniones";
             this.Text = "Opiniones de tutores y psicologos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

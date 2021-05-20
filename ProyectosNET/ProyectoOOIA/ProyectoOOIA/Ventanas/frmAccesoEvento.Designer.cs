@@ -44,9 +44,11 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnUnirse
             // 
-            this.btnUnirse.BackColor = System.Drawing.Color.Transparent;
+            this.btnUnirse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
             this.btnUnirse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnUnirse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUnirse.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUnirse.ForeColor = System.Drawing.Color.White;
             this.btnUnirse.Location = new System.Drawing.Point(259, 66);
             this.btnUnirse.Name = "btnUnirse";
             this.btnUnirse.Size = new System.Drawing.Size(255, 49);

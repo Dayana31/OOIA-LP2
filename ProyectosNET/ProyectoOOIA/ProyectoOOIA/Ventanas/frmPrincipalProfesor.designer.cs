@@ -113,13 +113,13 @@ namespace ProyectoOOIA.Ventanas
             // btnAtras
             // 
             this.btnAtras.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.log_out__1_;
+            this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAtras.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.btnAtras.FlatAppearance.BorderSize = 0;
             this.btnAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.Image = global::ProyectoOOIA.Properties.Resources.log_out__2_;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtras.Location = new System.Drawing.Point(889, 12);
             this.btnAtras.Name = "btnAtras";
@@ -155,7 +155,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtHorarios.AutoSize = true;
             this.txtHorarios.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHorarios.Location = new System.Drawing.Point(517, 86);
+            this.txtHorarios.Location = new System.Drawing.Point(525, 86);
             this.txtHorarios.Name = "txtHorarios";
             this.txtHorarios.Size = new System.Drawing.Size(178, 54);
             this.txtHorarios.TabIndex = 19;
@@ -167,7 +167,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtCitas.AutoSize = true;
             this.txtCitas.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCitas.Location = new System.Drawing.Point(169, 86);
+            this.txtCitas.Location = new System.Drawing.Point(176, 86);
             this.txtCitas.Name = "txtCitas";
             this.txtCitas.Size = new System.Drawing.Size(167, 27);
             this.txtCitas.TabIndex = 18;
@@ -233,7 +233,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.txtCitas);
             this.MaximizeBox = false;
             this.Name = "frmPrincipalProfesor";
-            this.Text = "x|";
+            this.Text = "Menú Principal";
             ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
