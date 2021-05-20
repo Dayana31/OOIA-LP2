@@ -55,6 +55,7 @@ namespace ProyectoOOIA.Ventanas
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -63,6 +64,7 @@ namespace ProyectoOOIA.Ventanas
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(536, 89);
@@ -71,6 +73,7 @@ namespace ProyectoOOIA.Ventanas
             this.button1.TabIndex = 0;
             this.button1.Text = "Categorias";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -116,6 +119,7 @@ namespace ProyectoOOIA.Ventanas
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(249, 20);
             this.textBox4.TabIndex = 5;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox3
             // 
@@ -123,6 +127,7 @@ namespace ProyectoOOIA.Ventanas
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(249, 20);
             this.textBox3.TabIndex = 4;
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
             // 
             // textBox2
             // 
@@ -133,10 +138,13 @@ namespace ProyectoOOIA.Ventanas
             // 
             // textBox1
             // 
+            this.textBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.textBox1.Location = new System.Drawing.Point(3, 5);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(249, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -278,12 +286,24 @@ namespace ProyectoOOIA.Ventanas
             this.textBox18.Size = new System.Drawing.Size(249, 20);
             this.textBox18.TabIndex = 2;
             // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrow;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.Location = new System.Drawing.Point(742, 24);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(33, 33);
+            this.button6.TabIndex = 13;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // frmPrincipalEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel3);
@@ -332,5 +352,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button6;
     }
 }

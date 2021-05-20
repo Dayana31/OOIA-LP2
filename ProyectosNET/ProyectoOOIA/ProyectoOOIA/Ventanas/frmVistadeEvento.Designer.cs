@@ -40,6 +40,7 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.atras = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -128,6 +129,7 @@ namespace ProyectoOOIA.Ventanas
             this.label7.Size = new System.Drawing.Size(119, 36);
             this.label7.TabIndex = 6;
             this.label7.Text = "Inscribirse";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox1
             // 
@@ -169,11 +171,23 @@ namespace ProyectoOOIA.Ventanas
             this.textBox1.Size = new System.Drawing.Size(194, 90);
             this.textBox1.TabIndex = 10;
             // 
+            // atras
+            // 
+            this.atras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrow;
+            this.atras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.atras.Location = new System.Drawing.Point(723, 12);
+            this.atras.Name = "atras";
+            this.atras.Size = new System.Drawing.Size(47, 36);
+            this.atras.TabIndex = 11;
+            this.atras.UseVisualStyleBackColor = true;
+            this.atras.Click += new System.EventHandler(this.atras_Click);
+            // 
             // frmVistadeEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.atras);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
@@ -208,5 +222,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button atras;
     }
 }

@@ -61,7 +61,8 @@ namespace ProyectoOOIA.Ventanas
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            new frmPrincipalEventos().Show();
+            this.Close();
         }
 
         private void ovalPictureBox1_Click(object sender, EventArgs e)

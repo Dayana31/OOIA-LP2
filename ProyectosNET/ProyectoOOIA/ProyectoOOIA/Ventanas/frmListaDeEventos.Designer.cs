@@ -35,6 +35,7 @@ namespace ProyectoOOIA.Ventanas
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btAtras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,9 +47,9 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 426);
+            this.panel1.Size = new System.Drawing.Size(444, 386);
             this.panel1.TabIndex = 0;
             // 
             // button5
@@ -110,12 +111,25 @@ namespace ProyectoOOIA.Ventanas
             this.button1.TabIndex = 1;
             this.button1.Text = "Evento1";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btAtras
+            // 
+            this.btAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrow;
+            this.btAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btAtras.Location = new System.Drawing.Point(411, 12);
+            this.btAtras.Name = "btAtras";
+            this.btAtras.Size = new System.Drawing.Size(34, 34);
+            this.btAtras.TabIndex = 1;
+            this.btAtras.UseVisualStyleBackColor = true;
+            this.btAtras.Click += new System.EventHandler(this.btAtras_Click);
             // 
             // frmListaDeEventos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 450);
+            this.Controls.Add(this.btAtras);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "frmListaDeEventos";
@@ -133,5 +147,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btAtras;
     }
 }

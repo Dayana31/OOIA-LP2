@@ -48,11 +48,11 @@ namespace ProyectoOOIA.Ventanas
             // txtUsername
             // 
             this.txtUsername.AutoSize = true;
-            this.txtUsername.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.Location = new System.Drawing.Point(115, 29);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(201, 27);
+            this.txtUsername.Size = new System.Drawing.Size(218, 24);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = "Solorzano Tapia, José";
             this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
@@ -60,11 +60,11 @@ namespace ProyectoOOIA.Ventanas
             // txtEventos
             // 
             this.txtEventos.AutoSize = true;
-            this.txtEventos.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventos.ForeColor = System.Drawing.Color.Black;
             this.txtEventos.Location = new System.Drawing.Point(219, 314);
             this.txtEventos.Name = "txtEventos";
-            this.txtEventos.Size = new System.Drawing.Size(82, 27);
+            this.txtEventos.Size = new System.Drawing.Size(85, 24);
             this.txtEventos.TabIndex = 8;
             this.txtEventos.Text = "Eventos";
             this.txtEventos.Click += new System.EventHandler(this.txtEventos_Click);
@@ -72,11 +72,11 @@ namespace ProyectoOOIA.Ventanas
             // txtCitas
             // 
             this.txtCitas.AutoSize = true;
-            this.txtCitas.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCitas.ForeColor = System.Drawing.Color.Black;
             this.txtCitas.Location = new System.Drawing.Point(188, 113);
             this.txtCitas.Name = "txtCitas";
-            this.txtCitas.Size = new System.Drawing.Size(145, 27);
+            this.txtCitas.Size = new System.Drawing.Size(144, 24);
             this.txtCitas.TabIndex = 6;
             this.txtCitas.Text = "Registrar Citas";
             this.txtCitas.Click += new System.EventHandler(this.label2_Click);
@@ -84,11 +84,11 @@ namespace ProyectoOOIA.Ventanas
             // txtTramites
             // 
             this.txtTramites.AutoSize = true;
-            this.txtTramites.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTramites.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTramites.ForeColor = System.Drawing.Color.Black;
             this.txtTramites.Location = new System.Drawing.Point(613, 314);
             this.txtTramites.Name = "txtTramites";
-            this.txtTramites.Size = new System.Drawing.Size(94, 27);
+            this.txtTramites.Size = new System.Drawing.Size(90, 24);
             this.txtTramites.TabIndex = 9;
             this.txtTramites.Text = "Trámites";
             this.txtTramites.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -97,11 +97,11 @@ namespace ProyectoOOIA.Ventanas
             // txtHorarios
             // 
             this.txtHorarios.AutoSize = true;
-            this.txtHorarios.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHorarios.ForeColor = System.Drawing.Color.Black;
             this.txtHorarios.Location = new System.Drawing.Point(592, 113);
             this.txtHorarios.Name = "txtHorarios";
-            this.txtHorarios.Size = new System.Drawing.Size(135, 27);
+            this.txtHorarios.Size = new System.Drawing.Size(130, 24);
             this.txtHorarios.TabIndex = 7;
             this.txtHorarios.Text = "Mostrar Citas";
             this.txtHorarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,6 +184,7 @@ namespace ProyectoOOIA.Ventanas
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.BackgroundImage = global::ProyectoOOIA.Properties.Resources.foto_29;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

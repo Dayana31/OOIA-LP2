@@ -146,6 +146,7 @@ namespace ProyectoOOIA.Ventanas
             this.btCancelar.TabIndex = 12;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = false;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // frmInscripcionEvento
             // 
