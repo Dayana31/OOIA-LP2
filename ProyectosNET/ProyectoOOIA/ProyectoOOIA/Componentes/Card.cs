@@ -46,8 +46,8 @@ namespace ProyectoOOIA.Componentes
         {
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler((sender, args) =>
             {
-                op.Show();
-                lt.Close();
+                op.ShowDialog();
+                //lt.Close();
             });
         }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

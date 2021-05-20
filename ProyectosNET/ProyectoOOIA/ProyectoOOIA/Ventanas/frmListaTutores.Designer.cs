@@ -32,6 +32,7 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabTutor = new System.Windows.Forms.TabPage();
@@ -44,7 +45,6 @@ namespace ProyectoOOIA.Ventanas
             this.card2 = new ProyectoOOIA.Componentes.Card();
             this.card8 = new ProyectoOOIA.Componentes.Card();
             this.card1 = new ProyectoOOIA.Componentes.Card();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabTutor.SuspendLayout();
@@ -60,6 +60,21 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(936, 93);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::ProyectoOOIA.Properties.Resources.home;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(25, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.TabIndex = 1;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -187,29 +202,16 @@ namespace ProyectoOOIA.Ventanas
             this.card1.TabIndex = 0;
             this.card1.Load += new System.EventHandler(this.card1_Load);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::ProyectoOOIA.Properties.Resources.home;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(25, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 1;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // frmListaTutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(936, 523);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "frmListaTutores";
             this.Text = "Tutores";
             this.panel1.ResumeLayout(false);
