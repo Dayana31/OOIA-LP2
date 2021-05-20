@@ -36,6 +36,7 @@ namespace ProyectoOOIA.Ventanas
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -49,7 +50,6 @@ namespace ProyectoOOIA.Ventanas
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbNombreAlumno = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,7 +57,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(356, 23);
@@ -78,7 +78,7 @@ namespace ProyectoOOIA.Ventanas
             // btDatosAlumno
             // 
             this.btDatosAlumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.btDatosAlumno.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDatosAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDatosAlumno.ForeColor = System.Drawing.SystemColors.Control;
             this.btDatosAlumno.Location = new System.Drawing.Point(79, 45);
             this.btDatosAlumno.Name = "btDatosAlumno";
@@ -90,7 +90,7 @@ namespace ProyectoOOIA.Ventanas
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.button1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Location = new System.Drawing.Point(214, 45);
             this.button1.Name = "button1";
@@ -102,7 +102,7 @@ namespace ProyectoOOIA.Ventanas
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.button2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
             this.button2.Location = new System.Drawing.Point(346, 45);
             this.button2.Name = "button2";
@@ -114,7 +114,7 @@ namespace ProyectoOOIA.Ventanas
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.button3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
             this.button3.Location = new System.Drawing.Point(483, 45);
             this.button3.Name = "button3";
@@ -146,6 +146,14 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(29, 214);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 39;
+            // 
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(28, 398);
@@ -155,7 +163,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(24, 372);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 23);
@@ -181,7 +189,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // lbEdad
             // 
-            this.lbEdad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEdad.Location = new System.Drawing.Point(25, 312);
             this.lbEdad.Name = "lbEdad";
             this.lbEdad.Size = new System.Drawing.Size(167, 23);
@@ -197,7 +205,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // lbLugarDeNacimiento
             // 
-            this.lbLugarDeNacimiento.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLugarDeNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLugarDeNacimiento.Location = new System.Drawing.Point(25, 254);
             this.lbLugarDeNacimiento.Name = "lbLugarDeNacimiento";
             this.lbLugarDeNacimiento.Size = new System.Drawing.Size(256, 23);
@@ -207,7 +215,7 @@ namespace ProyectoOOIA.Ventanas
             // lbEspecialidad
             // 
             this.lbEspecialidad.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
-            this.lbEspecialidad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEspecialidad.Location = new System.Drawing.Point(25, 187);
             this.lbEspecialidad.Name = "lbEspecialidad";
             this.lbEspecialidad.Size = new System.Drawing.Size(167, 23);
@@ -224,7 +232,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(25, 103);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(167, 23);
@@ -240,7 +248,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(25, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 23);
@@ -249,25 +257,18 @@ namespace ProyectoOOIA.Ventanas
             // 
             // lbNombreAlumno
             // 
-            this.lbNombreAlumno.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombreAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNombreAlumno.Location = new System.Drawing.Point(3, 0);
             this.lbNombreAlumno.Name = "lbNombreAlumno";
             this.lbNombreAlumno.Size = new System.Drawing.Size(294, 23);
             this.lbNombreAlumno.TabIndex = 19;
             this.lbNombreAlumno.Text = "Huertas Hortez, Jose Luis";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(29, 214);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 39;
-            // 
-            // frmDetCita_DatAlumnos
+            // frmDetCita_EventAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button3);
@@ -276,8 +277,9 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.btDatosAlumno);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Name = "frmDetCita_DatAlumnos";
-            this.Text = "frmDetCita_DatAlumnos";
+            this.MinimizeBox = false;
+            this.Name = "frmDetCita_EventAlumnos";
+            this.Text = "Ficha de datos alumno";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
