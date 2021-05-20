@@ -79,5 +79,11 @@ namespace ProyectoOOIA.Ventanas
             historiaAcademica.ShowDialog();
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            new frmHorario().Show();
+            this.Close();
+        }
     }
 }
