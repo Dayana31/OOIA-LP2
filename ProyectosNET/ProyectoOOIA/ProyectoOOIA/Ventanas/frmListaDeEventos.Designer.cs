@@ -117,8 +117,9 @@ namespace ProyectoOOIA.Ventanas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 450);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "frmListaDeEventos";
-            this.Text = "frmListaDeEventos";
+            this.Text = "Lista de eventos";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
