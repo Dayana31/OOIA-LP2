@@ -57,5 +57,27 @@ namespace ProyectoOOIA.Ventanas
         {
 
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmHistoriaAcademica historiaAcademica = new frmHistoriaAcademica();
+            historiaAcademica.ShowDialog();
+
+        }
     }
 }

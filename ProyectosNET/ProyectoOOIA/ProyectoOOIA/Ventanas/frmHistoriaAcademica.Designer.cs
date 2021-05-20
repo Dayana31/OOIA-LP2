@@ -286,6 +286,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnNotasParciales.TabIndex = 16;
             this.btnNotasParciales.Text = "Notas Parciales";
             this.btnNotasParciales.UseVisualStyleBackColor = true;
+            this.btnNotasParciales.Click += new System.EventHandler(this.btnNotasParciales_Click);
             // 
             // frmHistoriaAcademica
             // 

@@ -36,5 +36,11 @@ namespace ProyectoOOIA.Ventanas
         {
             this.Close();
         }
+
+        private void btnNotasParciales_Click(object sender, EventArgs e)
+        {
+            frmNotasParciales notasParciales = new frmNotasParciales();
+            notasParciales.ShowDialog();
+        }
     }
 }
