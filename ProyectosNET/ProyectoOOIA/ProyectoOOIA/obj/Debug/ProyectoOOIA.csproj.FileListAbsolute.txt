@@ -112,3 +112,8 @@ C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proyec
 C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmOpiniones.resources
 C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalEventos.resources
 C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRegistroEvento.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetCita_EventAlumnos.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInscripcionEvento.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRespuestaAcceso.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmVistadeEvento.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInformacionEvento.resources

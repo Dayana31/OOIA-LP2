@@ -65,7 +65,7 @@ namespace ProyectoOOIA.Ventanas
             // btnAtras
             // 
             this.btnAtras.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.home;
+            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrowWhite;
             this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;

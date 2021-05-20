@@ -137,6 +137,12 @@
     <Compile Include="Ventanas\frmHorarioCita.Designer.cs">
       <DependentUpon>frmHorarioCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmInformacionEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmInformacionEvento.Designer.cs">
+      <DependentUpon>frmInformacionEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmInscripcionEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     <EmbeddedResource Include="Ventanas\frmHorarioCita.resx">
       <DependentUpon>frmHorarioCita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmInformacionEvento.resx">
+      <DependentUpon>frmInformacionEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
@@ -369,6 +378,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home.png" />
+    <None Include="Resources\arrowWhite.png" />
     <Content Include="Resources\profesor.jpg" />
     <Content Include="Resources\psicologo.jpg" />
   </ItemGroup>
