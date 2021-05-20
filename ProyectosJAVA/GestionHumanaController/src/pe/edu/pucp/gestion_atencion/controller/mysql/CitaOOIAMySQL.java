@@ -10,7 +10,7 @@ import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_atencion.controller.dao.CitaOOIADAO;
 import pe.edu.pucp.gestion_atencion.model.CitaOOIA;
 import pe.edu.pucp.gestion_atencion.model.Horario;
-import pe.edu.pucp.gestion_atencion.model.Motivo;
+import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
 
 /**
  *
@@ -37,9 +37,10 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
                 cita.setHorario(new Horario());
                 cita.getHorario().setFecha(rs.getDate("fecha"));
                 cita.getHorario().setHoraInicio(rs.getDate("hora_inicio"));
-                cita.setMotivo(new Motivo());
-                cita.getMotivo().setDescripcion(rs.getString("descripcion"));
+                cita.setCodigo_atencion(new CodigoAtencion());
+                cita.getCodigo_atencion().setDescripcion(rs.getString("descripcion"));
                 cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                cita.setMotivo(rs.getString("motivo"));
                 cita.setAsistio(rs.getBoolean("asistio"));
                 cita.setEstado(1);
                 citas.add(cita);
@@ -69,8 +70,9 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
            cs.setDate("_fecha_registro",(Date) citaOOIA.getFechaRegistro());
            cs.setInt("_fid_alumno",citaOOIA.getAlumno().getId_alumno());
            cs.setInt("_fid_horario",citaOOIA.getHorario().getId_horario());
-           cs.setInt("_fid_motivo",citaOOIA.getMotivo().getId_motivo());
+           cs.setInt("_fid_atencion",citaOOIA.getCodigo_atencion().getId_codigo_atencion());
            cs.setInt("_fid_asesor",citaOOIA.getAsesor().getId_miembro_pucp());
+           cs.setString("_motivo", citaOOIA.getMotivo());
            cs.setBoolean("_asistio",citaOOIA.isAsistio());
            cs.executeUpdate();
            citaOOIA.setId_cita(cs.getInt("_id_cita"));
@@ -101,8 +103,9 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
            cs.setDate("_fecha_registro",(Date) citaOOIA.getFechaRegistro());
            cs.setInt("_fid_alumno",citaOOIA.getAlumno().getId_alumno());
            cs.setInt("_fid_horario",citaOOIA.getHorario().getId_horario());
-           cs.setInt("_fid_motivo",citaOOIA.getMotivo().getId_motivo());
+           cs.setInt("_fid_atencion",citaOOIA.getCodigo_atencion().getId_codigo_atencion());
            cs.setInt("_fid_asesor",citaOOIA.getAsesor().getId_miembro_pucp());
+           cs.setString("_motivo",citaOOIA.getMotivo());
            cs.setBoolean("_asistio",citaOOIA.isAsistio());
            cs.executeUpdate();
           

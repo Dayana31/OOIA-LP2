@@ -6,33 +6,33 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
-import pe.edu.pucp.gestion_atencion.controller.dao.MotivoDAO;
-import pe.edu.pucp.gestion_atencion.model.Motivo;
+import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
+import pe.edu.pucp.gestion_atencion.controller.dao.CodigoAtencionDAO;
 
 /**
  *
  * @author DAYANA
  */
-public class MotivoMySQL implements MotivoDAO {
+public class CodigoAtencionMySQL implements CodigoAtencionDAO {
     Connection con; //java.sql.Connection
     ResultSet rs;
     CallableStatement cs;
     
     @Override
-    public ArrayList<Motivo> listar() {
-        ArrayList<Motivo> motivos = new ArrayList<>();
+    public ArrayList<CodigoAtencion> listar() {
+        ArrayList<CodigoAtencion> codigos = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_MOTIVOS()}");
+            cs = con.prepareCall("{call LISTAR_CODIGOS_ATENCION()}");
             rs = cs.executeQuery();
             while(rs.next()){
-                Motivo motivo = new Motivo();
-                motivo.setId_motivo(rs.getInt("id_motivo"));
-                motivo.setCodigoMotivo(rs.getString("codigo_motivo"));
-                motivo.setDescripcion(rs.getString("descripcion"));
+                CodigoAtencion codigo = new CodigoAtencion();
+                codigo.setId_codigo_atencion(rs.getInt("id_codigo_atencion"));
+                codigo.setCodigo(rs.getString("codigo"));
+                codigo.setDescripcion(rs.getString("descripcion"));
 
-                motivos.add(motivo);
+                codigos.add(codigo);
             }
             rs.close();
             cs.close();
@@ -41,11 +41,11 @@ public class MotivoMySQL implements MotivoDAO {
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        return motivos;
+        return codigos;
     }
 
     @Override
-    public int insertar(Motivo motivo) {
+    public int insertar(CodigoAtencion motivo) {
         int resultado=0;
         try{
             //registrar el driver
@@ -54,12 +54,12 @@ public class MotivoMySQL implements MotivoDAO {
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call INSERTAR_MOTIVO(?,?,?)}");
-           cs.registerOutParameter("_id_motivo",java.sql.Types.INTEGER);
-           cs.setString("_codigo_motivo",motivo.getCodigoMotivo());
-           cs.setString("_nombre_motivo",motivo.getDescripcion());
+           cs = con.prepareCall("{call INSERTAR_CODIGO_ATENCION(?,?,?)}");
+           cs.registerOutParameter("_id_codigo_atencion",java.sql.Types.INTEGER);
+           cs.setString("_codigo",motivo.getCodigo());
+           cs.setString("_descripcion",motivo.getDescripcion());
            cs.executeUpdate();
-           motivo.setId_motivo(cs.getInt("_id_motivo"));
+           motivo.setId_codigo_atencion(cs.getInt("_id_codigo_atencion"));
            resultado=1;
            cs.close();
         }catch(Exception ex){
@@ -73,7 +73,7 @@ public class MotivoMySQL implements MotivoDAO {
     }
 
     @Override
-    public int modificar(Motivo motivo) {
+    public int modificar(CodigoAtencion motivo) {
         int resultado=0;
         try{
             //registrar el driver
@@ -82,10 +82,10 @@ public class MotivoMySQL implements MotivoDAO {
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call MODIFICAR_MOTIVO(?,?,?)}");
-           cs.setInt("_id_motivo",motivo.getId_motivo());
-           cs.setString("_codigo_motivo",motivo.getCodigoMotivo());
-           cs.setString("_nombre_motivo",motivo.getDescripcion());
+           cs = con.prepareCall("{call MODIFICAR_CODIGO_ATENCION(?,?,?)}");
+           cs.setInt("_id_codigo_atencion",motivo.getId_codigo_atencion());
+           cs.setString("_codigo",motivo.getCodigo());
+           cs.setString("_descripcion",motivo.getDescripcion());
            cs.executeUpdate();
            resultado=1;
            cs.close();
