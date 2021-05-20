@@ -109,7 +109,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 214);
+            this.label5.Location = new System.Drawing.Point(23, 213);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 27);
             this.label5.TabIndex = 4;

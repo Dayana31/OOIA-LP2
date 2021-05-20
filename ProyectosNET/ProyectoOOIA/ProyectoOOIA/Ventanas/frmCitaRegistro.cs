@@ -26,7 +26,8 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            new frmConfirmacionCita().Show();
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

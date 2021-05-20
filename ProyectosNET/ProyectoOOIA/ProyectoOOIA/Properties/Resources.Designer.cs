@@ -133,6 +133,16 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back {
+            get {
+                object obj = ResourceManager.GetObject("back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EEGGCC {
             get {
                 object obj = ResourceManager.GetObject("EEGGCC", resourceCulture);
@@ -233,6 +243,16 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap next {
+            get {
+                object obj = ResourceManager.GetObject("next", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_pixabay_261621 {
             get {
                 object obj = ResourceManager.GetObject("pexels_pixabay_261621", resourceCulture);
@@ -246,6 +266,16 @@ namespace ProyectoOOIA.Properties {
         internal static System.Drawing.Bitmap profesor {
             get {
                 object obj = ResourceManager.GetObject("profesor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap psicologo {
+            get {
+                object obj = ResourceManager.GetObject("psicologo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
