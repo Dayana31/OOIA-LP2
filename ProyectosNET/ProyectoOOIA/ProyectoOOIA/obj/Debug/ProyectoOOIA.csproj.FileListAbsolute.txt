@@ -112,38 +112,8 @@ C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proyec
 C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmOpiniones.resources
 C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalEventos.resources
 C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRegistroEvento.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Card.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Horario.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmAccesoEvento.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCancelarCita.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCancelarCitaAlumno.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.CategoriasEventos.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCitaRegistro.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmConfirmacionCita.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmConfirmarCancelar.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleCita.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetCita_EventAlumnos.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHistoriaAcademica.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorario.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorarioCambiado.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorarioCita.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInicioSesion.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInscripcionEvento.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmListaCitas.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Properties.Resources.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmListaDeEventos.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmListaTutores.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmNotasParciales.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmOpiniones.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalAlumno.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalEventos.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalProfesor.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmReestablecerContraseña.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRegistroEvento.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmVistadeEvento.resources
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.GenerateResource.cache
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CoreCompileInputs.cache
-D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetCita_EventAlumnos.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInscripcionEvento.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRespuestaAcceso.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmVistadeEvento.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInformacionEvento.resources

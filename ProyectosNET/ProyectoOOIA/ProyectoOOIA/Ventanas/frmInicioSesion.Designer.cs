@@ -197,12 +197,16 @@ namespace ProyectoOOIA.Ventanas
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(209, 481);
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::ProyectoOOIA.Properties.Resources._028_telephone_2;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(70, 481);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(23, 23);
             this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -211,9 +215,9 @@ namespace ProyectoOOIA.Ventanas
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(66, 466);
+            this.button2.Location = new System.Drawing.Point(41, 481);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 38);
+            this.button2.Size = new System.Drawing.Size(23, 23);
             this.button2.TabIndex = 3;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -224,9 +228,9 @@ namespace ProyectoOOIA.Ventanas
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(12, 466);
+            this.button1.Location = new System.Drawing.Point(12, 481);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 37);
+            this.button1.Size = new System.Drawing.Size(23, 23);
             this.button1.TabIndex = 2;
             this.button1.UseVisualStyleBackColor = false;
             // 
