@@ -40,7 +40,8 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Leelawadee", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(134, 45);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(124, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(281, 115);
             this.label1.TabIndex = 1;
@@ -49,6 +50,7 @@ namespace ProyectoOOIA.Ventanas
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(128, 189);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 13);
@@ -67,7 +69,7 @@ namespace ProyectoOOIA.Ventanas
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Leelawadee", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(178, 323);
+            this.btnCancelar.Location = new System.Drawing.Point(201, 311);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(143, 41);
             this.btnCancelar.TabIndex = 4;
@@ -78,7 +80,7 @@ namespace ProyectoOOIA.Ventanas
             // btnReestablecer
             // 
             this.btnReestablecer.Font = new System.Drawing.Font("Leelawadee", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReestablecer.Location = new System.Drawing.Point(178, 276);
+            this.btnReestablecer.Location = new System.Drawing.Point(201, 264);
             this.btnReestablecer.Name = "btnReestablecer";
             this.btnReestablecer.Size = new System.Drawing.Size(143, 41);
             this.btnReestablecer.TabIndex = 5;
@@ -91,6 +93,7 @@ namespace ProyectoOOIA.Ventanas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
             this.ClientSize = new System.Drawing.Size(547, 450);
             this.Controls.Add(this.btnReestablecer);
             this.Controls.Add(this.btnCancelar);
