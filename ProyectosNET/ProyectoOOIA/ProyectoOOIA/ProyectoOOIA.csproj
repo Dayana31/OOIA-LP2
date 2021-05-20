@@ -137,6 +137,12 @@
     <Compile Include="Ventanas\frmHorarioCita.Designer.cs">
       <DependentUpon>frmHorarioCita.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmInscripcionEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmInscripcionEvento.Designer.cs">
+      <DependentUpon>frmInscripcionEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmListaDeEventos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,12 @@
     <Compile Include="Ventanas\frmRegistroEvento.Designer.cs">
       <DependentUpon>frmRegistroEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmVistadeEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmVistadeEvento.Designer.cs">
+      <DependentUpon>frmVistadeEvento.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Componentes\Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +277,9 @@
     <EmbeddedResource Include="Ventanas\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmInscripcionEvento.resx">
+      <DependentUpon>frmInscripcionEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmListaCitas.resx">
       <DependentUpon>frmListaCitas.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmRegistroEvento.resx">
       <DependentUpon>frmRegistroEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmVistadeEvento.resx">
+      <DependentUpon>frmVistadeEvento.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\MaterialSkin.Controls.MaterialCheckBox.datasource" />
     <None Include="Properties\Settings.settings">
