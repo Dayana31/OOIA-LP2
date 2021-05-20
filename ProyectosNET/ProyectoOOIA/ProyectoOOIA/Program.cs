@@ -18,12 +18,12 @@ namespace ProyectoOOIA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            frmInicioSesion pantalla = new frmInicioSesion();
+            //frmInicioSesion pantalla = new frmInicioSesion();
             
-            pantalla.FormClosed += MainForm_Closed;
-            pantalla.Show();
+            //pantalla.FormClosed += MainForm_Closed;
+            //pantalla.Show();
            
-            Application.Run();
+            Application.Run(new frmHorarioCita());
         }
         private static void MainForm_Closed(Object sender, FormClosedEventArgs e)
         {
