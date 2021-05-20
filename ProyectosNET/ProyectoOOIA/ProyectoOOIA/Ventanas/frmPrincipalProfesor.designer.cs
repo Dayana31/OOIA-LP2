@@ -30,11 +30,9 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.txtTramites = new System.Windows.Forms.Label();
             this.txtEventos = new System.Windows.Forms.Label();
             this.txtHorarios = new System.Windows.Forms.Label();
             this.txtCitas = new System.Windows.Forms.Label();
@@ -55,29 +53,14 @@ namespace ProyectoOOIA.Ventanas
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(181, 353);
+            this.button4.Location = new System.Drawing.Point(241, 434);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
             this.button4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button4.Size = new System.Drawing.Size(162, 145);
+            this.button4.Size = new System.Drawing.Size(216, 178);
             this.button4.TabIndex = 27;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::ProyectoOOIA.Properties.Resources.pexels_pixabay_261621;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(541, 353);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button3.Size = new System.Drawing.Size(162, 145);
-            this.button3.TabIndex = 26;
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -89,10 +72,11 @@ namespace ProyectoOOIA.Ventanas
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(541, 143);
+            this.button2.Location = new System.Drawing.Point(721, 176);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button2.Size = new System.Drawing.Size(162, 145);
+            this.button2.Size = new System.Drawing.Size(216, 178);
             this.button2.TabIndex = 25;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -107,10 +91,11 @@ namespace ProyectoOOIA.Ventanas
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(181, 143);
+            this.button1.Location = new System.Drawing.Point(241, 176);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(162, 145);
+            this.button1.Size = new System.Drawing.Size(216, 178);
             this.button1.TabIndex = 24;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -126,32 +111,23 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(889, 12);
+            this.btnAtras.Location = new System.Drawing.Point(1185, 15);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(35, 34);
+            this.btnAtras.Size = new System.Drawing.Size(47, 42);
             this.btnAtras.TabIndex = 23;
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // txtTramites
-            // 
-            this.txtTramites.AutoSize = true;
-            this.txtTramites.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTramites.Location = new System.Drawing.Point(517, 296);
-            this.txtTramites.Name = "txtTramites";
-            this.txtTramites.Size = new System.Drawing.Size(206, 54);
-            this.txtTramites.TabIndex = 21;
-            this.txtTramites.Text = "Registrar información\r\nde tramites";
-            this.txtTramites.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // txtEventos
             // 
             this.txtEventos.AutoSize = true;
             this.txtEventos.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEventos.Location = new System.Drawing.Point(169, 310);
+            this.txtEventos.Location = new System.Drawing.Point(225, 382);
+            this.txtEventos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtEventos.Name = "txtEventos";
-            this.txtEventos.Size = new System.Drawing.Size(170, 27);
+            this.txtEventos.Size = new System.Drawing.Size(216, 34);
             this.txtEventos.TabIndex = 20;
             this.txtEventos.Text = "Reprogramar cita";
             this.txtEventos.Click += new System.EventHandler(this.txtEventos_Click);
@@ -160,9 +136,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtHorarios.AutoSize = true;
             this.txtHorarios.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHorarios.Location = new System.Drawing.Point(525, 86);
+            this.txtHorarios.Location = new System.Drawing.Point(700, 106);
+            this.txtHorarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtHorarios.Name = "txtHorarios";
-            this.txtHorarios.Size = new System.Drawing.Size(178, 54);
+            this.txtHorarios.Size = new System.Drawing.Size(227, 68);
             this.txtHorarios.TabIndex = 19;
             this.txtHorarios.Text = "Registrar horarios \r\nde atención";
             this.txtHorarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -172,9 +149,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtCitas.AutoSize = true;
             this.txtCitas.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCitas.Location = new System.Drawing.Point(176, 86);
+            this.txtCitas.Location = new System.Drawing.Point(235, 106);
+            this.txtCitas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtCitas.Name = "txtCitas";
-            this.txtCitas.Size = new System.Drawing.Size(167, 27);
+            this.txtCitas.Size = new System.Drawing.Size(212, 34);
             this.txtCitas.TabIndex = 18;
             this.txtCitas.Text = "Registrar eventos";
             // 
@@ -183,9 +161,10 @@ namespace ProyectoOOIA.Ventanas
             this.txtUsername.AutoSize = true;
             this.txtUsername.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.Transparent;
-            this.txtUsername.Location = new System.Drawing.Point(115, 29);
+            this.txtUsername.Location = new System.Drawing.Point(153, 36);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(201, 27);
+            this.txtUsername.Size = new System.Drawing.Size(260, 34);
             this.txtUsername.TabIndex = 17;
             this.txtUsername.Text = "Solorzano Tapia, José";
             // 
@@ -198,15 +177,17 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Controls.Add(this.btnAtras);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(936, 83);
+            this.panel1.Size = new System.Drawing.Size(1248, 102);
             this.panel1.TabIndex = 28;
             // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 83);
+            this.splitter1.Size = new System.Drawing.Size(4, 102);
             this.splitter1.TabIndex = 24;
             this.splitter1.TabStop = false;
             // 
@@ -214,28 +195,28 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
             this.ovalPictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(38, 10);
+            this.ovalPictureBox1.Location = new System.Drawing.Point(51, 12);
+            this.ovalPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ovalPictureBox1.Name = "ovalPictureBox1";
-            this.ovalPictureBox1.Size = new System.Drawing.Size(71, 71);
+            this.ovalPictureBox1.Size = new System.Drawing.Size(95, 87);
             this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ovalPictureBox1.TabIndex = 22;
             this.ovalPictureBox1.TabStop = false;
             // 
             // frmPrincipalProfesor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(936, 523);
+            this.ClientSize = new System.Drawing.Size(1248, 644);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtTramites);
             this.Controls.Add(this.txtEventos);
             this.Controls.Add(this.txtHorarios);
             this.Controls.Add(this.txtCitas);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmPrincipalProfesor";
             this.Text = "Menú Principal";
@@ -250,12 +231,10 @@ namespace ProyectoOOIA.Ventanas
         #endregion
 
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAtras;
         private OvalPictureBox ovalPictureBox1;
-        private System.Windows.Forms.Label txtTramites;
         private System.Windows.Forms.Label txtEventos;
         private System.Windows.Forms.Label txtHorarios;
         private System.Windows.Forms.Label txtCitas;
