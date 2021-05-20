@@ -23,7 +23,7 @@ namespace ProyectoOOIA
             pantalla.FormClosed += MainForm_Closed;
             pantalla.Show();
 
-            //Application.Run(new frmHorarioCita());
+            //Application.Run(new frmPrincipalAlumno());
             Application.Run();
         }
         private static void MainForm_Closed(Object sender, FormClosedEventArgs e)
