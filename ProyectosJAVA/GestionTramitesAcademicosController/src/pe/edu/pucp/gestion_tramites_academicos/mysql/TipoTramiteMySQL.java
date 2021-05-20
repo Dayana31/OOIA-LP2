@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_tramites_academicos.dao.TipoTramiteDAO;
-import pe.edu.pucp.gestion_tramites_academicos.model.Requisito;
 import pe.edu.pucp.gestion_tramites_academicos.model.TipoTramite;
 
 /**
