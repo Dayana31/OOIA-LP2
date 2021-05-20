@@ -64,6 +64,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            
             if (txtContraseña.Text == "") lblIncorrecto.Visible = true;
             else
             {
@@ -85,6 +86,18 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-     
+        private void frmInicioSesion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = '\n';
+            if (e.KeyChar == c) 
+                btnIngresar_Click(null,null);
+        }
+
+        private void panel2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            char c = '\n';
+            if (e.KeyCode == Keys.Enter)
+                btnIngresar_Click(null, null);
+        }
     }
 }

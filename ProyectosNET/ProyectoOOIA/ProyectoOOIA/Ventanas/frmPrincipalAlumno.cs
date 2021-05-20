@@ -47,19 +47,17 @@ namespace ProyectoOOIA.Ventanas
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            new frmListaCitas().Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
             new frmListaTutores().Show();
             this.Close();
         }
+
+       
 
         private void button4_Click(object sender, EventArgs e)
         {
