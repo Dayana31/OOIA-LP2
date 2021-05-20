@@ -329,12 +329,10 @@
     <None Include="Resources\028-telephone-2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logout.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\home.png" />
     <Content Include="Resources\profesor.jpg" />
     <Content Include="Resources\psicologo.jpg" />
   </ItemGroup>

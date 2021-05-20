@@ -29,6 +29,7 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaCitas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -75,7 +76,7 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(688, 60);
             this.panel1.TabIndex = 0;
@@ -85,7 +86,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.ptbLogOut.Image = global::ProyectoOOIA.Properties.Resources.log_out3;
             this.ptbLogOut.Location = new System.Drawing.Point(626, 20);
-            this.ptbLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ptbLogOut.Margin = new System.Windows.Forms.Padding(2);
             this.ptbLogOut.Name = "ptbLogOut";
             this.ptbLogOut.Size = new System.Drawing.Size(32, 28);
             this.ptbLogOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,11 +95,11 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnHome
             // 
-            this.btnHome.Image = global::ProyectoOOIA.Properties.Resources.home;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.Location = new System.Drawing.Point(20, 20);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(26, 21);
+            this.btnHome.Size = new System.Drawing.Size(26, 27);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 1;
             this.btnHome.TabStop = false;
@@ -138,7 +139,7 @@ namespace ProyectoOOIA.Ventanas
             this.Asistencia});
             this.dgvCitasProgramadas.EnableHeadersVisualStyles = false;
             this.dgvCitasProgramadas.Location = new System.Drawing.Point(31, 20);
-            this.dgvCitasProgramadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvCitasProgramadas.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCitasProgramadas.Name = "dgvCitasProgramadas";
             this.dgvCitasProgramadas.ReadOnly = true;
             this.dgvCitasProgramadas.RowHeadersWidth = 51;
@@ -200,7 +201,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnEliminarCita.BackColor = System.Drawing.SystemColors.Control;
             this.btnEliminarCita.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnEliminarCita.Location = new System.Drawing.Point(538, 263);
-            this.btnEliminarCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarCita.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarCita.Name = "btnEliminarCita";
             this.btnEliminarCita.Size = new System.Drawing.Size(92, 22);
             this.btnEliminarCita.TabIndex = 2;
@@ -215,7 +216,7 @@ namespace ProyectoOOIA.Ventanas
             this.panel2.Controls.Add(this.tabHistorial);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 65);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(688, 333);
             this.panel2.TabIndex = 3;
@@ -227,7 +228,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabHistorial.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabHistorial.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabHistorial.Location = new System.Drawing.Point(0, 0);
-            this.tabHistorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabHistorial.Margin = new System.Windows.Forms.Padding(2);
             this.tabHistorial.Name = "tabHistorial";
             this.tabHistorial.SelectedIndex = 0;
             this.tabHistorial.Size = new System.Drawing.Size(688, 333);
@@ -240,9 +241,9 @@ namespace ProyectoOOIA.Ventanas
             this.tabCitasProgramadas.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCitasProgramadas.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabCitasProgramadas.Location = new System.Drawing.Point(4, 27);
-            this.tabCitasProgramadas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabCitasProgramadas.Margin = new System.Windows.Forms.Padding(2);
             this.tabCitasProgramadas.Name = "tabCitasProgramadas";
-            this.tabCitasProgramadas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabCitasProgramadas.Padding = new System.Windows.Forms.Padding(2);
             this.tabCitasProgramadas.Size = new System.Drawing.Size(680, 302);
             this.tabCitasProgramadas.TabIndex = 0;
             this.tabCitasProgramadas.Text = "Citas programadas";
@@ -253,9 +254,9 @@ namespace ProyectoOOIA.Ventanas
             this.tabHistorialCitas.Controls.Add(this.btnVerDetalle);
             this.tabHistorialCitas.Controls.Add(this.dgvHistorialCitas);
             this.tabHistorialCitas.Location = new System.Drawing.Point(4, 27);
-            this.tabHistorialCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabHistorialCitas.Margin = new System.Windows.Forms.Padding(2);
             this.tabHistorialCitas.Name = "tabHistorialCitas";
-            this.tabHistorialCitas.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabHistorialCitas.Padding = new System.Windows.Forms.Padding(2);
             this.tabHistorialCitas.Size = new System.Drawing.Size(680, 302);
             this.tabHistorialCitas.TabIndex = 1;
             this.tabHistorialCitas.Text = "Historial de citas";
@@ -266,7 +267,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnVerDetalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(0)))), ((int)(((byte)(31)))));
             this.btnVerDetalle.ForeColor = System.Drawing.SystemColors.Window;
             this.btnVerDetalle.Location = new System.Drawing.Point(538, 271);
-            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerDetalle.Name = "btnVerDetalle";
             this.btnVerDetalle.Size = new System.Drawing.Size(96, 22);
             this.btnVerDetalle.TabIndex = 6;
@@ -296,7 +297,7 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridViewTextBoxColumn6});
             this.dgvHistorialCitas.EnableHeadersVisualStyles = false;
             this.dgvHistorialCitas.Location = new System.Drawing.Point(31, 20);
-            this.dgvHistorialCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvHistorialCitas.Margin = new System.Windows.Forms.Padding(2);
             this.dgvHistorialCitas.Name = "dgvHistorialCitas";
             this.dgvHistorialCitas.ReadOnly = true;
             this.dgvHistorialCitas.RowHeadersWidth = 51;
@@ -356,7 +357,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(688, 398);
             this.panel3.TabIndex = 4;
@@ -370,7 +371,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmListaCitas";
             this.Text = "Lista de citas";
             this.panel1.ResumeLayout(false);
