@@ -143,6 +143,16 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CasitaNegra {
+            get {
+                object obj = ResourceManager.GetObject("CasitaNegra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EEGGCC {
             get {
                 object obj = ResourceManager.GetObject("EEGGCC", resourceCulture);
