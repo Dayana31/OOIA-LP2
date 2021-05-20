@@ -6,15 +6,15 @@ package pe.edu.pucp.gestion_humana.model;
  */
 public class Especialidad {
     private int id_especialidad;
-    private String nombre_especialiidad;
+    private String nombre_especialidad;
 
     public Especialidad() {
     }
     
     
-    public Especialidad(int id_especialidad, String nombre_especialiidad) {
+    public Especialidad(int id_especialidad, String nombre_especialidad) {
         this.id_especialidad = id_especialidad;
-        this.nombre_especialiidad = nombre_especialiidad;
+        this.nombre_especialidad = nombre_especialidad;
     }
 
     public int getId_especialidad() {
@@ -25,12 +25,12 @@ public class Especialidad {
         this.id_especialidad = id_especialidad;
     }
 
-    public String getNombre_especialiidad() {
-        return nombre_especialiidad;
+    public String getNombre_especialidad() {
+        return nombre_especialidad;
     }
 
-    public void setNombre_especialiidad(String nombre_especialiidad) {
-        this.nombre_especialiidad = nombre_especialiidad;
+    public void setNombre_especialidad(String nombre_especialidad) {
+        this.nombre_especialidad = nombre_especialidad;
     }
     
 }
