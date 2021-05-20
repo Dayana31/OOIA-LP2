@@ -113,17 +113,11 @@
     <Compile Include="Ventanas\frmConfirmarCancelar.Designer.cs">
       <DependentUpon>frmConfirmarCancelar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmDetCita_DatAlumnos.cs">
+    <Compile Include="Ventanas\frmDetalleDeCitaTutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmDetCita_DatAlumnos.Designer.cs">
-      <DependentUpon>frmDetCita_DatAlumnos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventanas\frmDetCita_FichAlumnos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmDetCita_FichAlumnos.Designer.cs">
-      <DependentUpon>frmDetCita_FichAlumnos.cs</DependentUpon>
+    <Compile Include="Ventanas\frmDetalleDeCitaTutor.Designer.cs">
+      <DependentUpon>frmDetalleDeCitaTutor.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmHistoriaAcademica.cs">
       <SubType>Form</SubType>
@@ -253,11 +247,8 @@
     <EmbeddedResource Include="Ventanas\frmDetalleCita.resx">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmDetCita_DatAlumnos.resx">
-      <DependentUpon>frmDetCita_DatAlumnos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmDetCita_FichAlumnos.resx">
-      <DependentUpon>frmDetCita_FichAlumnos.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\frmDetalleDeCitaTutor.resx">
+      <DependentUpon>frmDetalleDeCitaTutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHistoriaAcademica.resx">
       <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
