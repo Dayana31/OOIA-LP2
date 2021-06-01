@@ -30,6 +30,7 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBuscarOrientador = new System.Windows.Forms.Button();
             this.txtHoraFin = new System.Windows.Forms.TextBox();
             this.txtHoraInicio = new System.Windows.Forms.TextBox();
             this.txtFechaCita = new System.Windows.Forms.TextBox();
@@ -44,7 +45,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnGuardar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnHorarioCita = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +54,8 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnHorarioCita);
+            this.panel1.Controls.Add(this.btnBuscarOrientador);
             this.panel1.Controls.Add(this.txtHoraFin);
             this.panel1.Controls.Add(this.txtHoraInicio);
             this.panel1.Controls.Add(this.txtFechaCita);
@@ -65,9 +68,20 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(460, 265);
+            this.panel1.Size = new System.Drawing.Size(610, 267);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // btnBuscarOrientador
+            // 
+            this.btnBuscarOrientador.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarOrientador.Location = new System.Drawing.Point(488, 83);
+            this.btnBuscarOrientador.Name = "btnBuscarOrientador";
+            this.btnBuscarOrientador.Size = new System.Drawing.Size(44, 27);
+            this.btnBuscarOrientador.TabIndex = 13;
+            this.btnBuscarOrientador.Text = "...";
+            this.btnBuscarOrientador.UseVisualStyleBackColor = true;
+            this.btnBuscarOrientador.Click += new System.EventHandler(this.btnBuscarOrientador_Click);
             // 
             // txtHoraFin
             // 
@@ -75,7 +89,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtHoraFin.Location = new System.Drawing.Point(139, 218);
             this.txtHoraFin.Name = "txtHoraFin";
             this.txtHoraFin.ReadOnly = true;
-            this.txtHoraFin.Size = new System.Drawing.Size(94, 22);
+            this.txtHoraFin.Size = new System.Drawing.Size(115, 22);
             this.txtHoraFin.TabIndex = 8;
             // 
             // txtHoraInicio
@@ -84,7 +98,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtHoraInicio.Location = new System.Drawing.Point(139, 176);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.ReadOnly = true;
-            this.txtHoraInicio.Size = new System.Drawing.Size(94, 22);
+            this.txtHoraInicio.Size = new System.Drawing.Size(115, 22);
             this.txtHoraInicio.TabIndex = 7;
             // 
             // txtFechaCita
@@ -93,7 +107,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtFechaCita.Location = new System.Drawing.Point(139, 129);
             this.txtFechaCita.Name = "txtFechaCita";
             this.txtFechaCita.ReadOnly = true;
-            this.txtFechaCita.Size = new System.Drawing.Size(143, 22);
+            this.txtFechaCita.Size = new System.Drawing.Size(160, 22);
             this.txtFechaCita.TabIndex = 6;
             // 
             // txtOrientador
@@ -102,7 +116,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtOrientador.Location = new System.Drawing.Point(139, 86);
             this.txtOrientador.Name = "txtOrientador";
             this.txtOrientador.ReadOnly = true;
-            this.txtOrientador.Size = new System.Drawing.Size(230, 22);
+            this.txtOrientador.Size = new System.Drawing.Size(326, 22);
             this.txtOrientador.TabIndex = 5;
             // 
             // label5
@@ -149,7 +163,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 25);
+            this.label1.Location = new System.Drawing.Point(199, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 39);
             this.label1.TabIndex = 0;
@@ -163,16 +177,16 @@ namespace ProyectoOOIA.Ventanas
             this.panel2.Controls.Add(this.btnGuardar);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 265);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(460, 232);
+            this.panel2.Size = new System.Drawing.Size(610, 232);
             this.panel2.TabIndex = 1;
             // 
             // btnCancelar
             // 
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnCancelar.Location = new System.Drawing.Point(242, 170);
+            this.btnCancelar.Location = new System.Drawing.Point(321, 170);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(93, 23);
             this.btnCancelar.TabIndex = 12;
@@ -182,7 +196,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(97, 170);
+            this.btnGuardar.Location = new System.Drawing.Point(175, 170);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(93, 23);
             this.btnGuardar.TabIndex = 11;
@@ -192,10 +206,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 51);
+            this.textBox1.Location = new System.Drawing.Point(28, 49);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(390, 94);
+            this.textBox1.Size = new System.Drawing.Size(541, 94);
             this.textBox1.TabIndex = 10;
             // 
             // label6
@@ -208,22 +222,24 @@ namespace ProyectoOOIA.Ventanas
             this.label6.TabIndex = 9;
             this.label6.Text = "Ingrese motivo de consulta:";
             // 
-            // panel3
+            // btnHorarioCita
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(460, 497);
-            this.panel3.TabIndex = 9;
+            this.btnHorarioCita.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorarioCita.Location = new System.Drawing.Point(321, 126);
+            this.btnHorarioCita.Name = "btnHorarioCita";
+            this.btnHorarioCita.Size = new System.Drawing.Size(44, 27);
+            this.btnHorarioCita.TabIndex = 14;
+            this.btnHorarioCita.Text = "...";
+            this.btnHorarioCita.UseVisualStyleBackColor = true;
+            this.btnHorarioCita.Click += new System.EventHandler(this.btnHorarioCita_Click);
             // 
             // frmCitaRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 497);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(610, 497);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCitaRegistro";
             this.Text = "frmCitaRegistro";
@@ -252,6 +268,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnBuscarOrientador;
+        private System.Windows.Forms.Button btnHorarioCita;
     }
 }

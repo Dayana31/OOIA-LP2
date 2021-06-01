@@ -64,9 +64,15 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-        private void ptbLogOut_Click(object sender, EventArgs e)
+
+        private void btnRegistrarCita_Click(object sender, EventArgs e)
         {
-           
+            new frmCitaRegistro().Show();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+
             new frmInicioSesion().Show();
             this.Close();
         }

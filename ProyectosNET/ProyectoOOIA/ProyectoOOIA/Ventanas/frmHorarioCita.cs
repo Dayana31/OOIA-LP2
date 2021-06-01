@@ -37,8 +37,8 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            new frmCitaRegistro().Show();
 
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

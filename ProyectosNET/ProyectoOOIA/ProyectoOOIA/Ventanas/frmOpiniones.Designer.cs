@@ -42,38 +42,42 @@ namespace ProyectoOOIA.Ventanas
             // 
             // lbOpiniones
             // 
-            this.lbOpiniones.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.lbOpiniones.Location = new System.Drawing.Point(12, 9);
+            this.lbOpiniones.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOpiniones.Location = new System.Drawing.Point(16, 11);
+            this.lbOpiniones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbOpiniones.Name = "lbOpiniones";
-            this.lbOpiniones.Size = new System.Drawing.Size(121, 47);
+            this.lbOpiniones.Size = new System.Drawing.Size(161, 58);
             this.lbOpiniones.TabIndex = 0;
             this.lbOpiniones.Text = "Opiniones";
             this.lbOpiniones.Click += new System.EventHandler(this.label1_Click);
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.label1.Location = new System.Drawing.Point(245, 32);
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(336, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 35);
+            this.label1.Size = new System.Drawing.Size(244, 43);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingrese un nombre";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(434, 35);
+            this.textBox1.Location = new System.Drawing.Point(579, 43);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(255, 20);
+            this.textBox1.Size = new System.Drawing.Size(339, 22);
             this.textBox1.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.button1.Location = new System.Drawing.Point(695, 33);
+            this.button1.Location = new System.Drawing.Point(927, 41);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
+            this.button1.Size = new System.Drawing.Size(124, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
@@ -85,40 +89,46 @@ namespace ProyectoOOIA.Ventanas
             this.FotoDePerfil,
             this.Nombre,
             this.Opinion});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 111);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(771, 333);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1028, 410);
             this.dataGridView1.TabIndex = 4;
             // 
             // FotoDePerfil
             // 
             this.FotoDePerfil.HeaderText = "Foto de perfil";
+            this.FotoDePerfil.MinimumWidth = 6;
             this.FotoDePerfil.Name = "FotoDePerfil";
             this.FotoDePerfil.Width = 130;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
             this.Nombre.Name = "Nombre";
             this.Nombre.Width = 230;
             // 
             // Opinion
             // 
             this.Opinion.HeaderText = "Opinion";
+            this.Opinion.MinimumWidth = 6;
             this.Opinion.Name = "Opinion";
             this.Opinion.Width = 380;
             // 
             // frmOpiniones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbOpiniones);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmOpiniones";
             this.Text = "Opiniones de tutores y psicologos";

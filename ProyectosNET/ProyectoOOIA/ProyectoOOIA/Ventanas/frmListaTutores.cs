@@ -136,8 +136,8 @@ namespace ProyectoOOIA.Ventanas
 
         private void card2_Click(object sender, EventArgs e)
         {
-            new frmHorarioCita().ShowDialog();
-            
+            //new frmHorarioCita().ShowDialog();
+            this.Close();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)

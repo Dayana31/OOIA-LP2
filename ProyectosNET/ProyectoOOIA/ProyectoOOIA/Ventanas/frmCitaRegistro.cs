@@ -40,5 +40,15 @@ namespace ProyectoOOIA.Ventanas
             ReleaseCapture();
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
+
+        private void btnBuscarOrientador_Click(object sender, EventArgs e)
+        {
+            new frmListaTutores().Show();
+        }
+
+        private void btnHorarioCita_Click(object sender, EventArgs e)
+        {
+            new frmHorarioCita().Show();
+        }
     }
 }
