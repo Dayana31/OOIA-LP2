@@ -26,5 +26,10 @@ namespace ProyectoOOIA.Ventanas
         {
 
         }
+
+        private void btnAgregarOpinion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
