@@ -1,26 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using ProyectoOOIA.Ventanas;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOOIA.Ventanas;
 
 namespace ProyectoOOIA.Componentes
 {
     public partial class Card : UserControl
     {
-        
+
         public Card()
         {
             InitializeComponent();
         }
         public void insertarImagen(Bitmap archivo)
         {
-            try {
+            try
+            {
                 this.pictureBox1.Image = archivo;
             }
             catch (Exception e)
@@ -28,11 +23,11 @@ namespace ProyectoOOIA.Componentes
                 MessageBox.Show(e.Message);
             }
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            }
+        }
 
-        public void insertarEtiquetas(String apellido,String nombre,String especialidad)
+        public void insertarEtiquetas(String apellido, String nombre, String especialidad)
         {
-            this.label1.Text = apellido+",";
+            this.label1.Text = apellido + ",";
             this.label2.Text = nombre;
             this.label3.Text = especialidad;
         }
@@ -42,7 +37,7 @@ namespace ProyectoOOIA.Componentes
 
         }
 
-        public void asignarClick(frmOpiniones op,frmListaTutores lt)
+        public void asignarClick(frmOpiniones op, frmListaTutores lt)
         {
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler((sender, args) =>
             {

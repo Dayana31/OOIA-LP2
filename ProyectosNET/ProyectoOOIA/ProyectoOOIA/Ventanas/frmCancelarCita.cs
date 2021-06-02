@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
@@ -54,7 +47,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnCancelarCita_Click(object sender, EventArgs e)
         {
-            
+
             new frmConfirmarCancelar().Show();
             this.Close();
         }

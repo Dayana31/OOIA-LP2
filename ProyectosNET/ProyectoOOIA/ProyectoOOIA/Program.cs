@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ProyectoOOIA.Ventanas;
+using System;
 using System.Windows.Forms;
-using ProyectoOOIA.Componentes;
-using ProyectoOOIA.Ventanas;
 
 namespace ProyectoOOIA
 {

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
@@ -19,7 +12,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "") MessageBox.Show("Datos invalidos u horario \nocupado","Error message",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            if (txtNombre.Text == "") MessageBox.Show("Datos invalidos u horario \nocupado", "Error message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else MessageBox.Show("El evento ha sido registrado\ncon exito");
 
 
@@ -35,6 +28,16 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmPrincipalProfesor().Show();
             this.Close();
+        }
+
+        private void frmRegistroEvento_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
