@@ -113,6 +113,12 @@
     <Compile Include="Ventanas\frmConfirmarCancelar.Designer.cs">
       <DependentUpon>frmConfirmarCancelar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmConfirmarOpinion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmConfirmarOpinion.Designer.cs">
+      <DependentUpon>frmConfirmarOpinion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmDetalleDeCitaTutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmConfirmarCancelar.resx">
       <DependentUpon>frmConfirmarCancelar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmConfirmarOpinion.resx">
+      <DependentUpon>frmConfirmarOpinion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmDetalleCita.resx">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
