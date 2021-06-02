@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
@@ -24,7 +17,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnReestablecer_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Nueva contraseña enviada al correo:\n"+txtContraseña.Text,"Contraseña Reestablecida",MessageBoxButtons.OK, MessageBoxIcon.Information );
+            MessageBox.Show("Nueva contraseña enviada al correo:\n" + txtContraseña.Text, "Contraseña Reestablecida", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

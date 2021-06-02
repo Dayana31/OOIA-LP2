@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
@@ -44,8 +37,8 @@ namespace ProyectoOOIA.Ventanas
             //{
             //    new frmInscripcionEvento(principalEventos).Show();
             //}
-           // else
-           // {
+            // else
+            // {
             //    new frmInscripcionEvento(listaEventos).Show();
             //}
             this.Close();
@@ -53,7 +46,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void atras_Click(object sender, EventArgs e)
         {
-            if(flag !=1)
+            if (flag != 1)
                 new frmPrincipalEventos().Show();
             this.Close();
         }

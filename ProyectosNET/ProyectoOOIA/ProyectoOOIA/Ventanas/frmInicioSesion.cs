@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
@@ -13,7 +6,7 @@ namespace ProyectoOOIA.Ventanas
 
     public partial class frmInicioSesion : Form
     {
-        
+
         public frmInicioSesion()
         {
             InitializeComponent();
@@ -58,27 +51,27 @@ namespace ProyectoOOIA.Ventanas
 
         private void linkContraseña_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            new frmReestablecerContraseña().ShowDialog();                 
+            new frmReestablecerContraseña().ShowDialog();
         }
 
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            
+
             if (txtContraseña.Text == "") lblIncorrecto.Visible = true;
             else
             {
-                if(toggle1.Checked==false)
-                    new frmPrincipalAlumno().Show(); 
+                if (toggle1.Checked == false)
+                    new frmPrincipalAlumno().Show();
                 else
                     new frmPrincipalProfesor().Show();
-                
+
                 this.Close();
-                
+
             }
 
 
-            
+
         }
 
         private void frmInicioSesion_Load_1(object sender, EventArgs e)
@@ -89,8 +82,8 @@ namespace ProyectoOOIA.Ventanas
         private void frmInicioSesion_KeyPress(object sender, KeyPressEventArgs e)
         {
             char c = '\n';
-            if (e.KeyChar == c) 
-                btnIngresar_Click(null,null);
+            if (e.KeyChar == c)
+                btnIngresar_Click(null, null);
         }
 
         private void panel2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)

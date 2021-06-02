@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
@@ -16,7 +9,7 @@ namespace ProyectoOOIA.Ventanas
         public frmPrincipalAlumno()
         {
             InitializeComponent();
-            
+
         }
 
         private void pnlLeft_Paint(object sender, PaintEventArgs e)
@@ -57,7 +50,7 @@ namespace ProyectoOOIA.Ventanas
             this.Close();
         }
 
-       
+
 
         private void button4_Click(object sender, EventArgs e)
         {
