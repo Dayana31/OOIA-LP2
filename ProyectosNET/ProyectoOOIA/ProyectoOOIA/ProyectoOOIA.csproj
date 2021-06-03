@@ -389,6 +389,7 @@
     <None Include="Resources\search.png" />
     <None Include="Resources\home.png" />
     <None Include="Resources\arrowWhite.png" />
+    <Content Include="Resources\lupa.png" />
     <Content Include="Resources\profesor.jpg" />
     <Content Include="Resources\psicologo.jpg" />
   </ItemGroup>
