@@ -1,8 +1,8 @@
 -- Dayana
 -- Eliminar los Procedimientos Almacenados
-DROP PROCEDURE IF EXISTS INSERTAR_MOTIVO;
-DROP PROCEDURE IF EXISTS MODIFICAR_MOTIVO;
-DROP PROCEDURE IF EXISTS LISTAR_MOTIVOS;
+DROP PROCEDURE IF EXISTS INSERTAR_CODIGO_ATENCION;
+DROP PROCEDURE IF EXISTS MODIFICAR_CODIGO_ATENCION;
+DROP PROCEDURE IF EXISTS LISTAR_CODIGOS_ATENCION;
 DROP PROCEDURE IF EXISTS INSERTAR_CURSO;
 DROP PROCEDURE IF EXISTS MODIFICAR_CURSO;
 DROP PROCEDURE IF EXISTS ELIMINAR_CURSO;
@@ -10,6 +10,9 @@ DROP PROCEDURE IF EXISTS LISTAR_CURSOS;
 DROP PROCEDURE IF EXISTS INSERTAR_CURSOLLEVADO;
 DROP PROCEDURE IF EXISTS MODIFICAR_CURSOLLEVADO;
 DROP PROCEDURE IF EXISTS LISTAR_CURSOSLLEVADOS;
+DROP PROCEDURE IF EXISTS INSERTAR_CATEGORIA;
+DROP PROCEDURE IF EXISTS MODIFICAR_CATEGORIA;
+DROP PROCEDURE IF EXISTS LISTAR_CATEGORIA;
 DROP PROCEDURE IF EXISTS INSERTAR_EVALUACION;
 DROP PROCEDURE IF EXISTS MODIFICAR_EVALUACION;
 DROP PROCEDURE IF EXISTS LISTAR_EVALUCIONES;
@@ -48,6 +51,10 @@ drop procedure if exists MODIFICAR_REQUISITO;
 drop procedure if exists ELIMINAR_REQUISITO;
 drop procedure if exists LISTAR_REQUISITOS;
 
+drop procedure if exists INSERTAR_TIPO_TRAMITE;
+drop procedure if exists MODIFICAR_TIPO_TRAMITE;
+drop procedure if exists LISTAR_TIPO_TRAMITE;
+
 drop procedure if exists INSERTAR_TRAMITE;
 drop procedure if exists MODIFICAR_TRAMITE;
 drop procedure if exists ELIMINAR_TRAMITE;
@@ -73,6 +80,10 @@ drop procedure if exists MODIFICAR_TRAMITE_REQUISITO;
 drop procedure if exists ELIMINAR_TRAMITE_REQUISITO;
 drop procedure if exists LISTAR_TRAMITE_REQUISITO;
 
+drop procedure if exists listar_especialidad;
+drop procedure if exists insertar_especialidad;
+drop procedure if exists modificar_especialidad;
+
 drop procedure if exists listar_alumno;
 drop procedure if exists insertar_alumno;
 drop procedure if exists modificar_alumno;
@@ -95,28 +106,28 @@ drop procedure if exists eliminar_invitado;
 
 
 DELIMITER $
-CREATE PROCEDURE INSERTAR_MOTIVO(
-	OUT _id_motivo INT,
-	IN _codigo_motivo VARCHAR(100),
+CREATE PROCEDURE INSERTAR_CODIGO_ATENCION(
+	OUT _id_codigo_atencion INT,
+	IN _codigo VARCHAR(100),
     IN _descripcion VARCHAR(300)
 )
 BEGIN
-	INSERT INTO motivo(codigo_motivo,descripcion) VALUES(_codigo_motivo,_descripcion);
-	SET _id_motivo = @@last_insert_id;
+	INSERT INTO codigo_atencion(codigo,descripcion) VALUES(_codigo,_descripcion);
+	SET _id_codigo_atencion = @@last_insert_id;
 END$
 
-CREATE PROCEDURE MODIFICAR_MOTIVO(
-	IN _id_motivo INT,
-	IN _codigo_motivo VARCHAR(100),
+CREATE PROCEDURE MODIFICAR_CODIGO_ATENCION(
+	IN _id_codigo_atencion INT,
+	IN _codigo VARCHAR(100),
     IN _descripcion VARCHAR(300)
 )
 BEGIN
-	UPDATE motivo SET codigo_motivo = _codigo_motivo, descripcion=_descripcion WHERE id_motivo = _id_motivo;
+	UPDATE codigo_atencion SET codigo = _codigo, descripcion=_descripcion WHERE id_codigo_atencion = _id_codigo_atencion;
 END$
 
-CREATE PROCEDURE LISTAR_MOTIVOS()
+CREATE PROCEDURE LISTAR_CODIGOS_ATENCION()
 BEGIN
-	SELECT id_motivo, codigo_motivo, descripcion FROM motivo;
+	SELECT id_codigo_atencion, codigo, descripcion FROM codigo_atencion;
 END$
 
 CREATE PROCEDURE INSERTAR_CURSO(
@@ -190,28 +201,52 @@ BEGIN
 END$
 
 
+create procedure LISTAR_CATEGORIA(
+)
+begin
+	select id_categoria,nombre_categoría
+	from categoria;
+end$
+
+create procedure INSERTAR_CATEGORIA(
+	out _id_categoria int,
+	in _nombre_categoría varchar(150)
+)
+begin
+	insert into categoria(nombre_categoría) values (_nombre_categoría);
+end$
+
+create procedure MODIFICAR_CATEGORIA(
+	in _id_categoria int,
+	in _nombre_categoría varchar(150)
+)
+begin
+	update categoria set nombre_categoría = _nombre_categoría
+    where id_categoria = _id_categoria;
+end$
+
 CREATE PROCEDURE INSERTAR_EVALUACION(
 	OUT _id_evaluacion INT,
     IN _fid_curso_llevado INT,
-    IN _categoria VARCHAR(100),
+    IN _fid_categoria int,
     IN _nombre VARCHAR(100),
     IN _nota INT
 )
 BEGIN
-	INSERT INTO evaluacion(id_curso_llevado,categoria,nombre,nota) 
-    VALUES(_fid_curso_llevado,_categoria,_nombre,_nota);
+	INSERT INTO evaluacion(id_curso_llevado,fid_categoria,nombre,nota) 
+    VALUES(_fid_curso_llevado,_fid_categoria,_nombre,_nota);
 	SET _id_evaluacion = @@last_insert_id;
 END$
 
 CREATE PROCEDURE MODIFICAR_EVALUACION(
 	IN _id_evaluacion INT,
     IN _fid_curso_llevado INT,
-    IN _categoria VARCHAR(100),
+    IN _fid_categoria int,
     IN _nombre VARCHAR(100),
     IN _nota INT
 )
 BEGIN
-	UPDATE evaluacion SET  fid_curso_llevado = _fid_curso_llevado, categoria=_categoria, nombre = _nombre,
+	UPDATE evaluacion SET  fid_curso_llevado = _fid_curso_llevado, fid_categoria=_fid_categoria, nombre = _nombre,
     nota = _nota
     WHERE id_evaluacion = _id_evaluacion;
 END$
@@ -220,7 +255,7 @@ CREATE PROCEDURE LISTAR_EVALUCIONES(
 	IN _id_curso_llevado INT
 )
 BEGIN
-	SELECT id_evaluacion, categoria, nombre, nota
+	SELECT id_evaluacion, fid_categoria, nombre, nota
     FROM evaluacion WHERE fid_curso_llevado=_id_curso_llevado;
 END$
 
@@ -296,13 +331,14 @@ CREATE PROCEDURE INSERTAR_CITAOOIA(
     IN _fecha_registro date,
     IN _fid_alumno int,
     IN _fid_horario int,
-    IN _fid_motivo int,
+    IN _fid_atencion int,
     IN _fid_asesor int,
+    IN _motivo varchar(300),
     IN _asistio bool
 )
 BEGIN
-	INSERT INTO cita_ooia(fecha_registro,fid_alumno,fid_horario,fid_motivo,fid_asesor,asistio,estado) 
-    VALUES(_fecha_registro,_fid_alumno,_fid_horario,_fid_motivo,_fid_asesor,_asistio,1);
+	INSERT INTO cita_ooia(fecha_registro,fid_alumno,fid_horario,fid_atencion,fid_asesor,motivo,asistio,estado) 
+    VALUES(_fecha_registro,_fid_alumno,_fid_horario,_fid_atencion,_fid_asesor,_motivo,_asistio,1);
 	SET _id_cita = @@last_insert_id;
 END$
 
@@ -311,13 +347,14 @@ CREATE PROCEDURE MODIFICAR_CITAOOIA(
     IN _fecha_registro date,
     IN _fid_alumno int,
     IN _fid_horario int,
-    IN _fid_motivo int,
+    IN _fid_atencion int,
     IN _fid_asesor int,
+    IN _motivo varchar(300),
     IN _asistio bool
 )
 BEGIN
 	UPDATE cita_ooia SET fecha_registro = _fecha_registro, fid_alumno=_fid_alumno, fid_horario=_fid_horario,
-    fid_motivo=_fid_motivo, fid_asesor=_fid_asesor, asistio=_asistio WHERE id_cita = _id_cita;
+    fid_atencion=_fid_atencion, fid_asesor=_fid_asesor, motivo=_motivo, asistio=_asistio WHERE id_cita = _id_cita;
 END$
 CREATE PROCEDURE ELIMINAR_CITAOOIA(
 	IN _id_cita INT
@@ -329,9 +366,9 @@ CREATE PROCEDURE LISTAR_CITASOOIA(
 	IN _id_alumno INT
 )
 BEGIN
-	SELECT c.id_cita,c.fecha_registro,h.fecha as fecha_cita,h.hora_inicio,m.descripcion as motivo,c.fid_asesor,c.asistio 
-    FROM cita_ooia c inner join horario h on h.id_horario=c.fid_horario inner join  motivo m
-    on m.id_motivo=c.fid_motivo
+	SELECT c.id_cita,c.fecha_registro,h.fecha as fecha_cita,h.hora_inicio,m.descripcion as atencion,c.fid_asesor,c.motivo,c.asistio 
+    FROM cita_ooia c inner join horario h on h.id_horario=c.fid_horario inner join  codigo_atencion m
+    on m.id_codigo_atencion=c.fid_atencion
     WHERE fid_alumno=_id_alumno;
 END$
 
@@ -585,14 +622,39 @@ begin
 select id_requisito,descripcion,craestMin,creditosMin,estadoAlumno,escalaAlumno from requisito where estado=true;
 end$
 
+
+create procedure LISTAR_TIPO_TRAMITE(
+)
+begin
+	select id_tipo_tramite,nombre_tipo_tramite
+	from tipo_tramite;
+end$
+
+create procedure INSERTAR_TIPO_TRAMITE(
+	out _id_tipo_tramite int,
+	in _nombre_tipo_tramite varchar(150)
+)
+begin
+	insert into tipo_tramite(nombre_tipo_tramite) values (_nombre_tipo_tramite);
+end$
+
+create procedure MODIFICAR_TIPO_TRAMITE(
+	in _id_tipo_tramite int,
+	in _nombre_tipo_tramite varchar(150)
+)
+begin
+	update tipo_tramite set nombre_tipo_tramite = _nombre_tipo_tramite
+    where id_tipo_tramite = _id_tipo_tramite;
+end$
+
 -- TRAMITE
 create procedure INSERTAR_TRAMITE(
 	out _id_tramite int,
-    in _tipo_tramite int,
+    in _fid_tipo_tramite int,
     in _descripcion varchar(250)
 )
 begin 
-	insert into tramite(tipo_tramite,descripcion,estado) values (_tipo_tramite,_descripcion,true);
+	insert into tramite(fid_tipo_tramite,descripcion,estado) values (_fid_tipo_tramite,_descripcion,true);
     set _id_tramite = @@last_insert_id;
 end$
 
@@ -603,16 +665,16 @@ end$
 
 create procedure MODIFICAR_TRAMITE(
 	in _id_tramite int,
-	in _tipo_tramite int,
+	in _fid_tipo_tramite int,
     in _descripcion varchar(250)
     )
 begin 
-update tramite set tipo_tramite=_tipo, descripcion=_descripcion where id_tramite=_id_tramite and estado=true;
+update tramite set fid_tipo_tramite=_fid_tipo_tramite, descripcion=_descripcion where id_tramite=_id_tramite and estado=true;
 end$
 
 create procedure LISTAR_TRAMITE()
 begin 
-select t.id_tramite,t.tipo_tramite,t.descripcion
+select t.id_tramite,t.fid_tipo_tramite,t.descripcion
 from tramite t
 where t.estado=true;
 end$
@@ -762,10 +824,34 @@ inner join tramite t
 where tr.estado=true and t.id_tramite=tr.fid_tramite;
 end$ 
 
--- Gerardo
+delimiter $
+
+create procedure listar_especialidad(
+)
+begin
+	select id_especialidad,nombre
+	from especialidad;
+end$
+
+create procedure insertar_especialidad(
+	out _id_especialidad int,
+	in _nombre varchar(150)
+)
+begin
+	insert into especialidad(nombre) values (_nombre);
+end$
+
+create procedure modificar_especialidad(
+	in _id_especialidad int,
+	in _nombre varchar(150)
+)
+begin
+	update especialidad set nombre = _nombre
+    where id_especialidad = _id_especialidad;
+end$
 
 /*Procedures de clase Alumno*/
-delimiter $
+
 create procedure insertar_alumno(
 	out _id_alumno int,
     in _nombre varchar(150),
@@ -775,7 +861,7 @@ create procedure insertar_alumno(
     in _usuario_pucp varchar(150),
     in _fecha_de_inclusion date,
 	in _codigo_pucp varchar(150),
-    in _especialidad varchar(150),
+    in _fid_especialidad int,
     in _craest decimal(4,2)
 )
 begin
@@ -787,8 +873,8 @@ begin
     insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion)
     values (_id_persona, _usuario_pucp, _fecha_de_inclusion);
     set _id_miembro_pucp = @@last_insert_id;
-    insert into alumno(id_alumno, codigo_pucp, especialidad, craest, estado)
-    values (_id_miembro_pucp, _codigo_pucp, _especialidad, _craest, 1);
+    insert into alumno(id_alumno, codigo_pucp, fid_especialidad, craest, estado)
+    values (_id_miembro_pucp, _codigo_pucp, _fid_especialidad, _craest, 1);
 end$
 
 delimiter $
@@ -802,7 +888,7 @@ create procedure modificar_alumno(
     in _usuario_pucp varchar(150),
     in _fecha_de_inclusion date,
 	in _codigo_pucp varchar(150),
-    in _especialidad varchar(150),
+    in _fid_especialidad int,
     in _craest decimal(4,2)
 )
 begin
@@ -812,7 +898,7 @@ begin
 	update miembro_pucp set usuario_pucp = _usuario_pucp, fecha_de_inclusion = _fecha_de_inclusion
     where fid_persona = _id_persona;
     
-    update alumno set codigo_pucp = _codigo_pucp, especialidad = _especialidad, craest = _craest
+    update alumno set codigo_pucp = _codigo_pucp, fid_especialidad = _fid_especialidad, craest = _craest
     where id_alumno = _id_alumno;
 end$
 
@@ -829,7 +915,7 @@ create procedure listar_alumno(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, 
 		   m.usuario_pucp, m.fecha_de_inclusion, c.nombre as correo,
-           a.codigo_pucp, a.especialidad, a.craest
+           a.codigo_pucp, a.fid_especialidad, a.craest
 	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
 				   inner join correo c on c.fid_persona = p.id_persona
                    inner join alumno a on a.id_alumno = m.id_miembro_pucp

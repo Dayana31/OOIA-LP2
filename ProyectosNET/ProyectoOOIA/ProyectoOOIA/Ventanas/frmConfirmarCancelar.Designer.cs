@@ -36,7 +36,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnSi
             // 
-            this.btnSi.Location = new System.Drawing.Point(325, 169);
+            this.btnSi.Location = new System.Drawing.Point(269, 115);
             this.btnSi.Margin = new System.Windows.Forms.Padding(4);
             this.btnSi.Name = "btnSi";
             this.btnSi.Size = new System.Drawing.Size(131, 28);
@@ -48,19 +48,19 @@ namespace ProyectoOOIA.Ventanas
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(91, 57);
+            this.lblMensaje.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Location = new System.Drawing.Point(49, 51);
             this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensaje.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(307, 62);
+            this.lblMensaje.Size = new System.Drawing.Size(399, 34);
             this.lblMensaje.TabIndex = 2;
             this.lblMensaje.Text = "¿Está seguro que desea cancelar la cita?";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(55, 169);
+            this.btnNo.Location = new System.Drawing.Point(85, 115);
             this.btnNo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(131, 28);
@@ -74,7 +74,7 @@ namespace ProyectoOOIA.Ventanas
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(512, 233);
+            this.ClientSize = new System.Drawing.Size(495, 196);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnSi);

@@ -53,6 +53,11 @@ public class Curso {
     public void setEstado(int estado) {
         this.estado = estado;
     }
+
+    @Override
+    public String toString() {
+        return "Curso{" + "id_curso=" + id_curso + ", codigoCurso=" + codigoCurso + ", nombreCurso=" + nombreCurso + ", estado=" + estado + '}';
+    }
     
     
 }

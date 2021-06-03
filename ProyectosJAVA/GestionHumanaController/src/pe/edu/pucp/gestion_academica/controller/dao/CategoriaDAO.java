@@ -11,5 +11,5 @@ public interface CategoriaDAO {
     public ArrayList<Categoria> listar();
     public int insertar(Categoria categoria);
     public int modificar(Categoria categoria);
-    public int eliminar(Categoria categoria);
+    //public int eliminar(Categoria categoria);
 }
