@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_eventos.dao.CoordinadorEventosDAO;
 import pe.edu.pucp.gestion_eventos.dao.EventoDAO;
-import pe.edu.pucp.gestion_eventos.model.CoordinadorEventosOOIA;
+import pe.edu.pucp.gestion_eventos.model.MiembroOOIA;
 import pe.edu.pucp.gestion_eventos.model.Evento;
 
 public class EventoMySQL implements EventoDAO{
