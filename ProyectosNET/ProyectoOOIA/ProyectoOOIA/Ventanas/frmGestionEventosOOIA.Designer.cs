@@ -62,7 +62,7 @@ namespace ProyectoOOIA.Ventanas
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(31, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
@@ -72,7 +72,7 @@ namespace ProyectoOOIA.Ventanas
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(247, 15);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 28);
             this.button2.TabIndex = 1;
@@ -82,7 +82,7 @@ namespace ProyectoOOIA.Ventanas
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(355, 15);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 2;
@@ -92,7 +92,7 @@ namespace ProyectoOOIA.Ventanas
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(463, 15);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 28);
             this.button4.TabIndex = 3;
@@ -153,7 +153,7 @@ namespace ProyectoOOIA.Ventanas
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(173, 65);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(487, 22);
             this.txtNombre.TabIndex = 9;
@@ -161,7 +161,7 @@ namespace ProyectoOOIA.Ventanas
             // dtpFechaEvento
             // 
             this.dtpFechaEvento.Location = new System.Drawing.Point(172, 97);
-            this.dtpFechaEvento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaEvento.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaEvento.Name = "dtpFechaEvento";
             this.dtpFechaEvento.Size = new System.Drawing.Size(265, 22);
             this.dtpFechaEvento.TabIndex = 10;
@@ -169,7 +169,7 @@ namespace ProyectoOOIA.Ventanas
             // txtHoraInicio
             // 
             this.txtHoraInicio.Location = new System.Drawing.Point(172, 130);
-            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.Size = new System.Drawing.Size(132, 22);
             this.txtHoraInicio.TabIndex = 11;
@@ -177,7 +177,7 @@ namespace ProyectoOOIA.Ventanas
             // txtHoraFin
             // 
             this.txtHoraFin.Location = new System.Drawing.Point(172, 164);
-            this.txtHoraFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraFin.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraFin.Name = "txtHoraFin";
             this.txtHoraFin.Size = new System.Drawing.Size(132, 22);
             this.txtHoraFin.TabIndex = 12;
@@ -185,7 +185,7 @@ namespace ProyectoOOIA.Ventanas
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(172, 236);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(549, 106);
             this.txtDescripcion.TabIndex = 13;
@@ -194,7 +194,7 @@ namespace ProyectoOOIA.Ventanas
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(139, 15);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 28);
             this.button5.TabIndex = 14;
@@ -207,7 +207,7 @@ namespace ProyectoOOIA.Ventanas
             this.dgvPonentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreCompletoPonente});
             this.dgvPonentes.Location = new System.Drawing.Point(16, 443);
-            this.dgvPonentes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPonentes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPonentes.Name = "dgvPonentes";
             this.dgvPonentes.RowHeadersWidth = 51;
             this.dgvPonentes.Size = new System.Drawing.Size(840, 96);
@@ -244,7 +244,7 @@ namespace ProyectoOOIA.Ventanas
             // txtNombrePonente
             // 
             this.txtNombrePonente.Location = new System.Drawing.Point(173, 375);
-            this.txtNombrePonente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombrePonente.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombrePonente.Name = "txtNombrePonente";
             this.txtNombrePonente.Size = new System.Drawing.Size(643, 22);
             this.txtNombrePonente.TabIndex = 18;
@@ -252,7 +252,7 @@ namespace ProyectoOOIA.Ventanas
             // button6
             // 
             this.button6.Location = new System.Drawing.Point(461, 407);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(193, 28);
             this.button6.TabIndex = 19;
@@ -262,7 +262,7 @@ namespace ProyectoOOIA.Ventanas
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(663, 407);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(193, 28);
             this.button7.TabIndex = 20;
@@ -283,7 +283,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(172, 196);
-            this.cboCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(160, 24);
             this.cboCategoria.TabIndex = 22;
@@ -291,7 +291,7 @@ namespace ProyectoOOIA.Ventanas
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(789, 63);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(216, 28);
             this.button8.TabIndex = 23;
@@ -302,7 +302,7 @@ namespace ProyectoOOIA.Ventanas
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(731, 98);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(320, 245);
             this.pictureBox1.TabIndex = 24;
@@ -338,8 +338,9 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "gestionEventosOOIA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGestionEventosOOIA";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

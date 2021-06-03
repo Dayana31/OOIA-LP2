@@ -58,8 +58,9 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(936, 93);
+            this.panel1.Size = new System.Drawing.Size(1248, 114);
             this.panel1.TabIndex = 0;
             // 
             // btnAtras
@@ -74,9 +75,10 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(29, 33);
+            this.btnAtras.Location = new System.Drawing.Point(39, 41);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(31, 34);
+            this.btnAtras.Size = new System.Drawing.Size(41, 42);
             this.btnAtras.TabIndex = 13;
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -87,9 +89,10 @@ namespace ProyectoOOIA.Ventanas
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Leelawadee", 17F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(84, 33);
+            this.label1.Location = new System.Drawing.Point(112, 41);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 27);
+            this.label1.Size = new System.Drawing.Size(408, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Lista de tutores y psicólogos";
             // 
@@ -98,11 +101,12 @@ namespace ProyectoOOIA.Ventanas
             this.tabControl1.Controls.Add(this.tabTutor);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tabControl1.Location = new System.Drawing.Point(0, 93);
+            this.tabControl1.Location = new System.Drawing.Point(0, 114);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.Padding = new System.Drawing.Point(6, 10);
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(936, 437);
+            this.tabControl1.Size = new System.Drawing.Size(1248, 538);
             this.tabControl1.TabIndex = 1;
             this.tabControl1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabControl1_DrawItem);
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
@@ -116,10 +120,11 @@ namespace ProyectoOOIA.Ventanas
             this.tabTutor.Controls.Add(this.card4);
             this.tabTutor.Controls.Add(this.card3);
             this.tabTutor.Controls.Add(this.card2);
-            this.tabTutor.Location = new System.Drawing.Point(4, 36);
+            this.tabTutor.Location = new System.Drawing.Point(4, 39);
+            this.tabTutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabTutor.Name = "tabTutor";
-            this.tabTutor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTutor.Size = new System.Drawing.Size(928, 397);
+            this.tabTutor.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabTutor.Size = new System.Drawing.Size(1240, 495);
             this.tabTutor.TabIndex = 0;
             this.tabTutor.Text = "Tutores";
             this.tabTutor.UseVisualStyleBackColor = true;
@@ -129,9 +134,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.card6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.card6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card6.Location = new System.Drawing.Point(69, 400);
+            this.card6.Location = new System.Drawing.Point(92, 492);
+            this.card6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.card6.Name = "card6";
-            this.card6.Size = new System.Drawing.Size(327, 175);
+            this.card6.Size = new System.Drawing.Size(435, 215);
             this.card6.TabIndex = 5;
             this.card6.Load += new System.EventHandler(this.card6_Load);
             // 
@@ -139,9 +145,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.card7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.card7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card7.Location = new System.Drawing.Point(484, 400);
+            this.card7.Location = new System.Drawing.Point(645, 492);
+            this.card7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.card7.Name = "card7";
-            this.card7.Size = new System.Drawing.Size(327, 175);
+            this.card7.Size = new System.Drawing.Size(435, 215);
             this.card7.TabIndex = 6;
             this.card7.Load += new System.EventHandler(this.card7_Load);
             // 
@@ -149,9 +156,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.card5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.card5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card5.Location = new System.Drawing.Point(484, 219);
+            this.card5.Location = new System.Drawing.Point(645, 270);
+            this.card5.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.card5.Name = "card5";
-            this.card5.Size = new System.Drawing.Size(327, 175);
+            this.card5.Size = new System.Drawing.Size(435, 215);
             this.card5.TabIndex = 4;
             this.card5.Load += new System.EventHandler(this.card5_Load);
             // 
@@ -159,9 +167,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.card4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.card4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card4.Location = new System.Drawing.Point(69, 219);
+            this.card4.Location = new System.Drawing.Point(92, 270);
+            this.card4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.card4.Name = "card4";
-            this.card4.Size = new System.Drawing.Size(327, 175);
+            this.card4.Size = new System.Drawing.Size(435, 215);
             this.card4.TabIndex = 3;
             this.card4.Load += new System.EventHandler(this.card4_Load);
             // 
@@ -169,9 +178,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.card3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.card3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card3.Location = new System.Drawing.Point(484, 38);
+            this.card3.Location = new System.Drawing.Point(645, 47);
+            this.card3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.card3.Name = "card3";
-            this.card3.Size = new System.Drawing.Size(327, 175);
+            this.card3.Size = new System.Drawing.Size(435, 215);
             this.card3.TabIndex = 2;
             this.card3.Load += new System.EventHandler(this.card3_Load);
             this.card3.Click += new System.EventHandler(this.card2_Click);
@@ -180,9 +190,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.card2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.card2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card2.Location = new System.Drawing.Point(69, 38);
+            this.card2.Location = new System.Drawing.Point(92, 47);
+            this.card2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.card2.Name = "card2";
-            this.card2.Size = new System.Drawing.Size(327, 175);
+            this.card2.Size = new System.Drawing.Size(435, 215);
             this.card2.TabIndex = 0;
             this.card2.Load += new System.EventHandler(this.card2_Load);
             this.card2.Click += new System.EventHandler(this.card2_Click);
@@ -191,10 +202,11 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.tabPage2.Controls.Add(this.card8);
             this.tabPage2.Controls.Add(this.card1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 36);
+            this.tabPage2.Location = new System.Drawing.Point(4, 39);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(928, 397);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1240, 495);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Psicólogos";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -203,9 +215,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.card8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.card8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card8.Location = new System.Drawing.Point(485, 33);
+            this.card8.Location = new System.Drawing.Point(647, 41);
+            this.card8.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.card8.Name = "card8";
-            this.card8.Size = new System.Drawing.Size(327, 175);
+            this.card8.Size = new System.Drawing.Size(435, 215);
             this.card8.TabIndex = 1;
             this.card8.Load += new System.EventHandler(this.card8_Load);
             // 
@@ -213,23 +226,26 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.card1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.card1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card1.Location = new System.Drawing.Point(69, 33);
+            this.card1.Location = new System.Drawing.Point(92, 41);
+            this.card1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.card1.Name = "card1";
-            this.card1.Size = new System.Drawing.Size(327, 175);
+            this.card1.Size = new System.Drawing.Size(435, 215);
             this.card1.TabIndex = 0;
             this.card1.Load += new System.EventHandler(this.card1_Load);
             // 
             // frmListaTutores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(936, 530);
+            this.ClientSize = new System.Drawing.Size(1248, 652);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmListaTutores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tutores";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

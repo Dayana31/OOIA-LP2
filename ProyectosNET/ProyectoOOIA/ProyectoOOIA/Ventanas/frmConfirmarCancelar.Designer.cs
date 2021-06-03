@@ -37,7 +37,7 @@ namespace ProyectoOOIA.Ventanas
             // btnSi
             // 
             this.btnSi.Location = new System.Drawing.Point(325, 169);
-            this.btnSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSi.Margin = new System.Windows.Forms.Padding(4);
             this.btnSi.Name = "btnSi";
             this.btnSi.Size = new System.Drawing.Size(131, 28);
             this.btnSi.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace ProyectoOOIA.Ventanas
             // btnNo
             // 
             this.btnNo.Location = new System.Drawing.Point(55, 169);
-            this.btnNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(131, 28);
             this.btnNo.TabIndex = 3;
@@ -78,8 +78,9 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnSi);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConfirmarCancelar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cancelar";
             this.ResumeLayout(false);
             this.PerformLayout();

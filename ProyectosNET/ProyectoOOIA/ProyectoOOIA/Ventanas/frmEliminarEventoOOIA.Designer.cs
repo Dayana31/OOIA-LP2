@@ -36,9 +36,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(94, 134);
+            this.btnNo.Location = new System.Drawing.Point(68, 123);
+            this.btnNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(98, 23);
+            this.btnNo.Size = new System.Drawing.Size(131, 28);
             this.btnNo.TabIndex = 12;
             this.btnNo.Text = "No";
             this.btnNo.UseVisualStyleBackColor = true;
@@ -48,19 +49,21 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(60, 61);
-            this.lblMensaje.MaximumSize = new System.Drawing.Size(300, 0);
+            this.lblMensaje.Location = new System.Drawing.Point(62, 44);
+            this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMensaje.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(297, 25);
+            this.lblMensaje.Size = new System.Drawing.Size(372, 31);
             this.lblMensaje.TabIndex = 11;
             this.lblMensaje.Text = "¿Desea eliminar este evento?";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSi
             // 
-            this.btnSi.Location = new System.Drawing.Point(227, 134);
+            this.btnSi.Location = new System.Drawing.Point(303, 123);
+            this.btnSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSi.Name = "btnSi";
-            this.btnSi.Size = new System.Drawing.Size(98, 23);
+            this.btnSi.Size = new System.Drawing.Size(131, 28);
             this.btnSi.TabIndex = 10;
             this.btnSi.Text = "Si";
             this.btnSi.UseVisualStyleBackColor = true;
@@ -68,13 +71,15 @@ namespace ProyectoOOIA.Ventanas
             // 
             // frmEliminarEventoOOIA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 267);
+            this.ClientSize = new System.Drawing.Size(490, 221);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnSi);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmEliminarEventoOOIA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEliminarEventoOOIA";
             this.ResumeLayout(false);
             this.PerformLayout();
