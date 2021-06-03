@@ -67,7 +67,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void botonEventos_Click(object sender, EventArgs e)
         {
-            new frmPrincipalEventos().Show();
+            new frmRegistroEvento().Show();
             this.Close();
         }
     }

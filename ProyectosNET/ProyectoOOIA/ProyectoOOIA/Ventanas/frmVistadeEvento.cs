@@ -41,8 +41,6 @@ namespace ProyectoOOIA.Ventanas
 
         private void atras_Click(object sender, EventArgs e)
         {
-            if (flag != 1)
-                new frmPrincipalEventos().Show();
             this.Close();
         }
     }

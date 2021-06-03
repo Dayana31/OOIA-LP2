@@ -36,5 +36,16 @@ namespace ProyectoOOIA.Ventanas
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new frmBuscarEventoAlumno().Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            new frmNuevoPrincipal().Show();
+            this.Close();
+        }
     }
 }
