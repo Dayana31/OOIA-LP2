@@ -64,6 +64,11 @@ public class Evaluacion {
     public void setNota(int nota) {
         this.nota = nota;
     }
+
+    @Override
+    public String toString() {
+        return "Evaluacion{" + "id_evaluacion=" + id_evaluacion + ", cursoLlevado=" + cursoLlevado + ", categoria=" + categoria + ", nombre=" + nombre + ", nota=" + nota + '}';
+    }
     
     
 }

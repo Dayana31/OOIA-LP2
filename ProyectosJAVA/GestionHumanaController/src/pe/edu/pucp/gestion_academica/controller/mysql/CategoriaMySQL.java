@@ -25,12 +25,12 @@ public class CategoriaMySQL implements CategoriaDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call listar_categoria()}");
+            cs = con.prepareCall("{call LISTAR_CATEGORIA()}");
             rs = cs.executeQuery();
             while(rs.next()){
                 Categoria categoria = new Categoria();
                 categoria.setId_categoria(rs.getInt("id_categoria"));
-                categoria.setNombre_categoria(rs.getString("nombre"));
+                categoria.setNombre_categoria(rs.getString("nombre_categoría"));
                 
                 categorias.add(categoria);
             }
@@ -50,10 +50,10 @@ public class CategoriaMySQL implements CategoriaDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_categoria(?,?)}");
+            cs = con.prepareCall("{call INSERTAR_CATEGORIA(?,?)}");
             cs.registerOutParameter("_id_categoria", java.sql.Types.INTEGER);
             /*Persona*/
-            cs.setString("_nombre", categoria.getNombre_categoria());
+            cs.setString("_nombre_categoría", categoria.getNombre_categoria());
             cs.executeUpdate();
             categoria.setId_categoria(cs.getInt("_id_categoria"));
             resultado = 1;
@@ -72,10 +72,10 @@ public class CategoriaMySQL implements CategoriaDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_categoria(?,?)}");
-            cs.registerOutParameter("_id_categoria", java.sql.Types.INTEGER);
+            cs = con.prepareCall("{call MODIFICAR_CATEGORIA(?,?)}");
+            cs.setInt("_id_categoria",categoria.getId_categoria());
             /*Persona*/
-            cs.setString("_nombre", categoria.getNombre_categoria());
+            cs.setString("_nombre_categoría", categoria.getNombre_categoria());
             cs.executeUpdate();
             resultado = 1;
             cs.close();
@@ -87,23 +87,23 @@ public class CategoriaMySQL implements CategoriaDAO {
         return resultado;
     }
 
-    @Override
-    public int eliminar(Categoria categoria) {
-        int resultado = 0;
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call eliminar_categoria(?)}");
-            cs.setInt("_id_categoria", categoria.getId_categoria());
-            cs.executeUpdate();
-            resultado = 1;
-            cs.close();
-        }catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
-        }
-        return resultado;
-    }
+//    @Override
+//    public int eliminar(Categoria categoria) {
+//        int resultado = 0;
+//        try{
+//            Class.forName("com.mysql.cj.jdbc.Driver");
+//            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+//            cs = con.prepareCall("{call eliminar_categoria(?)}");
+//            cs.setInt("_id_categoria", categoria.getId_categoria());
+//            cs.executeUpdate();
+//            resultado = 1;
+//            cs.close();
+//        }catch(Exception ex){
+//            System.out.println(ex.getMessage());
+//        }finally{
+//            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+//        }
+//        return resultado;
+//    }
     
 }

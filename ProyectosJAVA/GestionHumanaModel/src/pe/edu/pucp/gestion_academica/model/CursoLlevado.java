@@ -94,6 +94,11 @@ public class CursoLlevado {
     public void setFormulaDeCalificacion(String formulaDeCalificacion) {
         this.formulaDeCalificacion = formulaDeCalificacion;
     }
+
+    @Override
+    public String toString() {
+        return "CursoLlevado{" + "id_curso_llevado=" + id_curso_llevado + ", alumno=" + alumno + ", curso=" + curso.getNombreCurso() + ", ciclo=" + ciclo + ", vez=" + vez + ", notaFinal=" + notaFinal + ", retirado=" + retirado + ", formulaDeCalificacion=" + formulaDeCalificacion + '}';
+    }
     
 
 
