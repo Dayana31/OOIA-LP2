@@ -95,7 +95,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void panel2_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            char c = '\n';
+    
             if (e.KeyCode == Keys.Enter)
                 btnIngresar_Click(null, null);
         }

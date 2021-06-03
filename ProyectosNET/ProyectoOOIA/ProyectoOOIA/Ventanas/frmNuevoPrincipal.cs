@@ -54,7 +54,7 @@ namespace ProyectoOOIA.Ventanas
         private void timer1_Tick(object sender, EventArgs e)
         {
             indice++;
-            if (indice > listaImagenes.Count)
+            if (indice >= listaImagenes.Count)
                 indice = 0;
             imagenes.Image = listaImagenes[indice];
         }
@@ -67,7 +67,13 @@ namespace ProyectoOOIA.Ventanas
 
         private void botonEventos_Click(object sender, EventArgs e)
         {
-            new frmPrincipalEventos().Show();
+            new frmRegistroEvento().Show();
+            this.Close();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            new frmInicioSesion().Show();
             this.Close();
         }
     }

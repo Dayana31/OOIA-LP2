@@ -288,6 +288,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
             this.Name = "frmInicioSesion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de Sesion";
             this.Load += new System.EventHandler(this.frmInicioSesion_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.frmInicioSesion_KeyPress);
