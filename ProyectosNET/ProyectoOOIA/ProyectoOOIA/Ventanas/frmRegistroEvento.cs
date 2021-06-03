@@ -74,5 +74,11 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmVistadeEvento().Show();
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            new frmNuevoPrincipal().Show();
+            this.Close();
+        }
     }
 }

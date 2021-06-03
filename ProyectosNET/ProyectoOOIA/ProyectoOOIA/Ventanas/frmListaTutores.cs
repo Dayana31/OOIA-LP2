@@ -136,7 +136,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            new frmPrincipalAlumno().Show();
+            //new frmCitaRegistro().Show();
             this.Close();
         }
     }

@@ -46,6 +46,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnGuardar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +55,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnAtras);
             this.panel1.Controls.Add(this.btnHorarioCita);
             this.panel1.Controls.Add(this.btnBuscarOrientador);
             this.panel1.Controls.Add(this.txtHoraFin);
@@ -233,6 +235,27 @@ namespace ProyectoOOIA.Ventanas
             this.label6.TabIndex = 9;
             this.label6.Text = "Ingrese motivo de consulta:";
             // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrow;
+            this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtras.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtras.Location = new System.Drawing.Point(28, 23);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(48, 39);
+            this.btnAtras.TabIndex = 15;
+            this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // frmCitaRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -271,5 +294,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnBuscarOrientador;
         private System.Windows.Forms.Button btnHorarioCita;
+        private System.Windows.Forms.Button btnAtras;
     }
 }
