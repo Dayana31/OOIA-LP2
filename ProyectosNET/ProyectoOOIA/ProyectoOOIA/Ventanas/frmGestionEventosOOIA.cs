@@ -31,5 +31,10 @@ namespace ProyectoOOIA.Ventanas
         {
 
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
