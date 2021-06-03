@@ -63,8 +63,8 @@ namespace ProyectoOOIA.Ventanas
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(380, 576);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(306, 577);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.button2.Size = new System.Drawing.Size(216, 178);
@@ -76,7 +76,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtHorarios.AutoSize = true;
             this.txtHorarios.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHorarios.Location = new System.Drawing.Point(448, 539);
+            this.txtHorarios.Location = new System.Drawing.Point(381, 539);
             this.txtHorarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtHorarios.Name = "txtHorarios";
             this.txtHorarios.Size = new System.Drawing.Size(74, 34);
@@ -107,7 +107,7 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Controls.Add(this.btnAtras);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1351, 102);
             this.panel1.TabIndex = 28;
@@ -124,7 +124,7 @@ namespace ProyectoOOIA.Ventanas
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(1288, 27);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(47, 42);
             this.button1.TabIndex = 25;
@@ -135,7 +135,7 @@ namespace ProyectoOOIA.Ventanas
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(4);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(4, 102);
             this.splitter1.TabIndex = 24;
@@ -146,7 +146,7 @@ namespace ProyectoOOIA.Ventanas
             this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
             this.ovalPictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
             this.ovalPictureBox1.Location = new System.Drawing.Point(51, 12);
-            this.ovalPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ovalPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.ovalPictureBox1.Name = "ovalPictureBox1";
             this.ovalPictureBox1.Size = new System.Drawing.Size(95, 87);
             this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtras.Location = new System.Drawing.Point(1427, 15);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(47, 42);
             this.btnAtras.TabIndex = 23;
@@ -180,8 +180,8 @@ namespace ProyectoOOIA.Ventanas
             this.panelEventos.Controls.Add(this.tarjetaEvento2);
             this.panelEventos.Controls.Add(this.tarjetaEvento);
             this.panelEventos.Controls.Add(this.panel5);
-            this.panelEventos.Location = new System.Drawing.Point(953, 149);
-            this.panelEventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelEventos.Location = new System.Drawing.Point(913, 149);
+            this.panelEventos.Margin = new System.Windows.Forms.Padding(4);
             this.panelEventos.Name = "panelEventos";
             this.panelEventos.Size = new System.Drawing.Size(381, 620);
             this.panelEventos.TabIndex = 29;
@@ -189,7 +189,7 @@ namespace ProyectoOOIA.Ventanas
             // tarjetaEvento3
             // 
             this.tarjetaEvento3.Location = new System.Drawing.Point(7, 342);
-            this.tarjetaEvento3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tarjetaEvento3.Margin = new System.Windows.Forms.Padding(5);
             this.tarjetaEvento3.Name = "tarjetaEvento3";
             this.tarjetaEvento3.Size = new System.Drawing.Size(373, 159);
             this.tarjetaEvento3.TabIndex = 3;
@@ -197,7 +197,7 @@ namespace ProyectoOOIA.Ventanas
             // tarjetaEvento2
             // 
             this.tarjetaEvento2.Location = new System.Drawing.Point(7, 218);
-            this.tarjetaEvento2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tarjetaEvento2.Margin = new System.Windows.Forms.Padding(5);
             this.tarjetaEvento2.Name = "tarjetaEvento2";
             this.tarjetaEvento2.Size = new System.Drawing.Size(373, 159);
             this.tarjetaEvento2.TabIndex = 2;
@@ -205,7 +205,7 @@ namespace ProyectoOOIA.Ventanas
             // tarjetaEvento
             // 
             this.tarjetaEvento.Location = new System.Drawing.Point(7, 94);
-            this.tarjetaEvento.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tarjetaEvento.Margin = new System.Windows.Forms.Padding(5);
             this.tarjetaEvento.Name = "tarjetaEvento";
             this.tarjetaEvento.Size = new System.Drawing.Size(373, 159);
             this.tarjetaEvento.TabIndex = 1;
@@ -214,7 +214,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.panel5.Controls.Add(this.label1);
             this.panel5.Location = new System.Drawing.Point(27, 26);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(239, 60);
             this.panel5.TabIndex = 0;
@@ -232,8 +232,8 @@ namespace ProyectoOOIA.Ventanas
             // 
             // imagenes
             // 
-            this.imagenes.Location = new System.Drawing.Point(160, 149);
-            this.imagenes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imagenes.Location = new System.Drawing.Point(92, 149);
+            this.imagenes.Margin = new System.Windows.Forms.Padding(4);
             this.imagenes.Name = "imagenes";
             this.imagenes.Size = new System.Drawing.Size(665, 348);
             this.imagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -251,7 +251,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtHorarios);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmPrincipalProfesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
