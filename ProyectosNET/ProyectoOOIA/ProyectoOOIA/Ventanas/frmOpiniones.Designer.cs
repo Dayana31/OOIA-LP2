@@ -42,43 +42,39 @@ namespace ProyectoOOIA.Ventanas
             // 
             // lbOpiniones
             // 
-            this.lbOpiniones.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOpiniones.Location = new System.Drawing.Point(16, 11);
-            this.lbOpiniones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbOpiniones.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOpiniones.Location = new System.Drawing.Point(12, 9);
             this.lbOpiniones.Name = "lbOpiniones";
-            this.lbOpiniones.Size = new System.Drawing.Size(161, 58);
+            this.lbOpiniones.Size = new System.Drawing.Size(121, 47);
             this.lbOpiniones.TabIndex = 0;
             this.lbOpiniones.Text = "Opiniones";
             this.lbOpiniones.Click += new System.EventHandler(this.label1_Click);
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 56);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 43);
+            this.label1.Size = new System.Drawing.Size(197, 35);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingrese una opinión:";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(231, 61);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(173, 50);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(652, 66);
+            this.textBox1.Size = new System.Drawing.Size(490, 54);
             this.textBox1.TabIndex = 2;
             // 
             // btnAgregarOpinion
             // 
             this.btnAgregarOpinion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAgregarOpinion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.btnAgregarOpinion.Location = new System.Drawing.Point(920, 60);
-            this.btnAgregarOpinion.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgregarOpinion.Location = new System.Drawing.Point(690, 49);
             this.btnAgregarOpinion.Name = "btnAgregarOpinion";
-            this.btnAgregarOpinion.Size = new System.Drawing.Size(124, 30);
+            this.btnAgregarOpinion.Size = new System.Drawing.Size(93, 24);
             this.btnAgregarOpinion.TabIndex = 3;
             this.btnAgregarOpinion.Text = "Agregar";
             this.btnAgregarOpinion.UseVisualStyleBackColor = true;
@@ -91,11 +87,10 @@ namespace ProyectoOOIA.Ventanas
             this.FotoDePerfil,
             this.Nombre,
             this.Opinion});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 149);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 121);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1028, 372);
+            this.dataGridView1.Size = new System.Drawing.Size(771, 302);
             this.dataGridView1.TabIndex = 4;
             // 
             // FotoDePerfil
@@ -121,16 +116,15 @@ namespace ProyectoOOIA.Ventanas
             // 
             // frmOpiniones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnAgregarOpinion);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbOpiniones);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmOpiniones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

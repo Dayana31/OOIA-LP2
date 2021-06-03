@@ -238,6 +238,12 @@
     <Compile Include="Ventanas\frmPrincipalAlumno.designer.cs">
       <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmPrincipalMiembroOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmPrincipalMiembroOOIA.Designer.cs">
+      <DependentUpon>frmPrincipalMiembroOOIA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmPrincipalProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -364,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmPrincipalAlumno.resx">
       <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmPrincipalMiembroOOIA.resx">
+      <DependentUpon>frmPrincipalMiembroOOIA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmPrincipalProfesor.resx">
       <DependentUpon>frmPrincipalProfesor.cs</DependentUpon>
