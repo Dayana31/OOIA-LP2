@@ -70,6 +70,12 @@ namespace ProyectoOOIA.Ventanas
             new frmRegistroEvento().Show();
             this.Close();
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            new frmInicioSesion().Show();
+            this.Close();
+        }
     }
     }
 
