@@ -8,7 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_eventos.dao.CoordinadorEventosDAO;
-import pe.edu.pucp.gestion_eventos.model.CoordinadorEventosOOIA;
+import pe.edu.pucp.gestion_eventos.model.MiembroOOIA;
 
 public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
 
@@ -18,9 +18,9 @@ public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
     CallableStatement cs;
     
     @Override
-    public ArrayList<CoordinadorEventosOOIA> listar() {
+    public ArrayList<MiembroOOIA> listar() {
         
-        ArrayList<CoordinadorEventosOOIA> coordinadores = new ArrayList<>();//lista para poner los coordinadores
+        ArrayList<MiembroOOIA> coordinadores = new ArrayList<>();//lista para poner los coordinadores
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
@@ -30,7 +30,7 @@ public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
             rs = cs.executeQuery();
             
             while(rs.next()){
-                CoordinadorEventosOOIA coordinador = new CoordinadorEventosOOIA();
+                MiembroOOIA coordinador = new MiembroOOIA();
                 
                 coordinador.setId_persona(rs.getInt("id_persona"));
                 coordinador.setNombre(rs.getString("nombre"));
@@ -55,7 +55,7 @@ public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
     }
 
     @Override
-    public int insertar(CoordinadorEventosOOIA coordinador) {
+    public int insertar(MiembroOOIA coordinador) {
         int resultado = 0;
         
         try{
@@ -93,7 +93,7 @@ public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
     }
 
     @Override
-    public int modificar(CoordinadorEventosOOIA coordinador) {
+    public int modificar(MiembroOOIA coordinador) {
         int resultado = 0;
         
         try{
