@@ -55,6 +55,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblMensaje.TabIndex = 8;
             this.lblMensaje.Text = "¿Desea eliminar su inscripcion a este evento?";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMensaje.Click += new System.EventHandler(this.lblMensaje_Click);
             // 
             // btnSi
             // 

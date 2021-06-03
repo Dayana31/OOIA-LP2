@@ -83,6 +83,12 @@
     <Compile Include="Ventanas\frmAgregarEventoAlumno.Designer.cs">
       <DependentUpon>frmAgregarEventoAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmAgregarEventoOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmAgregarEventoOOIA.Designer.cs">
+      <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmBuscarEventoAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,18 @@
     </Compile>
     <Compile Include="Ventanas\frmDetalleDeCitaTutor.Designer.cs">
       <DependentUpon>frmDetalleDeCitaTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmEliminarEventoOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmEliminarEventoOOIA.Designer.cs">
+      <DependentUpon>frmEliminarEventoOOIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmGestionEventosOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmGestionEventosOOIA.Designer.cs">
+      <DependentUpon>frmGestionEventosOOIA.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmHistoriaAcademica.cs">
       <SubType>Form</SubType>
@@ -259,6 +277,9 @@
     <EmbeddedResource Include="Ventanas\frmAgregarEventoAlumno.resx">
       <DependentUpon>frmAgregarEventoAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmAgregarEventoOOIA.resx">
+      <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmBuscarEventoAlumno.resx">
       <DependentUpon>frmBuscarEventoAlumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +312,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmDetalleDeCitaTutor.resx">
       <DependentUpon>frmDetalleDeCitaTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmEliminarEventoOOIA.resx">
+      <DependentUpon>frmEliminarEventoOOIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmGestionEventosOOIA.resx">
+      <DependentUpon>frmGestionEventosOOIA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHistoriaAcademica.resx">
       <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
