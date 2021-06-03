@@ -20,7 +20,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new frmInformacionEvento().Show();
+          
             this.Close();
         }
 

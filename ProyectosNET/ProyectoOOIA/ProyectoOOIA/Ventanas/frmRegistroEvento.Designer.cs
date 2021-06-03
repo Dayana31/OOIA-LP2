@@ -31,30 +31,30 @@ namespace ProyectoOOIA.Ventanas
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.NombreEvento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Enlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,8 +62,8 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +91,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.textBox2);
             this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtNombre);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -100,19 +100,6 @@ namespace ProyectoOOIA.Ventanas
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Eventos inscritos";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(913, 477);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Historial de eventos";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -174,6 +161,41 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridView1.Size = new System.Drawing.Size(869, 250);
             this.dataGridView1.TabIndex = 36;
             // 
+            // NombreEvento
+            // 
+            this.NombreEvento.HeaderText = "Nombre";
+            this.NombreEvento.Name = "NombreEvento";
+            this.NombreEvento.Width = 175;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // HoraInicio
+            // 
+            this.HoraInicio.HeaderText = "Hora Inicio";
+            this.HoraInicio.Name = "HoraInicio";
+            this.HoraInicio.Width = 90;
+            // 
+            // HoraFin
+            // 
+            this.HoraFin.HeaderText = "Hora Fin";
+            this.HoraFin.Name = "HoraFin";
+            this.HoraFin.Width = 90;
+            // 
+            // Categoria
+            // 
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.Width = 120;
+            // 
+            // Enlace
+            // 
+            this.Enlace.HeaderText = "Enlace";
+            this.Enlace.Name = "Enlace";
+            this.Enlace.Width = 260;
+            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(288, 111);
@@ -222,12 +244,12 @@ namespace ProyectoOOIA.Ventanas
             this.label2.TabIndex = 30;
             this.label2.Text = "Categoria:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 29;
+            this.txtNombre.Location = new System.Drawing.Point(120, 49);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(162, 20);
+            this.txtNombre.TabIndex = 29;
             // 
             // label1
             // 
@@ -238,40 +260,36 @@ namespace ProyectoOOIA.Ventanas
             this.label1.TabIndex = 28;
             this.label1.Text = "Nombre del evento:";
             // 
-            // NombreEvento
+            // tabPage2
             // 
-            this.NombreEvento.HeaderText = "Nombre";
-            this.NombreEvento.Name = "NombreEvento";
-            this.NombreEvento.Width = 175;
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(913, 477);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Historial de eventos";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // Fecha
+            // button5
             // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
+            this.button5.Location = new System.Drawing.Point(838, 9);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 40;
+            this.button5.Text = "Ver detalle";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // HoraInicio
+            // label6
             // 
-            this.HoraInicio.HeaderText = "Hora Inicio";
-            this.HoraInicio.Name = "HoraInicio";
-            this.HoraInicio.Width = 90;
-            // 
-            // HoraFin
-            // 
-            this.HoraFin.HeaderText = "Hora Fin";
-            this.HoraFin.Name = "HoraFin";
-            this.HoraFin.Width = 90;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.Width = 120;
-            // 
-            // Enlace
-            // 
-            this.Enlace.HeaderText = "Enlace";
-            this.Enlace.Name = "Enlace";
-            this.Enlace.Width = 260;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 13);
+            this.label6.TabIndex = 38;
+            this.label6.Text = "Historial de eventos";
             // 
             // dataGridView2
             // 
@@ -286,24 +304,6 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(884, 397);
             this.dataGridView2.TabIndex = 37;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 13);
-            this.label6.TabIndex = 38;
-            this.label6.Text = "Historial de eventos";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(838, 9);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 40;
-            this.button5.Text = "Ver detalle";
-            this.button5.UseVisualStyleBackColor = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -345,9 +345,9 @@ namespace ProyectoOOIA.Ventanas
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -375,7 +375,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button5;

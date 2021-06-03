@@ -32,6 +32,7 @@ namespace ProyectoOOIA.Ventanas
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNuevoPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ovalPictureBox1 = new OvalPictureBox();
             this.txtUsername = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
             this.botonEventos = new System.Windows.Forms.Button();
@@ -41,22 +42,21 @@ namespace ProyectoOOIA.Ventanas
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelEventos = new System.Windows.Forms.Panel();
+            this.tarjetaEvento3 = new ProyectoOOIA.Componentes.CardEvento();
+            this.tarjetaEvento2 = new ProyectoOOIA.Componentes.CardEvento();
+            this.tarjetaEvento = new ProyectoOOIA.Componentes.CardEvento();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.imagenes = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.tarjetaEvento3 = new ProyectoOOIA.Componentes.CardEvento();
-            this.tarjetaEvento2 = new ProyectoOOIA.Componentes.CardEvento();
-            this.tarjetaEvento = new ProyectoOOIA.Componentes.CardEvento();
-            this.ovalPictureBox1 = new OvalPictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelEventos.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -70,6 +70,17 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1013, 83);
             this.panel1.TabIndex = 18;
+            // 
+            // ovalPictureBox1
+            // 
+            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
+            this.ovalPictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
+            this.ovalPictureBox1.Location = new System.Drawing.Point(34, 10);
+            this.ovalPictureBox1.Name = "ovalPictureBox1";
+            this.ovalPictureBox1.Size = new System.Drawing.Size(75, 71);
+            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ovalPictureBox1.TabIndex = 11;
+            this.ovalPictureBox1.TabStop = false;
             // 
             // txtUsername
             // 
@@ -100,6 +111,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.TabIndex = 12;
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // botonEventos
             // 
@@ -193,6 +205,30 @@ namespace ProyectoOOIA.Ventanas
             this.panelEventos.Size = new System.Drawing.Size(286, 482);
             this.panelEventos.TabIndex = 25;
             // 
+            // tarjetaEvento3
+            // 
+            this.tarjetaEvento3.Location = new System.Drawing.Point(5, 278);
+            this.tarjetaEvento3.Name = "tarjetaEvento3";
+            this.tarjetaEvento3.Size = new System.Drawing.Size(280, 129);
+            this.tarjetaEvento3.TabIndex = 3;
+            this.tarjetaEvento3.Load += new System.EventHandler(this.tarjetaEvento3_Load);
+            // 
+            // tarjetaEvento2
+            // 
+            this.tarjetaEvento2.Location = new System.Drawing.Point(5, 177);
+            this.tarjetaEvento2.Name = "tarjetaEvento2";
+            this.tarjetaEvento2.Size = new System.Drawing.Size(280, 129);
+            this.tarjetaEvento2.TabIndex = 2;
+            this.tarjetaEvento2.Load += new System.EventHandler(this.tarjetaEvento2_Load);
+            // 
+            // tarjetaEvento
+            // 
+            this.tarjetaEvento.Location = new System.Drawing.Point(5, 76);
+            this.tarjetaEvento.Name = "tarjetaEvento";
+            this.tarjetaEvento.Size = new System.Drawing.Size(280, 129);
+            this.tarjetaEvento.TabIndex = 1;
+            this.tarjetaEvento.Load += new System.EventHandler(this.cardEvento1_Load);
+            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.label1);
@@ -236,41 +272,6 @@ namespace ProyectoOOIA.Ventanas
             this.imageList1.Images.SetKeyName(2, "foto-29.jpg");
             this.imageList1.Images.SetKeyName(3, "pexels-pixabay-261621.jpg");
             // 
-            // tarjetaEvento3
-            // 
-            this.tarjetaEvento3.Location = new System.Drawing.Point(5, 278);
-            this.tarjetaEvento3.Name = "tarjetaEvento3";
-            this.tarjetaEvento3.Size = new System.Drawing.Size(280, 129);
-            this.tarjetaEvento3.TabIndex = 3;
-            this.tarjetaEvento3.Load += new System.EventHandler(this.tarjetaEvento3_Load);
-            // 
-            // tarjetaEvento2
-            // 
-            this.tarjetaEvento2.Location = new System.Drawing.Point(5, 177);
-            this.tarjetaEvento2.Name = "tarjetaEvento2";
-            this.tarjetaEvento2.Size = new System.Drawing.Size(280, 129);
-            this.tarjetaEvento2.TabIndex = 2;
-            this.tarjetaEvento2.Load += new System.EventHandler(this.tarjetaEvento2_Load);
-            // 
-            // tarjetaEvento
-            // 
-            this.tarjetaEvento.Location = new System.Drawing.Point(5, 76);
-            this.tarjetaEvento.Name = "tarjetaEvento";
-            this.tarjetaEvento.Size = new System.Drawing.Size(280, 129);
-            this.tarjetaEvento.TabIndex = 1;
-            this.tarjetaEvento.Load += new System.EventHandler(this.cardEvento1_Load);
-            // 
-            // ovalPictureBox1
-            // 
-            this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.ovalPictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.ovalPictureBox1.Location = new System.Drawing.Point(34, 10);
-            this.ovalPictureBox1.Name = "ovalPictureBox1";
-            this.ovalPictureBox1.Size = new System.Drawing.Size(75, 71);
-            this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ovalPictureBox1.TabIndex = 11;
-            this.ovalPictureBox1.TabStop = false;
-            // 
             // frmNuevoPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,6 +288,7 @@ namespace ProyectoOOIA.Ventanas
             this.Text = "frmNuevoPrincipal";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -295,7 +297,6 @@ namespace ProyectoOOIA.Ventanas
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

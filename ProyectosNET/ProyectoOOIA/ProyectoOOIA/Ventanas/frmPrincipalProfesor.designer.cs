@@ -34,8 +34,10 @@ namespace ProyectoOOIA.Ventanas
             this.txtHorarios = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.ovalPictureBox1 = new OvalPictureBox();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.panelEventos = new System.Windows.Forms.Panel();
             this.tarjetaEvento3 = new ProyectoOOIA.Componentes.CardEvento();
             this.tarjetaEvento2 = new ProyectoOOIA.Componentes.CardEvento();
@@ -43,8 +45,6 @@ namespace ProyectoOOIA.Ventanas
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.imagenes = new System.Windows.Forms.PictureBox();
-            this.btnAtras = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ovalPictureBox1)).BeginInit();
@@ -108,6 +108,25 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Size = new System.Drawing.Size(1013, 83);
             this.panel1.TabIndex = 28;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::ProyectoOOIA.Properties.Resources.log_out__1_;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(966, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 34);
+            this.button1.TabIndex = 25;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
@@ -126,6 +145,25 @@ namespace ProyectoOOIA.Ventanas
             this.ovalPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ovalPictureBox1.TabIndex = 22;
             this.ovalPictureBox1.TabStop = false;
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.Transparent;
+            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.log_out__1_;
+            this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAtras.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnAtras.FlatAppearance.BorderSize = 0;
+            this.btnAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAtras.Location = new System.Drawing.Point(1070, 12);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(35, 34);
+            this.btnAtras.TabIndex = 23;
+            this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // panelEventos
             // 
@@ -187,44 +225,6 @@ namespace ProyectoOOIA.Ventanas
             this.imagenes.TabIndex = 30;
             this.imagenes.TabStop = false;
             // 
-            // btnAtras
-            // 
-            this.btnAtras.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.log_out__1_;
-            this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAtras.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(1070, 12);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(35, 34);
-            this.btnAtras.TabIndex = 23;
-            this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAtras.UseVisualStyleBackColor = false;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::ProyectoOOIA.Properties.Resources.log_out__1_;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(966, 22);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 34);
-            this.button1.TabIndex = 25;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
             // frmPrincipalProfesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +238,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.txtHorarios);
             this.MaximizeBox = false;
             this.Name = "frmPrincipalProfesor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -86,6 +86,24 @@
     <Compile Include="Ventanas\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmAgregarEventoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmAgregarEventoAlumno.Designer.cs">
+      <DependentUpon>frmAgregarEventoAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmAgregarEventoOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmAgregarEventoOOIA.Designer.cs">
+      <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmBuscarEventoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmBuscarEventoAlumno.Designer.cs">
+      <DependentUpon>frmBuscarEventoAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmCancelarCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +115,6 @@
     </Compile>
     <Compile Include="Ventanas\frmCancelarCitaAlumno.Designer.cs">
       <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventanas\frmCategoriasEventos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmCategoriasEventos.Designer.cs">
-      <DependentUpon>frmCategoriasEventos.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmCitaRegistro.cs">
       <SubType>Form</SubType>
@@ -122,11 +134,35 @@
     <Compile Include="Ventanas\frmConfirmarCancelar.Designer.cs">
       <DependentUpon>frmConfirmarCancelar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmConfirmarOpinion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmConfirmarOpinion.Designer.cs">
+      <DependentUpon>frmConfirmarOpinion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmDetalleDeCitaTutor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\frmDetalleDeCitaTutor.Designer.cs">
       <DependentUpon>frmDetalleDeCitaTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmEliminarEventoAlum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmEliminarEventoAlum.Designer.cs">
+      <DependentUpon>frmEliminarEventoAlum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmEliminarEventoOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmEliminarEventoOOIA.Designer.cs">
+      <DependentUpon>frmEliminarEventoOOIA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmGestionEventosOOIA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmGestionEventosOOIA.Designer.cs">
+      <DependentUpon>frmGestionEventosOOIA.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmHistoriaAcademica.cs">
       <SubType>Form</SubType>
@@ -145,24 +181,6 @@
     </Compile>
     <Compile Include="Ventanas\frmHorarioCita.Designer.cs">
       <DependentUpon>frmHorarioCita.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventanas\frmInformacionEvento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmInformacionEvento.Designer.cs">
-      <DependentUpon>frmInformacionEvento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventanas\frmInscripcionEvento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmInscripcionEvento.Designer.cs">
-      <DependentUpon>frmInscripcionEvento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventanas\frmListaDeEventos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmListaDeEventos.Designer.cs">
-      <DependentUpon>frmListaDeEventos.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmListaTutores.cs">
       <SubType>Form</SubType>
@@ -220,12 +238,6 @@
     <Compile Include="Ventanas\frmPrincipalAlumno.designer.cs">
       <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmPrincipalEventos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmPrincipalEventos.Designer.cs">
-      <DependentUpon>frmPrincipalEventos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ventanas\frmPrincipalProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,14 +280,20 @@
     <EmbeddedResource Include="Ventanas\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmAgregarEventoAlumno.resx">
+      <DependentUpon>frmAgregarEventoAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmAgregarEventoOOIA.resx">
+      <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmBuscarEventoAlumno.resx">
+      <DependentUpon>frmBuscarEventoAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmCancelarCita.resx">
       <DependentUpon>frmCancelarCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmCancelarCitaAlumno.resx">
       <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmCategoriasEventos.resx">
-      <DependentUpon>frmCategoriasEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmCitaRegistro.resx">
       <DependentUpon>frmCitaRegistro.cs</DependentUpon>
@@ -286,11 +304,23 @@
     <EmbeddedResource Include="Ventanas\frmConfirmarCancelar.resx">
       <DependentUpon>frmConfirmarCancelar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmConfirmarOpinion.resx">
+      <DependentUpon>frmConfirmarOpinion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmDetalleCita.resx">
       <DependentUpon>frmDetalleCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmDetalleDeCitaTutor.resx">
       <DependentUpon>frmDetalleDeCitaTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmEliminarEventoAlum.resx">
+      <DependentUpon>frmEliminarEventoAlum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmEliminarEventoOOIA.resx">
+      <DependentUpon>frmEliminarEventoOOIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmGestionEventosOOIA.resx">
+      <DependentUpon>frmGestionEventosOOIA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmHistoriaAcademica.resx">
       <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
@@ -304,14 +334,8 @@
     <EmbeddedResource Include="Ventanas\frmHorarioCita.resx">
       <DependentUpon>frmHorarioCita.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmInformacionEvento.resx">
-      <DependentUpon>frmInformacionEvento.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmInscripcionEvento.resx">
-      <DependentUpon>frmInscripcionEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmListaCitas.resx">
       <DependentUpon>frmListaCitas.cs</DependentUpon>
@@ -326,9 +350,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Ventanas\frmListaDeEventos.resx">
-      <DependentUpon>frmListaDeEventos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmListaTutores.resx">
       <DependentUpon>frmListaTutores.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,9 +364,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmPrincipalAlumno.resx">
       <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmPrincipalEventos.resx">
-      <DependentUpon>frmPrincipalEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmPrincipalProfesor.resx">
       <DependentUpon>frmPrincipalProfesor.cs</DependentUpon>
