@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5">
+      <HintPath>..\..\..\..\..\Users\LENOVO\Downloads\Bunifu_UI_v1.5.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin">
       <HintPath>C:\Users\LENOVO\source\repos\clase\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
     </Reference>
@@ -56,6 +59,12 @@
     </Compile>
     <Compile Include="Componentes\Card.Designer.cs">
       <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\CardEvento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Componentes\CardEvento.Designer.cs">
+      <DependentUpon>CardEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="Componentes\Horario.cs">
       <SubType>UserControl</SubType>
@@ -95,12 +104,6 @@
     <Compile Include="Ventanas\frmBuscarEventoAlumno.Designer.cs">
       <DependentUpon>frmBuscarEventoAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmEliminarEventoAlum.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmEliminarEventoAlum.Designer.cs">
-      <DependentUpon>frmEliminarEventoAlum.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ventanas\frmCancelarCita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,12 +115,6 @@
     </Compile>
     <Compile Include="Ventanas\frmCancelarCitaAlumno.Designer.cs">
       <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventanas\frmCategoriasEventos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\frmCategoriasEventos.Designer.cs">
-      <DependentUpon>frmCategoriasEventos.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmCitaRegistro.cs">
       <SubType>Form</SubType>
@@ -148,6 +145,12 @@
     </Compile>
     <Compile Include="Ventanas\frmDetalleDeCitaTutor.Designer.cs">
       <DependentUpon>frmDetalleDeCitaTutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmEliminarEventoAlum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmEliminarEventoAlum.Designer.cs">
+      <DependentUpon>frmEliminarEventoAlum.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmEliminarEventoOOIA.cs">
       <SubType>Form</SubType>
@@ -190,6 +193,12 @@
     </Compile>
     <Compile Include="Ventanas\frmNotasParciales.Designer.cs">
       <DependentUpon>frmNotasParciales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\frmNuevoPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmNuevoPrincipal.Designer.cs">
+      <DependentUpon>frmNuevoPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmOpiniones.cs">
       <SubType>Form</SubType>
@@ -268,6 +277,9 @@
     <EmbeddedResource Include="Componentes\Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Componentes\CardEvento.resx">
+      <DependentUpon>CardEvento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Componentes\Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,17 +295,11 @@
     <EmbeddedResource Include="Ventanas\frmBuscarEventoAlumno.resx">
       <DependentUpon>frmBuscarEventoAlumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmEliminarEventoAlum.resx">
-      <DependentUpon>frmEliminarEventoAlum.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmCancelarCita.resx">
       <DependentUpon>frmCancelarCita.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmCancelarCitaAlumno.resx">
       <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmCategoriasEventos.resx">
-      <DependentUpon>frmCategoriasEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmCitaRegistro.resx">
       <DependentUpon>frmCitaRegistro.cs</DependentUpon>
@@ -312,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmDetalleDeCitaTutor.resx">
       <DependentUpon>frmDetalleDeCitaTutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmEliminarEventoAlum.resx">
+      <DependentUpon>frmEliminarEventoAlum.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmEliminarEventoOOIA.resx">
       <DependentUpon>frmEliminarEventoOOIA.cs</DependentUpon>
@@ -352,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmNotasParciales.resx">
       <DependentUpon>frmNotasParciales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmNuevoPrincipal.resx">
+      <DependentUpon>frmNuevoPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmOpiniones.resx">
       <DependentUpon>frmOpiniones.cs</DependentUpon>
@@ -416,7 +428,8 @@
     <None Include="Resources\search.png" />
     <None Include="Resources\home.png" />
     <None Include="Resources\arrowWhite.png" />
-    <Content Include="Resources\lupa.png" />
+    <None Include="Resources\calendar.png" />
+    <Content Include="Resources\Bunifu_UI_v1.5.dll" />
     <Content Include="Resources\profesor.jpg" />
     <Content Include="Resources\psicologo.jpg" />
   </ItemGroup>

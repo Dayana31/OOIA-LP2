@@ -35,6 +35,7 @@ namespace ProyectoOOIA.Ventanas
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnCancelarCita = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // lblCancelarCitaTiulo
@@ -106,6 +107,11 @@ namespace ProyectoOOIA.Ventanas
             this.btnCancelarCita.UseVisualStyleBackColor = true;
             this.btnCancelarCita.Click += new System.EventHandler(this.btnCancelarCita_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+//            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
             // frmCancelarCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,5 +138,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnCancelarCita;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

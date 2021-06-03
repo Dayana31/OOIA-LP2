@@ -51,5 +51,7 @@ namespace ProyectoOOIA.Ventanas
             new frmConfirmarCancelar().Show();
             this.Close();
         }
+
+
     }
 }

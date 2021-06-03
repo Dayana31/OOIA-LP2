@@ -161,7 +161,7 @@ namespace ProyectoOOIA.Ventanas
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1083, 74);
             this.panel2.TabIndex = 1;
@@ -1777,6 +1777,7 @@ namespace ProyectoOOIA.Ventanas
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmHorarioCita";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHorarioCita";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
