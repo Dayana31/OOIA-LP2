@@ -43,6 +43,8 @@ public class AlumnoMySQL implements AlumnoDAO{
                 alumno.setCraest(rs.getDouble("craest"));
                 alumno.setEstado(rs.getInt("estado"));
                 
+                //Especialidad, Invitado, Profesor Psicologo.
+                
                 alumnos.add(alumno);
             }
             rs.close();

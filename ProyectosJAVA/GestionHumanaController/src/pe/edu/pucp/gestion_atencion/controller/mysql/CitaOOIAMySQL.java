@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.Time;
 import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_atencion.controller.dao.CitaOOIADAO;
@@ -32,10 +33,11 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
             rs = cs.executeQuery();
             while(rs.next()){
                 CitaOOIA cita = new CitaOOIA();
+                ///falta settear el asesor y el alumno
                 cita.setId_cita(rs.getInt("id_cita"));
                 cita.setFechaRegistro(rs.getDate("fecha_registro"));
                 cita.setHorario(new Horario());
-                cita.getHorario().setFecha(rs.getDate("fecha"));
+                cita.getHorario().setFecha(rs.getDate("fecha_cita"));
                 cita.getHorario().setHoraInicio(rs.getDate("hora_inicio"));
                 cita.setCodigo_atencion(new CodigoAtencion());
                 cita.getCodigo_atencion().setDescripcion(rs.getString("descripcion"));

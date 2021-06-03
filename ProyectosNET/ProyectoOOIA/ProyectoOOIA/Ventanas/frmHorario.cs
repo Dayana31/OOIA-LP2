@@ -5,14 +5,12 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmHorario : Form
     {
+
+        //private Horario _horarioSeleccionado;
+
         public frmHorario()
         {
             InitializeComponent();
-        }
-
-        private void frmHorario_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -23,18 +21,24 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnMostrarDetalles_Click(object sender, EventArgs e)
         {
+            /*_horarioSeleccionado = (Horario)dvgHorarioProf.CurrentRow.DataBoundItem;*/
             new frmDetCita_EventAlumnos().Show();
             this.Close();
         }
 
         private void btnModificarHorario_Click(object sender, EventArgs e)
         {
+            /*_horarioSeleccionado = (Horario)dvgHorarioProf.CurrentRow.DataBoundItem;
+            if(_horarioSeleccionado.Estado == Libre || _horarioSeleccionado == Ocupado)
+                new frmModificatCita().ShowDialog();
+            else if(_horarioSeleccionado.Estado == Reservado)*/
             new frmCancelarCita().ShowDialog();
         }
 
         private void btnBuscarHorario_Click(object sender, EventArgs e)
         {
-
+            /*dgvHorarioProf.DataSource =
+                daoHorario.listarHorario(tbNombre.Text);*/
         }
     }
 }
