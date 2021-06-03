@@ -89,7 +89,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblHorario.Size = new System.Drawing.Size(194, 30);
             this.lblHorario.TabIndex = 0;
             this.lblHorario.Text = "Horario de Atención";
-            this.lblHorario.Click += new System.EventHandler(this.label1_Click);
+            //this.lblHorario.Click += new System.EventHandler(this.label1_Click);
             // 
             // Nombre
             // 
@@ -141,7 +141,7 @@ namespace ProyectoOOIA.Ventanas
             this.dgvHorarioProf.Name = "dgvHorarioProf";
             this.dgvHorarioProf.Size = new System.Drawing.Size(753, 309);
             this.dgvHorarioProf.TabIndex = 0;
-            this.dgvHorarioProf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHorarioProf_CellContentClick);
+            //this.dgvHorarioProf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHorarioProf_CellContentClick);
             // 
             // button1
             // 
@@ -151,7 +151,7 @@ namespace ProyectoOOIA.Ventanas
             this.button1.TabIndex = 1;
             this.button1.Text = "Modificar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            //this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dateTimePicker1
             // 
@@ -166,7 +166,7 @@ namespace ProyectoOOIA.Ventanas
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(227, 20);
             this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            //this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button2
             // 
@@ -186,7 +186,7 @@ namespace ProyectoOOIA.Ventanas
             this.label1.Size = new System.Drawing.Size(88, 21);
             this.label1.TabIndex = 6;
             this.label1.Text = "Fecha y hora";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            //this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // label2
             // 
@@ -197,7 +197,7 @@ namespace ProyectoOOIA.Ventanas
             this.label2.Size = new System.Drawing.Size(62, 21);
             this.label2.TabIndex = 7;
             this.label2.Text = "Nombre";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            //this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox1
             // 
