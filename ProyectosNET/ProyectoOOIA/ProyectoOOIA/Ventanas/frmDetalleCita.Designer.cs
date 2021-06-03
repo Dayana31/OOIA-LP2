@@ -76,7 +76,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnRegresar
             // 
-            this.btnRegresar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btnRegresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRegresar.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnRegresar.Location = new System.Drawing.Point(723, 336);
             this.btnRegresar.Name = "btnRegresar";

@@ -36,7 +36,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(56, 161);
+            this.btnNo.Location = new System.Drawing.Point(55, 148);
             this.btnNo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(131, 28);
@@ -48,19 +48,19 @@ namespace ProyectoOOIA.Ventanas
             // lblMensaje
             // 
             this.lblMensaje.AutoSize = true;
-            this.lblMensaje.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.Location = new System.Drawing.Point(49, 47);
             this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensaje.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(400, 78);
+            this.lblMensaje.Size = new System.Drawing.Size(347, 68);
             this.lblMensaje.TabIndex = 8;
             this.lblMensaje.Text = "¿Está seguro que desea agregar su opinión?";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSi
             // 
-            this.btnSi.Location = new System.Drawing.Point(308, 161);
+            this.btnSi.Location = new System.Drawing.Point(253, 148);
             this.btnSi.Margin = new System.Windows.Forms.Padding(4);
             this.btnSi.Name = "btnSi";
             this.btnSi.Size = new System.Drawing.Size(131, 28);
@@ -73,7 +73,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(494, 238);
+            this.ClientSize = new System.Drawing.Size(464, 228);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnSi);

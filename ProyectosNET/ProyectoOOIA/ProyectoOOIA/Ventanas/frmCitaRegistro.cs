@@ -19,8 +19,9 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            new frmConfirmacionCita().Show();
-            this.Close();
+            new frmConfirmacionCita().ShowDialog();
+            //verificar si confirme o no
+            //this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -42,6 +43,11 @@ namespace ProyectoOOIA.Ventanas
         private void btnHorarioCita_Click(object sender, EventArgs e)
         {
             new frmHorarioCita().Show();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
