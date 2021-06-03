@@ -98,6 +98,12 @@
     <Compile Include="Ventanas\frmAgregarEventoOOIA.Designer.cs">
       <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmAgregarOpinion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmAgregarOpinion.Designer.cs">
+      <DependentUpon>frmAgregarOpinion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmBuscarEventoAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmAgregarEventoOOIA.resx">
       <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmAgregarOpinion.resx">
+      <DependentUpon>frmAgregarOpinion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmBuscarEventoAlumno.resx">
       <DependentUpon>frmBuscarEventoAlumno.cs</DependentUpon>
