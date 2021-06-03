@@ -27,5 +27,10 @@ namespace ProyectoOOIA.Ventanas
             MessageBox.Show("Su incripcion fue exitosa", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
+
+        private void lblMensaje_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

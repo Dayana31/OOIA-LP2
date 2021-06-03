@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmEliminarEventoAlum : Form
+    public partial class frmAgregarEventoOOIA : Form
     {
-        public frmEliminarEventoAlum()
+        public frmAgregarEventoOOIA()
         {
             InitializeComponent();
         }
@@ -24,13 +24,8 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnSi_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Se elimino exitosamente", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Su registro fue exitoso", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
-        }
-
-        private void lblMensaje_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
