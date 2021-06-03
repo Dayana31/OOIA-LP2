@@ -68,13 +68,25 @@ namespace ProyectoOOIA.Ventanas
             if (txtContraseña.Text == "") lblIncorrecto.Visible = true;
             else
             {
-                if(toggle1.Checked==false)
-                    new frmNuevoPrincipal().Show(); 
-                else
+                //if(toggle1.Checked==false)
+                //    new frmNuevoPrincipal().Show(); 
+                //else
+                //    new frmPrincipalProfesor().Show();
+                
+                //this.Close();
+                
+                if(rbtAlumno.Checked == true)
+                {
+                    new frmNuevoPrincipal().Show();
+                }else if(rbtTutor.Checked == true)
+                {
                     new frmPrincipalProfesor().Show();
-                
+                }
+                else
+                {
+                    new frmPrincipalMiembroOOIA().Show();
+                }
                 this.Close();
-                
             }
 
 
@@ -98,6 +110,11 @@ namespace ProyectoOOIA.Ventanas
     
             if (e.KeyCode == Keys.Enter)
                 btnIngresar_Click(null, null);
+        }
+
+        private void toggle1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
