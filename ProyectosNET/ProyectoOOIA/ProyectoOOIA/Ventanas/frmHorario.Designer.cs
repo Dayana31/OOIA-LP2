@@ -29,14 +29,9 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHorario));
             this.dgvHorarioProf = new System.Windows.Forms.DataGridView();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LinkDetalles = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
@@ -48,6 +43,12 @@ namespace ProyectoOOIA.Ventanas
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscarEstudiante = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProf)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -56,22 +57,21 @@ namespace ProyectoOOIA.Ventanas
             // dgvHorarioProf
             // 
             this.dgvHorarioProf.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHorarioProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHorarioProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHorarioProf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHorarioProf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
             this.Hora,
             this.Especialidad,
             this.Estado,
-            this.Nombre,
-            this.LinkDetalles});
+            this.Nombre});
             this.dgvHorarioProf.EnableHeadersVisualStyles = false;
             this.dgvHorarioProf.Location = new System.Drawing.Point(21, 129);
             this.dgvHorarioProf.Name = "dgvHorarioProf";
@@ -79,41 +79,9 @@ namespace ProyectoOOIA.Ventanas
             this.dgvHorarioProf.TabIndex = 0;
             this.dgvHorarioProf.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHorarioProf_CellContentClick);
             // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // Hora
-            // 
-            this.Hora.HeaderText = "Hora";
-            this.Hora.Name = "Hora";
-            // 
-            // Especialidad
-            // 
-            this.Especialidad.HeaderText = "Especialidad";
-            this.Especialidad.Name = "Especialidad";
-            this.Especialidad.Width = 120;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre del Alumno";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 200;
-            // 
-            // LinkDetalles
-            // 
-            this.LinkDetalles.HeaderText = "Detalles";
-            this.LinkDetalles.Name = "LinkDetalles";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(699, 100);
+            this.button1.Location = new System.Drawing.Point(699, 103);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -167,19 +135,19 @@ namespace ProyectoOOIA.Ventanas
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(367, 102);
+            this.textBox1.Location = new System.Drawing.Point(354, 102);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(245, 20);
+            this.textBox1.Size = new System.Drawing.Size(227, 20);
             this.textBox1.TabIndex = 4;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(618, 100);
+            this.button2.Location = new System.Drawing.Point(618, 102);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Buscar";
+            this.button2.Text = "Detalles";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -197,7 +165,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(363, 78);
+            this.label2.Location = new System.Drawing.Point(350, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 21);
             this.label2.TabIndex = 7;
@@ -222,11 +190,50 @@ namespace ProyectoOOIA.Ventanas
             this.label3.TabIndex = 9;
             this.label3.Text = "Tipo de Horario";
             // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Hora
+            // 
+            this.Hora.HeaderText = "Hora";
+            this.Hora.Name = "Hora";
+            // 
+            // Especialidad
+            // 
+            this.Especialidad.HeaderText = "Especialidad";
+            this.Especialidad.Name = "Especialidad";
+            this.Especialidad.Width = 170;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre del Alumno";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 250;
+            // 
+            // btnBuscarEstudiante
+            // 
+            this.btnBuscarEstudiante.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarEstudiante.BackgroundImage")));
+            this.btnBuscarEstudiante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscarEstudiante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarEstudiante.Location = new System.Drawing.Point(587, 102);
+            this.btnBuscarEstudiante.Name = "btnBuscarEstudiante";
+            this.btnBuscarEstudiante.Size = new System.Drawing.Size(25, 23);
+            this.btnBuscarEstudiante.TabIndex = 10;
+            this.btnBuscarEstudiante.UseVisualStyleBackColor = true;
+            // 
             // frmHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBuscarEstudiante);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
@@ -261,13 +268,13 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LinkDetalles;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnBuscarEstudiante;
     }
 }
