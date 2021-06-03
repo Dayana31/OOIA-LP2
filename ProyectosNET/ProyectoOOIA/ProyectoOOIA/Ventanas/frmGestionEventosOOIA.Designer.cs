@@ -45,15 +45,18 @@ namespace ProyectoOOIA.Ventanas
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NombreCompletoPonente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.NombreCompletoPonente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -142,7 +145,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.textBox1.Location = new System.Drawing.Point(130, 53);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 20);
+            this.textBox1.Size = new System.Drawing.Size(366, 20);
             this.textBox1.TabIndex = 9;
             // 
             // dateTimePicker1
@@ -161,7 +164,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(130, 133);
+            this.textBox3.Location = new System.Drawing.Point(129, 133);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 12;
@@ -193,6 +196,12 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridView1.Size = new System.Drawing.Size(630, 78);
             this.dataGridView1.TabIndex = 15;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // NombreCompletoPonente
+            // 
+            this.NombreCompletoPonente.HeaderText = "Nombre completo del ponente";
+            this.NombreCompletoPonente.Name = "NombreCompletoPonente";
+            this.NombreCompletoPonente.Width = 585;
             // 
             // label6
             // 
@@ -237,12 +246,6 @@ namespace ProyectoOOIA.Ventanas
             this.button7.Text = "Eliminar Ponente";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // NombreCompletoPonente
-            // 
-            this.NombreCompletoPonente.HeaderText = "Nombre completo del ponente";
-            this.NombreCompletoPonente.Name = "NombreCompletoPonente";
-            this.NombreCompletoPonente.Width = 585;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -255,16 +258,36 @@ namespace ProyectoOOIA.Ventanas
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(130, 159);
+            this.comboBox1.Location = new System.Drawing.Point(129, 159);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 22;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(592, 51);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(162, 23);
+            this.button8.TabIndex = 23;
+            this.button8.Text = "Agregar imagen";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(548, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(240, 199);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // gestionEventosOOIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button7);
@@ -291,6 +314,7 @@ namespace ProyectoOOIA.Ventanas
             this.Name = "gestionEventosOOIA";
             this.Text = "frmGestionEventosOOIA";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,5 +346,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
