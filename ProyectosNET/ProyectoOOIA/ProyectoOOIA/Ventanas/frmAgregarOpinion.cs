@@ -10,14 +10,20 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmBuscarEventoAlumno : Form
+    public partial class frmAgregarOpinion : Form
     {
-        public frmBuscarEventoAlumno()
+        public frmAgregarOpinion()
         {
             InitializeComponent();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            new frmConfirmarOpinion().ShowDialog();
+           // this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -98,6 +98,12 @@
     <Compile Include="Ventanas\frmAgregarEventoOOIA.Designer.cs">
       <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\frmAgregarOpinion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\frmAgregarOpinion.Designer.cs">
+      <DependentUpon>frmAgregarOpinion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\frmBuscarEventoAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,11 +244,11 @@
     <Compile Include="Ventanas\frmPrincipalAlumno.designer.cs">
       <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmPrincipalEventos.cs">
+    <Compile Include="Ventanas\frmPrincipalMiembroOOIA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmPrincipalEventos.Designer.cs">
-      <DependentUpon>frmPrincipalEventos.cs</DependentUpon>
+    <Compile Include="Ventanas\frmPrincipalMiembroOOIA.Designer.cs">
+      <DependentUpon>frmPrincipalMiembroOOIA.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\frmPrincipalProfesor.cs">
       <SubType>Form</SubType>
@@ -291,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmAgregarEventoOOIA.resx">
       <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\frmAgregarOpinion.resx">
+      <DependentUpon>frmAgregarOpinion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmBuscarEventoAlumno.resx">
       <DependentUpon>frmBuscarEventoAlumno.cs</DependentUpon>
@@ -371,8 +380,8 @@
     <EmbeddedResource Include="Ventanas\frmPrincipalAlumno.resx">
       <DependentUpon>frmPrincipalAlumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmPrincipalEventos.resx">
-      <DependentUpon>frmPrincipalEventos.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\frmPrincipalMiembroOOIA.resx">
+      <DependentUpon>frmPrincipalMiembroOOIA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\frmPrincipalProfesor.resx">
       <DependentUpon>frmPrincipalProfesor.cs</DependentUpon>

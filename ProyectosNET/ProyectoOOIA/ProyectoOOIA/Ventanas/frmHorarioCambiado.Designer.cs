@@ -61,7 +61,7 @@ namespace ProyectoOOIA.Ventanas
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(215, 133);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(100, 28);
             this.btnAceptar.TabIndex = 2;
@@ -77,8 +77,9 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmHorarioCambiado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambio de disponibilidad";
             this.Load += new System.EventHandler(this.frmHorarioCambiado_Load);
             this.ResumeLayout(false);

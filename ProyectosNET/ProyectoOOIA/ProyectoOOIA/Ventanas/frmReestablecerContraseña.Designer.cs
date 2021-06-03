@@ -63,7 +63,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtContraseña.AccessibleName = "";
             this.txtContraseña.Location = new System.Drawing.Point(175, 270);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(377, 22);
             this.txtContraseña.TabIndex = 3;
@@ -73,7 +73,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Leelawadee", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(268, 383);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(191, 50);
             this.btnCancelar.TabIndex = 4;
@@ -85,7 +85,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnReestablecer.Font = new System.Drawing.Font("Leelawadee", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReestablecer.Location = new System.Drawing.Point(268, 325);
-            this.btnReestablecer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReestablecer.Margin = new System.Windows.Forms.Padding(4);
             this.btnReestablecer.Name = "btnReestablecer";
             this.btnReestablecer.Size = new System.Drawing.Size(191, 50);
             this.btnReestablecer.TabIndex = 5;
@@ -105,9 +105,10 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmReestablecerContraseña";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reestablecer Contraseña";
             this.ResumeLayout(false);
             this.PerformLayout();

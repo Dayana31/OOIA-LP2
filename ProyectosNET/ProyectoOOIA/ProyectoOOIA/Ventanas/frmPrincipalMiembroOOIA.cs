@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmBuscarEventoAlumno : Form
+    public partial class frmPrincipalMiembroOOIA : Form
     {
-        public frmBuscarEventoAlumno()
+        public frmPrincipalMiembroOOIA()
         {
             InitializeComponent();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
+            new gestionEventosOOIA().Show();
             this.Close();
         }
     }

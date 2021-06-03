@@ -34,14 +34,14 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnEliminarCita_Click(object sender, EventArgs e)
         {
-            new frmCancelarCitaAlumno().Show();
+            new frmCancelarCitaAlumno().ShowDialog();
 
         }
 
         private void btnVerDetalle_Click(object sender, EventArgs e)
         {
             //tenemos que almacenar los datos en la pantalla
-            new frmDetalleCita().Show();
+            new frmDetalleCita().ShowDialog();
             //this.Close();
             this.DialogResult = DialogResult.OK;
         }
@@ -60,7 +60,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnRegistrarCita_Click(object sender, EventArgs e)
         {
-            new frmCitaRegistro().Show();
+            new frmCitaRegistro().ShowDialog();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -68,6 +68,12 @@ namespace ProyectoOOIA.Ventanas
 
             new frmInicioSesion().Show();
             this.Close();
+        }
+
+        private void btnAgregarOpinion_Click(object sender, EventArgs e)
+        {
+            new frmAgregarOpinion().ShowDialog();
+
         }
     }
 }

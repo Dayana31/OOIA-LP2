@@ -238,6 +238,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.txtHorarios);
             this.MaximizeBox = false;
             this.Name = "frmPrincipalProfesor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Principal";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

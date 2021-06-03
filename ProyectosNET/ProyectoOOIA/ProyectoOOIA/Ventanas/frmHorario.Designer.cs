@@ -30,110 +30,49 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHorario));
-            this.dgvHorarioProfesor = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.lblHorario = new System.Windows.Forms.Label();
+            this.dgvHorarioProf = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnBuscarEstudiante = new System.Windows.Forms.Button();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnModificarHorario = new System.Windows.Forms.Button();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.PictureBox();
-            this.lblHorario = new System.Windows.Forms.Label();
-            this.dtpFechaHorario = new System.Windows.Forms.DateTimePicker();
-            this.tbNombre = new System.Windows.Forms.TextBox();
-            this.btnMostrarDetalles = new System.Windows.Forms.Button();
-            this.lblFechaHora = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.cbTipoHorario = new System.Windows.Forms.ComboBox();
-            this.lblTipoHorario = new System.Windows.Forms.Label();
-            this.btnBuscarHorario = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProfesor)).BeginInit();
-            this.pnlHeader.SuspendLayout();
+            this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProf)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvHorarioProfesor
+            // panel1
             // 
-            this.dgvHorarioProfesor.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHorarioProfesor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvHorarioProfesor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHorarioProfesor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Fecha,
-            this.Hora,
-            this.Especialidad,
-            this.Estado,
-            this.Nombre});
-            this.dgvHorarioProfesor.EnableHeadersVisualStyles = false;
-            this.dgvHorarioProfesor.Location = new System.Drawing.Point(21, 129);
-            this.dgvHorarioProfesor.Name = "dgvHorarioProfesor";
-            this.dgvHorarioProfesor.Size = new System.Drawing.Size(753, 309);
-            this.dgvHorarioProfesor.TabIndex = 0;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // Hora
-            // 
-            this.Hora.HeaderText = "Hora";
-            this.Hora.Name = "Hora";
-            // 
-            // Especialidad
-            // 
-            this.Especialidad.HeaderText = "Especialidad";
-            this.Especialidad.Name = "Especialidad";
-            this.Especialidad.Width = 170;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre del Alumno";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 250;
-            // 
-            // btnModificarHorario
-            // 
-            this.btnModificarHorario.Location = new System.Drawing.Point(699, 103);
-            this.btnModificarHorario.Name = "btnModificarHorario";
-            this.btnModificarHorario.Size = new System.Drawing.Size(75, 23);
-            this.btnModificarHorario.TabIndex = 1;
-            this.btnModificarHorario.Text = "Modificar";
-            this.btnModificarHorario.UseVisualStyleBackColor = true;
-            this.btnModificarHorario.Click += new System.EventHandler(this.btnModificarHorario_Click);
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.pnlHeader.Controls.Add(this.btnHome);
-            this.pnlHeader.Controls.Add(this.lblHorario);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(800, 73);
-            this.pnlHeader.TabIndex = 2;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.lblHorario);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1067, 90);
+            this.panel1.TabIndex = 2;
             // 
             // btnHome
             // 
             this.btnHome.Image = global::ProyectoOOIA.Properties.Resources.home;
-            this.btnHome.Location = new System.Drawing.Point(21, 39);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHome.Location = new System.Drawing.Point(28, 48);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(26, 21);
+            this.btnHome.Size = new System.Drawing.Size(35, 26);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 1;
             this.btnHome.TabStop = false;
@@ -144,134 +83,219 @@ namespace ProyectoOOIA.Ventanas
             this.lblHorario.AutoSize = true;
             this.lblHorario.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHorario.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblHorario.Location = new System.Drawing.Point(51, 35);
-            this.lblHorario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHorario.Location = new System.Drawing.Point(68, 43);
             this.lblHorario.Name = "lblHorario";
-            this.lblHorario.Size = new System.Drawing.Size(194, 30);
+            this.lblHorario.Size = new System.Drawing.Size(251, 38);
             this.lblHorario.TabIndex = 0;
             this.lblHorario.Text = "Horario de Atención";
             // 
-            // dtpFechaHorario
+            // dgvHorarioProf
             // 
-            this.dtpFechaHorario.Location = new System.Drawing.Point(21, 103);
-            this.dtpFechaHorario.Name = "dtpFechaHorario";
-            this.dtpFechaHorario.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaHorario.TabIndex = 3;
+            this.dgvHorarioProf.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHorarioProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvHorarioProf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHorarioProf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Fecha,
+            this.Hora,
+            this.Especialidad,
+            this.Estado,
+            this.Nombre,
+            this.Correo});
+            this.dgvHorarioProf.EnableHeadersVisualStyles = false;
+            this.dgvHorarioProf.Location = new System.Drawing.Point(28, 159);
+            this.dgvHorarioProf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvHorarioProf.Name = "dgvHorarioProf";
+            this.dgvHorarioProf.RowHeadersWidth = 51;
+            this.dgvHorarioProf.Size = new System.Drawing.Size(1004, 380);
+            this.dgvHorarioProf.TabIndex = 0;
             // 
-            // tbNombre
+            // button1
             // 
-            this.tbNombre.Location = new System.Drawing.Point(354, 102);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(227, 20);
-            this.tbNombre.TabIndex = 4;
+            this.button1.Location = new System.Drawing.Point(932, 127);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Modificar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnMostrarDetalles
+            // dateTimePicker1
             // 
-            this.btnMostrarDetalles.Location = new System.Drawing.Point(618, 102);
-            this.btnMostrarDetalles.Name = "btnMostrarDetalles";
-            this.btnMostrarDetalles.Size = new System.Drawing.Size(75, 23);
-            this.btnMostrarDetalles.TabIndex = 5;
-            this.btnMostrarDetalles.Text = "Detalles";
-            this.btnMostrarDetalles.UseVisualStyleBackColor = true;
-            this.btnMostrarDetalles.Click += new System.EventHandler(this.btnMostrarDetalles_Click);
+            this.dateTimePicker1.Location = new System.Drawing.Point(28, 127);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
+            this.dateTimePicker1.TabIndex = 3;
             // 
-            // lblFechaHora
+            // textBox1
             // 
-            this.lblFechaHora.AutoSize = true;
-            this.lblFechaHora.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHora.Location = new System.Drawing.Point(17, 79);
-            this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(88, 21);
-            this.lblFechaHora.TabIndex = 6;
-            this.lblFechaHora.Text = "Fecha y hora";
+            this.textBox1.Location = new System.Drawing.Point(472, 126);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(301, 22);
+            this.textBox1.TabIndex = 4;
             // 
-            // lblNombre
+            // button2
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(350, 78);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(62, 21);
-            this.lblNombre.TabIndex = 7;
-            this.lblNombre.Text = "Nombre";
+            this.button2.Location = new System.Drawing.Point(824, 126);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 28);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Detalles";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // cbTipoHorario
+            // label1
             // 
-            this.cbTipoHorario.FormattingEnabled = true;
-            this.cbTipoHorario.Location = new System.Drawing.Point(227, 102);
-            this.cbTipoHorario.Name = "cbTipoHorario";
-            this.cbTipoHorario.Size = new System.Drawing.Size(121, 21);
-            this.cbTipoHorario.TabIndex = 8;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(23, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 27);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Fecha y hora";
             // 
-            // lblTipoHorario
+            // label2
             // 
-            this.lblTipoHorario.AutoSize = true;
-            this.lblTipoHorario.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoHorario.Location = new System.Drawing.Point(223, 78);
-            this.lblTipoHorario.Name = "lblTipoHorario";
-            this.lblTipoHorario.Size = new System.Drawing.Size(109, 21);
-            this.lblTipoHorario.TabIndex = 9;
-            this.lblTipoHorario.Text = "Tipo de Horario";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(467, 96);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 27);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Nombre";
             // 
-            // btnBuscarHorario
+            // comboBox1
             // 
-            this.btnBuscarHorario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarHorario.BackgroundImage")));
-            this.btnBuscarHorario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscarHorario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarHorario.Location = new System.Drawing.Point(587, 102);
-            this.btnBuscarHorario.Name = "btnBuscarHorario";
-            this.btnBuscarHorario.Size = new System.Drawing.Size(25, 23);
-            this.btnBuscarHorario.TabIndex = 10;
-            this.btnBuscarHorario.UseVisualStyleBackColor = true;
-            this.btnBuscarHorario.Click += new System.EventHandler(this.btnBuscarHorario_Click);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(303, 126);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(297, 96);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(138, 27);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Tipo de Horario";
+            // 
+            // btnBuscarEstudiante
+            // 
+            this.btnBuscarEstudiante.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscarEstudiante.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarEstudiante.Location = new System.Drawing.Point(783, 126);
+            this.btnBuscarEstudiante.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscarEstudiante.Name = "btnBuscarEstudiante";
+            this.btnBuscarEstudiante.Size = new System.Drawing.Size(33, 28);
+            this.btnBuscarEstudiante.TabIndex = 10;
+            this.btnBuscarEstudiante.UseVisualStyleBackColor = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.Width = 125;
+            // 
+            // Hora
+            // 
+            this.Hora.HeaderText = "Hora";
+            this.Hora.MinimumWidth = 6;
+            this.Hora.Name = "Hora";
+            this.Hora.Width = 125;
+            // 
+            // Especialidad
+            // 
+            this.Especialidad.HeaderText = "Especialidad";
+            this.Especialidad.MinimumWidth = 6;
+            this.Especialidad.Name = "Especialidad";
+            this.Especialidad.Width = 170;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.MinimumWidth = 6;
+            this.Estado.Name = "Estado";
+            this.Estado.Width = 125;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre del Alumno";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 250;
+            // 
+            // Correo
+            // 
+            this.Correo.HeaderText = "Correo ";
+            this.Correo.MinimumWidth = 6;
+            this.Correo.Name = "Correo";
+            this.Correo.Width = 150;
             // 
             // frmHorario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnBuscarHorario);
-            this.Controls.Add(this.lblTipoHorario);
-            this.Controls.Add(this.cbTipoHorario);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblFechaHora);
-            this.Controls.Add(this.btnMostrarDetalles);
-            this.Controls.Add(this.tbNombre);
-            this.Controls.Add(this.dtpFechaHorario);
-            this.Controls.Add(this.pnlHeader);
-            this.Controls.Add(this.btnModificarHorario);
-            this.Controls.Add(this.dgvHorarioProfesor);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.btnBuscarEstudiante);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dgvHorarioProf);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmHorario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Horario";
             this.Load += new System.EventHandler(this.frmHorario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProfesor)).EndInit();
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorarioProf)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvHorarioProfesor;
-        private System.Windows.Forms.Button btnModificarHorario;
-        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.Label lblHorario;
-        private System.Windows.Forms.DateTimePicker dtpFechaHorario;
-        private System.Windows.Forms.TextBox tbNombre;
-        private System.Windows.Forms.Button btnMostrarDetalles;
-        private System.Windows.Forms.Label lblFechaHora;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.ComboBox cbTipoHorario;
-        private System.Windows.Forms.Label lblTipoHorario;
+        private System.Windows.Forms.DataGridView dgvHorarioProf;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnBuscarEstudiante;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.Button btnBuscarHorario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
     }
 }
