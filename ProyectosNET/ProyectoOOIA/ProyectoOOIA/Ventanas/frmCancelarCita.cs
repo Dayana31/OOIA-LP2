@@ -58,5 +58,10 @@ namespace ProyectoOOIA.Ventanas
             new frmConfirmarCancelar().Show();
             this.Close();
         }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

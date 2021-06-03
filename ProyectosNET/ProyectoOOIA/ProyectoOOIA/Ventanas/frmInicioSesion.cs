@@ -69,7 +69,7 @@ namespace ProyectoOOIA.Ventanas
             else
             {
                 if(toggle1.Checked==false)
-                    new frmPrincipalAlumno().Show(); 
+                    new frmNuevoPrincipal().Show(); 
                 else
                     new frmPrincipalProfesor().Show();
                 

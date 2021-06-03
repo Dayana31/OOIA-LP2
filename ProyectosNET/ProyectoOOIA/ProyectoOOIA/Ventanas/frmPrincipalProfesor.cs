@@ -12,9 +12,21 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmPrincipalProfesor : Form
     {
+        private int indice;
+        private BindingList<Bitmap> listaImagenes=new BindingList<Bitmap>();
+
         public frmPrincipalProfesor()
         {
             InitializeComponent();
+            listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
+            listaImagenes.Add(ProyectoOOIA.Properties.Resources.EEGGCC);
+            listaImagenes.Add(ProyectoOOIA.Properties.Resources.Estudiante1);
+            listaImagenes.Add(ProyectoOOIA.Properties.Resources.pexels_pixabay_261621);
+            imagenes.Image = listaImagenes[0];
+            //ToolTip ttEjemplo = new ToolTip();
+
+            
+
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -48,6 +60,13 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmRegistroEvento().Show();
             this.Close();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            indice++;
+            if (indice > listaImagenes.Count)
+                indice = 0;
+            imagenes.Image = listaImagenes[indice];
         }
     }
 }
