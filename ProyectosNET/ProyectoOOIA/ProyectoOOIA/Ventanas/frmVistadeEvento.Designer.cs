@@ -120,7 +120,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.pictureBox1.Image = global::ProyectoOOIA.Properties.Resources.EEGGCC;
             this.pictureBox1.Location = new System.Drawing.Point(604, 127);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(376, 246);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,7 +135,7 @@ namespace ProyectoOOIA.Ventanas
             this.dgvPonentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombreDelPonente});
             this.dgvPonentes.Location = new System.Drawing.Point(49, 250);
-            this.dgvPonentes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPonentes.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPonentes.Name = "dgvPonentes";
             this.dgvPonentes.ReadOnly = true;
             this.dgvPonentes.RowHeadersWidth = 51;
@@ -154,7 +154,7 @@ namespace ProyectoOOIA.Ventanas
             // txtDescripcion
             // 
             this.txtDescripcion.Location = new System.Drawing.Point(49, 436);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(360, 110);
@@ -165,7 +165,7 @@ namespace ProyectoOOIA.Ventanas
             this.atras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrow;
             this.atras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.atras.Location = new System.Drawing.Point(1005, -1);
-            this.atras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.atras.Margin = new System.Windows.Forms.Padding(4);
             this.atras.Name = "atras";
             this.atras.Size = new System.Drawing.Size(63, 44);
             this.atras.TabIndex = 11;
@@ -190,7 +190,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtNombreEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.txtNombreEvento.Location = new System.Drawing.Point(355, 50);
-            this.txtNombreEvento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreEvento.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreEvento.Name = "txtNombreEvento";
             this.txtNombreEvento.Size = new System.Drawing.Size(587, 38);
             this.txtNombreEvento.TabIndex = 13;
@@ -199,7 +199,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.dateTimePicker1.Location = new System.Drawing.Point(233, 138);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 14;
@@ -208,7 +208,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtHoraInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.txtHoraInicio.Location = new System.Drawing.Point(809, 410);
-            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.Size = new System.Drawing.Size(169, 38);
             this.txtHoraInicio.TabIndex = 15;
@@ -217,7 +217,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtHoraFin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.txtHoraFin.Location = new System.Drawing.Point(809, 496);
-            this.txtHoraFin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoraFin.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoraFin.Name = "txtHoraFin";
             this.txtHoraFin.Size = new System.Drawing.Size(169, 38);
             this.txtHoraFin.TabIndex = 16;
@@ -241,8 +241,9 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVistadeEvento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vista de evento";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).EndInit();

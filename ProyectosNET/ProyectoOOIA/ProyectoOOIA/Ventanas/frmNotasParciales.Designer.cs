@@ -131,7 +131,7 @@ namespace ProyectoOOIA.Ventanas
             this.Nota});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(132, 228);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(325, 185);
@@ -155,7 +155,7 @@ namespace ProyectoOOIA.Ventanas
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(257, 420);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(100, 28);
             this.btnAceptar.TabIndex = 10;
@@ -246,8 +246,9 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblEstudiante);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNotasParciales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Notas parciales";
             this.Load += new System.EventHandler(this.frmNotasParciales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
