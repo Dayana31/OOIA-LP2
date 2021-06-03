@@ -52,9 +52,6 @@ namespace ProyectoOOIA.Ventanas
             this.Close();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
 
-        }
     }
 }

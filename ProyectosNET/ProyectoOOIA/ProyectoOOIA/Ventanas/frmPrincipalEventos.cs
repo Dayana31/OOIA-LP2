@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new CategoriasEventos().Show();
+           // new CategoriasEventos().Show();
             this.Close();
         }
 

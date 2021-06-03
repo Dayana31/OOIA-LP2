@@ -7,7 +7,7 @@ namespace ProyectoOOIA.Ventanas
     {
         private int flag;
         frmPrincipalEventos principalEventos = null;
-        frmListaDeEventos listaEventos = null;
+
         public frmVistadeEvento()
         {
             InitializeComponent();
@@ -25,14 +25,9 @@ namespace ProyectoOOIA.Ventanas
             InitializeComponent();
         }
 
-        public frmVistadeEvento(frmListaDeEventos p)
-        {
-            listaEventos = p;
-            InitializeComponent();
-        }
         private void label7_Click(object sender, EventArgs e)
         {
-            new frmInscripcionEvento(this.flag).Show();
+            
             //if (principalEventos != null)
             //{
             //    new frmInscripcionEvento(principalEventos).Show();
