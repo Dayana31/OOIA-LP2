@@ -78,6 +78,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnSi);
             this.Name = "frmConfirmarOpinion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Confirmación de opinión";
             this.ResumeLayout(false);
             this.PerformLayout();

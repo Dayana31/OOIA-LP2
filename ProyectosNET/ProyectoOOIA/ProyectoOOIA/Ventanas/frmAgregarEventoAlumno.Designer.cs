@@ -36,9 +36,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(73, 114);
+            this.btnNo.Location = new System.Drawing.Point(68, 140);
+            this.btnNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(98, 23);
+            this.btnNo.Size = new System.Drawing.Size(131, 28);
             this.btnNo.TabIndex = 9;
             this.btnNo.Text = "No";
             this.btnNo.UseVisualStyleBackColor = true;
@@ -48,10 +49,11 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(82, 34);
-            this.lblMensaje.MaximumSize = new System.Drawing.Size(300, 0);
+            this.lblMensaje.Location = new System.Drawing.Point(102, 41);
+            this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMensaje.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(267, 50);
+            this.lblMensaje.Size = new System.Drawing.Size(334, 62);
             this.lblMensaje.TabIndex = 8;
             this.lblMensaje.Text = "¿Desea inscribirse en este evento?";
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -59,9 +61,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnSi
             // 
-            this.btnSi.Location = new System.Drawing.Point(237, 114);
+            this.btnSi.Location = new System.Drawing.Point(316, 140);
+            this.btnSi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSi.Name = "btnSi";
-            this.btnSi.Size = new System.Drawing.Size(98, 23);
+            this.btnSi.Size = new System.Drawing.Size(131, 28);
             this.btnSi.TabIndex = 7;
             this.btnSi.Text = "Si";
             this.btnSi.UseVisualStyleBackColor = true;
@@ -69,12 +72,13 @@ namespace ProyectoOOIA.Ventanas
             // 
             // frmAgregarEventoAlumno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 206);
+            this.ClientSize = new System.Drawing.Size(545, 236);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnSi);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAgregarEventoAlumno";
             this.Text = "frmAgregarEventoAlumno";
             this.ResumeLayout(false);

@@ -272,6 +272,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDetalleCita";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDetalleCita";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
