@@ -6,18 +6,14 @@ namespace ProyectoOOIA.Ventanas
     public partial class frmVistadeEvento : Form
     {
         private int flag;
-        frmPrincipalEventos principalEventos = null;
+        //frmPrincipalEventos principalEventos = null;
 
         public frmVistadeEvento()
         {
             InitializeComponent();
         }
 
-        public frmVistadeEvento(frmPrincipalEventos p)
-        {
-            principalEventos = p;
-            InitializeComponent();
-        }
+       
 
         public frmVistadeEvento(int flag)
         {
