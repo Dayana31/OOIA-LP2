@@ -30,8 +30,8 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaCitas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.PictureBox();
@@ -49,6 +49,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabCitasProgramadas = new System.Windows.Forms.TabPage();
             this.btnRegistrarCita = new System.Windows.Forms.Button();
             this.tabHistorialCitas = new System.Windows.Forms.TabPage();
+            this.btnAgregarOpinion = new System.Windows.Forms.Button();
             this.btnVerDetalle = new System.Windows.Forms.Button();
             this.dgvHistorialCitas = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,7 +97,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAtras.Location = new System.Drawing.Point(851, 20);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(47, 42);
             this.btnAtras.TabIndex = 13;
@@ -131,14 +132,14 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.dgvCitasProgramadas.AllowUserToDeleteRows = false;
             this.dgvCitasProgramadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCitasProgramadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCitasProgramadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCitasProgramadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCitasProgramadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -209,7 +210,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnEliminarCita
             // 
-            this.btnEliminarCita.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEliminarCita.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnEliminarCita.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnEliminarCita.Location = new System.Drawing.Point(725, 342);
             this.btnEliminarCita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -263,7 +264,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnRegistrarCita
             // 
-            this.btnRegistrarCita.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRegistrarCita.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnRegistrarCita.ForeColor = System.Drawing.SystemColors.InfoText;
             this.btnRegistrarCita.Location = new System.Drawing.Point(572, 342);
             this.btnRegistrarCita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -276,25 +277,39 @@ namespace ProyectoOOIA.Ventanas
             // 
             // tabHistorialCitas
             // 
+            this.tabHistorialCitas.Controls.Add(this.btnAgregarOpinion);
             this.tabHistorialCitas.Controls.Add(this.btnVerDetalle);
             this.tabHistorialCitas.Controls.Add(this.dgvHistorialCitas);
             this.tabHistorialCitas.Location = new System.Drawing.Point(4, 30);
             this.tabHistorialCitas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabHistorialCitas.Name = "tabHistorialCitas";
             this.tabHistorialCitas.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabHistorialCitas.Size = new System.Drawing.Size(916, 410);
+            this.tabHistorialCitas.Size = new System.Drawing.Size(916, 411);
             this.tabHistorialCitas.TabIndex = 1;
             this.tabHistorialCitas.Text = "Historial de citas";
             this.tabHistorialCitas.UseVisualStyleBackColor = true;
             // 
+            // btnAgregarOpinion
+            // 
+            this.btnAgregarOpinion.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAgregarOpinion.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btnAgregarOpinion.Location = new System.Drawing.Point(545, 346);
+            this.btnAgregarOpinion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarOpinion.Name = "btnAgregarOpinion";
+            this.btnAgregarOpinion.Size = new System.Drawing.Size(137, 30);
+            this.btnAgregarOpinion.TabIndex = 7;
+            this.btnAgregarOpinion.Text = "Agregar opinión";
+            this.btnAgregarOpinion.UseVisualStyleBackColor = false;
+            this.btnAgregarOpinion.Click += new System.EventHandler(this.btnAgregarOpinion_Click);
+            // 
             // btnVerDetalle
             // 
-            this.btnVerDetalle.BackColor = System.Drawing.SystemColors.Control;
+            this.btnVerDetalle.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnVerDetalle.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnVerDetalle.Location = new System.Drawing.Point(721, 346);
+            this.btnVerDetalle.Location = new System.Drawing.Point(714, 346);
             this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVerDetalle.Name = "btnVerDetalle";
-            this.btnVerDetalle.Size = new System.Drawing.Size(128, 30);
+            this.btnVerDetalle.Size = new System.Drawing.Size(135, 30);
             this.btnVerDetalle.TabIndex = 6;
             this.btnVerDetalle.Text = "Ver detalle";
             this.btnVerDetalle.UseVisualStyleBackColor = false;
@@ -304,14 +319,14 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.dgvHistorialCitas.AllowUserToDeleteRows = false;
             this.dgvHistorialCitas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorialCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorialCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHistorialCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -442,5 +457,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Button btnRegistrarCita;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnAgregarOpinion;
     }
 }
