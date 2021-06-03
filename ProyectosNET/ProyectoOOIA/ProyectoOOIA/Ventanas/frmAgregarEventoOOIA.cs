@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmListaDeEventos : Form
+    public partial class frmAgregarEventoOOIA : Form
     {
-        public frmListaDeEventos()
+        public frmAgregarEventoOOIA()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNo_Click(object sender, EventArgs e)
         {
-            new frmVistadeEvento(2).Show();
             this.Close();
         }
 
-        private void btAtras_Click(object sender, EventArgs e)
+        private void btnSi_Click(object sender, EventArgs e)
         {
-            new CategoriasEventos().Show();
+            MessageBox.Show("Su registro fue exitoso", "Mensaje de confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
     }
