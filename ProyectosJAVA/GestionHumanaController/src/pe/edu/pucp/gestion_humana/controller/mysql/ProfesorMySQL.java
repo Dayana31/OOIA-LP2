@@ -37,11 +37,11 @@ public class ProfesorMySQL implements ProfesorDAO {
                 profesor.setDni(rs.getString("dni"));
                 profesor.setEdad(rs.getInt("edad"));
                 profesor.setDireccion(rs.getString("direccion"));
-                
+                profesor.setCorreo(rs.getString("correo"));
                 profesor.setUsuario_pucp(rs.getString("usuario_pucp"));
                 profesor.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                
-                profesor.setEspecialidad(new Especialidad(rs.getInt("fid_especialidad"),rs.getString("nombre_especialidad")));
+                profesor.setEspecialidad(new Especialidad(rs.getInt("id_especialidad"),rs.getString("nombre_especialidad")));
                 profesor.setFacultad(rs.getString("facultad"));
                 profesor.setCategoria(rs.getString("categoria"));
                 profesor.setEstado(1);
@@ -64,13 +64,14 @@ public class ProfesorMySQL implements ProfesorDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_profesor(?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call insertar_profesor(?,?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_profesor", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", profesor.getNombre());
             cs.setString("_dni", profesor.getDni());
             cs.setInt("_edad", profesor.getEdad());
             cs.setString("_direccion", profesor.getDireccion());
+            cs.setString("_correo", profesor.getCorreo());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", profesor.getUsuario_pucp());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(profesor.getFecha_inclusion().getTime()));
@@ -96,13 +97,15 @@ public class ProfesorMySQL implements ProfesorDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_profesor(?,?,?,?,?,?,?,?,?)}");
-            cs.registerOutParameter("_id_profesorm", java.sql.Types.INTEGER);
+            cs = con.prepareCall("{call modificar_profesor(?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs.setInt("_id_persona", profesor.getId_persona());
+            cs.setInt("_id_profesor", profesor.getId_profesor());
             /*Persona*/
             cs.setString("_nombre", profesor.getNombre());
             cs.setString("_dni", profesor.getDni());
             cs.setInt("_edad", profesor.getEdad());
             cs.setString("_direccion", profesor.getDireccion());
+            cs.setString("_correo", profesor.getCorreo());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", profesor.getUsuario_pucp());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(profesor.getFecha_inclusion().getTime()));

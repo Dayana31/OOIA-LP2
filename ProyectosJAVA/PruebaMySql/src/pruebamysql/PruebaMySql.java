@@ -13,6 +13,7 @@ import pe.edu.pucp.gestion_academica.model.Categoria;
 import pe.edu.pucp.gestion_academica.model.Curso;
 import pe.edu.pucp.gestion_atencion.controller.mysql.CodigoAtencionMySQL;
 import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
+import pe.edu.pucp.gestion_humana.controller.mysql.EspecialidadMySQL;
 import pe.edu.pucp.gestion_humana.controller.mysql.ProfesorMySQL;
 import pe.edu.pucp.gestion_humana.model.Especialidad;
 import pe.edu.pucp.gestion_humana.model.Profesor;
@@ -29,7 +30,12 @@ public class PruebaMySql {
     public static void main(String[] args) {
         //  pruebaCategoria();
        // pruebaCodigoAtencion();
-       pruebaProfesor();
+        //pruebaProfesor();
+//       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Informatica"));
+//       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Mecatronica"));
+//       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Industrial"));
+//       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Electrica"));
+    
 
     }
     
@@ -65,22 +71,29 @@ public class PruebaMySql {
         codigoAtencionMySQL.modificar(new CodigoAtencion(1, "MMM999", "Codigo cambiado"));
         prueba.impresion(codigoAtencionMySQL.listar());
     }
-    private static void pruebaProfesor(){
+    private static void pruebaProfesor() {
                 Prueba prueba = new Prueba();
                 Profesor profesor= new Profesor();
                 ProfesorMySQL profesorMySQL=new ProfesorMySQL();
-//                profesor.setNombre("Rony Cave Moscoso");
-//                profesor.setDni("98765432");
-//                profesor.setEdad(40);
-//                profesor.setDireccion("En algun lugar de Arequipa");
-//                profesor.setUsuario_pucp("25896314");
-//                profesor.setFecha_inclusion(new Date(1993  ,5   , 2));              
-//                profesor.setEspecialidad(new Especialidad(7, "lo que sea"));
-//                profesor.setFacultad("Ingenieria Informatica");
-//                profesor.setCategoria("No se que sea esto");
-//                profesorMySQL.insertar(profesor);
+                profesor.setNombre("Freddy Paz");
+                profesor.setDni("98765432");
+                profesor.setEdad(40);
+                profesor.setDireccion("En algun lugar de Lima");
+                profesor.setUsuario_pucp("25896314");
+                profesor.setFecha_inclusion(new Date(0, 10, 5));
+               profesor.setCorreo("Rony@pucp.edu.pe");
+                profesor.setEspecialidad(new Especialidad(1, ""));
+                profesor.setFacultad("Ciencias e Ingenieria");
+                profesor.setCategoria("Contratado");
+                //profesorMySQL.insertar(profesor);
+                profesor.setId_persona(3);
+                profesor.setId_profesor(1);
+                profesor.setNombre("Rony cueva modificado");
+                
+                //profesorMySQL.modificar(profesor);
+                //profesorMySQL.eliminar(profesor);
                 prueba.impresion(profesorMySQL.listar());
-    }
+    } 
     
     
     
