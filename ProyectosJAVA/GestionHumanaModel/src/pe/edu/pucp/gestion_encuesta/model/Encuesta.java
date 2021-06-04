@@ -11,6 +11,8 @@ public class Encuesta {
     private double puntaje;
     private String descripcion;
     private MiembroPUCP asesor;
+    
+    
 
     public Encuesta(int id_encuesta, Alumno alumno, double puntaje, String descripcion, MiembroPUCP asesor) {
         this.id_encuesta = id_encuesta;
@@ -63,6 +65,11 @@ public class Encuesta {
 
     public void setAsesor(MiembroPUCP asesor) {
         this.asesor = asesor;
+    }
+
+    @Override
+    public String toString() {
+        return "Encuesta{" + "id_encuesta=" + id_encuesta + ", id_alumno=" + getAlumno().getId_alumno() + ", puntaje=" + puntaje + ", descripcion=" + descripcion;
     }
     
     
