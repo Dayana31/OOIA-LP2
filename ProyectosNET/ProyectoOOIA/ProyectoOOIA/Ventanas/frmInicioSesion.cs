@@ -80,7 +80,7 @@ namespace ProyectoOOIA.Ventanas
                     new frmNuevoPrincipal().Show();
                 }else if(rbtTutor.Checked == true)
                 {
-                    new frmPrincipalProfesor().Show();
+                    new frmPrincipalAsesor().Show();
                 }
                 else
                 {

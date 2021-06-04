@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmConfirmarCancelar : Form
+    public partial class frmConfirmarCancelarAsesor : Form
     {
-        public frmConfirmarCancelar()
+        public frmConfirmarCancelarAsesor()
         {
             InitializeComponent();
         }

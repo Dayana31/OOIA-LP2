@@ -3,19 +3,19 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmHorario : Form
+    public partial class frmHorarioProfesor : Form
     {
 
         //private Horario _horarioSeleccionado;
 
-        public frmHorario()
+        public frmHorarioProfesor()
         {
             InitializeComponent();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            new frmPrincipalProfesor().Show();
+            new frmPrincipalAsesor().Show();
             this.Close();
         }
 
@@ -32,7 +32,7 @@ namespace ProyectoOOIA.Ventanas
             if(_horarioSeleccionado.Estado == Libre || _horarioSeleccionado == Ocupado)
                 new frmModificatCita().ShowDialog();
             else if(_horarioSeleccionado.Estado == Reservado)*/
-            new frmCancelarCita().ShowDialog();
+            new frmCancelarCitaAsesor().ShowDialog();
         }
 
         private void btnBuscarHorario_Click(object sender, EventArgs e)

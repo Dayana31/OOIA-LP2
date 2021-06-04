@@ -25,7 +25,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            new frmPrincipalProfesor().Show();
+            new frmPrincipalAsesor().Show();
             this.Close();
         }
 
@@ -67,7 +67,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new frmEliminarEventoAlum().Show();
+            new frmCancelarEventoAlumno().Show();
         }
 
         private void button5_Click_1(object sender, EventArgs e)

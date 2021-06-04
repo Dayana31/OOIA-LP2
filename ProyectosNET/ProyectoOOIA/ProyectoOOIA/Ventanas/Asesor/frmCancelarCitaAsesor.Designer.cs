@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas
 {
-    partial class frmCancelarCita
+    partial class frmCancelarCitaAsesor
     {
         /// <summary>
         /// Required designer variable.

@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmPrincipalProfesor : Form
+    public partial class frmPrincipalAsesor : Form
     {
         private int indice;
         private BindingList<Bitmap> listaImagenes=new BindingList<Bitmap>();
 
-        public frmPrincipalProfesor()
+        public frmPrincipalAsesor()
         {
             InitializeComponent();
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
@@ -42,7 +42,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new frmHorario().Show();
+            new frmHorarioProfesor().Show();
             this.Close();
         }
 

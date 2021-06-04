@@ -61,7 +61,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void botonCitas_Click(object sender, EventArgs e)
         {
-            new frmListaCitas().Show();
+            new frmListaCitasAlumno().Show();
             this.Close();
         }
 

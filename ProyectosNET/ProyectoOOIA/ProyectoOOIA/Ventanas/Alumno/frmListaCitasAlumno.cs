@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmListaCitas : Form
+    public partial class frmListaCitasAlumno : Form
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -12,7 +12,7 @@ namespace ProyectoOOIA.Ventanas
         private extern static void SendMessage(System.IntPtr hWnd,
             int wMsg, int wParam, int lParam);
 
-        public frmListaCitas()
+        public frmListaCitasAlumno()
         {
             InitializeComponent();
             //esto hace que no se genere mas columnas de las que yo he 
@@ -60,7 +60,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnRegistrarCita_Click(object sender, EventArgs e)
         {
-            new frmCitaRegistro().ShowDialog();
+            new frmCitaRegistroAlumno().ShowDialog();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)

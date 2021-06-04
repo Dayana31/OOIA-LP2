@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas
 {
-    partial class frmPrincipalProfesor
+    partial class frmPrincipalAsesor
     {
         /// <summary>
         /// Required designer variable.

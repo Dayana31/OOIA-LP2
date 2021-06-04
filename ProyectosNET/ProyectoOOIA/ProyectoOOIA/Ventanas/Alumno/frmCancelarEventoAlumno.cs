@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmEliminarEventoAlum : Form
+    public partial class frmCancelarEventoAlumno : Form
     {
-        public frmEliminarEventoAlum()
+        public frmCancelarEventoAlumno()
         {
             InitializeComponent();
         }

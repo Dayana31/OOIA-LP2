@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmCitaRegistro : Form
+    public partial class frmCitaRegistroAlumno : Form
     {
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -12,14 +12,14 @@ namespace ProyectoOOIA.Ventanas
         private extern static void SendMessage(System.IntPtr hWnd,
             int wMsg, int wParam, int lParam);
 
-        public frmCitaRegistro()
+        public frmCitaRegistroAlumno()
         {
             InitializeComponent();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            new frmConfirmacionCita().ShowDialog();
+            new frmConfirmarCitaAlumno().ShowDialog();
             //verificar si confirme o no
             //this.Close();
         }

@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmCancelarCita : Form
+    public partial class frmCancelarCitaAsesor : Form
     {
-        public frmCancelarCita()
+        public frmCancelarCitaAsesor()
         {
             InitializeComponent();
         }
@@ -49,7 +49,7 @@ namespace ProyectoOOIA.Ventanas
         private void btnCancelarCita_Click(object sender, EventArgs e)
         {
 
-            new frmConfirmarCancelar().Show();
+            new frmConfirmarCancelarAsesor().Show();
             this.Close();
         }
 

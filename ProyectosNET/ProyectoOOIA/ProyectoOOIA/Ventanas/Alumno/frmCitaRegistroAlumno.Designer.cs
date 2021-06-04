@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas
 {
-    partial class frmCitaRegistro
+    partial class frmCitaRegistroAlumno
     {
         /// <summary>
         /// Required designer variable.

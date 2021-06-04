@@ -75,7 +75,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            new frmHorario().Show();
+            new frmHorarioProfesor().Show();
             this.Close();
         }
     }
