@@ -8,15 +8,16 @@ public abstract class MiembroExterno extends Persona{
 
     public MiembroExterno() {
     }
-    
 
-    public MiembroExterno(int id_persona, String dni, String nombre, int edad, String direccion,
-                          int id_miembro_externo, int telefono, String ocupacion) {
-        super(id_persona, dni, nombre, edad, direccion);
+    public MiembroExterno(int id_miembro_externo, int telefono, String ocupacion, int id_persona, String dni, String nombre, int edad, String direccion, String correo) {
+        super(id_persona, dni, nombre, edad, direccion, correo);
         this.id_miembro_externo = id_miembro_externo;
         this.telefono = telefono;
         this.ocupacion = ocupacion;
     }
+    
+
+  
 
     public int getId_miembro_externo() {
         return id_miembro_externo;
