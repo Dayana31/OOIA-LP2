@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_humana.controller.dao.AlumnoDAO;
 import pe.edu.pucp.gestion_humana.model.Alumno;
+import pe.edu.pucp.gestion_humana.model.Especialidad;
 
 /**
  *
@@ -39,7 +40,10 @@ public class AlumnoMySQL implements AlumnoDAO{
                 alumno.setFecha_inclusion(rs.getDate("fecha_inclusion"));
                
                 alumno.setCodigo_pucp(rs.getString("codigo_pucp"));
-                alumno.setEspecialidad(rs.getString("especialidad"));
+                
+                
+                alumno.getEspecialidad().setId_especialidad(rs.getInt("fid_especialidad"));
+                
                 alumno.setCraest(rs.getDouble("craest"));
                 alumno.setEstado(rs.getInt("estado"));
                 
@@ -63,7 +67,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_alumno(?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call insertar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_alumno", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", alumno.getNombre());
@@ -72,13 +76,18 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", alumno.getUsuario_pucp());
-            cs.setDate("_fecha_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
+            cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
             /*Alumno*/
             cs.setString("_codigo_pucp", alumno.getCodigo_pucp());
-            cs.setString("_especialidad", alumno.getEspecialidad());
+            cs.setInt("_fid_especialidad", alumno.getEspecialidad().getId_especialidad());
             cs.setDouble("_craest", alumno.getCraest());
+            
+            cs.setInt("_cursos_por_primera", alumno.getCursos_por_primera());
+            cs.setInt("_cursos_por_segunda", alumno.getCursos_por_segunda());
+            cs.setInt("_cursos_por_tercera", alumno.getCursos_por_tercera());
+                    
             cs.executeUpdate();
-            alumno.setId_persona(cs.getInt("_id_psicologo"));
+            alumno.setId_persona(cs.getInt("_id_alumno"));
             resultado = 1;
             cs.close();
         }catch(Exception ex){
@@ -104,10 +113,10 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", alumno.getUsuario_pucp());
-            cs.setDate("_fecha_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
+            cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
             /*Alumno*/
             cs.setString("_codigo_pucp", alumno.getCodigo_pucp());
-            cs.setString("_especialidad", alumno.getEspecialidad());
+            cs.setString("_especialidad", alumno.getEspecialidad().getNombre_especialidad());
             cs.setDouble("_craest", alumno.getCraest());
             cs.executeUpdate();
             resultado = 1;

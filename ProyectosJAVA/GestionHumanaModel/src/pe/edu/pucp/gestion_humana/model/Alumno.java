@@ -7,7 +7,7 @@ import pe.edu.pucp.gestion_atencion.model.CitaOOIA;
 public class Alumno extends MiembroPUCP {
     private int id_alumno;
     private String codigo_pucp;
-    private String especialidad;
+    private Especialidad especialidad;
     private double craest;
     private int estado;
     private int cursos_por_primera;
@@ -19,17 +19,16 @@ public class Alumno extends MiembroPUCP {
 
     public Alumno() {
     }
-        
-    public Alumno(int id_persona, String dni, String nombre, int edad, String direccion,
-                  int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion,
-                  int id_alumno, String codigo_pucp, String especialidad, int craest, int estado) {
-        super(id_persona, dni, nombre, edad, direccion, id_miembro_pucp, usuario_pucp, fecha_inclusion);
-        this.id_alumno = id_alumno;
-        this.codigo_pucp = codigo_pucp;
-        this.especialidad = especialidad;
-        this.craest = craest;
-        this.estado = estado;
+
+    public Especialidad getEspecialidad() {
+        return especialidad;
     }
+
+    public void setEspecialidad(Especialidad especialidad) {
+        this.especialidad = especialidad;
+    }
+        
+    
 
     public int getId_alumno() {
         return id_alumno;
@@ -47,13 +46,7 @@ public class Alumno extends MiembroPUCP {
         this.codigo_pucp = codigo_pucp;
     }
     
-    public String getEspecialidad() {
-        return especialidad;
-    }
-
-    public void setEspecialidad(String especialidad) {
-        this.especialidad = especialidad;
-    }
+    
     
     public double getCraest() {
         return craest;
