@@ -38,14 +38,15 @@ namespace ProyectoOOIA.Ventanas
             this.dgvPonentes = new System.Windows.Forms.DataGridView();
             this.nombreDelPonente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.atras = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreEvento = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtHoraInicio = new System.Windows.Forms.TextBox();
             this.txtHoraFin = new System.Windows.Forms.TextBox();
+            this.btnAtras = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -163,18 +164,6 @@ namespace ProyectoOOIA.Ventanas
             this.txtDescripcion.Size = new System.Drawing.Size(404, 110);
             this.txtDescripcion.TabIndex = 10;
             // 
-            // atras
-            // 
-            this.atras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrow;
-            this.atras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.atras.Location = new System.Drawing.Point(991, 13);
-            this.atras.Margin = new System.Windows.Forms.Padding(4);
-            this.atras.Name = "atras";
-            this.atras.Size = new System.Drawing.Size(63, 44);
-            this.atras.TabIndex = 11;
-            this.atras.UseVisualStyleBackColor = true;
-            this.atras.Click += new System.EventHandler(this.atras_Click);
-            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
@@ -225,17 +214,28 @@ namespace ProyectoOOIA.Ventanas
             this.txtHoraFin.Size = new System.Drawing.Size(169, 31);
             this.txtHoraFin.TabIndex = 16;
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Image = global::ProyectoOOIA.Properties.Resources.arrow;
+            this.btnAtras.Location = new System.Drawing.Point(989, 12);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(57, 44);
+            this.btnAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnAtras.TabIndex = 17;
+            this.btnAtras.TabStop = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // frmVistadeEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.txtHoraFin);
             this.Controls.Add(this.txtHoraInicio);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtNombreEvento);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.atras);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.dgvPonentes);
             this.Controls.Add(this.pictureBox1);
@@ -250,6 +250,7 @@ namespace ProyectoOOIA.Ventanas
             this.Text = "Vista de evento";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,12 +266,12 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvPonentes;
         private System.Windows.Forms.TextBox txtDescripcion;
-        private System.Windows.Forms.Button atras;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDelPonente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNombreEvento;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtHoraInicio;
         private System.Windows.Forms.TextBox txtHoraFin;
+        private System.Windows.Forms.PictureBox btnAtras;
     }
 }

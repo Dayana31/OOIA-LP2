@@ -75,7 +75,13 @@ namespace ProyectoOOIA.Ventanas
             new frmVistadeEvento().Show();
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            new frmNuevoPrincipal().Show();
+            this.Close();
+        }
+
+        private void btnAtras_Click_1(object sender, EventArgs e)
         {
             new frmNuevoPrincipal().Show();
             this.Close();

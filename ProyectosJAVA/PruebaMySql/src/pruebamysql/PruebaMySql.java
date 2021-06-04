@@ -45,7 +45,7 @@ public class PruebaMySql {
     }
     private static void pruebaCurso(){
         Prueba prueba=new Prueba();
-        Curso curso=new Curso("INF281", "Lenguajes de Programación 1", 1);
+        Curso curso= new Curso("INF281", "Lenguajes de Programación 1", 1);
         CursoMySQL cursoMySQL=new CursoMySQL();
         cursoMySQL.insertar(curso);
         //cambiar Lenguaje de programacion 2 a ingeco

@@ -36,7 +36,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(85, 118);
+            this.btnNo.Location = new System.Drawing.Point(81, 132);
             this.btnNo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(131, 28);
@@ -49,7 +49,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblMensaje.AutoSize = true;
             this.lblMensaje.Font = new System.Drawing.Font("Gill Sans MT", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.Location = new System.Drawing.Point(51, 56);
+            this.lblMensaje.Location = new System.Drawing.Point(62, 51);
             this.lblMensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMensaje.MaximumSize = new System.Drawing.Size(400, 0);
             this.lblMensaje.Name = "lblMensaje";
@@ -60,7 +60,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnSi
             // 
-            this.btnSi.Location = new System.Drawing.Point(278, 118);
+            this.btnSi.Location = new System.Drawing.Point(288, 132);
             this.btnSi.Margin = new System.Windows.Forms.Padding(4);
             this.btnSi.Name = "btnSi";
             this.btnSi.Size = new System.Drawing.Size(131, 28);
@@ -73,7 +73,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 214);
+            this.ClientSize = new System.Drawing.Size(507, 214);
             this.Controls.Add(this.btnNo);
             this.Controls.Add(this.lblMensaje);
             this.Controls.Add(this.btnSi);
