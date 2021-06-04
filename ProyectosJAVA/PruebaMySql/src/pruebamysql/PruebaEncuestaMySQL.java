@@ -9,7 +9,10 @@ import java.util.ArrayList;
 import pe.edu.pucp.gestion_encuesta.controller.dao.EncuestaDAO;
 import pe.edu.pucp.gestion_encuesta.controller.mysql.EncuestaMySQL;
 import pe.edu.pucp.gestion_encuesta.model.Encuesta;
+import pe.edu.pucp.gestion_humana.controller.dao.InvitadoDAO;
+import pe.edu.pucp.gestion_humana.controller.mysql.InvitadoMySQL;
 import pe.edu.pucp.gestion_humana.model.Alumno;
+import pe.edu.pucp.gestion_humana.model.Invitado;
 import pe.edu.pucp.gestion_humana.model.MiembroPUCP;
 import pe.edu.pucp.gestion_humana.model.Profesor;
 
@@ -45,5 +48,27 @@ public class PruebaEncuestaMySQL {
         
         for(Encuesta a: encuestas)
             System.out.println(a);
+//        
+        InvitadoDAO daoInvitado = new InvitadoMySQL();
+//        Invitado invitado = new Invitado();
+//        invitado.setNombre("Junior Pérez");
+//        invitado.setCorreo("junior.perez@hotmail.com");
+//        invitado.setDireccion("Lima");
+//        invitado.setDni("284791948");
+//        invitado.setOcupacion("Medico");
+//        invitado.setId_invitado(2);
+//        invitado.setId_persona(6);
+//        invitado.setEdad(40);
+//        invitado.setTelefono(928381838);
+//        int resultado = daoInvitado.eliminar(invitado);
+//        if(resultado==1){
+//            System.out.println("Se ha eliminado con exito");
+//        }
+
+          ArrayList<Invitado> invitados = new ArrayList<>();
+          invitados = daoInvitado.listar();
+          for(Invitado i : invitados)
+                System.out.println(i);
+        
     }
 }

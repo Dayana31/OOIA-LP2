@@ -34,7 +34,7 @@ public class InvitadoMySQL implements InvitadoDAO{
                 invitado.setDni(rs.getString("dni"));
                 invitado.setEdad(rs.getInt("edad"));
                 invitado.setDireccion(rs.getString("direccion"));
-                
+                invitado.setCorreo(rs.getString("correo"));
                 invitado.setTelefono(rs.getInt("telefono"));
                 invitado.setOcupacion(rs.getString("ocupacion"));
                
@@ -56,12 +56,13 @@ public class InvitadoMySQL implements InvitadoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_invitado(?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call insertar_invitado(?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_invitado", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", invitado.getNombre());
             cs.setString("_dni", invitado.getDni());
             cs.setInt("_edad", invitado.getEdad());
+            cs.setString("_correo", invitado.getCorreo());
             cs.setString("_direccion", invitado.getDireccion());
             /*Miembro Externo*/
             cs.setInt("_telefono", invitado.getTelefono());
@@ -85,12 +86,14 @@ public class InvitadoMySQL implements InvitadoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_invitado(?,?,?,?,?,?,?)}");
-            cs.registerOutParameter("_id_invitado", java.sql.Types.INTEGER);
+            cs = con.prepareCall("{call modificar_invitado(?,?,?,?,?,?,?,?,?)}");
+            cs.setInt("_id_persona", invitado.getId_persona());
+            cs.setInt("_id_invitado", invitado.getId_invitado());
             /*Persona*/
             cs.setString("_nombre", invitado.getNombre());
             cs.setString("_dni", invitado.getDni());
             cs.setInt("_edad", invitado.getEdad());
+            cs.setString("_correo", invitado.getCorreo());
             cs.setString("_direccion", invitado.getDireccion());
             /*Miembro Externo*/
             cs.setInt("_telefono", invitado.getTelefono());
@@ -113,7 +116,7 @@ public class InvitadoMySQL implements InvitadoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call eliminar_psicologo(?)}");
+            cs = con.prepareCall("{call eliminar_invitado(?)}");
             cs.setInt("_id_invitado", invitado.getId_invitado());
             cs.executeUpdate();
             resultado = 1;

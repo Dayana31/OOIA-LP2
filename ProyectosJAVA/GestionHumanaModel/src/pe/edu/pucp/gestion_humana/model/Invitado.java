@@ -14,7 +14,6 @@ public class Invitado extends MiembroExterno implements IConsultable{
     }
     
 
-
     
     public int getId_invitado() {
         return id_invitado;
@@ -30,6 +29,14 @@ public class Invitado extends MiembroExterno implements IConsultable{
         int hi;
         return "Hola";
     }
+
+    @Override
+    public String toString() {
+        return this.getId_persona() + "-"+ this.getNombre()+ "-" + 
+                this.getCorreo() + "-" +this.getDireccion() + "-"+ this.getDni() +
+                "-" + this.getOcupacion() + "-"+ this.getEdad() + "-" + this.getTelefono();
+    }
+
     
     
     
