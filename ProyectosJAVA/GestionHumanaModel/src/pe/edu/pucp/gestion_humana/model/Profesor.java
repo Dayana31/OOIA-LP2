@@ -7,7 +7,7 @@ import pe.edu.pucp.gestion_atencion.model.Horario;
 
 public class Profesor extends MiembroPUCP {
     private int id_profesor;
-    private String especialidad;
+    private Especialidad especialidad;
     private String facultad;
     private String categoria;
     private int estado;
@@ -16,7 +16,7 @@ public class Profesor extends MiembroPUCP {
 
     public Profesor(int id_persona, String dni, String nombre, int edad, String direccion, 
                     int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion, 
-                    int id_profesor, String especialidad, String facultad, String categoria, int estado) {
+                    int id_profesor, Especialidad especialidad, String facultad, String categoria, int estado) {
         super(id_persona, dni, nombre, edad, direccion, id_miembro_pucp, usuario_pucp, fecha_inclusion);
         this.id_profesor = id_profesor;
         this.especialidad = especialidad;
@@ -38,11 +38,11 @@ public class Profesor extends MiembroPUCP {
         this.id_profesor = id_alumno;
     }
 
-    public String getEspecialidad() {
+    public Especialidad getEspecialidad() {
         return especialidad;
     }
 
-    public void setEspecialidad(String especialidad) {
+    public void setEspecialidad(Especialidad especialidad) {
         this.especialidad = especialidad;
     }
 
@@ -92,5 +92,12 @@ public class Profesor extends MiembroPUCP {
     public String consultarDatos() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public String toString() {
+        return "Profesor{" + "id_profesor=" + id_profesor + ", especialidad=" + especialidad + ", facultad=" + facultad + ", categoria=" + categoria + ", estado=" + estado + ", cursosDicta=" + cursosDicta + ", horariosDisponibles=" + horariosDisponibles + '}';
+    }
+    
+    
 }
 

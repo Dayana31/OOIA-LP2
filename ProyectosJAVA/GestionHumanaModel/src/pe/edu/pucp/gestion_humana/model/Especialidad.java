@@ -32,5 +32,10 @@ public class Especialidad {
     public void setNombre_especialidad(String nombre_especialidad) {
         this.nombre_especialidad = nombre_especialidad;
     }
+
+    @Override
+    public String toString() {
+        return "Especialidad{" + "id_especialidad=" + id_especialidad + ", nombre_especialidad=" + nombre_especialidad + '}';
+    }
     
 }
