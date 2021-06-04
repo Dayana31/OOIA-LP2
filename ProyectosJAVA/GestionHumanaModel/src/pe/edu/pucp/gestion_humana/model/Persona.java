@@ -8,7 +8,7 @@ public abstract class Persona implements IConsultable {
     private String nombre;
     private int edad;
     private String direccion;
-    private ArrayList<String> correos;
+    private String correo;
 
     public Persona() {
     }
@@ -45,17 +45,15 @@ public abstract class Persona implements IConsultable {
         this.nombre = nombre;
     }
 
-    public void setCorreo(String correo){
-        correos.add(correo);
-    }
-    
-    public ArrayList<String> getCorreos() {
-        return correos;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setCorreos(ArrayList<String> correos) {
-        this.correos = correos;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
+
+   
 
     public int getEdad() {
         return edad;
