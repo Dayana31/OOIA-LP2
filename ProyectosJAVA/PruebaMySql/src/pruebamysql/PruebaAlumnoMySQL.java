@@ -52,7 +52,7 @@ public class PruebaAlumnoMySQL {
         ArrayList<String> correos = new ArrayList<>();
         correos.add("asdasdas@pucp.edu.pe");
         correos.add("asdasd@gmail.com");
-        alum.setCorreos(correos);
+        //alum.setCorreos(correos);
         
         //Atributos miembro pucp
         alum.setId_miembro_pucp(232323);

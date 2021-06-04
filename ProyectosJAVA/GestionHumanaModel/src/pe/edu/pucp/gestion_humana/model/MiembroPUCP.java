@@ -9,14 +9,16 @@ public abstract class MiembroPUCP extends Persona{
 
     public MiembroPUCP() {
     }
-   
-    public MiembroPUCP(int id_persona, String dni, String nombre, int edad, String direccion,
-                       int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion) {
-        super(id_persona, dni, nombre, edad, direccion);
+
+    public MiembroPUCP(int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion, int id_persona, 
+            String dni, String nombre, int edad, String direccion, String correo) {
+        super(id_persona, dni, nombre, edad, direccion, correo);
         this.id_miembro_pucp = id_miembro_pucp;
         this.usuario_pucp = usuario_pucp;
         this.fecha_inclusion = fecha_inclusion;
     }
+   
+
 
     public int getId_miembro_pucp() {
         return id_miembro_pucp;
