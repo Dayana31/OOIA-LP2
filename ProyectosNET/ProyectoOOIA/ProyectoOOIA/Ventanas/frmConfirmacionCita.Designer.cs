@@ -36,7 +36,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnNo
             // 
-            this.btnNo.Location = new System.Drawing.Point(85, 118);
+            this.btnNo.Location = new System.Drawing.Point(81, 132);
             this.btnNo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(131, 28);
@@ -60,7 +60,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnSi
             // 
-            this.btnSi.Location = new System.Drawing.Point(278, 118);
+            this.btnSi.Location = new System.Drawing.Point(277, 132);
             this.btnSi.Margin = new System.Windows.Forms.Padding(4);
             this.btnSi.Name = "btnSi";
             this.btnSi.Size = new System.Drawing.Size(131, 28);

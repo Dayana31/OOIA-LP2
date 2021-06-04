@@ -35,7 +35,7 @@ namespace ProyectoOOIA.Ventanas
             this.Close();
         }
 
-        private void atras_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)
         {
             this.Close();
         }

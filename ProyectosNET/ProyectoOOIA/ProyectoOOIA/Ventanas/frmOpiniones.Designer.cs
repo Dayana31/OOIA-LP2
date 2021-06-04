@@ -29,18 +29,19 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbOpiniones = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvOpiniones = new System.Windows.Forms.DataGridView();
             this.FotoDePerfil = new System.Windows.Forms.DataGridViewImageColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Opinion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOpiniones)).BeginInit();
             this.SuspendLayout();
             // 
             // lbOpiniones
             // 
             this.lbOpiniones.Font = new System.Drawing.Font("Gill Sans MT", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOpiniones.Location = new System.Drawing.Point(16, 11);
+            this.lbOpiniones.Location = new System.Drawing.Point(13, 11);
             this.lbOpiniones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbOpiniones.Name = "lbOpiniones";
             this.lbOpiniones.Size = new System.Drawing.Size(161, 58);
@@ -48,19 +49,29 @@ namespace ProyectoOOIA.Ventanas
             this.lbOpiniones.Text = "Opiniones";
             this.lbOpiniones.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dataGridView1
+            // dgvOpiniones
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvOpiniones.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOpiniones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvOpiniones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOpiniones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.FotoDePerfil,
             this.Nombre,
             this.Opinion});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 73);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1028, 448);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvOpiniones.EnableHeadersVisualStyles = false;
+            this.dgvOpiniones.Location = new System.Drawing.Point(16, 73);
+            this.dgvOpiniones.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvOpiniones.Name = "dgvOpiniones";
+            this.dgvOpiniones.RowHeadersWidth = 51;
+            this.dgvOpiniones.Size = new System.Drawing.Size(1028, 448);
+            this.dgvOpiniones.TabIndex = 4;
             // 
             // FotoDePerfil
             // 
@@ -89,14 +100,14 @@ namespace ProyectoOOIA.Ventanas
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvOpiniones);
             this.Controls.Add(this.lbOpiniones);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmOpiniones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Opiniones de tutores y psicologos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOpiniones)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -104,7 +115,7 @@ namespace ProyectoOOIA.Ventanas
         #endregion
 
         private System.Windows.Forms.Label lbOpiniones;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvOpiniones;
         private System.Windows.Forms.DataGridViewImageColumn FotoDePerfil;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Opinion;
