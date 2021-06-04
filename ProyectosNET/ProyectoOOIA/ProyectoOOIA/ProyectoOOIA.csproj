@@ -268,10 +268,10 @@
     <Compile Include="Ventanas\Alumno\frmRegistroEvento.Designer.cs">
       <DependentUpon>frmRegistroEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\frmRespuestaAcceso.cs">
+    <Compile Include="Ventanas\Alumno\frmRespuestaAcceso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\frmRespuestaAcceso.Designer.cs">
+    <Compile Include="Ventanas\Alumno\frmRespuestaAcceso.Designer.cs">
       <DependentUpon>frmRespuestaAcceso.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Alumno\frmVistadeEvento.cs">
@@ -392,7 +392,7 @@
     <EmbeddedResource Include="Ventanas\Alumno\frmRegistroEvento.resx">
       <DependentUpon>frmRegistroEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\frmRespuestaAcceso.resx">
+    <EmbeddedResource Include="Ventanas\Alumno\frmRespuestaAcceso.resx">
       <DependentUpon>frmRespuestaAcceso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\frmVistadeEvento.resx">
