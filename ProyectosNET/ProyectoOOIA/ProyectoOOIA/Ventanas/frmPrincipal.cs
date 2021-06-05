@@ -22,14 +22,14 @@ namespace ProyectoOOIA.Ventanas
             if (tipo == TipoUsuario.Asesor)
             {
                 btnEventos.Enabled = false;
-                btnEventos.Visible = false;
-                txtEventos.Visible = false;
+                //btnEventos.Visible = false;
+                txtEventos.ForeColor = Color.DimGray;
             }
             if (tipo == TipoUsuario.OOIA)
             {
                 btnCitas.Enabled = false;
-                btnCitas.Visible = false;
-                txtCitas.Visible = false;
+                //btnCitas.Visible = false;
+                txtCitas.ForeColor = Color.DimGray;
             }
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.EEGGCC);

@@ -276,21 +276,19 @@ namespace ProyectoOOIA.Ventanas
             this.btnTramites.Size = new System.Drawing.Size(220, 162);
             this.btnTramites.TabIndex = 21;
             this.btnTramites.UseVisualStyleBackColor = false;
-            this.btnTramites.Visible = false;
             // 
             // lblTramites
             // 
             this.lblTramites.AutoSize = true;
             this.lblTramites.Enabled = false;
             this.lblTramites.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTramites.ForeColor = System.Drawing.Color.Black;
-            this.lblTramites.Location = new System.Drawing.Point(69, 10);
+            this.lblTramites.ForeColor = System.Drawing.Color.DimGray;
+            this.lblTramites.Location = new System.Drawing.Point(63, 7);
             this.lblTramites.Name = "lblTramites";
             this.lblTramites.Size = new System.Drawing.Size(104, 26);
             this.lblTramites.TabIndex = 19;
             this.lblTramites.Text = "Trámites";
             this.lblTramites.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTramites.Visible = false;
             // 
             // tarjetaEvento3
             // 
