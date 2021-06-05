@@ -29,53 +29,49 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblOOIA = new System.Windows.Forms.Label();
+            this.lblIngresarContraseña = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnReestablecer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblOOIA
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Leelawadee", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(192, 57);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(349, 144);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "OOIA";
+            this.lblOOIA.AutoSize = true;
+            this.lblOOIA.Font = new System.Drawing.Font("Leelawadee", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOOIA.ForeColor = System.Drawing.Color.White;
+            this.lblOOIA.Location = new System.Drawing.Point(144, 46);
+            this.lblOOIA.Name = "lblOOIA";
+            this.lblOOIA.Size = new System.Drawing.Size(281, 115);
+            this.lblOOIA.TabIndex = 1;
+            this.lblOOIA.Text = "OOIA";
             // 
-            // label2
+            // lblIngresarContraseña
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(171, 233);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Ingrese su correo electronico:";
+            this.lblIngresarContraseña.AutoSize = true;
+            this.lblIngresarContraseña.ForeColor = System.Drawing.Color.White;
+            this.lblIngresarContraseña.Location = new System.Drawing.Point(128, 189);
+            this.lblIngresarContraseña.Name = "lblIngresarContraseña";
+            this.lblIngresarContraseña.Size = new System.Drawing.Size(147, 13);
+            this.lblIngresarContraseña.TabIndex = 2;
+            this.lblIngresarContraseña.Text = "Ingrese su correo electronico:";
             // 
             // txtContraseña
             // 
             this.txtContraseña.AccessibleName = "";
-            this.txtContraseña.Location = new System.Drawing.Point(175, 270);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContraseña.Location = new System.Drawing.Point(131, 219);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(377, 22);
+            this.txtContraseña.Size = new System.Drawing.Size(284, 20);
             this.txtContraseña.TabIndex = 3;
             this.txtContraseña.UseWaitCursor = true;
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Leelawadee", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(268, 383);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(201, 311);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(191, 50);
+            this.btnCancelar.Size = new System.Drawing.Size(143, 41);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -84,10 +80,9 @@ namespace ProyectoOOIA.Ventanas
             // btnReestablecer
             // 
             this.btnReestablecer.Font = new System.Drawing.Font("Leelawadee", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReestablecer.Location = new System.Drawing.Point(268, 325);
-            this.btnReestablecer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReestablecer.Location = new System.Drawing.Point(201, 264);
             this.btnReestablecer.Name = "btnReestablecer";
-            this.btnReestablecer.Size = new System.Drawing.Size(191, 50);
+            this.btnReestablecer.Size = new System.Drawing.Size(143, 41);
             this.btnReestablecer.TabIndex = 5;
             this.btnReestablecer.Text = "Reestablecer contraseña";
             this.btnReestablecer.UseVisualStyleBackColor = true;
@@ -95,17 +90,16 @@ namespace ProyectoOOIA.Ventanas
             // 
             // frmReestablecerContraseña
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.ClientSize = new System.Drawing.Size(729, 554);
+            this.ClientSize = new System.Drawing.Size(547, 450);
             this.Controls.Add(this.btnReestablecer);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Controls.Add(this.lblIngresarContraseña);
+            this.Controls.Add(this.lblOOIA);
             this.MaximizeBox = false;
             this.Name = "frmReestablecerContraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -117,8 +111,8 @@ namespace ProyectoOOIA.Ventanas
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblOOIA;
+        private System.Windows.Forms.Label lblIngresarContraseña;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnReestablecer;

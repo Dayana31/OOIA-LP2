@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class gestionEventosOOIA : Form
+    public partial class frmGestionEventosOOIA : Form
     {
-        public gestionEventosOOIA()
+        public frmGestionEventosOOIA()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -44,7 +34,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button9_Click(object sender, EventArgs e)
         {
-            new frmNuevoPrincipal().Show();
+            new frmPrincipal(TipoUsuario.OOIA).Show();
             this.Close();
         }
     }

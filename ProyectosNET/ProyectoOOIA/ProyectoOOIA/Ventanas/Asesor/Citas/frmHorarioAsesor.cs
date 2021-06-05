@@ -3,12 +3,12 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmHorarioProfesor : Form
+    public partial class frmHorarioAsesor : Form
     {
 
         //private Horario _horarioSeleccionado;
 
-        public frmHorarioProfesor()
+        public frmHorarioAsesor()
         {
             InitializeComponent();
         }

@@ -10,14 +10,27 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmNuevoPrincipal : Form
+    public partial class frmPrincipal : Form
     {
         private BindingList<Bitmap> listaImagenes=new BindingList<Bitmap>();
         private int indice = 0;
-        public frmNuevoPrincipal()
+        private TipoUsuario tipo;
+        public frmPrincipal(TipoUsuario tipoUsuario)
         {
             InitializeComponent();
-            
+            tipo = tipoUsuario;
+            if (tipo == TipoUsuario.Asesor)
+            {
+                botonEventos.Enabled = false;
+                botonEventos.Visible = false;
+                txtEventos.Visible = false;
+            }
+            if (tipo == TipoUsuario.OOIA)
+            {
+                botonCitas.Enabled = false;
+                botonCitas.Visible = false;
+                txtCitas.Visible = false;
+            }
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.EEGGCC);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.Estudiante1);
@@ -54,20 +67,22 @@ namespace ProyectoOOIA.Ventanas
         private void timer1_Tick(object sender, EventArgs e)
         {
             indice++;
-            if (indice > listaImagenes.Count)
+            if (indice >= listaImagenes.Count)
                 indice = 0;
             imagenes.Image = listaImagenes[indice];
         }
 
         private void botonCitas_Click(object sender, EventArgs e)
         {
-            new frmListaCitasAlumno().Show();
+            if (tipo == TipoUsuario.Alumno) new frmListaCitasAlumno().Show();
+            if (tipo == TipoUsuario.Asesor) new frmHorarioAsesor().Show();
             this.Close();
         }
 
         private void botonEventos_Click(object sender, EventArgs e)
         {
-            new frmRegistroEvento().Show();
+            if (tipo == TipoUsuario.Alumno) new frmRegistroEvento().Show();
+            if (tipo == TipoUsuario.OOIA) new frmGestionEventosOOIA().Show();
             this.Close();
         }
 

@@ -51,7 +51,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button6_Click(object sender, EventArgs e)
         {
-            new frmNuevoPrincipal().Show();
+            new frmPrincipal(TipoUsuario.Alumno).Show();
             this.Close();
         }
 
@@ -77,13 +77,13 @@ namespace ProyectoOOIA.Ventanas
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            new frmNuevoPrincipal().Show();
+            new frmPrincipal(TipoUsuario.Alumno).Show();
             this.Close();
         }
 
         private void btnAtras_Click_1(object sender, EventArgs e)
         {
-            new frmNuevoPrincipal().Show();
+            new frmPrincipal(TipoUsuario.Alumno).Show();
             this.Close();
         }
     }
