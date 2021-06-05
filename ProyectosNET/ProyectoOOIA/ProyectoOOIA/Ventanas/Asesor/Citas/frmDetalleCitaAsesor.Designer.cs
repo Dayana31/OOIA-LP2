@@ -29,30 +29,31 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tab_DatosAlumnos = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.txtHeader = new System.Windows.Forms.Label();
+            this.tabDetalleCita = new System.Windows.Forms.TabControl();
+            this.tabDatosAlumnos = new System.Windows.Forms.TabPage();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.lbEdad = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lbLugarDeNacimiento = new System.Windows.Forms.Label();
+            this.lblContacto = new System.Windows.Forms.Label();
             this.lbEspecialidad = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbLugarDeNacimiento = new System.Windows.Forms.Label();
+            this.lblFechaNac = new System.Windows.Forms.Label();
+            this.txtLugarNac = new System.Windows.Forms.TextBox();
+            this.lbEdad = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.lbNombreAlumno = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.txtEspecialidad = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtFechaNac = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.tabFichaAtencion = new System.Windows.Forms.TabPage();
+            this.pnlScrollFicha = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,8 +64,6 @@ namespace ProyectoOOIA.Ventanas
             this.label11 = new System.Windows.Forms.Label();
             this.txtTipoCita = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -82,271 +81,263 @@ namespace ProyectoOOIA.Ventanas
             this.btnDetEventosPrev = new System.Windows.Forms.Button();
             this.btnDetCitasPrev = new System.Windows.Forms.Button();
             this.dvgEventosPasados = new System.Windows.Forms.DataGridView();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dvgCitasPasadas = new System.Windows.Forms.DataGridView();
+            this.Cita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MiembroOOIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblEventosPrev = new System.Windows.Forms.Label();
             this.lblCitasPrev = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MiembroOOIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tab_DatosAlumnos.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.tabDetalleCita.SuspendLayout();
+            this.tabDatosAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabFichaAtencion.SuspendLayout();
+            this.pnlScrollFicha.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgEventosPasados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCitasPasadas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // txtHeader
             // 
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(41, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = " Cita XXXX - 16.05.2021 8:00 am";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.txtHeader.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHeader.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtHeader.Location = new System.Drawing.Point(41, 37);
+            this.txtHeader.Name = "txtHeader";
+            this.txtHeader.Size = new System.Drawing.Size(356, 23);
+            this.txtHeader.TabIndex = 0;
+            this.txtHeader.Text = " Cita XXXX - 16.05.2021 8:00 am";
             // 
-            // tab_DatosAlumnos
+            // tabDetalleCita
             // 
-            this.tab_DatosAlumnos.Controls.Add(this.tabPage1);
-            this.tab_DatosAlumnos.Controls.Add(this.tabPage3);
-            this.tab_DatosAlumnos.Controls.Add(this.tabPage2);
-            this.tab_DatosAlumnos.Controls.Add(this.tabPage4);
-            this.tab_DatosAlumnos.Font = new System.Drawing.Font("Gill Sans MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tab_DatosAlumnos.Location = new System.Drawing.Point(0, 77);
-            this.tab_DatosAlumnos.Name = "tab_DatosAlumnos";
-            this.tab_DatosAlumnos.SelectedIndex = 0;
-            this.tab_DatosAlumnos.Size = new System.Drawing.Size(794, 423);
-            this.tab_DatosAlumnos.TabIndex = 8;
+            this.tabDetalleCita.Controls.Add(this.tabDatosAlumnos);
+            this.tabDetalleCita.Controls.Add(this.tabFichaAtencion);
+            this.tabDetalleCita.Controls.Add(this.tabPage2);
+            this.tabDetalleCita.Controls.Add(this.tabPage4);
+            this.tabDetalleCita.Font = new System.Drawing.Font("Gill Sans MT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabDetalleCita.Location = new System.Drawing.Point(0, 77);
+            this.tabDetalleCita.Name = "tabDetalleCita";
+            this.tabDetalleCita.SelectedIndex = 0;
+            this.tabDetalleCita.Size = new System.Drawing.Size(800, 372);
+            this.tabDetalleCita.TabIndex = 8;
             // 
-            // tabPage1
+            // tabDatosAlumnos
             // 
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Controls.Add(this.pictureBox2);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(786, 394);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Datos Alumno";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabDatosAlumnos.Controls.Add(this.lbNombreAlumno);
+            this.tabDatosAlumnos.Controls.Add(this.lblCodigo);
+            this.tabDatosAlumnos.Controls.Add(this.pictureBox2);
+            this.tabDatosAlumnos.Controls.Add(this.lblContacto);
+            this.tabDatosAlumnos.Controls.Add(this.lbEspecialidad);
+            this.tabDatosAlumnos.Controls.Add(this.lbLugarDeNacimiento);
+            this.tabDatosAlumnos.Controls.Add(this.lblFechaNac);
+            this.tabDatosAlumnos.Controls.Add(this.txtLugarNac);
+            this.tabDatosAlumnos.Controls.Add(this.lbEdad);
+            this.tabDatosAlumnos.Controls.Add(this.lblDireccion);
+            this.tabDatosAlumnos.Controls.Add(this.txtDireccion);
+            this.tabDatosAlumnos.Controls.Add(this.txtEdad);
+            this.tabDatosAlumnos.Controls.Add(this.txtEspecialidad);
+            this.tabDatosAlumnos.Controls.Add(this.txtCorreo);
+            this.tabDatosAlumnos.Controls.Add(this.txtFechaNac);
+            this.tabDatosAlumnos.Controls.Add(this.txtCodigo);
+            this.tabDatosAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabDatosAlumnos.Location = new System.Drawing.Point(4, 25);
+            this.tabDatosAlumnos.Name = "tabDatosAlumnos";
+            this.tabDatosAlumnos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabDatosAlumnos.Size = new System.Drawing.Size(792, 343);
+            this.tabDatosAlumnos.TabIndex = 0;
+            this.tabDatosAlumnos.Text = "Datos Alumno";
+            this.tabDatosAlumnos.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // lblCodigo
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.textBox19);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.textBox18);
-            this.panel1.Controls.Add(this.textBox17);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.lbEdad);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.lbLugarDeNacimiento);
-            this.panel1.Controls.Add(this.lbEspecialidad);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lbNombreAlumno);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(537, 344);
-            this.panel1.TabIndex = 7;
-            // 
-            // textBox19
-            // 
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(147, 131);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(208, 24);
-            this.textBox19.TabIndex = 38;
-            // 
-            // label24
-            // 
-            this.label24.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(6, 162);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(135, 23);
-            this.label24.TabIndex = 37;
-            this.label24.Text = "Fecha de nacimiento";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.Location = new System.Drawing.Point(147, 71);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(208, 24);
-            this.textBox18.TabIndex = 36;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.Location = new System.Drawing.Point(147, 101);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(208, 24);
-            this.textBox17.TabIndex = 35;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(147, 220);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(273, 24);
-            this.textBox5.TabIndex = 34;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 222);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 23);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Direccion";
+            this.lblCodigo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(8, 51);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(135, 23);
+            this.lblCodigo.TabIndex = 21;
+            this.lblCodigo.Text = "Codigo del alumno";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.pictureBox2.Location = new System.Drawing.Point(552, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(515, 32);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(234, 221);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 31;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox4
+            // lblContacto
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(147, 190);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(103, 24);
-            this.textBox4.TabIndex = 30;
-            // 
-            // lbEdad
-            // 
-            this.lbEdad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEdad.Location = new System.Drawing.Point(6, 192);
-            this.lbEdad.Name = "lbEdad";
-            this.lbEdad.Size = new System.Drawing.Size(82, 23);
-            this.lbEdad.TabIndex = 29;
-            this.lbEdad.Text = "Edad";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(147, 160);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(208, 24);
-            this.textBox3.TabIndex = 28;
-            // 
-            // lbLugarDeNacimiento
-            // 
-            this.lbLugarDeNacimiento.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLugarDeNacimiento.Location = new System.Drawing.Point(6, 133);
-            this.lbLugarDeNacimiento.Name = "lbLugarDeNacimiento";
-            this.lbLugarDeNacimiento.Size = new System.Drawing.Size(135, 23);
-            this.lbLugarDeNacimiento.TabIndex = 27;
-            this.lbLugarDeNacimiento.Text = "Lugar de nacimiento";
+            this.lblContacto.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContacto.Location = new System.Drawing.Point(8, 81);
+            this.lblContacto.Name = "lblContacto";
+            this.lblContacto.Size = new System.Drawing.Size(74, 23);
+            this.lblContacto.TabIndex = 23;
+            this.lblContacto.Text = "Contacto";
             // 
             // lbEspecialidad
             // 
             this.lbEspecialidad.AccessibleRole = System.Windows.Forms.AccessibleRole.SplitButton;
             this.lbEspecialidad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEspecialidad.Location = new System.Drawing.Point(6, 103);
+            this.lbEspecialidad.Location = new System.Drawing.Point(8, 111);
             this.lbEspecialidad.Name = "lbEspecialidad";
             this.lbEspecialidad.Size = new System.Drawing.Size(97, 23);
             this.lbEspecialidad.TabIndex = 25;
             this.lbEspecialidad.Text = "Especialidad";
             // 
-            // label4
+            // lbLugarDeNacimiento
             // 
-            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(5, 73);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 23);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Contacto";
+            this.lbLugarDeNacimiento.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLugarDeNacimiento.Location = new System.Drawing.Point(8, 171);
+            this.lbLugarDeNacimiento.Name = "lbLugarDeNacimiento";
+            this.lbLugarDeNacimiento.Size = new System.Drawing.Size(135, 23);
+            this.lbLugarDeNacimiento.TabIndex = 27;
+            this.lbLugarDeNacimiento.Text = "Lugar de nacimiento";
             // 
-            // textBox1
+            // lblFechaNac
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(147, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(109, 24);
-            this.textBox1.TabIndex = 22;
+            this.lblFechaNac.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNac.Location = new System.Drawing.Point(8, 141);
+            this.lblFechaNac.Name = "lblFechaNac";
+            this.lblFechaNac.Size = new System.Drawing.Size(135, 23);
+            this.lblFechaNac.TabIndex = 37;
+            this.lblFechaNac.Text = "Fecha de nacimiento";
             // 
-            // label3
+            // txtLugarNac
             // 
-            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 43);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 23);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Codigo del alumno";
+            this.txtLugarNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLugarNac.Location = new System.Drawing.Point(149, 139);
+            this.txtLugarNac.Name = "txtLugarNac";
+            this.txtLugarNac.ReadOnly = true;
+            this.txtLugarNac.Size = new System.Drawing.Size(208, 24);
+            this.txtLugarNac.TabIndex = 38;
+            // 
+            // lbEdad
+            // 
+            this.lbEdad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEdad.Location = new System.Drawing.Point(6, 201);
+            this.lbEdad.Name = "lbEdad";
+            this.lbEdad.Size = new System.Drawing.Size(82, 23);
+            this.lbEdad.TabIndex = 29;
+            this.lbEdad.Text = "Edad";
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(8, 231);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(119, 23);
+            this.lblDireccion.TabIndex = 33;
+            this.lblDireccion.Text = "Direccion";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.Location = new System.Drawing.Point(149, 229);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.ReadOnly = true;
+            this.txtDireccion.Size = new System.Drawing.Size(273, 24);
+            this.txtDireccion.TabIndex = 34;
             // 
             // lbNombreAlumno
             // 
             this.lbNombreAlumno.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreAlumno.Location = new System.Drawing.Point(5, 0);
+            this.lbNombreAlumno.Location = new System.Drawing.Point(3, 3);
             this.lbNombreAlumno.Name = "lbNombreAlumno";
             this.lbNombreAlumno.Size = new System.Drawing.Size(294, 38);
             this.lbNombreAlumno.TabIndex = 19;
             this.lbNombreAlumno.Text = "Huertas Hortez, Jose Luis";
             // 
-            // tabPage3
+            // txtEdad
             // 
-            this.tabPage3.Controls.Add(this.panel2);
-            this.tabPage3.Controls.Add(this.pictureBox1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(786, 394);
-            this.tabPage3.TabIndex = 1;
-            this.tabPage3.Text = "Ficha de atencion";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdad.Location = new System.Drawing.Point(149, 199);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.ReadOnly = true;
+            this.txtEdad.Size = new System.Drawing.Size(103, 24);
+            this.txtEdad.TabIndex = 30;
             // 
-            // panel2
+            // txtEspecialidad
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.txtMotivo);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.txtTipoAlumno);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.txtTipoCita);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(537, 343);
-            this.panel2.TabIndex = 26;
+            this.txtEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEspecialidad.Location = new System.Drawing.Point(149, 109);
+            this.txtEspecialidad.Name = "txtEspecialidad";
+            this.txtEspecialidad.ReadOnly = true;
+            this.txtEspecialidad.Size = new System.Drawing.Size(208, 24);
+            this.txtEspecialidad.TabIndex = 35;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Location = new System.Drawing.Point(149, 79);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.ReadOnly = true;
+            this.txtCorreo.Size = new System.Drawing.Size(208, 24);
+            this.txtCorreo.TabIndex = 36;
+            // 
+            // txtFechaNac
+            // 
+            this.txtFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaNac.Location = new System.Drawing.Point(149, 169);
+            this.txtFechaNac.Name = "txtFechaNac";
+            this.txtFechaNac.ReadOnly = true;
+            this.txtFechaNac.Size = new System.Drawing.Size(208, 24);
+            this.txtFechaNac.TabIndex = 28;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(149, 49);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
+            this.txtCodigo.Size = new System.Drawing.Size(109, 24);
+            this.txtCodigo.TabIndex = 22;
+            // 
+            // tabFichaAtencion
+            // 
+            this.tabFichaAtencion.Controls.Add(this.pnlScrollFicha);
+            this.tabFichaAtencion.Location = new System.Drawing.Point(4, 25);
+            this.tabFichaAtencion.Name = "tabFichaAtencion";
+            this.tabFichaAtencion.Padding = new System.Windows.Forms.Padding(3);
+            this.tabFichaAtencion.Size = new System.Drawing.Size(792, 343);
+            this.tabFichaAtencion.TabIndex = 1;
+            this.tabFichaAtencion.Text = "Ficha de atencion";
+            this.tabFichaAtencion.UseVisualStyleBackColor = true;
+            // 
+            // pnlScrollFicha
+            // 
+            this.pnlScrollFicha.AutoScroll = true;
+            this.pnlScrollFicha.Controls.Add(this.label13);
+            this.pnlScrollFicha.Controls.Add(this.textBox6);
+            this.pnlScrollFicha.Controls.Add(this.textBox2);
+            this.pnlScrollFicha.Controls.Add(this.label7);
+            this.pnlScrollFicha.Controls.Add(this.label6);
+            this.pnlScrollFicha.Controls.Add(this.txtMotivo);
+            this.pnlScrollFicha.Controls.Add(this.label5);
+            this.pnlScrollFicha.Controls.Add(this.txtTipoAlumno);
+            this.pnlScrollFicha.Controls.Add(this.label11);
+            this.pnlScrollFicha.Controls.Add(this.txtTipoCita);
+            this.pnlScrollFicha.Controls.Add(this.label12);
+            this.pnlScrollFicha.Location = new System.Drawing.Point(3, 3);
+            this.pnlScrollFicha.Name = "pnlScrollFicha";
+            this.pnlScrollFicha.Size = new System.Drawing.Size(789, 343);
+            this.pnlScrollFicha.TabIndex = 26;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(294, 34);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "Huertas Hortez, Jose Luis";
             // 
             // textBox6
             // 
@@ -359,7 +350,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(9, 273);
+            this.textBox2.Location = new System.Drawing.Point(12, 273);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -438,29 +429,8 @@ namespace ProyectoOOIA.Ventanas
             this.label12.TabIndex = 41;
             this.label12.Text = "Tipo de cita";
             // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(6, 3);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(294, 34);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "Huertas Hortez, Jose Luis";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.pictureBox1.Location = new System.Drawing.Point(552, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(234, 221);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
-            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.pictureBox4);
             this.tabPage2.Controls.Add(this.textBox16);
             this.tabPage2.Controls.Add(this.label21);
             this.tabPage2.Controls.Add(this.textBox15);
@@ -476,7 +446,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(786, 394);
+            this.tabPage2.Size = new System.Drawing.Size(792, 343);
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "Historia academica";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -514,7 +484,6 @@ namespace ProyectoOOIA.Ventanas
             this.label20.Size = new System.Drawing.Size(167, 23);
             this.label20.TabIndex = 49;
             this.label20.Text = "Créditos Aprobados";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label19
             // 
@@ -592,7 +561,6 @@ namespace ProyectoOOIA.Ventanas
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.pictureBox5);
             this.tabPage4.Controls.Add(this.btnDetEventosPrev);
             this.tabPage4.Controls.Add(this.btnDetCitasPrev);
             this.tabPage4.Controls.Add(this.dvgEventosPasados);
@@ -603,7 +571,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabPage4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(786, 394);
+            this.tabPage4.Size = new System.Drawing.Size(792, 343);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Eventos y citas";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -621,7 +589,7 @@ namespace ProyectoOOIA.Ventanas
             // btnDetCitasPrev
             // 
             this.btnDetCitasPrev.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDetCitasPrev.Location = new System.Drawing.Point(453, 35);
+            this.btnDetCitasPrev.Location = new System.Drawing.Point(453, 38);
             this.btnDetCitasPrev.Name = "btnDetCitasPrev";
             this.btnDetCitasPrev.Size = new System.Drawing.Size(75, 23);
             this.btnDetCitasPrev.TabIndex = 53;
@@ -631,14 +599,14 @@ namespace ProyectoOOIA.Ventanas
             // dvgEventosPasados
             // 
             this.dvgEventosPasados.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgEventosPasados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgEventosPasados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvgEventosPasados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgEventosPasados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -649,98 +617,6 @@ namespace ProyectoOOIA.Ventanas
             this.dvgEventosPasados.RowHeadersWidth = 51;
             this.dvgEventosPasados.Size = new System.Drawing.Size(520, 120);
             this.dvgEventosPasados.TabIndex = 52;
-            // 
-            // dvgCitasPasadas
-            // 
-            this.dvgCitasPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dvgCitasPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgCitasPasadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cita,
-            this.MiembroOOIA});
-            this.dvgCitasPasadas.EnableHeadersVisualStyles = false;
-            this.dvgCitasPasadas.Location = new System.Drawing.Point(7, 61);
-            this.dvgCitasPasadas.Name = "dvgCitasPasadas";
-            this.dvgCitasPasadas.RowHeadersWidth = 51;
-            this.dvgCitasPasadas.Size = new System.Drawing.Size(520, 120);
-            this.dvgCitasPasadas.TabIndex = 51;
-            // 
-            // lblEventosPrev
-            // 
-            this.lblEventosPrev.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEventosPrev.Location = new System.Drawing.Point(4, 190);
-            this.lblEventosPrev.Name = "lblEventosPrev";
-            this.lblEventosPrev.Size = new System.Drawing.Size(167, 23);
-            this.lblEventosPrev.TabIndex = 50;
-            this.lblEventosPrev.Text = "Eventos Previos";
-            // 
-            // lblCitasPrev
-            // 
-            this.lblCitasPrev.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCitasPrev.Location = new System.Drawing.Point(3, 35);
-            this.lblCitasPrev.Name = "lblCitasPrev";
-            this.lblCitasPrev.Size = new System.Drawing.Size(167, 23);
-            this.lblCitasPrev.TabIndex = 49;
-            this.lblCitasPrev.Text = "Citas Previas";
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(0, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(294, 35);
-            this.label15.TabIndex = 41;
-            this.label15.Text = "Huertas Hortez, Jose Luis";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ProyectoOOIA.Properties.Resources.arrowWhite;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 35);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.pnlHeader.Controls.Add(this.label1);
-            this.pnlHeader.Controls.Add(this.pictureBox3);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(800, 71);
-            this.pnlHeader.TabIndex = 10;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.pictureBox4.Location = new System.Drawing.Point(552, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(234, 221);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 53;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.pictureBox5.Location = new System.Drawing.Point(552, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(234, 221);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 55;
-            this.pictureBox5.TabStop = false;
             // 
             // Fecha
             // 
@@ -756,6 +632,36 @@ namespace ProyectoOOIA.Ventanas
             this.Nombre.Name = "Nombre";
             this.Nombre.Width = 305;
             // 
+            // dvgCitasPasadas
+            // 
+            this.dvgCitasPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dvgCitasPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgCitasPasadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cita,
+            this.MiembroOOIA});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gill Sans MT Ext Condensed Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvgCitasPasadas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dvgCitasPasadas.EnableHeadersVisualStyles = false;
+            this.dvgCitasPasadas.Location = new System.Drawing.Point(8, 67);
+            this.dvgCitasPasadas.Name = "dvgCitasPasadas";
+            this.dvgCitasPasadas.RowHeadersWidth = 51;
+            this.dvgCitasPasadas.Size = new System.Drawing.Size(520, 120);
+            this.dvgCitasPasadas.TabIndex = 51;
+            // 
             // Cita
             // 
             this.Cita.HeaderText = "Cita";
@@ -770,6 +676,56 @@ namespace ProyectoOOIA.Ventanas
             this.MiembroOOIA.Name = "MiembroOOIA";
             this.MiembroOOIA.Width = 285;
             // 
+            // lblEventosPrev
+            // 
+            this.lblEventosPrev.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventosPrev.Location = new System.Drawing.Point(4, 190);
+            this.lblEventosPrev.Name = "lblEventosPrev";
+            this.lblEventosPrev.Size = new System.Drawing.Size(167, 23);
+            this.lblEventosPrev.TabIndex = 50;
+            this.lblEventosPrev.Text = "Eventos Previos";
+            // 
+            // lblCitasPrev
+            // 
+            this.lblCitasPrev.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCitasPrev.Location = new System.Drawing.Point(3, 41);
+            this.lblCitasPrev.Name = "lblCitasPrev";
+            this.lblCitasPrev.Size = new System.Drawing.Size(167, 23);
+            this.lblCitasPrev.TabIndex = 49;
+            this.lblCitasPrev.Text = "Citas Previas";
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 3);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(246, 35);
+            this.label15.TabIndex = 41;
+            this.label15.Text = "Huertas Hortez, Jose Luis";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Image = global::ProyectoOOIA.Properties.Resources.arrowWhite;
+            this.btnBack.Location = new System.Drawing.Point(11, 35);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(25, 25);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnBack.TabIndex = 9;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.pnlHeader.Controls.Add(this.txtHeader);
+            this.pnlHeader.Controls.Add(this.btnBack);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(800, 71);
+            this.pnlHeader.TabIndex = 10;
+            // 
             // frmDetCita_EventAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -777,53 +733,48 @@ namespace ProyectoOOIA.Ventanas
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnlHeader);
-            this.Controls.Add(this.tab_DatosAlumnos);
+            this.Controls.Add(this.tabDetalleCita);
             this.MinimizeBox = false;
             this.Name = "frmDetCita_EventAlumnos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ficha de datos alumno";
-            this.tab_DatosAlumnos.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.tabDetalleCita.ResumeLayout(false);
+            this.tabDatosAlumnos.ResumeLayout(false);
+            this.tabDatosAlumnos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabFichaAtencion.ResumeLayout(false);
+            this.pnlScrollFicha.ResumeLayout(false);
+            this.pnlScrollFicha.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvgEventosPasados)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCitasPasadas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.pnlHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabControl tab_DatosAlumnos;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label txtHeader;
+        private System.Windows.Forms.TabControl tabDetalleCita;
+        private System.Windows.Forms.TabPage tabDatosAlumnos;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.Label lbEdad;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtFechaNac;
         private System.Windows.Forms.Label lbLugarDeNacimiento;
         private System.Windows.Forms.Label lbEspecialidad;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblContacto;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lbNombreAlumno;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TabPage tabFichaAtencion;
+        private System.Windows.Forms.Panel pnlScrollFicha;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
@@ -835,7 +786,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TextBox txtTipoCita;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox textBox16;
@@ -855,16 +805,14 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridView dvgCitasPasadas;
         private System.Windows.Forms.Label lblEventosPrev;
         private System.Windows.Forms.Label lblCitasPrev;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.PictureBox btnBack;
+        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtEspecialidad;
         private System.Windows.Forms.Button btnDetCitasPrev;
         private System.Windows.Forms.Button btnDetEventosPrev;
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TextBox txtLugarNac;
+        private System.Windows.Forms.Label lblFechaNac;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cita;

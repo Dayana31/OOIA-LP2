@@ -11,22 +11,6 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -35,7 +19,7 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             new frmHorarioAsesor().Show();
             this.Close();
