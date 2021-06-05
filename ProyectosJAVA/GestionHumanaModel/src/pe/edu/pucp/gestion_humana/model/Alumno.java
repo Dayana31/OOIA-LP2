@@ -18,6 +18,7 @@ public class Alumno extends MiembroPUCP {
     private ArrayList<CitaOOIA> historicoCitas;   
 
     public Alumno() {
+        especialidad = new Especialidad();
     }
 
     public Especialidad getEspecialidad() {
