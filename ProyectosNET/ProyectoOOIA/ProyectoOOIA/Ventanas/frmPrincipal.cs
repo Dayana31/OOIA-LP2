@@ -21,14 +21,14 @@ namespace ProyectoOOIA.Ventanas
             tipo = tipoUsuario;
             if (tipo == TipoUsuario.Asesor)
             {
-                botonEventos.Enabled = false;
-                botonEventos.Visible = false;
+                btnEventos.Enabled = false;
+                btnEventos.Visible = false;
                 txtEventos.Visible = false;
             }
             if (tipo == TipoUsuario.OOIA)
             {
-                botonCitas.Enabled = false;
-                botonCitas.Visible = false;
+                btnCitas.Enabled = false;
+                btnCitas.Visible = false;
                 txtCitas.Visible = false;
             }
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
@@ -38,7 +38,7 @@ namespace ProyectoOOIA.Ventanas
             imagenes.Image = listaImagenes[0];
             ToolTip ttEjemplo = new ToolTip();
 
-            ttEjemplo.SetToolTip(botonCitas, "Programar citas");
+            ttEjemplo.SetToolTip(btnCitas, "Programar citas");
 
         }
 

@@ -33,23 +33,30 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            
-            if (txtContraseña.Text == "") lblIncorrecto.Visible = true;
-            //else if(txtUsuario.Text == "") lblIncorrecto.Visible = true;
+            if (rbtAlumno.Checked == false && rbtTutor.Checked == false && rbtMiembroOOIA.Checked == false)
+            {
+                lblPassIncorrecto.Visible = false;
+                lblTipoIncorrecto.Visible = true;
+            }
+            else if (txtContraseña.Text == "")
+            {
+                lblTipoIncorrecto.Visible = false;
+                lblPassIncorrecto.Visible = true;
+            }
             else
             {
                 //if(toggle1.Checked==false)
                 //    new frmNuevoPrincipal().Show(); 
                 //else
                 //    new frmPrincipalProfesor().Show();
-                
+
                 //this.Close();
-                
-                if(rbtAlumno.Checked == true)
+
+                if (rbtAlumno.Checked == true)
                 {
                     new frmPrincipal(TipoUsuario.Alumno).Show();
                 }
-                else if(rbtTutor.Checked == true)
+                else if (rbtTutor.Checked == true)
                 {
                     new frmPrincipal(TipoUsuario.Asesor).Show();
                 }

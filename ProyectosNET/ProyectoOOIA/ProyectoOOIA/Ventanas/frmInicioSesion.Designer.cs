@@ -33,7 +33,7 @@ namespace ProyectoOOIA.Ventanas
             this.rbtMiembroOOIA = new System.Windows.Forms.RadioButton();
             this.rbtTutor = new System.Windows.Forms.RadioButton();
             this.rbtAlumno = new System.Windows.Forms.RadioButton();
-            this.lblIncorrecto = new System.Windows.Forms.Label();
+            this.lblPassIncorrecto = new System.Windows.Forms.Label();
             this.lblOOIA = new System.Windows.Forms.Label();
             this.linkContraseña = new System.Windows.Forms.LinkLabel();
             this.lblContraseña = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@ namespace ProyectoOOIA.Ventanas
             this.pbPUCP = new System.Windows.Forms.PictureBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.lblTipoIncorrecto = new System.Windows.Forms.Label();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPUCP)).BeginInit();
@@ -57,10 +58,11 @@ namespace ProyectoOOIA.Ventanas
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.pnlRight.Controls.Add(this.lblTipoIncorrecto);
             this.pnlRight.Controls.Add(this.rbtMiembroOOIA);
             this.pnlRight.Controls.Add(this.rbtTutor);
             this.pnlRight.Controls.Add(this.rbtAlumno);
-            this.pnlRight.Controls.Add(this.lblIncorrecto);
+            this.pnlRight.Controls.Add(this.lblPassIncorrecto);
             this.pnlRight.Controls.Add(this.lblOOIA);
             this.pnlRight.Controls.Add(this.linkContraseña);
             this.pnlRight.Controls.Add(this.lblContraseña);
@@ -111,16 +113,16 @@ namespace ProyectoOOIA.Ventanas
             this.rbtAlumno.Text = "Alumno";
             this.rbtAlumno.UseVisualStyleBackColor = true;
             // 
-            // lblIncorrecto
+            // lblPassIncorrecto
             // 
-            this.lblIncorrecto.AutoSize = true;
-            this.lblIncorrecto.ForeColor = System.Drawing.Color.Salmon;
-            this.lblIncorrecto.Location = new System.Drawing.Point(254, 325);
-            this.lblIncorrecto.Name = "lblIncorrecto";
-            this.lblIncorrecto.Size = new System.Drawing.Size(112, 13);
-            this.lblIncorrecto.TabIndex = 7;
-            this.lblIncorrecto.Text = "Contraseña Incorrecta";
-            this.lblIncorrecto.Visible = false;
+            this.lblPassIncorrecto.AutoSize = true;
+            this.lblPassIncorrecto.ForeColor = System.Drawing.Color.Salmon;
+            this.lblPassIncorrecto.Location = new System.Drawing.Point(254, 325);
+            this.lblPassIncorrecto.Name = "lblPassIncorrecto";
+            this.lblPassIncorrecto.Size = new System.Drawing.Size(112, 13);
+            this.lblPassIncorrecto.TabIndex = 7;
+            this.lblPassIncorrecto.Text = "Contraseña Incorrecta";
+            this.lblPassIncorrecto.Visible = false;
             // 
             // lblOOIA
             // 
@@ -282,6 +284,17 @@ namespace ProyectoOOIA.Ventanas
             this.splitter1.TabIndex = 9;
             this.splitter1.TabStop = false;
             // 
+            // lblTipoIncorrecto
+            // 
+            this.lblTipoIncorrecto.AutoSize = true;
+            this.lblTipoIncorrecto.ForeColor = System.Drawing.Color.Salmon;
+            this.lblTipoIncorrecto.Location = new System.Drawing.Point(229, 325);
+            this.lblTipoIncorrecto.Name = "lblTipoIncorrecto";
+            this.lblTipoIncorrecto.Size = new System.Drawing.Size(146, 13);
+            this.lblTipoIncorrecto.TabIndex = 15;
+            this.lblTipoIncorrecto.Text = "Seleccione su tipo de usuario";
+            this.lblTipoIncorrecto.Visible = false;
+            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,12 +337,13 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Splitter splitter1;
 
 
-        private System.Windows.Forms.Label lblIncorrecto;
+        private System.Windows.Forms.Label lblPassIncorrecto;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton rbtMiembroOOIA;
         private System.Windows.Forms.RadioButton rbtTutor;
         private System.Windows.Forms.RadioButton rbtAlumno;
+        private System.Windows.Forms.Label lblTipoIncorrecto;
     }
 }
