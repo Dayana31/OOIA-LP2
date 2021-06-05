@@ -10,12 +10,6 @@ namespace ProyectoOOIA.Ventanas
             InitializeComponent();
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            
-
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -34,12 +28,7 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnBuscarInscritos_Click(object sender, EventArgs e)
         {
             new frmBuscarEventoAlumno().Show();
         }
@@ -55,22 +44,22 @@ namespace ProyectoOOIA.Ventanas
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnDetInscritos_Click(object sender, EventArgs e)
         {
             new frmVistadeEvento().Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             new frmAgregarEventoAlumno().Show();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             new frmCancelarEventoAlumno().Show();
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void btnDetHistorial_Click(object sender, EventArgs e)
         {
             new frmVistadeEvento().Show();
         }
@@ -91,6 +80,11 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmInicioSesion().Show();
             this.Close();
+        }
+
+        private void btnAcceder_Click(object sender, EventArgs e)
+        {
+            new frmAccesoEvento().ShowDialog();
         }
     }
 }

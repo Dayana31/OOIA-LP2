@@ -60,10 +60,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(319, 11);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(239, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(234, 38);
+            this.lblTitulo.Size = new System.Drawing.Size(180, 30);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Historia Académica";
             // 
@@ -88,11 +87,10 @@ namespace ProyectoOOIA.Ventanas
             this.Vez,
             this.NotaFinal});
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 223);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 181);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(885, 281);
+            this.dataGridView1.Size = new System.Drawing.Size(664, 228);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -140,10 +138,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(389, 511);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Location = new System.Drawing.Point(292, 415);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(100, 28);
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -153,10 +150,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblEstudiante.AutoSize = true;
             this.lblEstudiante.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstudiante.Location = new System.Drawing.Point(16, 50);
-            this.lblEstudiante.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEstudiante.Location = new System.Drawing.Point(12, 41);
             this.lblEstudiante.Name = "lblEstudiante";
-            this.lblEstudiante.Size = new System.Drawing.Size(111, 27);
+            this.lblEstudiante.Size = new System.Drawing.Size(89, 21);
             this.lblEstudiante.TabIndex = 3;
             this.lblEstudiante.Text = "Estudiante:";
             // 
@@ -164,10 +160,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(16, 73);
-            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Location = new System.Drawing.Point(12, 59);
             this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(80, 27);
+            this.lblCodigo.Size = new System.Drawing.Size(64, 21);
             this.lblCodigo.TabIndex = 4;
             this.lblCodigo.Text = "Código:";
             // 
@@ -175,10 +170,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 95);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(226, 27);
+            this.label1.Size = new System.Drawing.Size(180, 21);
             this.label1.TabIndex = 5;
             this.label1.Text = "Cursos llevados una vez:";
             // 
@@ -186,10 +180,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 117);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(12, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(242, 27);
+            this.label2.Size = new System.Drawing.Size(192, 21);
             this.label2.TabIndex = 6;
             this.label2.Text = "Cursos llevados dos veces:";
             // 
@@ -197,28 +190,25 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 139);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(247, 27);
+            this.label3.Size = new System.Drawing.Size(195, 21);
             this.label3.TabIndex = 7;
             this.label3.Text = "Cursos llevados tres veces:";
             // 
             // cbCiclo
             // 
             this.cbCiclo.FormattingEnabled = true;
-            this.cbCiclo.Location = new System.Drawing.Point(75, 192);
-            this.cbCiclo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCiclo.Location = new System.Drawing.Point(56, 156);
             this.cbCiclo.Name = "cbCiclo";
-            this.cbCiclo.Size = new System.Drawing.Size(160, 24);
+            this.cbCiclo.Size = new System.Drawing.Size(121, 21);
             this.cbCiclo.TabIndex = 8;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(256, 190);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(192, 154);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -228,10 +218,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 193);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(12, 157);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 20);
+            this.label4.Size = new System.Drawing.Size(38, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Ciclo";
             // 
@@ -240,10 +229,9 @@ namespace ProyectoOOIA.Ventanas
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(867, 117);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(650, 95);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 27);
+            this.label5.Size = new System.Drawing.Size(26, 21);
             this.label5.TabIndex = 11;
             this.label5.Text = "00";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -253,10 +241,9 @@ namespace ProyectoOOIA.Ventanas
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(867, 139);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(650, 113);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 27);
+            this.label6.Size = new System.Drawing.Size(26, 21);
             this.label6.TabIndex = 12;
             this.label6.Text = "00";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -266,10 +253,9 @@ namespace ProyectoOOIA.Ventanas
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(867, 95);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(650, 77);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 27);
+            this.label7.Size = new System.Drawing.Size(26, 21);
             this.label7.TabIndex = 13;
             this.label7.Text = "00";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -279,10 +265,9 @@ namespace ProyectoOOIA.Ventanas
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(803, 73);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(602, 59);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 27);
+            this.label8.Size = new System.Drawing.Size(74, 21);
             this.label8.TabIndex = 14;
             this.label8.Text = "20211234";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -292,10 +277,9 @@ namespace ProyectoOOIA.Ventanas
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(803, 50);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(602, 41);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 27);
+            this.label9.Size = new System.Drawing.Size(74, 21);
             this.label9.TabIndex = 15;
             this.label9.Text = "Juan Perez";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -303,10 +287,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnNotasParciales
             // 
-            this.btnNotasParciales.Location = new System.Drawing.Point(728, 190);
-            this.btnNotasParciales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNotasParciales.Location = new System.Drawing.Point(576, 154);
             this.btnNotasParciales.Name = "btnNotasParciales";
-            this.btnNotasParciales.Size = new System.Drawing.Size(133, 28);
+            this.btnNotasParciales.Size = new System.Drawing.Size(100, 23);
             this.btnNotasParciales.TabIndex = 16;
             this.btnNotasParciales.Text = "Notas Parciales";
             this.btnNotasParciales.UseVisualStyleBackColor = true;
@@ -314,10 +297,10 @@ namespace ProyectoOOIA.Ventanas
             // 
             // frmHistoriaAcademica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(921, 554);
+            this.ClientSize = new System.Drawing.Size(691, 450);
             this.Controls.Add(this.btnNotasParciales);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -335,7 +318,6 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblTitulo);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmHistoriaAcademica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Historia Academica";

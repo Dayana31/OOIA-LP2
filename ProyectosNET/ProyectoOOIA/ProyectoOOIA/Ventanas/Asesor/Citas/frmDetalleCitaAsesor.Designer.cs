@@ -29,9 +29,9 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtHeader = new System.Windows.Forms.Label();
             this.tabDetalleCita = new System.Windows.Forms.TabControl();
             this.tabDatosAlumnos = new System.Windows.Forms.TabPage();
@@ -55,8 +55,7 @@ namespace ProyectoOOIA.Ventanas
             this.pnlScrollFicha = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblAsistencia = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMotivo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -91,6 +90,8 @@ namespace ProyectoOOIA.Ventanas
             this.label15 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tabDetalleCita.SuspendLayout();
             this.tabDatosAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -314,10 +315,11 @@ namespace ProyectoOOIA.Ventanas
             // pnlScrollFicha
             // 
             this.pnlScrollFicha.AutoScroll = true;
+            this.pnlScrollFicha.Controls.Add(this.radioButton2);
+            this.pnlScrollFicha.Controls.Add(this.radioButton1);
             this.pnlScrollFicha.Controls.Add(this.label13);
             this.pnlScrollFicha.Controls.Add(this.textBox6);
-            this.pnlScrollFicha.Controls.Add(this.textBox2);
-            this.pnlScrollFicha.Controls.Add(this.label7);
+            this.pnlScrollFicha.Controls.Add(this.lblAsistencia);
             this.pnlScrollFicha.Controls.Add(this.label6);
             this.pnlScrollFicha.Controls.Add(this.txtMotivo);
             this.pnlScrollFicha.Controls.Add(this.label5);
@@ -348,23 +350,14 @@ namespace ProyectoOOIA.Ventanas
             this.textBox6.Size = new System.Drawing.Size(381, 40);
             this.textBox6.TabIndex = 54;
             // 
-            // textBox2
+            // lblAsistencia
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 273);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(381, 60);
-            this.textBox2.TabIndex = 53;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 247);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(190, 23);
-            this.label7.TabIndex = 52;
-            this.label7.Text = "Compromiso";
+            this.lblAsistencia.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsistencia.Location = new System.Drawing.Point(8, 274);
+            this.lblAsistencia.Name = "lblAsistencia";
+            this.lblAsistencia.Size = new System.Drawing.Size(112, 23);
+            this.lblAsistencia.TabIndex = 52;
+            this.lblAsistencia.Text = "Asistencia";
             // 
             // label6
             // 
@@ -381,7 +374,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtMotivo.Multiline = true;
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.ReadOnly = true;
-            this.txtMotivo.Size = new System.Drawing.Size(381, 60);
+            this.txtMotivo.Size = new System.Drawing.Size(381, 80);
             this.txtMotivo.TabIndex = 48;
             // 
             // label5
@@ -599,14 +592,14 @@ namespace ProyectoOOIA.Ventanas
             // dvgEventosPasados
             // 
             this.dvgEventosPasados.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgEventosPasados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgEventosPasados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dvgEventosPasados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgEventosPasados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -635,26 +628,26 @@ namespace ProyectoOOIA.Ventanas
             // dvgCitasPasadas
             // 
             this.dvgCitasPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dvgCitasPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgCitasPasadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cita,
             this.MiembroOOIA});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gill Sans MT Ext Condensed Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgCitasPasadas.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Gill Sans MT Ext Condensed Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvgCitasPasadas.DefaultCellStyle = dataGridViewCellStyle12;
             this.dvgCitasPasadas.EnableHeadersVisualStyles = false;
             this.dvgCitasPasadas.Location = new System.Drawing.Point(8, 67);
             this.dvgCitasPasadas.Name = "dvgCitasPasadas";
@@ -726,6 +719,34 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Size = new System.Drawing.Size(800, 71);
             this.pnlHeader.TabIndex = 10;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
+            this.radioButton1.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(137, 272);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(38, 25);
+            this.radioButton1.TabIndex = 55;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Sí";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Enabled = false;
+            this.radioButton2.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(195, 272);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(48, 25);
+            this.radioButton2.TabIndex = 56;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "No";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // frmDetCita_EventAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -776,8 +797,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TabPage tabFichaAtencion;
         private System.Windows.Forms.Panel pnlScrollFicha;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblAsistencia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtMotivo;
         private System.Windows.Forms.Label label5;
@@ -817,5 +837,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cita;
         private System.Windows.Forms.DataGridViewTextBoxColumn MiembroOOIA;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
     }
 }

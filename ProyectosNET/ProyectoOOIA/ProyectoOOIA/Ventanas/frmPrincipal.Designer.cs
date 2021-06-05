@@ -32,7 +32,6 @@ namespace ProyectoOOIA.Ventanas
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.opbImagenUsuario = new OvalPictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnEventos = new System.Windows.Forms.Button();
@@ -42,9 +41,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlCitas = new System.Windows.Forms.Panel();
             this.pnlEventos = new System.Windows.Forms.Panel();
             this.pnlEventosProximos = new System.Windows.Forms.Panel();
-            this.tarjetaEvento3 = new ProyectoOOIA.Componentes.CardEvento();
-            this.tarjetaEvento2 = new ProyectoOOIA.Componentes.CardEvento();
-            this.tarjetaEvento = new ProyectoOOIA.Componentes.CardEvento();
             this.pnlEventosProx = new System.Windows.Forms.Panel();
             this.lblEventosProximos = new System.Windows.Forms.Label();
             this.imagenes = new System.Windows.Forms.PictureBox();
@@ -53,14 +49,18 @@ namespace ProyectoOOIA.Ventanas
             this.pnlTramites = new System.Windows.Forms.Panel();
             this.btnTramites = new System.Windows.Forms.Button();
             this.lblTramites = new System.Windows.Forms.Label();
+            this.tarjetaEvento3 = new ProyectoOOIA.Componentes.CardEvento();
+            this.tarjetaEvento2 = new ProyectoOOIA.Componentes.CardEvento();
+            this.tarjetaEvento = new ProyectoOOIA.Componentes.CardEvento();
+            this.opbImagenUsuario = new OvalPictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.opbImagenUsuario)).BeginInit();
             this.pnlCitas.SuspendLayout();
             this.pnlEventos.SuspendLayout();
             this.pnlEventosProximos.SuspendLayout();
             this.pnlEventosProx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).BeginInit();
             this.pnlTramites.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.opbImagenUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,19 +72,8 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1013, 83);
+            this.panel1.Size = new System.Drawing.Size(1014, 83);
             this.panel1.TabIndex = 18;
-            // 
-            // opbImagenUsuario
-            // 
-            this.opbImagenUsuario.BackColor = System.Drawing.Color.DarkGray;
-            this.opbImagenUsuario.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.opbImagenUsuario.Location = new System.Drawing.Point(34, 10);
-            this.opbImagenUsuario.Name = "opbImagenUsuario";
-            this.opbImagenUsuario.Size = new System.Drawing.Size(64, 64);
-            this.opbImagenUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.opbImagenUsuario.TabIndex = 11;
-            this.opbImagenUsuario.TabStop = false;
             // 
             // lblUsername
             // 
@@ -109,7 +98,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(952, 19);
+            this.btnAtras.Location = new System.Drawing.Point(967, 30);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(35, 34);
             this.btnAtras.TabIndex = 12;
@@ -138,11 +127,11 @@ namespace ProyectoOOIA.Ventanas
             // txtEventos
             // 
             this.txtEventos.AutoSize = true;
-            this.txtEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEventos.Font = new System.Drawing.Font("Gill Sans MT", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventos.ForeColor = System.Drawing.Color.Black;
             this.txtEventos.Location = new System.Drawing.Point(78, 4);
             this.txtEventos.Name = "txtEventos";
-            this.txtEventos.Size = new System.Drawing.Size(98, 26);
+            this.txtEventos.Size = new System.Drawing.Size(101, 33);
             this.txtEventos.TabIndex = 20;
             this.txtEventos.Text = "Eventos";
             // 
@@ -171,11 +160,11 @@ namespace ProyectoOOIA.Ventanas
             // txtCitas
             // 
             this.txtCitas.AutoSize = true;
-            this.txtCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCitas.Font = new System.Drawing.Font("Gill Sans MT", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCitas.ForeColor = System.Drawing.Color.Black;
             this.txtCitas.Location = new System.Drawing.Point(80, 10);
             this.txtCitas.Name = "txtCitas";
-            this.txtCitas.Size = new System.Drawing.Size(67, 26);
+            this.txtCitas.Size = new System.Drawing.Size(70, 33);
             this.txtCitas.TabIndex = 19;
             this.txtCitas.Text = "Citas";
             this.txtCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -210,33 +199,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlEventosProximos.Name = "pnlEventosProximos";
             this.pnlEventosProximos.Size = new System.Drawing.Size(312, 528);
             this.pnlEventosProximos.TabIndex = 25;
-            // 
-            // tarjetaEvento3
-            // 
-            this.tarjetaEvento3.Location = new System.Drawing.Point(5, 278);
-            this.tarjetaEvento3.Margin = new System.Windows.Forms.Padding(4);
-            this.tarjetaEvento3.Name = "tarjetaEvento3";
-            this.tarjetaEvento3.Size = new System.Drawing.Size(280, 129);
-            this.tarjetaEvento3.TabIndex = 3;
-            this.tarjetaEvento3.Load += new System.EventHandler(this.tarjetaEvento3_Load);
-            // 
-            // tarjetaEvento2
-            // 
-            this.tarjetaEvento2.Location = new System.Drawing.Point(5, 177);
-            this.tarjetaEvento2.Margin = new System.Windows.Forms.Padding(4);
-            this.tarjetaEvento2.Name = "tarjetaEvento2";
-            this.tarjetaEvento2.Size = new System.Drawing.Size(280, 129);
-            this.tarjetaEvento2.TabIndex = 2;
-            this.tarjetaEvento2.Load += new System.EventHandler(this.tarjetaEvento2_Load);
-            // 
-            // tarjetaEvento
-            // 
-            this.tarjetaEvento.Location = new System.Drawing.Point(5, 76);
-            this.tarjetaEvento.Margin = new System.Windows.Forms.Padding(4);
-            this.tarjetaEvento.Name = "tarjetaEvento";
-            this.tarjetaEvento.Size = new System.Drawing.Size(280, 129);
-            this.tarjetaEvento.TabIndex = 1;
-            this.tarjetaEvento.Load += new System.EventHandler(this.cardEvento1_Load);
             // 
             // pnlEventosProx
             // 
@@ -320,20 +282,58 @@ namespace ProyectoOOIA.Ventanas
             this.lblTramites.AutoSize = true;
             this.lblTramites.BackColor = System.Drawing.SystemColors.Control;
             this.lblTramites.Enabled = false;
-            this.lblTramites.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTramites.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTramites.ForeColor = System.Drawing.Color.Black;
             this.lblTramites.Location = new System.Drawing.Point(65, 4);
             this.lblTramites.Name = "lblTramites";
-            this.lblTramites.Size = new System.Drawing.Size(103, 25);
+            this.lblTramites.Size = new System.Drawing.Size(104, 30);
             this.lblTramites.TabIndex = 19;
             this.lblTramites.Text = "Trámites";
             this.lblTramites.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tarjetaEvento3
+            // 
+            this.tarjetaEvento3.Location = new System.Drawing.Point(5, 278);
+            this.tarjetaEvento3.Margin = new System.Windows.Forms.Padding(4);
+            this.tarjetaEvento3.Name = "tarjetaEvento3";
+            this.tarjetaEvento3.Size = new System.Drawing.Size(280, 129);
+            this.tarjetaEvento3.TabIndex = 3;
+            this.tarjetaEvento3.Load += new System.EventHandler(this.tarjetaEvento3_Load);
+            // 
+            // tarjetaEvento2
+            // 
+            this.tarjetaEvento2.Location = new System.Drawing.Point(5, 177);
+            this.tarjetaEvento2.Margin = new System.Windows.Forms.Padding(4);
+            this.tarjetaEvento2.Name = "tarjetaEvento2";
+            this.tarjetaEvento2.Size = new System.Drawing.Size(280, 129);
+            this.tarjetaEvento2.TabIndex = 2;
+            this.tarjetaEvento2.Load += new System.EventHandler(this.tarjetaEvento2_Load);
+            // 
+            // tarjetaEvento
+            // 
+            this.tarjetaEvento.Location = new System.Drawing.Point(5, 76);
+            this.tarjetaEvento.Margin = new System.Windows.Forms.Padding(4);
+            this.tarjetaEvento.Name = "tarjetaEvento";
+            this.tarjetaEvento.Size = new System.Drawing.Size(280, 129);
+            this.tarjetaEvento.TabIndex = 1;
+            this.tarjetaEvento.Load += new System.EventHandler(this.cardEvento1_Load);
+            // 
+            // opbImagenUsuario
+            // 
+            this.opbImagenUsuario.BackColor = System.Drawing.Color.DarkGray;
+            this.opbImagenUsuario.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
+            this.opbImagenUsuario.Location = new System.Drawing.Point(34, 10);
+            this.opbImagenUsuario.Name = "opbImagenUsuario";
+            this.opbImagenUsuario.Size = new System.Drawing.Size(64, 64);
+            this.opbImagenUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.opbImagenUsuario.TabIndex = 11;
+            this.opbImagenUsuario.TabStop = false;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 609);
+            this.ClientSize = new System.Drawing.Size(1014, 611);
             this.Controls.Add(this.pnlTramites);
             this.Controls.Add(this.imagenes);
             this.Controls.Add(this.pnlEventosProximos);
@@ -346,7 +346,6 @@ namespace ProyectoOOIA.Ventanas
             this.Text = "Menú principal";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.opbImagenUsuario)).EndInit();
             this.pnlCitas.ResumeLayout(false);
             this.pnlCitas.PerformLayout();
             this.pnlEventos.ResumeLayout(false);
@@ -357,6 +356,7 @@ namespace ProyectoOOIA.Ventanas
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).EndInit();
             this.pnlTramites.ResumeLayout(false);
             this.pnlTramites.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.opbImagenUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
