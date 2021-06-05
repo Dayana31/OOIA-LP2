@@ -45,17 +45,17 @@ namespace ProyectoOOIA.Ventanas
             this.tarjetaEvento3 = new ProyectoOOIA.Componentes.CardEvento();
             this.tarjetaEvento2 = new ProyectoOOIA.Componentes.CardEvento();
             this.tarjetaEvento = new ProyectoOOIA.Componentes.CardEvento();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pnlEventosProx = new System.Windows.Forms.Panel();
+            this.lblEventosProximos = new System.Windows.Forms.Label();
             this.imagenes = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ImageTimer = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.opbImagenUsuario)).BeginInit();
             this.pnlCitas.SuspendLayout();
             this.pnlEventos.SuspendLayout();
             this.pnlEventosProximos.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.pnlEventosProx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +77,7 @@ namespace ProyectoOOIA.Ventanas
             this.opbImagenUsuario.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
             this.opbImagenUsuario.Location = new System.Drawing.Point(34, 10);
             this.opbImagenUsuario.Name = "opbImagenUsuario";
-            this.opbImagenUsuario.Size = new System.Drawing.Size(75, 71);
+            this.opbImagenUsuario.Size = new System.Drawing.Size(64, 64);
             this.opbImagenUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.opbImagenUsuario.TabIndex = 11;
             this.opbImagenUsuario.TabStop = false;
@@ -123,10 +123,10 @@ namespace ProyectoOOIA.Ventanas
             this.botonEventos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botonEventos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botonEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonEventos.Location = new System.Drawing.Point(37, 39);
+            this.botonEventos.Location = new System.Drawing.Point(3, 39);
             this.botonEventos.Name = "botonEventos";
             this.botonEventos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.botonEventos.Size = new System.Drawing.Size(162, 145);
+            this.botonEventos.Size = new System.Drawing.Size(225, 168);
             this.botonEventos.TabIndex = 22;
             this.botonEventos.UseVisualStyleBackColor = false;
             this.botonEventos.Click += new System.EventHandler(this.botonEventos_Click);
@@ -136,7 +136,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtEventos.AutoSize = true;
             this.txtEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventos.ForeColor = System.Drawing.Color.Black;
-            this.txtEventos.Location = new System.Drawing.Point(74, 10);
+            this.txtEventos.Location = new System.Drawing.Point(67, 10);
             this.txtEventos.Name = "txtEventos";
             this.txtEventos.Size = new System.Drawing.Size(98, 26);
             this.txtEventos.TabIndex = 20;
@@ -155,7 +155,7 @@ namespace ProyectoOOIA.Ventanas
             this.botonCitas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.botonCitas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.botonCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonCitas.Location = new System.Drawing.Point(17, 43);
+            this.botonCitas.Location = new System.Drawing.Point(31, 46);
             this.botonCitas.Name = "botonCitas";
             this.botonCitas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.botonCitas.Size = new System.Drawing.Size(162, 145);
@@ -168,7 +168,7 @@ namespace ProyectoOOIA.Ventanas
             this.txtCitas.AutoSize = true;
             this.txtCitas.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCitas.ForeColor = System.Drawing.Color.Black;
-            this.txtCitas.Location = new System.Drawing.Point(65, 14);
+            this.txtCitas.Location = new System.Drawing.Point(80, 10);
             this.txtCitas.Name = "txtCitas";
             this.txtCitas.Size = new System.Drawing.Size(67, 26);
             this.txtCitas.TabIndex = 19;
@@ -179,30 +179,31 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.pnlCitas.Controls.Add(this.botonCitas);
             this.pnlCitas.Controls.Add(this.txtCitas);
-            this.pnlCitas.Location = new System.Drawing.Point(130, 422);
+            this.pnlCitas.Location = new System.Drawing.Point(246, 406);
             this.pnlCitas.Name = "pnlCitas";
-            this.pnlCitas.Size = new System.Drawing.Size(194, 191);
+            this.pnlCitas.Size = new System.Drawing.Size(228, 204);
             this.pnlCitas.TabIndex = 23;
             // 
             // pnlEventos
             // 
             this.pnlEventos.Controls.Add(this.txtEventos);
             this.pnlEventos.Controls.Add(this.botonEventos);
-            this.pnlEventos.Location = new System.Drawing.Point(401, 422);
+            this.pnlEventos.Location = new System.Drawing.Point(472, 406);
             this.pnlEventos.Name = "pnlEventos";
-            this.pnlEventos.Size = new System.Drawing.Size(228, 191);
+            this.pnlEventos.Size = new System.Drawing.Size(228, 204);
             this.pnlEventos.TabIndex = 24;
             // 
             // pnlEventosProximos
             // 
+            this.pnlEventosProximos.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlEventosProximos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlEventosProximos.Controls.Add(this.tarjetaEvento3);
             this.pnlEventosProximos.Controls.Add(this.tarjetaEvento2);
             this.pnlEventosProximos.Controls.Add(this.tarjetaEvento);
-            this.pnlEventosProximos.Controls.Add(this.panel5);
-            this.pnlEventosProximos.Location = new System.Drawing.Point(701, 119);
+            this.pnlEventosProximos.Controls.Add(this.pnlEventosProx);
+            this.pnlEventosProximos.Location = new System.Drawing.Point(701, 82);
             this.pnlEventosProximos.Name = "pnlEventosProximos";
-            this.pnlEventosProximos.Size = new System.Drawing.Size(286, 482);
+            this.pnlEventosProximos.Size = new System.Drawing.Size(312, 528);
             this.pnlEventosProximos.TabIndex = 25;
             // 
             // tarjetaEvento3
@@ -232,39 +233,42 @@ namespace ProyectoOOIA.Ventanas
             this.tarjetaEvento.TabIndex = 1;
             this.tarjetaEvento.Load += new System.EventHandler(this.cardEvento1_Load);
             // 
-            // panel5
+            // pnlEventosProx
             // 
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(20, 21);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(179, 49);
-            this.panel5.TabIndex = 0;
+            this.pnlEventosProx.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pnlEventosProx.Controls.Add(this.lblEventosProximos);
+            this.pnlEventosProx.Location = new System.Drawing.Point(-1, -1);
+            this.pnlEventosProx.Name = "pnlEventosProx";
+            this.pnlEventosProx.Size = new System.Drawing.Size(320, 70);
+            this.pnlEventosProx.TabIndex = 0;
             // 
-            // label1
+            // lblEventosProximos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Eventos Próximos";
+            this.lblEventosProximos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEventosProximos.AutoSize = true;
+            this.lblEventosProximos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventosProximos.Location = new System.Drawing.Point(2, 25);
+            this.lblEventosProximos.Name = "lblEventosProximos";
+            this.lblEventosProximos.Size = new System.Drawing.Size(178, 24);
+            this.lblEventosProximos.TabIndex = 0;
+            this.lblEventosProximos.Text = "Eventos Próximos";
+            this.lblEventosProximos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // imagenes
             // 
-            this.imagenes.Location = new System.Drawing.Point(130, 119);
+            this.imagenes.Location = new System.Drawing.Point(0, 82);
             this.imagenes.Name = "imagenes";
-            this.imagenes.Size = new System.Drawing.Size(499, 283);
+            this.imagenes.Size = new System.Drawing.Size(700, 320);
             this.imagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenes.TabIndex = 26;
             this.imagenes.TabStop = false;
             this.imagenes.Click += new System.EventHandler(this.imagenes_Click);
             // 
-            // timer1
+            // ImageTimer
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 5000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.ImageTimer.Enabled = true;
+            this.ImageTimer.Interval = 5000;
+            this.ImageTimer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // imageList1
             // 
@@ -297,8 +301,8 @@ namespace ProyectoOOIA.Ventanas
             this.pnlEventos.ResumeLayout(false);
             this.pnlEventos.PerformLayout();
             this.pnlEventosProximos.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.pnlEventosProx.ResumeLayout(false);
+            this.pnlEventosProx.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).EndInit();
             this.ResumeLayout(false);
 
@@ -317,13 +321,13 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Panel pnlCitas;
         private System.Windows.Forms.Panel pnlEventos;
         private System.Windows.Forms.Panel pnlEventosProximos;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlEventosProx;
+        private System.Windows.Forms.Label lblEventosProximos;
         private Componentes.CardEvento tarjetaEvento;
         private Componentes.CardEvento tarjetaEvento3;
         private Componentes.CardEvento tarjetaEvento2;
         private System.Windows.Forms.PictureBox imagenes;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer ImageTimer;
         private System.Windows.Forms.ImageList imageList1;
     }
 }
