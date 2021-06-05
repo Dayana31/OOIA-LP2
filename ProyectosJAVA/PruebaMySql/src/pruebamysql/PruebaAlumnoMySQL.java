@@ -33,7 +33,7 @@ public class PruebaAlumnoMySQL {
         alumnos = daoAlumno.listar();
         for(Alumno a : alumnos){
             System.out.println("Entro");
-            System.out.println(a.getNombre() + " " + a.getCodigo_pucp() + " " + 
+            System.out.println(a.getNombre() + " " + a.getCorreo() + " " + a.getCodigo_pucp() + " " + 
                     a.getCraest());
         }
     }
@@ -46,39 +46,30 @@ public class PruebaAlumnoMySQL {
         //Atributos persona
         alum.setId_persona(32323);
         alum.setDni("433123123");
-        alum.setNombre("Juanito Castillo");
-        alum.setEdad(45);
-        alum.setDireccion("jr.Machu pichu, urb Los Robles");
-        ArrayList<String> correos = new ArrayList<>();
-        correos.add("asdasdas@pucp.edu.pe");
-        correos.add("asdasd@gmail.com");
-       // alum.setCorreos(correos);
+        alum.setNombre("Alberto Bustamante");
+        alum.setEdad(21);
+        alum.setDireccion("jr. banhio de los incas, urb manco capac");
+        alum.setCorreo("dasjdjasdjasjdas@pucp.edu.pe");
         
         //Atributos miembro pucp
         alum.setId_miembro_pucp(232323);
-        alum.setUsuario_pucp("asdasdasd@pucp.edu.pe");
+        alum.setUsuario_pucp("2083123@pucp.edu.pe");
         alum.setFecha_inclusion(new Date());
         
+       
         //Atributos Alumno
-        alum.setId_alumno(23);
-        alum.setCodigo_pucp("20193212");
+        alum.setCodigo_pucp("20203212");
         Especialidad esp = new Especialidad();
-        esp.setId_especialidad(5);
-        
-//        EspecialidadDAO daoEsp = new EspecialidadMySQL();
-//        
-//        int flag = daoEsp.insertar(esp);
-//        if(flag != 1){
-//            System.out.println("Error al momento de insertar la especialidad");
-//            return;
-//        }
-            
+        esp.setId_especialidad(3);
+      
         alum.setEspecialidad(esp);
-        alum.setCraest(70.3);
-        alum.setCursos_por_primera(3);
-        alum.setCursos_por_segunda(3);
+        alum.setCraest(54.3);
+        alum.setCursos_por_primera(0);
+        alum.setCursos_por_segunda(2);
         alum.setCursos_por_tercera(0);
-        alum.setCreditos_aprobados(123.4);
+        alum.setCreditos_aprobados(70.4);//hay un problema aqui, el decimal debe ser mas grande 
+        //para que pueda recoger una mayor cantidad de creditos. Solo se admiten alumnos 
+        //con cantidad de creditos 
         
         
         
