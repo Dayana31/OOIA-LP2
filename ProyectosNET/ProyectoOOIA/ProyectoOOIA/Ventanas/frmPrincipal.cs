@@ -23,13 +23,13 @@ namespace ProyectoOOIA.Ventanas
             {
                 btnEventos.Enabled = false;
                 //btnEventos.Visible = false;
-                txtEventos.ForeColor = Color.DimGray;
+                txtEventos.Enabled = false;
             }
             if (tipo == TipoUsuario.OOIA)
             {
                 btnCitas.Enabled = false;
                 //btnCitas.Visible = false;
-                txtCitas.ForeColor = Color.DimGray;
+                txtCitas.Enabled = false;
             }
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.EEGGCC);

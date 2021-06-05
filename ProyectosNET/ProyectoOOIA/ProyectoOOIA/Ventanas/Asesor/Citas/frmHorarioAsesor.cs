@@ -15,7 +15,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            new frmPrincipalAsesor().Show();
+            new frmPrincipal(TipoUsuario.Asesor).Show();
             this.Close();
         }
 
