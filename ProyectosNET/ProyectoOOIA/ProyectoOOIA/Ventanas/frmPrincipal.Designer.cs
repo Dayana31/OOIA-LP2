@@ -89,11 +89,11 @@ namespace ProyectoOOIA.Ventanas
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
             this.lblUsername.Location = new System.Drawing.Point(115, 29);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(218, 24);
+            this.lblUsername.Size = new System.Drawing.Size(224, 30);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Solorzano Tapia, José";
             // 
@@ -251,11 +251,11 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblEventosProximos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEventosProximos.AutoSize = true;
-            this.lblEventosProximos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEventosProximos.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEventosProximos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblEventosProximos.Location = new System.Drawing.Point(56, 24);
             this.lblEventosProximos.Name = "lblEventosProximos";
-            this.lblEventosProximos.Size = new System.Drawing.Size(178, 24);
+            this.lblEventosProximos.Size = new System.Drawing.Size(191, 30);
             this.lblEventosProximos.TabIndex = 0;
             this.lblEventosProximos.Text = "Eventos Próximos";
             this.lblEventosProximos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

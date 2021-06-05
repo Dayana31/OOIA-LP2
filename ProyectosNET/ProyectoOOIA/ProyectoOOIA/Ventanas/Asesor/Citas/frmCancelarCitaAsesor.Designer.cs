@@ -32,7 +32,7 @@ namespace ProyectoOOIA.Ventanas
             this.lblCancelarCitaTiulo = new System.Windows.Forms.Label();
             this.lblCancelarCitaDescripcion = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtJustificacion = new System.Windows.Forms.TextBox();
             this.btnRegresar = new System.Windows.Forms.Button();
             this.btnCancelarCita = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -78,14 +78,14 @@ namespace ProyectoOOIA.Ventanas
             this.label1.Text = "Escriba su justificación para la cancelación de la cita.";
             this.label1.UseMnemonic = false;
             // 
-            // textBox1
+            // txtJustificacion
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 146);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(556, 222);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtJustificacion.Location = new System.Drawing.Point(16, 146);
+            this.txtJustificacion.Multiline = true;
+            this.txtJustificacion.Name = "txtJustificacion";
+            this.txtJustificacion.Size = new System.Drawing.Size(556, 222);
+            this.txtJustificacion.TabIndex = 3;
+            this.txtJustificacion.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnRegresar
             // 
@@ -110,20 +110,19 @@ namespace ProyectoOOIA.Ventanas
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-//            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
-            // frmCancelarCita
+            // frmCancelarCitaAsesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 450);
             this.Controls.Add(this.btnCancelarCita);
             this.Controls.Add(this.btnRegresar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtJustificacion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCancelarCitaDescripcion);
             this.Controls.Add(this.lblCancelarCitaTiulo);
-            this.Name = "frmCancelarCita";
+            this.Name = "frmCancelarCitaAsesor";
             this.Text = "Cancelar Cita";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,7 +134,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblCancelarCitaTiulo;
         private System.Windows.Forms.Label lblCancelarCitaDescripcion;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtJustificacion;
         private System.Windows.Forms.Button btnRegresar;
         private System.Windows.Forms.Button btnCancelarCita;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

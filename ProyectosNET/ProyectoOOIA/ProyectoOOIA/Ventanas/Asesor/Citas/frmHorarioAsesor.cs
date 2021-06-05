@@ -40,5 +40,11 @@ namespace ProyectoOOIA.Ventanas
             /*dgvHorarioProf.DataSource =
                 daoHorario.listarHorario(tbNombre.Text);*/
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            new frmInicioSesion().Show();
+            this.Close();
+        }
     }
 }
