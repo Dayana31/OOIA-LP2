@@ -52,15 +52,11 @@ namespace ProyectoOOIA.Ventanas
             SendMessage(this.Handle, 0xA1, 0x2, 0);
         }
 
-        private void dgvCitasProgramadas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
 
         private void btnRegistrarCita_Click(object sender, EventArgs e)
         {
-            new frmCitaRegistroAlumno().ShowDialog();
+            //new frmCitaRegistroAlumno().ShowDialog();
+            new frmConfirmarCitaAlumno().ShowDialog();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -74,6 +70,16 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmAgregarOpinion().ShowDialog();
 
+        }
+
+        private void btnBuscarAsesor_Click(object sender, EventArgs e)
+        {
+            new frmListaTutores().Show();
+        }
+
+        private void btnBuscarHorario_Click(object sender, EventArgs e)
+        {
+            new frmHorarioCita().Show();
         }
     }
 }

@@ -123,10 +123,10 @@
     <Compile Include="Ventanas\Alumno\Citas\frmCancelarCitaAlumno.Designer.cs">
       <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmCitaRegistroAlumno.cs">
+    <Compile Include="Ventanas\Old\frmCitaRegistroAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmCitaRegistroAlumno.Designer.cs">
+    <Compile Include="Ventanas\Old\frmCitaRegistroAlumno.Designer.cs">
       <DependentUpon>frmCitaRegistroAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Alumno\Citas\frmConfirmarCitaAlumno.cs">
@@ -311,7 +311,7 @@
     <EmbeddedResource Include="Ventanas\Alumno\Citas\frmCancelarCitaAlumno.resx">
       <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Alumno\Citas\frmCitaRegistroAlumno.resx">
+    <EmbeddedResource Include="Ventanas\Old\frmCitaRegistroAlumno.resx">
       <DependentUpon>frmCitaRegistroAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Citas\frmConfirmarCitaAlumno.resx">

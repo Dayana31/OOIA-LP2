@@ -29,8 +29,8 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroEvento));
             this.tabEventos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -50,15 +50,6 @@ namespace ProyectoOOIA.Ventanas
             this.txtNombreInscritos = new System.Windows.Forms.TextBox();
             this.lblNombreInscritos = new System.Windows.Forms.Label();
             this.tabHistorial = new System.Windows.Forms.TabPage();
-            this.dtpFechaHistorial = new System.Windows.Forms.DateTimePicker();
-            this.txtHoraHistorial = new System.Windows.Forms.TextBox();
-            this.lblFechaHistorial = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnBuscarHistorial = new System.Windows.Forms.Button();
-            this.txtCategoriaHistorial = new System.Windows.Forms.TextBox();
-            this.lblCategoriaHistorial = new System.Windows.Forms.Label();
-            this.txtNombreHistorial = new System.Windows.Forms.TextBox();
-            this.lblNombresHistorial = new System.Windows.Forms.Label();
             this.lblEventosPasados = new System.Windows.Forms.Label();
             this.btnDetHistorial = new System.Windows.Forms.Button();
             this.dvgHistorial = new System.Windows.Forms.DataGridView();
@@ -76,6 +67,17 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblNombreHistorial = new System.Windows.Forms.Label();
+            this.txtNombreHistorial = new System.Windows.Forms.TextBox();
+            this.dtpFechaHistorial = new System.Windows.Forms.DateTimePicker();
+            this.lblCategoríaHistorial = new System.Windows.Forms.Label();
+            this.txtCategoriaHistorial = new System.Windows.Forms.TextBox();
+            this.btnBuscarHistorial = new System.Windows.Forms.Button();
+            this.lblFechaHistorial = new System.Windows.Forms.Label();
+            this.txtHoraHistorial = new System.Windows.Forms.TextBox();
+            this.lblHoraHistorial = new System.Windows.Forms.Label();
             this.tabEventos.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgInscritos)).BeginInit();
@@ -83,6 +85,8 @@ namespace ProyectoOOIA.Ventanas
             ((System.ComponentModel.ISupportInitialize)(this.dvgHistorial)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabEventos
@@ -99,21 +103,13 @@ namespace ProyectoOOIA.Ventanas
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Controls.Add(this.btnAcceder);
-            this.tabPage1.Controls.Add(this.dtpFechaInscritos);
             this.tabPage1.Controls.Add(this.btnEliminar);
             this.tabPage1.Controls.Add(this.btnRegistrar);
             this.tabPage1.Controls.Add(this.btnDetInscritos);
-            this.tabPage1.Controls.Add(this.btnBuscarInscritos);
             this.tabPage1.Controls.Add(this.lblEventosInscritos);
             this.tabPage1.Controls.Add(this.dvgInscritos);
-            this.tabPage1.Controls.Add(this.txtHoraInscritos);
-            this.tabPage1.Controls.Add(this.lblFechaInscritos);
-            this.tabPage1.Controls.Add(this.lblHoraInscritos);
-            this.tabPage1.Controls.Add(this.txtCategoriaInscritos);
-            this.tabPage1.Controls.Add(this.lblCategoriaInscritos);
-            this.tabPage1.Controls.Add(this.txtNombreInscritos);
-            this.tabPage1.Controls.Add(this.lblNombreInscritos);
             this.tabPage1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
@@ -135,7 +131,8 @@ namespace ProyectoOOIA.Ventanas
             // 
             // dtpFechaInscritos
             // 
-            this.dtpFechaInscritos.Location = new System.Drawing.Point(150, 82);
+            this.dtpFechaInscritos.Enabled = false;
+            this.dtpFechaInscritos.Location = new System.Drawing.Point(137, 73);
             this.dtpFechaInscritos.Name = "dtpFechaInscritos";
             this.dtpFechaInscritos.Size = new System.Drawing.Size(200, 21);
             this.dtpFechaInscritos.TabIndex = 42;
@@ -176,7 +173,7 @@ namespace ProyectoOOIA.Ventanas
             // btnBuscarInscritos
             // 
             this.btnBuscarInscritos.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarInscritos.Location = new System.Drawing.Point(445, 24);
+            this.btnBuscarInscritos.Location = new System.Drawing.Point(432, 15);
             this.btnBuscarInscritos.Name = "btnBuscarInscritos";
             this.btnBuscarInscritos.Size = new System.Drawing.Size(87, 26);
             this.btnBuscarInscritos.TabIndex = 38;
@@ -198,14 +195,14 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.dvgInscritos.AllowUserToDeleteRows = false;
             this.dvgInscritos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgInscritos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgInscritos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dvgInscritos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgInscritos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreEvento,
@@ -222,8 +219,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtHoraInscritos
             // 
+            this.txtHoraInscritos.Enabled = false;
             this.txtHoraInscritos.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoraInscritos.Location = new System.Drawing.Point(445, 82);
+            this.txtHoraInscritos.Location = new System.Drawing.Point(432, 71);
             this.txtHoraInscritos.Name = "txtHoraInscritos";
             this.txtHoraInscritos.Size = new System.Drawing.Size(74, 23);
             this.txtHoraInscritos.TabIndex = 35;
@@ -232,7 +230,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblFechaInscritos.AutoSize = true;
             this.lblFechaInscritos.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInscritos.Location = new System.Drawing.Point(22, 82);
+            this.lblFechaInscritos.Location = new System.Drawing.Point(3, 73);
             this.lblFechaInscritos.Name = "lblFechaInscritos";
             this.lblFechaInscritos.Size = new System.Drawing.Size(46, 21);
             this.lblFechaInscritos.TabIndex = 34;
@@ -242,7 +240,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblHoraInscritos.AutoSize = true;
             this.lblHoraInscritos.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraInscritos.Location = new System.Drawing.Point(362, 82);
+            this.lblHoraInscritos.Location = new System.Drawing.Point(349, 74);
             this.lblHoraInscritos.Name = "lblHoraInscritos";
             this.lblHoraInscritos.Size = new System.Drawing.Size(77, 21);
             this.lblHoraInscritos.TabIndex = 32;
@@ -250,8 +248,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtCategoriaInscritos
             // 
+            this.txtCategoriaInscritos.Enabled = false;
             this.txtCategoriaInscritos.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoriaInscritos.Location = new System.Drawing.Point(150, 53);
+            this.txtCategoriaInscritos.Location = new System.Drawing.Point(137, 44);
             this.txtCategoriaInscritos.Name = "txtCategoriaInscritos";
             this.txtCategoriaInscritos.Size = new System.Drawing.Size(137, 23);
             this.txtCategoriaInscritos.TabIndex = 31;
@@ -260,7 +259,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblCategoriaInscritos.AutoSize = true;
             this.lblCategoriaInscritos.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoriaInscritos.Location = new System.Drawing.Point(22, 53);
+            this.lblCategoriaInscritos.Location = new System.Drawing.Point(3, 44);
             this.lblCategoriaInscritos.Name = "lblCategoriaInscritos";
             this.lblCategoriaInscritos.Size = new System.Drawing.Size(70, 21);
             this.lblCategoriaInscritos.TabIndex = 30;
@@ -268,8 +267,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtNombreInscritos
             // 
+            this.txtNombreInscritos.Enabled = false;
             this.txtNombreInscritos.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreInscritos.Location = new System.Drawing.Point(150, 24);
+            this.txtNombreInscritos.Location = new System.Drawing.Point(137, 15);
             this.txtNombreInscritos.Name = "txtNombreInscritos";
             this.txtNombreInscritos.Size = new System.Drawing.Size(289, 23);
             this.txtNombreInscritos.TabIndex = 29;
@@ -278,7 +278,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblNombreInscritos.AutoSize = true;
             this.lblNombreInscritos.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreInscritos.Location = new System.Drawing.Point(22, 24);
+            this.lblNombreInscritos.Location = new System.Drawing.Point(3, 15);
             this.lblNombreInscritos.Name = "lblNombreInscritos";
             this.lblNombreInscritos.Size = new System.Drawing.Size(128, 21);
             this.lblNombreInscritos.TabIndex = 28;
@@ -287,15 +287,7 @@ namespace ProyectoOOIA.Ventanas
             // tabHistorial
             // 
             this.tabHistorial.BackColor = System.Drawing.SystemColors.Control;
-            this.tabHistorial.Controls.Add(this.dtpFechaHistorial);
-            this.tabHistorial.Controls.Add(this.txtHoraHistorial);
-            this.tabHistorial.Controls.Add(this.lblFechaHistorial);
-            this.tabHistorial.Controls.Add(this.label5);
-            this.tabHistorial.Controls.Add(this.btnBuscarHistorial);
-            this.tabHistorial.Controls.Add(this.txtCategoriaHistorial);
-            this.tabHistorial.Controls.Add(this.lblCategoriaHistorial);
-            this.tabHistorial.Controls.Add(this.txtNombreHistorial);
-            this.tabHistorial.Controls.Add(this.lblNombresHistorial);
+            this.tabHistorial.Controls.Add(this.panel3);
             this.tabHistorial.Controls.Add(this.lblEventosPasados);
             this.tabHistorial.Controls.Add(this.btnDetHistorial);
             this.tabHistorial.Controls.Add(this.dvgHistorial);
@@ -305,87 +297,6 @@ namespace ProyectoOOIA.Ventanas
             this.tabHistorial.Size = new System.Drawing.Size(1006, 505);
             this.tabHistorial.TabIndex = 1;
             this.tabHistorial.Text = "Historial de eventos";
-            // 
-            // dtpFechaHistorial
-            // 
-            this.dtpFechaHistorial.Location = new System.Drawing.Point(150, 82);
-            this.dtpFechaHistorial.Name = "dtpFechaHistorial";
-            this.dtpFechaHistorial.Size = new System.Drawing.Size(200, 21);
-            this.dtpFechaHistorial.TabIndex = 54;
-            // 
-            // txtHoraHistorial
-            // 
-            this.txtHoraHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoraHistorial.Location = new System.Drawing.Point(445, 82);
-            this.txtHoraHistorial.Name = "txtHoraHistorial";
-            this.txtHoraHistorial.Size = new System.Drawing.Size(74, 23);
-            this.txtHoraHistorial.TabIndex = 53;
-            // 
-            // lblFechaHistorial
-            // 
-            this.lblFechaHistorial.AutoSize = true;
-            this.lblFechaHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHistorial.Location = new System.Drawing.Point(22, 82);
-            this.lblFechaHistorial.Name = "lblFechaHistorial";
-            this.lblFechaHistorial.Size = new System.Drawing.Size(46, 21);
-            this.lblFechaHistorial.TabIndex = 52;
-            this.lblFechaHistorial.Text = "Fecha:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(362, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 21);
-            this.label5.TabIndex = 51;
-            this.label5.Text = "Hora inicio:";
-            // 
-            // btnBuscarHistorial
-            // 
-            this.btnBuscarHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarHistorial.Location = new System.Drawing.Point(445, 24);
-            this.btnBuscarHistorial.Name = "btnBuscarHistorial";
-            this.btnBuscarHistorial.Size = new System.Drawing.Size(87, 26);
-            this.btnBuscarHistorial.TabIndex = 50;
-            this.btnBuscarHistorial.Text = "Buscar";
-            this.btnBuscarHistorial.UseVisualStyleBackColor = true;
-            // 
-            // txtCategoriaHistorial
-            // 
-            this.txtCategoriaHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoriaHistorial.Location = new System.Drawing.Point(150, 53);
-            this.txtCategoriaHistorial.Name = "txtCategoriaHistorial";
-            this.txtCategoriaHistorial.Size = new System.Drawing.Size(137, 23);
-            this.txtCategoriaHistorial.TabIndex = 45;
-            // 
-            // lblCategoriaHistorial
-            // 
-            this.lblCategoriaHistorial.AutoSize = true;
-            this.lblCategoriaHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoriaHistorial.Location = new System.Drawing.Point(22, 53);
-            this.lblCategoriaHistorial.Name = "lblCategoriaHistorial";
-            this.lblCategoriaHistorial.Size = new System.Drawing.Size(70, 21);
-            this.lblCategoriaHistorial.TabIndex = 44;
-            this.lblCategoriaHistorial.Text = "Categoria:";
-            // 
-            // txtNombreHistorial
-            // 
-            this.txtNombreHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreHistorial.Location = new System.Drawing.Point(150, 24);
-            this.txtNombreHistorial.Name = "txtNombreHistorial";
-            this.txtNombreHistorial.Size = new System.Drawing.Size(289, 23);
-            this.txtNombreHistorial.TabIndex = 43;
-            // 
-            // lblNombresHistorial
-            // 
-            this.lblNombresHistorial.AutoSize = true;
-            this.lblNombresHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombresHistorial.Location = new System.Drawing.Point(22, 24);
-            this.lblNombresHistorial.Name = "lblNombresHistorial";
-            this.lblNombresHistorial.Size = new System.Drawing.Size(128, 21);
-            this.lblNombresHistorial.TabIndex = 42;
-            this.lblNombresHistorial.Text = "Nombre del evento:";
             // 
             // lblEventosPasados
             // 
@@ -411,14 +322,14 @@ namespace ProyectoOOIA.Ventanas
             // dvgHistorial
             // 
             this.dvgHistorial.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dvgHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -457,7 +368,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(953, 29);
+            this.btnLogout.Location = new System.Drawing.Point(967, 29);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(35, 34);
             this.btnLogout.TabIndex = 14;
@@ -560,6 +471,123 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 140;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lblNombreInscritos);
+            this.panel2.Controls.Add(this.txtNombreInscritos);
+            this.panel2.Controls.Add(this.dtpFechaInscritos);
+            this.panel2.Controls.Add(this.lblCategoriaInscritos);
+            this.panel2.Controls.Add(this.txtCategoriaInscritos);
+            this.panel2.Controls.Add(this.btnBuscarInscritos);
+            this.panel2.Controls.Add(this.lblFechaInscritos);
+            this.panel2.Controls.Add(this.txtHoraInscritos);
+            this.panel2.Controls.Add(this.lblHoraInscritos);
+            this.panel2.Location = new System.Drawing.Point(22, 6);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(564, 124);
+            this.panel2.TabIndex = 44;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lblNombreHistorial);
+            this.panel3.Controls.Add(this.txtNombreHistorial);
+            this.panel3.Controls.Add(this.dtpFechaHistorial);
+            this.panel3.Controls.Add(this.lblCategoríaHistorial);
+            this.panel3.Controls.Add(this.txtCategoriaHistorial);
+            this.panel3.Controls.Add(this.btnBuscarHistorial);
+            this.panel3.Controls.Add(this.lblFechaHistorial);
+            this.panel3.Controls.Add(this.txtHoraHistorial);
+            this.panel3.Controls.Add(this.lblHoraHistorial);
+            this.panel3.Location = new System.Drawing.Point(22, 6);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(564, 124);
+            this.panel3.TabIndex = 45;
+            // 
+            // lblNombreHistorial
+            // 
+            this.lblNombreHistorial.AutoSize = true;
+            this.lblNombreHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreHistorial.Location = new System.Drawing.Point(3, 15);
+            this.lblNombreHistorial.Name = "lblNombreHistorial";
+            this.lblNombreHistorial.Size = new System.Drawing.Size(128, 21);
+            this.lblNombreHistorial.TabIndex = 28;
+            this.lblNombreHistorial.Text = "Nombre del evento:";
+            // 
+            // txtNombreHistorial
+            // 
+            this.txtNombreHistorial.Enabled = false;
+            this.txtNombreHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreHistorial.Location = new System.Drawing.Point(137, 15);
+            this.txtNombreHistorial.Name = "txtNombreHistorial";
+            this.txtNombreHistorial.Size = new System.Drawing.Size(289, 23);
+            this.txtNombreHistorial.TabIndex = 29;
+            // 
+            // dtpFechaHistorial
+            // 
+            this.dtpFechaHistorial.Enabled = false;
+            this.dtpFechaHistorial.Location = new System.Drawing.Point(137, 73);
+            this.dtpFechaHistorial.Name = "dtpFechaHistorial";
+            this.dtpFechaHistorial.Size = new System.Drawing.Size(200, 21);
+            this.dtpFechaHistorial.TabIndex = 42;
+            // 
+            // lblCategoríaHistorial
+            // 
+            this.lblCategoríaHistorial.AutoSize = true;
+            this.lblCategoríaHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoríaHistorial.Location = new System.Drawing.Point(3, 44);
+            this.lblCategoríaHistorial.Name = "lblCategoríaHistorial";
+            this.lblCategoríaHistorial.Size = new System.Drawing.Size(70, 21);
+            this.lblCategoríaHistorial.TabIndex = 30;
+            this.lblCategoríaHistorial.Text = "Categoria:";
+            // 
+            // txtCategoriaHistorial
+            // 
+            this.txtCategoriaHistorial.Enabled = false;
+            this.txtCategoriaHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoriaHistorial.Location = new System.Drawing.Point(137, 44);
+            this.txtCategoriaHistorial.Name = "txtCategoriaHistorial";
+            this.txtCategoriaHistorial.Size = new System.Drawing.Size(137, 23);
+            this.txtCategoriaHistorial.TabIndex = 31;
+            // 
+            // btnBuscarHistorial
+            // 
+            this.btnBuscarHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarHistorial.Location = new System.Drawing.Point(432, 15);
+            this.btnBuscarHistorial.Name = "btnBuscarHistorial";
+            this.btnBuscarHistorial.Size = new System.Drawing.Size(87, 26);
+            this.btnBuscarHistorial.TabIndex = 38;
+            this.btnBuscarHistorial.Text = "Buscar";
+            this.btnBuscarHistorial.UseVisualStyleBackColor = true;
+            // 
+            // lblFechaHistorial
+            // 
+            this.lblFechaHistorial.AutoSize = true;
+            this.lblFechaHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaHistorial.Location = new System.Drawing.Point(3, 73);
+            this.lblFechaHistorial.Name = "lblFechaHistorial";
+            this.lblFechaHistorial.Size = new System.Drawing.Size(46, 21);
+            this.lblFechaHistorial.TabIndex = 34;
+            this.lblFechaHistorial.Text = "Fecha:";
+            // 
+            // txtHoraHistorial
+            // 
+            this.txtHoraHistorial.Enabled = false;
+            this.txtHoraHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoraHistorial.Location = new System.Drawing.Point(432, 71);
+            this.txtHoraHistorial.Name = "txtHoraHistorial";
+            this.txtHoraHistorial.Size = new System.Drawing.Size(74, 23);
+            this.txtHoraHistorial.TabIndex = 35;
+            // 
+            // lblHoraHistorial
+            // 
+            this.lblHoraHistorial.AutoSize = true;
+            this.lblHoraHistorial.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHoraHistorial.Location = new System.Drawing.Point(349, 74);
+            this.lblHoraHistorial.Name = "lblHoraHistorial";
+            this.lblHoraHistorial.Size = new System.Drawing.Size(77, 21);
+            this.lblHoraHistorial.TabIndex = 32;
+            this.lblHoraHistorial.Text = "Hora inicio:";
+            // 
             // frmRegistroEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -567,6 +595,7 @@ namespace ProyectoOOIA.Ventanas
             this.ClientSize = new System.Drawing.Size(1014, 611);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabEventos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmRegistroEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eventos";
@@ -581,6 +610,10 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -610,16 +643,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblEventos;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lblEventosPasados;
-        private System.Windows.Forms.Button btnBuscarHistorial;
-        private System.Windows.Forms.TextBox txtCategoriaHistorial;
-        private System.Windows.Forms.Label lblCategoriaHistorial;
-        private System.Windows.Forms.TextBox txtNombreHistorial;
-        private System.Windows.Forms.Label lblNombresHistorial;
         private System.Windows.Forms.DateTimePicker dtpFechaInscritos;
-        private System.Windows.Forms.DateTimePicker dtpFechaHistorial;
-        private System.Windows.Forms.TextBox txtHoraHistorial;
-        private System.Windows.Forms.Label lblFechaHistorial;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAcceder;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreEvento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
@@ -631,5 +655,16 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label lblNombreHistorial;
+        private System.Windows.Forms.TextBox txtNombreHistorial;
+        private System.Windows.Forms.DateTimePicker dtpFechaHistorial;
+        private System.Windows.Forms.Label lblCategoríaHistorial;
+        private System.Windows.Forms.TextBox txtCategoriaHistorial;
+        private System.Windows.Forms.Button btnBuscarHistorial;
+        private System.Windows.Forms.Label lblFechaHistorial;
+        private System.Windows.Forms.TextBox txtHoraHistorial;
+        private System.Windows.Forms.Label lblHoraHistorial;
     }
 }
