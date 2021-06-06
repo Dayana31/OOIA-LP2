@@ -599,7 +599,7 @@ namespace ProyectoOOIA.Ventanas
             this.Name = "frmRegistroEvento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eventos";
-            this.Load += new System.EventHandler(this.frmRegistroEvento_Load);
+            this.Load += new System.EventHandler(this.frmEventosAlumno_Load);
             this.tabEventos.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

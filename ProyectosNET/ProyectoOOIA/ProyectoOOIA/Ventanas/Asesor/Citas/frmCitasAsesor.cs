@@ -22,8 +22,7 @@ namespace ProyectoOOIA.Ventanas
         private void btnMostrarDetalles_Click(object sender, EventArgs e)
         {
             /*_horarioSeleccionado = (Horario)dvgHorarioProf.CurrentRow.DataBoundItem;*/
-            new frmDetCita_EventAlumnos().Show();
-            this.Close();
+            new frmDetalleCitaAsesor().Show();
         }
 
         private void btnModificarHorario_Click(object sender, EventArgs e)

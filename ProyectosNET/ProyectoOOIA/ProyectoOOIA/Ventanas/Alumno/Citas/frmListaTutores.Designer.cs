@@ -109,7 +109,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // tabTutor
             // 
-            this.tabTutor.AutoScrollMargin = new System.Drawing.Size(0, 1000);
+            this.tabTutor.AutoScrollMargin = new System.Drawing.Size(0, 200);
             this.tabTutor.BackColor = System.Drawing.SystemColors.Control;
             this.tabTutor.Controls.Add(this.card6);
             this.tabTutor.Controls.Add(this.card7);

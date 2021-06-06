@@ -3,19 +3,19 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmVistadeEvento : Form
+    public partial class frmDetalleEvento : Form
     {
         private int flag;
         //frmPrincipalEventos principalEventos = null;
 
-        public frmVistadeEvento()
+        public frmDetalleEvento()
         {
             InitializeComponent();
         }
 
        
 
-        public frmVistadeEvento(int flag)
+        public frmDetalleEvento(int flag)
         {
             this.flag = flag;
             InitializeComponent();

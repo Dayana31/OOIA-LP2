@@ -17,10 +17,6 @@ namespace ProyectoOOIA.Ventanas
             tabTutor.AutoScroll = true;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -53,8 +49,6 @@ namespace ProyectoOOIA.Ventanas
             carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
             carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
             carta.asignarClick(new frmOpiniones(), this);
-
-
         }
 
         private void card3_Load(object sender, EventArgs e)

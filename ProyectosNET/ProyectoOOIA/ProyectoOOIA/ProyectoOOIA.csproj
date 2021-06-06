@@ -87,10 +87,10 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmAgregarEventoAlumno.cs">
+    <Compile Include="Ventanas\Old\frmAgregarEventoAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmAgregarEventoAlumno.Designer.cs">
+    <Compile Include="Ventanas\Old\frmAgregarEventoAlumno.Designer.cs">
       <DependentUpon>frmAgregarEventoAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Old\frmAgregarEventoOOIA.cs">
@@ -153,10 +153,10 @@
     <Compile Include="Ventanas\Asesor\Citas\frmDetalleCitaAsesor.Designer.cs">
       <DependentUpon>frmDetalleCitaAsesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmCancelarEventoAlumno.cs">
+    <Compile Include="Ventanas\Old\frmCancelarEventoAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmCancelarEventoAlumno.Designer.cs">
+    <Compile Include="Ventanas\Old\frmCancelarEventoAlumno.Designer.cs">
       <DependentUpon>frmCancelarEventoAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Eventos\frmEliminarEventoOOIA.cs">
@@ -293,7 +293,7 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAgregarEventoAlumno.resx">
+    <EmbeddedResource Include="Ventanas\Old\frmAgregarEventoAlumno.resx">
       <DependentUpon>frmAgregarEventoAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Old\frmAgregarEventoOOIA.resx">
@@ -329,7 +329,7 @@
     <EmbeddedResource Include="Ventanas\Asesor\Citas\frmDetalleCitaAsesor.resx">
       <DependentUpon>frmDetalleCitaAsesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmCancelarEventoAlumno.resx">
+    <EmbeddedResource Include="Ventanas\Old\frmCancelarEventoAlumno.resx">
       <DependentUpon>frmCancelarEventoAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Eventos\frmEliminarEventoOOIA.resx">

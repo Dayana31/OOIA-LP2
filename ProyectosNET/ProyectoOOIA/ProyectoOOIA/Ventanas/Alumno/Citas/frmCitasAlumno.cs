@@ -44,7 +44,7 @@ namespace ProyectoOOIA.Ventanas
         private void btnVerDetalle_Click(object sender, EventArgs e)
         {
             //tenemos que almacenar los datos en la pantalla
-            new frmDetalleCita().ShowDialog();
+            new frmDetalleCitaAlumno().ShowDialog();
             //this.Close();
             this.DialogResult = DialogResult.OK;
         }
@@ -90,7 +90,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnDetInscritas_Click(object sender, EventArgs e)
         {
-            new frmDetalleCita().ShowDialog();
+            new frmDetalleCitaAlumno().ShowDialog();
             this.DialogResult = DialogResult.OK;
         }
     }

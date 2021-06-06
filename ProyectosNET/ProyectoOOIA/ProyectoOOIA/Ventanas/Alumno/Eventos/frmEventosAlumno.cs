@@ -10,7 +10,7 @@ namespace ProyectoOOIA.Ventanas
             InitializeComponent();
         }
 
-        private void frmRegistroEvento_Load(object sender, EventArgs e)
+        private void frmEventosAlumno_Load(object sender, EventArgs e)
         {
 
         }
@@ -22,7 +22,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnDetInscritos_Click(object sender, EventArgs e)
         {
-            new frmVistadeEvento().Show();
+            new frmDetalleEvento().Show();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnDetHistorial_Click(object sender, EventArgs e)
         {
-            new frmVistadeEvento().Show();
+            new frmDetalleEvento().Show();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
