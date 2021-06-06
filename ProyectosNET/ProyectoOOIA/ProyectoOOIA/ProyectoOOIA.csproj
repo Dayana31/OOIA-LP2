@@ -117,10 +117,10 @@
     <Compile Include="Ventanas\Asesor\Citas\frmCancelarCitaAsesor.Designer.cs">
       <DependentUpon>frmCancelarCitaAsesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmCancelarCitaAlumno.cs">
+    <Compile Include="Ventanas\Old\frmCancelarCitaAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmCancelarCitaAlumno.Designer.cs">
+    <Compile Include="Ventanas\Old\frmCancelarCitaAlumno.Designer.cs">
       <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Old\frmCitaRegistroAlumno.cs">
@@ -129,10 +129,10 @@
     <Compile Include="Ventanas\Old\frmCitaRegistroAlumno.Designer.cs">
       <DependentUpon>frmCitaRegistroAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmConfirmarCitaAlumno.cs">
+    <Compile Include="Ventanas\Old\frmConfirmarCitaAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmConfirmarCitaAlumno.Designer.cs">
+    <Compile Include="Ventanas\Old\frmConfirmarCitaAlumno.Designer.cs">
       <DependentUpon>frmConfirmarCitaAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmConfirmarCancelarAsesor.cs">
@@ -141,10 +141,10 @@
     <Compile Include="Ventanas\Asesor\Citas\frmConfirmarCancelarAsesor.Designer.cs">
       <DependentUpon>frmConfirmarCancelarAsesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmConfirmarOpinion.cs">
+    <Compile Include="Ventanas\Old\frmConfirmarOpinion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmConfirmarOpinion.Designer.cs">
+    <Compile Include="Ventanas\Old\frmConfirmarOpinion.Designer.cs">
       <DependentUpon>frmConfirmarOpinion.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmDetalleCitaAsesor.cs">
@@ -308,19 +308,19 @@
     <EmbeddedResource Include="Ventanas\Asesor\Citas\frmCancelarCitaAsesor.resx">
       <DependentUpon>frmCancelarCitaAsesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Alumno\Citas\frmCancelarCitaAlumno.resx">
+    <EmbeddedResource Include="Ventanas\Old\frmCancelarCitaAlumno.resx">
       <DependentUpon>frmCancelarCitaAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Old\frmCitaRegistroAlumno.resx">
       <DependentUpon>frmCitaRegistroAlumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Alumno\Citas\frmConfirmarCitaAlumno.resx">
+    <EmbeddedResource Include="Ventanas\Old\frmConfirmarCitaAlumno.resx">
       <DependentUpon>frmConfirmarCitaAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Asesor\Citas\frmConfirmarCancelarAsesor.resx">
       <DependentUpon>frmConfirmarCancelarAsesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Alumno\Citas\frmConfirmarOpinion.resx">
+    <EmbeddedResource Include="Ventanas\Old\frmConfirmarOpinion.resx">
       <DependentUpon>frmConfirmarOpinion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Citas\frmDetalleCitaAlumno.resx">

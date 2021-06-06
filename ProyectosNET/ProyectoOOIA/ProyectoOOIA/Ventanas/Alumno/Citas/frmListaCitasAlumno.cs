@@ -34,7 +34,10 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnEliminarCita_Click(object sender, EventArgs e)
         {
-            new frmCancelarCitaAlumno().ShowDialog();
+            //new frmCancelarCitaAlumno().ShowDialog();
+            DialogResult dr =
+               MessageBox.Show("¿Esta seguro que desea cancelar esta cita?", "Cancelación de cita", 
+               MessageBoxButtons.YesNo, MessageBoxIcon.None);
 
         }
 
@@ -56,7 +59,10 @@ namespace ProyectoOOIA.Ventanas
         private void btnRegistrarCita_Click(object sender, EventArgs e)
         {
             //new frmCitaRegistroAlumno().ShowDialog();
-            new frmConfirmarCitaAlumno().ShowDialog();
+            //new frmConfirmarCitaAlumno().ShowDialog();
+            DialogResult dr = 
+                MessageBox.Show("¿Esta seguro que desea programar la cita?", "Registro de cita", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.None);
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
