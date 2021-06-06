@@ -10,19 +10,6 @@ namespace ProyectoOOIA.Ventanas
             InitializeComponent();
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-          
-            this.Close();
-        }
-
-        private void btnAtras_Click(object sender, EventArgs e)
-        {
-            new frmPrincipalAsesor().Show();
-            this.Close();
-        }
-
         private void frmRegistroEvento_Load(object sender, EventArgs e)
         {
 
@@ -33,17 +20,6 @@ namespace ProyectoOOIA.Ventanas
             new frmBuscarEventoAlumno().Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            new frmPrincipal(TipoUsuario.Alumno).Show();
-            this.Close();
-        }
-
         private void btnDetInscritos_Click(object sender, EventArgs e)
         {
             new frmVistadeEvento().Show();
@@ -51,23 +27,23 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            new frmAgregarEventoAlumno().Show();
+            //new frmAgregarEventoAlumno().Show();
+            DialogResult dr =
+               MessageBox.Show("¿Desea inscribirse a este evento?", "Inscripción a Evento",
+               MessageBoxButtons.YesNo, MessageBoxIcon.None);
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            new frmCancelarEventoAlumno().Show();
+            //new frmCancelarEventoAlumno().Show();
+            DialogResult dr =
+               MessageBox.Show("¿Desea cancelar su inscripción a este evento?", "Cancelar Evento",
+               MessageBoxButtons.YesNo, MessageBoxIcon.None);
         }
 
         private void btnDetHistorial_Click(object sender, EventArgs e)
         {
             new frmVistadeEvento().Show();
-        }
-
-        private void btnAtras_Click_1(object sender, EventArgs e)
-        {
-            new frmPrincipal(TipoUsuario.Alumno).Show();
-            this.Close();
         }
 
         private void btnHome_Click(object sender, EventArgs e)

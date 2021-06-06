@@ -105,11 +105,11 @@
     <Compile Include="Ventanas\Alumno\Citas\frmAgregarOpinion.Designer.cs">
       <DependentUpon>frmAgregarOpinion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmBuscarEventoAlumno.cs">
+    <Compile Include="Ventanas\Alumno\Eventos\frmBuscarEvento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmBuscarEventoAlumno.Designer.cs">
-      <DependentUpon>frmBuscarEventoAlumno.cs</DependentUpon>
+    <Compile Include="Ventanas\Alumno\Eventos\frmBuscarEvento.Designer.cs">
+      <DependentUpon>frmBuscarEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Asesor\Citas\frmCancelarCitaAsesor.cs">
       <SubType>Form</SubType>
@@ -263,11 +263,11 @@
     <Compile Include="Ventanas\frmReestablecerContraseña.Designer.cs">
       <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmRegistroEvento.cs">
+    <Compile Include="Ventanas\Alumno\Eventos\frmEventosAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmRegistroEvento.Designer.cs">
-      <DependentUpon>frmRegistroEvento.cs</DependentUpon>
+    <Compile Include="Ventanas\Alumno\Eventos\frmEventosAlumno.Designer.cs">
+      <DependentUpon>frmEventosAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmRespuestaAcceso.cs">
       <SubType>Form</SubType>
@@ -275,11 +275,11 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmRespuestaAcceso.Designer.cs">
       <DependentUpon>frmRespuestaAcceso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmVistadeEvento.cs">
+    <Compile Include="Ventanas\Alumno\Eventos\frmDetalleEvento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Eventos\frmVistadeEvento.Designer.cs">
-      <DependentUpon>frmVistadeEvento.cs</DependentUpon>
+    <Compile Include="Ventanas\Alumno\Eventos\frmDetalleEvento.Designer.cs">
+      <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Componentes\Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
@@ -302,8 +302,8 @@
     <EmbeddedResource Include="Ventanas\Alumno\Citas\frmAgregarOpinion.resx">
       <DependentUpon>frmAgregarOpinion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmBuscarEventoAlumno.resx">
-      <DependentUpon>frmBuscarEventoAlumno.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmBuscarEvento.resx">
+      <DependentUpon>frmBuscarEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Asesor\Citas\frmCancelarCitaAsesor.resx">
       <DependentUpon>frmCancelarCitaAsesor.cs</DependentUpon>
@@ -390,14 +390,14 @@
     <EmbeddedResource Include="Ventanas\frmReestablecerContraseña.resx">
       <DependentUpon>frmReestablecerContraseña.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmRegistroEvento.resx">
-      <DependentUpon>frmRegistroEvento.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmEventosAlumno.resx">
+      <DependentUpon>frmEventosAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmRespuestaAcceso.resx">
       <DependentUpon>frmRespuestaAcceso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmVistadeEvento.resx">
-      <DependentUpon>frmVistadeEvento.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmDetalleEvento.resx">
+      <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\MaterialSkin.Controls.MaterialCheckBox.datasource" />
     <None Include="Properties\Settings.settings">
