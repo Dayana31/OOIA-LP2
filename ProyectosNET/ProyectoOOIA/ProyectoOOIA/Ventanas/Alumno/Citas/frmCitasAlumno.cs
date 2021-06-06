@@ -87,5 +87,11 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmHorarioCita().Show();
         }
+
+        private void btnDetInscritas_Click(object sender, EventArgs e)
+        {
+            new frmDetalleCita().ShowDialog();
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

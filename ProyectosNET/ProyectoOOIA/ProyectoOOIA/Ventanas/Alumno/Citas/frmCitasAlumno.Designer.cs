@@ -37,6 +37,12 @@ namespace ProyectoOOIA.Ventanas
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.lblCitasHeader = new System.Windows.Forms.Label();
             this.dgvCitasProgramadas = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Orientador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminarCita = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabHistorial = new System.Windows.Forms.TabControl();
@@ -56,7 +62,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscarHorario = new System.Windows.Forms.Button();
             this.txtHoraFin = new System.Windows.Forms.TextBox();
             this.lblListaCitasInscritas = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDetInscritas = new System.Windows.Forms.Button();
             this.btnRegistrarCita = new System.Windows.Forms.Button();
             this.tabHistorialCitas = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -73,21 +79,15 @@ namespace ProyectoOOIA.Ventanas
             this.txtHoraFinHistorial = new System.Windows.Forms.TextBox();
             this.lblListaCitasPasadas = new System.Windows.Forms.Label();
             this.btnAgregarOpinion = new System.Windows.Forms.Button();
-            this.btnVerDetalle = new System.Windows.Forms.Button();
+            this.btnDetHistorial = new System.Windows.Forms.Button();
             this.dgvHistorialCitas = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Orientador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitasProgramadas)).BeginInit();
@@ -193,6 +193,54 @@ namespace ProyectoOOIA.Ventanas
             this.dgvCitasProgramadas.Size = new System.Drawing.Size(972, 223);
             this.dgvCitasProgramadas.TabIndex = 1;
             // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 130;
+            // 
+            // Orientador
+            // 
+            this.Orientador.HeaderText = "Orientador";
+            this.Orientador.MinimumWidth = 6;
+            this.Orientador.Name = "Orientador";
+            this.Orientador.ReadOnly = true;
+            this.Orientador.Width = 285;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.MinimumWidth = 6;
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            this.Fecha.Width = 125;
+            // 
+            // HoraInicio
+            // 
+            this.HoraInicio.HeaderText = "Hora Inicio";
+            this.HoraInicio.MinimumWidth = 6;
+            this.HoraInicio.Name = "HoraInicio";
+            this.HoraInicio.ReadOnly = true;
+            this.HoraInicio.Width = 125;
+            // 
+            // HoraFin
+            // 
+            this.HoraFin.HeaderText = "Hora Fin";
+            this.HoraFin.MinimumWidth = 6;
+            this.HoraFin.Name = "HoraFin";
+            this.HoraFin.ReadOnly = true;
+            this.HoraFin.Width = 125;
+            // 
+            // Asistencia
+            // 
+            this.Asistencia.HeaderText = "Asistencia";
+            this.Asistencia.MinimumWidth = 6;
+            this.Asistencia.Name = "Asistencia";
+            this.Asistencia.ReadOnly = true;
+            this.Asistencia.Width = 125;
+            // 
             // btnEliminarCita
             // 
             this.btnEliminarCita.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -237,7 +285,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabCitasProgramadas.BackColor = System.Drawing.SystemColors.Control;
             this.tabCitasProgramadas.Controls.Add(this.pnlRegistrarCita);
             this.tabCitasProgramadas.Controls.Add(this.lblListaCitasInscritas);
-            this.tabCitasProgramadas.Controls.Add(this.button1);
+            this.tabCitasProgramadas.Controls.Add(this.btnDetInscritas);
             this.tabCitasProgramadas.Controls.Add(this.btnRegistrarCita);
             this.tabCitasProgramadas.Controls.Add(this.btnEliminarCita);
             this.tabCitasProgramadas.Controls.Add(this.dgvCitasProgramadas);
@@ -414,17 +462,18 @@ namespace ProyectoOOIA.Ventanas
             this.lblListaCitasInscritas.TabIndex = 51;
             this.lblListaCitasInscritas.Text = "Lista de Citas Inscritas";
             // 
-            // button1
+            // btnDetInscritas
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.button1.Location = new System.Drawing.Point(897, 251);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 24);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Ver detalle";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnDetInscritas.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnDetInscritas.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btnDetInscritas.Location = new System.Drawing.Point(897, 251);
+            this.btnDetInscritas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDetInscritas.Name = "btnDetInscritas";
+            this.btnDetInscritas.Size = new System.Drawing.Size(101, 24);
+            this.btnDetInscritas.TabIndex = 7;
+            this.btnDetInscritas.Text = "Ver detalle";
+            this.btnDetInscritas.UseVisualStyleBackColor = false;
+            this.btnDetInscritas.Click += new System.EventHandler(this.btnDetInscritas_Click);
             // 
             // btnRegistrarCita
             // 
@@ -445,7 +494,7 @@ namespace ProyectoOOIA.Ventanas
             this.tabHistorialCitas.Controls.Add(this.panel4);
             this.tabHistorialCitas.Controls.Add(this.lblListaCitasPasadas);
             this.tabHistorialCitas.Controls.Add(this.btnAgregarOpinion);
-            this.tabHistorialCitas.Controls.Add(this.btnVerDetalle);
+            this.tabHistorialCitas.Controls.Add(this.btnDetHistorial);
             this.tabHistorialCitas.Controls.Add(this.dgvHistorialCitas);
             this.tabHistorialCitas.Location = new System.Drawing.Point(4, 27);
             this.tabHistorialCitas.Margin = new System.Windows.Forms.Padding(2);
@@ -612,18 +661,18 @@ namespace ProyectoOOIA.Ventanas
             this.btnAgregarOpinion.UseVisualStyleBackColor = false;
             this.btnAgregarOpinion.Click += new System.EventHandler(this.btnAgregarOpinion_Click);
             // 
-            // btnVerDetalle
+            // btnDetHistorial
             // 
-            this.btnVerDetalle.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnVerDetalle.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnVerDetalle.Location = new System.Drawing.Point(898, 251);
-            this.btnVerDetalle.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVerDetalle.Name = "btnVerDetalle";
-            this.btnVerDetalle.Size = new System.Drawing.Size(101, 24);
-            this.btnVerDetalle.TabIndex = 6;
-            this.btnVerDetalle.Text = "Ver detalle";
-            this.btnVerDetalle.UseVisualStyleBackColor = false;
-            this.btnVerDetalle.Click += new System.EventHandler(this.btnVerDetalle_Click);
+            this.btnDetHistorial.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnDetHistorial.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.btnDetHistorial.Location = new System.Drawing.Point(898, 251);
+            this.btnDetHistorial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDetHistorial.Name = "btnDetHistorial";
+            this.btnDetHistorial.Size = new System.Drawing.Size(101, 24);
+            this.btnDetHistorial.TabIndex = 6;
+            this.btnDetHistorial.Text = "Ver detalle";
+            this.btnDetHistorial.UseVisualStyleBackColor = false;
+            this.btnDetHistorial.Click += new System.EventHandler(this.btnVerDetalle_Click);
             // 
             // dgvHistorialCitas
             // 
@@ -654,16 +703,6 @@ namespace ProyectoOOIA.Ventanas
             this.dgvHistorialCitas.RowTemplate.Height = 24;
             this.dgvHistorialCitas.Size = new System.Drawing.Size(972, 223);
             this.dgvHistorialCitas.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1014, 71);
-            this.panel3.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -713,53 +752,15 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 125;
             // 
-            // ID
+            // panel3
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 130;
-            // 
-            // Orientador
-            // 
-            this.Orientador.HeaderText = "Orientador";
-            this.Orientador.MinimumWidth = 6;
-            this.Orientador.Name = "Orientador";
-            this.Orientador.ReadOnly = true;
-            this.Orientador.Width = 285;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.MinimumWidth = 6;
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            this.Fecha.Width = 125;
-            // 
-            // HoraInicio
-            // 
-            this.HoraInicio.HeaderText = "Hora Inicio";
-            this.HoraInicio.MinimumWidth = 6;
-            this.HoraInicio.Name = "HoraInicio";
-            this.HoraInicio.ReadOnly = true;
-            this.HoraInicio.Width = 125;
-            // 
-            // HoraFin
-            // 
-            this.HoraFin.HeaderText = "Hora Fin";
-            this.HoraFin.MinimumWidth = 6;
-            this.HoraFin.Name = "HoraFin";
-            this.HoraFin.ReadOnly = true;
-            this.HoraFin.Width = 125;
-            // 
-            // Asistencia
-            // 
-            this.Asistencia.HeaderText = "Asistencia";
-            this.Asistencia.MinimumWidth = 6;
-            this.Asistencia.Name = "Asistencia";
-            this.Asistencia.ReadOnly = true;
-            this.Asistencia.Width = 125;
+            this.panel3.Controls.Add(this.panel1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1014, 71);
+            this.panel3.TabIndex = 4;
             // 
             // frmListaCitasAlumno
             // 
@@ -803,12 +804,12 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TabControl tabHistorial;
         private System.Windows.Forms.TabPage tabCitasProgramadas;
         private System.Windows.Forms.TabPage tabHistorialCitas;
-        private System.Windows.Forms.Button btnVerDetalle;
+        private System.Windows.Forms.Button btnDetHistorial;
         private System.Windows.Forms.DataGridView dgvHistorialCitas;
         private System.Windows.Forms.Button btnRegistrarCita;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnAgregarOpinion;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnDetInscritas;
         private System.Windows.Forms.Button btnBuscarAsesor;
         private System.Windows.Forms.Button btnBuscarHorario;
         private System.Windows.Forms.TextBox txtHoraFin;

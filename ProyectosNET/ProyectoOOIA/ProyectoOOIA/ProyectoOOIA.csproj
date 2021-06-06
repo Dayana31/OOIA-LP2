@@ -93,10 +93,10 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmAgregarEventoAlumno.Designer.cs">
       <DependentUpon>frmAgregarEventoAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Miembro OOIA\Eventos\frmAgregarEventoOOIA.cs">
+    <Compile Include="Ventanas\Old\frmAgregarEventoOOIA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Miembro OOIA\Eventos\frmAgregarEventoOOIA.Designer.cs">
+    <Compile Include="Ventanas\Old\frmAgregarEventoOOIA.Designer.cs">
       <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Alumno\Citas\frmAgregarOpinion.cs">
@@ -135,10 +135,10 @@
     <Compile Include="Ventanas\Old\frmConfirmarCitaAlumno.Designer.cs">
       <DependentUpon>frmConfirmarCitaAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmConfirmarCancelarAsesor.cs">
+    <Compile Include="Ventanas\Old\frmConfirmarCancelarAsesor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmConfirmarCancelarAsesor.Designer.cs">
+    <Compile Include="Ventanas\Old\frmConfirmarCancelarAsesor.Designer.cs">
       <DependentUpon>frmConfirmarCancelarAsesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Old\frmConfirmarOpinion.cs">
@@ -177,10 +177,10 @@
     <Compile Include="Ventanas\Asesor\Citas\frmHistoriaAcademica.Designer.cs">
       <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmHorarioCambiado.cs">
+    <Compile Include="Ventanas\Old\frmHorarioCambiado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmHorarioCambiado.Designer.cs">
+    <Compile Include="Ventanas\Old\frmHorarioCambiado.Designer.cs">
       <DependentUpon>frmHorarioCambiado.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Alumno\Citas\frmHorarioCita.cs">
@@ -213,11 +213,11 @@
     <Compile Include="Ventanas\Alumno\Citas\frmOpiniones.Designer.cs">
       <DependentUpon>frmOpiniones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmHorarioAsesor.cs">
+    <Compile Include="Ventanas\Asesor\Citas\frmCitasAsesor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Asesor\Citas\frmHorarioAsesor.Designer.cs">
-      <DependentUpon>frmHorarioAsesor.cs</DependentUpon>
+    <Compile Include="Ventanas\Asesor\Citas\frmCitasAsesor.Designer.cs">
+      <DependentUpon>frmCitasAsesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Alumno\Citas\frmDetalleCitaAlumno.cs">
       <SubType>Form</SubType>
@@ -231,11 +231,11 @@
     <Compile Include="Ventanas\frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmListaCitasAlumno.cs">
+    <Compile Include="Ventanas\Alumno\Citas\frmCitasAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Alumno\Citas\frmListaCitasAlumno.Designer.cs">
-      <DependentUpon>frmListaCitasAlumno.cs</DependentUpon>
+    <Compile Include="Ventanas\Alumno\Citas\frmCitasAlumno.Designer.cs">
+      <DependentUpon>frmCitasAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -296,7 +296,7 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAgregarEventoAlumno.resx">
       <DependentUpon>frmAgregarEventoAlumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Miembro OOIA\Eventos\frmAgregarEventoOOIA.resx">
+    <EmbeddedResource Include="Ventanas\Old\frmAgregarEventoOOIA.resx">
       <DependentUpon>frmAgregarEventoOOIA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Citas\frmAgregarOpinion.resx">
@@ -317,7 +317,7 @@
     <EmbeddedResource Include="Ventanas\Old\frmConfirmarCitaAlumno.resx">
       <DependentUpon>frmConfirmarCitaAlumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Asesor\Citas\frmConfirmarCancelarAsesor.resx">
+    <EmbeddedResource Include="Ventanas\Old\frmConfirmarCancelarAsesor.resx">
       <DependentUpon>frmConfirmarCancelarAsesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Old\frmConfirmarOpinion.resx">
@@ -341,10 +341,10 @@
     <EmbeddedResource Include="Ventanas\Asesor\Citas\frmHistoriaAcademica.resx">
       <DependentUpon>frmHistoriaAcademica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Asesor\Citas\frmHorarioAsesor.resx">
-      <DependentUpon>frmHorarioAsesor.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Asesor\Citas\frmCitasAsesor.resx">
+      <DependentUpon>frmCitasAsesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Asesor\Citas\frmHorarioCambiado.resx">
+    <EmbeddedResource Include="Ventanas\Old\frmHorarioCambiado.resx">
       <DependentUpon>frmHorarioCambiado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Citas\frmHorarioCita.resx">
@@ -353,8 +353,8 @@
     <EmbeddedResource Include="Ventanas\frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Alumno\Citas\frmListaCitasAlumno.resx">
-      <DependentUpon>frmListaCitasAlumno.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Alumno\Citas\frmCitasAlumno.resx">
+      <DependentUpon>frmCitasAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

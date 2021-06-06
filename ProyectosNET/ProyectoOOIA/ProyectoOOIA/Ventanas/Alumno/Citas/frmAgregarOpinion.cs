@@ -21,7 +21,7 @@ namespace ProyectoOOIA.Ventanas
         {
             //new frmConfirmarOpinion().ShowDialog();
             DialogResult dr =
-               MessageBox.Show("¿Esta seguro que desea agregar su opinión?", "Agregar Opinión de Asesor",
+               MessageBox.Show("¿Esta seguro que desea agregar su opinión?", "Agregar opinión de Asesor",
                MessageBoxButtons.YesNo, MessageBoxIcon.None);
             if(dr == DialogResult.Yes)
             {

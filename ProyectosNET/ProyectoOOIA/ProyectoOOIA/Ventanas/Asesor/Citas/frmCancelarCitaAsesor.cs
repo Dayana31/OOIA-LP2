@@ -48,9 +48,15 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnCancelarCita_Click(object sender, EventArgs e)
         {
-
-            new frmConfirmarCancelarAsesor().Show();
-            this.Close();
+            //new frmConfirmarCancelarAsesor().Show();
+            DialogResult dr =
+               MessageBox.Show("¿Esta seguro que desea cancelar la cita?", "Cancelar cita",
+               MessageBoxButtons.YesNo, MessageBoxIcon.None);
+            if (dr == DialogResult.Yes)
+            {
+                MessageBox.Show("La cita ha sido cambiada exitosamente", "Cita Cancelada", MessageBoxButtons.OK);
+                this.Close();
+            }
         }
 
 
