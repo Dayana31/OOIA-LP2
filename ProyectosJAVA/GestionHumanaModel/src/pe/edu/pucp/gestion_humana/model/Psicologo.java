@@ -37,4 +37,11 @@ public class Psicologo extends MiembroPUCP{
     public String consultarDatos() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public String toString() {
+        return "Psicologo{" + "id_psicologo=" + id_psicologo +this.getNombre() + '}';
+    }
+    
+    
 }
