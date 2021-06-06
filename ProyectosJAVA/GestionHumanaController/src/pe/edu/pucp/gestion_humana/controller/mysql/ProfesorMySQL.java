@@ -97,8 +97,8 @@ public class ProfesorMySQL implements ProfesorDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_profesor(?,?,?,?,?,?,?,?,?,?,?,?)}");
-            cs.setInt("_id_persona", profesor.getId_persona());
+            cs = con.prepareCall("{call modificar_profesor(?,?,?,?,?,?,?,?,?,?,?)}");
+
             cs.setInt("_id_profesor", profesor.getId_profesor());
             /*Persona*/
             cs.setString("_nombre", profesor.getNombre());

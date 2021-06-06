@@ -30,13 +30,14 @@ public class PsicologoMySQL implements PsicologoDAO {
             while(rs.next()){
                 Psicologo psicologo = new Psicologo();
                 psicologo.setId_persona(rs.getInt("id_persona"));
+                psicologo.setId_psicologo(rs.getInt("id_psicologo"));
                 psicologo.setNombre(rs.getString("nombre"));
                 psicologo.setDni(rs.getString("dni"));
                 psicologo.setEdad(rs.getInt("edad"));
                 psicologo.setDireccion(rs.getString("direccion"));
-                
+                psicologo.setCorreo(rs.getString("correo"));
                 psicologo.setUsuario_pucp(rs.getString("usuario_pucp"));
-                psicologo.setFecha_inclusion(rs.getDate("fecha_inclusion"));
+                psicologo.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                
                 psicologos.add(psicologo);
             }
@@ -56,7 +57,7 @@ public class PsicologoMySQL implements PsicologoDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_psicologo(?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call insertar_psicologo(?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_psicologo", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", psicologo.getNombre());
@@ -65,7 +66,8 @@ public class PsicologoMySQL implements PsicologoDAO {
             cs.setString("_direccion", psicologo.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", psicologo.getUsuario_pucp());
-            cs.setDate("_fecha_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
+            cs.setString("_correo", psicologo.getCorreo());
+            cs.setDate("_fecha_de_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
             /*Psicologo*/
             cs.executeUpdate();
             psicologo.setId_persona(cs.getInt("_id_psicologo"));
@@ -85,16 +87,17 @@ public class PsicologoMySQL implements PsicologoDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_psicologo(?,?,?,?,?,?,?)}");
-            cs.registerOutParameter("_id_profesor", java.sql.Types.INTEGER);
+            cs = con.prepareCall("{call modificar_psicologo(?,?,?,?,?,?,?,?)}");
+            cs.setInt("_id_psicologo", psicologo.getId_psicologo());
             /*Persona*/
             cs.setString("_nombre", psicologo.getNombre());
             cs.setString("_dni", psicologo.getDni());
             cs.setInt("_edad", psicologo.getEdad());
+            cs.setString("_correo", psicologo.getCorreo());
             cs.setString("_direccion", psicologo.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", psicologo.getUsuario_pucp());
-            cs.setDate("_fecha_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
+            cs.setDate("_fecha_de_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
             /*Profesor*/
             cs.executeUpdate();
             resultado = 1;

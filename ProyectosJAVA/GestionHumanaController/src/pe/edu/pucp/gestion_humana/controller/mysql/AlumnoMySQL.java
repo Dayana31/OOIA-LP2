@@ -43,12 +43,13 @@ public class AlumnoMySQL implements AlumnoDAO{
                 alumno.setCodigo_pucp(rs.getString("codigo_pucp"));
                 
                 
-                alumno.getEspecialidad().setId_especialidad(rs.getInt("fid_especialidad"));
+                alumno.setEspecialidad(new Especialidad(rs.getInt("fid_especialidad"), cs.getString("nombre_especialidad")));
                 
                 alumno.setCraest(rs.getDouble("craest"));
-                
-                //Especialidad, Invitado, Profesor Psicologo.
-                
+                alumno.setId_alumno(rs.getInt("id_alumno"));
+                alumno.setCursos_por_primera(rs.getInt("cursos_por_primera"));
+                alumno.setCursos_por_segunda(rs.getInt("cursos_por_segunda"));
+                alumno.setCursos_por_tercera(rs.getInt("cursos_por_tercera"));
                 alumnos.add(alumno);
             }
             rs.close();
@@ -106,20 +107,25 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_alumno(?,?,?,?,?,?,?,?,?)}");
-            cs.registerOutParameter("_id_alumno", java.sql.Types.INTEGER);
+            cs = con.prepareCall("{call modificar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            
             /*Persona*/
             cs.setString("_nombre", alumno.getNombre());
             cs.setString("_dni", alumno.getDni());
             cs.setInt("_edad", alumno.getEdad());
             cs.setString("_direccion", alumno.getDireccion());
+            cs.setString("_correo", alumno.getCorreo());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", alumno.getUsuario_pucp());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
             /*Alumno*/
+            cs.setInt("_id_alumno", alumno.getId_alumno());
             cs.setString("_codigo_pucp", alumno.getCodigo_pucp());
-            cs.setString("_especialidad", alumno.getEspecialidad().getNombre_especialidad());
+            cs.setInt("_fid_especialidad", alumno.getEspecialidad().getId_especialidad());
             cs.setDouble("_craest", alumno.getCraest());
+            cs.setInt("_cursos_por_primera", alumno.getCursos_por_primera());
+            cs.setInt("_cursos_por_segunda", alumno.getCursos_por_segunda());
+            cs.setInt("_cursos_por_tercera", alumno.getCursos_por_tercera());
             cs.executeUpdate();
             resultado = 1;
             cs.close();
