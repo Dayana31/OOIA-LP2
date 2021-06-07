@@ -42,10 +42,8 @@ C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Proyec
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\MaterialSkin.dll
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInicioSesion.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmListaCitas.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Properties.Resources.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalAlumno.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalProfesor.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmReestablecerContraseña.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.GenerateResource.cache
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CoreCompileInputs.cache
@@ -53,12 +51,7 @@ C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\Proyec
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Card.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleCita.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmListaTutores.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCancelarCita.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCitaRegistro.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmConfirmarCancelar.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorario.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorarioCambiado.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmOpiniones.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmAccesoEvento.resources
@@ -66,13 +59,9 @@ D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\Pr
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\ProyectoOOIA\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCancelarCitaAlumno.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.CategoriasEventos.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmConfirmacionCita.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHistoriaAcademica.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorarioCita.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmListaDeEventos.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmNotasParciales.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalEventos.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Horario.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRegistroEvento.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Card.resources
@@ -105,15 +94,10 @@ C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\o
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRespuestaAcceso.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmVistadeEvento.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetCita_EventAlumnos.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInformacionEvento.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInscripcionEvento.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmRespuestaAcceso.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmVistadeEvento.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmInformacionEvento.resources
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Bunifu_UI_v1.5.dll
 C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.CardEvento.resources
-C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmNuevoPrincipal.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\Lab 7\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
 C:\7mo ciclo\LP2\Proyecto Lp2\Lab 7\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\Lab 7\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
@@ -253,3 +237,24 @@ D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OO
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleCitaAsesor.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleCitaAlumno.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCitasAlumno.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmAgregarEventoAlumno.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmAgregarEventoOOIA.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmAgregarOpinion.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmBuscarEventoAlumno.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCancelarCitaAsesor.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCitaRegistroAlumno.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmConfirmarCitaAlumno.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmConfirmarCancelarAsesor.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmConfirmarOpinion.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleCitaAlumno.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleCitaAsesor.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCancelarEventoAlumno.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmEliminarEventoOOIA.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmGestionEventosOOIA.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmHorarioAsesor.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmCitasAlumno.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipal.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalMiembroOOIA.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmPrincipalAsesor.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleEvento.resources
+C:\ProyectoOOIA\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.frmCargarDatos.resources

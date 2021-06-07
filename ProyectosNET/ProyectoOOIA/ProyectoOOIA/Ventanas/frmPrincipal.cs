@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoOOIA.Ventanas.Miembro_OOIA;
 
 namespace ProyectoOOIA.Ventanas
 {
@@ -18,6 +19,7 @@ namespace ProyectoOOIA.Ventanas
         public frmPrincipal(TipoUsuario tipoUsuario)
         {
             InitializeComponent();
+            btnCargaDatos.Visible = false;
             tipo = tipoUsuario;
             if (tipo == TipoUsuario.Asesor)
             {
@@ -27,6 +29,7 @@ namespace ProyectoOOIA.Ventanas
             }
             if (tipo == TipoUsuario.OOIA)
             {
+                btnCargaDatos.Visible = true;
                 btnCitas.Enabled = false;
                 //btnCitas.Visible = false;
                 txtCitas.Enabled = false;
@@ -90,6 +93,11 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmInicioSesion().Show();
             this.Close();
+        }
+
+        private void btnCargaDatos_Click(object sender, EventArgs e)
+        {
+            new frmCargarDatos().ShowDialog();
         }
     }
     }

@@ -165,7 +165,7 @@ CREATE PROCEDURE INSERTAR_CURSOLLEVADO(
 	IN _fid_curso INT,
     IN _ciclo VARCHAR(100),
     IN _vez INT,
-    IN _nota_final DECIMAL(2,2),
+    IN _nota_final DECIMAL(4,2),
     IN _retirado BOOLEAN,
     IN _formula_de_calificacion VARCHAR(100)
 )
@@ -181,7 +181,7 @@ CREATE PROCEDURE MODIFICAR_CURSOLLEVADO(
 	IN _fid_curso INT,
     IN _ciclo VARCHAR(100),
     IN _vez INT,
-    IN _nota_final DECIMAL(2,2),
+    IN _nota_final DECIMAL(4,2),
     IN _retirado BOOLEAN,
     IN _formula_de_calificacion VARCHAR(100)
 )
@@ -195,7 +195,7 @@ CREATE PROCEDURE LISTAR_CURSOSLLEVADOS(
 	IN _id_alumno INT
 )
 BEGIN
-	SELECT cl.id_curso_llevado, c.codigo_curso, c.nombre_curso, cl.ciclo, cl.vez, cl.nota_final,
+	SELECT cl.id_curso_llevado,c.id_curso ,c.codigo_curso, c.nombre_curso, cl.ciclo, cl.vez, cl.nota_final,
     cl.retirado, cl.formula_de_calificacion
     FROM curso_llevado cl inner join curso c on c.id_curso=cl.fid_curso WHERE fid_alumno=_id_alumno;
 END$
