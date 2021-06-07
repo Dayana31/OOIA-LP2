@@ -22,6 +22,7 @@ namespace ProyectoOOIA.Ventanas
             InitializeComponent();
             this.estado = Estado.Inicial;
             cambiarEstado();
+            //dgvCitasProgramadas.DataSource = 
 
             //esto hace que no se genere mas columnas de las que yo he definido en la interfaz grafica
             dgvCitasProgramadas.AutoGenerateColumns = false;
@@ -47,30 +48,38 @@ namespace ProyectoOOIA.Ventanas
             switch (estado)
             {
                 case Estado.Inicial:
-                    //Botones
+                    /*Botones*/
                     btnNuevo.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = false;
-                    //Cuadros de información
+                    //btnModificar.Enabled = false;
+                    //btnEliminar.Enabled = false;
+                    //btnDetInscritas.Enabled = false;
+                    /*Cuadros de información*/
                     btnBuscarAsesor.Enabled = false;
                     btnBuscarHorario.Enabled = false;
                     txtMotivo.Enabled = false;
                     break;
                 case Estado.Nuevo:
-                    //Botones
+                    /*Botones*/
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnCancelar.Enabled = true;
-                    //Cuadros de información
+                    //btnModificar.Enabled = false;
+                    //btnEliminar.Enabled = false;
+                    /*Cuadros de información*/
                     btnBuscarAsesor.Enabled = true;
                     btnBuscarHorario.Enabled = true;
                     txtMotivo.Enabled = true;
                     break;
                 case Estado.Modificar:
+                    /*Botones*/
                     btnNuevo.Enabled = false;
                     btnGuardar.Enabled = true;
                     btnCancelar.Enabled = true;
-                    //Cuadros de información
+                    //btnModificar.Enabled = false;
+                    //btnEliminar.Enabled = false;
+                    /*Cuadros de información*/
                     btnBuscarAsesor.Enabled = true;
                     btnBuscarHorario.Enabled = true;
                     txtMotivo.Enabled = true;
@@ -170,6 +179,23 @@ namespace ProyectoOOIA.Ventanas
             this.estado = Estado.Inicial;
             cambiarEstado();
             clearall();
+        }
+
+        private void dgvCitasProgramadas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(this.estado == Estado.Inicial)
+            {
+                btnModificar.Enabled = true;
+                btnEliminar.Enabled = true;
+                btnDetInscritas.Enabled = true;
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            this.estado = Estado.Modificar;
+            cambiarEstado();
+
         }
     }
 }
