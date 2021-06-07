@@ -74,7 +74,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void botonCitas_Click(object sender, EventArgs e)
         {
-            if (tipo == TipoUsuario.Alumno) new frmListaCitasAlumno().Show();
+            if (tipo == TipoUsuario.Alumno) new frmCitasAlumno().Show();
             if (tipo == TipoUsuario.Asesor) new frmHorarioAsesor().Show();
             this.Close();
         }

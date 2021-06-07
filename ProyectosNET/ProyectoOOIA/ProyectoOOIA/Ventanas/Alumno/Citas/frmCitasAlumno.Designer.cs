@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas
 {
-    partial class frmListaCitasAlumno
+    partial class frmCitasAlumno
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaCitasAlumno));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCitasAlumno));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.PictureBox();
@@ -43,10 +43,12 @@ namespace ProyectoOOIA.Ventanas
             this.HoraInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoraFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Asistencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEliminarCita = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabHistorial = new System.Windows.Forms.TabControl();
             this.tabCitasProgramadas = new System.Windows.Forms.TabPage();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.pnlRegistrarCita = new System.Windows.Forms.Panel();
             this.lblRegistrar = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
@@ -63,20 +65,8 @@ namespace ProyectoOOIA.Ventanas
             this.txtHoraFin = new System.Windows.Forms.TextBox();
             this.lblListaCitasInscritas = new System.Windows.Forms.Label();
             this.btnDetInscritas = new System.Windows.Forms.Button();
-            this.btnRegistrarCita = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.tabHistorialCitas = new System.Windows.Forms.TabPage();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtpFechaHistorial = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMotivoHistorial = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtAsesorHistorial = new System.Windows.Forms.TextBox();
-            this.txtHoraInicioHistorial = new System.Windows.Forms.TextBox();
-            this.txtHoraFinHistorial = new System.Windows.Forms.TextBox();
             this.lblListaCitasPasadas = new System.Windows.Forms.Label();
             this.btnAgregarOpinion = new System.Windows.Forms.Button();
             this.btnDetHistorial = new System.Windows.Forms.Button();
@@ -88,6 +78,7 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitasProgramadas)).BeginInit();
@@ -96,7 +87,6 @@ namespace ProyectoOOIA.Ventanas
             this.tabCitasProgramadas.SuspendLayout();
             this.pnlRegistrarCita.SuspendLayout();
             this.tabHistorialCitas.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialCitas)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -166,14 +156,14 @@ namespace ProyectoOOIA.Ventanas
             this.dgvCitasProgramadas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCitasProgramadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCitasProgramadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCitasProgramadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCitasProgramadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCitasProgramadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -183,14 +173,14 @@ namespace ProyectoOOIA.Ventanas
             this.HoraFin,
             this.Asistencia});
             this.dgvCitasProgramadas.EnableHeadersVisualStyles = false;
-            this.dgvCitasProgramadas.Location = new System.Drawing.Point(26, 279);
+            this.dgvCitasProgramadas.Location = new System.Drawing.Point(26, 302);
             this.dgvCitasProgramadas.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCitasProgramadas.Name = "dgvCitasProgramadas";
             this.dgvCitasProgramadas.ReadOnly = true;
             this.dgvCitasProgramadas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvCitasProgramadas.RowHeadersWidth = 51;
             this.dgvCitasProgramadas.RowTemplate.Height = 24;
-            this.dgvCitasProgramadas.Size = new System.Drawing.Size(972, 223);
+            this.dgvCitasProgramadas.Size = new System.Drawing.Size(972, 200);
             this.dgvCitasProgramadas.TabIndex = 1;
             // 
             // ID
@@ -241,18 +231,18 @@ namespace ProyectoOOIA.Ventanas
             this.Asistencia.ReadOnly = true;
             this.Asistencia.Width = 125;
             // 
-            // btnEliminarCita
+            // btnEliminar
             // 
-            this.btnEliminarCita.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnEliminarCita.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnEliminarCita.Location = new System.Drawing.Point(801, 250);
-            this.btnEliminarCita.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminarCita.Name = "btnEliminarCita";
-            this.btnEliminarCita.Size = new System.Drawing.Size(92, 25);
-            this.btnEliminarCita.TabIndex = 2;
-            this.btnEliminarCita.Text = "Eliminar";
-            this.btnEliminarCita.UseVisualStyleBackColor = false;
-            this.btnEliminarCita.Click += new System.EventHandler(this.btnEliminarCita_Click);
+            this.btnEliminar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnEliminar.Location = new System.Drawing.Point(801, 273);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(92, 25);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panel2
             // 
@@ -283,11 +273,14 @@ namespace ProyectoOOIA.Ventanas
             // tabCitasProgramadas
             // 
             this.tabCitasProgramadas.BackColor = System.Drawing.SystemColors.Control;
+            this.tabCitasProgramadas.Controls.Add(this.btnModificar);
+            this.tabCitasProgramadas.Controls.Add(this.btnCancelar);
+            this.tabCitasProgramadas.Controls.Add(this.btnNuevo);
             this.tabCitasProgramadas.Controls.Add(this.pnlRegistrarCita);
             this.tabCitasProgramadas.Controls.Add(this.lblListaCitasInscritas);
             this.tabCitasProgramadas.Controls.Add(this.btnDetInscritas);
-            this.tabCitasProgramadas.Controls.Add(this.btnRegistrarCita);
-            this.tabCitasProgramadas.Controls.Add(this.btnEliminarCita);
+            this.tabCitasProgramadas.Controls.Add(this.btnGuardar);
+            this.tabCitasProgramadas.Controls.Add(this.btnEliminar);
             this.tabCitasProgramadas.Controls.Add(this.dgvCitasProgramadas);
             this.tabCitasProgramadas.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabCitasProgramadas.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -298,6 +291,32 @@ namespace ProyectoOOIA.Ventanas
             this.tabCitasProgramadas.Size = new System.Drawing.Size(1006, 509);
             this.tabCitasProgramadas.TabIndex = 0;
             this.tabCitasProgramadas.Text = "Citas programadas";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnCancelar.Location = new System.Drawing.Point(200, 5);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(92, 25);
+            this.btnCancelar.TabIndex = 55;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnNuevo.Location = new System.Drawing.Point(8, 5);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(92, 25);
+            this.btnNuevo.TabIndex = 54;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // pnlRegistrarCita
             // 
@@ -314,15 +333,15 @@ namespace ProyectoOOIA.Ventanas
             this.pnlRegistrarCita.Controls.Add(this.txtHoraInicio);
             this.pnlRegistrarCita.Controls.Add(this.btnBuscarHorario);
             this.pnlRegistrarCita.Controls.Add(this.txtHoraFin);
-            this.pnlRegistrarCita.Location = new System.Drawing.Point(8, 5);
+            this.pnlRegistrarCita.Location = new System.Drawing.Point(8, 55);
             this.pnlRegistrarCita.Name = "pnlRegistrarCita";
-            this.pnlRegistrarCita.Size = new System.Drawing.Size(580, 246);
+            this.pnlRegistrarCita.Size = new System.Drawing.Size(580, 219);
             this.pnlRegistrarCita.TabIndex = 53;
             // 
             // lblRegistrar
             // 
             this.lblRegistrar.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistrar.Location = new System.Drawing.Point(14, 19);
+            this.lblRegistrar.Location = new System.Drawing.Point(14, 0);
             this.lblRegistrar.Name = "lblRegistrar";
             this.lblRegistrar.Size = new System.Drawing.Size(207, 23);
             this.lblRegistrar.TabIndex = 50;
@@ -331,7 +350,7 @@ namespace ProyectoOOIA.Ventanas
             // dtpFecha
             // 
             this.dtpFecha.Enabled = false;
-            this.dtpFecha.Location = new System.Drawing.Point(100, 70);
+            this.dtpFecha.Location = new System.Drawing.Point(100, 51);
             this.dtpFecha.Name = "dtpFecha";
             this.dtpFecha.Size = new System.Drawing.Size(200, 21);
             this.dtpFecha.TabIndex = 52;
@@ -340,7 +359,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblAsesor.AutoSize = true;
             this.lblAsesor.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsesor.Location = new System.Drawing.Point(14, 45);
+            this.lblAsesor.Location = new System.Drawing.Point(14, 23);
             this.lblAsesor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAsesor.Name = "lblAsesor";
             this.lblAsesor.Size = new System.Drawing.Size(60, 21);
@@ -351,7 +370,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(14, 70);
+            this.lblFecha.Location = new System.Drawing.Point(14, 51);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(52, 21);
@@ -362,7 +381,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblHoraInicio.AutoSize = true;
             this.lblHoraInicio.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraInicio.Location = new System.Drawing.Point(14, 97);
+            this.lblHoraInicio.Location = new System.Drawing.Point(14, 78);
             this.lblHoraInicio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoraInicio.Name = "lblHoraInicio";
             this.lblHoraInicio.Size = new System.Drawing.Size(84, 21);
@@ -371,7 +390,8 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtMotivo
             // 
-            this.txtMotivo.Location = new System.Drawing.Point(18, 144);
+            this.txtMotivo.Enabled = false;
+            this.txtMotivo.Location = new System.Drawing.Point(18, 134);
             this.txtMotivo.Margin = new System.Windows.Forms.Padding(2);
             this.txtMotivo.Multiline = true;
             this.txtMotivo.Name = "txtMotivo";
@@ -382,7 +402,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblHoraFin.AutoSize = true;
             this.lblHoraFin.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHoraFin.Location = new System.Drawing.Point(219, 97);
+            this.lblHoraFin.Location = new System.Drawing.Point(219, 78);
             this.lblHoraFin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoraFin.Name = "lblHoraFin";
             this.lblHoraFin.Size = new System.Drawing.Size(67, 21);
@@ -393,7 +413,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.lblMotivo.AutoSize = true;
             this.lblMotivo.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMotivo.Location = new System.Drawing.Point(14, 121);
+            this.lblMotivo.Location = new System.Drawing.Point(14, 111);
             this.lblMotivo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMotivo.Name = "lblMotivo";
             this.lblMotivo.Size = new System.Drawing.Size(177, 21);
@@ -403,7 +423,7 @@ namespace ProyectoOOIA.Ventanas
             // txtAsesor
             // 
             this.txtAsesor.Enabled = false;
-            this.txtAsesor.Location = new System.Drawing.Point(100, 44);
+            this.txtAsesor.Location = new System.Drawing.Point(100, 25);
             this.txtAsesor.Margin = new System.Windows.Forms.Padding(2);
             this.txtAsesor.Name = "txtAsesor";
             this.txtAsesor.ReadOnly = true;
@@ -413,7 +433,7 @@ namespace ProyectoOOIA.Ventanas
             // btnBuscarAsesor
             // 
             this.btnBuscarAsesor.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarAsesor.Location = new System.Drawing.Point(350, 43);
+            this.btnBuscarAsesor.Location = new System.Drawing.Point(350, 26);
             this.btnBuscarAsesor.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarAsesor.Name = "btnBuscarAsesor";
             this.btnBuscarAsesor.Size = new System.Drawing.Size(33, 22);
@@ -425,7 +445,7 @@ namespace ProyectoOOIA.Ventanas
             // txtHoraInicio
             // 
             this.txtHoraInicio.Enabled = false;
-            this.txtHoraInicio.Location = new System.Drawing.Point(100, 97);
+            this.txtHoraInicio.Location = new System.Drawing.Point(100, 78);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.ReadOnly = true;
             this.txtHoraInicio.Size = new System.Drawing.Size(87, 21);
@@ -434,7 +454,7 @@ namespace ProyectoOOIA.Ventanas
             // btnBuscarHorario
             // 
             this.btnBuscarHorario.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarHorario.Location = new System.Drawing.Point(305, 69);
+            this.btnBuscarHorario.Location = new System.Drawing.Point(305, 52);
             this.btnBuscarHorario.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarHorario.Name = "btnBuscarHorario";
             this.btnBuscarHorario.Size = new System.Drawing.Size(33, 22);
@@ -446,7 +466,7 @@ namespace ProyectoOOIA.Ventanas
             // txtHoraFin
             // 
             this.txtHoraFin.Enabled = false;
-            this.txtHoraFin.Location = new System.Drawing.Point(290, 97);
+            this.txtHoraFin.Location = new System.Drawing.Point(290, 78);
             this.txtHoraFin.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoraFin.Name = "txtHoraFin";
             this.txtHoraFin.ReadOnly = true;
@@ -456,7 +476,7 @@ namespace ProyectoOOIA.Ventanas
             // lblListaCitasInscritas
             // 
             this.lblListaCitasInscritas.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaCitasInscritas.Location = new System.Drawing.Point(22, 254);
+            this.lblListaCitasInscritas.Location = new System.Drawing.Point(22, 277);
             this.lblListaCitasInscritas.Name = "lblListaCitasInscritas";
             this.lblListaCitasInscritas.Size = new System.Drawing.Size(207, 23);
             this.lblListaCitasInscritas.TabIndex = 51;
@@ -466,7 +486,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnDetInscritas.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnDetInscritas.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnDetInscritas.Location = new System.Drawing.Point(897, 251);
+            this.btnDetInscritas.Location = new System.Drawing.Point(897, 274);
             this.btnDetInscritas.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetInscritas.Name = "btnDetInscritas";
             this.btnDetInscritas.Size = new System.Drawing.Size(101, 24);
@@ -475,23 +495,22 @@ namespace ProyectoOOIA.Ventanas
             this.btnDetInscritas.UseVisualStyleBackColor = false;
             this.btnDetInscritas.Click += new System.EventHandler(this.btnDetInscritas_Click);
             // 
-            // btnRegistrarCita
+            // btnGuardar
             // 
-            this.btnRegistrarCita.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnRegistrarCita.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnRegistrarCita.Location = new System.Drawing.Point(705, 250);
-            this.btnRegistrarCita.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRegistrarCita.Name = "btnRegistrarCita";
-            this.btnRegistrarCita.Size = new System.Drawing.Size(92, 25);
-            this.btnRegistrarCita.TabIndex = 3;
-            this.btnRegistrarCita.Text = "Registrar cita";
-            this.btnRegistrarCita.UseVisualStyleBackColor = false;
-            this.btnRegistrarCita.Click += new System.EventHandler(this.btnRegistrarCita_Click);
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnGuardar.Location = new System.Drawing.Point(104, 5);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(92, 25);
+            this.btnGuardar.TabIndex = 3;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // tabHistorialCitas
             // 
             this.tabHistorialCitas.BackColor = System.Drawing.SystemColors.Control;
-            this.tabHistorialCitas.Controls.Add(this.panel4);
             this.tabHistorialCitas.Controls.Add(this.lblListaCitasPasadas);
             this.tabHistorialCitas.Controls.Add(this.btnAgregarOpinion);
             this.tabHistorialCitas.Controls.Add(this.btnDetHistorial);
@@ -504,145 +523,11 @@ namespace ProyectoOOIA.Ventanas
             this.tabHistorialCitas.TabIndex = 1;
             this.tabHistorialCitas.Text = "Historial de citas";
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.dtpFechaHistorial);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.txtMotivoHistorial);
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.txtAsesorHistorial);
-            this.panel4.Controls.Add(this.txtHoraInicioHistorial);
-            this.panel4.Controls.Add(this.txtHoraFinHistorial);
-            this.panel4.Location = new System.Drawing.Point(8, 5);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(580, 246);
-            this.panel4.TabIndex = 54;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(14, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 23);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Buscar una Cita Pasada";
-            // 
-            // dtpFechaHistorial
-            // 
-            this.dtpFechaHistorial.Enabled = false;
-            this.dtpFechaHistorial.Location = new System.Drawing.Point(100, 70);
-            this.dtpFechaHistorial.Name = "dtpFechaHistorial";
-            this.dtpFechaHistorial.Size = new System.Drawing.Size(200, 21);
-            this.dtpFechaHistorial.TabIndex = 52;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(14, 45);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 21);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Asesor: ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(14, 70);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 21);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Fecha: ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(14, 97);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 21);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Hora inicio: ";
-            // 
-            // txtMotivoHistorial
-            // 
-            this.txtMotivoHistorial.Enabled = false;
-            this.txtMotivoHistorial.Location = new System.Drawing.Point(18, 144);
-            this.txtMotivoHistorial.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMotivoHistorial.Multiline = true;
-            this.txtMotivoHistorial.Name = "txtMotivoHistorial";
-            this.txtMotivoHistorial.Size = new System.Drawing.Size(486, 77);
-            this.txtMotivoHistorial.TabIndex = 36;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(219, 97);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 21);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Hora fin: ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(14, 121);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 21);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Motivo de consulta:";
-            // 
-            // txtAsesorHistorial
-            // 
-            this.txtAsesorHistorial.Location = new System.Drawing.Point(100, 44);
-            this.txtAsesorHistorial.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAsesorHistorial.Name = "txtAsesorHistorial";
-            this.txtAsesorHistorial.ReadOnly = true;
-            this.txtAsesorHistorial.Size = new System.Drawing.Size(246, 21);
-            this.txtAsesorHistorial.TabIndex = 29;
-            // 
-            // txtHoraInicioHistorial
-            // 
-            this.txtHoraInicioHistorial.Enabled = false;
-            this.txtHoraInicioHistorial.Location = new System.Drawing.Point(100, 97);
-            this.txtHoraInicioHistorial.Name = "txtHoraInicioHistorial";
-            this.txtHoraInicioHistorial.ReadOnly = true;
-            this.txtHoraInicioHistorial.Size = new System.Drawing.Size(87, 21);
-            this.txtHoraInicioHistorial.TabIndex = 31;
-            // 
-            // txtHoraFinHistorial
-            // 
-            this.txtHoraFinHistorial.Enabled = false;
-            this.txtHoraFinHistorial.Location = new System.Drawing.Point(290, 97);
-            this.txtHoraFinHistorial.Margin = new System.Windows.Forms.Padding(2);
-            this.txtHoraFinHistorial.Name = "txtHoraFinHistorial";
-            this.txtHoraFinHistorial.ReadOnly = true;
-            this.txtHoraFinHistorial.Size = new System.Drawing.Size(87, 21);
-            this.txtHoraFinHistorial.TabIndex = 32;
-            // 
             // lblListaCitasPasadas
             // 
             this.lblListaCitasPasadas.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListaCitasPasadas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblListaCitasPasadas.Location = new System.Drawing.Point(22, 254);
+            this.lblListaCitasPasadas.Location = new System.Drawing.Point(22, 28);
             this.lblListaCitasPasadas.Name = "lblListaCitasPasadas";
             this.lblListaCitasPasadas.Size = new System.Drawing.Size(207, 23);
             this.lblListaCitasPasadas.TabIndex = 52;
@@ -652,7 +537,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnAgregarOpinion.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnAgregarOpinion.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnAgregarOpinion.Location = new System.Drawing.Point(791, 251);
+            this.btnAgregarOpinion.Location = new System.Drawing.Point(791, 27);
             this.btnAgregarOpinion.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarOpinion.Name = "btnAgregarOpinion";
             this.btnAgregarOpinion.Size = new System.Drawing.Size(103, 24);
@@ -665,27 +550,27 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.btnDetHistorial.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnDetHistorial.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.btnDetHistorial.Location = new System.Drawing.Point(898, 251);
+            this.btnDetHistorial.Location = new System.Drawing.Point(897, 28);
             this.btnDetHistorial.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetHistorial.Name = "btnDetHistorial";
             this.btnDetHistorial.Size = new System.Drawing.Size(101, 24);
             this.btnDetHistorial.TabIndex = 6;
             this.btnDetHistorial.Text = "Ver detalle";
             this.btnDetHistorial.UseVisualStyleBackColor = false;
-            this.btnDetHistorial.Click += new System.EventHandler(this.btnVerDetalle_Click);
+            this.btnDetHistorial.Click += new System.EventHandler(this.btnDetalleHistorial_Click);
             // 
             // dgvHistorialCitas
             // 
             this.dgvHistorialCitas.AllowUserToDeleteRows = false;
             this.dgvHistorialCitas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorialCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorialCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvHistorialCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -695,13 +580,13 @@ namespace ProyectoOOIA.Ventanas
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.dgvHistorialCitas.EnableHeadersVisualStyles = false;
-            this.dgvHistorialCitas.Location = new System.Drawing.Point(26, 279);
+            this.dgvHistorialCitas.Location = new System.Drawing.Point(26, 56);
             this.dgvHistorialCitas.Margin = new System.Windows.Forms.Padding(2);
             this.dgvHistorialCitas.Name = "dgvHistorialCitas";
             this.dgvHistorialCitas.ReadOnly = true;
             this.dgvHistorialCitas.RowHeadersWidth = 51;
             this.dgvHistorialCitas.RowTemplate.Height = 24;
-            this.dgvHistorialCitas.Size = new System.Drawing.Size(972, 223);
+            this.dgvHistorialCitas.Size = new System.Drawing.Size(972, 446);
             this.dgvHistorialCitas.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
@@ -762,7 +647,19 @@ namespace ProyectoOOIA.Ventanas
             this.panel3.Size = new System.Drawing.Size(1014, 71);
             this.panel3.TabIndex = 4;
             // 
-            // frmListaCitasAlumno
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnModificar.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnModificar.Location = new System.Drawing.Point(705, 273);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(92, 25);
+            this.btnModificar.TabIndex = 56;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = false;
+            // 
+            // frmCitasAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -771,7 +668,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmListaCitasAlumno";
+            this.Name = "frmCitasAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de citas";
             this.panel1.ResumeLayout(false);
@@ -784,8 +681,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlRegistrarCita.ResumeLayout(false);
             this.pnlRegistrarCita.PerformLayout();
             this.tabHistorialCitas.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialCitas)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -798,7 +693,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.Label lblCitasHeader;
         private System.Windows.Forms.DataGridView dgvCitasProgramadas;
-        private System.Windows.Forms.Button btnEliminarCita;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabControl tabHistorial;
@@ -806,7 +701,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TabPage tabHistorialCitas;
         private System.Windows.Forms.Button btnDetHistorial;
         private System.Windows.Forms.DataGridView dgvHistorialCitas;
-        private System.Windows.Forms.Button btnRegistrarCita;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnAgregarOpinion;
         private System.Windows.Forms.Button btnDetInscritas;
@@ -826,18 +721,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lblListaCitasPasadas;
         private System.Windows.Forms.Panel pnlRegistrarCita;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtpFechaHistorial;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMotivoHistorial;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtAsesorHistorial;
-        private System.Windows.Forms.TextBox txtHoraInicioHistorial;
-        private System.Windows.Forms.TextBox txtHoraFinHistorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Orientador;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
@@ -850,5 +733,8 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

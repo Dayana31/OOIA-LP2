@@ -40,7 +40,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button3_Click(object sender, EventArgs e)
         {
-            new frmListaCitasAlumno().Show();
+            new frmCitasAlumno().Show();
             this.Close();
         }
 

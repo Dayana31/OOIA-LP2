@@ -4,19 +4,26 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmListaCitasAlumno : Form
+    public partial class frmCitasAlumno : Form
     {
+        //private CitaOOIAWS.CitaOOIAWSClient daoCita;
+        //private HorarioAWS.HorarioAWSClient daoHorario;
+        //private MiembroPUCPAWS.MiembroPUCPAWSClient daoMiembroPUCP;
+        private Estado estado;
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd,
             int wMsg, int wParam, int lParam);
 
-        public frmListaCitasAlumno()
+        public frmCitasAlumno()
         {
             InitializeComponent();
-            //esto hace que no se genere mas columnas de las que yo he 
-            //definido en la interfaz grafica
+            this.estado = Estado.Inicial;
+            cambiarEstado();
+
+            //esto hace que no se genere mas columnas de las que yo he definido en la interfaz grafica
             dgvCitasProgramadas.AutoGenerateColumns = false;
             dgvHistorialCitas.AutoGenerateColumns = false;
             tabCitasProgramadas.AutoScroll = false;
@@ -26,22 +33,71 @@ namespace ProyectoOOIA.Ventanas
             tabCitasProgramadas.AutoScroll = true;
         }
 
+        public void clearall()
+        {
+            txtAsesor.Text = "";
+            txtHoraInicio.Text = "";
+            txtHoraFin.Text = "";
+            dtpFecha.Value = DateTime.Now;
+            txtMotivo.Text = "";
+        }
+
+        public void cambiarEstado()
+        {
+            switch (estado)
+            {
+                case Estado.Inicial:
+                    //Botones
+                    btnNuevo.Enabled = true;
+                    btnGuardar.Enabled = false;
+                    btnCancelar.Enabled = false;
+                    //Cuadros de información
+                    btnBuscarAsesor.Enabled = false;
+                    btnBuscarHorario.Enabled = false;
+                    txtMotivo.Enabled = false;
+                    break;
+                case Estado.Nuevo:
+                    //Botones
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnCancelar.Enabled = true;
+                    //Cuadros de información
+                    btnBuscarAsesor.Enabled = true;
+                    btnBuscarHorario.Enabled = true;
+                    txtMotivo.Enabled = true;
+                    break;
+                case Estado.Modificar:
+                    btnNuevo.Enabled = false;
+                    btnGuardar.Enabled = true;
+                    btnCancelar.Enabled = true;
+                    //Cuadros de información
+                    btnBuscarAsesor.Enabled = true;
+                    btnBuscarHorario.Enabled = true;
+                    txtMotivo.Enabled = true;
+                    break;
+            }
+        }
+
         private void btnHome_Click(object sender, EventArgs e)
         {
             new frmPrincipal(TipoUsuario.Alumno).Show();
             this.Close();
         }
 
-        private void btnEliminarCita_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             //new frmCancelarCitaAlumno().ShowDialog();
             DialogResult dr =
                MessageBox.Show("¿Esta seguro que desea cancelar esta cita?", "Cancelación de cita", 
                MessageBoxButtons.YesNo, MessageBoxIcon.None);
+            if (dr == DialogResult.Yes)
+            {
+                MessageBox.Show("La cita ha sido cancelada exitosamente", "Cita cancelada", MessageBoxButtons.OK);
+            }
 
         }
 
-        private void btnVerDetalle_Click(object sender, EventArgs e)
+        private void btnDetalleHistorial_Click(object sender, EventArgs e)
         {
             //tenemos que almacenar los datos en la pantalla
             new frmDetalleCitaAlumno().ShowDialog();
@@ -56,13 +112,20 @@ namespace ProyectoOOIA.Ventanas
         }
 
 
-        private void btnRegistrarCita_Click(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
             //new frmCitaRegistroAlumno().ShowDialog();
             //new frmConfirmarCitaAlumno().ShowDialog();
             DialogResult dr = 
                 MessageBox.Show("¿Esta seguro que desea programar la cita?", "Registro de cita", 
                 MessageBoxButtons.YesNo, MessageBoxIcon.None);
+            if(dr == DialogResult.Yes)
+            {
+                MessageBox.Show("La cita ha sido registrada exitosamente", "Cita registrada", MessageBoxButtons.OK);
+                this.estado = Estado.Inicial;
+                cambiarEstado();
+                clearall();
+            }
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
@@ -92,6 +155,21 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmDetalleCitaAlumno().ShowDialog();
             this.DialogResult = DialogResult.OK;
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            //this.cita = new CitaOOIAWS.citaOOIA();
+            this.estado = Estado.Nuevo;
+            cambiarEstado();
+            clearall();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.estado = Estado.Inicial;
+            cambiarEstado();
+            clearall();
         }
     }
 }
