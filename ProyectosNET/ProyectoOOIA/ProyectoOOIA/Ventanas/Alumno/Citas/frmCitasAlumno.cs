@@ -125,15 +125,61 @@ namespace ProyectoOOIA.Ventanas
         {
             //new frmCitaRegistroAlumno().ShowDialog();
             //new frmConfirmarCitaAlumno().ShowDialog();
-            DialogResult dr = 
-                MessageBox.Show("¿Esta seguro que desea programar la cita?", "Registro de cita", 
-                MessageBoxButtons.YesNo, MessageBoxIcon.None);
-            if(dr == DialogResult.Yes)
+            if(txtAsesor.Text == "")
             {
-                MessageBox.Show("La cita ha sido registrada exitosamente", "Cita registrada", MessageBoxButtons.OK);
-                this.estado = Estado.Inicial;
-                cambiarEstado();
-                clearall();
+                MessageBox.Show("No ha ingresado el asesor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if(txtHoraInicio.Text == "" || txtHoraFin.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el horario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if(txtMotivo.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el motivo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            /*Informacion se asigna a cita*/
+            //cita.motivo = txtMotivo.Text;
+            //cita.asesor = 
+            //cita.fechaRegistro = Date.Now;
+
+            if (estado.Equals(Estado.Nuevo))
+            {
+                DialogResult dr =
+                MessageBox.Show("¿Esta seguro que desea programar la cita?", "Registro de cita",
+                MessageBoxButtons.YesNo, MessageBoxIcon.None);
+                if (dr == DialogResult.Yes)
+                {
+                    //int resultado = daoCita.insertar(cita);
+                    int resultado = 1;
+                    if (resultado != 0)
+                    {
+                        MessageBox.Show("La cita ha sido registrada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.estado = Estado.Inicial;
+                        cambiarEstado();
+                    }
+                    else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else if (estado.Equals(Estado.Modificar))
+            {
+                DialogResult dr =
+                MessageBox.Show("¿Esta seguro que desea modificar la cita?", "Modificación de cita",
+                MessageBoxButtons.YesNo, MessageBoxIcon.None);
+                if (dr == DialogResult.Yes)
+                {
+                    //int resultado = daoCita.modificar(cita);
+                    int resultado = 1;
+                    if (resultado != 0)
+                    {
+                        MessageBox.Show("La cita ha sido modificada exitosamente", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.estado = Estado.Inicial;
+                        cambiarEstado();
+                    }
+                    else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
