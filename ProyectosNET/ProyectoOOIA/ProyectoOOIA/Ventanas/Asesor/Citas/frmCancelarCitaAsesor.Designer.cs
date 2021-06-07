@@ -123,6 +123,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.lblCancelarCitaDescripcion);
             this.Controls.Add(this.lblCancelarCitaTiulo);
             this.Name = "frmCancelarCitaAsesor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cancelar Cita";
             this.ResumeLayout(false);
             this.PerformLayout();

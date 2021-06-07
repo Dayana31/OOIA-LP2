@@ -7,7 +7,7 @@ import pe.edu.pucp.gestion_humana.model.MiembroPUCP;
  *
  * @author DAYANA
  */
-public class CitaOOIA {
+public class Cita {
     private int id_cita;
     private Date fechaRegistro;
     private Alumno alumno;
@@ -18,9 +18,9 @@ public class CitaOOIA {
     private boolean asistio;
     private int estado;
 
-    public CitaOOIA(){};
+    public Cita(){};
 
-    public CitaOOIA(Date fechaRegistro, Alumno alumno, Horario horario, CodigoAtencion codigo_atencion, MiembroPUCP asesor, String motivo, boolean asistio, int estado) {
+    public Cita(Date fechaRegistro, Alumno alumno, Horario horario, CodigoAtencion codigo_atencion, MiembroPUCP asesor, String motivo, boolean asistio, int estado) {
         this.fechaRegistro = fechaRegistro;
         this.alumno = alumno;
         this.horario = horario;

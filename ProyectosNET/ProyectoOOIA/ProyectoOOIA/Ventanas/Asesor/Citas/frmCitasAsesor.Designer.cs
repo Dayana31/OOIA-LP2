@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHorarioAsesor));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(800, 71);
+            this.pnlHeader.Size = new System.Drawing.Size(1014, 71);
             this.pnlHeader.TabIndex = 2;
             // 
             // btnLogout
@@ -81,7 +81,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(753, 26);
+            this.btnLogout.Location = new System.Drawing.Point(967, 31);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(35, 34);
             this.btnLogout.TabIndex = 14;
@@ -116,14 +116,14 @@ namespace ProyectoOOIA.Ventanas
             // dgvHorarioProf
             // 
             this.dgvHorarioProf.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHorarioProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHorarioProf.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHorarioProf.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHorarioProf.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -137,7 +137,7 @@ namespace ProyectoOOIA.Ventanas
             this.dgvHorarioProf.Name = "dgvHorarioProf";
             this.dgvHorarioProf.RowHeadersWidth = 51;
             this.dgvHorarioProf.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHorarioProf.Size = new System.Drawing.Size(753, 309);
+            this.dgvHorarioProf.Size = new System.Drawing.Size(981, 470);
             this.dgvHorarioProf.TabIndex = 0;
             // 
             // Fecha
@@ -184,7 +184,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnModificarHorario
             // 
-            this.btnModificarHorario.Location = new System.Drawing.Point(699, 103);
+            this.btnModificarHorario.Location = new System.Drawing.Point(927, 104);
             this.btnModificarHorario.Name = "btnModificarHorario";
             this.btnModificarHorario.Size = new System.Drawing.Size(75, 23);
             this.btnModificarHorario.TabIndex = 1;
@@ -208,7 +208,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnMostrarDetalles
             // 
-            this.btnMostrarDetalles.Location = new System.Drawing.Point(618, 102);
+            this.btnMostrarDetalles.Location = new System.Drawing.Point(846, 104);
             this.btnMostrarDetalles.Name = "btnMostrarDetalles";
             this.btnMostrarDetalles.Size = new System.Drawing.Size(75, 23);
             this.btnMostrarDetalles.TabIndex = 5;
@@ -270,7 +270,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.ClientSize = new System.Drawing.Size(1014, 611);
             this.Controls.Add(this.btnBuscarHorario);
             this.Controls.Add(this.lblTipoHorario);
             this.Controls.Add(this.cbTipoHorario);

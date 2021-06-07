@@ -2,7 +2,7 @@ package pe.edu.pucp.gestion_humana.model;
 import pe.edu.pucp.gestion_academica.model.CursoLlevado;
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.gestion_atencion.model.CitaOOIA;
+import pe.edu.pucp.gestion_atencion.model.Cita;
 
 public class Alumno extends MiembroPUCP {
     private int id_alumno;
@@ -15,7 +15,7 @@ public class Alumno extends MiembroPUCP {
     private int cursos_por_tercera;
     private double creditos_aprobados;
     private ArrayList<CursoLlevado> historicoCursos;
-    private ArrayList<CitaOOIA> historicoCitas;   
+    private ArrayList<Cita> historicoCitas;   
 
     public Alumno() {
         especialidad = new Especialidad();
@@ -105,11 +105,11 @@ public class Alumno extends MiembroPUCP {
         this.historicoCursos = historicoCursos;
     }
 
-    public ArrayList<CitaOOIA> getHistoricoCitas() {
+    public ArrayList<Cita> getHistoricoCitas() {
         return historicoCitas;
     }
 
-    public void setHistoricoCitas(ArrayList<CitaOOIA> historicoCitas) {
+    public void setHistoricoCitas(ArrayList<Cita> historicoCitas) {
         this.historicoCitas = historicoCitas;
     }
 

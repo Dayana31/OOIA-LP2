@@ -6,18 +6,18 @@ package pe.edu.pucp.gestion_atencion.model;
  */
 public class Compromiso {
     private int id_compromiso;
-    private CitaOOIA cita;
+    private Cita cita;
     private String descripcion;
 
     public Compromiso(){}
     
-    public Compromiso(CitaOOIA cita, String descripcion) {
+    public Compromiso(Cita cita, String descripcion) {
         this.cita = cita;
         this.descripcion = descripcion;
     }
     
 
-    public Compromiso(int id_compromiso, CitaOOIA cita, String descripcion) {
+    public Compromiso(int id_compromiso, Cita cita, String descripcion) {
         this.id_compromiso = id_compromiso;
         this.cita = cita;
         this.descripcion = descripcion;
@@ -32,11 +32,11 @@ public class Compromiso {
     }
 
 
-    public CitaOOIA getCita() {
+    public Cita getCita() {
         return cita;
     }
 
-    public void setCita(CitaOOIA cita) {
+    public void setCita(Cita cita) {
         this.cita = cita;
     }
 

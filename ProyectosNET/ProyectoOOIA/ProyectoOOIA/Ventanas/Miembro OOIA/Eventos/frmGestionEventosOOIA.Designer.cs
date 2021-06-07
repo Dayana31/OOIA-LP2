@@ -29,10 +29,10 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,59 +43,59 @@ namespace ProyectoOOIA.Ventanas
             this.txtHoraInicio = new System.Windows.Forms.TextBox();
             this.txtHoraFin = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.dgvPonentes = new System.Windows.Forms.DataGridView();
             this.NombreCompletoPonente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNombrePonente = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnAgregarPonente = new System.Windows.Forms.Button();
+            this.btnEliminarPonente = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnAgregarImagen = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnNuevo
             // 
-            this.button1.Location = new System.Drawing.Point(23, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Nuevo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnNuevo.Location = new System.Drawing.Point(23, 12);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnBuscar
             // 
-            this.button2.Location = new System.Drawing.Point(185, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnBuscar.Location = new System.Drawing.Point(185, 12);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 1;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // button3
+            // btnModificar
             // 
-            this.button3.Location = new System.Drawing.Point(266, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Modificar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnModificar.Location = new System.Drawing.Point(266, 12);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 2;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnCancelar
             // 
-            this.button4.Location = new System.Drawing.Point(347, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Cancelar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCancelar.Location = new System.Drawing.Point(347, 12);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -178,14 +178,15 @@ namespace ProyectoOOIA.Ventanas
             this.txtDescripcion.TabIndex = 13;
             this.txtDescripcion.Text = "";
             // 
-            // button5
+            // btnGuardar
             // 
-            this.button5.Location = new System.Drawing.Point(104, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Guardar";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnGuardar.Location = new System.Drawing.Point(104, 12);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // dgvPonentes
             // 
@@ -197,7 +198,6 @@ namespace ProyectoOOIA.Ventanas
             this.dgvPonentes.RowHeadersWidth = 51;
             this.dgvPonentes.Size = new System.Drawing.Size(630, 78);
             this.dgvPonentes.TabIndex = 15;
-            this.dgvPonentes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // NombreCompletoPonente
             // 
@@ -231,23 +231,23 @@ namespace ProyectoOOIA.Ventanas
             this.txtNombrePonente.Size = new System.Drawing.Size(483, 20);
             this.txtNombrePonente.TabIndex = 18;
             // 
-            // button6
+            // btnAgregarPonente
             // 
-            this.button6.Location = new System.Drawing.Point(346, 331);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(145, 23);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "Agregar Ponente";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnAgregarPonente.Location = new System.Drawing.Point(346, 331);
+            this.btnAgregarPonente.Name = "btnAgregarPonente";
+            this.btnAgregarPonente.Size = new System.Drawing.Size(145, 23);
+            this.btnAgregarPonente.TabIndex = 19;
+            this.btnAgregarPonente.Text = "Agregar Ponente";
+            this.btnAgregarPonente.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btnEliminarPonente
             // 
-            this.button7.Location = new System.Drawing.Point(497, 331);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(145, 23);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "Eliminar Ponente";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnEliminarPonente.Location = new System.Drawing.Point(497, 331);
+            this.btnEliminarPonente.Name = "btnEliminarPonente";
+            this.btnEliminarPonente.Size = new System.Drawing.Size(145, 23);
+            this.btnEliminarPonente.TabIndex = 20;
+            this.btnEliminarPonente.Text = "Eliminar Ponente";
+            this.btnEliminarPonente.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -266,15 +266,14 @@ namespace ProyectoOOIA.Ventanas
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 22;
             // 
-            // button8
+            // btnAgregarImagen
             // 
-            this.button8.Location = new System.Drawing.Point(592, 51);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(162, 23);
-            this.button8.TabIndex = 23;
-            this.button8.Text = "Agregar imagen";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnAgregarImagen.Location = new System.Drawing.Point(592, 51);
+            this.btnAgregarImagen.Name = "btnAgregarImagen";
+            this.btnAgregarImagen.Size = new System.Drawing.Size(162, 23);
+            this.btnAgregarImagen.TabIndex = 23;
+            this.btnAgregarImagen.Text = "Agregar imagen";
+            this.btnAgregarImagen.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -284,34 +283,34 @@ namespace ProyectoOOIA.Ventanas
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // button9
+            // btnBack
             // 
-            this.button9.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrow;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button9.Location = new System.Drawing.Point(757, 7);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(31, 33);
-            this.button9.TabIndex = 42;
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btnBack.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrow;
+            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBack.Location = new System.Drawing.Point(757, 7);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(31, 33);
+            this.btnBack.TabIndex = 42;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmGestionEventosOOIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnEliminarPonente);
+            this.Controls.Add(this.btnAgregarPonente);
             this.Controls.Add(this.txtNombrePonente);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvPonentes);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtHoraFin);
             this.Controls.Add(this.txtHoraInicio);
@@ -322,10 +321,10 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnNuevo);
             this.Name = "frmGestionEventosOOIA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestionar eventos";
@@ -338,10 +337,10 @@ namespace ProyectoOOIA.Ventanas
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -352,18 +351,18 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TextBox txtHoraInicio;
         private System.Windows.Forms.TextBox txtHoraFin;
         private System.Windows.Forms.RichTextBox txtDescripcion;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.DataGridView dgvPonentes;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompletoPonente;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNombrePonente;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnAgregarPonente;
+        private System.Windows.Forms.Button btnEliminarPonente;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboCategoria;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnAgregarImagen;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnBack;
     }
 }

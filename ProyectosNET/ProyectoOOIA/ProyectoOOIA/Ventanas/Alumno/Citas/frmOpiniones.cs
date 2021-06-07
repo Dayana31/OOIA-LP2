@@ -10,20 +10,15 @@ namespace ProyectoOOIA.Ventanas
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void lblOpiniones_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnAgregarOpinion_Click(object sender, EventArgs e)
-        {
-            new frmConfirmarOpinion().Show();
-
+            this.Close();
         }
     }
 }

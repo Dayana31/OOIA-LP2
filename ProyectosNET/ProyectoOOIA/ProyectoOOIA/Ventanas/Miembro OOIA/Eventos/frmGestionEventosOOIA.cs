@@ -17,25 +17,22 @@ namespace ProyectoOOIA.Ventanas
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnBuscar_Click(object sender, EventArgs e)
         {
             new frmBuscarEventoAlumno().Show();
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             new frmPrincipal(TipoUsuario.OOIA).Show();
             this.Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            DialogResult dr =
+               MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",
+               MessageBoxButtons.YesNo, MessageBoxIcon.None);
         }
     }
 }

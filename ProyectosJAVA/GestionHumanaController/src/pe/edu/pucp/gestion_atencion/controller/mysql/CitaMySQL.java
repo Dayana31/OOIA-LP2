@@ -8,23 +8,23 @@ import java.sql.ResultSet;
 import java.sql.Time;
 import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
-import pe.edu.pucp.gestion_atencion.controller.dao.CitaOOIADAO;
-import pe.edu.pucp.gestion_atencion.model.CitaOOIA;
+import pe.edu.pucp.gestion_atencion.model.Cita;
 import pe.edu.pucp.gestion_atencion.model.Horario;
 import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
+import pe.edu.pucp.gestion_atencion.controller.dao.CitaDAO;
 
 /**
  *
  * @author DAYANA
  */
-public class CitaOOIAMySQL implements CitaOOIADAO{
+public class CitaMySQL implements CitaDAO{
     Connection con; //java.sql.Connection
     ResultSet rs;
     CallableStatement cs;
     
     @Override
-    public ArrayList<CitaOOIA> listar(int id_alumno) {
-      ArrayList<CitaOOIA> citas = new ArrayList<>();
+    public ArrayList<Cita> listar(int id_alumno) {
+      ArrayList<Cita> citas = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
@@ -32,7 +32,7 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
             cs.setInt("_id_alumno",id_alumno);
             rs = cs.executeQuery();
             while(rs.next()){
-                CitaOOIA cita = new CitaOOIA();
+                Cita cita = new Cita();
                 ///falta settear el asesor y el alumno
                 cita.setId_cita(rs.getInt("id_cita"));
                 cita.setFechaRegistro(rs.getDate("fecha_registro"));
@@ -58,7 +58,7 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
     }
 
     @Override
-    public int insertar(CitaOOIA citaOOIA) {
+    public int insertar(Cita cita) {
         int resultado=0;
         try{
             //registrar el driver
@@ -69,15 +69,15 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
           
            cs = con.prepareCall("{call INSERTAR_CITAOOIA(?,?,?,?,?,?,?)}");
            cs.registerOutParameter("_id_cita",java.sql.Types.INTEGER);
-           cs.setDate("_fecha_registro",(Date) citaOOIA.getFechaRegistro());
-           cs.setInt("_fid_alumno",citaOOIA.getAlumno().getId_alumno());
-           cs.setInt("_fid_horario",citaOOIA.getHorario().getId_horario());
-           cs.setInt("_fid_atencion",citaOOIA.getCodigo_atencion().getId_codigo_atencion());
-           cs.setInt("_fid_asesor",citaOOIA.getAsesor().getId_miembro_pucp());
-           cs.setString("_motivo", citaOOIA.getMotivo());
-           cs.setBoolean("_asistio",citaOOIA.isAsistio());
+           cs.setDate("_fecha_registro",(Date) cita.getFechaRegistro());
+           cs.setInt("_fid_alumno",cita.getAlumno().getId_alumno());
+           cs.setInt("_fid_horario",cita.getHorario().getId_horario());
+           cs.setInt("_fid_atencion",cita.getCodigo_atencion().getId_codigo_atencion());
+           cs.setInt("_fid_asesor",cita.getAsesor().getId_miembro_pucp());
+           cs.setString("_motivo", cita.getMotivo());
+           cs.setBoolean("_asistio",cita.isAsistio());
            cs.executeUpdate();
-           citaOOIA.setId_cita(cs.getInt("_id_cita"));
+           cita.setId_cita(cs.getInt("_id_cita"));
            resultado=1;
            cs.close();
         }catch(Exception ex){
@@ -91,7 +91,7 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
     }
 
     @Override
-    public int modificar(CitaOOIA citaOOIA) {
+    public int modificar(Cita cita) {
         int resultado=0;
         try{
             //registrar el driver
@@ -101,14 +101,14 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
                    DBManager.user,DBManager.password);
           
            cs = con.prepareCall("{call MODIFICAR_CITAOOIA(?,?,?,?,?,?,?)}");
-           cs.setInt("_id_cita",citaOOIA.getId_cita());
-           cs.setDate("_fecha_registro",(Date) citaOOIA.getFechaRegistro());
-           cs.setInt("_fid_alumno",citaOOIA.getAlumno().getId_alumno());
-           cs.setInt("_fid_horario",citaOOIA.getHorario().getId_horario());
-           cs.setInt("_fid_atencion",citaOOIA.getCodigo_atencion().getId_codigo_atencion());
-           cs.setInt("_fid_asesor",citaOOIA.getAsesor().getId_miembro_pucp());
-           cs.setString("_motivo",citaOOIA.getMotivo());
-           cs.setBoolean("_asistio",citaOOIA.isAsistio());
+           cs.setInt("_id_cita",cita.getId_cita());
+           cs.setDate("_fecha_registro",(Date) cita.getFechaRegistro());
+           cs.setInt("_fid_alumno",cita.getAlumno().getId_alumno());
+           cs.setInt("_fid_horario",cita.getHorario().getId_horario());
+           cs.setInt("_fid_atencion",cita.getCodigo_atencion().getId_codigo_atencion());
+           cs.setInt("_fid_asesor",cita.getAsesor().getId_miembro_pucp());
+           cs.setString("_motivo",cita.getMotivo());
+           cs.setBoolean("_asistio",cita.isAsistio());
            cs.executeUpdate();
           
            resultado=1;
@@ -124,7 +124,7 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
     }
 
     @Override
-    public int eliminar(int idCitaOOIA) {
+    public int eliminar(int idCita) {
         int resultado=0;
         try{
             //registrar el driver
@@ -134,7 +134,7 @@ public class CitaOOIAMySQL implements CitaOOIADAO{
                    DBManager.user,DBManager.password);
             
             cs = con.prepareCall("{call ELIMINAR_CITAOOIA(?)}");
-            cs.setInt("_id_cita",idCitaOOIA);
+            cs.setInt("_id_cita",idCita);
             cs.executeUpdate();
             resultado=1;
             cs.close();

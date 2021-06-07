@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas
 {
-    partial class frmDetCita_EventAlumnos
+    partial class frmDetalleCitaAsesor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtHeader = new System.Windows.Forms.Label();
             this.tabDetalleCita = new System.Windows.Forms.TabControl();
             this.tabDatosAlumnos = new System.Windows.Forms.TabPage();
+            this.lbNombreAlumno = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblContacto = new System.Windows.Forms.Label();
@@ -45,7 +45,6 @@ namespace ProyectoOOIA.Ventanas
             this.lbEdad = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.lbNombreAlumno = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.txtEspecialidad = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -53,6 +52,10 @@ namespace ProyectoOOIA.Ventanas
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.tabFichaAtencion = new System.Windows.Forms.TabPage();
             this.pnlScrollFicha = new System.Windows.Forms.Panel();
+            this.txtCompromiso = new System.Windows.Forms.TextBox();
+            this.lblCompromiso = new System.Windows.Forms.Label();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.lblAsistencia = new System.Windows.Forms.Label();
@@ -90,8 +93,6 @@ namespace ProyectoOOIA.Ventanas
             this.label15 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.tabDetalleCita.SuspendLayout();
             this.tabDatosAlumnos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -155,6 +156,15 @@ namespace ProyectoOOIA.Ventanas
             this.tabDatosAlumnos.Text = "Datos Alumno";
             this.tabDatosAlumnos.UseVisualStyleBackColor = true;
             // 
+            // lbNombreAlumno
+            // 
+            this.lbNombreAlumno.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombreAlumno.Location = new System.Drawing.Point(3, 3);
+            this.lbNombreAlumno.Name = "lbNombreAlumno";
+            this.lbNombreAlumno.Size = new System.Drawing.Size(294, 38);
+            this.lbNombreAlumno.TabIndex = 19;
+            this.lbNombreAlumno.Text = "Huertas Hortez, Jose Luis";
+            // 
             // lblCodigo
             // 
             this.lblCodigo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,6 +223,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtLugarNac
             // 
+            this.txtLugarNac.Enabled = false;
             this.txtLugarNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLugarNac.Location = new System.Drawing.Point(149, 139);
             this.txtLugarNac.Name = "txtLugarNac";
@@ -240,6 +251,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtDireccion
             // 
+            this.txtDireccion.Enabled = false;
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(149, 229);
             this.txtDireccion.Name = "txtDireccion";
@@ -247,17 +259,9 @@ namespace ProyectoOOIA.Ventanas
             this.txtDireccion.Size = new System.Drawing.Size(273, 24);
             this.txtDireccion.TabIndex = 34;
             // 
-            // lbNombreAlumno
-            // 
-            this.lbNombreAlumno.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombreAlumno.Location = new System.Drawing.Point(3, 3);
-            this.lbNombreAlumno.Name = "lbNombreAlumno";
-            this.lbNombreAlumno.Size = new System.Drawing.Size(294, 38);
-            this.lbNombreAlumno.TabIndex = 19;
-            this.lbNombreAlumno.Text = "Huertas Hortez, Jose Luis";
-            // 
             // txtEdad
             // 
+            this.txtEdad.Enabled = false;
             this.txtEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEdad.Location = new System.Drawing.Point(149, 199);
             this.txtEdad.Name = "txtEdad";
@@ -267,6 +271,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtEspecialidad
             // 
+            this.txtEspecialidad.Enabled = false;
             this.txtEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEspecialidad.Location = new System.Drawing.Point(149, 109);
             this.txtEspecialidad.Name = "txtEspecialidad";
@@ -276,6 +281,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtCorreo
             // 
+            this.txtCorreo.Enabled = false;
             this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.Location = new System.Drawing.Point(149, 79);
             this.txtCorreo.Name = "txtCorreo";
@@ -285,6 +291,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtFechaNac
             // 
+            this.txtFechaNac.Enabled = false;
             this.txtFechaNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFechaNac.Location = new System.Drawing.Point(149, 169);
             this.txtFechaNac.Name = "txtFechaNac";
@@ -294,6 +301,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtCodigo
             // 
+            this.txtCodigo.Enabled = false;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigo.Location = new System.Drawing.Point(149, 49);
             this.txtCodigo.Name = "txtCodigo";
@@ -315,6 +323,9 @@ namespace ProyectoOOIA.Ventanas
             // pnlScrollFicha
             // 
             this.pnlScrollFicha.AutoScroll = true;
+            this.pnlScrollFicha.AutoScrollMargin = new System.Drawing.Size(0, 15);
+            this.pnlScrollFicha.Controls.Add(this.txtCompromiso);
+            this.pnlScrollFicha.Controls.Add(this.lblCompromiso);
             this.pnlScrollFicha.Controls.Add(this.radioButton2);
             this.pnlScrollFicha.Controls.Add(this.radioButton1);
             this.pnlScrollFicha.Controls.Add(this.label13);
@@ -332,6 +343,52 @@ namespace ProyectoOOIA.Ventanas
             this.pnlScrollFicha.Size = new System.Drawing.Size(789, 343);
             this.pnlScrollFicha.TabIndex = 26;
             // 
+            // txtCompromiso
+            // 
+            this.txtCompromiso.Location = new System.Drawing.Point(5, 332);
+            this.txtCompromiso.Multiline = true;
+            this.txtCompromiso.Name = "txtCompromiso";
+            this.txtCompromiso.ReadOnly = true;
+            this.txtCompromiso.Size = new System.Drawing.Size(381, 80);
+            this.txtCompromiso.TabIndex = 58;
+            // 
+            // lblCompromiso
+            // 
+            this.lblCompromiso.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompromiso.Location = new System.Drawing.Point(5, 306);
+            this.lblCompromiso.Name = "lblCompromiso";
+            this.lblCompromiso.Size = new System.Drawing.Size(167, 23);
+            this.lblCompromiso.TabIndex = 57;
+            this.lblCompromiso.Text = "Compromiso";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Enabled = false;
+            this.radioButton2.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(195, 281);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(48, 25);
+            this.radioButton2.TabIndex = 56;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "No";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
+            this.radioButton1.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(137, 281);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(38, 25);
+            this.radioButton1.TabIndex = 55;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Sí";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -343,7 +400,8 @@ namespace ProyectoOOIA.Ventanas
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 127);
+            this.textBox6.Enabled = false;
+            this.textBox6.Location = new System.Drawing.Point(5, 127);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
@@ -353,7 +411,7 @@ namespace ProyectoOOIA.Ventanas
             // lblAsistencia
             // 
             this.lblAsistencia.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsistencia.Location = new System.Drawing.Point(8, 274);
+            this.lblAsistencia.Location = new System.Drawing.Point(5, 283);
             this.lblAsistencia.Name = "lblAsistencia";
             this.lblAsistencia.Size = new System.Drawing.Size(112, 23);
             this.lblAsistencia.TabIndex = 52;
@@ -362,7 +420,7 @@ namespace ProyectoOOIA.Ventanas
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 101);
+            this.label6.Location = new System.Drawing.Point(5, 101);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 23);
             this.label6.TabIndex = 49;
@@ -370,7 +428,8 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtMotivo
             // 
-            this.txtMotivo.Location = new System.Drawing.Point(12, 187);
+            this.txtMotivo.Enabled = false;
+            this.txtMotivo.Location = new System.Drawing.Point(5, 196);
             this.txtMotivo.Multiline = true;
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.ReadOnly = true;
@@ -380,7 +439,7 @@ namespace ProyectoOOIA.Ventanas
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 166);
+            this.label5.Location = new System.Drawing.Point(5, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 23);
             this.label5.TabIndex = 47;
@@ -388,8 +447,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtTipoAlumno
             // 
+            this.txtTipoAlumno.Enabled = false;
             this.txtTipoAlumno.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoAlumno.Location = new System.Drawing.Point(150, 70);
+            this.txtTipoAlumno.Location = new System.Drawing.Point(147, 70);
             this.txtTipoAlumno.Name = "txtTipoAlumno";
             this.txtTipoAlumno.ReadOnly = true;
             this.txtTipoAlumno.Size = new System.Drawing.Size(243, 25);
@@ -398,7 +458,7 @@ namespace ProyectoOOIA.Ventanas
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 69);
+            this.label11.Location = new System.Drawing.Point(5, 73);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(167, 23);
             this.label11.TabIndex = 43;
@@ -406,8 +466,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtTipoCita
             // 
+            this.txtTipoCita.Enabled = false;
             this.txtTipoCita.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTipoCita.Location = new System.Drawing.Point(150, 40);
+            this.txtTipoCita.Location = new System.Drawing.Point(147, 40);
             this.txtTipoCita.Name = "txtTipoCita";
             this.txtTipoCita.ReadOnly = true;
             this.txtTipoCita.Size = new System.Drawing.Size(243, 25);
@@ -416,7 +477,7 @@ namespace ProyectoOOIA.Ventanas
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(8, 40);
+            this.label12.Location = new System.Drawing.Point(5, 43);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(112, 23);
             this.label12.TabIndex = 41;
@@ -446,6 +507,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // textBox16
             // 
+            this.textBox16.Enabled = false;
             this.textBox16.Location = new System.Drawing.Point(211, 237);
             this.textBox16.Name = "textBox16";
             this.textBox16.ReadOnly = true;
@@ -463,6 +525,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // textBox15
             // 
+            this.textBox15.Enabled = false;
             this.textBox15.Location = new System.Drawing.Point(211, 211);
             this.textBox15.Name = "textBox15";
             this.textBox15.ReadOnly = true;
@@ -510,6 +573,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // textBox14
             // 
+            this.textBox14.Enabled = false;
             this.textBox14.Location = new System.Drawing.Point(211, 185);
             this.textBox14.Name = "textBox14";
             this.textBox14.ReadOnly = true;
@@ -527,6 +591,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // textBox13
             // 
+            this.textBox13.Enabled = false;
             this.textBox13.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox13.Location = new System.Drawing.Point(8, 62);
             this.textBox13.Name = "textBox13";
@@ -578,6 +643,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnDetEventosPrev.TabIndex = 54;
             this.btnDetEventosPrev.Text = "Detalles";
             this.btnDetEventosPrev.UseVisualStyleBackColor = true;
+            this.btnDetEventosPrev.Click += new System.EventHandler(this.btnDetEventosPrev_Click);
             // 
             // btnDetCitasPrev
             // 
@@ -588,18 +654,19 @@ namespace ProyectoOOIA.Ventanas
             this.btnDetCitasPrev.TabIndex = 53;
             this.btnDetCitasPrev.Text = "Detalles";
             this.btnDetCitasPrev.UseVisualStyleBackColor = true;
+            this.btnDetCitasPrev.Click += new System.EventHandler(this.btnDetCitasPrev_Click);
             // 
             // dvgEventosPasados
             // 
             this.dvgEventosPasados.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Gill Sans MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgEventosPasados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgEventosPasados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dvgEventosPasados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgEventosPasados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Fecha,
@@ -628,31 +695,23 @@ namespace ProyectoOOIA.Ventanas
             // dvgCitasPasadas
             // 
             this.dvgCitasPasadas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgCitasPasadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dvgCitasPasadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgCitasPasadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cita,
             this.MiembroOOIA});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Gill Sans MT Ext Condensed Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgCitasPasadas.DefaultCellStyle = dataGridViewCellStyle12;
             this.dvgCitasPasadas.EnableHeadersVisualStyles = false;
             this.dvgCitasPasadas.Location = new System.Drawing.Point(8, 67);
             this.dvgCitasPasadas.Name = "dvgCitasPasadas";
             this.dvgCitasPasadas.RowHeadersWidth = 51;
-            this.dvgCitasPasadas.Size = new System.Drawing.Size(520, 120);
+            this.dvgCitasPasadas.Size = new System.Drawing.Size(520, 114);
             this.dvgCitasPasadas.TabIndex = 51;
             // 
             // Cita
@@ -719,35 +778,7 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Size = new System.Drawing.Size(800, 71);
             this.pnlHeader.TabIndex = 10;
             // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Enabled = false;
-            this.radioButton1.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(137, 272);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(38, 25);
-            this.radioButton1.TabIndex = 55;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Sí";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Enabled = false;
-            this.radioButton2.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(195, 272);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(48, 25);
-            this.radioButton2.TabIndex = 56;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "No";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // frmDetCita_EventAlumnos
+            // frmDetalleCitaAsesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -756,7 +787,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.tabDetalleCita);
             this.MinimizeBox = false;
-            this.Name = "frmDetCita_EventAlumnos";
+            this.Name = "frmDetalleCitaAsesor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ficha de datos alumno";
             this.tabDetalleCita.ResumeLayout(false);
@@ -839,5 +870,7 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.DataGridViewTextBoxColumn MiembroOOIA;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox txtCompromiso;
+        private System.Windows.Forms.Label lblCompromiso;
     }
 }

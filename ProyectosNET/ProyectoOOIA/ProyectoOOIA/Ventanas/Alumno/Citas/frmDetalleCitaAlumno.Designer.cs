@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas
 {
-    partial class frmDetalleCita
+    partial class frmDetalleCitaAlumno
     {
         /// <summary>
         /// Required designer variable.
@@ -58,7 +58,7 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(674, 71);
             this.panel1.TabIndex = 2;
@@ -81,7 +81,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnRegresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRegresar.ForeColor = System.Drawing.SystemColors.MenuText;
             this.btnRegresar.Location = new System.Drawing.Point(542, 273);
-            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegresar.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(94, 22);
             this.btnRegresar.TabIndex = 5;
@@ -104,7 +104,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtOrientador.Enabled = false;
             this.txtOrientador.Location = new System.Drawing.Point(22, 39);
-            this.txtOrientador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOrientador.Margin = new System.Windows.Forms.Padding(2);
             this.txtOrientador.Name = "txtOrientador";
             this.txtOrientador.ReadOnly = true;
             this.txtOrientador.Size = new System.Drawing.Size(246, 20);
@@ -125,7 +125,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtFecha.Enabled = false;
             this.txtFecha.Location = new System.Drawing.Point(22, 113);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(2);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(246, 20);
@@ -157,7 +157,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtHoraInicio.Enabled = false;
             this.txtHoraInicio.Location = new System.Drawing.Point(22, 193);
-            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHoraInicio.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoraInicio.Name = "txtHoraInicio";
             this.txtHoraInicio.ReadOnly = true;
             this.txtHoraInicio.Size = new System.Drawing.Size(100, 20);
@@ -167,7 +167,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtHoraFin.Enabled = false;
             this.txtHoraFin.Location = new System.Drawing.Point(164, 193);
-            this.txtHoraFin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHoraFin.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoraFin.Name = "txtHoraFin";
             this.txtHoraFin.ReadOnly = true;
             this.txtHoraFin.Size = new System.Drawing.Size(104, 20);
@@ -188,7 +188,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtCodigoAtencion.Enabled = false;
             this.txtCodigoAtencion.Location = new System.Drawing.Point(322, 193);
-            this.txtCodigoAtencion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoAtencion.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoAtencion.Name = "txtCodigoAtencion";
             this.txtCodigoAtencion.ReadOnly = true;
             this.txtCodigoAtencion.Size = new System.Drawing.Size(316, 20);
@@ -209,7 +209,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtMotivoConsulta.Enabled = false;
             this.txtMotivoConsulta.Location = new System.Drawing.Point(322, 39);
-            this.txtMotivoConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMotivoConsulta.Margin = new System.Windows.Forms.Padding(2);
             this.txtMotivoConsulta.Multiline = true;
             this.txtMotivoConsulta.Name = "txtMotivoConsulta";
             this.txtMotivoConsulta.ReadOnly = true;
@@ -238,7 +238,7 @@ namespace ProyectoOOIA.Ventanas
             this.panel2.Controls.Add(this.btnRegresar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 71);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(674, 327);
             this.panel2.TabIndex = 3;
@@ -249,7 +249,7 @@ namespace ProyectoOOIA.Ventanas
             this.radioButton2.Enabled = false;
             this.radioButton2.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton2.Location = new System.Drawing.Point(170, 239);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(48, 25);
             this.radioButton2.TabIndex = 20;
@@ -263,7 +263,7 @@ namespace ProyectoOOIA.Ventanas
             this.radioButton1.Enabled = false;
             this.radioButton1.Font = new System.Drawing.Font("Gill Sans MT", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButton1.Location = new System.Drawing.Point(101, 240);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(38, 25);
             this.radioButton1.TabIndex = 19;
@@ -282,7 +282,7 @@ namespace ProyectoOOIA.Ventanas
             this.label8.TabIndex = 18;
             this.label8.Text = "Asistencia";
             // 
-            // frmDetalleCita
+            // frmDetalleCitaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -290,8 +290,8 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "frmDetalleCita";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmDetalleCitaAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDetalleCita";
             this.panel1.ResumeLayout(false);

@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas
 {
-    public partial class frmDetCita_EventAlumnos : Form
+    public partial class frmDetalleCitaAsesor : Form
     {
-        public frmDetCita_EventAlumnos()
+        public frmDetalleCitaAsesor()
         {
             InitializeComponent();
 
@@ -21,8 +21,17 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            new frmHorarioAsesor().Show();
             this.Close();
+        }
+
+        private void btnDetCitasPrev_Click(object sender, EventArgs e)
+        {
+            new frmDetalleCitaAsesor().Show();
+        }
+
+        private void btnDetEventosPrev_Click(object sender, EventArgs e)
+        {
+            new frmDetalleEvento().Show();
         }
     }
 }
