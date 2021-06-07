@@ -852,7 +852,7 @@ begin
 end$
 
 /*Procedures de clase Alumno*/
-drop procedure if exists insertar_alumno;
+#drop procedure if exists insertar_alumno;
 delimiter $
 create procedure insertar_alumno(
 	out _id_alumno int,
@@ -868,7 +868,8 @@ create procedure insertar_alumno(
     in _craest decimal(4,2),
     in _cursos_por_primera int ,
     in _cursos_por_segunda int ,
-    in _cursos_por_tercera int
+    in _cursos_por_tercera int,
+    in _creditos_aprobados decimal(10,2)
 )
 begin
 	declare _id_persona int; 
@@ -879,10 +880,10 @@ begin
     insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion)
     values (_id_persona, _usuario_pucp, _fecha_de_inclusion);
     set _id_miembro_pucp = @@last_insert_id;
-    insert into alumno(id_alumno, codigo_pucp, fid_especialidad, craest, estado,
-    cursos_por_primera, cursos_por_segunda, cursos_por_tercera)
-    values (_id_miembro_pucp, _codigo_pucp, _fid_especialidad, _craest, 1,
-    _cursos_por_primera, _cursos_por_segunda, _cursos_por_tercera);
+    insert into alumno(id_alumno,fid_miembro_pucp, codigo_pucp, fid_especialidad, craest, estado,
+    cursos_por_primera, cursos_por_segunda, cursos_por_tercera,creditos_aprobados)
+    values (_id_miembro_pucp,_id_miembro_pucp, _codigo_pucp, _fid_especialidad, _craest, 1,
+    _cursos_por_primera, _cursos_por_segunda, _cursos_por_tercera,_creditos_aprobados);
     set _id_alumno=@@last_insert_id;
 end$
 
@@ -937,9 +938,11 @@ create procedure listar_alumno(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad,p.correo ,p.direccion, 
 		   m.usuario_pucp, m.fecha_de_inclusion,
-           a.codigo_pucp, a.fid_especialidad, a.craest
+           a.codigo_pucp, a.fid_especialidad, e.nombre as nombre_especialidad, a.craest, a.id_alumno, 
+           a.cursos_por_primera,a.cursos_por_segunda,a.cursos_por_tercera,a.creditos_aprobados
 	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
                    inner join alumno a on a.id_alumno = m.id_miembro_pucp
+                   inner join especialidad  e on e.id_especialidad=a.fid_especialidad 
 	where a.estado = 1;
 end$
 
@@ -1092,7 +1095,7 @@ delimiter $
 create procedure listar_psicologo(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
-		   m.usuario_pucp, m.fecha_de_inclusion
+		   m.usuario_pucp, m.fecha_de_inclusion,ps.id_psicologo
 	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
                    inner join psicologo ps on ps.fid_miembro_pucp = m.id_miembro_pucp
 	where ps.estado = 1;

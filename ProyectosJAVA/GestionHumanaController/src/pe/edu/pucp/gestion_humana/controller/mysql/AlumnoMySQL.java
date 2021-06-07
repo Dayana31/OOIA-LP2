@@ -43,7 +43,7 @@ public class AlumnoMySQL implements AlumnoDAO{
                 alumno.setCodigo_pucp(rs.getString("codigo_pucp"));
                 
                 
-                alumno.setEspecialidad(new Especialidad(rs.getInt("fid_especialidad"), cs.getString("nombre_especialidad")));
+                alumno.setEspecialidad(new Especialidad(rs.getInt("fid_especialidad"), rs.getString("nombre_especialidad")));
                 
                 alumno.setCraest(rs.getDouble("craest"));
                 alumno.setId_alumno(rs.getInt("id_alumno"));

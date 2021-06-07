@@ -146,5 +146,10 @@ public class Alumno extends MiembroPUCP {
         this.creditos_aprobados = creditos;
         return creditos;
     }
+
+    @Override
+    public String toString() {
+        return "Alumno{"+ this.getNombre() +  " id_alumno=" + id_alumno + ", codigo_pucp=" + codigo_pucp + ", especialidad=" + especialidad + ", craest=" + '}';
+    }
     
 }

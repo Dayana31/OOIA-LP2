@@ -10,6 +10,8 @@ import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_academica.controller.dao.CursoLlevadoDAO;
 import pe.edu.pucp.gestion_academica.model.Curso;
 import pe.edu.pucp.gestion_academica.model.CursoLlevado;
+import pe.edu.pucp.gestion_humana.controller.mysql.AlumnoMySQL;
+import pe.edu.pucp.gestion_humana.model.Alumno;
 
 /**
  *
@@ -33,6 +35,7 @@ public class CursoLlevadoMySQL implements CursoLlevadoDAO{
                 CursoLlevado curso = new CursoLlevado();
                 curso.setId_curso_llevado(rs.getInt("id_curso_llevado"));
                 curso.setCurso(new Curso());
+                curso.getCurso().setId_curso(rs.getInt("id_curso"));
                 curso.getCurso().setCodigoCurso(rs.getString("codigo_curso"));
                 curso.getCurso().setNombreCurso(rs.getString("nombre_curso"));
                 curso.setCiclo(rs.getString("ciclo"));
@@ -40,7 +43,8 @@ public class CursoLlevadoMySQL implements CursoLlevadoDAO{
                 curso.setNotaFinal(rs.getDouble("nota_final"));
                 curso.setRetirado(rs.getBoolean("retirado"));
                 curso.setFormulaDeCalificacion(rs.getString("formula_de_calificacion"));
-   
+                curso.setAlumno(optenerAlumno(id_alumno));
+                
                 cursos.add(curso);
             }
             rs.close();
@@ -116,6 +120,21 @@ public class CursoLlevadoMySQL implements CursoLlevadoDAO{
         }
         
         return resultado;
+    }
+
+    private Alumno optenerAlumno(int id_alumno) {
+        ArrayList<Alumno> arrayList=new AlumnoMySQL().listar();
+        for(Alumno aux:arrayList)
+            if(aux.getId_alumno()==id_alumno)
+                return aux;
+        return null;
+    }
+    private Curso optenerCurso(int idCurso) {
+        ArrayList<Curso> arrayList=new CursoMySQL().listar();
+        for(Curso aux:arrayList)
+            if(aux.getId_curso()==idCurso)
+                return aux;
+        return null;
     }
     
 }

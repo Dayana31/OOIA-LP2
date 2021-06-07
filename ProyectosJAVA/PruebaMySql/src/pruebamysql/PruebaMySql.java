@@ -8,14 +8,17 @@ package pruebamysql;
 import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.gestion_academica.controller.mysql.CategoriaMySQL;
+import pe.edu.pucp.gestion_academica.controller.mysql.CursoLlevadoMySQL;
 import pe.edu.pucp.gestion_academica.controller.mysql.CursoMySQL;
 import pe.edu.pucp.gestion_academica.model.Categoria;
 import pe.edu.pucp.gestion_academica.model.Curso;
+import pe.edu.pucp.gestion_academica.model.CursoLlevado;
 import pe.edu.pucp.gestion_atencion.controller.mysql.CodigoAtencionMySQL;
 import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
 import pe.edu.pucp.gestion_humana.controller.mysql.EspecialidadMySQL;
 import pe.edu.pucp.gestion_humana.controller.mysql.ProfesorMySQL;
 import pe.edu.pucp.gestion_humana.controller.mysql.PsicologoMySQL;
+import pe.edu.pucp.gestion_humana.model.Alumno;
 import pe.edu.pucp.gestion_humana.model.Especialidad;
 import pe.edu.pucp.gestion_humana.model.Profesor;
 import pe.edu.pucp.gestion_humana.model.Psicologo;
@@ -34,17 +37,34 @@ public class PruebaMySql {
 //pruebaCategoria();
          //pruebaCodigoAtencion();
         //  pruebaProfesor();
-        pruebaPsicologo();
+       // pruebaPsicologo();
+       pruebaCursoLlevado();
 //       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Informatica"));
 //       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Mecatronica"));
 //       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Industrial"));
 //       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Electrica"));
-    
+//        new CursoMySQL().insertar(new Curso("INF282", "Lenguajes de programacion 2", 1));
+//        new CursoMySQL().insertar(new Curso("INF281", "Lenguajes de programacion 1", 1));
+//        new CursoMySQL().insertar(new Curso("INF282", "Sistemas de información 2", 1));
 
     }
     
-    private static void pruebaAlumno(){
-        
+    private static void pruebaCursoLlevado(){
+        CursoLlevado curso=new CursoLlevado();
+        CursoLlevadoMySQL cursoMySQL=new CursoLlevadoMySQL();
+        Alumno alumno=new Alumno();
+        alumno.setId_alumno(1);
+        curso.setAlumno(alumno);
+        //solo se necesita el id hacereferencia a lp2
+        curso.setCurso(new Curso(2, "", "", 1));
+        curso.setCiclo("2020-0");
+        curso.setFormulaDeCalificacion("4EX1 +  3 LAB + 3EX2 ");
+        curso.setNotaFinal(15);
+        curso.setRetirado(false);
+        curso.setVez(1);
+        //cursoMySQL.insertar(curso);
+        Prueba prueba=new Prueba();
+        prueba.impresion(cursoMySQL.listar(alumno.getId_alumno()));
     }
     
     private static void pruebaPsicologo(){
