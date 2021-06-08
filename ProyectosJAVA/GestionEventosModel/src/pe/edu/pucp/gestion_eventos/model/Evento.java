@@ -1,5 +1,6 @@
 package pe.edu.pucp.gestion_eventos.model;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.gestion_humana.model.Persona;
@@ -15,36 +16,24 @@ import pe.edu.pucp.interfaces.IConsultable;
  *
  * @author LENOVO
  */
-public class Evento implements IConsultable{
+public class Evento{
     private int id_coordinador;
     private int id_evento;
     private int capacidad;
     private String nombre;
-    private Date fechaInicio;
-    private Date fechaFin;
+    private Date fecha;
+    private LocalTime horaInicio;
+    private LocalTime horaFin;
     private String lugar;
     private boolean estado;
     private ArrayList <Persona> ponentes ;
-    private ArrayList <Persona> organizadores ;
+
 
     public Evento() {
         ponentes=new ArrayList<>();
-        organizadores=new ArrayList<>();
-//        coordinador = new CoordinadorEventosOOIA();
     }
 
-    public Evento(int id_coordinador, int id_evento, int capacidad, String nombre, Date fechaInicio, Date fechaFin, String lugar, boolean estado, ArrayList<Persona> ponentes, ArrayList<Persona> organizadores) {
-        this.id_coordinador = id_coordinador;
-        this.id_evento = id_evento;
-        this.capacidad = capacidad;
-        this.nombre = nombre;
-        this.fechaInicio = fechaInicio;
-        this.fechaFin = fechaFin;
-        this.lugar = lugar;
-        this.estado = estado;
-        this.ponentes = ponentes;
-        this.organizadores = organizadores;
-    }
+    
 
     public int getId_coordinador() {
         return id_coordinador;
@@ -81,22 +70,7 @@ public class Evento implements IConsultable{
         this.nombre = nombre;
     }
 
-    public Date getFechaInicio() {
-        return fechaInicio;
-    }
-
-    public void setFechaInicio(Date fechaInicio) {
-        this.fechaInicio = fechaInicio;
-    }
-
-    public Date getFechaFin() {
-        return fechaFin;
-    }
-
-    public void setFechaFin(Date fechaFin) {
-        this.fechaFin = fechaFin;
-    }
-
+    
     public String getLugar() {
         return lugar;
     }
@@ -121,21 +95,31 @@ public class Evento implements IConsultable{
         this.ponentes = ponentes;
     }
 
-    public ArrayList<Persona> getOrganizadores() {
-        return organizadores;
+    public Date getFecha() {
+        return fecha;
     }
 
-    public void setOrganizadores(ArrayList<Persona> organizadores) {
-        this.organizadores = organizadores;
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
     }
-    
-    
+
+    public LocalTime getHoraInicio() {
+        return horaInicio;
+    }
+
+    public void setHoraInicio(LocalTime horaInicio) {
+        this.horaInicio = horaInicio;
+    }
+
+    public LocalTime getHoraFin() {
+        return horaFin;
+    }
+
+    public void setHoraFin(LocalTime horaFin) {
+        this.horaFin = horaFin;
+    }
 
     
-    @Override
-    public String consultarDatos() {
-        return null;
-    }
  
     public void agregarPonente(Persona ponente){
         ponentes.add(ponente);
