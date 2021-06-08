@@ -5,7 +5,12 @@
  */
 package pruebamysql;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import pe.edu.pucp.gestion_atencion.controller.dao.HorarioDAO;
+import pe.edu.pucp.gestion_atencion.controller.mysql.HorarioMySQL;
+import pe.edu.pucp.gestion_atencion.model.Horario;
 import pe.edu.pucp.gestion_encuesta.controller.dao.EncuestaDAO;
 import pe.edu.pucp.gestion_encuesta.controller.mysql.EncuestaMySQL;
 import pe.edu.pucp.gestion_encuesta.model.Encuesta;
@@ -25,7 +30,7 @@ import pe.edu.pucp.gestion_humana.model.Profesor;
  * @author DAYANA
  */
 public class PruebaEncuestaMySQL {
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         EncuestaDAO daoEncuesta = new EncuestaMySQL();
         Encuesta encuesta = new Encuesta();
         
@@ -74,10 +79,17 @@ public class PruebaEncuestaMySQL {
 //            System.out.println("Se ha insertado con exito");
 //        }
 
-          ArrayList<Invitado> invitados = new ArrayList<>();
-          invitados = daoInvitado.listar();
-          for(Invitado i : invitados)
-                System.out.println(i);
+//          ArrayList<Invitado> invitados = new ArrayList<>();
+//          invitados = daoInvitado.listar();
+//          for(Invitado i : invitados)
+//                System.out.println(i);
+          
+          //HORARIO
+        HorarioDAO daoHorario = new HorarioMySQL();
+        Horario horario = new Horario();
+        horario.setAsesor(profesores.get(1));
+        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+        horario.setFecha(formato.parse("24-07-2021"));
         
     }
 }

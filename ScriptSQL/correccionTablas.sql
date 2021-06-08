@@ -6,6 +6,7 @@ drop table if exists curso;
 drop table if exists encuesta;
 drop table if exists compromiso;
 drop table if exists cita_ooia;
+drop table if exists horario_asesor;
 drop table if exists horario;
 drop table if exists codigo_atencion;
 
@@ -159,11 +160,21 @@ create table evaluacion(
 create table horario(
 	id_horario int auto_increment,
 	fid_asesor int,
-    fecha date,
+    dia int,
     hora_inicio date,
     hora_fin date,
     estado int,
     primary key(id_horario),
+    foreign key (fid_asesor) references miembro_pucp(id_miembro_pucp)
+)engine = innodb;
+
+create table horario_asesor(
+	id_horario_asesor int auto_increment,
+	fid_horario int,
+	fid_asesor int,
+    estado varchar(50),
+    primary key(id_horario_asesor),
+    foreign key (fid_horario) references horario(id_horario),
     foreign key (fid_asesor) references miembro_pucp(id_miembro_pucp)
 )engine = innodb;
 
