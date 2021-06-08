@@ -874,8 +874,8 @@ create procedure insertar_alumno(
     in _dni varchar(150),
     in _edad int,
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
-    in _contraseña varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _correo varchar(150),
     in _fecha_de_inclusion date,
 	in _codigo_pucp varchar(150),
@@ -893,7 +893,7 @@ begin
 	insert into persona(nombre, dni, edad, correo,direccion) 
     values (_nombre, _dni, _edad,_correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, contraseña, fecha_de_inclusion, imagen_perfil)
+    insert into miembro_pucp(fid_persona, usuario, password, fecha_de_inclusion, imagen_perfil)
     values (_id_persona, _usuario_pucp, _contraseña,_fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into alumno(id_alumno,fid_miembro_pucp, codigo_pucp, fid_especialidad, craest, estado,
@@ -913,8 +913,8 @@ create procedure modificar_alumno(
     in _edad int,
     in _correo varchar(150),
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
-    in _contraseña varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date,
 	in _codigo_pucp varchar(150),
     in _fid_especialidad int,
@@ -935,7 +935,7 @@ begin
 	update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
     where id_persona = aux_persona;
      
-	update miembro_pucp set usuario_pucp = _usuario_pucp, contraseña = _contraseña, fecha_de_inclusion = _fecha_de_inclusion
+	update miembro_pucp set usuario = _usuario, password = _password, fecha_de_inclusion = _fecha_de_inclusion
     where fid_persona = aux_persona;
     
     update alumno set codigo_pucp = _codigo_pucp, fid_especialidad = _fid_especialidad, craest = _craest
@@ -972,8 +972,8 @@ create procedure insertar_profesor(
     in _edad int,
     in _correo varchar(150),
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
-    in _contraseña varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob,
 	in _especialidad int,
@@ -986,7 +986,7 @@ begin
 	insert into persona(nombre, dni, edad, correo, direccion) 
     values (_nombre, _dni, _edad, _correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, contraseña, fecha_de_inclusion, imagen_perfil)
+    insert into miembro_pucp(fid_persona, usuario, password, fecha_de_inclusion, imagen_perfil)
     values (_id_persona, _usuario_pucp, _contraseña, _fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into profesor(fid_miembro_pucp, fid_especialidad, facultad, categoria, estado)
@@ -1002,8 +1002,8 @@ create procedure modificar_profesor(
     in _edad int,
     in _correo varchar(150),
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
-    in _contraseña varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob,
     in _especialidad int,
@@ -1022,7 +1022,7 @@ begin
     update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
     where id_persona = aux_persona;
      
-	update miembro_pucp set usuario_pucp = _usuario_pucp, contraseña=_contraseña, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario = _usuario, password=_password, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
     where fid_persona = aux_persona;
     
     update profesor set fid_especialidad = _especialidad, facultad = _facultad, categoria = _categoria
@@ -1044,7 +1044,7 @@ delimiter $
 create procedure listar_profesor(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
-		   m.usuario_pucp, m.fecha_de_inclusion, m.imagen_perfil, 
+		   m.usuario, m.password, m.fecha_de_inclusion, m.imagen_perfil, 
            e.id_especialidad ,e.nombre as nombre_especialidad, pr.facultad, pr.categoria,pr.id_profesor,m.id_miembro_pucp
 	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
                    inner join profesor pr on pr.fid_miembro_pucp = m.id_miembro_pucp
@@ -1061,8 +1061,8 @@ create procedure insertar_psicologo(
     in _edad int,
     in _correo varchar(150),
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
-    in _contraseña varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob
 )
@@ -1072,8 +1072,8 @@ begin
 	insert into persona(nombre, dni, edad, correo,direccion) 
     values (_nombre, _dni, _edad,_correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, contraseña, fecha_de_inclusion, imagen_perfil)
-    values (_id_persona, _usuario_pucp,_contraseña, _fecha_de_inclusion, _imagen_perfil);
+    insert into miembro_pucp(fid_persona, usuario, password, fecha_de_inclusion, imagen_perfil)
+    values (_id_persona, _usuario, _password, _fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into psicologo(fid_miembro_pucp, estado)
     values (_id_miembro_pucp, 1);
@@ -1088,8 +1088,8 @@ create procedure modificar_psicologo(
     in _edad int,
     in _correo varchar(150),
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
-    in _contraseña varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob
 )
@@ -1104,7 +1104,7 @@ begin
     update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
     where id_persona = aux_persona;
      
-	update miembro_pucp set usuario_pucp = _usuario_pucp, contraseña = _contraseña, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario = _usuario, password = _password, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
     where fid_persona = aux_persona;
 end$
 
@@ -1120,7 +1120,7 @@ delimiter $
 create procedure listar_psicologo(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
-		   m.usuario_pucp, m.fecha_de_inclusion, m.imagen_perfil, ps.id_psicologo
+		   m.usuario, m.password, m.fecha_de_inclusion, m.imagen_perfil, ps.id_psicologo
 	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
                    inner join psicologo ps on ps.fid_miembro_pucp = m.id_miembro_pucp
 	where ps.estado = 1;
