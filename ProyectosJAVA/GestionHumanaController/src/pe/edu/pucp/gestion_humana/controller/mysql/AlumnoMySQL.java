@@ -38,7 +38,7 @@ public class AlumnoMySQL implements AlumnoDAO{
                 alumno.setCorreo(rs.getString("correo"));
                 alumno.setDireccion(rs.getString("direccion"));
                 /*Miembro PUCP*/
-                alumno.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
+//                alumno.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
                 alumno.setUsuario_pucp(rs.getString("usuario_pucp"));
                 alumno.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                 alumno.setImagenDePerfil(rs.getBytes("imagen_perfil"));
@@ -69,7 +69,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call insertar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_alumno", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", alumno.getNombre());
@@ -109,7 +109,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call modificar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             
             /*Persona*/
             cs.setString("_nombre", alumno.getNombre());
@@ -129,6 +129,7 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setInt("_cursos_por_primera", alumno.getCursos_por_primera());
             cs.setInt("_cursos_por_segunda", alumno.getCursos_por_segunda());
             cs.setInt("_cursos_por_tercera", alumno.getCursos_por_tercera());
+            cs.setDouble("_creditos_aprobados", alumno.getCreditos_aprobados());
             cs.executeUpdate();
             resultado = 1;
             cs.close();
