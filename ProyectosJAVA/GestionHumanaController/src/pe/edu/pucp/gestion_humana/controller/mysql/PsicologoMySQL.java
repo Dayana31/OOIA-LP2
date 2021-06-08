@@ -29,16 +29,20 @@ public class PsicologoMySQL implements PsicologoDAO {
             rs = cs.executeQuery();
             while(rs.next()){
                 Psicologo psicologo = new Psicologo();
+                /*Persona*/
                 psicologo.setId_persona(rs.getInt("id_persona"));
-                psicologo.setId_psicologo(rs.getInt("id_psicologo"));
                 psicologo.setNombre(rs.getString("nombre"));
                 psicologo.setDni(rs.getString("dni"));
                 psicologo.setEdad(rs.getInt("edad"));
                 psicologo.setDireccion(rs.getString("direccion"));
                 psicologo.setCorreo(rs.getString("correo"));
+                /*Miembro PUCP*/
+                psicologo.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
                 psicologo.setUsuario_pucp(rs.getString("usuario_pucp"));
                 psicologo.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                 psicologo.setImagenDePerfil(rs.getBytes("imagen_perfil"));
+                /*Psicologo*/
+                psicologo.setId_psicologo(rs.getInt("id_psicologo"));
                 psicologos.add(psicologo);
             }
             rs.close();
