@@ -69,7 +69,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call insertar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_alumno", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", alumno.getNombre());
@@ -79,6 +79,7 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", alumno.getUsuario_pucp());
+            cs.setString("_contraseña", alumno.getContraseña());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", alumno.getImagenDePerfil());
             /*Alumno*/
@@ -109,7 +110,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call modificar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             
             /*Persona*/
             cs.setString("_nombre", alumno.getNombre());
@@ -119,6 +120,7 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", alumno.getUsuario_pucp());
+            cs.setString("_contraseña", alumno.getContraseña());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", alumno.getImagenDePerfil());
             /*Alumno*/

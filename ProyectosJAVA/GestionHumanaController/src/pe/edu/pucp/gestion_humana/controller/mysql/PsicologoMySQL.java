@@ -61,7 +61,7 @@ public class PsicologoMySQL implements PsicologoDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_psicologo(?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call insertar_psicologo(?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_psicologo", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", psicologo.getNombre());
@@ -70,6 +70,7 @@ public class PsicologoMySQL implements PsicologoDAO {
             cs.setString("_direccion", psicologo.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", psicologo.getUsuario_pucp());
+            cs.setString("_contraseña", psicologo.getContraseña());
             cs.setString("_correo", psicologo.getCorreo());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", psicologo.getImagenDePerfil());
@@ -92,7 +93,7 @@ public class PsicologoMySQL implements PsicologoDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_psicologo(?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call modificar_psicologo(?,?,?,?,?,?,?,?,?,?)}");
             cs.setInt("_id_psicologo", psicologo.getId_psicologo());
             /*Persona*/
             cs.setString("_nombre", psicologo.getNombre());
@@ -102,6 +103,7 @@ public class PsicologoMySQL implements PsicologoDAO {
             cs.setString("_direccion", psicologo.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", psicologo.getUsuario_pucp());
+            cs.setString("_contraseña", psicologo.getContraseña());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", psicologo.getImagenDePerfil());
             /*Profesor*/
