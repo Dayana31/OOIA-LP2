@@ -69,7 +69,7 @@ public class InvitadoMySQL implements InvitadoDAO{
             cs.setString("_ocupacion", invitado.getOcupacion());
             /*Invitado*/
             cs.executeUpdate();
-            invitado.setId_persona(cs.getInt("_id_psicologo"));
+            invitado.setId_persona(cs.getInt("_id_invitado"));
             resultado = 1;
             cs.close();
         }catch(Exception ex){
@@ -86,8 +86,8 @@ public class InvitadoMySQL implements InvitadoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_invitado(?,?,?,?,?,?,?,?,?)}");
-            cs.setInt("_id_persona", invitado.getId_persona());
+            cs = con.prepareCall("{call modificar_invitado(?,?,?,?,?,?,?,?)}");
+            
             cs.setInt("_id_invitado", invitado.getId_invitado());
             /*Persona*/
             cs.setString("_nombre", invitado.getNombre());
