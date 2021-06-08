@@ -869,6 +869,7 @@ create procedure insertar_alumno(
     in _cursos_por_primera int ,
     in _cursos_por_segunda int ,
     in _cursos_por_tercera int,
+    in _imagen_perfil longblob,
     in _creditos_aprobados decimal(10,2)
 )
 begin
@@ -877,8 +878,8 @@ begin
 	insert into persona(nombre, dni, edad, correo,direccion) 
     values (_nombre, _dni, _edad,_correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion)
-    values (_id_persona, _usuario_pucp, _fecha_de_inclusion);
+    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion, imagen_perfil)
+    values (_id_persona, _usuario_pucp, _fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into alumno(id_alumno,fid_miembro_pucp, codigo_pucp, fid_especialidad, craest, estado,
     cursos_por_primera, cursos_por_segunda, cursos_por_tercera,creditos_aprobados)

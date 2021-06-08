@@ -6,18 +6,21 @@ public abstract class MiembroPUCP extends Persona{
    private int id_miembro_pucp;
    private String usuario_pucp;
    private Date fecha_inclusion;
-
+   private byte[] imagenDePerfil;
+   
+   
     public MiembroPUCP() {
     }
 
-    public MiembroPUCP(int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion, int id_persona, 
-            String dni, String nombre, int edad, String direccion, String correo) {
-        super(id_persona, dni, nombre, edad, direccion, correo);
-        this.id_miembro_pucp = id_miembro_pucp;
-        this.usuario_pucp = usuario_pucp;
-        this.fecha_inclusion = fecha_inclusion;
+    public byte[] getImagenDePerfil() {
+        return imagenDePerfil;
     }
-   
+
+    public void setImagenDePerfil(byte[] imagenDePerfil) {
+        this.imagenDePerfil = imagenDePerfil;
+    }
+
+    
 
 
     public int getId_miembro_pucp() {
