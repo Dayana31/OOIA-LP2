@@ -17,7 +17,8 @@ public class Profesor extends MiembroPUCP {
     public Profesor(int id_profesor, Especialidad especialidad, String facultad, String categoria, int estado, 
             int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion, int id_persona, 
             String dni, String nombre, int edad, String direccion, String correo) {
-        super(id_miembro_pucp, usuario_pucp, fecha_inclusion, id_persona, dni, nombre, edad, direccion, correo);
+       // super(id_miembro_pucp, usuario_pucp, fecha_inclusion, id_persona, dni, nombre, edad, direccion, correo);
+        
         this.id_profesor = id_profesor;
         this.especialidad = especialidad;
         this.facultad = facultad;
