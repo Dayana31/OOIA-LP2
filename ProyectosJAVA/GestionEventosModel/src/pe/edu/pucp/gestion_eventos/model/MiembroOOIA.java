@@ -17,13 +17,7 @@ public class MiembroOOIA extends MiembroPUCP{
         this.estado = estado;
     }
 
-    public MiembroOOIA(int id_coordinadorEventosOOIA, ArrayList<Evento> eventos, boolean estado, int id_miembro_pucp, String usuario_pucp, Date fecha_inclusion, int id_persona, String dni, String nombre, int edad, String direccion, String correo) {
-        super(id_miembro_pucp, usuario_pucp, fecha_inclusion, id_persona, dni, nombre, edad, direccion, correo);
-        this.id_coordinadorEventosOOIA = id_coordinadorEventosOOIA;
-        this.eventos = eventos;
-        this.estado = estado;
-    }
-
+  
    
 
     

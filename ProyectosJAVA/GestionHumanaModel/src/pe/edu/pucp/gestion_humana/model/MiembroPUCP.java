@@ -20,9 +20,6 @@ public abstract class MiembroPUCP extends Persona{
         this.imagenDePerfil = imagenDePerfil;
     }
 
-    
-
-
     public int getId_miembro_pucp() {
         return id_miembro_pucp;
     }
