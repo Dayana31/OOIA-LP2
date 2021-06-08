@@ -70,7 +70,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         private void panelGestionHumana_Enter(object sender, EventArgs e)
         {
-            txtHeader.Text = "Cargar datos de Gestion Humana"
+            txtHeader.Text = "Cargar datos de Gestion Humana";
         }
     }
 }
