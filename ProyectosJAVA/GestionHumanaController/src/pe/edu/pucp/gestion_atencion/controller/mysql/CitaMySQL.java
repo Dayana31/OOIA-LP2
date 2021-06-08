@@ -38,7 +38,7 @@ public class CitaMySQL implements CitaDAO{
                 cita.setFechaRegistro(rs.getDate("fecha_registro"));
                 cita.setHorario(new Horario());
                 cita.getHorario().setFecha(rs.getDate("fecha_cita"));
-                cita.getHorario().setHoraInicio(rs.getDate("hora_inicio"));
+                cita.getHorario().setHoraInicio(rs.getTime("hora_inicio"));
                 cita.setCodigo_atencion(new CodigoAtencion());
                 cita.getCodigo_atencion().setDescripcion(rs.getString("descripcion"));
                 cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));

@@ -3,6 +3,7 @@ package pe.edu.pucp.gestion_atencion.controller.mysql;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.Date;
+import java.sql.Time;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -34,8 +35,8 @@ public class HorarioMySQL implements HorarioDAO{
                 Horario horario = new Horario();
                 horario.setId_horario(rs.getInt("id_horario"));
                 horario.setFecha(rs.getDate("fecha"));
-                horario.setHoraInicio(rs.getDate("hora_inicio"));
-                horario.setHoraFin(rs.getDate("hora_fin"));
+                horario.setHoraInicio(rs.getTime("hora_inicio"));
+                horario.setHoraFin(rs.getTime("hora_fin"));
                 horario.setEstado(1);
                 horarios.add(horario);
             }
@@ -62,8 +63,8 @@ public class HorarioMySQL implements HorarioDAO{
            cs = con.prepareCall("{call INSERTAR_HORARIO(?,?,?,?,?)}");
            cs.registerOutParameter("_id_horario",java.sql.Types.INTEGER);
            cs.setDate("_fecha", (Date) horario.getFecha());
-           cs.setDate("_hora_inicio",(Date) horario.getHoraInicio());
-           cs.setDate("_hora_fin", (Date) horario.getHoraFin());
+           cs.setTime("_hora_inicio", horario.getHoraInicio());
+           cs.setTime("_hora_fin",  horario.getHoraFin());
            cs.setInt("_fid_asesor", horario.getAsesor().getId_miembro_pucp());
            cs.executeUpdate();
            horario.setId_horario(cs.getInt("_id_horario"));
@@ -92,8 +93,8 @@ public class HorarioMySQL implements HorarioDAO{
            cs = con.prepareCall("{call MODIFICAR_HORARIO(?,?,?,?,?)}");
            cs.setInt("_id_horario",horario.getId_horario());
            cs.setDate("_fecha", (Date) horario.getFecha());
-           cs.setDate("_hora_inicio", (Date) horario.getHoraInicio());
-           cs.setDate("_hora_fin", (Date) horario.getHoraFin());
+           cs.setTime("_hora_inicio", horario.getHoraInicio());
+           cs.setTime("_hora_fin", horario.getHoraFin());
            cs.setInt("_fid_asesor", horario.getAsesor().getId_miembro_pucp());
            cs.executeUpdate();
            resultado=1;
