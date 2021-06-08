@@ -38,7 +38,7 @@ public class PsicologoMySQL implements PsicologoDAO {
                 psicologo.setCorreo(rs.getString("correo"));
                 psicologo.setUsuario_pucp(rs.getString("usuario_pucp"));
                 psicologo.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
-               
+                psicologo.setImagenDePerfil(rs.getBytes("imagen_perfil"));
                 psicologos.add(psicologo);
             }
             rs.close();
@@ -68,6 +68,7 @@ public class PsicologoMySQL implements PsicologoDAO {
             cs.setString("_usuario_pucp", psicologo.getUsuario_pucp());
             cs.setString("_correo", psicologo.getCorreo());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
+            cs.setBytes("_imagen_perfil", psicologo.getImagenDePerfil());
             /*Psicologo*/
             cs.executeUpdate();
             psicologo.setId_persona(cs.getInt("_id_psicologo"));
@@ -98,6 +99,7 @@ public class PsicologoMySQL implements PsicologoDAO {
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", psicologo.getUsuario_pucp());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
+            cs.setBytes("_imagen_perfil", psicologo.getImagenDePerfil());
             /*Profesor*/
             cs.executeUpdate();
             resultado = 1;

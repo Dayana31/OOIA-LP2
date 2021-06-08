@@ -1044,7 +1044,8 @@ create procedure insertar_psicologo(
     in _correo varchar(150),
     in _direccion varchar(150),
     in _usuario_pucp varchar(150),
-    in _fecha_de_inclusion date
+    in _fecha_de_inclusion date,
+    in _imagen_perfil longblob
 )
 begin
 	declare _id_persona int;
@@ -1052,8 +1053,8 @@ begin
 	insert into persona(nombre, dni, edad, correo,direccion) 
     values (_nombre, _dni, _edad,_correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion)
-    values (_id_persona, _usuario_pucp, _fecha_de_inclusion);
+    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion, imagen_perfil)
+    values (_id_persona, _usuario_pucp, _fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into psicologo(fid_miembro_pucp, estado)
     values (_id_miembro_pucp, 1);
@@ -1069,7 +1070,8 @@ create procedure modificar_psicologo(
     in _correo varchar(150),
     in _direccion varchar(150),
     in _usuario_pucp varchar(150),
-    in _fecha_de_inclusion date
+    in _fecha_de_inclusion date,
+    in _imagen_perfil longblob
 )
 begin
 	declare aux_persona int;	
@@ -1082,7 +1084,7 @@ begin
     update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
     where id_persona = aux_persona;
      
-	update miembro_pucp set usuario_pucp = _usuario_pucp, fecha_de_inclusion = _fecha_de_inclusion
+	update miembro_pucp set usuario_pucp = _usuario_pucp, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
     where fid_persona = aux_persona;
 end$
 
@@ -1098,7 +1100,7 @@ delimiter $
 create procedure listar_psicologo(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
-		   m.usuario_pucp, m.fecha_de_inclusion,ps.id_psicologo
+		   m.usuario_pucp, m.fecha_de_inclusion, m.imagen_perfil, ps.id_psicologo
 	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
                    inner join psicologo ps on ps.fid_miembro_pucp = m.id_miembro_pucp
 	where ps.estado = 1;
