@@ -43,5 +43,9 @@ public abstract class MiembroPUCP extends Persona{
     public void setFecha_inclusion(Date fecha_inclusion) {
         this.fecha_inclusion = fecha_inclusion;
     }
+
+    @Override
+    public abstract String consultarDatos();
+  
 }
 

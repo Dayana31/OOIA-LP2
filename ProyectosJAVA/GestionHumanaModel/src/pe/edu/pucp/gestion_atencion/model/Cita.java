@@ -19,9 +19,11 @@ public class Cita {
 
     public Cita(){};
 
-    public Cita(Date fechaRegistro, Alumno alumno, Horario horario, CodigoAtencion codigo_atencion, String motivo, boolean asistio, int estado) {
+    public Cita(int id_cita, Date fechaRegistro, Alumno alumno, Horario horario, CodigoAtencion codigo_atencion, String motivo, boolean asistio, int estado) {
+        this.id_cita = id_cita;
         this.fechaRegistro = fechaRegistro;
         this.alumno = alumno;
+      
         this.horario = horario;
         this.codigo_atencion = codigo_atencion;
         this.motivo = motivo;
@@ -29,7 +31,7 @@ public class Cita {
         this.estado = estado;
     }
 
-
+   
     
     
     public int getId_cita() {
@@ -98,6 +100,8 @@ public class Cita {
     public void setEstado(int estado) {
         this.estado = estado;
     }
+
+
     
     
 }

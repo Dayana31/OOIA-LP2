@@ -76,6 +76,9 @@ public abstract class Persona implements IConsultable {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+    @Override
+    public abstract String consultarDatos();
     
     
 }
