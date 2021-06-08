@@ -176,11 +176,10 @@ create table codigo_atencion(
 
 
 create table cita_ooia(
-    id_cita int auto_increment,
+     id_cita int auto_increment,
 	fid_alumno int,
     fid_horario int,
     fid_atencion int,
-    fid_asesor int,
     fecha_registro date,
     motivo varchar(300),
     asistio bool,
@@ -188,7 +187,6 @@ create table cita_ooia(
     primary key(id_cita),
     foreign key (fid_alumno) references alumno(id_alumno),
     foreign key (fid_horario) references horario(id_horario),
-    foreign key (fid_asesor) references miembro_pucp(id_miembro_pucp),
     foreign key (fid_atencion) references codigo_atencion(id_codigo_atencion)
 )engine = innodb;
 

@@ -26,7 +26,8 @@ DROP PROCEDURE IF EXISTS LISTAR_COMPROMISOS;
 DROP PROCEDURE IF EXISTS INSERTAR_CITAOOIA;
 DROP PROCEDURE IF EXISTS MODIFICAR_CITAOOIA;
 DROP PROCEDURE IF EXISTS ELIMINAR_CITAOOIA;
-DROP PROCEDURE IF EXISTS LISTAR_CITASOOIA;
+DROP PROCEDURE IF EXISTS LISTAR_CITASOOIA_HISTORICO;
+DROP PROCEDURE IF EXISTS LISTAR_CITASOOIA_PENDIENTES;
 DROP PROCEDURE IF EXISTS INSERTAR_ENCUESTA_ASESOR;
 DROP PROCEDURE IF EXISTS MODIFICAR_ENCUESTA_ASESOR;
 DROP PROCEDURE IF EXISTS LISTAR_ENCUESTAS_ASESORES;
@@ -333,13 +334,12 @@ CREATE PROCEDURE INSERTAR_CITAOOIA(
     IN _fid_alumno int,
     IN _fid_horario int,
     IN _fid_atencion int,
-    IN _fid_asesor int,
     IN _motivo varchar(300),
     IN _asistio bool
 )
 BEGIN
-	INSERT INTO cita_ooia(fecha_registro,fid_alumno,fid_horario,fid_atencion,fid_asesor,motivo,asistio,estado) 
-    VALUES(_fecha_registro,_fid_alumno,_fid_horario,_fid_atencion,_fid_asesor,_motivo,_asistio,1);
+	INSERT INTO cita_ooia(fecha_registro,fid_alumno,fid_horario,fid_atencion,motivo,asistio,estado) 
+    VALUES(_fecha_registro,_fid_alumno,_fid_horario,_fid_atencion,_motivo,_asistio,1);
 	SET _id_cita = @@last_insert_id;
 END$
 
@@ -349,13 +349,12 @@ CREATE PROCEDURE MODIFICAR_CITAOOIA(
     IN _fid_alumno int,
     IN _fid_horario int,
     IN _fid_atencion int,
-    IN _fid_asesor int,
     IN _motivo varchar(300),
     IN _asistio bool
 )
 BEGIN
 	UPDATE cita_ooia SET fecha_registro = _fecha_registro, fid_alumno=_fid_alumno, fid_horario=_fid_horario,
-    fid_atencion=_fid_atencion, fid_asesor=_fid_asesor, motivo=_motivo, asistio=_asistio WHERE id_cita = _id_cita;
+    fid_atencion=_fid_atencion, motivo=_motivo, asistio=_asistio WHERE id_cita = _id_cita;
 END$
 CREATE PROCEDURE ELIMINAR_CITAOOIA(
 	IN _id_cita INT
@@ -363,14 +362,30 @@ CREATE PROCEDURE ELIMINAR_CITAOOIA(
 BEGIN
 	UPDATE cita_ooia SET estado = 0 WHERE id_cita = _id_cita;
 END$
-CREATE PROCEDURE LISTAR_CITASOOIA(
+CREATE PROCEDURE LISTAR_CITASOOIA_PENDIENTES(
 	IN _id_alumno INT
 )
 BEGIN
-	SELECT c.id_cita,c.fecha_registro,h.fecha as fecha_cita,h.hora_inicio,m.descripcion as atencion,c.fid_asesor,c.motivo,c.asistio 
-    FROM cita_ooia c inner join horario h on h.id_horario=c.fid_horario inner join  codigo_atencion m
-    on m.id_codigo_atencion=c.fid_atencion
-    WHERE fid_alumno=_id_alumno;
+	SELECT c.id_cita,c.fecha_registro,h.fecha as fecha_cita,h.hora_inicio,h.hora_fin,m.descripcion as descripcion_atencion,
+	p.nombre as asesor, c.motivo ,c.asistio 
+    FROM cita_ooia c inner join horario h on h.id_horario =c.fid_horario
+    inner join miembro_pucp mp on h.fid_asesor = mp.id_miembro_pucp
+    inner join persona p on mp.fid_persona=p.id_persona
+    inner join  codigo_atencion m on m.id_codigo_atencion=c.fid_atencion
+    WHERE fid_alumno=_id_alumno and h.fecha >= CURDATE();
+END$
+
+CREATE PROCEDURE LISTAR_CITASOOIA_HISTORICO(
+	IN _id_alumno INT
+)
+BEGIN
+	SELECT c.id_cita,c.fecha_registro,h.fecha as fecha_cita,h.hora_inicio,h.hora_fin,m.descripcion as descripcion_atencion,
+	p.nombre as asesor, c.motivo ,c.asistio 
+    FROM cita_ooia c inner join horario h on h.id_horario =c.fid_horario
+    inner join miembro_pucp mp on h.fid_asesor = mp.id_miembro_pucp
+    inner join persona p on mp.fid_persona=p.id_persona
+    inner join  codigo_atencion m on m.id_codigo_atencion=c.fid_atencion
+    WHERE fid_alumno=_id_alumno and h.fecha < CURDATE();
 END$
 
 

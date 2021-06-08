@@ -67,7 +67,7 @@ public class CitaMySQL implements CitaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_CITASOOIA(?)}");
+            cs = con.prepareCall("{call LISTAR_CITASOOIA_HISTORICO(?)}");
             cs.setInt("_id_alumno",id_alumno);
             rs = cs.executeQuery();
             while(rs.next()){
