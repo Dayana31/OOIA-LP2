@@ -61,7 +61,7 @@ public class PsicologoMySQL implements PsicologoDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_psicologo(?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call insertar_psicologo(?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_psicologo", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", psicologo.getNombre());
@@ -92,7 +92,7 @@ public class PsicologoMySQL implements PsicologoDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_psicologo(?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call modificar_psicologo(?,?,?,?,?,?,?,?,?)}");
             cs.setInt("_id_psicologo", psicologo.getId_psicologo());
             /*Persona*/
             cs.setString("_nombre", psicologo.getNombre());
