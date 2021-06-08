@@ -87,9 +87,9 @@ public class PruebaEncuestaMySQL {
           //HORARIO
         HorarioDAO daoHorario = new HorarioMySQL();
         Horario horario = new Horario();
-        horario.setAsesor(profesores.get(1));
-        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
-        horario.setFecha(formato.parse("24-07-2021"));
         
+        
+        //horario.setHoraFin(horaFin);
+        //horario.setHoraInicio(horaInicio);
     }
 }

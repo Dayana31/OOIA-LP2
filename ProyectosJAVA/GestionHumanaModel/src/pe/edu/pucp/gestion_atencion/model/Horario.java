@@ -12,21 +12,19 @@ import pe.edu.pucp.gestion_humana.model.MiembroPUCP;
  */
 public class Horario {
     private int id_horario;
-    private Date fecha;
+    private int dia;
     private Time horaInicio;
     private Time horaFin;
-    private MiembroPUCP asesor;
     private int estado;
 
     public Horario() {
     } 
 
-    public Horario(int id_horario, Date fecha, Time horaInicio, Time horaFin, MiembroPUCP asesor, int estado) {
+    public Horario(int id_horario, int dia, Time horaInicio, Time horaFin,int estado) {
         this.id_horario = id_horario;
-        this.fecha = fecha;
+        this.dia=dia;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
-        this.asesor = asesor;
         this.estado = estado;
     }
     
@@ -40,13 +38,14 @@ public class Horario {
         this.id_horario = id_horario;
     }
 
-    public Date getFecha() {
-        return fecha;
+    public int getDia() {
+        return dia;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setDia(int dia) {
+        this.dia = dia;
     }
+
 
     public Time getHoraInicio() {
         return horaInicio;
@@ -64,18 +63,7 @@ public class Horario {
         this.horaFin = horaFin;
     }
 
-   
-
-
-    public MiembroPUCP getAsesor() {
-        return asesor;
-    }
-
-    public void setAsesor(MiembroPUCP asesor) {
-        this.asesor = asesor;
-    }
-
-
+  
 
     public int getEstado() {
         return estado;

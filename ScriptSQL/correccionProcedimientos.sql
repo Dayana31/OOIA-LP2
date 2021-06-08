@@ -435,6 +435,7 @@ create procedure INSERTAR_COORDINADOR(
     in _edad int,
     in _direccion varchar(150),
     in _usuario_pucp varchar(150),
+    in _contraseña varchar(150),
     in _fecha_de_inclusion date
 )begin
 	/*tabla persona*/
@@ -442,8 +443,8 @@ create procedure INSERTAR_COORDINADOR(
     values (_nombre, _dni, _edad, _direccion);
     set _id_persona = @@last_insert_id;
     /*tabla miembro_pucp*/
-    insert into miembro_pucp(usuario_pucp, fecha_de_inclusion)
-    values (_usuario_pucp, _fecha_de_inclusion);
+    insert into miembro_pucp(usuario_pucp,contraseña,fecha_de_inclusion)
+    values (_usuario_pucp,_contraseña,_fecha_de_inclusion);
     set _id_coordinador = @@last_insert_id;
     /*tabla coordinador, esta no se actualiza para nada*/
     insert into coordinador_eventos_ooia(id_coordinador, estado) 
@@ -874,6 +875,7 @@ create procedure insertar_alumno(
     in _edad int,
     in _direccion varchar(150),
     in _usuario_pucp varchar(150),
+    in _contraseña varchar(150),
     in _correo varchar(150),
     in _fecha_de_inclusion date,
 	in _codigo_pucp varchar(150),
@@ -891,8 +893,8 @@ begin
 	insert into persona(nombre, dni, edad, correo,direccion) 
     values (_nombre, _dni, _edad,_correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion, imagen_perfil)
-    values (_id_persona, _usuario_pucp, _fecha_de_inclusion, _imagen_perfil);
+    insert into miembro_pucp(fid_persona, usuario_pucp, contraseña, fecha_de_inclusion, imagen_perfil)
+    values (_id_persona, _usuario_pucp, _contraseña,_fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into alumno(id_alumno,fid_miembro_pucp, codigo_pucp, fid_especialidad, craest, estado,
     cursos_por_primera, cursos_por_segunda, cursos_por_tercera,creditos_aprobados)
@@ -912,6 +914,7 @@ create procedure modificar_alumno(
     in _correo varchar(150),
     in _direccion varchar(150),
     in _usuario_pucp varchar(150),
+    in _contraseña varchar(150),
     in _fecha_de_inclusion date,
 	in _codigo_pucp varchar(150),
     in _fid_especialidad int,
@@ -932,7 +935,7 @@ begin
 	update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
     where id_persona = aux_persona;
      
-	update miembro_pucp set usuario_pucp = _usuario_pucp, fecha_de_inclusion = _fecha_de_inclusion
+	update miembro_pucp set usuario_pucp = _usuario_pucp, contraseña = _contraseña, fecha_de_inclusion = _fecha_de_inclusion
     where fid_persona = aux_persona;
     
     update alumno set codigo_pucp = _codigo_pucp, fid_especialidad = _fid_especialidad, craest = _craest
@@ -970,6 +973,7 @@ create procedure insertar_profesor(
     in _correo varchar(150),
     in _direccion varchar(150),
     in _usuario_pucp varchar(150),
+    in _contraseña varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob,
 	in _especialidad int,
@@ -982,8 +986,8 @@ begin
 	insert into persona(nombre, dni, edad, correo, direccion) 
     values (_nombre, _dni, _edad, _correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion, imagen_perfil)
-    values (_id_persona, _usuario_pucp, _fecha_de_inclusion, _imagen_perfil);
+    insert into miembro_pucp(fid_persona, usuario_pucp, contraseña, fecha_de_inclusion, imagen_perfil)
+    values (_id_persona, _usuario_pucp, _contraseña, _fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into profesor(fid_miembro_pucp, fid_especialidad, facultad, categoria, estado)
     values (_id_miembro_pucp, _especialidad, _facultad, _categoria, 1);
@@ -999,6 +1003,7 @@ create procedure modificar_profesor(
     in _correo varchar(150),
     in _direccion varchar(150),
     in _usuario_pucp varchar(150),
+    in _contraseña varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob,
     in _especialidad int,
@@ -1017,7 +1022,7 @@ begin
     update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
     where id_persona = aux_persona;
      
-	update miembro_pucp set usuario_pucp = _usuario_pucp, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario_pucp = _usuario_pucp, contraseña=_contraseña, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
     where fid_persona = aux_persona;
     
     update profesor set fid_especialidad = _especialidad, facultad = _facultad, categoria = _categoria
@@ -1057,6 +1062,7 @@ create procedure insertar_psicologo(
     in _correo varchar(150),
     in _direccion varchar(150),
     in _usuario_pucp varchar(150),
+    in _contraseña varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob
 )
@@ -1066,8 +1072,8 @@ begin
 	insert into persona(nombre, dni, edad, correo,direccion) 
     values (_nombre, _dni, _edad,_correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion, imagen_perfil)
-    values (_id_persona, _usuario_pucp, _fecha_de_inclusion, _imagen_perfil);
+    insert into miembro_pucp(fid_persona, usuario_pucp, contraseña, fecha_de_inclusion, imagen_perfil)
+    values (_id_persona, _usuario_pucp,_contraseña, _fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into psicologo(fid_miembro_pucp, estado)
     values (_id_miembro_pucp, 1);
@@ -1083,6 +1089,7 @@ create procedure modificar_psicologo(
     in _correo varchar(150),
     in _direccion varchar(150),
     in _usuario_pucp varchar(150),
+    in _contraseña varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob
 )
@@ -1097,7 +1104,7 @@ begin
     update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
     where id_persona = aux_persona;
      
-	update miembro_pucp set usuario_pucp = _usuario_pucp, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario_pucp = _usuario_pucp, contraseña = _contraseña, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
     where fid_persona = aux_persona;
 end$
 
