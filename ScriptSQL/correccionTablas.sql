@@ -159,13 +159,11 @@ create table evaluacion(
 
 create table horario(
 	id_horario int auto_increment,
-	fid_asesor int,
     dia int,
-    hora_inicio date,
-    hora_fin date,
+    hora_inicio time,
+    hora_fin time,
     estado int,
-    primary key(id_horario),
-    foreign key (fid_asesor) references miembro_pucp(id_miembro_pucp)
+    primary key(id_horario)
 )engine = innodb;
 
 create table horario_asesor(

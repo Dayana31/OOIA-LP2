@@ -263,27 +263,24 @@ END$
 
 CREATE PROCEDURE INSERTAR_HORARIO(
 	OUT _id_horario INT,
-    IN _fecha date,
-    IN _hora_inicio date,
-    IN _hora_fin date,
-    IN _fid_asesor int
+    IN _dia int,
+    IN _hora_inicio time,
+    IN _hora_fin time
 )
 BEGIN
-	INSERT INTO horario(fecha,hora_inicio,hora_fin,fid_asesor,estado) 
-    VALUES(_fecha,_hora_inicio,_hora_fin,_fid_asesor,1);
+	INSERT INTO horario(dia,hora_inicio,hora_fin,estado) 
+    VALUES(_dia,_hora_inicio,_hora_fin,1);
 	SET _id_horario = @@last_insert_id;
 END$
 
 CREATE PROCEDURE MODIFICAR_HORARIO(
 	IN _id_horario INT,
-    IN _fecha date,
-    IN _hora_inicio date,
-    IN _hora_fin date,
-    IN _fid_asesor int
+    IN _dia int,
+    IN _hora_inicio time,
+    IN _hora_fin time
 )
 BEGIN
-	UPDATE horario SET  fecha = _fecha, hora_inicio=_hora_inicio, hora_fin = _hora_fin,
-    fid_asesor = _fid_asesor
+	UPDATE horario SET  dia = _dia, hora_inicio=_hora_inicio, hora_fin = _hora_fin
     WHERE id_horario = _id_horario;
 END$
 CREATE PROCEDURE ELIMINAR_HORARIO(
@@ -296,8 +293,9 @@ CREATE PROCEDURE LISTAR_HORARIOS(
 	IN _id_asesor INT
 )
 BEGIN
-	SELECT id_horario, fecha, hora_inicio, hora_fin
-    FROM horario WHERE estado=1 AND _id_asesor=fid_asesor;
+	SELECT h.dia, h.hora_inicio, h.hora_fin, h.estado
+    FROM horario_asesor ha inner join horario h on h.id_horario=ha.fid_horario
+    WHERE _id_asesor=ha.fid_asesor;
 END$
 
 
@@ -372,7 +370,7 @@ BEGIN
     inner join miembro_pucp mp on h.fid_asesor = mp.id_miembro_pucp
     inner join persona p on mp.fid_persona=p.id_persona
     inner join  codigo_atencion m on m.id_codigo_atencion=c.fid_atencion
-    WHERE fid_alumno=_id_alumno and h.fecha >= CURDATE();
+    WHERE c.fid_alumno=_id_alumno and h.fecha >= CURDATE();
 END$
 
 CREATE PROCEDURE LISTAR_CITASOOIA_HISTORICO(
