@@ -30,21 +30,22 @@ public class AlumnoMySQL implements AlumnoDAO{
             rs = cs.executeQuery();
             while(rs.next()){
                 Alumno alumno = new Alumno();
+                /*Persona*/
                 alumno.setId_persona(rs.getInt("id_persona"));
                 alumno.setNombre(rs.getString("nombre"));
                 alumno.setDni(rs.getString("dni"));
                 alumno.setEdad(rs.getInt("edad"));
                 alumno.setCorreo(rs.getString("correo"));
                 alumno.setDireccion(rs.getString("direccion"));
-                
+                /*Miembro PUCP*/
+                alumno.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
                 alumno.setUsuario_pucp(rs.getString("usuario_pucp"));
                 alumno.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
-                
+                alumno.setImagenDePerfil(rs.getBytes("imagen_perfil"));
+                /*Alumno*/
+                alumno.setId_alumno(rs.getInt("id_alumno") );
                 alumno.setCodigo_pucp(rs.getString("codigo_pucp"));
-                
-                
                 alumno.setEspecialidad(new Especialidad(rs.getInt("fid_especialidad"), rs.getString("nombre_especialidad")));
-                
                 alumno.setCraest(rs.getDouble("craest"));
                 alumno.setId_alumno(rs.getInt("id_alumno"));
                 alumno.setCursos_por_primera(rs.getInt("cursos_por_primera"));
@@ -74,11 +75,12 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_nombre", alumno.getNombre());
             cs.setString("_dni", alumno.getDni());
             cs.setInt("_edad", alumno.getEdad());
+            cs.setString("_correo", alumno.getCorreo());
             cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", alumno.getUsuario_pucp());
-            cs.setString("_correo", alumno.getCorreo());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
+            cs.setBytes("_imagen_perfil", alumno.getImagenDePerfil());
             /*Alumno*/
             cs.setString("_codigo_pucp", alumno.getCodigo_pucp());
             cs.setInt("_fid_especialidad", alumno.getEspecialidad().getId_especialidad());
@@ -113,11 +115,12 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_nombre", alumno.getNombre());
             cs.setString("_dni", alumno.getDni());
             cs.setInt("_edad", alumno.getEdad());
-            cs.setString("_direccion", alumno.getDireccion());
             cs.setString("_correo", alumno.getCorreo());
+            cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", alumno.getUsuario_pucp());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
+            cs.setBytes("_imagen_perfil", alumno.getImagenDePerfil());
             /*Alumno*/
             cs.setInt("_id_alumno", alumno.getId_alumno());
             cs.setString("_codigo_pucp", alumno.getCodigo_pucp());
