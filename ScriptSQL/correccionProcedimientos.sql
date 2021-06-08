@@ -938,7 +938,7 @@ delimiter $
 create procedure listar_alumno(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad,p.correo ,p.direccion, 
-		   m.usuario_pucp, m.fecha_de_inclusion,
+		   m.usuario_pucp, m.fecha_de_inclusion, m.imagen_perfil,
            a.codigo_pucp, a.fid_especialidad, e.nombre as nombre_especialidad, a.craest, a.id_alumno, 
            a.cursos_por_primera,a.cursos_por_segunda,a.cursos_por_tercera,a.creditos_aprobados
 	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona

@@ -37,7 +37,7 @@ public class PsicologoMySQL implements PsicologoDAO {
                 psicologo.setDireccion(rs.getString("direccion"));
                 psicologo.setCorreo(rs.getString("correo"));
                 /*Miembro PUCP*/
-                psicologo.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
+//                psicologo.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
                 psicologo.setUsuario_pucp(rs.getString("usuario_pucp"));
                 psicologo.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                 psicologo.setImagenDePerfil(rs.getBytes("imagen_perfil"));

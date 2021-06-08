@@ -11,23 +11,54 @@ import pe.edu.pucp.gestion_academica.model.Curso;
 import pe.edu.pucp.gestion_academica.model.CursoLlevado;
 import pe.edu.pucp.gestion_humana.controller.dao.AlumnoDAO;
 import pe.edu.pucp.gestion_humana.controller.dao.EspecialidadDAO;
+import pe.edu.pucp.gestion_humana.controller.dao.ProfesorDAO;
+import pe.edu.pucp.gestion_humana.controller.dao.PsicologoDAO;
 import pe.edu.pucp.gestion_humana.controller.mysql.AlumnoMySQL;
 import pe.edu.pucp.gestion_humana.controller.mysql.EspecialidadMySQL;
+import pe.edu.pucp.gestion_humana.controller.mysql.ProfesorMySQL;
+import pe.edu.pucp.gestion_humana.controller.mysql.PsicologoMySQL;
 import pe.edu.pucp.gestion_humana.model.Alumno;
 import pe.edu.pucp.gestion_humana.model.Especialidad;
+import pe.edu.pucp.gestion_humana.model.Profesor;
+import pe.edu.pucp.gestion_humana.model.Psicologo;
 
 /**
  *
  * @author PC
  */
-public class PruebaAlumnoMySQL {
+public class PruebaHumanaMySQL {
     private static AlumnoDAO daoAlumno;
+    private static ProfesorDAO daoProfesor;
+    private static PsicologoDAO daoPsicologo;
     public static void main(String[] args) {
         daoAlumno = new AlumnoMySQL();
-        listarAlumno();
+//        listarAlumno();
+        daoProfesor = new ProfesorMySQL();
+        System.out.println("Lista de profesores");
+        listarProfesor();
+        daoPsicologo = new PsicologoMySQL();
+        System.out.println("\nLista de Psicologos");
+        listarPsicologo();
         //insertarAlumno();
     }
     
+    public static void listarPsicologo(){
+        ArrayList<Psicologo> psicologos = new ArrayList<>();
+        psicologos = daoPsicologo.listar();
+        for(Psicologo a : psicologos){
+//            System.out.println("Entro");
+            System.out.println(a.getNombre() + " " + a.getCorreo()  +  " " + a.getUsuario_pucp());
+        }
+    }
+    public static void listarProfesor(){
+        ArrayList<Profesor> profesores = new ArrayList<>();
+        profesores = daoProfesor.listar();
+        for(Profesor a : profesores){
+//            System.out.println("Entro");
+            System.out.println(a.getNombre() + " " + a.getCorreo()  + " " + 
+                    a.getFacultad() + " " + a.getUsuario_pucp() + " " + a.getCategoria());
+        }
+    }
     public static void listarAlumno(){
         ArrayList<Alumno> alumnos = new ArrayList<>();
         alumnos = daoAlumno.listar();
