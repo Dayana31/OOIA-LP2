@@ -24,8 +24,8 @@ public class PruebaAlumnoMySQL {
     private static AlumnoDAO daoAlumno;
     public static void main(String[] args) {
         daoAlumno = new AlumnoMySQL();
-        //listarAlumno();
-        insertarAlumno();
+        listarAlumno();
+        //insertarAlumno();
     }
     
     public static void listarAlumno(){
