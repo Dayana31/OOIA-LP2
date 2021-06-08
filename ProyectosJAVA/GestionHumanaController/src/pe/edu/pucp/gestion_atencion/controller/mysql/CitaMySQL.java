@@ -30,7 +30,7 @@ public class CitaMySQL implements CitaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_CITASOOIA_PENDIENTES(?)}");
+            cs = con.prepareCall("{call LISTAR_CITAS_PENDIENTES(?)}");
             cs.setInt("_id_alumno",id_alumno);
             rs = cs.executeQuery();
             while(rs.next()){
@@ -67,7 +67,7 @@ public class CitaMySQL implements CitaDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_CITASOOIA_HISTORICO(?)}");
+            cs = con.prepareCall("{call LISTAR_CITAS_HISTORICO(?)}");
             cs.setInt("_id_alumno",id_alumno);
             rs = cs.executeQuery();
             while(rs.next()){
@@ -108,7 +108,7 @@ public class CitaMySQL implements CitaDAO{
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call INSERTAR_CITAOOIA(?,?,?,?,?,?,?)}");
+           cs = con.prepareCall("{call INSERTAR_CITA(?,?,?,?,?,?,?)}");
            cs.registerOutParameter("_id_cita",java.sql.Types.INTEGER);
            cs.setDate("_fecha_registro",(Date) cita.getFechaRegistro());
            cs.setInt("_fid_alumno",cita.getAlumno().getId_alumno());
@@ -140,7 +140,7 @@ public class CitaMySQL implements CitaDAO{
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call MODIFICAR_CITAOOIA(?,?,?,?,?,?,?)}");
+           cs = con.prepareCall("{call MODIFICAR_CITA(?,?,?,?,?,?,?)}");
            cs.setInt("_id_cita",cita.getId_cita());
            cs.setDate("_fecha_registro",(Date) cita.getFechaRegistro());
            cs.setInt("_fid_alumno",cita.getAlumno().getId_alumno());
@@ -172,7 +172,7 @@ public class CitaMySQL implements CitaDAO{
             con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
             
-            cs = con.prepareCall("{call ELIMINAR_CITAOOIA(?)}");
+            cs = con.prepareCall("{call ELIMINAR_CITA(?)}");
             cs.setInt("_id_cita",idCita);
             cs.executeUpdate();
             resultado=1;
