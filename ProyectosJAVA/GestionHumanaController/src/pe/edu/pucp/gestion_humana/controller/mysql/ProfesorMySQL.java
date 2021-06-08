@@ -26,7 +26,7 @@ public class ProfesorMySQL implements ProfesorDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call listar_profesor()}");
+            cs = con.prepareCall("{call LISTAR_PROFESOR()}");
             rs = cs.executeQuery();
             while(rs.next()){
                 Profesor profesor = new Profesor();
@@ -39,7 +39,8 @@ public class ProfesorMySQL implements ProfesorDAO {
                 profesor.setCorreo(rs.getString("correo"));
                 /*Miembro PUCP*/
                 profesor.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
-                profesor.setUsuario_pucp(rs.getString("usuario_pucp"));
+                profesor.setUsuario(rs.getString("usuario"));
+                profesor.setPassword(rs.getString("password"));
                 profesor.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                 profesor.setImagenDePerfil(rs.getBytes("imagen_perfil"));
                 /*Profesor*/
@@ -67,7 +68,7 @@ public class ProfesorMySQL implements ProfesorDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_profesor(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_PROFESOR(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_profesor", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", profesor.getNombre());
@@ -76,8 +77,8 @@ public class ProfesorMySQL implements ProfesorDAO {
             cs.setString("_direccion", profesor.getDireccion());
             cs.setString("_correo", profesor.getCorreo());
             /*Miembro PUCP*/
-            cs.setString("_usuario_pucp", profesor.getUsuario_pucp());
-            cs.setString("_contraseña", profesor.getContraseña());
+            cs.setString("_usuario", profesor.getUsuario());
+            cs.setString("_password", profesor.getPassword());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(profesor.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", profesor.getImagenDePerfil());
             /*Profesor*/
@@ -104,7 +105,7 @@ public class ProfesorMySQL implements ProfesorDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_profesor(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_PROFESOR(?,?,?,?,?,?,?,?,?,?,?,?,?)}");
 
             cs.setInt("_id_profesor", profesor.getId_profesor());
             /*Persona*/
@@ -114,8 +115,8 @@ public class ProfesorMySQL implements ProfesorDAO {
             cs.setString("_direccion", profesor.getDireccion());
             cs.setString("_correo", profesor.getCorreo());
             /*Miembro PUCP*/
-            cs.setString("_usuario_pucp", profesor.getUsuario_pucp());
-            cs.setString("_contraseña", profesor.getContraseña());
+            cs.setString("_usuario", profesor.getUsuario());
+            cs.setString("_password", profesor.getPassword());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(profesor.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", profesor.getImagenDePerfil());
             /*Profesor*/
@@ -140,7 +141,7 @@ public class ProfesorMySQL implements ProfesorDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call eliminar_profesor(?)}");
+            cs = con.prepareCall("{call ELIMINAR_PROFESOR(?)}");
             cs.setInt("_id_profesor", profesor.getId_profesor());
             cs.executeUpdate();
             resultado = 1;
