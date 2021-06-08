@@ -62,5 +62,15 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmAccesoEvento().ShowDialog();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarHistorial_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

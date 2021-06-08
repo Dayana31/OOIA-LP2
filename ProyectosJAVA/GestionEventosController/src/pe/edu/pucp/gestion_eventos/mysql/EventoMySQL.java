@@ -37,8 +37,7 @@ public class EventoMySQL implements EventoDAO{
                 evento.setNombre(rs.getString("nombre"));
                 evento.setLugar(rs.getString("lugar"));
                 evento.setCapacidad(rs.getInt("capacidad"));
-                evento.setFechaInicio(rs.getDate("fecha_inicio"));
-                evento.setFechaFin(rs.getDate("fecha_fin"));
+                
                 eventos.add(evento);
             }
             rs.close();
@@ -68,8 +67,7 @@ public class EventoMySQL implements EventoDAO{
             cs.setInt("_id_evento", evento.getId_evento());
             cs.setInt("_capacidad", evento.getCapacidad());
             cs.setString("_nombre", evento.getNombre());
-            cs.setDate("_fecha_inicio", (Date) evento.getFechaInicio());
-            cs.setDate("_fecha_fin", (Date) evento.getFechaFin());
+            
             cs.setString("_lugar", evento.getLugar());
      
             //Ejecutamos el procedimiento
@@ -101,8 +99,7 @@ public class EventoMySQL implements EventoDAO{
             cs.setInt("_id_evento", evento.getId_evento());
             cs.setInt("_capacidad", evento.getCapacidad());
             cs.setString("_nombre", evento.getNombre());
-            cs.setDate("_fecha_inicio", (Date) evento.getFechaInicio());
-            cs.setDate("_fecha_fin", (Date) evento.getFechaFin());
+         
             cs.setString("_lugar", evento.getLugar());
      
             //Ejecutamos el procedimiento
