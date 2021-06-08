@@ -4,6 +4,12 @@
     <service name="ProfesorWS">
       <implementation-class>pe.edu.pucp.OOIA.services.ProfesorWS</implementation-class>
     </service>
+    <service name="AlumnoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.AlumnoWS</implementation-class>
+    </service>
+    <service name="GestionHumana">
+      <implementation-class>pe.edu.pucp.OOIA.services.GestionHumana</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

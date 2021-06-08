@@ -20,9 +20,7 @@ import pe.edu.pucp.gestion_humana.model.Profesor;
 @WebService(serviceName = "ProfesorWS")
 public class ProfesorWS {
         private ProfesorDAO daoProfesor;
-    /**
-     * This is a sample web service operation
-     */
+    
         public ProfesorWS(){
             daoProfesor=new ProfesorMySQL();
         }

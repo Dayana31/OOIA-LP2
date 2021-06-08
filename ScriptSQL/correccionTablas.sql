@@ -39,20 +39,14 @@ create table persona(
     direccion varchar(150),
     primary key(id_persona)
 )engine = innodb;
-/*
-create table correo(
-	id_correo int,
-	fid_persona int,
-    nombre varchar(150),
-    primary key(id_correo),
-    foreign key(fid_persona) references persona(id_persona)
-)engine = innodb;
-*/
+
+
 create table miembro_pucp(
 	id_miembro_pucp int auto_increment,
     fid_persona int,
     usuario_pucp varchar(150),
     fecha_de_inclusion date,
+    imagen_perfil longblob,
     primary key (id_miembro_pucp),
     foreign key(fid_persona) references persona(id_persona)
 )engine = innodb;
