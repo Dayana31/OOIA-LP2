@@ -46,6 +46,7 @@ public class ProfesorMySQL implements ProfesorDAO {
                 profesor.setCategoria(rs.getString("categoria"));
                 profesor.setEstado(1);
                 
+                profesor.setImagenDePerfil(rs.getBytes("imagen_perfil"));
                 profesores.add(profesor);
             }
             rs.close();
@@ -75,10 +76,13 @@ public class ProfesorMySQL implements ProfesorDAO {
             /*Miembro PUCP*/
             cs.setString("_usuario_pucp", profesor.getUsuario_pucp());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(profesor.getFecha_inclusion().getTime()));
+            cs.setBytes("_imagen_perfil", profesor.getImagenDePerfil());
             /*Profesor*/
             cs.setInt("_especialidad", profesor.getEspecialidad().getId_especialidad());
             cs.setString("_facultad", profesor.getFacultad());
             cs.setString("_categoria", profesor.getCategoria());
+            
+            
             cs.executeUpdate();
             profesor.setId_persona(cs.getInt("_id_profesor"));
             resultado = 1;
@@ -113,6 +117,8 @@ public class ProfesorMySQL implements ProfesorDAO {
             cs.setInt("_especialidad", profesor.getEspecialidad().getId_especialidad());
             cs.setString("_facultad", profesor.getFacultad());
             cs.setString("_categoria", profesor.getCategoria());
+            
+            cs.setBytes("_imagen_perfil", profesor.getImagenDePerfil());
             cs.executeUpdate();
             resultado = 1;
             cs.close();
