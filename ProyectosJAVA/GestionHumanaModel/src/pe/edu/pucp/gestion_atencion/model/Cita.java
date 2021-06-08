@@ -13,19 +13,17 @@ public class Cita {
     private Alumno alumno;
     private Horario horario;
     private CodigoAtencion codigo_atencion;
-    private MiembroPUCP asesor;
     private String motivo;
     private boolean asistio;
     private int estado;
 
     public Cita(){};
 
-    public Cita(Date fechaRegistro, Alumno alumno, Horario horario, CodigoAtencion codigo_atencion, MiembroPUCP asesor, String motivo, boolean asistio, int estado) {
+    public Cita(Date fechaRegistro, Alumno alumno, Horario horario, CodigoAtencion codigo_atencion, String motivo, boolean asistio, int estado) {
         this.fechaRegistro = fechaRegistro;
         this.alumno = alumno;
         this.horario = horario;
         this.codigo_atencion = codigo_atencion;
-        this.asesor = asesor;
         this.motivo = motivo;
         this.asistio = asistio;
         this.estado = estado;
@@ -83,15 +81,6 @@ public class Cita {
     public void setAlumno(Alumno alumno) {
         this.alumno = alumno;
     }
-
-    public MiembroPUCP getAsesor() {
-        return asesor;
-    }
-
-    public void setAsesor(MiembroPUCP asesor) {
-        this.asesor = asesor;
-    }
-
   
 
     public boolean isAsistio() {

@@ -12,6 +12,7 @@ import pe.edu.pucp.gestion_atencion.model.Cita;
 import pe.edu.pucp.gestion_atencion.model.Horario;
 import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
 import pe.edu.pucp.gestion_atencion.controller.dao.CitaDAO;
+import pe.edu.pucp.gestion_humana.model.MiembroPUCP;
 
 /**
  *
@@ -39,9 +40,11 @@ public class CitaMySQL implements CitaDAO{
                 cita.setHorario(new Horario());
                 cita.getHorario().setFecha(rs.getDate("fecha_cita"));
                 cita.getHorario().setHoraInicio(rs.getTime("hora_inicio"));
+                cita.getHorario().setHoraInicio(rs.getTime("hora_fin"));
+                
+                cita.getHorario().getAsesor().setNombre(rs.getString("nombre"));
                 cita.setCodigo_atencion(new CodigoAtencion());
-                cita.getCodigo_atencion().setDescripcion(rs.getString("descripcion"));
-                cita.getAsesor().setId_miembro_pucp(rs.getInt("fid_asesor"));
+                cita.getCodigo_atencion().setDescripcion(rs.getString("descripcion_atencion"));
                 cita.setMotivo(rs.getString("motivo"));
                 cita.setAsistio(rs.getBoolean("asistio"));
                 cita.setEstado(1);
@@ -72,8 +75,7 @@ public class CitaMySQL implements CitaDAO{
            cs.setDate("_fecha_registro",(Date) cita.getFechaRegistro());
            cs.setInt("_fid_alumno",cita.getAlumno().getId_alumno());
            cs.setInt("_fid_horario",cita.getHorario().getId_horario());
-           cs.setInt("_fid_atencion",cita.getCodigo_atencion().getId_codigo_atencion());
-           cs.setInt("_fid_asesor",cita.getAsesor().getId_miembro_pucp());
+           cs.setInt("_fid_atencion",cita.getCodigo_atencion().getId_codigo_atencion());         
            cs.setString("_motivo", cita.getMotivo());
            cs.setBoolean("_asistio",cita.isAsistio());
            cs.executeUpdate();
@@ -106,7 +108,6 @@ public class CitaMySQL implements CitaDAO{
            cs.setInt("_fid_alumno",cita.getAlumno().getId_alumno());
            cs.setInt("_fid_horario",cita.getHorario().getId_horario());
            cs.setInt("_fid_atencion",cita.getCodigo_atencion().getId_codigo_atencion());
-           cs.setInt("_fid_asesor",cita.getAsesor().getId_miembro_pucp());
            cs.setString("_motivo",cita.getMotivo());
            cs.setBoolean("_asistio",cita.isAsistio());
            cs.executeUpdate();
