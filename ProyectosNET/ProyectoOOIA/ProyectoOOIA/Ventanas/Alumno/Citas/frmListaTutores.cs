@@ -17,7 +17,7 @@ namespace ProyectoOOIA.Ventanas
             tabTutor.HorizontalScroll.Maximum = 0;
             tabTutor.AutoScroll = true;
 
-            //Listar
+            
 
             for (int i = 0; i < 3; i++)
             {
@@ -39,10 +39,27 @@ namespace ProyectoOOIA.Ventanas
                 pnl.Dock = DockStyle.Top;
                 pnl.Height = 30;
             }
-
+            for (int i = 0; i < 3; i++)
+            {
+                UserControl uc = new ucAsesor();
+                pnlPsicLeft.Controls.Add(uc);
+                uc.Dock = DockStyle.Top;
+                Panel pnl = new Panel();
+                pnlPsicLeft.Controls.Add(pnl);
+                pnl.Dock = DockStyle.Top;
+                pnl.Height = 30;
+            }
+            for (int i = 0; i < 3; i++)
+            {
+                UserControl uc = new ucAsesor();
+                pnlPsicRight.Controls.Add(uc);
+                uc.Dock = DockStyle.Top;
+                Panel pnl = new Panel();
+                pnlPsicRight.Controls.Add(pnl);
+                pnl.Dock = DockStyle.Top;
+                pnl.Height = 30;
+            }
         }
-
-
 
         private void btnAtras_Click(object sender, EventArgs e)
         {

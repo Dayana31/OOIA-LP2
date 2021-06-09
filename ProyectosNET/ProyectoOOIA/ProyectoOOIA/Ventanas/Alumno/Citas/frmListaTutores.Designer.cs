@@ -38,13 +38,13 @@ namespace ProyectoOOIA.Ventanas
             this.tabTutor = new System.Windows.Forms.TabPage();
             this.pnlTutorRight = new System.Windows.Forms.Panel();
             this.pnlTutorLeft = new System.Windows.Forms.Panel();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.card8 = new ProyectoOOIA.Componentes.Card();
-            this.card1 = new ProyectoOOIA.Componentes.Card();
+            this.tabPsic = new System.Windows.Forms.TabPage();
+            this.pnlPsicRight = new System.Windows.Forms.Panel();
+            this.pnlPsicLeft = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabTutor.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPsic.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,7 +92,7 @@ namespace ProyectoOOIA.Ventanas
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabTutor);
-            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.tabPsic);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 71);
             this.tabControl.Name = "tabControl";
@@ -130,37 +130,33 @@ namespace ProyectoOOIA.Ventanas
             this.pnlTutorLeft.Size = new System.Drawing.Size(400, 338);
             this.pnlTutorLeft.TabIndex = 0;
             // 
-            // tabPage2
+            // tabPsic
             // 
-            this.tabPage2.Controls.Add(this.card8);
-            this.tabPage2.Controls.Add(this.card1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 36);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(928, 419);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Psicólogos";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPsic.Controls.Add(this.pnlPsicRight);
+            this.tabPsic.Controls.Add(this.pnlPsicLeft);
+            this.tabPsic.Location = new System.Drawing.Point(4, 36);
+            this.tabPsic.Name = "tabPsic";
+            this.tabPsic.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPsic.Size = new System.Drawing.Size(928, 419);
+            this.tabPsic.TabIndex = 1;
+            this.tabPsic.Text = "Psicólogos";
+            this.tabPsic.UseVisualStyleBackColor = true;
             // 
-            // card8
+            // pnlPsicRight
             // 
-            this.card8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.card8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card8.Location = new System.Drawing.Point(485, 33);
-            this.card8.Margin = new System.Windows.Forms.Padding(4);
-            this.card8.Name = "card8";
-            this.card8.Size = new System.Drawing.Size(327, 175);
-            this.card8.TabIndex = 1;
+            this.pnlPsicRight.AutoSize = true;
+            this.pnlPsicRight.Location = new System.Drawing.Point(520, 85);
+            this.pnlPsicRight.Name = "pnlPsicRight";
+            this.pnlPsicRight.Size = new System.Drawing.Size(400, 338);
+            this.pnlPsicRight.TabIndex = 3;
             // 
-            // card1
+            // pnlPsicLeft
             // 
-            this.card1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.card1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.card1.Location = new System.Drawing.Point(69, 33);
-            this.card1.Margin = new System.Windows.Forms.Padding(4);
-            this.card1.Name = "card1";
-            this.card1.Size = new System.Drawing.Size(327, 175);
-            this.card1.TabIndex = 0;
+            this.pnlPsicLeft.AutoSize = true;
+            this.pnlPsicLeft.Location = new System.Drawing.Point(8, 85);
+            this.pnlPsicLeft.Name = "pnlPsicLeft";
+            this.pnlPsicLeft.Size = new System.Drawing.Size(400, 338);
+            this.pnlPsicLeft.TabIndex = 2;
             // 
             // frmListaTutores
             // 
@@ -180,7 +176,8 @@ namespace ProyectoOOIA.Ventanas
             this.tabControl.ResumeLayout(false);
             this.tabTutor.ResumeLayout(false);
             this.tabTutor.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.tabPsic.ResumeLayout(false);
+            this.tabPsic.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -191,11 +188,11 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabTutor;
-        private System.Windows.Forms.TabPage tabPage2;
-        private Componentes.Card card1;
-        private Componentes.Card card8;
+        private System.Windows.Forms.TabPage tabPsic;
         private Button btnAtras;
         private Panel pnlTutorRight;
         private Panel pnlTutorLeft;
+        private Panel pnlPsicRight;
+        private Panel pnlPsicLeft;
     }
 }
