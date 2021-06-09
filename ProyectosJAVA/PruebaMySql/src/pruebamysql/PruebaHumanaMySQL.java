@@ -30,6 +30,7 @@ public class PruebaHumanaMySQL {
     public static void main(String[] args) {
         daoAlumno = new AlumnoMySQL();
         listarAlumno();
+        insertarAlumno();
     }
     
     public static void listarPsicologo(){
@@ -63,14 +64,15 @@ public class PruebaHumanaMySQL {
         
         //Insertar
         //Atributos persona
-        alum.setDni("1234556678");
-        alum.setNombre("Pedro Salas");
+        alum.setDni("66666666");
+        alum.setNombre("Jorge Basadre");
         alum.setEdad(21);
         alum.setDireccion("jr. banhio de los incas, urb manco capac");
         alum.setCorreo("dasjdjasdjasjdas@pucp.edu.pe");
         
         //Atributos miembro pucp
         alum.setUsuario_pucp("2083123@pucp.edu.pe");
+        alum.setContraseña("password");
         alum.setFecha_inclusion(new Date());
         
         //Atributos Alumno
