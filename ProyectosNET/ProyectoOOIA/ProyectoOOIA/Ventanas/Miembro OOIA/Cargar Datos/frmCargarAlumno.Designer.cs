@@ -75,6 +75,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabAlumno = new System.Windows.Forms.TabPage();
             this.btnImagen = new System.Windows.Forms.Button();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.ofd_Imagen = new System.Windows.Forms.OpenFileDialog();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -301,7 +302,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.cbEspecialidad.FormattingEnabled = true;
             this.cbEspecialidad.Location = new System.Drawing.Point(152, 211);
             this.cbEspecialidad.Name = "cbEspecialidad";
-            this.cbEspecialidad.Size = new System.Drawing.Size(121, 21);
+            this.cbEspecialidad.Size = new System.Drawing.Size(179, 21);
             this.cbEspecialidad.TabIndex = 6;
             // 
             // lblEspecialidad
@@ -535,14 +536,21 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.btnImagen.TabIndex = 5;
             this.btnImagen.Text = "Seleccionar Imagen";
             this.btnImagen.UseVisualStyleBackColor = true;
+            this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
             // 
             // pbPerfil
             // 
+            this.pbPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbPerfil.Location = new System.Drawing.Point(531, 6);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(196, 202);
+            this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPerfil.TabIndex = 4;
             this.pbPerfil.TabStop = false;
+            // 
+            // ofd_Imagen
+            // 
+            this.ofd_Imagen.FileName = "Alumno_Perfil";
             // 
             // frmCargarAlumno
             // 
@@ -618,5 +626,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.TabPage tabAlumno;
         private System.Windows.Forms.Button btnImagen;
         private System.Windows.Forms.PictureBox pbPerfil;
+        private System.Windows.Forms.OpenFileDialog ofd_Imagen;
     }
 }
