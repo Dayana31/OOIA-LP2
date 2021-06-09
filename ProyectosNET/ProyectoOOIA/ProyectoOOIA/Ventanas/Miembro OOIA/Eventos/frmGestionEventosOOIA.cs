@@ -8,11 +8,17 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
 
 namespace ProyectoOOIA.Ventanas
 {
     public partial class frmGestionEventosOOIA : Form
     {
+
+        private ProfesorWS.profesor profesor = null;
+        private AlumnoWS.alumno alumno = null;
+        private InvitadoWS.invitado invitado = null;
+
         public frmGestionEventosOOIA(Estado estado)
         {
             InitializeComponent();
@@ -150,6 +156,16 @@ namespace ProyectoOOIA.Ventanas
         {
 
             dgvPonentes.Rows[dgvPonentes.Rows.Add()].Cells[0].Value = txtNombrePonente.Text;
+        }
+
+        private void btnBuscarPonente_Click(object sender, EventArgs e)
+        {
+            frmMostrarPonentes mostrar = new frmMostrarPonentes();
+            mostrar.ShowDialog();
+            int tipo = mostrar.TipoUsuario;
+            if (tipo == 0) invitado = mostrar.Invitado;
+            else if (tipo == 1) profesor = mostrar.Profesor;
+            else alumno = mostrar.Alumno;
         }
     }
 }
