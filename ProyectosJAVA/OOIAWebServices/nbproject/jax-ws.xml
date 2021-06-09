@@ -4,26 +4,26 @@
     <service name="CitaWS">
       <implementation-class>pe.edu.pucp.OOIA.services.CitaWS</implementation-class>
     </service>
-    <service name="CodigoAtencionWS">
-      <implementation-class>pe.edu.pucp.OOIA.services.CodigoAtencionWS</implementation-class>
-    </service>
     <service name="ComprimisoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.ComprimisoWS</implementation-class>
     </service>
     <service name="HorarioWS">
       <implementation-class>pe.edu.pucp.OOIA.services.HorarioWS</implementation-class>
     </service>
-    <service name="ProfesorWS">
-      <implementation-class>pe.edu.pucp.OOIA.services.ProfesorWS</implementation-class>
-    </service>
-    <service name="AlumnoWS">
-      <implementation-class>pe.edu.pucp.OOIA.services.AlumnoWS</implementation-class>
-    </service>
     <service name="EspecialidadWS">
       <implementation-class>pe.edu.pucp.OOIA.services.EspecialidadWS</implementation-class>
     </service>
     <service name="PsicologoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.PsicologoWS</implementation-class>
+    </service>
+    <service name="CodigoAtencionWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.CodigoAtencionWS</implementation-class>
+    </service>
+    <service name="ProfesorWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.ProfesorWS</implementation-class>
+    </service>
+    <service name="AlumnoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.AlumnoWS</implementation-class>
     </service>
     <service name="InvitadoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.InvitadoWS</implementation-class>

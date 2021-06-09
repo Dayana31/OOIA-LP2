@@ -13,17 +13,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
     public partial class frmCodigosAtencion : Form
     {
         private Estado estado;
-        //private GestionAtencionAWS.GestionAtencionAWSClient daoCodigoAtencion;
-        //private GestionAtencionAWS.codigoAtencion codigoAtencion;
-        //private GestionAtencionAWS.codigoAtencion _codigoSeleccionado;
+        //private CodigoAtencionAWS.CodigoAtencionAWSClient daoCodigoAtencion;
+        //private CodigoAtencionAWS.codigoAtencion codigoAtencion;
+        //private CodigoAtencionAWS.codigoAtencion _codigoSeleccionado;
 
-        //public GestionAtencionAWS.codigoAtencion codigoSeleccionado { get => _codigoSeleccionado; set => _codigoSeleccionado = value; }
+        //public CodigoAtencionAWS.codigoAtencion codigoSeleccionado { get => _codigoSeleccionado; set => _codigoSeleccionado = value; }
         public frmCodigosAtencion()
         {
             InitializeComponent();
             this.estado = Estado.Inicial;
             cambiarEstado();
-            //daoCodigoAtencion = new GestionAtencionAWS.GestionAtencionAWSClient();
+            //daoCodigoAtencion = new CodigoAtencionAWS.CodigoAtencionAWSClient();
             dgvCodigosAtencion.AutoGenerateColumns = false;
 
             listarCodigos();
@@ -117,14 +117,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private void listarCodigos()
         {
             //lista desde el principio los codigos de atencion
-            /*BindingList<GestionAtencionAWS.codigoAtencion>
-                codigos = new BindingList<GestionAtencionAWS.codigoAtencion>
+            /*BindingList<CodigoAtencionAWS.codigoAtencion>
+                codigos = new BindingList<CodigoAtencionAWS.codigoAtencion>
                 (daoCodigoAtencion.listarCodigo().ToList());
             dgvCodigosAtencion.DataSource = codigos;*/
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            //this.codigoAtencion = new GestionAtencionAWS.codigoAtencion();
+            //this.codigoAtencion = new CodigoAtencionAWS.codigoAtencion();
             this.estado = Estado.Nuevo;
             cambiarEstado();
             limpiar();
@@ -144,7 +144,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             if (dgvCodigosAtencion.CurrentRow != null)
             {
                 _codigoAtencionSeleccionado =
-              (GestionAtencionAWS.codigoAtencion())dgvCodigosAtencion.CurrentRow.DataBoundItem;
+              (CodigoAtencionAWS.codigoAtencion())dgvCodigosAtencion.CurrentRow.DataBoundItem;
                 this.DialogResult = DialogResult.OK;
                 this.estado = Estado.Modificar;
                 cambiarEstado();
