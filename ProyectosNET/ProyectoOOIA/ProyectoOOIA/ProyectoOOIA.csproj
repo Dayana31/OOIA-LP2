@@ -149,22 +149,28 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarAlumno.Designer.cs">
+      <DependentUpon>frmCargarAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Eventos\frmMostrarPonentes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Eventos\frmMostrarPonentes.Designer.cs">
       <DependentUpon>frmMostrarPonentes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Miembro OOIA\frmCargarDatos.cs">
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarDatos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Miembro OOIA\frmCargarDatos.Designer.cs">
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarDatos.Designer.cs">
       <DependentUpon>frmCargarDatos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Miembro OOIA\frmCodigosAtencion.cs">
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCodigosAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Miembro OOIA\frmCodigosAtencion.Designer.cs">
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCodigosAtencion.Designer.cs">
       <DependentUpon>frmCodigosAtencion.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Old\frmAgregarEventoAlumno.cs">
@@ -373,13 +379,16 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarAlumno.resx">
+      <DependentUpon>frmCargarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Eventos\frmMostrarPonentes.resx">
       <DependentUpon>frmMostrarPonentes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Miembro OOIA\frmCargarDatos.resx">
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarDatos.resx">
       <DependentUpon>frmCargarDatos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Miembro OOIA\frmCodigosAtencion.resx">
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCodigosAtencion.resx">
       <DependentUpon>frmCodigosAtencion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Old\frmAgregarEventoAlumno.resx">

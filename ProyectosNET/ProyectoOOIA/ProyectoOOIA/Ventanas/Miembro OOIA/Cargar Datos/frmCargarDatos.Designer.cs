@@ -39,6 +39,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.cmbEspecialidad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.data = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbPsicologo = new System.Windows.Forms.TextBox();
             this.btnPsicologo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,22 +50,21 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cmbNotas = new System.Windows.Forms.TextBox();
-            this.btnNotas = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbCurso = new System.Windows.Forms.TextBox();
-            this.btnCursos = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnHistorialCursos = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnMenos2 = new System.Windows.Forms.Button();
             this.btnMax2 = new System.Windows.Forms.Button();
             this.boxCategoria = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnHistorialCursos = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.cmbNotas = new System.Windows.Forms.TextBox();
+            this.btnNotas = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbCurso = new System.Windows.Forms.TextBox();
+            this.btnCursos = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.boxAtencion = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -188,6 +188,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.data.Size = new System.Drawing.Size(634, 180);
             this.data.TabIndex = 27;
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
             // cmbPsicologo
             // 
             this.cmbPsicologo.Enabled = false;
@@ -248,6 +253,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnAlumno.TabIndex = 15;
             this.btnAlumno.Text = "Cargar Datos";
             this.btnAlumno.UseVisualStyleBackColor = true;
+            this.btnAlumno.Click += new System.EventHandler(this.btnAlumno_Click);
             // 
             // label3
             // 
@@ -291,62 +297,31 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabPage2.Text = "Gestion Academica";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // cmbNotas
+            // textBox1
             // 
-            this.cmbNotas.Enabled = false;
-            this.cmbNotas.Location = new System.Drawing.Point(248, 89);
-            this.cmbNotas.Name = "cmbNotas";
-            this.cmbNotas.Size = new System.Drawing.Size(393, 20);
-            this.cmbNotas.TabIndex = 29;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(248, 140);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(393, 20);
+            this.textBox1.TabIndex = 39;
             // 
-            // btnNotas
+            // btnHistorialCursos
             // 
-            this.btnNotas.Location = new System.Drawing.Point(672, 84);
-            this.btnNotas.Name = "btnNotas";
-            this.btnNotas.Size = new System.Drawing.Size(87, 29);
-            this.btnNotas.TabIndex = 28;
-            this.btnNotas.Text = "Cargar Datos";
-            this.btnNotas.UseVisualStyleBackColor = true;
+            this.btnHistorialCursos.Location = new System.Drawing.Point(672, 135);
+            this.btnHistorialCursos.Name = "btnHistorialCursos";
+            this.btnHistorialCursos.Size = new System.Drawing.Size(87, 29);
+            this.btnHistorialCursos.TabIndex = 38;
+            this.btnHistorialCursos.Text = "Cargar Datos";
+            this.btnHistorialCursos.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // label8
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(122, 92);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Notas";
-            // 
-            // cmbCurso
-            // 
-            this.cmbCurso.Enabled = false;
-            this.cmbCurso.Location = new System.Drawing.Point(248, 42);
-            this.cmbCurso.Name = "cmbCurso";
-            this.cmbCurso.Size = new System.Drawing.Size(393, 20);
-            this.cmbCurso.TabIndex = 26;
-            // 
-            // btnCursos
-            // 
-            this.btnCursos.Location = new System.Drawing.Point(672, 37);
-            this.btnCursos.Name = "btnCursos";
-            this.btnCursos.Size = new System.Drawing.Size(87, 29);
-            this.btnCursos.TabIndex = 25;
-            this.btnCursos.Text = "Cargar Datos";
-            this.btnCursos.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(122, 42);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Cursos";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(122, 143);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 13);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Historial de cursos:";
             // 
             // btnMenos2
             // 
@@ -400,31 +375,57 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // textBox1
+            // cmbNotas
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(248, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(393, 20);
-            this.textBox1.TabIndex = 39;
+            this.cmbNotas.Enabled = false;
+            this.cmbNotas.Location = new System.Drawing.Point(248, 89);
+            this.cmbNotas.Name = "cmbNotas";
+            this.cmbNotas.Size = new System.Drawing.Size(393, 20);
+            this.cmbNotas.TabIndex = 29;
             // 
-            // btnHistorialCursos
+            // btnNotas
             // 
-            this.btnHistorialCursos.Location = new System.Drawing.Point(672, 135);
-            this.btnHistorialCursos.Name = "btnHistorialCursos";
-            this.btnHistorialCursos.Size = new System.Drawing.Size(87, 29);
-            this.btnHistorialCursos.TabIndex = 38;
-            this.btnHistorialCursos.Text = "Cargar Datos";
-            this.btnHistorialCursos.UseVisualStyleBackColor = true;
+            this.btnNotas.Location = new System.Drawing.Point(672, 84);
+            this.btnNotas.Name = "btnNotas";
+            this.btnNotas.Size = new System.Drawing.Size(87, 29);
+            this.btnNotas.TabIndex = 28;
+            this.btnNotas.Text = "Cargar Datos";
+            this.btnNotas.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // label4
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(122, 143);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 13);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Historial de cursos:";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(122, 92);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Notas";
+            // 
+            // cmbCurso
+            // 
+            this.cmbCurso.Enabled = false;
+            this.cmbCurso.Location = new System.Drawing.Point(248, 42);
+            this.cmbCurso.Name = "cmbCurso";
+            this.cmbCurso.Size = new System.Drawing.Size(393, 20);
+            this.cmbCurso.TabIndex = 26;
+            // 
+            // btnCursos
+            // 
+            this.btnCursos.Location = new System.Drawing.Point(672, 37);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(87, 29);
+            this.btnCursos.TabIndex = 25;
+            this.btnCursos.Text = "Cargar Datos";
+            this.btnCursos.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(122, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Cursos";
             // 
             // tabPage3
             // 
