@@ -44,7 +44,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = false;
                     btnEditar.Enabled = true;
-                    btnEliminar.Enabled = true;
                     txtCodigoAtencion.Enabled = false;
                     txtDescripcion.Enabled = false;
                     break;
@@ -53,7 +52,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                     btnGuardar.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnEditar.Enabled = false;
-                    btnEliminar.Enabled = false;
                     txtCodigoAtencion.Enabled = true;
                     txtDescripcion.Enabled = true;
                     break;
@@ -62,7 +60,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                     btnGuardar.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnEditar.Enabled = false;
-                    btnEliminar.Enabled = false;
                     txtCodigoAtencion.Enabled = true;
                     txtDescripcion.Enabled = true;
                     break;
@@ -156,46 +153,22 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            //si selecciona una fila 
-
-            if (dgvCodigosAtencion.CurrentRow != null)
-            {
-                _codigoSeleccionado =
-              (CodigoAtencionWS.codigoAtencion)dgvCodigosAtencion.CurrentRow.DataBoundItem;
-               
-                DialogResult dr =
-                MessageBox.Show("¿Está seguro que eliminar el código de atención?", "Eliminar código atención",
-                MessageBoxButtons.YesNo, MessageBoxIcon.None);
-                /*if (dr == DialogResult.Yes)
-                    {
-                    int resultado = daoCodigoAtencion.eliminarCodigo(codigoAtencion.idCodigoAtencion);
-                    if (resultado != 0)
-                    {
-                        MessageBox.Show("El código de atención ha sido eliminado exitosamente", "Mensaje", MessageBoxButtons.OK);
-                        this.estado = Estado.Inicial;
-                        cambiarEstado();
-                    }
-                    else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }*/
-                listarCodigos();
-
-            }
-
-
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            new frmPrincipal(TipoUsuario.OOIA).Show();
-            this.Close();
-        }
+     
 
         private void dgvCodigosAtencion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            new frmInicioSesion().Show();
+            this.Close();
         }
     }
 }
