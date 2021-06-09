@@ -16,6 +16,16 @@ namespace ProyectoOOIA.InvitadoWS {
     public interface InvitadoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/InvitadoWS/modificarInvitadoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/InvitadoWS/modificarInvitadoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.InvitadoWS.modificarInvitadoResponse modificarInvitado(ProyectoOOIA.InvitadoWS.modificarInvitadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/InvitadoWS/modificarInvitadoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/InvitadoWS/modificarInvitadoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.InvitadoWS.modificarInvitadoResponse> modificarInvitadoAsync(ProyectoOOIA.InvitadoWS.modificarInvitadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/InvitadoWS/eliminarInvitadoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/InvitadoWS/eliminarInvitadoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -44,20 +54,10 @@ namespace ProyectoOOIA.InvitadoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/InvitadoWS/listarInvitadoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/InvitadoWS/listarInvitadoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.InvitadoWS.listarInvitadoResponse> listarInvitadoAsync(ProyectoOOIA.InvitadoWS.listarInvitadoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/InvitadoWS/modificarInvitadoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/InvitadoWS/modificarInvitadoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.InvitadoWS.modificarInvitadoResponse modificarInvitado(ProyectoOOIA.InvitadoWS.modificarInvitadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/InvitadoWS/modificarInvitadoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/InvitadoWS/modificarInvitadoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.InvitadoWS.modificarInvitadoResponse> modificarInvitadoAsync(ProyectoOOIA.InvitadoWS.modificarInvitadoRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -81,7 +81,7 @@ namespace ProyectoOOIA.InvitadoWS {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(invitado))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -134,7 +134,7 @@ namespace ProyectoOOIA.InvitadoWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(invitado))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -238,6 +238,42 @@ namespace ProyectoOOIA.InvitadoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInvitado", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarInvitadoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.InvitadoWS.invitado invitado;
+        
+        public modificarInvitadoRequest() {
+        }
+        
+        public modificarInvitadoRequest(ProyectoOOIA.InvitadoWS.invitado invitado) {
+            this.invitado = invitado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInvitadoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarInvitadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarInvitadoResponse() {
+        }
+        
+        public modificarInvitadoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInvitado", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class eliminarInvitadoRequest {
         
@@ -335,42 +371,6 @@ namespace ProyectoOOIA.InvitadoWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInvitado", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarInvitadoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.InvitadoWS.invitado invitado;
-        
-        public modificarInvitadoRequest() {
-        }
-        
-        public modificarInvitadoRequest(ProyectoOOIA.InvitadoWS.invitado invitado) {
-            this.invitado = invitado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarInvitadoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarInvitadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarInvitadoResponse() {
-        }
-        
-        public modificarInvitadoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface InvitadoWSChannel : ProyectoOOIA.InvitadoWS.InvitadoWS, System.ServiceModel.IClientChannel {
     }
@@ -396,6 +396,29 @@ namespace ProyectoOOIA.InvitadoWS {
         
         public InvitadoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.InvitadoWS.modificarInvitadoResponse ProyectoOOIA.InvitadoWS.InvitadoWS.modificarInvitado(ProyectoOOIA.InvitadoWS.modificarInvitadoRequest request) {
+            return base.Channel.modificarInvitado(request);
+        }
+        
+        public int modificarInvitado(ProyectoOOIA.InvitadoWS.invitado invitado) {
+            ProyectoOOIA.InvitadoWS.modificarInvitadoRequest inValue = new ProyectoOOIA.InvitadoWS.modificarInvitadoRequest();
+            inValue.invitado = invitado;
+            ProyectoOOIA.InvitadoWS.modificarInvitadoResponse retVal = ((ProyectoOOIA.InvitadoWS.InvitadoWS)(this)).modificarInvitado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.InvitadoWS.modificarInvitadoResponse> ProyectoOOIA.InvitadoWS.InvitadoWS.modificarInvitadoAsync(ProyectoOOIA.InvitadoWS.modificarInvitadoRequest request) {
+            return base.Channel.modificarInvitadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.InvitadoWS.modificarInvitadoResponse> modificarInvitadoAsync(ProyectoOOIA.InvitadoWS.invitado invitado) {
+            ProyectoOOIA.InvitadoWS.modificarInvitadoRequest inValue = new ProyectoOOIA.InvitadoWS.modificarInvitadoRequest();
+            inValue.invitado = invitado;
+            return ((ProyectoOOIA.InvitadoWS.InvitadoWS)(this)).modificarInvitadoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -463,29 +486,6 @@ namespace ProyectoOOIA.InvitadoWS {
         public System.Threading.Tasks.Task<ProyectoOOIA.InvitadoWS.listarInvitadoResponse> listarInvitadoAsync() {
             ProyectoOOIA.InvitadoWS.listarInvitadoRequest inValue = new ProyectoOOIA.InvitadoWS.listarInvitadoRequest();
             return ((ProyectoOOIA.InvitadoWS.InvitadoWS)(this)).listarInvitadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.InvitadoWS.modificarInvitadoResponse ProyectoOOIA.InvitadoWS.InvitadoWS.modificarInvitado(ProyectoOOIA.InvitadoWS.modificarInvitadoRequest request) {
-            return base.Channel.modificarInvitado(request);
-        }
-        
-        public int modificarInvitado(ProyectoOOIA.InvitadoWS.invitado invitado) {
-            ProyectoOOIA.InvitadoWS.modificarInvitadoRequest inValue = new ProyectoOOIA.InvitadoWS.modificarInvitadoRequest();
-            inValue.invitado = invitado;
-            ProyectoOOIA.InvitadoWS.modificarInvitadoResponse retVal = ((ProyectoOOIA.InvitadoWS.InvitadoWS)(this)).modificarInvitado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.InvitadoWS.modificarInvitadoResponse> ProyectoOOIA.InvitadoWS.InvitadoWS.modificarInvitadoAsync(ProyectoOOIA.InvitadoWS.modificarInvitadoRequest request) {
-            return base.Channel.modificarInvitadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.InvitadoWS.modificarInvitadoResponse> modificarInvitadoAsync(ProyectoOOIA.InvitadoWS.invitado invitado) {
-            ProyectoOOIA.InvitadoWS.modificarInvitadoRequest inValue = new ProyectoOOIA.InvitadoWS.modificarInvitadoRequest();
-            inValue.invitado = invitado;
-            return ((ProyectoOOIA.InvitadoWS.InvitadoWS)(this)).modificarInvitadoAsync(inValue);
         }
     }
 }
