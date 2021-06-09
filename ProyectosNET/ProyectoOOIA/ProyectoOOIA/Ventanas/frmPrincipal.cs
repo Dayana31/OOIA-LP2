@@ -85,7 +85,7 @@ namespace ProyectoOOIA.Ventanas
         private void botonEventos_Click(object sender, EventArgs e)
         {
             if (tipo == TipoUsuario.Alumno) new frmRegistroEvento().Show();
-            if (tipo == TipoUsuario.OOIA) new frmGestionEventosOOIA().Show();
+            if (tipo == TipoUsuario.OOIA) new frmGestionEventosOOIA(Estado.Inicial).Show();
             this.Close();
         }
 
