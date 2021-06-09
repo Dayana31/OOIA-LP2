@@ -45,22 +45,6 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-        private void cardEvento1_Load(object sender, EventArgs e)
-        {
-            tarjetaEvento.iniciarComponentes("El primer evento","Este evento es el primero de la OOIA",new DateTime(
-                2021,7,15));
-        }
-
-        private void tarjetaEvento2_Load(object sender, EventArgs e)
-        {
-            tarjetaEvento2.iniciarComponentes("El segundo evento", "Este evento es el segundo de la OOIA", new DateTime(
-                2021, 8, 30));
-        }
-        private void tarjetaEvento3_Load(object sender, EventArgs e)
-        {
-            tarjetaEvento3.iniciarComponentes("El Tercer evento", "Este evento es el Tercer de la OOIA", new DateTime(
-                2021, 9, 5));
-        }
 
         private void imagenes_Click(object sender, EventArgs e)
         {
