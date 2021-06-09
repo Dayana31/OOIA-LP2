@@ -16,16 +16,6 @@ namespace ProyectoOOIA.PsicologoWS {
     public interface PsicologoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.PsicologoWS.listarPsicologoResponse listarPsicologo(ProyectoOOIA.PsicologoWS.listarPsicologoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.listarPsicologoResponse> listarPsicologoAsync(ProyectoOOIA.PsicologoWS.listarPsicologoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -54,10 +44,20 @@ namespace ProyectoOOIA.PsicologoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/insertarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/insertarPsicologoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.insertarPsicologoResponse> insertarPsicologoAsync(ProyectoOOIA.PsicologoWS.insertarPsicologoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.PsicologoWS.listarPsicologoResponse listarPsicologo(ProyectoOOIA.PsicologoWS.listarPsicologoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.listarPsicologoResponse> listarPsicologoAsync(ProyectoOOIA.PsicologoWS.listarPsicologoRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -94,7 +94,7 @@ namespace ProyectoOOIA.PsicologoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -182,7 +182,7 @@ namespace ProyectoOOIA.PsicologoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -202,7 +202,7 @@ namespace ProyectoOOIA.PsicologoWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -305,7 +305,7 @@ namespace ProyectoOOIA.PsicologoWS {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -394,34 +394,6 @@ namespace ProyectoOOIA.PsicologoWS {
                 this.usuario_pucpField = value;
                 this.RaisePropertyChanged("usuario_pucp");
             }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPsicologo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPsicologoRequest {
-        
-        public listarPsicologoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPsicologoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPsicologoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.PsicologoWS.psicologo[] @return;
-        
-        public listarPsicologoResponse() {
-        }
-        
-        public listarPsicologoResponse(ProyectoOOIA.PsicologoWS.psicologo[] @return) {
-            this.@return = @return;
         }
     }
     
@@ -533,6 +505,34 @@ namespace ProyectoOOIA.PsicologoWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPsicologo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPsicologoRequest {
+        
+        public listarPsicologoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPsicologoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPsicologoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.PsicologoWS.psicologo[] @return;
+        
+        public listarPsicologoResponse() {
+        }
+        
+        public listarPsicologoResponse(ProyectoOOIA.PsicologoWS.psicologo[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PsicologoWSChannel : ProyectoOOIA.PsicologoWS.PsicologoWS, System.ServiceModel.IClientChannel {
     }
@@ -558,27 +558,6 @@ namespace ProyectoOOIA.PsicologoWS {
         
         public PsicologoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.PsicologoWS.listarPsicologoResponse ProyectoOOIA.PsicologoWS.PsicologoWS.listarPsicologo(ProyectoOOIA.PsicologoWS.listarPsicologoRequest request) {
-            return base.Channel.listarPsicologo(request);
-        }
-        
-        public ProyectoOOIA.PsicologoWS.psicologo[] listarPsicologo() {
-            ProyectoOOIA.PsicologoWS.listarPsicologoRequest inValue = new ProyectoOOIA.PsicologoWS.listarPsicologoRequest();
-            ProyectoOOIA.PsicologoWS.listarPsicologoResponse retVal = ((ProyectoOOIA.PsicologoWS.PsicologoWS)(this)).listarPsicologo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.listarPsicologoResponse> ProyectoOOIA.PsicologoWS.PsicologoWS.listarPsicologoAsync(ProyectoOOIA.PsicologoWS.listarPsicologoRequest request) {
-            return base.Channel.listarPsicologoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.listarPsicologoResponse> listarPsicologoAsync() {
-            ProyectoOOIA.PsicologoWS.listarPsicologoRequest inValue = new ProyectoOOIA.PsicologoWS.listarPsicologoRequest();
-            return ((ProyectoOOIA.PsicologoWS.PsicologoWS)(this)).listarPsicologoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -648,6 +627,27 @@ namespace ProyectoOOIA.PsicologoWS {
             ProyectoOOIA.PsicologoWS.insertarPsicologoRequest inValue = new ProyectoOOIA.PsicologoWS.insertarPsicologoRequest();
             inValue.invitado = invitado;
             return ((ProyectoOOIA.PsicologoWS.PsicologoWS)(this)).insertarPsicologoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.PsicologoWS.listarPsicologoResponse ProyectoOOIA.PsicologoWS.PsicologoWS.listarPsicologo(ProyectoOOIA.PsicologoWS.listarPsicologoRequest request) {
+            return base.Channel.listarPsicologo(request);
+        }
+        
+        public ProyectoOOIA.PsicologoWS.psicologo[] listarPsicologo() {
+            ProyectoOOIA.PsicologoWS.listarPsicologoRequest inValue = new ProyectoOOIA.PsicologoWS.listarPsicologoRequest();
+            ProyectoOOIA.PsicologoWS.listarPsicologoResponse retVal = ((ProyectoOOIA.PsicologoWS.PsicologoWS)(this)).listarPsicologo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.listarPsicologoResponse> ProyectoOOIA.PsicologoWS.PsicologoWS.listarPsicologoAsync(ProyectoOOIA.PsicologoWS.listarPsicologoRequest request) {
+            return base.Channel.listarPsicologoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.listarPsicologoResponse> listarPsicologoAsync() {
+            ProyectoOOIA.PsicologoWS.listarPsicologoRequest inValue = new ProyectoOOIA.PsicologoWS.listarPsicologoRequest();
+            return ((ProyectoOOIA.PsicologoWS.PsicologoWS)(this)).listarPsicologoAsync(inValue);
         }
     }
 }

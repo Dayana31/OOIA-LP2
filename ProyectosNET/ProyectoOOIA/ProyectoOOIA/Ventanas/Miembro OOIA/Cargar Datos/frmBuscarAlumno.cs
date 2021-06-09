@@ -34,9 +34,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             BindingList<AlumnoWS.alumno>
-                empleados = new BindingList<AlumnoWS.alumno>
+                alumnos = new BindingList<AlumnoWS.alumno>
                 (daoAlumno.listarAlumno().ToList());
-            dgvAlumnos.DataSource = empleados;
+            dgvAlumnos.DataSource = alumnos;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

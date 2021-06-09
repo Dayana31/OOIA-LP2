@@ -143,6 +143,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
+    <Compile Include="Ventanas\Alumno\Citas\ucAsesor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Alumno\Citas\ucAsesor.Designer.cs">
+      <DependentUpon>ucAsesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -382,6 +388,9 @@
     <EmbeddedResource Include="Componentes\Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Alumno\Citas\ucAsesor.resx">
+      <DependentUpon>ucAsesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
@@ -506,8 +515,8 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmDetalleEvento.resx">
       <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AlumnoWS\AlumnoWS.wsdl" />
-    <None Include="Connected Services\AlumnoWS\AlumnoWS.xsd">
+    <None Include="Connected Services\AlumnoWS\AlumnoWS1.wsdl" />
+    <None Include="Connected Services\AlumnoWS\AlumnoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.alumno.datasource">
@@ -674,8 +683,8 @@
     <None Include="Connected Services\HorarioWS\ProyectoOOIA.HorarioWS.modificarHorarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\InvitadoWS\InvitadoWS.wsdl" />
-    <None Include="Connected Services\InvitadoWS\InvitadoWS.xsd">
+    <None Include="Connected Services\InvitadoWS\InvitadoWS1.wsdl" />
+    <None Include="Connected Services\InvitadoWS\InvitadoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\InvitadoWS\ProyectoOOIA.InvitadoWS.eliminarInvitadoResponse.datasource">
@@ -693,8 +702,8 @@
     <None Include="Connected Services\InvitadoWS\ProyectoOOIA.InvitadoWS.modificarInvitadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProfesorWS\ProfesorWS.wsdl" />
-    <None Include="Connected Services\ProfesorWS\ProfesorWS.xsd">
+    <None Include="Connected Services\ProfesorWS\ProfesorWS1.wsdl" />
+    <None Include="Connected Services\ProfesorWS\ProfesorWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.eliminarProfesorResponse.datasource">
@@ -727,8 +736,8 @@
     <None Include="Connected Services\PsicologoWS\ProyectoOOIA.PsicologoWS.psicologo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PsicologoWS\PsicologoWS.wsdl" />
-    <None Include="Connected Services\PsicologoWS\PsicologoWS.xsd">
+    <None Include="Connected Services\PsicologoWS\PsicologoWS1.wsdl" />
+    <None Include="Connected Services\PsicologoWS\PsicologoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\MaterialSkin.Controls.MaterialCheckBox.datasource" />

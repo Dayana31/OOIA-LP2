@@ -34,19 +34,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         public void clearall()
         {
             /*Persona*/
-            txtIdPersona.Text = "";
             txtDni.Text = "";
             txtNombre.Text = "";
             txtEdad.Text = "";
             txtDireccion.Text = "";
             txtCorreo.Text = "";
             /*Miembro PUCP*/
-            txtIdMiembroPucp.Text = "";
             txtUsuario.Text = "";
             txtPassword.Text = "";
             pbPerfil.Image = null;
             /*Alumno*/
-            txtIdPersona.Text = "";
             txtCodigo.Text = "";
             cbEspecialidad.SelectedIndex = -1;
         }
@@ -66,14 +63,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = false;
                     //Texto
                     /*Persona*/
-                    txtIdPersona.Enabled = false;
                     txtDni.Enabled = false;
                     txtNombre.Enabled = false;
                     txtEdad.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtCorreo.Enabled = false;
                     /*Miembro PUCP*/
-                    txtIdMiembroPucp.Enabled = false;
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
                     /*Alumno*/
@@ -93,14 +88,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = true;
                     //Texto
                     /*Persona*/
-                    txtIdPersona.Enabled = false;
                     txtDni.Enabled = true;
                     txtNombre.Enabled = true;
                     txtEdad.Enabled = true;
                     txtDireccion.Enabled = true;
                     txtCorreo.Enabled = true;
                     /*Miembro PUCP*/
-                    txtIdMiembroPucp.Enabled = false;
                     txtUsuario.Enabled = true;
                     txtPassword.Enabled = true;
                     /*Alumno*/
@@ -119,14 +112,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = false;
                     //Texto
                     /*Persona*/
-                    txtIdPersona.Enabled = false;
                     txtDni.Enabled = false;
                     txtNombre.Enabled = false;
                     txtEdad.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtCorreo.Enabled = false;
                     /*Miembro PUCP*/
-                    txtIdMiembroPucp.Enabled = false;
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
                     /*Alumno*/
@@ -184,11 +175,58 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void tsbGuardar_Click(object sender, EventArgs e)
         {
-            /*if(txtDni.Text == "")
+            //Validación Persona
+            if (txtDni.Text == "")
             {
-
+                MessageBox.Show("No ha ingresado el DNI", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else if()*/
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el nombre", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
+                Int32.Parse(txtEdad.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No ha ingresado correctamente la edad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtDireccion.Text == "")
+            {
+                MessageBox.Show("No ha ingresado la dirección", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtCorreo.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el correo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //Validación Miembro PUCP
+            if (txtUsuario.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el usuario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtPassword.Text == "")
+            {
+                MessageBox.Show("No ha ingresado la contraseña", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            //Validación Alumno
+            if (txtCodigo.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el código", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (cbEspecialidad.SelectedIndex == -1)
+            {
+                MessageBox.Show("No ha seleccionado la especialidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             //Persona
             alumno.dni = txtDni.Text;
             alumno.nombre = txtNombre.Text;
@@ -216,7 +254,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     this.estado = Estado.Inicial;
                     cambiarEstado();
                 }
-                else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else MessageBox.Show("Ha ocurrido un error en la inserción", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (estado == Estado.Modificar)
             {
@@ -247,7 +285,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
             frmBuscarAlumno frmBuscar = new frmBuscarAlumno();
-            if(frmBuscar.ShowDialog() == DialogResult.OK)
+            if (frmBuscar.ShowDialog() == DialogResult.OK)
             {
                 this.alumno = frmBuscar.Alumno;
                 fillText(this.alumno);
