@@ -32,7 +32,6 @@ namespace ProyectoOOIA.Ventanas
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.opbImagenUsuario = new OvalPictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnEventos = new System.Windows.Forms.Button();
@@ -42,9 +41,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlCitas = new System.Windows.Forms.Panel();
             this.pnlEventos = new System.Windows.Forms.Panel();
             this.pnlEventosProximos = new System.Windows.Forms.Panel();
-            this.tarjetaEvento3 = new ProyectoOOIA.Componentes.CardEvento();
-            this.tarjetaEvento2 = new ProyectoOOIA.Componentes.CardEvento();
-            this.tarjetaEvento = new ProyectoOOIA.Componentes.CardEvento();
             this.pnlEventosProx = new System.Windows.Forms.Panel();
             this.lblEventosProximos = new System.Windows.Forms.Label();
             this.imagenes = new System.Windows.Forms.PictureBox();
@@ -55,7 +51,6 @@ namespace ProyectoOOIA.Ventanas
             this.lblTramites = new System.Windows.Forms.Label();
             this.btnCargaDatos = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.opbImagenUsuario)).BeginInit();
             this.pnlCitas.SuspendLayout();
             this.pnlEventos.SuspendLayout();
             this.pnlEventosProximos.SuspendLayout();
@@ -68,7 +63,6 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
             this.panel1.Controls.Add(this.btnCargaDatos);
-            this.panel1.Controls.Add(this.opbImagenUsuario);
             this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Controls.Add(this.btnAtras);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -76,17 +70,6 @@ namespace ProyectoOOIA.Ventanas
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1014, 83);
             this.panel1.TabIndex = 18;
-            // 
-            // opbImagenUsuario
-            // 
-            this.opbImagenUsuario.BackColor = System.Drawing.Color.DarkGray;
-            this.opbImagenUsuario.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
-            this.opbImagenUsuario.Location = new System.Drawing.Point(34, 10);
-            this.opbImagenUsuario.Name = "opbImagenUsuario";
-            this.opbImagenUsuario.Size = new System.Drawing.Size(64, 64);
-            this.opbImagenUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.opbImagenUsuario.TabIndex = 11;
-            this.opbImagenUsuario.TabStop = false;
             // 
             // lblUsername
             // 
@@ -204,41 +187,11 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.pnlEventosProximos.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlEventosProximos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlEventosProximos.Controls.Add(this.tarjetaEvento3);
-            this.pnlEventosProximos.Controls.Add(this.tarjetaEvento2);
-            this.pnlEventosProximos.Controls.Add(this.tarjetaEvento);
             this.pnlEventosProximos.Controls.Add(this.pnlEventosProx);
             this.pnlEventosProximos.Location = new System.Drawing.Point(701, 82);
             this.pnlEventosProximos.Name = "pnlEventosProximos";
             this.pnlEventosProximos.Size = new System.Drawing.Size(312, 528);
             this.pnlEventosProximos.TabIndex = 25;
-            // 
-            // tarjetaEvento3
-            // 
-            this.tarjetaEvento3.Location = new System.Drawing.Point(5, 278);
-            this.tarjetaEvento3.Margin = new System.Windows.Forms.Padding(4);
-            this.tarjetaEvento3.Name = "tarjetaEvento3";
-            this.tarjetaEvento3.Size = new System.Drawing.Size(280, 129);
-            this.tarjetaEvento3.TabIndex = 3;
-            this.tarjetaEvento3.Load += new System.EventHandler(this.tarjetaEvento3_Load);
-            // 
-            // tarjetaEvento2
-            // 
-            this.tarjetaEvento2.Location = new System.Drawing.Point(5, 177);
-            this.tarjetaEvento2.Margin = new System.Windows.Forms.Padding(4);
-            this.tarjetaEvento2.Name = "tarjetaEvento2";
-            this.tarjetaEvento2.Size = new System.Drawing.Size(280, 129);
-            this.tarjetaEvento2.TabIndex = 2;
-            this.tarjetaEvento2.Load += new System.EventHandler(this.tarjetaEvento2_Load);
-            // 
-            // tarjetaEvento
-            // 
-            this.tarjetaEvento.Location = new System.Drawing.Point(5, 76);
-            this.tarjetaEvento.Margin = new System.Windows.Forms.Padding(4);
-            this.tarjetaEvento.Name = "tarjetaEvento";
-            this.tarjetaEvento.Size = new System.Drawing.Size(280, 129);
-            this.tarjetaEvento.TabIndex = 1;
-            this.tarjetaEvento.Load += new System.EventHandler(this.cardEvento1_Load);
             // 
             // pnlEventosProx
             // 
@@ -362,7 +315,6 @@ namespace ProyectoOOIA.Ventanas
             this.Text = "Menú principal";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.opbImagenUsuario)).EndInit();
             this.pnlCitas.ResumeLayout(false);
             this.pnlCitas.PerformLayout();
             this.pnlEventos.ResumeLayout(false);
@@ -380,7 +332,6 @@ namespace ProyectoOOIA.Ventanas
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private OvalPictureBox opbImagenUsuario;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnEventos;
@@ -392,9 +343,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Panel pnlEventosProximos;
         private System.Windows.Forms.Panel pnlEventosProx;
         private System.Windows.Forms.Label lblEventosProximos;
-        private Componentes.CardEvento tarjetaEvento;
-        private Componentes.CardEvento tarjetaEvento3;
-        private Componentes.CardEvento tarjetaEvento2;
         private System.Windows.Forms.PictureBox imagenes;
         private System.Windows.Forms.Timer ImageTimer;
         private System.Windows.Forms.ImageList imageList1;
