@@ -30,7 +30,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCodigosAtencion));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.PictureBox();
@@ -45,11 +45,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.txtCodigoAtencion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCodigosAtencion = new System.Windows.Forms.DataGridView();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.IdCodigoAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panel2.SuspendLayout();
@@ -116,6 +116,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Window;
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.btnCancelar);
@@ -194,6 +195,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcion.Location = new System.Drawing.Point(228, 100);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -202,9 +204,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             // txtCodigoAtencion
             // 
+            this.txtCodigoAtencion.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoAtencion.Location = new System.Drawing.Point(228, 54);
             this.txtCodigoAtencion.Name = "txtCodigoAtencion";
-            this.txtCodigoAtencion.Size = new System.Drawing.Size(276, 27);
+            this.txtCodigoAtencion.Size = new System.Drawing.Size(276, 25);
             this.txtCodigoAtencion.TabIndex = 2;
             // 
             // label1
@@ -222,14 +225,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.dgvCodigosAtencion.AllowUserToAddRows = false;
             this.dgvCodigosAtencion.AllowUserToDeleteRows = false;
             this.dgvCodigosAtencion.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCodigosAtencion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCodigosAtencion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCodigosAtencion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCodigosAtencion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCodigoAtencion,
@@ -245,32 +248,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.dgvCodigosAtencion.Size = new System.Drawing.Size(925, 150);
             this.dgvCodigosAtencion.TabIndex = 4;
             this.dgvCodigosAtencion.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCodigosAtencion_CellContentClick);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnGuardar.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnGuardar.Location = new System.Drawing.Point(178, 26);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(123, 31);
-            this.btnGuardar.TabIndex = 56;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnNuevo.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btnNuevo.Location = new System.Drawing.Point(35, 26);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(123, 31);
-            this.btnNuevo.TabIndex = 55;
-            this.btnNuevo.Text = "Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // IdCodigoAtencion
             // 
@@ -298,6 +275,32 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
             this.Descripcion.Width = 180;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnGuardar.Location = new System.Drawing.Point(178, 26);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(123, 31);
+            this.btnGuardar.TabIndex = 56;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnNuevo.Location = new System.Drawing.Point(35, 26);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(123, 31);
+            this.btnNuevo.TabIndex = 55;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // frmCodigosAtencion
             // 
