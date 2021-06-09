@@ -38,7 +38,6 @@ public class AlumnoMySQL implements AlumnoDAO{
                 alumno.setCorreo(rs.getString("correo"));
                 alumno.setDireccion(rs.getString("direccion"));
                 /*Miembro PUCP*/
-                alumno.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
                 alumno.setUsuario_pucp(rs.getString("usuario"));
                 alumno.setContraseña(rs.getString("password"));
                 alumno.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
@@ -94,7 +93,7 @@ public class AlumnoMySQL implements AlumnoDAO{
                     
             cs.setDouble("_creditos_aprobados", alumno.getCreditos_aprobados());
             cs.executeUpdate();
-            alumno.setId_persona(cs.getInt("_id_alumno"));
+            alumno.setId_alumno(cs.getInt("_id_alumno"));
             resultado = 1;
             cs.close();
         }catch(Exception ex){
