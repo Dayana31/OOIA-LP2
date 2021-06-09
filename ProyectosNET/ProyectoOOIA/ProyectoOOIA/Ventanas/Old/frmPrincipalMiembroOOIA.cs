@@ -19,7 +19,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button4_Click(object sender, EventArgs e)
         {
-            new frmGestionEventosOOIA().Show();
+            new frmGestionEventosOOIA(Estado.Inicial).Show();
             this.Close();
         }
 

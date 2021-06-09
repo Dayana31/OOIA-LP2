@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.edu.pucp.OOIA.services;
+package pe.edu.pucp.servicios;
 
 import java.util.ArrayList;
 import javax.jws.WebService;
@@ -29,7 +29,7 @@ import pe.edu.pucp.gestion_atencion.model.Horario;
 @WebService(serviceName = "GestionAtencion")
 public class GestionAtencion {
 
-    private CitaDAO cita;
+  private CitaDAO cita;
     private CodigoAtencionDAO codigo;
     private CompromisoDAO compromiso;
     private HorarioDAO horario;
@@ -43,7 +43,7 @@ public class GestionAtencion {
     
     @WebMethod(operationName ="listarCita" )
     public ArrayList<Cita>listarCita(@WebParam(name = "id_alumno" )int id_alumno){
-        ArrayList<Cita>lista=null;
+        ArrayList<Cita>lista=new ArrayList<>();
         try {
             lista=cita.listar(id_alumno);
         } catch (Exception e) {
@@ -84,7 +84,7 @@ public class GestionAtencion {
            
     @WebMethod(operationName = "listarCodigo")
     public ArrayList<CodigoAtencion> listarCodigo(){
-        ArrayList<CodigoAtencion>lista=null;
+        ArrayList<CodigoAtencion>lista=new ArrayList<>();
         try {
             lista=this.codigo.listar();
         } catch (Exception e) {
@@ -115,7 +115,7 @@ public class GestionAtencion {
     
     @WebMethod(operationName = "listarCompromiso")
     public ArrayList<Compromiso>listarCompromiso(@WebParam(name = "id_cita") int id_cita){
-        ArrayList<Compromiso>lista=null;
+        ArrayList<Compromiso>lista=new ArrayList<>();
         try {
             lista=this.compromiso.listar(id_cita);
         } catch (Exception e) {
@@ -144,7 +144,7 @@ public class GestionAtencion {
     
     @WebMethod(operationName = "listarHorario")
     public ArrayList<Horario>listarHorario(@WebParam(name = "id_asesor")int id_asesor){
-        ArrayList<Horario >lista=null;
+        ArrayList<Horario >lista=new ArrayList<>();
         try {
             lista=this.horario.listar(id_asesor);
         } catch (Exception e) {
@@ -188,6 +188,4 @@ public class GestionAtencion {
         return resultado;
         
     }
-    
-    
 }

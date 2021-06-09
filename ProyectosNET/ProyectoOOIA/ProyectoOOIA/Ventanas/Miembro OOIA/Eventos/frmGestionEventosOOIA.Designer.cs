@@ -56,6 +56,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnAgregarImagen = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.Button();
+            this.agregarImagen = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +69,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnBuscar
             // 
@@ -87,6 +89,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnModificar.TabIndex = 2;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnCancelar
             // 
@@ -96,6 +99,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label1
             // 
@@ -196,7 +200,7 @@ namespace ProyectoOOIA.Ventanas
             this.dgvPonentes.Location = new System.Drawing.Point(12, 360);
             this.dgvPonentes.Name = "dgvPonentes";
             this.dgvPonentes.RowHeadersWidth = 51;
-            this.dgvPonentes.Size = new System.Drawing.Size(630, 78);
+            this.dgvPonentes.Size = new System.Drawing.Size(630, 132);
             this.dgvPonentes.TabIndex = 15;
             // 
             // NombreCompletoPonente
@@ -239,6 +243,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnAgregarPonente.TabIndex = 19;
             this.btnAgregarPonente.Text = "Agregar Ponente";
             this.btnAgregarPonente.UseVisualStyleBackColor = true;
+            this.btnAgregarPonente.Click += new System.EventHandler(this.btnAgregarPonente_Click);
             // 
             // btnEliminarPonente
             // 
@@ -274,12 +279,14 @@ namespace ProyectoOOIA.Ventanas
             this.btnAgregarImagen.TabIndex = 23;
             this.btnAgregarImagen.Text = "Agregar imagen";
             this.btnAgregarImagen.UseVisualStyleBackColor = true;
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(548, 80);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(240, 199);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
@@ -294,11 +301,16 @@ namespace ProyectoOOIA.Ventanas
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // agregarImagen
+            // 
+            this.agregarImagen.FileName = "openFileDialog1";
+            this.agregarImagen.Filter = "Imagen jpg|*.jpg|Imagen pgn|*.png";
+            // 
             // frmGestionEventosOOIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(801, 519);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAgregarImagen);
@@ -364,5 +376,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button btnAgregarImagen;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.OpenFileDialog agregarImagen;
     }
 }

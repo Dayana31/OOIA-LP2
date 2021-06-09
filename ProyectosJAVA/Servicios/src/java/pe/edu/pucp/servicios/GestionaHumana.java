@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pe.edu.pucp.OOIA.services;
+package pe.edu.pucp.servicios;
 
 import java.util.ArrayList;
 import javax.jws.WebService;
@@ -29,24 +29,28 @@ import pe.edu.pucp.gestion_humana.model.Psicologo;
  *
  * @author LENOVO
  */
-@WebService(serviceName = "gestionHumana")
-public class GestionHumana {
+@WebService(serviceName = "GestionaHumana")
+public class GestionaHumana {
 
+    /**
+     * This is a sample web service operation
+     */
     private ProfesorDAO daoProfesor;
     private AlumnoDAO alumno;
     private EspecialidadDAO especialidad;    
     private PsicologoDAO psicologo;
     private InvitadoDAO invitado;
-        public GestionHumana(){
+        public GestionaHumana(){
             daoProfesor=new ProfesorMySQL();
             alumno=new AlumnoMySQL();
             especialidad=new EspecialidadMySQL();
             invitado=new InvitadoMySQL();
             psicologo=new PsicologoMySQL();
         }
+        
     @WebMethod(operationName = "listarProfesores")
     public ArrayList <Profesor>listarProfesores(){
-        ArrayList empleador=null;
+        ArrayList<Profesor> empleador=new ArrayList<>();
         try {
             empleador= daoProfesor.listar();
         } catch (Exception e) {
@@ -94,7 +98,7 @@ public class GestionHumana {
 
     @WebMethod(operationName = "listarAlumno")
     public ArrayList<Alumno> listarAlumno(){
-        ArrayList lista=null;
+        ArrayList<Alumno> lista=new ArrayList<>();
         try {
             lista=alumno.listar();
         } catch (Exception e) {
@@ -136,7 +140,7 @@ public class GestionHumana {
     
     @WebMethod(operationName = "listarEsppecialidad")
     public ArrayList<Especialidad> listarEspecialidad(){
-        ArrayList<Especialidad>listaEspecialidad=null;
+        ArrayList<Especialidad>listaEspecialidad=new ArrayList<>();
         try {
             listaEspecialidad= this.especialidad.listar();
         } catch (Exception e) {
@@ -177,7 +181,7 @@ public class GestionHumana {
     
     @WebMethod(operationName = "listarInvitado")
     public ArrayList<Invitado> listarInvitado(){
-        ArrayList<Invitado> lista=null;
+        ArrayList<Invitado> lista=new ArrayList<>();
         try {
             lista=invitado.listar();
         } catch (Exception e) {
@@ -222,7 +226,7 @@ public class GestionHumana {
 
     @WebMethod(operationName = "listarPsicologo")
     public ArrayList<Psicologo> listarPsicologo(){
-        ArrayList<Psicologo> lista=null;
+        ArrayList<Psicologo> lista=new ArrayList<>();
         try {
             lista=psicologo.listar();
         } catch (Exception e) {
@@ -263,6 +267,4 @@ public class GestionHumana {
         return resultado;
         
     }
-    
-    
 }

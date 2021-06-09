@@ -231,7 +231,7 @@ namespace ProyectoOOIA.Ventanas
         {
             if(this.estado == Estado.Inicial)
             {
-                btnModificar.Enabled = true;
+                //btnModificar.Enabled = true;
                 btnEliminar.Enabled = true;
                 btnDetInscritas.Enabled = true;
             }
