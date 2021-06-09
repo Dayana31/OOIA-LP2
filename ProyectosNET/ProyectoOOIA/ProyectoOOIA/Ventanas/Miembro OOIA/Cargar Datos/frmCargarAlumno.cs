@@ -157,6 +157,23 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         }
 
         /*Botones de Toolstrip*/
+
+        public void fillText(AlumnoWS.alumno alu)
+        {
+            //Persona
+            txtDni.Text = alu.dni;
+            txtNombre.Text = alu.nombre;
+            txtEdad.Text = alu.edad.ToString();
+            txtDireccion.Text = alu.direccion;
+            txtCorreo.Text = alu.correo;
+            //Miembro PUCP
+            txtUsuario.Text = alu.usuario_pucp;
+            txtPassword.Text = alu.contraseña;
+            //Alumno
+            txtCodigo.Text = alumno.codigo_pucp;
+            cbEspecialidad.SelectedValue = alu.especialidad.id_especialidad;
+        }
+
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
             this.alumno = new AlumnoWS.alumno();
@@ -181,13 +198,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Miembro PUCP
             alumno.usuario_pucp = txtUsuario.Text;
             alumno.contraseña = txtPassword.Text;
+            alumno.fecha_inclusion = DateTime.Today;
             //Alumno
             alumno.codigo_pucp = txtCodigo.Text;
             EspecialidadWS.especialidad esp_selected = (EspecialidadWS.especialidad)cbEspecialidad.SelectedItem;
+            alumno.especialidad = new AlumnoWS.especialidad();
             alumno.especialidad.id_especialidad = esp_selected.id_especialidad;
             alumno.especialidad.nombre_especialidad = esp_selected.nombre_especialidad;
-            alumno.fecha_inclusion = DateTime.Today;
-            alumno.estado = 1;
 
             if (estado.Equals(Estado.Nuevo))
             {
@@ -229,7 +246,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
-
+            frmBuscarAlumno frmBuscar = new frmBuscarAlumno();
+            if(frmBuscar.ShowDialog() == DialogResult.OK)
+            {
+                this.alumno = frmBuscar.Alumno;
+                fillText(this.alumno);
+                estado = Estado.Busqueda;
+                cambiarEstado();
+            }
         }
 
         private void tsbCancelar_Click(object sender, EventArgs e)
