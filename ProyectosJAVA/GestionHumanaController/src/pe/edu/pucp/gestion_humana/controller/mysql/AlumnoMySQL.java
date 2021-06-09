@@ -94,7 +94,7 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setDouble("_creditos_aprobados", alumno.getCreditos_aprobados());
             cs.executeUpdate();
             alumno.setId_alumno(cs.getInt("_id_alumno"));
-            resultado = 1;
+            resultado = alumno.getId_alumno();
             cs.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

@@ -55,7 +55,7 @@ public class PruebaHumanaMySQL {
         alumnos = daoAlumno.listar();
         for(Alumno a : alumnos){
             System.out.println("Entro");
-            System.out.println(a.getNombre() + " " + a.getCorreo() + " " + a.getCodigo_pucp() + " " + 
+            System.out.println(a.getId_alumno() + " " + a.getNombre() + " " + a.getCorreo() + " " + a.getCodigo_pucp() + " " + 
                     a.getCraest());
         }
     }
@@ -90,8 +90,8 @@ public class PruebaHumanaMySQL {
         //con cantidad de creditos 
 
         int resultado = daoAlumno.insertar(alum);//no lo pobre, falta modificar el mySQL
-        if(resultado == 1){
-            System.out.println("Se registro al alumno exitosamente");
+        if(resultado !=0){
+            System.out.println("Se registro al alumno exitosamente"+ resultado);
         }else{
             System.out.println("Ocurrio un error al momento de insertar");
         }
