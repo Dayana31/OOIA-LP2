@@ -48,7 +48,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.IdCodigoAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodigoAtencion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -233,7 +233,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.dgvCodigosAtencion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCodigosAtencion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdCodigoAtencion,
-            this.CodigoAtencion,
+            this.Codigo,
             this.Descripcion});
             this.dgvCodigosAtencion.EnableHeadersVisualStyles = false;
             this.dgvCodigosAtencion.Location = new System.Drawing.Point(24, 314);
@@ -274,21 +274,21 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             // IdCodigoAtencion
             // 
-            this.IdCodigoAtencion.DataPropertyName = "idCodigo";
+            this.IdCodigoAtencion.DataPropertyName = "id_codigo_atencion";
             this.IdCodigoAtencion.HeaderText = "ID";
             this.IdCodigoAtencion.MinimumWidth = 6;
             this.IdCodigoAtencion.Name = "IdCodigoAtencion";
             this.IdCodigoAtencion.ReadOnly = true;
             this.IdCodigoAtencion.Width = 70;
             // 
-            // CodigoAtencion
+            // Codigo
             // 
-            this.CodigoAtencion.DataPropertyName = "codigo";
-            this.CodigoAtencion.HeaderText = "Código de Atención";
-            this.CodigoAtencion.MinimumWidth = 6;
-            this.CodigoAtencion.Name = "CodigoAtencion";
-            this.CodigoAtencion.ReadOnly = true;
-            this.CodigoAtencion.Width = 150;
+            this.Codigo.DataPropertyName = "codigo";
+            this.Codigo.HeaderText = "Codigo Atención";
+            this.Codigo.MinimumWidth = 6;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 150;
             // 
             // Descripcion
             // 
@@ -337,7 +337,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCodigoAtencion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodigoAtencion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }
