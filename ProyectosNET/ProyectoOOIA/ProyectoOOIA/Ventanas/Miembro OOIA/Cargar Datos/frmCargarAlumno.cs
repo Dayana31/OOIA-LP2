@@ -34,16 +34,19 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         public void clearall()
         {
             /*Persona*/
+           
             txtDni.Text = "";
             txtNombre.Text = "";
             txtEdad.Text = "";
             txtDireccion.Text = "";
             txtCorreo.Text = "";
             /*Miembro PUCP*/
+         
             txtUsuario.Text = "";
             txtPassword.Text = "";
             pbPerfil.Image = null;
             /*Alumno*/
+            txtIdAlumno.Text = "";
             txtCodigo.Text = "";
             cbEspecialidad.SelectedIndex = -1;
         }
@@ -63,12 +66,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = false;
                     //Texto
                     /*Persona*/
+                  
                     txtDni.Enabled = false;
                     txtNombre.Enabled = false;
                     txtEdad.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtCorreo.Enabled = false;
                     /*Miembro PUCP*/
+                    
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
                     /*Alumno*/
@@ -88,12 +93,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = true;
                     //Texto
                     /*Persona*/
+                   
                     txtDni.Enabled = true;
                     txtNombre.Enabled = true;
                     txtEdad.Enabled = true;
                     txtDireccion.Enabled = true;
                     txtCorreo.Enabled = true;
                     /*Miembro PUCP*/
+                   
                     txtUsuario.Enabled = true;
                     txtPassword.Enabled = true;
                     /*Alumno*/
@@ -112,12 +119,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = false;
                     //Texto
                     /*Persona*/
+                  
                     txtDni.Enabled = false;
                     txtNombre.Enabled = false;
                     txtEdad.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtCorreo.Enabled = false;
                     /*Miembro PUCP*/
+                 
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
                     /*Alumno*/
@@ -228,6 +237,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 return;
             }
             //Persona
+          
             alumno.dni = txtDni.Text;
             alumno.nombre = txtNombre.Text;
             alumno.edad = Int32.Parse(txtEdad.Text);
@@ -243,6 +253,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             alumno.especialidad = new AlumnoWS.especialidad();
             alumno.especialidad.id_especialidad = esp_selected.id_especialidad;
             alumno.especialidad.nombre_especialidad = esp_selected.nombre_especialidad;
+            alumno.craest = 0;
+            alumno.creditos_aprobados = 0;
+            alumno.cursos_por_primera = 0;
+            alumno.cursos_por_segunda = 0;
+            alumno.cursos_por_tercera = 0;
 
             if (estado.Equals(Estado.Nuevo))
             {

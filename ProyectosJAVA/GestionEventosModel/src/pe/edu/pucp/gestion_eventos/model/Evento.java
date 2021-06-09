@@ -3,6 +3,7 @@ package pe.edu.pucp.gestion_eventos.model;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import pe.edu.pucp.gestion_humana.model.Persona;
 import pe.edu.pucp.interfaces.IConsultable;
 
@@ -22,8 +23,8 @@ public class Evento{
     private int capacidad;
     private String nombre;
     private Date fecha;
-    private LocalTime horaInicio;
-    private LocalTime horaFin;
+    private GregorianCalendar horaInicio;
+    private GregorianCalendar horaFin;
     private String lugar;
     private boolean estado;
     private ArrayList <Persona> ponentes ;
@@ -103,21 +104,23 @@ public class Evento{
         this.fecha = fecha;
     }
 
-    public LocalTime getHoraInicio() {
+    public GregorianCalendar getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(LocalTime horaInicio) {
+    public void setHoraInicio(GregorianCalendar horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public LocalTime getHoraFin() {
+    public GregorianCalendar getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(LocalTime horaFin) {
+    public void setHoraFin(GregorianCalendar horaFin) {
         this.horaFin = horaFin;
     }
+
+    
 
     
  
