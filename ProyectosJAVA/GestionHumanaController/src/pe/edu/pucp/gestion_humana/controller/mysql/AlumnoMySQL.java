@@ -38,7 +38,6 @@ public class AlumnoMySQL implements AlumnoDAO{
                 alumno.setCorreo(rs.getString("correo"));
                 alumno.setDireccion(rs.getString("direccion"));
                 /*Miembro PUCP*/
-                alumno.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
                 alumno.setUsuario_pucp(rs.getString("usuario"));
                 alumno.setContraseña(rs.getString("password"));
                 alumno.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
