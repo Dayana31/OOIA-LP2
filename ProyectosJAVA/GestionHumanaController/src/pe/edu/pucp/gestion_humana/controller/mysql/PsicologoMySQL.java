@@ -38,8 +38,8 @@ public class PsicologoMySQL implements PsicologoDAO {
                 psicologo.setCorreo(rs.getString("correo"));
                 /*Miembro PUCP*/
                 psicologo.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
-                psicologo.setUsuario(rs.getString("usuario"));
-                psicologo.setPassword(rs.getString("password"));
+                psicologo.setUsuario_pucp(rs.getString("usuario"));
+                psicologo.setContraseña(rs.getString("password"));
                 psicologo.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                 psicologo.setImagenDePerfil(rs.getBytes("imagen_perfil"));
                 /*Psicologo*/
@@ -70,8 +70,8 @@ public class PsicologoMySQL implements PsicologoDAO {
             cs.setInt("_edad", psicologo.getEdad());
             cs.setString("_direccion", psicologo.getDireccion());
             /*Miembro PUCP*/
-            cs.setString("_usuario", psicologo.getUsuario());
-            cs.setString("_password", psicologo.getPassword());
+            cs.setString("_usuario", psicologo.getUsuario_pucp());
+            cs.setString("_password", psicologo.getContraseña());
             cs.setString("_correo", psicologo.getCorreo());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", psicologo.getImagenDePerfil());
@@ -103,8 +103,8 @@ public class PsicologoMySQL implements PsicologoDAO {
             cs.setString("_correo", psicologo.getCorreo());
             cs.setString("_direccion", psicologo.getDireccion());
             /*Miembro PUCP*/
-            cs.setString("_usuario", psicologo.getUsuario());
-            cs.setString("_password", psicologo.getPassword());
+            cs.setString("_usuario", psicologo.getUsuario_pucp());
+            cs.setString("_password", psicologo.getContraseña());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", psicologo.getImagenDePerfil());
             /*Profesor*/

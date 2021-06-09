@@ -39,8 +39,8 @@ public class AlumnoMySQL implements AlumnoDAO{
                 alumno.setDireccion(rs.getString("direccion"));
                 /*Miembro PUCP*/
                 alumno.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
-                alumno.setUsuario(rs.getString("usuario"));
-                alumno.setPassword(rs.getString("password"));
+                alumno.setUsuario_pucp(rs.getString("usuario"));
+                alumno.setContraseña(rs.getString("password"));
                 alumno.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                 alumno.setImagenDePerfil(rs.getBytes("imagen_perfil"));
                 /*Alumno*/
@@ -79,8 +79,8 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_correo", alumno.getCorreo());
             cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
-            cs.setString("_usuario", alumno.getUsuario());
-            cs.setString("_password", alumno.getPassword());
+            cs.setString("_usuario", alumno.getUsuario_pucp());
+            cs.setString("_password", alumno.getContraseña());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", alumno.getImagenDePerfil());
             /*Alumno*/
@@ -120,8 +120,8 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_correo", alumno.getCorreo());
             cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
-            cs.setString("_usuario", alumno.getUsuario());
-            cs.setString("_password", alumno.getPassword());
+            cs.setString("_usuario", alumno.getUsuario_pucp());
+            cs.setString("_password", alumno.getContraseña());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", alumno.getImagenDePerfil());
             /*Alumno*/

@@ -32,7 +32,8 @@ public class PruebaHumanaMySQL {
     private static PsicologoDAO daoPsicologo;
     public static void main(String[] args) {
         daoAlumno = new AlumnoMySQL();
-//        listarAlumno();
+        System.out.println(new Date());
+        listarAlumno();
         daoProfesor = new ProfesorMySQL();
         System.out.println("Lista de profesores");
         listarProfesor();
