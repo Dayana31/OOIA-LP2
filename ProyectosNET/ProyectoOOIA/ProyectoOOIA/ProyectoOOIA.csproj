@@ -143,6 +143,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\toggle.Designer.cs" />
+    <Compile Include="Ventanas\Alumno\Citas\ucAsesor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Alumno\Citas\ucAsesor.Designer.cs">
+      <DependentUpon>ucAsesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -381,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Componentes\Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Alumno\Citas\ucAsesor.resx">
+      <DependentUpon>ucAsesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>

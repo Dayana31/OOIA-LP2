@@ -34,19 +34,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         public void clearall()
         {
             /*Persona*/
-            txtIdPersona.Text = "";
             txtDni.Text = "";
             txtNombre.Text = "";
             txtEdad.Text = "";
             txtDireccion.Text = "";
             txtCorreo.Text = "";
             /*Miembro PUCP*/
-            txtIdMiembroPucp.Text = "";
             txtUsuario.Text = "";
             txtPassword.Text = "";
             pbPerfil.Image = null;
             /*Alumno*/
-            txtIdPersona.Text = "";
             txtCodigo.Text = "";
             cbEspecialidad.SelectedIndex = -1;
         }
@@ -66,14 +63,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = false;
                     //Texto
                     /*Persona*/
-                    txtIdPersona.Enabled = false;
                     txtDni.Enabled = false;
                     txtNombre.Enabled = false;
                     txtEdad.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtCorreo.Enabled = false;
                     /*Miembro PUCP*/
-                    txtIdMiembroPucp.Enabled = false;
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
                     /*Alumno*/
@@ -93,14 +88,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = true;
                     //Texto
                     /*Persona*/
-                    txtIdPersona.Enabled = false;
                     txtDni.Enabled = true;
                     txtNombre.Enabled = true;
                     txtEdad.Enabled = true;
                     txtDireccion.Enabled = true;
                     txtCorreo.Enabled = true;
                     /*Miembro PUCP*/
-                    txtIdMiembroPucp.Enabled = false;
                     txtUsuario.Enabled = true;
                     txtPassword.Enabled = true;
                     /*Alumno*/
@@ -119,14 +112,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = false;
                     //Texto
                     /*Persona*/
-                    txtIdPersona.Enabled = false;
                     txtDni.Enabled = false;
                     txtNombre.Enabled = false;
                     txtEdad.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtCorreo.Enabled = false;
                     /*Miembro PUCP*/
-                    txtIdMiembroPucp.Enabled = false;
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
                     /*Alumno*/
