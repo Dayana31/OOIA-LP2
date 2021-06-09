@@ -39,8 +39,8 @@ public class ProfesorMySQL implements ProfesorDAO {
                 profesor.setCorreo(rs.getString("correo"));
                 /*Miembro PUCP*/
                 profesor.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
-                profesor.setUsuario(rs.getString("usuario"));
-                profesor.setPassword(rs.getString("password"));
+                profesor.setUsuario_pucp(rs.getString("usuario"));
+                profesor.setContraseña(rs.getString("password"));
                 profesor.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                 profesor.setImagenDePerfil(rs.getBytes("imagen_perfil"));
                 /*Profesor*/
@@ -77,8 +77,8 @@ public class ProfesorMySQL implements ProfesorDAO {
             cs.setString("_direccion", profesor.getDireccion());
             cs.setString("_correo", profesor.getCorreo());
             /*Miembro PUCP*/
-            cs.setString("_usuario", profesor.getUsuario());
-            cs.setString("_password", profesor.getPassword());
+            cs.setString("_usuario", profesor.getUsuario_pucp());
+            cs.setString("_password", profesor.getContraseña());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(profesor.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", profesor.getImagenDePerfil());
             /*Profesor*/
@@ -115,8 +115,8 @@ public class ProfesorMySQL implements ProfesorDAO {
             cs.setString("_direccion", profesor.getDireccion());
             cs.setString("_correo", profesor.getCorreo());
             /*Miembro PUCP*/
-            cs.setString("_usuario", profesor.getUsuario());
-            cs.setString("_password", profesor.getPassword());
+            cs.setString("_usuario", profesor.getUsuario_pucp());
+            cs.setString("_password", profesor.getContraseña());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(profesor.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", profesor.getImagenDePerfil());
             /*Profesor*/
