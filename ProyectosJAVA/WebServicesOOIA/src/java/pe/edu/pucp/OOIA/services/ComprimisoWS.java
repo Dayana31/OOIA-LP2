@@ -32,7 +32,7 @@ public class ComprimisoWS {
 
     @WebMethod(operationName = "listarCompromiso")
     public ArrayList<Compromiso> listarCompromiso(@WebParam(name = "id_cita") int id_cita) {
-        ArrayList<Compromiso>lista=null;
+        ArrayList<Compromiso>lista=new ArrayList<>();
         try {
             lista=this.compromiso.listar(id_cita);
         } catch (Exception e) {

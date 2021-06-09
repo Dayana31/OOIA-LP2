@@ -33,7 +33,7 @@ public class AlumnoWS {
     
     @WebMethod(operationName = "listarAlumno")
     public ArrayList<Alumno> listarAlumno(){
-        ArrayList<Alumno> lista=null;
+        ArrayList<Alumno> lista= new ArrayList<>();
         try {
             lista=alumno.listar();
         } catch (Exception e) {

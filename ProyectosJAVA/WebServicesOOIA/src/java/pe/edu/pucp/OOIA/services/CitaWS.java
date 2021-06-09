@@ -30,7 +30,7 @@ public class CitaWS {
 
     @WebMethod(operationName = "listarCitaHistorico")
     public ArrayList<Cita> listarCitaHistorico(@WebParam(name = "id_alumno" )int id_alumno) {
-        ArrayList<Cita>lista=null;
+        ArrayList<Cita>lista=new ArrayList<>();
         try {
             lista=cita.listarHistorico(id_alumno);
         } catch (Exception e) {
@@ -41,7 +41,7 @@ public class CitaWS {
     
     @WebMethod(operationName = "listarCitaPendiente")
     public ArrayList<Cita> listarCitaPendiente(@WebParam(name = "id_alumno" )int id_alumno) {
-        ArrayList<Cita>lista=null;
+        ArrayList<Cita>lista=new ArrayList<>();
         try {
             lista=cita.listarPendiente(id_alumno);
         } catch (Exception e) {

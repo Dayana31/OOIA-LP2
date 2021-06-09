@@ -29,8 +29,8 @@ public class HorarioWS {
      * This is a sample web service operation
      */
     @WebMethod(operationName = "listarHorario")
-    public ArrayList<Horario>listarHorario(@WebParam(name = "id_asesor")int id_asesor){
-        ArrayList<Horario >lista=null;
+    public ArrayList<Horario> listarHorario(@WebParam(name = "id_asesor")int id_asesor){
+        ArrayList<Horario >lista=new ArrayList<>();
         try {
             lista=this.horario.listar(id_asesor);
         } catch (Exception e) {

@@ -30,7 +30,7 @@ public class CodigoAtencionWS {
 
     @WebMethod(operationName = "listarCodigo")
     public ArrayList<CodigoAtencion> listarCodigo() {
-        ArrayList<CodigoAtencion>lista=null;
+        ArrayList<CodigoAtencion>lista=new ArrayList<>();
         try {
             lista=this.codigo.listar();
         } catch (Exception e) {

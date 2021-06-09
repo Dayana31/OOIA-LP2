@@ -36,7 +36,7 @@ public class ProfesorWS {
             
     @WebMethod(operationName = "listarProfesores")
     public ArrayList <Profesor>listarProfesores(){
-        ArrayList<Profesor> empleador=null;
+        ArrayList<Profesor> empleador=new ArrayList<>();
         try {
             empleador= daoProfesor.listar();
         } catch (Exception e) {

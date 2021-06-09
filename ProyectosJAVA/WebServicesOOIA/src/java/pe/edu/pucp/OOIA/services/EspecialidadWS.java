@@ -31,7 +31,7 @@ public class EspecialidadWS {
     
     @WebMethod(operationName = "listarEsppecialidad")
     public ArrayList<Especialidad> listarEspecialidad(){
-        ArrayList<Especialidad>listaEspecialidad=null;
+        ArrayList<Especialidad>listaEspecialidad=new ArrayList<>();
         try {
             listaEspecialidad= this.especialidad.listar();
         } catch (Exception e) {

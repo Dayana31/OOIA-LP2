@@ -30,7 +30,7 @@ public class PsicologoWS {
     }
    @WebMethod(operationName = "listarPsicologo")
     public ArrayList<Psicologo> listarPsicologo(){
-        ArrayList<Psicologo> lista=null;
+        ArrayList<Psicologo> lista=new ArrayList<>();
         try {
             lista=psicologo.listar();
         } catch (Exception e) {

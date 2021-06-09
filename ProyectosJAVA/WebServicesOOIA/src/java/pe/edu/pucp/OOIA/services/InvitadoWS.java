@@ -31,7 +31,7 @@ public class InvitadoWS {
     
     @WebMethod(operationName = "listarInvitado")
     public ArrayList<Invitado> listarInvitado(){
-        ArrayList<Invitado> lista=null;
+        ArrayList<Invitado> lista=new ArrayList<>();
         try {
             lista=invitado.listar();
         } catch (Exception e) {
