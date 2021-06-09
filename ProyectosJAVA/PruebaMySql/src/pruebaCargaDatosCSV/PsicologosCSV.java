@@ -37,6 +37,7 @@ public class PsicologosCSV {
             Psicologo psicologo = new Psicologo();
             String[] datos = sc.next().split(",");
             String []datosCorrectos = new String[11];
+            datosCorrectos[0] = datos[0];
             for(int i = 1; i < 8; i++){
                 datosCorrectos[i] = datos[i].replaceAll(" ", "");
             }
@@ -49,9 +50,7 @@ public class PsicologosCSV {
             psicologo.setCorreo(datosCorrectos[6]);
             Date date1=new SimpleDateFormat("yyyy-MM-dd").parse(datosCorrectos[7]); 
             psicologo.setFecha_inclusion(date1);
-            
-           
-            
+
             int resultado = daoPsicologo.insertar(psicologo);
             if(resultado == 1){
                 System.out.println("Se registro al psicologo correctamente");

@@ -36,6 +36,7 @@ public class AlumnosCSV {
             Alumno alumno = new Alumno();
             String[] datos = sc.next().split(",");
             String []datosCorrectos = new String[16];
+            datosCorrectos[0] = datos[0];
             for(int i = 1; i < 15 ; i++){
                 datosCorrectos[i] = datos[i].replaceAll(" ", "");
             }
