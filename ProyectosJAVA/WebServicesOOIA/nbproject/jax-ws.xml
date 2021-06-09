@@ -28,6 +28,15 @@
     <service name="InvitadoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.InvitadoWS</implementation-class>
     </service>
+    <service name="CoordinadorEventoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.CoordinadorEventoWS</implementation-class>
+    </service>
+    <service name="EventoAlumnoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.EventoAlumnoWS</implementation-class>
+    </service>
+    <service name="EventoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.EventoWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

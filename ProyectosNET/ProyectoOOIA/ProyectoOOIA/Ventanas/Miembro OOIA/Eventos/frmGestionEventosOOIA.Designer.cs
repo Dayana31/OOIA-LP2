@@ -59,9 +59,15 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.npdCapacidad = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtLugar = new System.Windows.Forms.TextBox();
+            this.btnBuscarPonente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.npdCapacidad)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,7 +100,7 @@ namespace ProyectoOOIA.Ventanas
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(76, 136);
+            this.label4.Location = new System.Drawing.Point(300, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 7;
@@ -132,7 +138,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtHoraFin
             // 
-            this.txtHoraFin.Location = new System.Drawing.Point(129, 133);
+            this.txtHoraFin.Location = new System.Drawing.Point(353, 102);
             this.txtHoraFin.Name = "txtHoraFin";
             this.txtHoraFin.Size = new System.Drawing.Size(100, 20);
             this.txtHoraFin.TabIndex = 12;
@@ -185,7 +191,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.txtNombrePonente.Location = new System.Drawing.Point(130, 305);
             this.txtNombrePonente.Name = "txtNombrePonente";
-            this.txtNombrePonente.Size = new System.Drawing.Size(483, 20);
+            this.txtNombrePonente.Size = new System.Drawing.Size(461, 20);
             this.txtNombrePonente.TabIndex = 18;
             // 
             // btnAgregarPonente
@@ -325,11 +331,57 @@ namespace ProyectoOOIA.Ventanas
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(286, 167);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 13);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Capacidad:";
+            // 
+            // npdCapacidad
+            // 
+            this.npdCapacidad.Location = new System.Drawing.Point(353, 164);
+            this.npdCapacidad.Name = "npdCapacidad";
+            this.npdCapacidad.Size = new System.Drawing.Size(120, 20);
+            this.npdCapacidad.TabIndex = 45;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(83, 138);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 46;
+            this.label10.Text = "Lugar:";
+            // 
+            // txtLugar
+            // 
+            this.txtLugar.Location = new System.Drawing.Point(130, 135);
+            this.txtLugar.Name = "txtLugar";
+            this.txtLugar.Size = new System.Drawing.Size(100, 20);
+            this.txtLugar.TabIndex = 47;
+            // 
+            // btnBuscarPonente
+            // 
+            this.btnBuscarPonente.Location = new System.Drawing.Point(605, 303);
+            this.btnBuscarPonente.Name = "btnBuscarPonente";
+            this.btnBuscarPonente.Size = new System.Drawing.Size(38, 23);
+            this.btnBuscarPonente.TabIndex = 48;
+            this.btnBuscarPonente.Text = "...";
+            this.btnBuscarPonente.UseVisualStyleBackColor = true;
+            // 
             // frmGestionEventosOOIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 519);
+            this.Controls.Add(this.btnBuscarPonente);
+            this.Controls.Add(this.txtLugar);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.npdCapacidad);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pictureBox1);
@@ -359,6 +411,7 @@ namespace ProyectoOOIA.Ventanas
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.npdCapacidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -394,5 +447,10 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.ToolStripButton btnBuscar;
         private System.Windows.Forms.ToolStripButton btnModificar;
         private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown npdCapacidad;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtLugar;
+        private System.Windows.Forms.Button btnBuscarPonente;
     }
 }

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.OOIA.pucp.edu.pe/" targetNamespace="http://services.OOIA.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarCoordinadorEvento" type="tns:eliminarCoordinadorEvento" />
+  <xs:element name="eliminarCoordinadorEventoResponse" type="tns:eliminarCoordinadorEventoResponse" />
+  <xs:element name="insertarCoordinadorEvento" type="tns:insertarCoordinadorEvento" />
+  <xs:element name="insertarCoordinadorEventoResponse" type="tns:insertarCoordinadorEventoResponse" />
+  <xs:element name="listarCoordinadorEvento" type="tns:listarCoordinadorEvento" />
+  <xs:element name="listarCoordinadorEventoResponse" type="tns:listarCoordinadorEventoResponse" />
+  <xs:element name="modificarCoordinadorEvento" type="tns:modificarCoordinadorEvento" />
+  <xs:element name="modificarCoordinadorEventoResponse" type="tns:modificarCoordinadorEventoResponse" />
+  <xs:complexType name="eliminarCoordinadorEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="coordinador" type="tns:miembroOOIA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="miembroOOIA">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:miembroPUCP">
+        <xs:sequence>
+          <xs:element name="estado" type="xs:boolean" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="eventos" nillable="true" type="tns:evento" />
+          <xs:element name="id_coordinadorEventosOOIA" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="miembroPUCP" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+          <xs:element minOccurs="0" name="fecha_inclusion" type="xs:dateTime" />
+          <xs:element name="id_miembro_pucp" type="xs:int" />
+          <xs:element minOccurs="0" name="imagenDePerfil" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="usuario_pucp" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element name="edad" type="xs:int" />
+      <xs:element name="id_persona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evento">
+    <xs:sequence>
+      <xs:element name="capacidad" type="xs:int" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaFin" type="tns:localTime" />
+      <xs:element minOccurs="0" name="horaInicio" type="tns:localTime" />
+      <xs:element name="id_coordinador" type="xs:int" />
+      <xs:element name="id_evento" type="xs:int" />
+      <xs:element minOccurs="0" name="lugar" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ponentes" nillable="true" type="tns:persona" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="localTime" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="eliminarCoordinadorEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCoordinadorEvento">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarCoordinadorEventoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:miembroOOIA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCoordinadorEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="coordinador" type="tns:miembroOOIA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCoordinadorEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCoordinadorEvento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="coordinador" type="tns:miembroOOIA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCoordinadorEventoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
