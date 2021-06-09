@@ -67,6 +67,7 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
             this.btnSeleccionar.TabIndex = 3;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // btnOpinion
             // 
@@ -77,6 +78,7 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
             this.btnOpinion.TabIndex = 2;
             this.btnOpinion.Text = "Ver Opiniones";
             this.btnOpinion.UseVisualStyleBackColor = true;
+            this.btnOpinion.Click += new System.EventHandler(this.btnOpinion_Click);
             // 
             // lblEspecialidad
             // 
