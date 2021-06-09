@@ -8,8 +8,11 @@ package pruebamysql;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import pe.edu.pucp.gestion_atencion.controller.dao.CodigoAtencionDAO;
 import pe.edu.pucp.gestion_atencion.controller.dao.HorarioDAO;
+import pe.edu.pucp.gestion_atencion.controller.mysql.CodigoAtencionMySQL;
 import pe.edu.pucp.gestion_atencion.controller.mysql.HorarioMySQL;
+import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
 import pe.edu.pucp.gestion_atencion.model.Horario;
 import pe.edu.pucp.gestion_encuesta.controller.dao.EncuestaDAO;
 import pe.edu.pucp.gestion_encuesta.controller.mysql.EncuestaMySQL;
@@ -35,20 +38,20 @@ public class PruebaEncuestaMySQL {
         Encuesta encuesta = new Encuesta();
         
         //Insertar
-        AlumnoDAO daoAlumno = new AlumnoMySQL();
-        ArrayList<Alumno> alumnos = new ArrayList<>();
-        alumnos = daoAlumno.listar();
+//        AlumnoDAO daoAlumno = new AlumnoMySQL();
+//        ArrayList<Alumno> alumnos = new ArrayList<>();
+//        alumnos = daoAlumno.listar();
+//        
+//        ProfesorDAO daoProfesor = new ProfesorMySQL();
+//        ArrayList<Profesor> profesores = new ArrayList<>();
+//        profesores = daoProfesor.listar();
         
-        ProfesorDAO daoProfesor = new ProfesorMySQL();
-        ArrayList<Profesor> profesores = new ArrayList<>();
-        profesores = daoProfesor.listar();
-        
-        encuesta.setPuntaje(2);
-        encuesta.setDescripcion("La atención me ayudo con mis problemas de organización.");
-        
-        MiembroPUCP asesor = new Profesor();
-        encuesta.setAlumno(alumnos.get(0));
-        encuesta.setAsesor(profesores.get(1));
+//        encuesta.setPuntaje(2);
+//        encuesta.setDescripcion("La atención me ayudo con mis problemas de organización.");
+//        
+//        MiembroPUCP asesor = new Profesor();
+//        encuesta.setAlumno(alumnos.get(0));
+//        encuesta.setAsesor(profesores.get(1));
         
         //int resultado=daoEncuesta.insertar(encuesta);
 //        int resultado = daoEncuesta.modificar(new Encuesta(1,alumnos.get(0),5,"La atencion fue muy buena.",profesores.get(1)));
@@ -85,11 +88,22 @@ public class PruebaEncuestaMySQL {
 //                System.out.println(i);
           
           //HORARIO
-        HorarioDAO daoHorario = new HorarioMySQL();
-        Horario horario = new Horario();
+//        HorarioDAO daoHorario = new HorarioMySQL();
+//        Horario horario = new Horario();
         
         
         //horario.setHoraFin(horaFin);
         //horario.setHoraInicio(horaInicio);
+        CodigoAtencionDAO daoCodigo = new CodigoAtencionMySQL();
+        CodigoAtencion codigoAtencion = new CodigoAtencion();
+        codigoAtencion.setCodigo("EX123");
+        codigoAtencion.setDescripcion("Carta de permanencia");
+       
+       // daoCodigo.insertar(codigoAtencion);
+       ArrayList<CodigoAtencion> codigos = new ArrayList<>();
+          codigos = daoCodigo.listar();
+          for(CodigoAtencion i : codigos)
+                System.out.println(i);
+          
     }
 }
