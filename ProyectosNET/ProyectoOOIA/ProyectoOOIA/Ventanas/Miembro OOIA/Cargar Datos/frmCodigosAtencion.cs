@@ -26,7 +26,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             daoCodigoAtencion = new CodigoAtencionWS.CodigoAtencionWSClient();
             dgvCodigosAtencion.AutoGenerateColumns = false;
 
-           // listarCodigos();
+            listarCodigos();
         }
 
         public void limpiar()
@@ -82,8 +82,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                 return;
             }
 
-            codigoAtencion.codigo = txtCodigoAtencion.Text;
-            codigoAtencion.descripcion = txtDescripcion.Text;
+            this.codigoAtencion.codigo = txtCodigoAtencion.Text;
+            this.codigoAtencion.descripcion = txtDescripcion.Text;
 
             if (estado.Equals(Estado.Nuevo))
             {
@@ -111,7 +111,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             }
 
             limpiar();
-            //listarCodigos();
+            listarCodigos();
         }
 
         private void listarCodigos()
@@ -145,10 +145,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             {
                 _codigoSeleccionado =
               (CodigoAtencionWS.codigoAtencion)dgvCodigosAtencion.CurrentRow.DataBoundItem;
-                this.DialogResult = DialogResult.OK;
+              
                 this.estado = Estado.Modificar;
                 cambiarEstado();
-                listarCodigos();
+                txtDescripcion.Text = _codigoSeleccionado.descripcion;
+                txtCodigoAtencion.Text = _codigoSeleccionado.codigo;
+                this.codigoAtencion = new CodigoAtencionWS.codigoAtencion();
+                this.codigoAtencion.id_codigo_atencion = _codigoSeleccionado.id_codigo_atencion;
             }
 
         }
@@ -161,7 +164,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             {
                 _codigoSeleccionado =
               (CodigoAtencionWS.codigoAtencion)dgvCodigosAtencion.CurrentRow.DataBoundItem;
-                this.DialogResult = DialogResult.OK;
+               
                 DialogResult dr =
                 MessageBox.Show("¿Está seguro que eliminar el código de atención?", "Eliminar código atención",
                 MessageBoxButtons.YesNo, MessageBoxIcon.None);
