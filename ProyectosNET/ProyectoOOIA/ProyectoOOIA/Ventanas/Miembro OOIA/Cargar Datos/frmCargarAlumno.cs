@@ -205,7 +205,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             alumno.especialidad = new AlumnoWS.especialidad();
             alumno.especialidad.id_especialidad = esp_selected.id_especialidad;
             alumno.especialidad.nombre_especialidad = esp_selected.nombre_especialidad;
-
+           
             if (estado.Equals(Estado.Nuevo))
             {
                 int resultado = daoAlumno.insertarAlumno(alumno);
