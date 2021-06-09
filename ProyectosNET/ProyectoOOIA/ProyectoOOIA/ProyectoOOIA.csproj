@@ -607,8 +607,8 @@
     <None Include="Connected Services\CoordinadorEventoWS\ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EspecialidadWS\EspecialidadWS.wsdl" />
-    <None Include="Connected Services\EspecialidadWS\EspecialidadWS.xsd">
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.wsdl" />
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.eliminarEspecialidadResponse.datasource">

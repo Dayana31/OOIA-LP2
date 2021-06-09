@@ -78,5 +78,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         {
             new frmCargarAlumno().ShowDialog();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            new frmCodigosAtencion().ShowDialog();
+        }
     }
 }

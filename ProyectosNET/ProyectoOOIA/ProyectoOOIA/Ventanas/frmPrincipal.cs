@@ -82,7 +82,7 @@ namespace ProyectoOOIA.Ventanas
         private void btnCargaDatos_Click(object sender, EventArgs e)
         {
             new frmCargarDatos().ShowDialog();
-            //new frmCodigosAtencion().ShowDialog();        
+                    
         }
     }
     }
