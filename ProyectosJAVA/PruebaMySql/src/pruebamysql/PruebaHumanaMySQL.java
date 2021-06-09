@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pruebamysql;
 
 import java.util.ArrayList;
@@ -30,17 +25,11 @@ public class PruebaHumanaMySQL {
     private static AlumnoDAO daoAlumno;
     private static ProfesorDAO daoProfesor;
     private static PsicologoDAO daoPsicologo;
+    
+    
     public static void main(String[] args) {
         daoAlumno = new AlumnoMySQL();
-        System.out.println(new Date());
-        listarAlumno();
-        daoProfesor = new ProfesorMySQL();
-        System.out.println("Lista de profesores");
-        listarProfesor();
-        daoPsicologo = new PsicologoMySQL();
-        System.out.println("\nLista de Psicologos");
-        listarPsicologo();
-        //insertarAlumno();
+        insertarAlumno();
     }
     
     public static void listarPsicologo(){
@@ -70,13 +59,11 @@ public class PruebaHumanaMySQL {
         }
     }
     public static void insertarAlumno(){
-        
-        
         Alumno alum = new Alumno();
         
         //Insertar
         //Atributos persona
-        alum.setId_persona(32323);
+        alum.setId_persona(1);
         alum.setDni("433123123");
         alum.setNombre("Alberto Bustamante");
         alum.setEdad(21);
@@ -84,7 +71,7 @@ public class PruebaHumanaMySQL {
         alum.setCorreo("dasjdjasdjasjdas@pucp.edu.pe");
         
         //Atributos miembro pucp
-        alum.setId_miembro_pucp(232323);
+        alum.setId_miembro_pucp(1);
         alum.setUsuario_pucp("2083123@pucp.edu.pe");
         alum.setFecha_inclusion(new Date());
         
@@ -102,9 +89,7 @@ public class PruebaHumanaMySQL {
         alum.setCreditos_aprobados(70.4);//hay un problema aqui, el decimal debe ser mas grande 
         //para que pueda recoger una mayor cantidad de creditos. Solo se admiten alumnos 
         //con cantidad de creditos 
-        
-        
-        
+
         int resultado = daoAlumno.insertar(alum);//no lo pobre, falta modificar el mySQL
         if(resultado == 1){
             System.out.println("Se registro al alumno exitosamente");
