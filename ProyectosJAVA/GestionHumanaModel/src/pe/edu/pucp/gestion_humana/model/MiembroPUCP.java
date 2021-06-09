@@ -5,6 +5,7 @@ import java.util.Date;
 public abstract class MiembroPUCP extends Persona{
    private int id_miembro_pucp;
    private String usuario_pucp;
+   private String contraseña;
    private Date fecha_inclusion;
    private byte[] imagenDePerfil;
    
@@ -43,5 +44,17 @@ public abstract class MiembroPUCP extends Persona{
     public void setFecha_inclusion(Date fecha_inclusion) {
         this.fecha_inclusion = fecha_inclusion;
     }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+    @Override
+    public abstract String consultarDatos();
+  
 }
 

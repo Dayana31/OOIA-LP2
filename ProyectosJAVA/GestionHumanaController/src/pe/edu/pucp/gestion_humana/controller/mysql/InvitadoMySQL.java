@@ -25,7 +25,7 @@ public class InvitadoMySQL implements InvitadoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call listar_invitado()}");
+            cs = con.prepareCall("{call LISTAR_INVITADO()}");
             rs = cs.executeQuery();
             while(rs.next()){
                 Invitado invitado = new Invitado();
@@ -56,7 +56,7 @@ public class InvitadoMySQL implements InvitadoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_invitado(?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_INVITADO(?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_invitado", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", invitado.getNombre());
@@ -86,7 +86,7 @@ public class InvitadoMySQL implements InvitadoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_invitado(?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_INVITADO(?,?,?,?,?,?,?,?)}");
             
             cs.setInt("_id_invitado", invitado.getId_invitado());
             /*Persona*/
@@ -116,7 +116,7 @@ public class InvitadoMySQL implements InvitadoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call eliminar_invitado(?)}");
+            cs = con.prepareCall("{call ELIMINAR_INVITADO(?)}");
             cs.setInt("_id_invitado", invitado.getId_invitado());
             cs.executeUpdate();
             resultado = 1;

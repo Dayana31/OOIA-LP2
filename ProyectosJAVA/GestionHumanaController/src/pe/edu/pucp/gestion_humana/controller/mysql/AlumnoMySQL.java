@@ -26,7 +26,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call listar_alumno()}");
+            cs = con.prepareCall("{call LISTAR_ALUMNO()}");
             rs = cs.executeQuery();
             while(rs.next()){
                 Alumno alumno = new Alumno();
@@ -38,8 +38,9 @@ public class AlumnoMySQL implements AlumnoDAO{
                 alumno.setCorreo(rs.getString("correo"));
                 alumno.setDireccion(rs.getString("direccion"));
                 /*Miembro PUCP*/
-//                alumno.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
-                alumno.setUsuario_pucp(rs.getString("usuario_pucp"));
+                alumno.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
+                alumno.setUsuario(rs.getString("usuario"));
+                alumno.setPassword(rs.getString("password"));
                 alumno.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                 alumno.setImagenDePerfil(rs.getBytes("imagen_perfil"));
                 /*Alumno*/
@@ -69,7 +70,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_ALUMNO(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_alumno", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", alumno.getNombre());
@@ -78,7 +79,8 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_correo", alumno.getCorreo());
             cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
-            cs.setString("_usuario_pucp", alumno.getUsuario_pucp());
+            cs.setString("_usuario", alumno.getUsuario());
+            cs.setString("_password", alumno.getPassword());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", alumno.getImagenDePerfil());
             /*Alumno*/
@@ -109,7 +111,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_alumno(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_ALUMNO(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
             
             /*Persona*/
             cs.setString("_nombre", alumno.getNombre());
@@ -118,7 +120,8 @@ public class AlumnoMySQL implements AlumnoDAO{
             cs.setString("_correo", alumno.getCorreo());
             cs.setString("_direccion", alumno.getDireccion());
             /*Miembro PUCP*/
-            cs.setString("_usuario_pucp", alumno.getUsuario_pucp());
+            cs.setString("_usuario", alumno.getUsuario());
+            cs.setString("_password", alumno.getPassword());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(alumno.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", alumno.getImagenDePerfil());
             /*Alumno*/
@@ -147,7 +150,7 @@ public class AlumnoMySQL implements AlumnoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call eliminar_alumno(?)}");
+            cs = con.prepareCall("{call ELIMINAR_ALUMNO(?)}");
             cs.setInt("_id_alumno", alumno.getId_alumno());
             cs.executeUpdate();
             resultado = 1;

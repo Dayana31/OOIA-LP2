@@ -23,10 +23,13 @@ DROP PROCEDURE IF EXISTS LISTAR_HORARIOS;
 DROP PROCEDURE IF EXISTS INSERTAR_COMPROMISO;
 DROP PROCEDURE IF EXISTS MODIFICAR_COMPROMISO;
 DROP PROCEDURE IF EXISTS LISTAR_COMPROMISOS;
-DROP PROCEDURE IF EXISTS INSERTAR_CITAOOIA;
-DROP PROCEDURE IF EXISTS MODIFICAR_CITAOOIA;
-DROP PROCEDURE IF EXISTS ELIMINAR_CITAOOIA;
-DROP PROCEDURE IF EXISTS LISTAR_CITASOOIA;
+
+DROP PROCEDURE IF EXISTS INSERTAR_CITA;
+DROP PROCEDURE IF EXISTS MODIFICAR_CITA;
+DROP PROCEDURE IF EXISTS ELIMINAR_CITA;
+DROP PROCEDURE IF EXISTS LISTAR_CITAS_HISTORICO;
+DROP PROCEDURE IF EXISTS LISTAR_CITAS_PENDIENTES;
+
 DROP PROCEDURE IF EXISTS INSERTAR_ENCUESTA_ASESOR;
 DROP PROCEDURE IF EXISTS MODIFICAR_ENCUESTA_ASESOR;
 DROP PROCEDURE IF EXISTS LISTAR_ENCUESTAS_ASESORES;
@@ -80,29 +83,29 @@ drop procedure if exists MODIFICAR_TRAMITE_REQUISITO;
 drop procedure if exists ELIMINAR_TRAMITE_REQUISITO;
 drop procedure if exists LISTAR_TRAMITE_REQUISITO;
 
-drop procedure if exists listar_especialidad;
-drop procedure if exists insertar_especialidad;
-drop procedure if exists modificar_especialidad;
+drop procedure if exists LISTAR_ESPECIALIDAD;
+drop procedure if exists INSERTAR_ESPECIALIDAD;
+drop procedure if exists MODIFICAR_ESPECIALIDAD;
 
-drop procedure if exists listar_alumno;
-drop procedure if exists insertar_alumno;
-drop procedure if exists modificar_alumno;
-drop procedure if exists eliminar_alumno;
+drop procedure if exists LISTAR_ALUMNO;
+drop procedure if exists INSERTAR_ALUMNO;
+drop procedure if exists MODIFICAR_ALUMNO;
+drop procedure if exists ELIMINAR_ALUMNO;
 
-drop procedure if exists listar_profesor;
-drop procedure if exists insertar_profesor;
-drop procedure if exists modificar_profesor;
-drop procedure if exists eliminar_profesor;
+drop procedure if exists LISTAR_PROFESOR;
+drop procedure if exists INSERTAR_PROFESOR;
+drop procedure if exists MODIFICAR_PROFESOR;
+drop procedure if exists ELIMINAR_PROFESOR;
 
-drop procedure if exists listar_psicologo;
-drop procedure if exists insertar_psicologo;
-drop procedure if exists modificar_psicologo;
-drop procedure if exists eliminar_psicologo;
+drop procedure if exists LISTAR_PSICOLOGO;
+drop procedure if exists INSERTAR_PSICOLOGO;
+drop procedure if exists MODIFICAR_PSICOLOGO;
+drop procedure if exists ELIMINAR_PSICOLOGO;
 
-drop procedure if exists listar_invitado;
-drop procedure if exists insertar_invitado;
-drop procedure if exists modificar_invitado;
-drop procedure if exists eliminar_invitado;
+drop procedure if exists LISTAR_INVITADO;
+drop procedure if exists INSERTAR_INVITADO;
+drop procedure if exists MODIFICAR_INVITADO;
+drop procedure if exists ELIMINAR_INVITADO;
 
 
 DELIMITER $
@@ -262,27 +265,24 @@ END$
 
 CREATE PROCEDURE INSERTAR_HORARIO(
 	OUT _id_horario INT,
-    IN _fecha date,
-    IN _hora_inicio date,
-    IN _hora_fin date,
-    IN _fid_asesor int
+    IN _dia int,
+    IN _hora_inicio time,
+    IN _hora_fin time
 )
 BEGIN
-	INSERT INTO horario(fecha,hora_inicio,hora_fin,fid_asesor,estado) 
-    VALUES(_fecha,_hora_inicio,_hora_fin,_fid_asesor,1);
+	INSERT INTO horario(dia,hora_inicio,hora_fin,estado) 
+    VALUES(_dia,_hora_inicio,_hora_fin,1);
 	SET _id_horario = @@last_insert_id;
 END$
 
 CREATE PROCEDURE MODIFICAR_HORARIO(
 	IN _id_horario INT,
-    IN _fecha date,
-    IN _hora_inicio date,
-    IN _hora_fin date,
-    IN _fid_asesor int
+    IN _dia int,
+    IN _hora_inicio time,
+    IN _hora_fin time
 )
 BEGIN
-	UPDATE horario SET  fecha = _fecha, hora_inicio=_hora_inicio, hora_fin = _hora_fin,
-    fid_asesor = _fid_asesor
+	UPDATE horario SET  dia = _dia, hora_inicio=_hora_inicio, hora_fin = _hora_fin
     WHERE id_horario = _id_horario;
 END$
 CREATE PROCEDURE ELIMINAR_HORARIO(
@@ -295,8 +295,9 @@ CREATE PROCEDURE LISTAR_HORARIOS(
 	IN _id_asesor INT
 )
 BEGIN
-	SELECT id_horario, fecha, hora_inicio, hora_fin
-    FROM horario WHERE estado=1 AND _id_asesor=fid_asesor;
+	SELECT h.dia, h.hora_inicio, h.hora_fin, h.estado
+    FROM horario_asesor ha inner join horario h on h.id_horario=ha.fid_horario
+    WHERE _id_asesor=ha.fid_asesor;
 END$
 
 
@@ -327,50 +328,64 @@ BEGIN
 END$
 
 
-CREATE PROCEDURE INSERTAR_CITAOOIA(
+CREATE PROCEDURE INSERTAR_CITA(
     OUT _id_cita int,
     IN _fecha_registro date,
     IN _fid_alumno int,
     IN _fid_horario int,
     IN _fid_atencion int,
-    IN _fid_asesor int,
     IN _motivo varchar(300),
     IN _asistio bool
 )
 BEGIN
-	INSERT INTO cita_ooia(fecha_registro,fid_alumno,fid_horario,fid_atencion,fid_asesor,motivo,asistio,estado) 
-    VALUES(_fecha_registro,_fid_alumno,_fid_horario,_fid_atencion,_fid_asesor,_motivo,_asistio,1);
+	INSERT INTO cita(fecha_registro,fid_alumno,fid_horario,fid_atencion,motivo,asistio,estado) 
+    VALUES(_fecha_registro,_fid_alumno,_fid_horario,_fid_atencion,_motivo,_asistio,1);
 	SET _id_cita = @@last_insert_id;
 END$
 
-CREATE PROCEDURE MODIFICAR_CITAOOIA(
+CREATE PROCEDURE MODIFICAR_CITA(
     IN _id_cita int,
     IN _fecha_registro date,
     IN _fid_alumno int,
     IN _fid_horario int,
     IN _fid_atencion int,
-    IN _fid_asesor int,
     IN _motivo varchar(300),
     IN _asistio bool
 )
 BEGIN
-	UPDATE cita_ooia SET fecha_registro = _fecha_registro, fid_alumno=_fid_alumno, fid_horario=_fid_horario,
-    fid_atencion=_fid_atencion, fid_asesor=_fid_asesor, motivo=_motivo, asistio=_asistio WHERE id_cita = _id_cita;
+	UPDATE cita SET fecha_registro = _fecha_registro, fid_alumno=_fid_alumno, fid_horario=_fid_horario,
+    fid_atencion=_fid_atencion, motivo=_motivo, asistio=_asistio WHERE id_cita = _id_cita;
 END$
-CREATE PROCEDURE ELIMINAR_CITAOOIA(
+CREATE PROCEDURE ELIMINAR_CITA(
 	IN _id_cita INT
 )
 BEGIN
-	UPDATE cita_ooia SET estado = 0 WHERE id_cita = _id_cita;
+	UPDATE cita SET estado = 0 WHERE id_cita = _id_cita;
 END$
-CREATE PROCEDURE LISTAR_CITASOOIA(
+CREATE PROCEDURE LISTAR_CITAS_PENDIENTES(
 	IN _id_alumno INT
 )
 BEGIN
-	SELECT c.id_cita,c.fecha_registro,h.fecha as fecha_cita,h.hora_inicio,m.descripcion as atencion,c.fid_asesor,c.motivo,c.asistio 
-    FROM cita_ooia c inner join horario h on h.id_horario=c.fid_horario inner join  codigo_atencion m
-    on m.id_codigo_atencion=c.fid_atencion
-    WHERE fid_alumno=_id_alumno;
+	SELECT c.id_cita,c.fecha_registro,h.fecha as fecha_cita,h.hora_inicio,h.hora_fin,m.descripcion as descripcion_atencion,
+	p.nombre as asesor, c.motivo ,c.asistio 
+    FROM cita c inner join horario h on h.id_horario =c.fid_horario
+    inner join miembro_pucp mp on h.fid_asesor = mp.id_miembro_pucp
+    inner join persona p on mp.fid_persona=p.id_persona
+    inner join  codigo_atencion m on m.id_codigo_atencion=c.fid_atencion
+    WHERE c.fid_alumno=_id_alumno and h.fecha >= CURDATE();
+END$
+
+CREATE PROCEDURE LISTAR_CITAS_HISTORICO(
+	IN _id_alumno INT
+)
+BEGIN
+	SELECT c.id_cita,c.fecha_registro,h.fecha as fecha_cita,h.hora_inicio,h.hora_fin,m.descripcion as descripcion_atencion,
+	p.nombre as asesor, c.motivo ,c.asistio 
+    FROM cita c inner join horario h on h.id_horario =c.fid_horario
+    inner join miembro_pucp mp on h.fid_asesor = mp.id_miembro_pucp
+    inner join persona p on mp.fid_persona=p.id_persona
+    inner join  codigo_atencion m on m.id_codigo_atencion=c.fid_atencion
+    WHERE fid_alumno=_id_alumno and h.fecha < CURDATE();
 END$
 
 
@@ -421,7 +436,8 @@ create procedure INSERTAR_COORDINADOR(
     in _dni varchar(150),
     in _edad int,
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date
 )begin
 	/*tabla persona*/
@@ -429,8 +445,8 @@ create procedure INSERTAR_COORDINADOR(
     values (_nombre, _dni, _edad, _direccion);
     set _id_persona = @@last_insert_id;
     /*tabla miembro_pucp*/
-    insert into miembro_pucp(usuario_pucp, fecha_de_inclusion)
-    values (_usuario_pucp, _fecha_de_inclusion);
+    insert into miembro_pucp(usuario,password,fecha_de_inclusion)
+    values (_usuario,_password,_fecha_de_inclusion);
     set _id_coordinador = @@last_insert_id;
     /*tabla coordinador, esta no se actualiza para nada*/
     insert into coordinador_eventos_ooia(id_coordinador, estado) 
@@ -445,14 +461,16 @@ create procedure MODIFICAR_COORDINADOR(
     in _dni varchar(150),
     in _edad int,
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date
 )begin
 	/*tabla persona*/
 	update  persona set nombre = _nombre,  dni = _dni,  edad = _edad, 
      direccion = _direccion where id_persona = _id_persona;
     /*tabla miembro_pucp*/
-    update miembro_pucp set usuario_pucp = _usuario_pucp,  
+    update miembro_pucp set usuario = _usuario,
+    password = _password,
     fecha_de_inclusion = _fecha_de_inclusion where id_miembro_pucp = _id_coordinador;
     /*tabla coordinador, esta no se actualizar para nada*/
 end $
@@ -468,7 +486,7 @@ delimiter $
 
 create procedure LISTAR_COORDINADOR(
 )begin
-	select p.id_persona , p.nombre, p.dni, p.edad, p.direccion, m.usuario_pucp, 
+	select p.id_persona , p.nombre, p.dni, p.edad, p.direccion, m.usuario, m.password,
     m.fecha_de_inclusion
     from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
 	inner join coordinador_eventos_ooia
@@ -756,7 +774,6 @@ end$
 
 /* 
 Tramite alumno
-
 id_tramite_alumno int auto_increment,
     fid_alumno int,
     fid_tramite int,
@@ -827,14 +844,14 @@ end$
 
 delimiter $
 
-create procedure listar_especialidad(
+create procedure LISTAR_ESPECIALIDAD(
 )
 begin
 	select id_especialidad,nombre
 	from especialidad;
 end$
 
-create procedure insertar_especialidad(
+create procedure INSERTAR_ESPECIALIDAD(
 	out _id_especialidad int,
 	in _nombre varchar(150)
 )
@@ -842,7 +859,7 @@ begin
 	insert into especialidad(nombre) values (_nombre);
 end$
 
-create procedure modificar_especialidad(
+create procedure MODIFICAR_ESPECIALIDAD(
 	in _id_especialidad int,
 	in _nombre varchar(150)
 )
@@ -854,13 +871,14 @@ end$
 /*Procedures de clase Alumno*/
 #drop procedure if exists insertar_alumno;
 delimiter $
-create procedure insertar_alumno(
+create procedure INSERTAR_ALUMNO(
 	out _id_alumno int,
     in _nombre varchar(150),
     in _dni varchar(150),
     in _edad int,
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _correo varchar(150),
     in _fecha_de_inclusion date,
 	in _codigo_pucp varchar(150),
@@ -878,8 +896,8 @@ begin
 	insert into persona(nombre, dni, edad, correo,direccion) 
     values (_nombre, _dni, _edad,_correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion, imagen_perfil)
-    values (_id_persona, _usuario_pucp, _fecha_de_inclusion, _imagen_perfil);
+    insert into miembro_pucp(fid_persona, usuario, password, fecha_de_inclusion, imagen_perfil)
+    values (_id_persona, _usuario, _password,_fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into alumno(id_alumno,fid_miembro_pucp, codigo_pucp, fid_especialidad, craest, estado,
     cursos_por_primera, cursos_por_segunda, cursos_por_tercera,creditos_aprobados)
@@ -891,14 +909,15 @@ end$
 
 
 delimiter $
-create procedure modificar_alumno(
+create procedure MODIFICAR_ALUMNO(
 	in _id_alumno int,
     in _nombre varchar(150),
     in _dni varchar(150),
     in _edad int,
     in _correo varchar(150),
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date,
 	in _codigo_pucp varchar(150),
     in _fid_especialidad int,
@@ -919,7 +938,7 @@ begin
 	update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
     where id_persona = aux_persona;
      
-	update miembro_pucp set usuario_pucp = _usuario_pucp, fecha_de_inclusion = _fecha_de_inclusion
+	update miembro_pucp set usuario = _usuario, password = _password, fecha_de_inclusion = _fecha_de_inclusion
     where fid_persona = aux_persona;
     
     update alumno set codigo_pucp = _codigo_pucp, fid_especialidad = _fid_especialidad, craest = _craest
@@ -927,7 +946,7 @@ begin
 end$
 
 delimiter $
-create procedure eliminar_alumno(
+create procedure ELIMINAR_ALUMNO(
 	in _id_alumno int
 )
 begin
@@ -935,10 +954,10 @@ begin
 end$
 /*falta devolver el _id_persona ya que el metodo modificar lo usa*/
 delimiter $
-create procedure listar_alumno(
+create procedure LISTAR_ALUMNO(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad,p.correo ,p.direccion, 
-		   m.usuario_pucp, m.fecha_de_inclusion, m.imagen_perfil,
+		   m.usuario, m.password, m.fecha_de_inclusion, m.imagen_perfil,
            a.codigo_pucp, a.fid_especialidad, e.nombre as nombre_especialidad, a.craest, a.id_alumno, 
            a.cursos_por_primera,a.cursos_por_segunda,a.cursos_por_tercera,a.creditos_aprobados
 	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
@@ -949,14 +968,15 @@ end$
 
 /*Procedures de clase Profesor*/
 delimiter $
-create procedure insertar_profesor(
+create procedure INSERTAR_PROFESOR(
 	out _id_profesor int,
     in _nombre varchar(150),
     in _dni varchar(150),
     in _edad int,
     in _correo varchar(150),
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob,
 	in _especialidad int,
@@ -969,8 +989,8 @@ begin
 	insert into persona(nombre, dni, edad, correo, direccion) 
     values (_nombre, _dni, _edad, _correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion, imagen_perfil)
-    values (_id_persona, _usuario_pucp, _fecha_de_inclusion, _imagen_perfil);
+    insert into miembro_pucp(fid_persona, usuario, password, fecha_de_inclusion, imagen_perfil)
+    values (_id_persona, _usuario, _password, _fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into profesor(fid_miembro_pucp, fid_especialidad, facultad, categoria, estado)
     values (_id_miembro_pucp, _especialidad, _facultad, _categoria, 1);
@@ -978,14 +998,15 @@ begin
 end$
 
 delimiter $
-create procedure modificar_profesor(
+create procedure MODIFICAR_PROFESOR(
 	in _id_profesor int,
     in _nombre varchar(150),
     in _dni varchar(150),
     in _edad int,
     in _correo varchar(150),
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob,
     in _especialidad int,
@@ -1004,7 +1025,7 @@ begin
     update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
     where id_persona = aux_persona;
      
-	update miembro_pucp set usuario_pucp = _usuario_pucp, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario = _usuario, password=_password, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
     where fid_persona = aux_persona;
     
     update profesor set fid_especialidad = _especialidad, facultad = _facultad, categoria = _categoria
@@ -1015,7 +1036,7 @@ end$
 
 
 delimiter $
-create procedure eliminar_profesor(
+create procedure ELIMINAR_PROFESOR(
 	in _id_profesor int
 )
 begin
@@ -1023,10 +1044,10 @@ begin
 end$
 
 delimiter $
-create procedure listar_profesor(
+create procedure LISTAR_PROFESOR(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
-		   m.usuario_pucp, m.fecha_de_inclusion, m.imagen_perfil, 
+		   m.usuario, m.password, m.fecha_de_inclusion, m.imagen_perfil, 
            e.id_especialidad ,e.nombre as nombre_especialidad, pr.facultad, pr.categoria,pr.id_profesor,m.id_miembro_pucp
 	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
                    inner join profesor pr on pr.fid_miembro_pucp = m.id_miembro_pucp
@@ -1036,14 +1057,15 @@ end$
 
 /*Procedures de la clase Psicologo*/
 delimiter $
-create procedure insertar_psicologo(
+create procedure INSERTAR_PSICOLOGO(
 	out _id_psicologo int,
     in _nombre varchar(150),
     in _dni varchar(150),
     in _edad int,
     in _correo varchar(150),
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob
 )
@@ -1053,8 +1075,8 @@ begin
 	insert into persona(nombre, dni, edad, correo,direccion) 
     values (_nombre, _dni, _edad,_correo, _direccion);
 	set _id_persona = @@last_insert_id;
-    insert into miembro_pucp(fid_persona, usuario_pucp, fecha_de_inclusion, imagen_perfil)
-    values (_id_persona, _usuario_pucp, _fecha_de_inclusion, _imagen_perfil);
+    insert into miembro_pucp(fid_persona, usuario, password, fecha_de_inclusion, imagen_perfil)
+    values (_id_persona, _usuario, _password, _fecha_de_inclusion, _imagen_perfil);
     set _id_miembro_pucp = @@last_insert_id;
     insert into psicologo(fid_miembro_pucp, estado)
     values (_id_miembro_pucp, 1);
@@ -1062,14 +1084,15 @@ begin
 end$
 
 delimiter $
-create procedure modificar_psicologo(
+create procedure MODIFICAR_PSICOLOGO(
 	in _id_psicologo int,
     in _nombre varchar(150),
     in _dni varchar(150),
     in _edad int,
     in _correo varchar(150),
     in _direccion varchar(150),
-    in _usuario_pucp varchar(150),
+    in _usuario varchar(150),
+    in _password varchar(150),
     in _fecha_de_inclusion date,
     in _imagen_perfil longblob
 )
@@ -1084,12 +1107,12 @@ begin
     update persona set nombre = _nombre,  dni = _dni,  edad = _edad, direccion = _direccion , correo=_correo
     where id_persona = aux_persona;
      
-	update miembro_pucp set usuario_pucp = _usuario_pucp, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
+	update miembro_pucp set usuario = _usuario, password = _password, fecha_de_inclusion = _fecha_de_inclusion, imagen_perfil = _imagen_perfil
     where fid_persona = aux_persona;
 end$
 
 delimiter $
-create procedure eliminar_psicologo(
+create procedure ELIMINAR_PSICOLOGO(
 	in _id_psicologo int
 )
 begin
@@ -1097,10 +1120,10 @@ begin
 end$
 
 delimiter $
-create procedure listar_psicologo(
+create procedure LISTAR_PSICOLOGO(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
-		   m.usuario_pucp, m.fecha_de_inclusion, m.imagen_perfil, ps.id_psicologo
+		   m.usuario, m.password, m.fecha_de_inclusion, m.imagen_perfil, ps.id_psicologo
 	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
                    inner join psicologo ps on ps.fid_miembro_pucp = m.id_miembro_pucp
 	where ps.estado = 1;
@@ -1108,7 +1131,7 @@ end$
 
 /*Procedures de la clase Invitado*/
 delimiter $
-create procedure insertar_invitado(
+create procedure INSERTAR_INVITADO(
 	out _id_invitado int,
     in _nombre varchar(150),
     in _dni varchar(150),
@@ -1133,7 +1156,7 @@ begin
 end$
 
 delimiter $
-create procedure modificar_invitado(
+create procedure MODIFICAR_INVITADO(
 	in _id_invitado int,
     in _nombre varchar(150),
     in _dni varchar(150),
@@ -1160,7 +1183,7 @@ begin
 end$
 
 delimiter $
-create procedure eliminar_invitado(
+create procedure ELIMINAR_INVITADO(
 	in _id_invitado int
 )
 begin
@@ -1168,7 +1191,7 @@ begin
 end$
 
 delimiter $
-create procedure listar_invitado(
+create procedure LISTAR_INVITADO(
 )begin
 	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
 		   m.telefono, m.ocupacion
@@ -1176,7 +1199,3 @@ create procedure listar_invitado(
                    inner join invitado i on i.fid_miembro_externo = m.id_miembro_externo
 	where i.estado = 1;
 end$
-
-
-
-

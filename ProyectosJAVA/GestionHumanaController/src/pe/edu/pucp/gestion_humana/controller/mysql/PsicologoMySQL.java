@@ -25,7 +25,7 @@ public class PsicologoMySQL implements PsicologoDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call listar_psicologo()}");
+            cs = con.prepareCall("{call LISTAR_PSICOLOGO()}");
             rs = cs.executeQuery();
             while(rs.next()){
                 Psicologo psicologo = new Psicologo();
@@ -37,8 +37,9 @@ public class PsicologoMySQL implements PsicologoDAO {
                 psicologo.setDireccion(rs.getString("direccion"));
                 psicologo.setCorreo(rs.getString("correo"));
                 /*Miembro PUCP*/
-//                psicologo.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
-                psicologo.setUsuario_pucp(rs.getString("usuario_pucp"));
+                psicologo.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
+                psicologo.setUsuario(rs.getString("usuario"));
+                psicologo.setPassword(rs.getString("password"));
                 psicologo.setFecha_inclusion(rs.getDate("fecha_de_inclusion"));
                 psicologo.setImagenDePerfil(rs.getBytes("imagen_perfil"));
                 /*Psicologo*/
@@ -61,7 +62,7 @@ public class PsicologoMySQL implements PsicologoDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_psicologo(?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call INSERTAR_PSICOLOGO(?,?,?,?,?,?,?,?,?,?)}");
             cs.registerOutParameter("_id_psicologo", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", psicologo.getNombre());
@@ -69,7 +70,8 @@ public class PsicologoMySQL implements PsicologoDAO {
             cs.setInt("_edad", psicologo.getEdad());
             cs.setString("_direccion", psicologo.getDireccion());
             /*Miembro PUCP*/
-            cs.setString("_usuario_pucp", psicologo.getUsuario_pucp());
+            cs.setString("_usuario", psicologo.getUsuario());
+            cs.setString("_password", psicologo.getPassword());
             cs.setString("_correo", psicologo.getCorreo());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", psicologo.getImagenDePerfil());
@@ -92,7 +94,7 @@ public class PsicologoMySQL implements PsicologoDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_psicologo(?,?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_PSICOLOGO(?,?,?,?,?,?,?,?,?,?)}");
             cs.setInt("_id_psicologo", psicologo.getId_psicologo());
             /*Persona*/
             cs.setString("_nombre", psicologo.getNombre());
@@ -101,7 +103,8 @@ public class PsicologoMySQL implements PsicologoDAO {
             cs.setString("_correo", psicologo.getCorreo());
             cs.setString("_direccion", psicologo.getDireccion());
             /*Miembro PUCP*/
-            cs.setString("_usuario_pucp", psicologo.getUsuario_pucp());
+            cs.setString("_usuario", psicologo.getUsuario());
+            cs.setString("_password", psicologo.getPassword());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(psicologo.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", psicologo.getImagenDePerfil());
             /*Profesor*/
@@ -122,7 +125,7 @@ public class PsicologoMySQL implements PsicologoDAO {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call eliminar_psicologo(?)}");
+            cs = con.prepareCall("{call ELIMINAR_PSICOLOGO(?)}");
             cs.setInt("_id_psicologo", psicologo.getId_psicologo());
             cs.executeUpdate();
             resultado = 1;

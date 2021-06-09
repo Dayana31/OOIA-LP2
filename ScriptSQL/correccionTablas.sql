@@ -6,6 +6,7 @@ drop table if exists curso;
 drop table if exists encuesta;
 drop table if exists compromiso;
 drop table if exists cita_ooia;
+drop table if exists horario_asesor;
 drop table if exists horario;
 drop table if exists codigo_atencion;
 
@@ -45,6 +46,7 @@ create table miembro_pucp(
 	id_miembro_pucp int auto_increment,
     fid_persona int,
     usuario_pucp varchar(150),
+    contraseña varchar(150),
     fecha_de_inclusion date,
     imagen_perfil longblob,
     primary key (id_miembro_pucp),
@@ -158,12 +160,20 @@ create table evaluacion(
 
 create table horario(
 	id_horario int auto_increment,
-	fid_asesor int,
-    fecha date,
-    hora_inicio date,
-    hora_fin date,
+    dia int,
+    hora_inicio time,
+    hora_fin time,
     estado int,
-    primary key(id_horario),
+    primary key(id_horario)
+)engine = innodb;
+
+create table horario_asesor(
+	id_horario_asesor int auto_increment,
+	fid_horario int,
+	fid_asesor int,
+    estado varchar(50),
+    primary key(id_horario_asesor),
+    foreign key (fid_horario) references horario(id_horario),
     foreign key (fid_asesor) references miembro_pucp(id_miembro_pucp)
 )engine = innodb;
 
@@ -176,11 +186,10 @@ create table codigo_atencion(
 
 
 create table cita_ooia(
-    id_cita int auto_increment,
+     id_cita int auto_increment,
 	fid_alumno int,
     fid_horario int,
     fid_atencion int,
-    fid_asesor int,
     fecha_registro date,
     motivo varchar(300),
     asistio bool,
@@ -188,7 +197,6 @@ create table cita_ooia(
     primary key(id_cita),
     foreign key (fid_alumno) references alumno(id_alumno),
     foreign key (fid_horario) references horario(id_horario),
-    foreign key (fid_asesor) references miembro_pucp(id_miembro_pucp),
     foreign key (fid_atencion) references codigo_atencion(id_codigo_atencion)
 )engine = innodb;
 

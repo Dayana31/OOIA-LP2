@@ -12,7 +12,8 @@ import pe.edu.pucp.gestion_atencion.model.Cita;
 import pe.edu.pucp.gestion_atencion.model.Horario;
 import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
 import pe.edu.pucp.gestion_atencion.controller.dao.CitaDAO;
-import pe.edu.pucp.gestion_humana.model.MiembroPUCP;
+import pe.edu.pucp.gestion_humana.model.Profesor;
+import pe.edu.pucp.gestion_humana.model.Psicologo;
 
 /**
  *
@@ -24,25 +25,25 @@ public class CitaMySQL implements CitaDAO{
     CallableStatement cs;
     
     @Override
-    public ArrayList<Cita> listar(int id_alumno) {
+    public ArrayList<Cita> listarPendiente(int id_alumno) {
       ArrayList<Cita> citas = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_CITASOOIA(?)}");
+            cs = con.prepareCall("{call LISTAR_CITAS_PENDIENTES(?)}");
             cs.setInt("_id_alumno",id_alumno);
             rs = cs.executeQuery();
             while(rs.next()){
                 Cita cita = new Cita();
-                ///falta settear el asesor y el alumno
+                
                 cita.setId_cita(rs.getInt("id_cita"));
                 cita.setFechaRegistro(rs.getDate("fecha_registro"));
                 cita.setHorario(new Horario());
-                cita.getHorario().setFecha(rs.getDate("fecha_cita"));
+                //cita.getHorario().setFecha(rs.getDate("fecha_cita"));
                 cita.getHorario().setHoraInicio(rs.getTime("hora_inicio"));
                 cita.getHorario().setHoraInicio(rs.getTime("hora_fin"));
-                
-                cita.getHorario().getAsesor().setNombre(rs.getString("nombre"));
+                //cita.getHorario().setAsesor(new Profesor());
+                //cita.getHorario().getAsesor().setNombre(rs.getString("asesor"));
                 cita.setCodigo_atencion(new CodigoAtencion());
                 cita.getCodigo_atencion().setDescripcion(rs.getString("descripcion_atencion"));
                 cita.setMotivo(rs.getString("motivo"));
@@ -61,6 +62,43 @@ public class CitaMySQL implements CitaDAO{
     }
 
     @Override
+    public ArrayList<Cita> listarHistorico(int id_alumno) {
+      ArrayList<Cita> citas = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_CITAS_HISTORICO(?)}");
+            cs.setInt("_id_alumno",id_alumno);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Cita cita = new Cita();
+                
+                cita.setId_cita(rs.getInt("id_cita"));
+                cita.setFechaRegistro(rs.getDate("fecha_registro"));
+                cita.setHorario(new Horario());
+                //cita.getHorario().setFecha(rs.getDate("fecha_cita"));
+                cita.getHorario().setHoraInicio(rs.getTime("hora_inicio"));
+                cita.getHorario().setHoraInicio(rs.getTime("hora_fin"));
+                //cita.getHorario().setAsesor(new Profesor());
+                //cita.getHorario().getAsesor().setNombre(rs.getString("asesor"));
+                cita.setCodigo_atencion(new CodigoAtencion());
+                cita.getCodigo_atencion().setDescripcion(rs.getString("descripcion_atencion"));
+                cita.setMotivo(rs.getString("motivo"));
+                cita.setAsistio(rs.getBoolean("asistio"));
+                cita.setEstado(1);
+                citas.add(cita);
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return citas;
+    }
+    
+    @Override
     public int insertar(Cita cita) {
         int resultado=0;
         try{
@@ -70,7 +108,7 @@ public class CitaMySQL implements CitaDAO{
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call INSERTAR_CITAOOIA(?,?,?,?,?,?,?)}");
+           cs = con.prepareCall("{call INSERTAR_CITA(?,?,?,?,?,?,?)}");
            cs.registerOutParameter("_id_cita",java.sql.Types.INTEGER);
            cs.setDate("_fecha_registro",(Date) cita.getFechaRegistro());
            cs.setInt("_fid_alumno",cita.getAlumno().getId_alumno());
@@ -102,7 +140,7 @@ public class CitaMySQL implements CitaDAO{
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call MODIFICAR_CITAOOIA(?,?,?,?,?,?,?)}");
+           cs = con.prepareCall("{call MODIFICAR_CITA(?,?,?,?,?,?,?)}");
            cs.setInt("_id_cita",cita.getId_cita());
            cs.setDate("_fecha_registro",(Date) cita.getFechaRegistro());
            cs.setInt("_fid_alumno",cita.getAlumno().getId_alumno());
@@ -134,7 +172,7 @@ public class CitaMySQL implements CitaDAO{
             con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
             
-            cs = con.prepareCall("{call ELIMINAR_CITAOOIA(?)}");
+            cs = con.prepareCall("{call ELIMINAR_CITA(?)}");
             cs.setInt("_id_cita",idCita);
             cs.executeUpdate();
             resultado=1;

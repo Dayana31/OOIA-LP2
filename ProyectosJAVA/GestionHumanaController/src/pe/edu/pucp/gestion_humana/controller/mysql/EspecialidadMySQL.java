@@ -19,12 +19,13 @@ public class EspecialidadMySQL implements EspecialidadDAO {
     ResultSet rs;
     CallableStatement cs;
     
+    @Override
     public ArrayList<Especialidad> listar() {
         ArrayList<Especialidad> especialidades = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call listar_especialidad()}");
+            cs = con.prepareCall("{call LISTAR_ESPECIALIDAD()}");
             rs = cs.executeQuery();
             while(rs.next()){
                 Especialidad especialidad = new Especialidad();
@@ -43,12 +44,13 @@ public class EspecialidadMySQL implements EspecialidadDAO {
         return especialidades;
     }
 
+    @Override
     public int insertar(Especialidad especialidad) {
         int resultado = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call insertar_especialidad(?,?)}");
+            cs = con.prepareCall("{call INSERTAR_ESPECIALIDAD(?,?)}");
             cs.registerOutParameter("_id_especialidad", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", especialidad.getNombre_especialidad());
@@ -64,12 +66,13 @@ public class EspecialidadMySQL implements EspecialidadDAO {
         return resultado;
     }
 
+    @Override
     public int modificar(Especialidad especialidad) {
         int resultado = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call modificar_especialidad(?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_ESPECIALIDAD(?,?)}");
             cs.registerOutParameter("_id_especialidad", java.sql.Types.INTEGER);
             /*Persona*/
             cs.setString("_nombre", especialidad.getNombre_especialidad());
@@ -84,12 +87,13 @@ public class EspecialidadMySQL implements EspecialidadDAO {
         return resultado;
     }
 
+    @Override
     public int eliminar(Especialidad especialidad) {
          int resultado = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call eliminar_especialidad(?)}");
+            cs = con.prepareCall("{call ELIMINAR_ESPECIALIDAD(?)}");
             cs.setInt("_id_especialidad", especialidad.getId_especialidad());
             cs.executeUpdate();
             resultado = 1;
