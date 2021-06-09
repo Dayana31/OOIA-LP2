@@ -37,6 +37,7 @@ public class ProfesoresCSV {
             Profesor profesor = new Profesor();
             String[] datos = sc.next().split(",");
             String []datosCorrectos = new String[11];
+            datosCorrectos[0] = datos[0];
             for(int i = 1; i < 9; i++){
                 datosCorrectos[i] = datos[i].replaceAll(" ", "");
             }
@@ -52,6 +53,7 @@ public class ProfesoresCSV {
             Especialidad especialidad = new Especialidad();
             especialidad.setId_especialidad(Integer.parseInt(datosCorrectos[8]));
             profesor.setEspecialidad(especialidad);
+            datosCorrectos[9] = datos[9]; datosCorrectos[10] = datos[10];
             profesor.setFacultad(datosCorrectos[9]);
             profesor.setCategoria(datosCorrectos[10]);
            

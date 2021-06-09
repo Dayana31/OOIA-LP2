@@ -12,9 +12,37 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
 {
     public partial class ucAsesor : UserControl
     {
-        public ucAsesor()
+        private ProfesorWS.profesor tutor;
+        private PsicologoWS.psicologo psicologo;
+
+
+        public ucAsesor(ProfesorWS.profesor t)
         {
             InitializeComponent();
+            tutor = t;
+
+            lblNombre.Text = tutor.nombre;
+            lblEspecialidad.Text = tutor.especialidad.nombre_especialidad;
+
+        }
+
+        public ucAsesor(PsicologoWS.psicologo p)
+        {
+            InitializeComponent();
+            psicologo = p;
+
+            lblNombre.Text = tutor.nombre;
+            lblEspecialidad.Visible = false;
+        }
+
+        private void btnOpinion_Click(object sender, EventArgs e)
+        {
+            new frmOpiniones().ShowDialog();
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
