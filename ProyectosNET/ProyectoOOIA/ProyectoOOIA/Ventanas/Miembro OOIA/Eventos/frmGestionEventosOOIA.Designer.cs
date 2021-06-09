@@ -371,6 +371,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnBuscarPonente.TabIndex = 48;
             this.btnBuscarPonente.Text = "...";
             this.btnBuscarPonente.UseVisualStyleBackColor = true;
+            this.btnBuscarPonente.Click += new System.EventHandler(this.btnBuscarPonente_Click);
             // 
             // frmGestionEventosOOIA
             // 
