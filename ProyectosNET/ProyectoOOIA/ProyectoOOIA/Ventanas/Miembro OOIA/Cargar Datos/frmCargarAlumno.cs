@@ -170,6 +170,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             txtUsuario.Text = alu.usuario_pucp;
             txtPassword.Text = alu.contraseña;
             //Alumno
+            txtIdAlumno.Text = alu.id_alumno.ToString();
             txtCodigo.Text = alumno.codigo_pucp;
             cbEspecialidad.SelectedValue = alu.especialidad.id_especialidad;
         }

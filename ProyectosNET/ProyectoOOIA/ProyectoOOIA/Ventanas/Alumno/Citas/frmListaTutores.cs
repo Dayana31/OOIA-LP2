@@ -1,6 +1,7 @@
 ﻿using ProyectoOOIA.Componentes;
 using ProyectoOOIA.Ventanas.Alumno.Citas;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -8,6 +9,10 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmListaTutores : Form
     {
+
+        ProfesorWS.ProfesorWSClient daoProfesor;
+        PsicologoWS.PsicologoWSClient daoPsicologo;
+
         public frmListaTutores()
         {
             InitializeComponent();
@@ -17,11 +22,20 @@ namespace ProyectoOOIA.Ventanas
             tabTutor.HorizontalScroll.Maximum = 0;
             tabTutor.AutoScroll = true;
 
-            
+            daoProfesor = new ProfesorWS.ProfesorWSClient();
+            daoPsicologo = new PsicologoWS.PsicologoWSClient();
 
-            for (int i = 0; i < 3; i++)
+            BindingList<ProfesorWS.profesor> 
+                profesores = new BindingList<ProfesorWS.profesor>
+                (daoProfesor.listarProfesores());
+
+            BindingList<PsicologoWS.psicologo>
+                psicologos = new BindingList<PsicologoWS.psicologo>
+                (daoPsicologo.listarPsicologo());
+
+            for (int i = 0; i < profesores.Count/2; i++)
             {
-                UserControl uc = new ucAsesor();
+                UserControl uc = new ucAsesor(profesores[i]);
                 pnlTutorLeft.Controls.Add(uc);
                 uc.Dock = DockStyle.Top;
                 Panel pnl = new Panel();
@@ -29,9 +43,9 @@ namespace ProyectoOOIA.Ventanas
                 pnl.Dock = DockStyle.Top;
                 pnl.Height = 30;
             }
-            for (int i = 0; i < 3; i++)
+            for (int i = profesores.Count/2; i < profesores.Count; i++)
             {
-                UserControl uc = new ucAsesor();
+                UserControl uc = new ucAsesor(profesores[i]);
                 pnlTutorRight.Controls.Add(uc);
                 uc.Dock = DockStyle.Top;
                 Panel pnl = new Panel();
@@ -39,9 +53,10 @@ namespace ProyectoOOIA.Ventanas
                 pnl.Dock = DockStyle.Top;
                 pnl.Height = 30;
             }
-            for (int i = 0; i < 3; i++)
+
+            for (int j = 0; j < psicologos.Count/2; j++)
             {
-                UserControl uc = new ucAsesor();
+                UserControl uc = new ucAsesor(psicologos[j]);
                 pnlPsicLeft.Controls.Add(uc);
                 uc.Dock = DockStyle.Top;
                 Panel pnl = new Panel();
@@ -49,9 +64,9 @@ namespace ProyectoOOIA.Ventanas
                 pnl.Dock = DockStyle.Top;
                 pnl.Height = 30;
             }
-            for (int i = 0; i < 3; i++)
+            for (int j = psicologos.Count/2; j < psicologos.Count; j++)
             {
-                UserControl uc = new ucAsesor();
+                UserControl uc = new ucAsesor(psicologos[j]);
                 pnlPsicRight.Controls.Add(uc);
                 uc.Dock = DockStyle.Top;
                 Panel pnl = new Panel();

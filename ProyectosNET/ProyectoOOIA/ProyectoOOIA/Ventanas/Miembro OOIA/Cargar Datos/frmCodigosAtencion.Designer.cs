@@ -32,7 +32,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
-            this.btnAtras = new System.Windows.Forms.Button();
             this.txtHeader = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -59,7 +58,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
             this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Controls.Add(this.btnAtras);
             this.panel1.Controls.Add(this.txtHeader);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -79,28 +77,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnBack.TabIndex = 15;
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAtras.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.log_out__1_;
-            this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtras.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnAtras.FlatAppearance.BorderSize = 0;
-            this.btnAtras.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(913, 23);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(47, 42);
-            this.btnAtras.TabIndex = 14;
-            this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAtras.UseVisualStyleBackColor = false;
-            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // txtHeader
             // 
@@ -319,7 +295,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCodigoAtencion;
