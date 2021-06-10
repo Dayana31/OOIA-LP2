@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,6 +72,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private void panelGestionHumana_Enter(object sender, EventArgs e)
         {
             txtHeader.Text = "Cargar datos de Gestion Humana";
+        }
+
+        private void btnAlumno_Click(object sender, EventArgs e)
+        {
+            new frmCargarAlumno().ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            new frmCodigosAtencion().ShowDialog();
         }
     }
 }

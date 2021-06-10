@@ -1,5 +1,7 @@
 ﻿using ProyectoOOIA.Componentes;
+using ProyectoOOIA.Ventanas.Alumno.Citas;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,130 +9,75 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmListaTutores : Form
     {
+
+        ProfesorWS.ProfesorWSClient daoProfesor;
+        PsicologoWS.PsicologoWSClient daoPsicologo;
+
         public frmListaTutores()
         {
             InitializeComponent();
-            tabTutor.AutoScroll = false;
+         
             tabTutor.HorizontalScroll.Enabled = false;
             tabTutor.HorizontalScroll.Visible = false;
             tabTutor.HorizontalScroll.Maximum = 0;
             tabTutor.AutoScroll = true;
-        }
 
+            daoProfesor = new ProfesorWS.ProfesorWSClient();
+            daoPsicologo = new PsicologoWS.PsicologoWSClient();
 
-        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            TabPage tp = tabControl1.TabPages[e.Index];
+            BindingList<ProfesorWS.profesor> 
+                profesores = new BindingList<ProfesorWS.profesor>
+                (daoProfesor.listarProfesores());
 
-            StringFormat sf = new StringFormat();
-            sf.Alignment = StringAlignment.Center;
+            BindingList<PsicologoWS.psicologo>
+                psicologos = new BindingList<PsicologoWS.psicologo>
+                (daoPsicologo.listarPsicologo());
 
-            // Este sera el rectangulo que se dibujara sobre el titutlo del tab 
-            RectangleF headerRect = new RectangleF(e.Bounds.X, e.Bounds.Y + 2, e.Bounds.Width, e.Bounds.Height - 2);
+            for (int i = 0; i < profesores.Count/2; i++)
+            {
+                UserControl uc = new ucAsesor(profesores[i]);
+                pnlTutorLeft.Controls.Add(uc);
+                uc.Dock = DockStyle.Top;
+                Panel pnl = new Panel();
+                pnlTutorLeft.Controls.Add(pnl);
+                pnl.Dock = DockStyle.Top;
+                pnl.Height = 30;
+            }
+            for (int i = profesores.Count/2; i < profesores.Count; i++)
+            {
+                UserControl uc = new ucAsesor(profesores[i]);
+                pnlTutorRight.Controls.Add(uc);
+                uc.Dock = DockStyle.Top;
+                Panel pnl = new Panel();
+                pnlTutorRight.Controls.Add(pnl);
+                pnl.Dock = DockStyle.Top;
+                pnl.Height = 30;
+            }
 
-            // Este sera el color por defecto del tab no seleccionado 
-            SolidBrush sb = new SolidBrush(Color.AntiqueWhite);
-
-            // color del tab que se selecciona
-            if (tabControl1.SelectedIndex == e.Index)
-                sb.Color = Color.Red;
-
-            // aplica el color sobre el tabpage actual 
-            g.FillRectangle(sb, e.Bounds);
-
-            //escribe el texto que tenia el tab 
-            g.DrawString(tp.Text, tabControl1.Font, new SolidBrush(Color.Black), headerRect, sf);
-        }
-
-        private void card2_Load(object sender, EventArgs e)
-        {
-            Card carta = (Card)sender;
-            carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
-            carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
-            carta.asignarClick(new frmOpiniones(), this);
-        }
-
-        private void card3_Load(object sender, EventArgs e)
-        {
-            Card carta = (Card)sender;
-            carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
-            carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
-            carta.asignarClick(new frmOpiniones(), this);
-        }
-
-        private void card4_Load(object sender, EventArgs e)
-        {
-            Card carta = (Card)sender;
-            carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
-            carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
-            carta.asignarClick(new frmOpiniones(), this);
-        }
-
-        private void card5_Load(object sender, EventArgs e)
-        {
-            Card carta = (Card)sender;
-            carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
-            carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
-            carta.asignarClick(new frmOpiniones(), this);
-        }
-
-        private void card6_Load(object sender, EventArgs e)
-        {
-            Card carta = (Card)sender;
-            carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
-            carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
-            carta.asignarClick(new frmOpiniones(), this);
-        }
-        private void card7_Load(object sender, EventArgs e)
-        {
-            Card carta = (Card)sender;
-            carta.insertarImagen(ProyectoOOIA.Properties.Resources.profesor);
-            carta.insertarEtiquetas("Gonzales Prada", "Guillermo", "Ingeniero Informatico");
-            carta.asignarClick(new frmOpiniones(), this);
-        }
-
-        private void tabTutor_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void card1_Load(object sender, EventArgs e)
-        {
-            Card carta = (Card)sender;
-            carta.insertarImagen(ProyectoOOIA.Properties.Resources.psicologo);
-            carta.insertarEtiquetas("Perez Quispe", "Ana", "Ingeniera Electrica");
-            carta.asignarClick(new frmOpiniones(), this);
-        }
-
-        private void card8_Load(object sender, EventArgs e)
-        {
-            Card carta = (Card)sender;
-            carta.insertarImagen(ProyectoOOIA.Properties.Resources.psicologo);
-            carta.insertarEtiquetas("Perez Quispe", "Ana", "Ingeniera Electrica");
-            carta.asignarClick(new frmOpiniones(), this);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new frmPrincipalAlumno().Show();
-            this.Close();
-        }
-
-        private void card2_Click(object sender, EventArgs e)
-        {
-            //new frmHorarioCita().ShowDialog();
-            this.Close();
+            for (int j = 0; j < psicologos.Count/2; j++)
+            {
+                UserControl uc = new ucAsesor(psicologos[j]);
+                pnlPsicLeft.Controls.Add(uc);
+                uc.Dock = DockStyle.Top;
+                Panel pnl = new Panel();
+                pnlPsicLeft.Controls.Add(pnl);
+                pnl.Dock = DockStyle.Top;
+                pnl.Height = 30;
+            }
+            for (int j = psicologos.Count/2; j < psicologos.Count; j++)
+            {
+                UserControl uc = new ucAsesor(psicologos[j]);
+                pnlPsicRight.Controls.Add(uc);
+                uc.Dock = DockStyle.Top;
+                Panel pnl = new Panel();
+                pnlPsicRight.Controls.Add(pnl);
+                pnl.Dock = DockStyle.Top;
+                pnl.Height = 30;
+            }
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
-            //new frmCitaRegistro().Show();
             this.Close();
         }
     }

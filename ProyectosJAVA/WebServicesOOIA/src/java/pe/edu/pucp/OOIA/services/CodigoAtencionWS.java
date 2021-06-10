@@ -23,16 +23,16 @@ public class CodigoAtencionWS {
     /**
      * This is a sample web service operation
      */
-    private CodigoAtencionDAO codigo;
+    private CodigoAtencionDAO daoCodigo;
     public CodigoAtencionWS(){
-        codigo=new CodigoAtencionMySQL();
+        daoCodigo=new CodigoAtencionMySQL();
     }
 
     @WebMethod(operationName = "listarCodigo")
     public ArrayList<CodigoAtencion> listarCodigo() {
         ArrayList<CodigoAtencion>lista=new ArrayList<>();
         try {
-            lista=this.codigo.listar();
+            lista=daoCodigo.listar();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -42,7 +42,7 @@ public class CodigoAtencionWS {
     public int insertarCodigo(@WebParam(name = "codigo") CodigoAtencion codigo){
         int resultado=0;
         try {
-            resultado=this.codigo.insertar(codigo);
+            resultado=this.daoCodigo.insertar(codigo);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -52,7 +52,7 @@ public class CodigoAtencionWS {
     public int modificarCodigo(@WebParam(name = "codigo") CodigoAtencion codigo){
         int resultado=0;
         try {
-            resultado=this.codigo.modificar(codigo);
+            resultado=this.daoCodigo.modificar(codigo);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

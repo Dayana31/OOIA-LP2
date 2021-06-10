@@ -13,17 +13,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
     public partial class frmCodigosAtencion : Form
     {
         private Estado estado;
-        //private CodigoAtencionAWS.CodigoAtencionAWSClient daoCodigoAtencion;
-        //private CodigoAtencionAWS.codigoAtencion codigoAtencion;
-        //private CodigoAtencionAWS.codigoAtencion _codigoSeleccionado;
+        private CodigoAtencionWS.CodigoAtencionWSClient daoCodigoAtencion;
+        private CodigoAtencionWS.codigoAtencion codigoAtencion;
+        private CodigoAtencionWS.codigoAtencion _codigoSeleccionado;
 
-        //public CodigoAtencionAWS.codigoAtencion codigoSeleccionado { get => _codigoSeleccionado; set => _codigoSeleccionado = value; }
+        public CodigoAtencionWS.codigoAtencion codigoSeleccionado { get => _codigoSeleccionado; set => _codigoSeleccionado = value; }
         public frmCodigosAtencion()
         {
             InitializeComponent();
             this.estado = Estado.Inicial;
             cambiarEstado();
-            //daoCodigoAtencion = new CodigoAtencionAWS.CodigoAtencionAWSClient();
+            daoCodigoAtencion = new CodigoAtencionWS.CodigoAtencionWSClient();
             dgvCodigosAtencion.AutoGenerateColumns = false;
 
             listarCodigos();
@@ -39,13 +39,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             switch (estado)
             {
                 case Estado.Inicial:
-                   
+
                     btnNuevo.Enabled = true;
                     btnGuardar.Enabled = false;
                     btnCancelar.Enabled = false;
                     btnEditar.Enabled = true;
-                    btnEliminar.Enabled = true;
-                    txtCodigoAtencion.Enabled=false;
+                    txtCodigoAtencion.Enabled = false;
                     txtDescripcion.Enabled = false;
                     break;
                 case Estado.Nuevo:
@@ -53,7 +52,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                     btnGuardar.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnEditar.Enabled = false;
-                    btnEliminar.Enabled = false;
                     txtCodigoAtencion.Enabled = true;
                     txtDescripcion.Enabled = true;
                     break;
@@ -62,7 +60,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                     btnGuardar.Enabled = true;
                     btnCancelar.Enabled = true;
                     btnEditar.Enabled = false;
-                    btnEliminar.Enabled = false;
                     txtCodigoAtencion.Enabled = true;
                     txtDescripcion.Enabled = true;
                     break;
@@ -82,16 +79,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                 return;
             }
 
-            //codigoAtencion.codigo = txtCodigoAtencion.Text;
-            //codigoAtencion.descripcion = txtDescripcion.Text;
+            this.codigoAtencion.codigo = txtCodigoAtencion.Text;
+            this.codigoAtencion.descripcion = txtDescripcion.Text;
 
-            /*if (estado.Equals(Estado.Nuevo))
+            if (estado.Equals(Estado.Nuevo))
             {
                 int resultado = daoCodigoAtencion.insertarCodigo(codigoAtencion);
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha registrado con exito", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-         
+
                     this.estado = Estado.Inicial;
                     cambiarEstado();
                 }
@@ -108,7 +105,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                 }
                 else
                     MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
 
             limpiar();
             listarCodigos();
@@ -117,14 +114,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private void listarCodigos()
         {
             //lista desde el principio los codigos de atencion
-            /*BindingList<CodigoAtencionAWS.codigoAtencion>
-                codigos = new BindingList<CodigoAtencionAWS.codigoAtencion>
+            BindingList<CodigoAtencionWS.codigoAtencion>
+                codigos = new BindingList<CodigoAtencionWS.codigoAtencion>
                 (daoCodigoAtencion.listarCodigo().ToList());
-            dgvCodigosAtencion.DataSource = codigos;*/
+            dgvCodigosAtencion.DataSource = codigos;
         }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            //this.codigoAtencion = new CodigoAtencionAWS.codigoAtencion();
+            this.codigoAtencion = new CodigoAtencionWS.codigoAtencion();
             this.estado = Estado.Nuevo;
             cambiarEstado();
             limpiar();
@@ -140,59 +137,39 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private void btnEditar_Click(object sender, EventArgs e)
         {
             //si selecciona una fila 
-            /*
+
             if (dgvCodigosAtencion.CurrentRow != null)
             {
-                _codigoAtencionSeleccionado =
-              (CodigoAtencionAWS.codigoAtencion())dgvCodigosAtencion.CurrentRow.DataBoundItem;
-                this.DialogResult = DialogResult.OK;
+                _codigoSeleccionado =
+              (CodigoAtencionWS.codigoAtencion)dgvCodigosAtencion.CurrentRow.DataBoundItem;
+              
                 this.estado = Estado.Modificar;
                 cambiarEstado();
-                listarCodigos();
-            }*/
+                txtDescripcion.Text = _codigoSeleccionado.descripcion;
+                txtCodigoAtencion.Text = _codigoSeleccionado.codigo;
+                this.codigoAtencion = new CodigoAtencionWS.codigoAtencion();
+                this.codigoAtencion.id_codigo_atencion = _codigoSeleccionado.id_codigo_atencion;
+            }
 
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            //si selecciona una fila 
-            /*
-            if (dgvCodigosAtencion.CurrentRow != null)
-            {
-                _codigoAtencionSeleccionado =
-              (GestionAtencionAWS.codigoAtencion())dgvCodigosAtencion.CurrentRow.DataBoundItem;
-                this.DialogResult = DialogResult.OK;
-                DialogResult dr =
-                MessageBox.Show("¿Está seguro que eliminar el código de atención?", "Eliminar código atención",
-                MessageBoxButtons.YesNo, MessageBoxIcon.None);
-                if (dr == DialogResult.Yes)
-                    {
-                    //int resultado = daoCodigoAtencion.eliminarCodigo(codigoAtencion.idCodigoAtencion);
-                    /*if (resultado != 0)
-                    {
-                        MessageBox.Show("El código de atención ha sido eliminado exitosamente", "Mensaje", MessageBoxButtons.OK);
-                        this.estado = Estado.Inicial;
-                        cambiarEstado();
-                    }
-                    else MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-                listarCodigos();
-
-            }*/
-
-            
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            new frmPrincipal(TipoUsuario.OOIA).Show();
-            this.Close();
-        }
+     
 
         private void dgvCodigosAtencion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            new frmInicioSesion().Show();
+            this.Close();
+        }
     }
 }
+

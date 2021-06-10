@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pruebamysql;
 
 import java.util.ArrayList;
@@ -30,17 +25,12 @@ public class PruebaHumanaMySQL {
     private static AlumnoDAO daoAlumno;
     private static ProfesorDAO daoProfesor;
     private static PsicologoDAO daoPsicologo;
+    
+    
     public static void main(String[] args) {
         daoAlumno = new AlumnoMySQL();
-        System.out.println(new Date());
         listarAlumno();
-        daoProfesor = new ProfesorMySQL();
-        System.out.println("Lista de profesores");
-        listarProfesor();
-        daoPsicologo = new PsicologoMySQL();
-        System.out.println("\nLista de Psicologos");
-        listarPsicologo();
-        //insertarAlumno();
+        insertarAlumno();
     }
     
     public static void listarPsicologo(){
@@ -65,30 +55,26 @@ public class PruebaHumanaMySQL {
         alumnos = daoAlumno.listar();
         for(Alumno a : alumnos){
             System.out.println("Entro");
-            System.out.println(a.getNombre() + " " + a.getCorreo() + " " + a.getCodigo_pucp() + " " + 
+            System.out.println(a.getId_alumno() + " " + a.getNombre() + " " + a.getCorreo() + " " + a.getCodigo_pucp() + " " + 
                     a.getCraest());
         }
     }
     public static void insertarAlumno(){
-        
-        
         Alumno alum = new Alumno();
         
         //Insertar
         //Atributos persona
-        alum.setId_persona(32323);
-        alum.setDni("433123123");
-        alum.setNombre("Alberto Bustamante");
+        alum.setDni("66666666");
+        alum.setNombre("Jorge Basadre");
         alum.setEdad(21);
         alum.setDireccion("jr. banhio de los incas, urb manco capac");
         alum.setCorreo("dasjdjasdjasjdas@pucp.edu.pe");
         
         //Atributos miembro pucp
-        alum.setId_miembro_pucp(232323);
         alum.setUsuario_pucp("2083123@pucp.edu.pe");
+        alum.setContraseña("password");
         alum.setFecha_inclusion(new Date());
         
-       
         //Atributos Alumno
         alum.setCodigo_pucp("20203212");
         Especialidad esp = new Especialidad();
@@ -102,12 +88,10 @@ public class PruebaHumanaMySQL {
         alum.setCreditos_aprobados(70.4);//hay un problema aqui, el decimal debe ser mas grande 
         //para que pueda recoger una mayor cantidad de creditos. Solo se admiten alumnos 
         //con cantidad de creditos 
-        
-        
-        
+
         int resultado = daoAlumno.insertar(alum);//no lo pobre, falta modificar el mySQL
-        if(resultado == 1){
-            System.out.println("Se registro al alumno exitosamente");
+        if(resultado !=0){
+            System.out.println("Se registro al alumno exitosamente"+ resultado);
         }else{
             System.out.println("Ocurrio un error al momento de insertar");
         }
