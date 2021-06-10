@@ -16,17 +16,17 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
     public interface CoordinadorEventoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/listarCoordinadorEventoReque" +
-            "st", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/listarCoordinadorEventoRespo" +
-            "nse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/modificarCoordinadorEventoRe" +
+            "quest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/modificarCoordinadorEventoRe" +
+            "sponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse listarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest request);
+        ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse modificarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/listarCoordinadorEventoReque" +
-            "st", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/listarCoordinadorEventoRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse> listarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/modificarCoordinadorEventoRe" +
+            "quest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/modificarCoordinadorEventoRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse> modificarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/insertarCoordinadorEventoReq" +
@@ -42,17 +42,17 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse> insertarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/modificarCoordinadorEventoRe" +
-            "quest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/modificarCoordinadorEventoRe" +
-            "sponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/listarCoordinadorEventoReque" +
+            "st", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/listarCoordinadorEventoRespo" +
+            "nse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse modificarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest request);
+        ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse listarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/modificarCoordinadorEventoRe" +
-            "quest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/modificarCoordinadorEventoRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse> modificarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/listarCoordinadorEventoReque" +
+            "st", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/listarCoordinadorEventoRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse> listarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/eliminarCoordinadorEventoReq" +
@@ -520,27 +520,35 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinadorEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCoordinadorEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinadorEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarCoordinadorEventoRequest {
         
-        public listarCoordinadorEventoRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador;
+        
+        public modificarCoordinadorEventoRequest() {
+        }
+        
+        public modificarCoordinadorEventoRequest(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
+            this.coordinador = coordinador;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinadorEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCoordinadorEventoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinadorEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarCoordinadorEventoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CoordinadorEventoWS.miembroOOIA[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarCoordinadorEventoResponse() {
+        public modificarCoordinadorEventoResponse() {
         }
         
-        public listarCoordinadorEventoResponse(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA[] @return) {
+        public modificarCoordinadorEventoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -584,35 +592,27 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinadorEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarCoordinadorEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinadorEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCoordinadorEventoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador;
-        
-        public modificarCoordinadorEventoRequest() {
-        }
-        
-        public modificarCoordinadorEventoRequest(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
-            this.coordinador = coordinador;
+        public listarCoordinadorEventoRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinadorEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarCoordinadorEventoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinadorEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCoordinadorEventoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CoordinadorEventoWS.miembroOOIA[] @return;
         
-        public modificarCoordinadorEventoResponse() {
+        public listarCoordinadorEventoResponse() {
         }
         
-        public modificarCoordinadorEventoResponse(int @return) {
+        public listarCoordinadorEventoResponse(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA[] @return) {
             this.@return = @return;
         }
     }
@@ -681,24 +681,26 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.listarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest request) {
-            return base.Channel.listarCoordinadorEvento(request);
+        ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.modificarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest request) {
+            return base.Channel.modificarCoordinadorEvento(request);
         }
         
-        public ProyectoOOIA.CoordinadorEventoWS.miembroOOIA[] listarCoordinadorEvento() {
-            ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest();
-            ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse retVal = ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).listarCoordinadorEvento(inValue);
+        public int modificarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
+            ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest();
+            inValue.coordinador = coordinador;
+            ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse retVal = ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).modificarCoordinadorEvento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse> ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.listarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest request) {
-            return base.Channel.listarCoordinadorEventoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse> ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.modificarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest request) {
+            return base.Channel.modificarCoordinadorEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse> listarCoordinadorEventoAsync() {
-            ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest();
-            return ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).listarCoordinadorEventoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse> modificarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
+            ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest();
+            inValue.coordinador = coordinador;
+            return ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).modificarCoordinadorEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -725,26 +727,24 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.modificarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest request) {
-            return base.Channel.modificarCoordinadorEvento(request);
+        ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.listarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest request) {
+            return base.Channel.listarCoordinadorEvento(request);
         }
         
-        public int modificarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
-            ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest();
-            inValue.coordinador = coordinador;
-            ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse retVal = ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).modificarCoordinadorEvento(inValue);
+        public ProyectoOOIA.CoordinadorEventoWS.miembroOOIA[] listarCoordinadorEvento() {
+            ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest();
+            ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse retVal = ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).listarCoordinadorEvento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse> ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.modificarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest request) {
-            return base.Channel.modificarCoordinadorEventoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse> ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.listarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest request) {
+            return base.Channel.listarCoordinadorEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse> modificarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
-            ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest();
-            inValue.coordinador = coordinador;
-            return ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).modificarCoordinadorEventoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse> listarCoordinadorEventoAsync() {
+            ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoRequest();
+            return ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).listarCoordinadorEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

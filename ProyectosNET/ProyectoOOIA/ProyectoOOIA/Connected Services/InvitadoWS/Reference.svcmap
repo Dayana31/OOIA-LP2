@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/InvitadoWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/InvitadoWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="InvitadoWS.xsd" MetadataType="Schema" ID="6c2996b2-9aaf-4934-885b-22c21a9460d1" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/InvitadoWS?xsd=1" />
-    <MetadataFile FileName="InvitadoWS.wsdl" MetadataType="Wsdl" ID="223f53b2-9a49-49b0-acd7-958792098f5b" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/InvitadoWS?wsdl" />
+    <MetadataFile FileName="InvitadoWS1.xsd" MetadataType="Schema" ID="124c5034-baa3-4719-932e-0a72cfc695c2" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/InvitadoWS?xsd=1" />
+    <MetadataFile FileName="InvitadoWS1.wsdl" MetadataType="Wsdl" ID="1f722c90-c78f-4f18-9f99-c2a68205cd23" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/InvitadoWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

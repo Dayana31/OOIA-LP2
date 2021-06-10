@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/ComprimisoWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/ComprimisoWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ComprimisoWS.xsd" MetadataType="Schema" ID="9cbab45d-d82c-47bf-b7ef-5b8c2296129e" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ComprimisoWS?xsd=1" />
-    <MetadataFile FileName="ComprimisoWS.wsdl" MetadataType="Wsdl" ID="6434118b-dbbf-4e6f-ab62-4f461a62c75e" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ComprimisoWS?wsdl" />
+    <MetadataFile FileName="ComprimisoWS1.wsdl" MetadataType="Wsdl" ID="f0e202ac-a997-47e1-b5e3-68cfd970acf6" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/ComprimisoWS?wsdl" />
+    <MetadataFile FileName="ComprimisoWS1.xsd" MetadataType="Schema" ID="150d3aac-1c2c-416b-8cf4-549b384a655a" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/ComprimisoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
