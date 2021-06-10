@@ -281,3 +281,5 @@ C:\7mo ciclo\LP2\Proyecto Lp2\Lab 7\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\D
 C:\7mo ciclo\LP2\Proyecto Lp2\Lab 7\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.frmDetalleEvento.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\Lab 7\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVProfesores.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\Lab 7\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVPsicologos.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\Lab 7\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmBuscarProfesor.resources
+C:\7mo ciclo\LP2\Proyecto Lp2\Lab 7\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarProfesor.resources
