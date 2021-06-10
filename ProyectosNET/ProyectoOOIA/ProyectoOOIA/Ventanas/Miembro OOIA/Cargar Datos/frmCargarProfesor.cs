@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
-    public partial class frmCargarProfesor: Form
+    public partial class frmCargarProfesor : Form
     {
         private EspecialidadWS.EspecialidadWSClient daoEspecialidad;
         private ProfesorWS.ProfesorWSClient daoProfesor;
