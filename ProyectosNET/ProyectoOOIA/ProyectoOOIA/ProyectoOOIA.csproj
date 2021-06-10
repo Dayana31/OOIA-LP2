@@ -608,8 +608,8 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmDetalleEvento.resx">
       <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AlumnoWS\AlumnoWS1.wsdl" />
-    <None Include="Connected Services\AlumnoWS\AlumnoWS1.xsd">
+    <None Include="Connected Services\AlumnoWS\AlumnoWS.wsdl" />
+    <None Include="Connected Services\AlumnoWS\AlumnoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.alumno.datasource">
@@ -759,8 +759,8 @@
     <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.modificarEncuestaEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventosWS\EventoWS1.wsdl" />
-    <None Include="Connected Services\EventosWS\EventoWS1.xsd">
+    <None Include="Connected Services\EventosWS\EventoWS.wsdl" />
+    <None Include="Connected Services\EventosWS\EventoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EventosWS\ProyectoOOIA.EventosWS.eliminarEventoResponse.datasource">
@@ -839,8 +839,8 @@
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.modificarHorarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionEventoWS\GesionEventoWS.wsdl" />
-    <None Include="Connected Services\GestionEventoWS\GesionEventoWS.xsd">
+    <None Include="Connected Services\GestionEventoWS\GesionEventoWS1.wsdl" />
+    <None Include="Connected Services\GestionEventoWS\GesionEventoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.eliminarCoordinadorEventoResponse.datasource">

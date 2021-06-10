@@ -86,6 +86,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
+            if (persona == null) return;
             persona = dgvPonentes.CurrentRow.DataBoundItem as GestionHumanaWS.persona;
 
 

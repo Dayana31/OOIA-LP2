@@ -52,6 +52,7 @@ public class EventoMySQL implements EventoDAO{
                    evento.setHoraFina(new java.util.Date(0, 0, 0, hora, minuto));
                    //evento.setPonentes(obtenerPonentes(evento.getId_evento()));
                 eventos.add(evento);
+                
             }
             rs.close();
             cs.close();

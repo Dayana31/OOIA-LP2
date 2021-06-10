@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.gestion_humana.controller.dao.AlumnoDAO;
 import pe.edu.pucp.gestion_humana.model.Alumno;
@@ -97,6 +99,7 @@ public class AlumnoMySQL implements AlumnoDAO{
             resultado = alumno.getId_alumno();
             cs.close();
         }catch(Exception ex){
+            Logger.getLogger(AlumnoMySQL.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println(ex.getMessage());
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
