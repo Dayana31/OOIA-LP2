@@ -192,7 +192,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnEliminarPonente.TabIndex = 20;
             this.btnEliminarPonente.Text = "Eliminar Ponente";
             this.btnEliminarPonente.UseVisualStyleBackColor = true;
-            this.btnEliminarPonente.Click += new System.EventHandler(this.btnEliminarPonente_Click);
+           // this.btnEliminarPonente.Click += new System.EventHandler(this.btnEliminarPonente_Click);
             // 
             // btnBuscarPonente
             // 
