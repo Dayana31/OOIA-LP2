@@ -244,6 +244,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             alumno.usuario_pucp = txtUsuario.Text;
             alumno.contraseña = txtPassword.Text;
             alumno.fecha_inclusion = DateTime.Today.Date;
+            alumno.fecha_inclusionSpecified = true;
             //Alumno
             alumno.codigo_pucp = txtCodigo.Text;
             EspecialidadWS.especialidad esp_selected = (EspecialidadWS.especialidad)cbEspecialidad.SelectedItem;

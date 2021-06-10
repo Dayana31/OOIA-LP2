@@ -212,6 +212,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             psicologo.usuario_pucp = txtUsuario.Text;
             psicologo.contraseña = txtPassword.Text;
             psicologo.fecha_inclusion = DateTime.Today.Date;
+            psicologo.fecha_inclusionSpecified = true;
             //Psicologo
 
             if (estado.Equals(Estado.Nuevo))
