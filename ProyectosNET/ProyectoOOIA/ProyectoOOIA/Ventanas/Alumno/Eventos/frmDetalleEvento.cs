@@ -13,7 +13,7 @@ namespace ProyectoOOIA.Ventanas
             InitializeComponent();
         }
 
-       
+
 
         public frmDetalleEvento(int flag)
         {
@@ -23,7 +23,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void label7_Click(object sender, EventArgs e)
         {
-            
+
             //if (principalEventos != null)
             //{
             //    new frmInscripcionEvento(principalEventos).Show();

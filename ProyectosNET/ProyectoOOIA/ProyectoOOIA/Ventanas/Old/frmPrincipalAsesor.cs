@@ -8,7 +8,7 @@ namespace ProyectoOOIA.Ventanas
     public partial class frmPrincipalAsesor : Form
     {
         private int indice;
-        private BindingList<Bitmap> listaImagenes=new BindingList<Bitmap>();
+        private BindingList<Bitmap> listaImagenes = new BindingList<Bitmap>();
 
         public frmPrincipalAsesor()
         {
@@ -20,7 +20,7 @@ namespace ProyectoOOIA.Ventanas
             imagenes.Image = listaImagenes[0];
             //ToolTip ttEjemplo = new ToolTip();
 
-            
+
 
         }
 

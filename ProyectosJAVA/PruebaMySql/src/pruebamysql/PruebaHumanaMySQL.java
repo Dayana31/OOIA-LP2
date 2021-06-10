@@ -81,11 +81,11 @@ public class PruebaHumanaMySQL {
         esp.setId_especialidad(3);
       
         alum.setEspecialidad(esp);
-        alum.setCraest(54.3);
+        alum.setCraest(54.5);
         alum.setCursos_por_primera(0);
-        alum.setCursos_por_segunda(2);
+        alum.setCursos_por_segunda(0);
         alum.setCursos_por_tercera(0);
-        alum.setCreditos_aprobados(70.4);//hay un problema aqui, el decimal debe ser mas grande 
+        alum.setCreditos_aprobados(0);//hay un problema aqui, el decimal debe ser mas grande 
         //para que pueda recoger una mayor cantidad de creditos. Solo se admiten alumnos 
         //con cantidad de creditos 
 

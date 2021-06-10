@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
 
 namespace ProyectoOOIA.Ventanas
 {
@@ -40,7 +34,7 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     dtpFechaEvento.Enabled = false;
-                    txtHoraFin.Enabled= false;
+                    txtHoraFin.Enabled = false;
                     txtHoraInicio.Enabled = false;
                     txtNombre.Enabled = false;
                     txtNombrePonente.Enabled = false;
@@ -87,7 +81,7 @@ namespace ProyectoOOIA.Ventanas
                     cboCategoria.Enabled = false;
                     dgvPonentes.Enabled = false;
                     break;
-                
+
             }
         }
 
@@ -114,7 +108,7 @@ namespace ProyectoOOIA.Ventanas
             Regex regex = new Regex(patron);
             if (!regex.IsMatch(txtHoraInicio.Text))
             {
-                MessageBox.Show("Formato de hora Inicio incorrecto","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Formato de hora Inicio incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if (!regex.IsMatch(txtHoraFin.Text))
             {
@@ -132,7 +126,7 @@ namespace ProyectoOOIA.Ventanas
             if (agregarImagen.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Image = new Bitmap(agregarImagen.InitialDirectory + agregarImagen.FileName);
-                
+
             }
         }
 
@@ -149,7 +143,7 @@ namespace ProyectoOOIA.Ventanas
                 MessageBox.Show("Evento Actualizado", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 componentes(Estado.Nuevo);
             }
-            
+
         }
 
         private void btnAgregarPonente_Click(object sender, EventArgs e)
