@@ -44,8 +44,8 @@ namespace ProyectoOOIA.Ventanas
             this.btnEliminarPonente = new System.Windows.Forms.Button();
             this.btnBuscarPonente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.NombreCompletoPonente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPonentes = new System.Windows.Forms.DataGridView();
+            this.NombreCompletoPonente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIdEvento = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -61,11 +61,11 @@ namespace ProyectoOOIA.Ventanas
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dtpFechaEvento = new System.Windows.Forms.DateTimePicker();
             this.btnAgregarImagen = new System.Windows.Forms.Button();
-            this.txtHoraInicio = new System.Windows.Forms.TextBox();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
-            this.txtHoraFin = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
+            this.dtpInicio = new System.Windows.Forms.DateTimePicker();
+            this.dtpFin = new System.Windows.Forms.DateTimePicker();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
@@ -192,7 +192,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnEliminarPonente.TabIndex = 20;
             this.btnEliminarPonente.Text = "Eliminar Ponente";
             this.btnEliminarPonente.UseVisualStyleBackColor = true;
-            //this.btnEliminarPonente.Click += new System.EventHandler(this.btnEliminarPonente_Click);
+            this.btnEliminarPonente.Click += new System.EventHandler(this.btnEliminarPonente_Click);
             // 
             // btnBuscarPonente
             // 
@@ -219,14 +219,6 @@ namespace ProyectoOOIA.Ventanas
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ponentes";
             // 
-            // NombreCompletoPonente
-            // 
-            this.NombreCompletoPonente.HeaderText = "Nombre completo del ponente";
-            this.NombreCompletoPonente.MinimumWidth = 6;
-            this.NombreCompletoPonente.Name = "NombreCompletoPonente";
-            this.NombreCompletoPonente.ReadOnly = true;
-            this.NombreCompletoPonente.Width = 700;
-            // 
             // dgvPonentes
             // 
             this.dgvPonentes.AllowUserToAddRows = false;
@@ -234,12 +226,20 @@ namespace ProyectoOOIA.Ventanas
             this.dgvPonentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPonentes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NombreCompletoPonente});
-            this.dgvPonentes.Location = new System.Drawing.Point(9, 63);
+            this.dgvPonentes.Location = new System.Drawing.Point(9, 73);
             this.dgvPonentes.Name = "dgvPonentes";
             this.dgvPonentes.ReadOnly = true;
             this.dgvPonentes.RowHeadersWidth = 51;
-            this.dgvPonentes.Size = new System.Drawing.Size(758, 133);
+            this.dgvPonentes.Size = new System.Drawing.Size(758, 123);
             this.dgvPonentes.TabIndex = 15;
+            // 
+            // NombreCompletoPonente
+            // 
+            this.NombreCompletoPonente.HeaderText = "Nombre completo del ponente";
+            this.NombreCompletoPonente.MinimumWidth = 6;
+            this.NombreCompletoPonente.Name = "NombreCompletoPonente";
+            this.NombreCompletoPonente.ReadOnly = true;
+            this.NombreCompletoPonente.Width = 700;
             // 
             // label6
             // 
@@ -365,32 +365,19 @@ namespace ProyectoOOIA.Ventanas
             this.btnAgregarImagen.TabIndex = 62;
             this.btnAgregarImagen.Text = "Agregar imagen";
             this.btnAgregarImagen.UseVisualStyleBackColor = true;
-            // 
-            // txtHoraInicio
-            // 
-            this.txtHoraInicio.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txtHoraInicio.Location = new System.Drawing.Point(144, 174);
-            this.txtHoraInicio.Name = "txtHoraInicio";
-            this.txtHoraInicio.Size = new System.Drawing.Size(138, 20);
-            this.txtHoraInicio.TabIndex = 57;
-            this.txtHoraInicio.Text = "Ejempo 15:30";
+            this.btnAgregarImagen.Click += new System.EventHandler(this.btnAgregarImagen_Click);
             // 
             // cboCategoria
             // 
             this.cboCategoria.FormattingEnabled = true;
+            this.cboCategoria.Items.AddRange(new object[] {
+            "Introduccion a la vida universitaria",
+            "Introduccion al campus virtual",
+            "Como socializar"});
             this.cboCategoria.Location = new System.Drawing.Point(144, 226);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(138, 21);
             this.cboCategoria.TabIndex = 61;
-            // 
-            // txtHoraFin
-            // 
-            this.txtHoraFin.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.txtHoraFin.Location = new System.Drawing.Point(368, 170);
-            this.txtHoraFin.Name = "txtHoraFin";
-            this.txtHoraFin.Size = new System.Drawing.Size(143, 20);
-            this.txtHoraFin.TabIndex = 58;
-            this.txtHoraFin.Text = "Ejempo 15:30";
             // 
             // label8
             // 
@@ -409,11 +396,31 @@ namespace ProyectoOOIA.Ventanas
             this.txtDescripcion.TabIndex = 59;
             this.txtDescripcion.Text = "";
             // 
+            // dtpInicio
+            // 
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpInicio.Location = new System.Drawing.Point(144, 174);
+            this.dtpInicio.Name = "dtpInicio";
+            this.dtpInicio.ShowUpDown = true;
+            this.dtpInicio.Size = new System.Drawing.Size(138, 20);
+            this.dtpInicio.TabIndex = 70;
+            // 
+            // dtpFin
+            // 
+            this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpFin.Location = new System.Drawing.Point(368, 174);
+            this.dtpFin.Name = "dtpFin";
+            this.dtpFin.ShowUpDown = true;
+            this.dtpFin.Size = new System.Drawing.Size(142, 20);
+            this.dtpFin.TabIndex = 71;
+            // 
             // frmGestionEventosOOIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 570);
+            this.Controls.Add(this.dtpFin);
+            this.Controls.Add(this.dtpInicio);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtIdEvento);
@@ -427,11 +434,9 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtHoraFin);
             this.Controls.Add(this.npdCapacidad);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtHoraInicio);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnAgregarImagen);
             this.Controls.Add(this.label4);
@@ -484,10 +489,10 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DateTimePicker dtpFechaEvento;
         private System.Windows.Forms.Button btnAgregarImagen;
-        private System.Windows.Forms.TextBox txtHoraInicio;
         private System.Windows.Forms.ComboBox cboCategoria;
-        private System.Windows.Forms.TextBox txtHoraFin;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox txtDescripcion;
+        private System.Windows.Forms.DateTimePicker dtpInicio;
+        private System.Windows.Forms.DateTimePicker dtpFin;
     }
 }

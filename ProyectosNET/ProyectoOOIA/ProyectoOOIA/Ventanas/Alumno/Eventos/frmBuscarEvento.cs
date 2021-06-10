@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
+using ProyectoOOIA.GestionEventoWS;
 
 namespace ProyectoOOIA.Ventanas
 {
     public partial class frmBuscarEventoAlumno : Form
     {
+        private GestionEventoWS.evento evento = new evento();
         public frmBuscarEventoAlumno()
         {
             InitializeComponent();
+            dgvEventos.AutoGenerateColumns = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -18,6 +21,23 @@ namespace ProyectoOOIA.Ventanas
         private void btnHome_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //dgvEventos.DataSource = new EventosWS.EventoWSClient().listarEvento(txtNombre.Text);
+            //dgvEventos.DataSource
+            dgvEventos.DataSource = new GestionEventoWS.GesionEventoWSClient().listarEvento("");
+
+        }
+
+        private void dgvEventos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            evento=  dgvEventos.Rows[e.RowIndex].DataBoundItem as GestionEventoWS.evento;
+            dgvEventos.Rows[e.RowIndex].Cells[0].Value = evento.nombre;
+            dgvEventos.Rows[e.RowIndex].Cells[1].Value = evento.fecha;
+            dgvEventos.Rows[e.RowIndex].Cells[2].Value = evento.horaInicio.TimeOfDay;
+            dgvEventos.Rows[e.RowIndex].Cells[3].Value = evento.horaFina.TimeOfDay;
         }
     }
 }

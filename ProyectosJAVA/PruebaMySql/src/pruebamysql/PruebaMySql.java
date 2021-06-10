@@ -62,7 +62,7 @@ public class PruebaMySql {
     evento.setLugar("Generales");
     evento.setNombre("Amistad ");
 //        MiembroOOIA psicologo=new MiembroOOIA();
-//        psicologo.setNombre("Psicologo 1");
+//                  psicologo.setNombre("Psicologo 1");
 //                psicologo.setDni("98765432");
 //                psicologo.setEdad(40);
 //                psicologo.setDireccion("En algun lugar de Lima");
@@ -72,20 +72,20 @@ public class PruebaMySql {
 //               psicologo.setNombre("Psicologo 3");
 //               evento.setId_evento(1);
 //               new CoordinadorEventosMySQL().insertar(psicologo);
-                 evento.setId_evento(8); 
+//                 evento.setId_evento(8); 
                  ArrayList<Persona>persona=new ArrayList<>();
                  Alumno al=new Alumno();
                  al.setId_persona(1);
                  persona.add(al);
-                 al.setId_persona(13);
+                 al.setId_persona(2);
                  persona.add(al);
                  evento.setPonentes(persona);
-      //  new EventoMySQL().insertar(evento);
-                Evento ev = new EventoMySQL().listar("Amistad").get(0);
+       //new EventoMySQL().insertar(evento);
+               Evento ev = new EventoMySQL().listar("").get(0);
                 System.out.println(ev.getNombre()+" "+ev.getId_evento());
-                for(Persona per:ev.getPonentes()){
-                    System.out.println(per.getId_persona()+" "+per.getNombre());
-                }
+//                for(Persona per:ev.getPonentes()){
+//                    System.out.println(per.getId_persona()+" "+per.getNombre());
+                
    //new EventoMySQL().modificar(evento);
     //new EventoMySQL().eliminar(evento.getId_evento());
     }

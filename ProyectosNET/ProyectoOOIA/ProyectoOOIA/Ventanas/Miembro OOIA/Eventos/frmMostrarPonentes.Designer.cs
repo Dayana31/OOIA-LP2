@@ -35,9 +35,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSeleccionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,20 +104,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             this.label2.TabIndex = 5;
             this.label2.Text = "Tipo de horario:";
             // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 388;
-            // 
-            // Especialidad
-            // 
-            this.Especialidad.HeaderText = "Especialdiad";
-            this.Especialidad.Name = "Especialidad";
-            this.Especialidad.ReadOnly = true;
-            this.Especialidad.Width = 388;
-            // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.Location = new System.Drawing.Point(713, 27);
@@ -127,6 +113,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 388;
+            // 
+            // Especialidad
+            // 
+            this.Especialidad.HeaderText = "Correo";
+            this.Especialidad.Name = "Especialidad";
+            this.Especialidad.ReadOnly = true;
+            this.Especialidad.Width = 388;
             // 
             // frmMostrarPonentes
             // 
@@ -156,8 +156,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;
-        private System.Windows.Forms.Button btnSeleccionar;
     }
 }

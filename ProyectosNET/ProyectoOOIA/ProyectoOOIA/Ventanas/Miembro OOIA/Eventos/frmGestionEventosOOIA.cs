@@ -19,12 +19,10 @@ namespace ProyectoOOIA.Ventanas
     {
         
         ErrorProvider error = new ErrorProvider();
-        private GestionEventoWS.GesionEventoWS eventoDao;
+        private GestionEventoWS.GesionEventoWSClient eventoDao;
         private GestionEventoWS.evento evento;
-        private BindingList<GesionEventoWS> lista = new BindingList<EventoWS.persona>();
-        private ProfesorWS.profesor profesor = null;
-        private AlumnoWS.alumno alumno = null;
-        private InvitadoWS.invitado invitado = null;
+        private BindingList<GestionEventoWS.persona> lista = new BindingList<GestionEventoWS.persona>();
+        private GestionEventoWS.persona persona = null;
         private int numeroElementos = 0;
         
 
@@ -54,8 +52,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     dtpFechaEvento.Enabled = false;
-                    //dtpFin.Enabled = true;
-                    //dtpInicio.Enabled = true;
+                    dtpFin.Enabled = true;
+                    dtpInicio.Enabled = true;
                     txtNombre.Enabled = false;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -78,8 +76,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     dtpFechaEvento.Enabled = true;
-                    //dtpFin.Enabled = true;
-                    //dtpInicio.Enabled = true;
+                    dtpFin.Enabled = true;
+                    dtpInicio.Enabled = true;
                     txtNombre.Enabled = true;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = true;
@@ -101,8 +99,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = true;
                     dtpFechaEvento.Enabled = false;
-                    //dtpFin.Enabled = true;
-                    //dtpInicio.Enabled = true;
+                    dtpFin.Enabled = true;
+                    dtpInicio.Enabled = true;
                     txtNombre.Enabled = false;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -133,17 +131,18 @@ namespace ProyectoOOIA.Ventanas
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             validacionDatos();
-            evento = new EventoWS.evento();
-            eventoDao = new EventoWS.EventoWSClient();
+            evento = new GestionEventoWS.evento();
+            eventoDao = new GestionEventoWS.GesionEventoWSClient();
             evento.nombre = txtNombre.Text;
             evento.fecha = dtpFechaEvento.Value;
             evento.estado = true;
             evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
-            //evento.horaInicio = dtpInicio.Value;
-            //evento.horaFina = dtpFin.Value;
-            evento.id_coordinador = 12;
+            evento.horaInicio = dtpInicio.Value;
+            evento.horaFina = dtpFin.Value;
+            evento.id_coordinador = 11;
             evento.lugar = txtLugar.Text;
-            //evento.ponentes = lista.ToArray();
+            
+            evento.ponentes = lista.ToArray() ;
             DialogResult dr =
                 MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",
                     MessageBoxButtons.YesNo, MessageBoxIcon.None);
@@ -204,8 +203,17 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAgregarPonente_Click(object sender, EventArgs e)
         {
-            if (txtNombre.Text == "") return;
-            dgvPonentes.Rows[dgvPonentes.Rows.Add()].Cells[0].Value = txtNombrePonente.Text;
+            if (persona != null)
+            {
+                dgvPonentes.Rows.Add();
+                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[0].Value = persona.nombre;
+                lista.Add(persona);
+                persona = null;
+            }
+            else
+                MessageBox.Show("no puede agregar a un ponente dos veces", "error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
         }
 
         private void btnBuscarPonente_Click(object sender, EventArgs e)
@@ -213,35 +221,21 @@ namespace ProyectoOOIA.Ventanas
             frmMostrarPonentes mostrar = new frmMostrarPonentes();
             mostrar.ShowDialog();
             int tipo = mostrar.TipoUsuario;
-            dgvPonentes.Rows.Add();
-            if (tipo == 0)
-            {
-                invitado = mostrar.Invitado;
-                txtNombre.Text = invitado.nombre;
-                
-                //aux.id_persona = invitado.id_persona;
-                //lista.Add(aux);
-                dgvPonentes.Rows[numeroElementos].Cells[0].Value = invitado.nombre;
+            persona = asignarPersona(mostrar.Persona, mostrar.TipoUsuario);
+            txtNombrePonente.Text = persona.nombre;
 
-            }
-            else if (tipo == 1)
-            {
-                profesor = mostrar.Profesor;
-                txtNombre.Text = profesor.nombre;
-                AlumnoWS.alumno aux = new AlumnoWS.alumno();
-                aux.id_persona = profesor.id_persona;
-                dgvPonentes.Rows[numeroElementos].Cells[0].Value = profesor.nombre;
-            }
-            else if(tipo==2)
-            {
-                alumno = mostrar.Alumno;
-                txtNombre.Text = alumno.nombre;
-                //lista.Add(alumno);
-                dgvPonentes.Rows[numeroElementos].Cells[0].Value = alumno.nombre;
-                
-            }
+        }
 
-            
+        private persona asignarPersona(GestionHumanaWS.persona mostrarPersona, int TipoUsuario)
+        {
+            GestionEventoWS.persona aux= new GestionEventoWS.miembroOOIA();
+            aux.nombre = mostrarPersona.nombre;
+            aux.correo = mostrarPersona.correo;
+            aux.id_persona = mostrarPersona.id_persona;
+            aux.direccion = mostrarPersona.direccion;
+            aux.edad = mostrarPersona.edad;
+            aux.dni = mostrarPersona.dni;
+            return aux;
 
         }
 
@@ -313,6 +307,11 @@ namespace ProyectoOOIA.Ventanas
         }
 
         private void txtHoraInicio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminarPonente_Click_1(object sender, EventArgs e)
         {
 
         }

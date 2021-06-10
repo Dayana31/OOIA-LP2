@@ -18,6 +18,9 @@ import pe.edu.pucp.gestion_eventos.model.MiembroOOIA;
 import pe.edu.pucp.gestion_eventos.mysql.CoordinadorEventosMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.EventoAlumnoMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
+import pe.edu.pucp.gestion_humana.model.Alumno;
+import pe.edu.pucp.gestion_humana.model.Invitado;
+import pe.edu.pucp.gestion_humana.model.Profesor;
 
 /**
  *
@@ -26,13 +29,15 @@ import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
 @WebService(serviceName = "GesionEventoWS")
 public class GesionEventoWS {
 
-    private EventoDAO evento;
-    private EventoAlumnoDAO eventoAl;
-    private CoordinadorEventosDAO coordinador;
+    private EventoDAO evento=new EventoMySQL();
+    private EventoAlumnoDAO eventoAl=new EventoAlumnoMySQL();
+    private CoordinadorEventosDAO coordinador=new CoordinadorEventosMySQL();;
+    
     public GesionEventoWS() {
     evento=new EventoMySQL();
     eventoAl=new EventoAlumnoMySQL();
     coordinador=new CoordinadorEventosMySQL();
+        
     }
     
     @WebMethod(operationName = "listarEvento")
@@ -49,6 +54,7 @@ public class GesionEventoWS {
     public int insertarEvento(@WebParam(name = "evento")Evento evento){
         int resultado=0;
         try {
+        //System.out.println(evento.getNombre());
             resultado=this.evento.insertar(evento);
         } catch (Exception e) {
             System.out.println(e.getMessage());

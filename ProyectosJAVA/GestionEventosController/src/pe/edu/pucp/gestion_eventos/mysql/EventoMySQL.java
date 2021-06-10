@@ -48,7 +48,7 @@ public class EventoMySQL implements EventoDAO{
                  hora=rs.getTime("hora_fin").toLocalTime().getHour();
                         minuto=rs.getTime("hora_fin").toLocalTime().getMinute();
                    evento.setHoraFina(new java.util.Date(0, 0, 0, hora, minuto));
-                   evento.setPonentes(obtenerPonentes(evento.getId_evento()));
+                   //evento.setPonentes(obtenerPonentes(evento.getId_evento()));
                 eventos.add(evento);
             }
             rs.close();
@@ -72,10 +72,11 @@ public class EventoMySQL implements EventoDAO{
             
             cs = con.prepareCall("call INSERTAR_EVENTO(?,?,?,?,?,?,?,?)");
             //SETEAMOS los parametros
-            
+            cs.registerOutParameter("_id_evento", java.sql.Types.INTEGER);
             //Insertamos en evento
             cs.setInt("_fid_coordinador", evento.getId_coordinador());
-            cs.setInt("_id_evento", evento.getId_evento());
+            //cs.setInt("_id_evento", evento.getId_evento());
+            
             cs.setInt("_capacidad", evento.getCapacidad());
             cs.setString("_nombre", evento.getNombre());
             cs.setDate("_fecha", new Date(evento.getFecha().getTime()));
@@ -84,6 +85,7 @@ public class EventoMySQL implements EventoDAO{
             cs.setTime("final", new Time(evento.getHoraFina().getTime()));
             //Ejecutamos el procedimiento
             cs.executeUpdate();
+            evento.setId_evento(cs.getInt("_id_evento"));
             cs=con.prepareCall("call insertar_evento_ponente(?,?)");
             for(Persona persona:evento.getPonentes()){
                 cs.setInt("persona", persona.getId_persona());

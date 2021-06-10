@@ -3,6 +3,7 @@ using ProyectoOOIA.InvitadoWS;
 using ProyectoOOIA.ProfesorWS;
 using System;
 using System.Windows.Forms;
+using persona = ProyectoOOIA.GestionHumanaWS.persona;
 
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
 {
@@ -10,9 +11,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
     {
 
         private int tipoUsuario = -1;
-        private ProfesorWS.profesor profesor = null;
-        private AlumnoWS.alumno alumno = null;
-        private InvitadoWS.invitado invitado = null;
+        private GestionHumanaWS.persona persona=null;
         public frmMostrarPonentes()
         {
             InitializeComponent();
@@ -28,22 +27,26 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             tipoUsuario = cmbHorario.SelectedIndex;
+            
 
             if (tipoUsuario == 0)
             {
-                invitado = new invitado();
-                dgvPonentes.DataSource = new InvitadoWS.InvitadoWSClient().listarInvitado();
+                persona = new GestionHumanaWS.invitado();
+                dgvPonentes.DataSource = new GestionHumanaWS.GestionHumanaWSClient().listarInvitado();
+
+
+
             }
             else if (tipoUsuario == 1)
             {
-                profesor = new profesor();
-                dgvPonentes.DataSource = new ProfesorWS.ProfesorWSClient().listarProfesores();
+                persona = new GestionHumanaWS.profesor();
+                dgvPonentes.DataSource = new GestionHumanaWS.GestionHumanaWSClient().listarProfesores();
 
             }
             else
             {
-                alumno = new alumno();
-                dgvPonentes.DataSource = new AlumnoWS.AlumnoWSClient().listarAlumno();
+                persona = new GestionHumanaWS.alumno();
+                dgvPonentes.DataSource = new GestionHumanaWS.GestionHumanaWSClient().listarAlumno();
             }
 
         }
@@ -54,53 +57,37 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             set => tipoUsuario = value;
         }
 
-        public profesor Profesor
-        {
-            get => profesor;
-            set => profesor = value;
-        }
+       
 
-        public alumno Alumno
+        public persona Persona
         {
-            get => alumno;
-            set => alumno = value;
-        }
-
-        public invitado Invitado
-        {
-            get => invitado;
-            set => invitado = value;
+            get => persona;
+            set => persona = value;
         }
 
         private void dgvPonentes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (tipoUsuario == 0)
             {
-                invitado = dgvPonentes.Rows[e.RowIndex].DataBoundItem as InvitadoWS.invitado;
-                dgvPonentes.Rows[e.RowIndex].Cells[0].Value = invitado.nombre;
-                dgvPonentes.Rows[e.RowIndex].Cells[1].Value = "Invitado";
-
+                persona = dgvPonentes.Rows[e.RowIndex].DataBoundItem as GestionHumanaWS.invitado;
             }
             else if (tipoUsuario == 1)
             {
-                profesor = dgvPonentes.Rows[e.RowIndex].DataBoundItem as profesor;
-                dgvPonentes.Rows[e.RowIndex].Cells[0].Value = profesor.nombre;
-                dgvPonentes.Rows[e.RowIndex].Cells[1].Value = profesor.especialidad.nombre_especialidad;
+                persona = dgvPonentes.Rows[e.RowIndex].DataBoundItem as GestionHumanaWS.profesor;
 
             }
             else
             {
-                alumno = dgvPonentes.Rows[e.RowIndex].DataBoundItem as alumno;
-                dgvPonentes.Rows[e.RowIndex].Cells[0].Value = alumno.nombre;
-                dgvPonentes.Rows[e.RowIndex].Cells[1].Value = alumno.especialidad.nombre_especialidad;
+                persona = dgvPonentes.Rows[e.RowIndex].DataBoundItem as GestionHumanaWS.alumno;
             }
+            dgvPonentes.Rows[e.RowIndex].Cells[0].Value = persona.nombre;
+            dgvPonentes.Rows[e.RowIndex].Cells[1].Value = persona.correo;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            if (tipoUsuario == 0) invitado = dgvPonentes.CurrentRow.DataBoundItem as InvitadoWS.invitado;
-            else if (tipoUsuario == 1) profesor = dgvPonentes.CurrentRow.DataBoundItem as ProfesorWS.profesor;
-            else alumno = dgvPonentes.CurrentRow.DataBoundItem as AlumnoWS.alumno;
+            persona = dgvPonentes.CurrentRow.DataBoundItem as GestionHumanaWS.persona;
+
 
             this.Dispose();
         }
