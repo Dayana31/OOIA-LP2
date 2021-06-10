@@ -1,12 +1,5 @@
 ﻿using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA
@@ -61,7 +54,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         private void btnMax_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void tabPage1_Enter(object sender, EventArgs e)

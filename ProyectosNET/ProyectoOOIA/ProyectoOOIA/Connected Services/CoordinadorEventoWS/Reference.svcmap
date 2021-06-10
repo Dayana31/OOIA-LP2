@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/CoordinadorEventoWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CoordinadorEventoWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CoordinadorEventoWS.xsd" MetadataType="Schema" ID="dffa6499-380c-4e02-9db1-31439fb62f41" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CoordinadorEventoWS?xsd=1" />
-    <MetadataFile FileName="CoordinadorEventoWS.wsdl" MetadataType="Wsdl" ID="e8eb1931-78f3-46d1-b1c7-e890b4ca50b4" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CoordinadorEventoWS?wsdl" />
+    <MetadataFile FileName="CoordinadorEventoWS1.xsd" MetadataType="Schema" ID="eef63e39-2e3f-45e0-bf0b-ca241891be54" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CoordinadorEventoWS?xsd=1" />
+    <MetadataFile FileName="CoordinadorEventoWS1.wsdl" MetadataType="Wsdl" ID="ab734b7b-ca8c-4a69-9b78-97416cca51d2" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CoordinadorEventoWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

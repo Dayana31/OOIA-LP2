@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/HorarioWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/HorarioWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="HorarioWS.xsd" MetadataType="Schema" ID="faae9c77-b914-4510-92ae-9db1ade75c15" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/HorarioWS?xsd=1" />
-    <MetadataFile FileName="HorarioWS.wsdl" MetadataType="Wsdl" ID="08ab0694-686f-4e7b-9201-4e2785d068c4" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/HorarioWS?wsdl" />
+    <MetadataFile FileName="HorarioWS1.wsdl" MetadataType="Wsdl" ID="ddc3c31c-02f9-430c-b77f-a771a5ad85e5" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/HorarioWS?wsdl" />
+    <MetadataFile FileName="HorarioWS1.xsd" MetadataType="Schema" ID="4424fe6c-471d-40ff-872e-e02d7cffdd9c" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/HorarioWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

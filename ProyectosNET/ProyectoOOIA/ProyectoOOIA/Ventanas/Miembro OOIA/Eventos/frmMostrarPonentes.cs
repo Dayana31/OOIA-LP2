@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using ProyectoOOIA.AlumnoWS;
+﻿using ProyectoOOIA.AlumnoWS;
 using ProyectoOOIA.InvitadoWS;
 using ProyectoOOIA.ProfesorWS;
+using System;
+using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
 {
@@ -52,7 +45,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
                 alumno = new alumno();
                 dgvPonentes.DataSource = new AlumnoWS.AlumnoWSClient().listarAlumno();
             }
-            
+
         }
 
         public int TipoUsuario
@@ -90,14 +83,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             }
             else if (tipoUsuario == 1)
             {
-                profesor=dgvPonentes.Rows[e.RowIndex].DataBoundItem as profesor;
+                profesor = dgvPonentes.Rows[e.RowIndex].DataBoundItem as profesor;
                 dgvPonentes.Rows[e.RowIndex].Cells[0].Value = profesor.nombre;
                 dgvPonentes.Rows[e.RowIndex].Cells[1].Value = profesor.especialidad.nombre_especialidad;
 
             }
             else
             {
-                alumno= dgvPonentes.Rows[e.RowIndex].DataBoundItem as alumno;
+                alumno = dgvPonentes.Rows[e.RowIndex].DataBoundItem as alumno;
                 dgvPonentes.Rows[e.RowIndex].Cells[0].Value = alumno.nombre;
                 dgvPonentes.Rows[e.RowIndex].Cells[1].Value = alumno.especialidad.nombre_especialidad;
             }
@@ -106,9 +99,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             if (tipoUsuario == 0) invitado = dgvPonentes.CurrentRow.DataBoundItem as InvitadoWS.invitado;
-            else if(tipoUsuario==1)profesor=dgvPonentes.CurrentRow.DataBoundItem as ProfesorWS.profesor;
-            else alumno=dgvPonentes.CurrentRow.DataBoundItem as AlumnoWS.alumno;
-            
+            else if (tipoUsuario == 1) profesor = dgvPonentes.CurrentRow.DataBoundItem as ProfesorWS.profesor;
+            else alumno = dgvPonentes.CurrentRow.DataBoundItem as AlumnoWS.alumno;
+
             this.Dispose();
         }
     }

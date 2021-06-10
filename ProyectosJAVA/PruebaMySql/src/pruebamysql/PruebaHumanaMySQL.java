@@ -29,8 +29,10 @@ public class PruebaHumanaMySQL {
     
     public static void main(String[] args) {
         daoAlumno = new AlumnoMySQL();
-        listarAlumno();
-        insertarAlumno();
+        daoPsicologo = new PsicologoMySQL();
+        
+        insertarPsicologo();
+        listarPsicologo();
     }
     
     public static void listarPsicologo(){
@@ -41,6 +43,32 @@ public class PruebaHumanaMySQL {
             System.out.println(a.getNombre() + " " + a.getCorreo()  +  " " + a.getUsuario_pucp());
         }
     }
+    
+     public static void insertarPsicologo(){
+       
+        Psicologo psicologo = new Psicologo();
+        //Insertar
+        //Atributos persona
+        psicologo.setDni("06292910");
+        psicologo.setNombre("Jorge Gonzales");
+        psicologo.setEdad(45);
+        psicologo.setDireccion("Lima");
+        psicologo.setCorreo("a10303919@pucp.edu");
+        
+        //Atributos miembro pucp
+        psicologo.setUsuario_pucp("2083123@pucp.edu.pe");
+        psicologo.setContraseña("password");
+        psicologo.setFecha_inclusion(new Date());
+     
+
+        int resultado = daoPsicologo.insertar(psicologo);//no lo pobre, falta modificar el mySQL
+        if(resultado !=0){
+            System.out.println("Se registro al psicologo exitosamente"+ resultado);
+        }else{
+            System.out.println("Ocurrio un error al momento de insertar");
+        }
+    }
+     
     public static void listarProfesor(){
         ArrayList<Profesor> profesores = new ArrayList<>();
         profesores = daoProfesor.listar();
@@ -81,11 +109,11 @@ public class PruebaHumanaMySQL {
         esp.setId_especialidad(3);
       
         alum.setEspecialidad(esp);
-        alum.setCraest(54.3);
+        alum.setCraest(54.5);
         alum.setCursos_por_primera(0);
-        alum.setCursos_por_segunda(2);
+        alum.setCursos_por_segunda(0);
         alum.setCursos_por_tercera(0);
-        alum.setCreditos_aprobados(70.4);//hay un problema aqui, el decimal debe ser mas grande 
+        alum.setCreditos_aprobados(0);//hay un problema aqui, el decimal debe ser mas grande 
         //para que pueda recoger una mayor cantidad de creditos. Solo se admiten alumnos 
         //con cantidad de creditos 
 

@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA
@@ -142,7 +137,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             {
                 _codigoSeleccionado =
               (CodigoAtencionWS.codigoAtencion)dgvCodigosAtencion.CurrentRow.DataBoundItem;
-              
+
                 this.estado = Estado.Modificar;
                 cambiarEstado();
                 txtDescripcion.Text = _codigoSeleccionado.descripcion;
@@ -153,7 +148,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         }
 
-     
+
 
         private void dgvCodigosAtencion_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ProyectoOOIA.Ventanas.Miembro_OOIA;
+using System;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOOIA.Ventanas.Miembro_OOIA;
 
 namespace ProyectoOOIA.Ventanas
 {
     public partial class frmPrincipal : Form
     {
-        private BindingList<Bitmap> listaImagenes=new BindingList<Bitmap>();
+        private BindingList<Bitmap> listaImagenes = new BindingList<Bitmap>();
         private int indice = 0;
         private TipoUsuario tipo;
         public frmPrincipal(TipoUsuario tipoUsuario)
@@ -48,7 +43,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void imagenes_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -82,8 +77,8 @@ namespace ProyectoOOIA.Ventanas
         private void btnCargaDatos_Click(object sender, EventArgs e)
         {
             new frmCargarDatos().ShowDialog();
-                    
+
         }
     }
-    }
+}
 

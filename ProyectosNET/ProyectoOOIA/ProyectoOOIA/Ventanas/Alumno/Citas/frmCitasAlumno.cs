@@ -97,7 +97,7 @@ namespace ProyectoOOIA.Ventanas
         {
             //new frmCancelarCitaAlumno().ShowDialog();
             DialogResult dr =
-               MessageBox.Show("¿Esta seguro que desea cancelar esta cita?", "Cancelación de cita", 
+               MessageBox.Show("¿Esta seguro que desea cancelar esta cita?", "Cancelación de cita",
                MessageBoxButtons.YesNo, MessageBoxIcon.None);
             if (dr == DialogResult.Yes)
             {
@@ -125,17 +125,17 @@ namespace ProyectoOOIA.Ventanas
         {
             //new frmCitaRegistroAlumno().ShowDialog();
             //new frmConfirmarCitaAlumno().ShowDialog();
-            if(txtAsesor.Text == "")
+            if (txtAsesor.Text == "")
             {
                 MessageBox.Show("No ha ingresado el asesor", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if(txtHoraInicio.Text == "" || txtHoraFin.Text == "")
+            if (txtHoraInicio.Text == "" || txtHoraFin.Text == "")
             {
                 MessageBox.Show("No ha ingresado el horario", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if(txtMotivo.Text == "")
+            if (txtMotivo.Text == "")
             {
                 MessageBox.Show("No ha ingresado el motivo", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -229,7 +229,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void dgvCitasProgramadas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(this.estado == Estado.Inicial)
+            if (this.estado == Estado.Inicial)
             {
                 //btnModificar.Enabled = true;
                 btnEliminar.Enabled = true;
