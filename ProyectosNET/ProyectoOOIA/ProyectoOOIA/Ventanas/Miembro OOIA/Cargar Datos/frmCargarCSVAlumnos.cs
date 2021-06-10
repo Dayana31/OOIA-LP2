@@ -53,6 +53,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             {
                 MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
                     MessageBoxButtons.OK);
+                this.Close();
             }
         }
     }

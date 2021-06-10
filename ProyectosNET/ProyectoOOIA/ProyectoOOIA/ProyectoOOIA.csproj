@@ -185,6 +185,12 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarPsicologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarPsicologo.Designer.cs">
+      <DependentUpon>frmBuscarPsicologo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,12 @@
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarAlumno.Designer.cs">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarPsicologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarPsicologo.Designer.cs">
+      <DependentUpon>frmCargarPsicologo.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarProfesor.cs">
       <SubType>Form</SubType>
@@ -454,11 +466,17 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarPsicologo.resx">
+      <DependentUpon>frmBuscarPsicologo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarProfesor.resx">
       <DependentUpon>frmBuscarProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarAlumno.resx">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarPsicologo.resx">
+      <DependentUpon>frmCargarPsicologo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarProfesor.resx">
       <DependentUpon>frmCargarProfesor.cs</DependentUpon>
