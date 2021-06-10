@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
-    partial class frmBuscarProfesor
+    partial class frmBuscarPsicologo
     {
         /// <summary>
         /// Required designer variable.
@@ -32,18 +32,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.txtHeader = new System.Windows.Forms.Label();
-            this.dgvProfesores = new System.Windows.Forms.DataGridView();
+            this.dgvPsicologos = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProfesores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -79,25 +77,23 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtHeader.Name = "txtHeader";
             this.txtHeader.Size = new System.Drawing.Size(238, 35);
             this.txtHeader.TabIndex = 2;
-            this.txtHeader.Text = "Buscar Profesor";
+            this.txtHeader.Text = "Buscar Psicologo";
             // 
-            // dgvProfesores
+            // dgvPsicologos
             // 
-            this.dgvProfesores.AllowUserToAddRows = false;
-            this.dgvProfesores.AllowUserToDeleteRows = false;
-            this.dgvProfesores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProfesores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvPsicologos.AllowUserToAddRows = false;
+            this.dgvPsicologos.AllowUserToDeleteRows = false;
+            this.dgvPsicologos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPsicologos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dni,
-            this.nombre,
-            this.Usuario,
-            this.especialidad});
-            this.dgvProfesores.Location = new System.Drawing.Point(12, 114);
-            this.dgvProfesores.Name = "dgvProfesores";
-            this.dgvProfesores.ReadOnly = true;
-            this.dgvProfesores.RowHeadersWidth = 51;
-            this.dgvProfesores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProfesores.Size = new System.Drawing.Size(704, 215);
-            this.dgvProfesores.TabIndex = 9;
+            this.nombre});
+            this.dgvPsicologos.Location = new System.Drawing.Point(12, 114);
+            this.dgvPsicologos.Name = "dgvPsicologos";
+            this.dgvPsicologos.ReadOnly = true;
+            this.dgvPsicologos.RowHeadersWidth = 51;
+            this.dgvPsicologos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPsicologos.Size = new System.Drawing.Size(704, 215);
+            this.dgvPsicologos.TabIndex = 9;
             // 
             // btnSeleccionar
             // 
@@ -154,37 +150,22 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.nombre.ReadOnly = true;
             this.nombre.Width = 300;
             // 
-            // Usuario
-            // 
-            this.Usuario.DataPropertyName = "usuario_pucp";
-            this.Usuario.HeaderText = "Usuario";
-            this.Usuario.Name = "Usuario";
-            this.Usuario.ReadOnly = true;
-            // 
-            // especialidad
-            // 
-            this.especialidad.HeaderText = "Especialidad";
-            this.especialidad.MinimumWidth = 6;
-            this.especialidad.Name = "especialidad";
-            this.especialidad.ReadOnly = true;
-            this.especialidad.Width = 150;
-            // 
-            // frmBuscarProfesor
+            // frmBuscarPsicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(725, 356);
-            this.Controls.Add(this.dgvProfesores);
+            this.Controls.Add(this.dgvPsicologos);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.pnlHeader);
-            this.Name = "frmBuscarProfesor";
+            this.Name = "frmBuscarPsicologo";
             this.Text = "Buscar Alumno";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProfesores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPsicologos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,14 +176,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.Label txtHeader;
-        private System.Windows.Forms.DataGridView dgvProfesores;
+        private System.Windows.Forms.DataGridView dgvPsicologos;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn dni;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn especialidad;
     }
 }
