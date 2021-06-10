@@ -31,8 +31,9 @@ public class ProfesoresCSV {
         daoProfesor = new ProfesorMySQL();
     }
     
-    public void cargarDatos() throws ParseException{
+    public int cargarDatos() throws ParseException{
         sc.useDelimiter("\n");
+        int cargaCorrecta = 0;
         while(sc.hasNext()){
             Profesor profesor = new Profesor();
             String[] datos = sc.next().split(",");
@@ -59,11 +60,10 @@ public class ProfesoresCSV {
            
             
             int resultado = daoProfesor.insertar(profesor);
-            if(resultado == 1){
-                System.out.println("Se registro al profesor correctamente");
-            }else{
-                System.out.println("Ocurrio un error al registrar al profesor");
+            if(resultado == 0){
+                cargaCorrecta++;
             }
         }
+        return cargaCorrecta;
     }
 }

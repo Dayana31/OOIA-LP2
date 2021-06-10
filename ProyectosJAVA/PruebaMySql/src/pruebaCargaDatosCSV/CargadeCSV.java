@@ -19,17 +19,32 @@ public class CargadeCSV {
         String ruta = "C:\\7mo ciclo\\LP2\\Proyecto Lp2\\Lab 7\\Archivos de carga\\Alumnos.csv";
         AlumnosCSV alumnosCsv = new AlumnosCSV();
         alumnosCsv.setRutaCSV(ruta);
-        alumnosCsv.cargarDatos();
+        int filasNoInsertadas = alumnosCsv.cargarDatos();
+        if(filasNoInsertadas == 0){
+            System.out.println("Toda la carga fue exitosa");
+        }else{
+            System.out.println("Hubieron " + filasNoInsertadas + " filas que no se pudieron insertar");
+        }
         /*Profesores, ya funciona*/
 //        String ruta = "C:\\7mo ciclo\\LP2\\Proyecto Lp2\\Lab 7\\Archivos de carga\\Profesores.csv";
 //        ProfesoresCSV profesoresCsv = new ProfesoresCSV();
 //        profesoresCsv.setRutaCSV(ruta);
-//        profesoresCsv.cargarDatos();
+//        int filasNoInsertadas = profesoresCsv.cargarDatos();
+//        if(filasNoInsertadas == 0){
+//            System.out.println("Toda la carga fue exitosa");
+//        }else{
+//            System.out.println("Hubieron " + filasNoInsertadas + " filas que no se pudieron insertar");
+//        }
         /*Psicologos, ya funciona*/
 //        String ruta = "C:\\7mo ciclo\\LP2\\Proyecto Lp2\\Lab 7\\Archivos de carga\\Psicologos.csv";
 //        PsicologosCSV psicologosCsv = new PsicologosCSV();
 //        psicologosCsv.setRutaCSV(ruta);
-//        psicologosCsv.cargarDatos();
+//        int filasNoInsertadas = psicologosCsv.cargarDatos();
+//        if(filasNoInsertadas == 0){
+//            System.out.println("Toda la carga fue exitosa");
+//        }else{
+//            System.out.println("Hubieron " + filasNoInsertadas + " filas que no se pudieron insertar");
+//        }
     }
     
     

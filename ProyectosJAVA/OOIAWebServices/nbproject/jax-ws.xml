@@ -28,6 +28,9 @@
     <service name="InvitadoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.InvitadoWS</implementation-class>
     </service>
+    <service name="AlumnosCSVcargaWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.AlumnosCSVcargaWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

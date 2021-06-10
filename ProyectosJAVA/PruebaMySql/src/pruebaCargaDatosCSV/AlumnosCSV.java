@@ -30,8 +30,10 @@ public class AlumnosCSV {
         (ruta));
         daoAlumno = new AlumnoMySQL();
     }
-    public void cargarDatos() throws ParseException{
+    public int cargarDatos() throws ParseException{
         sc.useDelimiter("\n");
+        
+        int cargaCorrecta = 0;//indica el numero de filas malas
         while(sc.hasNext()){
             Alumno alumno = new Alumno();
             String[] datos = sc.next().split(",");
@@ -61,11 +63,10 @@ public class AlumnosCSV {
             alumno.setCreditos_aprobados(Double.parseDouble(datosCorrectos[14]));
             
             int resultado = daoAlumno.insertar(alumno);
-            if(resultado == 1){
-                System.out.println("Se registro al alumno correctamente");
-            }else{
-                System.out.println("Ocurrio un error al registrar al alumno");
+            if(resultado == 0){
+                cargaCorrecta++;
             }
         }
+        return cargaCorrecta;
     }
 }

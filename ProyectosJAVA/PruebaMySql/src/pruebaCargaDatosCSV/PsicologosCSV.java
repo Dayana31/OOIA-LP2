@@ -31,8 +31,9 @@ public class PsicologosCSV {
         daoPsicologo = new PsicologoMySQL();
     }
     
-    public void cargarDatos() throws ParseException{
+    public int cargarDatos() throws ParseException{
         sc.useDelimiter("\n");
+        int cargaCorrecta = 0;
         while(sc.hasNext()){
             Psicologo psicologo = new Psicologo();
             String[] datos = sc.next().split(",");
@@ -52,11 +53,10 @@ public class PsicologosCSV {
             psicologo.setFecha_inclusion(date1);
 
             int resultado = daoPsicologo.insertar(psicologo);
-            if(resultado == 1){
-                System.out.println("Se registro al psicologo correctamente");
-            }else{
-                System.out.println("Ocurrio un error al registrar al psicologo");
+            if(resultado == 0){
+                cargaCorrecta++;
             }
         }
+        return cargaCorrecta;
     }
 }
