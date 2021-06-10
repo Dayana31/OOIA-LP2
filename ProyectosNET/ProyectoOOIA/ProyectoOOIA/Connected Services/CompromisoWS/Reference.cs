@@ -16,14 +16,14 @@ namespace ProyectoOOIA.CompromisoWS {
     public interface ComprimisoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ComprimisoWS/listarCompromisoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ComprimisoWS/listarCompromisoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ComprimisoWS/insertarCompromisoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ComprimisoWS/insertarCompromisoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CompromisoWS.listarCompromisoResponse listarCompromiso(ProyectoOOIA.CompromisoWS.listarCompromisoRequest request);
+        ProyectoOOIA.CompromisoWS.insertarCompromisoResponse insertarCompromiso(ProyectoOOIA.CompromisoWS.insertarCompromisoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ComprimisoWS/listarCompromisoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ComprimisoWS/listarCompromisoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.listarCompromisoResponse> listarCompromisoAsync(ProyectoOOIA.CompromisoWS.listarCompromisoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ComprimisoWS/insertarCompromisoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ComprimisoWS/insertarCompromisoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.insertarCompromisoResponse> insertarCompromisoAsync(ProyectoOOIA.CompromisoWS.insertarCompromisoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ComprimisoWS/modificarCompromisoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ComprimisoWS/modificarCompromisoResponse")]
@@ -36,18 +36,18 @@ namespace ProyectoOOIA.CompromisoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.modificarCompromisoResponse> modificarCompromisoAsync(ProyectoOOIA.CompromisoWS.modificarCompromisoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ComprimisoWS/insertarCompromisoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ComprimisoWS/insertarCompromisoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ComprimisoWS/listarCompromisoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ComprimisoWS/listarCompromisoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CompromisoWS.insertarCompromisoResponse insertarCompromiso(ProyectoOOIA.CompromisoWS.insertarCompromisoRequest request);
+        ProyectoOOIA.CompromisoWS.listarCompromisoResponse listarCompromiso(ProyectoOOIA.CompromisoWS.listarCompromisoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ComprimisoWS/insertarCompromisoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ComprimisoWS/insertarCompromisoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.insertarCompromisoResponse> insertarCompromisoAsync(ProyectoOOIA.CompromisoWS.insertarCompromisoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ComprimisoWS/listarCompromisoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ComprimisoWS/listarCompromisoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.listarCompromisoResponse> listarCompromisoAsync(ProyectoOOIA.CompromisoWS.listarCompromisoRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -107,7 +107,7 @@ namespace ProyectoOOIA.CompromisoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -251,7 +251,7 @@ namespace ProyectoOOIA.CompromisoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -414,7 +414,7 @@ namespace ProyectoOOIA.CompromisoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -460,7 +460,7 @@ namespace ProyectoOOIA.CompromisoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -478,7 +478,7 @@ namespace ProyectoOOIA.CompromisoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -566,7 +566,7 @@ namespace ProyectoOOIA.CompromisoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -626,7 +626,7 @@ namespace ProyectoOOIA.CompromisoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -700,7 +700,7 @@ namespace ProyectoOOIA.CompromisoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -832,7 +832,7 @@ namespace ProyectoOOIA.CompromisoWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -935,7 +935,7 @@ namespace ProyectoOOIA.CompromisoWS {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1030,35 +1030,35 @@ namespace ProyectoOOIA.CompromisoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCompromiso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCompromisoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCompromiso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarCompromisoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_cita;
+        public ProyectoOOIA.CompromisoWS.compromiso compromiso;
         
-        public listarCompromisoRequest() {
+        public insertarCompromisoRequest() {
         }
         
-        public listarCompromisoRequest(int id_cita) {
-            this.id_cita = id_cita;
+        public insertarCompromisoRequest(ProyectoOOIA.CompromisoWS.compromiso compromiso) {
+            this.compromiso = compromiso;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCompromisoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCompromisoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCompromisoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarCompromisoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CompromisoWS.compromiso[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarCompromisoResponse() {
+        public insertarCompromisoResponse() {
         }
         
-        public listarCompromisoResponse(ProyectoOOIA.CompromisoWS.compromiso[] @return) {
+        public insertarCompromisoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1102,35 +1102,35 @@ namespace ProyectoOOIA.CompromisoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCompromiso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCompromisoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCompromiso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCompromisoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CompromisoWS.compromiso compromiso;
+        public int id_cita;
         
-        public insertarCompromisoRequest() {
+        public listarCompromisoRequest() {
         }
         
-        public insertarCompromisoRequest(ProyectoOOIA.CompromisoWS.compromiso compromiso) {
-            this.compromiso = compromiso;
+        public listarCompromisoRequest(int id_cita) {
+            this.id_cita = id_cita;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCompromisoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCompromisoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCompromisoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCompromisoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CompromisoWS.compromiso[] @return;
         
-        public insertarCompromisoResponse() {
+        public listarCompromisoResponse() {
         }
         
-        public insertarCompromisoResponse(int @return) {
+        public listarCompromisoResponse(ProyectoOOIA.CompromisoWS.compromiso[] @return) {
             this.@return = @return;
         }
     }
@@ -1163,26 +1163,26 @@ namespace ProyectoOOIA.CompromisoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CompromisoWS.listarCompromisoResponse ProyectoOOIA.CompromisoWS.ComprimisoWS.listarCompromiso(ProyectoOOIA.CompromisoWS.listarCompromisoRequest request) {
-            return base.Channel.listarCompromiso(request);
+        ProyectoOOIA.CompromisoWS.insertarCompromisoResponse ProyectoOOIA.CompromisoWS.ComprimisoWS.insertarCompromiso(ProyectoOOIA.CompromisoWS.insertarCompromisoRequest request) {
+            return base.Channel.insertarCompromiso(request);
         }
         
-        public ProyectoOOIA.CompromisoWS.compromiso[] listarCompromiso(int id_cita) {
-            ProyectoOOIA.CompromisoWS.listarCompromisoRequest inValue = new ProyectoOOIA.CompromisoWS.listarCompromisoRequest();
-            inValue.id_cita = id_cita;
-            ProyectoOOIA.CompromisoWS.listarCompromisoResponse retVal = ((ProyectoOOIA.CompromisoWS.ComprimisoWS)(this)).listarCompromiso(inValue);
+        public int insertarCompromiso(ProyectoOOIA.CompromisoWS.compromiso compromiso) {
+            ProyectoOOIA.CompromisoWS.insertarCompromisoRequest inValue = new ProyectoOOIA.CompromisoWS.insertarCompromisoRequest();
+            inValue.compromiso = compromiso;
+            ProyectoOOIA.CompromisoWS.insertarCompromisoResponse retVal = ((ProyectoOOIA.CompromisoWS.ComprimisoWS)(this)).insertarCompromiso(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.listarCompromisoResponse> ProyectoOOIA.CompromisoWS.ComprimisoWS.listarCompromisoAsync(ProyectoOOIA.CompromisoWS.listarCompromisoRequest request) {
-            return base.Channel.listarCompromisoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.insertarCompromisoResponse> ProyectoOOIA.CompromisoWS.ComprimisoWS.insertarCompromisoAsync(ProyectoOOIA.CompromisoWS.insertarCompromisoRequest request) {
+            return base.Channel.insertarCompromisoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.listarCompromisoResponse> listarCompromisoAsync(int id_cita) {
-            ProyectoOOIA.CompromisoWS.listarCompromisoRequest inValue = new ProyectoOOIA.CompromisoWS.listarCompromisoRequest();
-            inValue.id_cita = id_cita;
-            return ((ProyectoOOIA.CompromisoWS.ComprimisoWS)(this)).listarCompromisoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.insertarCompromisoResponse> insertarCompromisoAsync(ProyectoOOIA.CompromisoWS.compromiso compromiso) {
+            ProyectoOOIA.CompromisoWS.insertarCompromisoRequest inValue = new ProyectoOOIA.CompromisoWS.insertarCompromisoRequest();
+            inValue.compromiso = compromiso;
+            return ((ProyectoOOIA.CompromisoWS.ComprimisoWS)(this)).insertarCompromisoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1209,26 +1209,26 @@ namespace ProyectoOOIA.CompromisoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CompromisoWS.insertarCompromisoResponse ProyectoOOIA.CompromisoWS.ComprimisoWS.insertarCompromiso(ProyectoOOIA.CompromisoWS.insertarCompromisoRequest request) {
-            return base.Channel.insertarCompromiso(request);
+        ProyectoOOIA.CompromisoWS.listarCompromisoResponse ProyectoOOIA.CompromisoWS.ComprimisoWS.listarCompromiso(ProyectoOOIA.CompromisoWS.listarCompromisoRequest request) {
+            return base.Channel.listarCompromiso(request);
         }
         
-        public int insertarCompromiso(ProyectoOOIA.CompromisoWS.compromiso compromiso) {
-            ProyectoOOIA.CompromisoWS.insertarCompromisoRequest inValue = new ProyectoOOIA.CompromisoWS.insertarCompromisoRequest();
-            inValue.compromiso = compromiso;
-            ProyectoOOIA.CompromisoWS.insertarCompromisoResponse retVal = ((ProyectoOOIA.CompromisoWS.ComprimisoWS)(this)).insertarCompromiso(inValue);
+        public ProyectoOOIA.CompromisoWS.compromiso[] listarCompromiso(int id_cita) {
+            ProyectoOOIA.CompromisoWS.listarCompromisoRequest inValue = new ProyectoOOIA.CompromisoWS.listarCompromisoRequest();
+            inValue.id_cita = id_cita;
+            ProyectoOOIA.CompromisoWS.listarCompromisoResponse retVal = ((ProyectoOOIA.CompromisoWS.ComprimisoWS)(this)).listarCompromiso(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.insertarCompromisoResponse> ProyectoOOIA.CompromisoWS.ComprimisoWS.insertarCompromisoAsync(ProyectoOOIA.CompromisoWS.insertarCompromisoRequest request) {
-            return base.Channel.insertarCompromisoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.listarCompromisoResponse> ProyectoOOIA.CompromisoWS.ComprimisoWS.listarCompromisoAsync(ProyectoOOIA.CompromisoWS.listarCompromisoRequest request) {
+            return base.Channel.listarCompromisoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.insertarCompromisoResponse> insertarCompromisoAsync(ProyectoOOIA.CompromisoWS.compromiso compromiso) {
-            ProyectoOOIA.CompromisoWS.insertarCompromisoRequest inValue = new ProyectoOOIA.CompromisoWS.insertarCompromisoRequest();
-            inValue.compromiso = compromiso;
-            return ((ProyectoOOIA.CompromisoWS.ComprimisoWS)(this)).insertarCompromisoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.CompromisoWS.listarCompromisoResponse> listarCompromisoAsync(int id_cita) {
+            ProyectoOOIA.CompromisoWS.listarCompromisoRequest inValue = new ProyectoOOIA.CompromisoWS.listarCompromisoRequest();
+            inValue.id_cita = id_cita;
+            return ((ProyectoOOIA.CompromisoWS.ComprimisoWS)(this)).listarCompromisoAsync(inValue);
         }
     }
 }
