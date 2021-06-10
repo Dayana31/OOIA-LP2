@@ -167,6 +167,24 @@
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarAlumno.Designer.cs">
       <DependentUpon>frmCargarAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarCSVAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarCSVAlumnos.Designer.cs">
+      <DependentUpon>frmCargarCSVAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarCSVProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarCSVProfesores.Designer.cs">
+      <DependentUpon>frmCargarCSVProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarCSVPsicologos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarCSVPsicologos.Designer.cs">
+      <DependentUpon>frmCargarCSVPsicologos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Eventos\frmMostrarPonentes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -399,6 +417,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarAlumno.resx">
       <DependentUpon>frmCargarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarCSVAlumnos.resx">
+      <DependentUpon>frmCargarCSVAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarCSVProfesores.resx">
+      <DependentUpon>frmCargarCSVProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarCSVPsicologos.resx">
+      <DependentUpon>frmCargarCSVPsicologos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Eventos\frmMostrarPonentes.resx">
       <DependentUpon>frmMostrarPonentes.cs</DependentUpon>
