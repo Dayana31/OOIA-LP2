@@ -77,9 +77,19 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             new frmCodigosAtencion().ShowDialog();
         }
 
-        private void btnProfesores_Click_1(object sender, EventArgs e)
+        private void btnCargaCSVAlumnos_Click(object sender, EventArgs e)
         {
-            new frmCargarProfesor().ShowDialog();
+            new frmCargarCSVAlumnos().ShowDialog();
+        }
+
+        private void btnCargaCSVProfesores_Click(object sender, EventArgs e)
+        {
+            new frmCargarCSVProfesores().ShowDialog();
+        }
+
+        private void btnCargaCSVPsicologos_Click(object sender, EventArgs e)
+        {
+            new frmCargarCSVPsicologos().ShowDialog();
         }
     }
 }

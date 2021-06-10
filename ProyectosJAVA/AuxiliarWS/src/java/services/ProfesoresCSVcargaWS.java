@@ -23,8 +23,8 @@ public class ProfesoresCSVcargaWS {
      * This is a sample web service operation
      */
     private ProfesoresCSV csvProfesores;
-    @WebMethod(operationName = "Cargar CSV profesores")
-    public int cargarCSVProfesores(@WebParam(name = "Ruta Archivo") String ruta) throws FileNotFoundException, ParseException {
+    @WebMethod(operationName = "CargarCSVprofesores")
+    public int cargarCSVProfesores(@WebParam(name = "RutaArchivo") String ruta) throws FileNotFoundException, ParseException {
         int resultado = 0;
         csvProfesores.setRutaCSV(ruta);
         resultado = csvProfesores.cargarDatos();

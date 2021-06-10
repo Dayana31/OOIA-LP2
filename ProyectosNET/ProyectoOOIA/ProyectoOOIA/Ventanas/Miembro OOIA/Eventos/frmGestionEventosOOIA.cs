@@ -9,10 +9,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOOIA.AlumnoWS;
-using ProyectoOOIA.EventoWS;
+using ProyectoOOIA.GestionEventoWS;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
-using persona = ProyectoOOIA.EventoWS.persona;
+
 
 namespace ProyectoOOIA.Ventanas
 {
@@ -54,8 +53,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     dtpFechaEvento.Enabled = false;
-                    dtpFin.Enabled = true;
-                    dtpInicio.Enabled = true;
+                    //dtpFin.Enabled = true;
+                    //dtpInicio.Enabled = true;
                     txtNombre.Enabled = false;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -78,8 +77,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     dtpFechaEvento.Enabled = true;
-                    dtpFin.Enabled = true;
-                    dtpInicio.Enabled = true;
+                    //dtpFin.Enabled = true;
+                    //dtpInicio.Enabled = true;
                     txtNombre.Enabled = true;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = true;
@@ -101,8 +100,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = true;
                     dtpFechaEvento.Enabled = false;
-                    dtpFin.Enabled = true;
-                    dtpInicio.Enabled = true;
+                    //dtpFin.Enabled = true;
+                    //dtpInicio.Enabled = true;
                     txtNombre.Enabled = false;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -139,8 +138,8 @@ namespace ProyectoOOIA.Ventanas
             evento.fecha = dtpFechaEvento.Value;
             evento.estado = true;
             evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
-            evento.horaInicio = dtpInicio.Value;
-            evento.horaFina = dtpFin.Value;
+            //evento.horaInicio = dtpInicio.Value;
+            //evento.horaFina = dtpFin.Value;
             evento.id_coordinador = 12;
             evento.lugar = txtLugar.Text;
             //evento.ponentes = lista.ToArray();
