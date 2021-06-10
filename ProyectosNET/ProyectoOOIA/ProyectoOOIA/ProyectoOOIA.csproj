@@ -534,8 +534,8 @@
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.modificarAlumnoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CitaWS\CitaWS.wsdl" />
-    <None Include="Connected Services\CitaWS\CitaWS.xsd">
+    <None Include="Connected Services\CitaWS\CitaWS1.wsdl" />
+    <None Include="Connected Services\CitaWS\CitaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.cita.datasource">
@@ -556,8 +556,8 @@
     <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.modificarCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CodigoAtencionWS\CodigoWS.wsdl" />
-    <None Include="Connected Services\CodigoAtencionWS\CodigoWS.xsd">
+    <None Include="Connected Services\CodigoAtencionWS\CodigoWS1.wsdl" />
+    <None Include="Connected Services\CodigoAtencionWS\CodigoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CodigoAtencionWS\ProyectoOOIA.CodigoAtencionWS.codigoAtencion.datasource">
@@ -572,8 +572,8 @@
     <None Include="Connected Services\CodigoAtencionWS\ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CompromisoWS\ComprimisoWS.wsdl" />
-    <None Include="Connected Services\CompromisoWS\ComprimisoWS.xsd">
+    <None Include="Connected Services\CompromisoWS\ComprimisoWS1.wsdl" />
+    <None Include="Connected Services\CompromisoWS\ComprimisoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CompromisoWS\ProyectoOOIA.CompromisoWS.compromiso.datasource">
@@ -588,8 +588,8 @@
     <None Include="Connected Services\CompromisoWS\ProyectoOOIA.CompromisoWS.modificarCompromisoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CoordinadorEventoWS\CoordinadorEventoWS.wsdl" />
-    <None Include="Connected Services\CoordinadorEventoWS\CoordinadorEventoWS.xsd">
+    <None Include="Connected Services\CoordinadorEventoWS\CoordinadorEventoWS1.wsdl" />
+    <None Include="Connected Services\CoordinadorEventoWS\CoordinadorEventoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CoordinadorEventoWS\ProyectoOOIA.CoordinadorEventoWS.eliminarCoordinadorEventoResponse.datasource">
@@ -626,8 +626,8 @@
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno.wsdl" />
-    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno.xsd">
+    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno1.wsdl" />
+    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse.datasource">
@@ -645,8 +645,8 @@
     <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.modificarEncuestaEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoWS\EventoWS.wsdl" />
-    <None Include="Connected Services\EventoWS\EventoWS.xsd">
+    <None Include="Connected Services\EventoWS\EventoWS1.wsdl" />
+    <None Include="Connected Services\EventoWS\EventoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.eliminarEventoResponse.datasource">
@@ -664,8 +664,8 @@
     <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.modificarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\HorarioWS\HorarioWS.wsdl" />
-    <None Include="Connected Services\HorarioWS\HorarioWS.xsd">
+    <None Include="Connected Services\HorarioWS\HorarioWS1.wsdl" />
+    <None Include="Connected Services\HorarioWS\HorarioWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\HorarioWS\ProyectoOOIA.HorarioWS.eliminarHorarioResponse.datasource">
