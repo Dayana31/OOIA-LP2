@@ -232,7 +232,7 @@ namespace ProyectoOOIA.EventoWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("ponentes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
-        public persona[] ponentes {
+        public AlumnoWS.persona[] ponentes {
             get {
                 return this.ponentesField;
             }

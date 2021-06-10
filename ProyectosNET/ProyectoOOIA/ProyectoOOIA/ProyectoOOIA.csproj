@@ -155,11 +155,23 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarProfesor.Designer.cs">
+      <DependentUpon>frmBuscarProfesor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarAlumno.Designer.cs">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarProfesor.Designer.cs">
+      <DependentUpon>frmCargarProfesor.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarAlumno.cs">
       <SubType>Form</SubType>
@@ -394,8 +406,14 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarProfesor.resx">
+      <DependentUpon>frmBuscarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarAlumno.resx">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarProfesor.resx">
+      <DependentUpon>frmCargarProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarAlumno.resx">
       <DependentUpon>frmCargarAlumno.cs</DependentUpon>
@@ -515,8 +533,8 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmDetalleEvento.resx">
       <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AlumnoWS\AlumnoWS1.wsdl" />
-    <None Include="Connected Services\AlumnoWS\AlumnoWS1.xsd">
+    <None Include="Connected Services\AlumnoWS\AlumnoWS.wsdl" />
+    <None Include="Connected Services\AlumnoWS\AlumnoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.alumno.datasource">
@@ -607,8 +625,8 @@
     <None Include="Connected Services\CoordinadorEventoWS\ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.wsdl" />
-    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.xsd">
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS.wsdl" />
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.eliminarEspecialidadResponse.datasource">
@@ -702,8 +720,8 @@
     <None Include="Connected Services\InvitadoWS\ProyectoOOIA.InvitadoWS.modificarInvitadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProfesorWS\ProfesorWS1.wsdl" />
-    <None Include="Connected Services\ProfesorWS\ProfesorWS1.xsd">
+    <None Include="Connected Services\ProfesorWS\ProfesorWS.wsdl" />
+    <None Include="Connected Services\ProfesorWS\ProfesorWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.eliminarProfesorResponse.datasource">
