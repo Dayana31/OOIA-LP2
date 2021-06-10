@@ -5,9 +5,11 @@ drop table if exists curso_llevado;
 drop table if exists curso;
 drop table if exists encuesta;
 drop table if exists compromiso;
-drop table if exists cita_ooia;
+drop table if exists cita;
 drop table if exists horario_asesor;
 drop table if exists horario;
+
+
 drop table if exists codigo_atencion;
 
 drop table if exists archivo;
@@ -30,7 +32,6 @@ drop table if exists especialidad;
 drop table if exists miembro_pucp;
 drop table if exists persona;
 
-
 create table persona(
 	id_persona int auto_increment,
     nombre varchar(150),
@@ -46,7 +47,7 @@ create table miembro_pucp(
 	id_miembro_pucp int auto_increment,
     fid_persona int,
     usuario_pucp varchar(150),
-    contraseña varchar(150),
+    password varchar(150),
     fecha_de_inclusion date,
     imagen_perfil longblob,
     primary key (id_miembro_pucp),
@@ -185,7 +186,7 @@ create table codigo_atencion(
 )engine = innodb;
 
 
-create table cita_ooia(
+create table cita(
      id_cita int auto_increment,
 	fid_alumno int,
     fid_horario int,
@@ -217,7 +218,7 @@ create table compromiso(
     fid_cita int,
     descripcion varchar(300),
     primary key(id_compromiso,fid_cita),
-    foreign key(fid_cita) references cita_ooia(id_cita)
+    foreign key(fid_cita) references cita(id_cita)
 )engine = innodb;
 
 create table tipo_tramite(
