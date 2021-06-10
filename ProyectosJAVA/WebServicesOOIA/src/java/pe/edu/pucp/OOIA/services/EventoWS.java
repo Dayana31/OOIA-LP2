@@ -29,10 +29,10 @@ public class EventoWS {
     }
 
     @WebMethod(operationName = "listarEvento")
-    public ArrayList<Evento> listarEvento() {
+    public ArrayList<Evento> listarEvento(@WebParam(name = "nombre")String nombre) {
         ArrayList<Evento> lista= new ArrayList<>();
         try {
-            lista=evento.listar();
+            lista=evento.listar(nombre);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

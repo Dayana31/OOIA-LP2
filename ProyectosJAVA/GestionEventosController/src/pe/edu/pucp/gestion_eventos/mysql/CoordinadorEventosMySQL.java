@@ -62,7 +62,7 @@ public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
             
-            cs = con.prepareCall("call INSERTAR_COORDINADOR(?,?,?,?,?,?,?,?)");
+            cs = con.prepareCall("call INSERTAR_COORDINADOR(?,?,?,?,?,?,?,?,?)");
             //SETEAMOS los parametros
             
             //Insertamos en persona
@@ -73,7 +73,8 @@ public class CoordinadorEventosMySQL implements CoordinadorEventosDAO{
             cs.setInt("_edad", coordinador.getEdad());
             cs.setString("_direccion", coordinador.getDireccion());
             //Insertamos en miembro_pucp
-            cs.setString("_usuario_pucp", coordinador.getUsuario_pucp());
+            cs.setString("_usuario", coordinador.getUsuario_pucp());
+            cs.setString("_password", coordinador.getContraseña());
             cs.setDate("_fecha_de_inclusion", new java.sql.Date(coordinador.getFecha_inclusion().getTime()));
             
             //Ejecutamos el procedimiento
