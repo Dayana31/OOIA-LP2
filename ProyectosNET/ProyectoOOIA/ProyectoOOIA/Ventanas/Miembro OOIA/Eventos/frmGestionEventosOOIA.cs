@@ -21,7 +21,7 @@ namespace ProyectoOOIA.Ventanas
         ErrorProvider error = new ErrorProvider();
         private EventoWS.EventoWSClient eventoDao;
         private EventoWS.evento evento;
-        private BindingList<Object> lista = new BindingList<Object>();
+        private BindingList<EventoWS.persona> lista = new BindingList<EventoWS.persona>();
         private ProfesorWS.profesor profesor = null;
         private AlumnoWS.alumno alumno = null;
         private InvitadoWS.invitado invitado = null;
@@ -54,8 +54,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     dtpFechaEvento.Enabled = false;
-                    txtHoraFin.Enabled= false;
-                    txtHoraInicio.Enabled = false;
+                    dtpFin.Enabled = true;
+                    dtpInicio.Enabled = true;
                     txtNombre.Enabled = false;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -78,8 +78,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     dtpFechaEvento.Enabled = true;
-                    txtHoraFin.Enabled = true;
-                    txtHoraInicio.Enabled = true;
+                    dtpFin.Enabled = true;
+                    dtpInicio.Enabled = true;
                     txtNombre.Enabled = true;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = true;
@@ -101,8 +101,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = true;
                     dtpFechaEvento.Enabled = false;
-                    txtHoraFin.Enabled = false;
-                    txtHoraInicio.Enabled = false;
+                    dtpFin.Enabled = true;
+                    dtpInicio.Enabled = true;
                     txtNombre.Enabled = false;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -139,18 +139,25 @@ namespace ProyectoOOIA.Ventanas
             evento.fecha = dtpFechaEvento.Value;
             evento.estado = true;
             evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
-            int hora=0, minuto=0;
-            
-
-
-            evento.id_coordinador = 0;
+            evento.horaInicio = dtpInicio.Value;
+            evento.horaFina = dtpFin.Value;
+            evento.id_coordinador = 12;
             evento.lugar = txtLugar.Text;
-            evento.ponentes = (persona[])lista.ToArray();
+            evento.ponentes = lista.ToArray();
             DialogResult dr =
                 MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",
                     MessageBoxButtons.YesNo, MessageBoxIcon.None);
-            if(dr==DialogResult.Yes)
-                eventoDao.insertarEvento(evento);
+            if (dr == DialogResult.Yes)
+            {
+                if (eventoDao.insertarEvento(evento)==1)
+                {
+                    MessageBox.Show("Exito");
+                }
+                else MessageBox.Show("Fallo");
+            }
+        
+
+
 
 
             
@@ -211,7 +218,9 @@ namespace ProyectoOOIA.Ventanas
             {
                 invitado = mostrar.Invitado;
                 txtNombre.Text = invitado.nombre;
-                lista.Add(invitado);
+                
+                aux.id_persona = invitado.id_persona;
+                lista.Add(aux);
                 dgvPonentes.Rows[numeroElementos].Cells[0].Value = invitado.nombre;
 
             }
@@ -219,7 +228,8 @@ namespace ProyectoOOIA.Ventanas
             {
                 profesor = mostrar.Profesor;
                 txtNombre.Text = profesor.nombre;
-                lista.Add(profesor);
+                AlumnoWS.alumno aux = new AlumnoWS.alumno();
+                aux.id_persona = profesor.id_persona;
                 dgvPonentes.Rows[numeroElementos].Cells[0].Value = profesor.nombre;
             }
             else if(tipo==2)
@@ -260,54 +270,29 @@ namespace ProyectoOOIA.Ventanas
 
         private void txtHoraInicio_Enter(object sender, EventArgs e)
         {
-            if (txtHoraInicio.Text == "Ejempo 15:30")
-            {
-                txtHoraInicio.Text = "";
-                txtHoraInicio.ForeColor = Color.Black;
-            }
+           
             error.Clear();
         }
 
         private void txtHoraInicio_Leave(object sender, EventArgs e)
         {
 
-            if (txtHoraInicio.Text == "")
-            {
-                txtHoraInicio.Text = "Ejempo 15:30";
-                txtHoraInicio.ForeColor = Color.Gray;
-            }
-            string patron = @"\s?\d?\d:\d\d";
-            Regex regex = new Regex(patron);
-            if (!regex.IsMatch(txtHoraInicio.Text))
-            {
-                error.SetError(txtHoraInicio,"Formato de hora incorrecto");
-            }
+            
+           
         }
         private void txtHoraFin_Enter(object sender, EventArgs e)
         {
-            if (txtHoraFin.Text == "Ejempo 15:30")
-            {
-                txtHoraFin.Text = "";
-                txtHoraFin.ForeColor = Color.Black;
-            }
+           
             error.Clear();
         }
 
         private void txtHoraFin_Leave(object sender, EventArgs e)
         {
-            if (txtHoraFin.Text == "")
-            {
-                txtHoraFin.Text = "Ejempo 15:30";
-                txtHoraFin.ForeColor = Color.Gray;
-            }
+            
             string patron = @"\s?\d?\d:\d\d";
             Regex regex = new Regex(patron);
 
 
-            if (!regex.IsMatch(txtHoraFin.Text))
-            {
-                error.SetError(txtHoraFin, "Formato de hora incorrecto");
-            }
         }
 
         private void txtLugar_Enter(object sender, EventArgs e)

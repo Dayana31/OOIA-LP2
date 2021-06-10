@@ -515,8 +515,8 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmDetalleEvento.resx">
       <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AlumnoWS\AlumnoWS1.wsdl" />
-    <None Include="Connected Services\AlumnoWS\AlumnoWS1.xsd">
+    <None Include="Connected Services\AlumnoWS\AlumnoWS.wsdl" />
+    <None Include="Connected Services\AlumnoWS\AlumnoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.alumno.datasource">
@@ -607,8 +607,8 @@
     <None Include="Connected Services\CoordinadorEventoWS\ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.wsdl" />
-    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.xsd">
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS.wsdl" />
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.eliminarEspecialidadResponse.datasource">
@@ -702,8 +702,8 @@
     <None Include="Connected Services\InvitadoWS\ProyectoOOIA.InvitadoWS.modificarInvitadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProfesorWS\ProfesorWS1.wsdl" />
-    <None Include="Connected Services\ProfesorWS\ProfesorWS1.xsd">
+    <None Include="Connected Services\ProfesorWS\ProfesorWS.wsdl" />
+    <None Include="Connected Services\ProfesorWS\ProfesorWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.eliminarProfesorResponse.datasource">
