@@ -6,6 +6,8 @@
 package services;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -21,6 +23,7 @@ import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
 import pe.edu.pucp.gestion_humana.model.Alumno;
 import pe.edu.pucp.gestion_humana.model.Invitado;
 import pe.edu.pucp.gestion_humana.model.Profesor;
+import pruebamysql.PruebaMySql;
 
 /**
  *
@@ -29,12 +32,12 @@ import pe.edu.pucp.gestion_humana.model.Profesor;
 @WebService(serviceName = "GesionEventoWS")
 public class GesionEventoWS {
 
-    private EventoDAO evento=new EventoMySQL();
+    private EventoDAO eventoSQL=new EventoMySQL();
     private EventoAlumnoDAO eventoAl=new EventoAlumnoMySQL();
     private CoordinadorEventosDAO coordinador=new CoordinadorEventosMySQL();;
     
     public GesionEventoWS() {
-    evento=new EventoMySQL();
+    eventoSQL=new EventoMySQL();
     eventoAl=new EventoAlumnoMySQL();
     coordinador=new CoordinadorEventosMySQL();
         
@@ -44,7 +47,7 @@ public class GesionEventoWS {
     public ArrayList<Evento> listarEvento(@WebParam(name = "nombre")String nombre) {
         ArrayList<Evento> lista= new ArrayList<>();
         try {
-            lista=evento.listar(nombre);
+            lista=eventoSQL.listar(nombre);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -54,10 +57,11 @@ public class GesionEventoWS {
     public int insertarEvento(@WebParam(name = "evento")Evento evento){
         int resultado=0;
         try {
-        //System.out.println(evento.getNombre());
-            resultado=this.evento.insertar(evento);
+          
+            resultado=this.eventoSQL.insertar(evento);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+           
         }
         return resultado;
     }
@@ -65,7 +69,7 @@ public class GesionEventoWS {
     public int modificarEvento(@WebParam(name = "evento")Evento evento){
         int resultado=0;
         try {
-            resultado=this.evento.modificar(evento);
+            resultado=this.eventoSQL.modificar(evento);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -75,7 +79,7 @@ public class GesionEventoWS {
     public int eliminarEvento(@WebParam(name = "evento")Evento evento){
         int resultado=0;
         try {
-            resultado=this.evento.eliminar(evento.getId_evento());
+            resultado=this.eventoSQL.eliminar(evento.getId_evento());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

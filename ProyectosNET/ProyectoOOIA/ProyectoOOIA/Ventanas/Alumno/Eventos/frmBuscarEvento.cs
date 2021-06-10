@@ -23,6 +23,12 @@ namespace ProyectoOOIA.Ventanas
             this.Close();
         }
 
+        public evento Evento
+        {
+            get => evento;
+            set => evento = value;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             //dgvEventos.DataSource = new EventosWS.EventoWSClient().listarEvento(txtNombre.Text);
@@ -38,6 +44,15 @@ namespace ProyectoOOIA.Ventanas
             dgvEventos.Rows[e.RowIndex].Cells[1].Value = evento.fecha;
             dgvEventos.Rows[e.RowIndex].Cells[2].Value = evento.horaInicio.TimeOfDay;
             dgvEventos.Rows[e.RowIndex].Cells[3].Value = evento.horaFina.TimeOfDay;
+        }
+
+        private void btnSeleccionar_Click(object sender, EventArgs e)
+        {
+            if (dgvEventos.CurrentRow.Index >= 0)
+            {
+                evento=dgvEventos.CurrentRow.DataBoundItem as GestionEventoWS.evento;
+                this.Dispose();
+            }
         }
     }
 }

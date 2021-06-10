@@ -31,6 +31,10 @@ namespace ProyectoOOIA.Ventanas
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEventos = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -38,10 +42,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.lblBuscarEventos = new System.Windows.Forms.Label();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEventos)).BeginInit();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
@@ -75,6 +75,38 @@ namespace ProyectoOOIA.Ventanas
             this.dgvEventos.TabIndex = 36;
             this.dgvEventos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvEventos_CellFormatting);
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 330;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha";
+            this.fecha.MinimumWidth = 6;
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.Width = 145;
+            // 
+            // horaInicio
+            // 
+            this.horaInicio.HeaderText = "Hora Inicio";
+            this.horaInicio.MinimumWidth = 6;
+            this.horaInicio.Name = "horaInicio";
+            this.horaInicio.ReadOnly = true;
+            this.horaInicio.Width = 150;
+            // 
+            // horaFin
+            // 
+            this.horaFin.HeaderText = "Hora Fin";
+            this.horaFin.MinimumWidth = 6;
+            this.horaFin.Name = "horaFin";
+            this.horaFin.ReadOnly = true;
+            this.horaFin.Width = 150;
+            // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.Font = new System.Drawing.Font("Gill Sans MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,6 +116,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnSeleccionar.TabIndex = 35;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
+            this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
             // btnBuscar
             // 
@@ -148,38 +181,6 @@ namespace ProyectoOOIA.Ventanas
             this.lblBuscarEventos.Size = new System.Drawing.Size(194, 30);
             this.lblBuscarEventos.TabIndex = 38;
             this.lblBuscarEventos.Text = "Buscador de Eventos";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 330;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "Fecha";
-            this.fecha.MinimumWidth = 6;
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.Width = 145;
-            // 
-            // horaInicio
-            // 
-            this.horaInicio.HeaderText = "Hora Inicio";
-            this.horaInicio.MinimumWidth = 6;
-            this.horaInicio.Name = "horaInicio";
-            this.horaInicio.ReadOnly = true;
-            this.horaInicio.Width = 150;
-            // 
-            // horaFin
-            // 
-            this.horaFin.HeaderText = "Hora Fin";
-            this.horaFin.MinimumWidth = 6;
-            this.horaFin.Name = "horaFin";
-            this.horaFin.ReadOnly = true;
-            this.horaFin.Width = 150;
             // 
             // frmBuscarEventoAlumno
             // 

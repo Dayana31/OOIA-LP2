@@ -8,6 +8,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.sql.Time;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import pe.edu.pucp.config.DBManager;
 
@@ -67,6 +69,7 @@ public class EventoMySQL implements EventoDAO{
         int resultado = 0;
         
         try{
+           
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
             
@@ -85,9 +88,9 @@ public class EventoMySQL implements EventoDAO{
             cs.setTime("final", new Time(evento.getHoraFina().getTime()));
             //Ejecutamos el procedimiento
             cs.executeUpdate();
-            evento.setId_evento(cs.getInt("_id_evento"));
-            cs=con.prepareCall("call insertar_evento_ponente(?,?)");
+            evento.setId_evento(cs.getInt("_id_evento")); 
             for(Persona persona:evento.getPonentes()){
+                cs=con.prepareCall("call insertar_evento_ponente(?,?)");    
                 cs.setInt("persona", persona.getId_persona());
                 cs.setInt("evento", evento.getId_evento());
                 cs.executeUpdate();
@@ -95,7 +98,8 @@ public class EventoMySQL implements EventoDAO{
             resultado = 1;
             cs.close();
         }catch(Exception ex){
-            System.out.println(ex.getMessage());
+            System.out.println(ex.getMessage() + "Clase");
+            Logger.getLogger(EventoMySQL.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());};
         }

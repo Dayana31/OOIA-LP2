@@ -117,9 +117,18 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            new frmBuscarEventoAlumno().Show();
+            frmBuscarEventoAlumno aux=new frmBuscarEventoAlumno();
+            aux.ShowDialog();
             componentes(Estado.Busqueda);
-            
+            evento = aux.Evento;
+            txtNombre.Text = evento.nombre;
+            txtDescripcion.Text = "Descripcion";
+            txtLugar.Text = evento.lugar;
+            txtIdEvento.Text = evento.id_evento.ToString();
+            dtpFechaEvento.Value = evento.fecha;
+            dtpInicio.Value = evento.horaInicio;
+            dtpFin.Value = evento.horaFina;
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -130,45 +139,49 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            validacionDatos();
-            evento = new GestionEventoWS.evento();
-            eventoDao = new GestionEventoWS.GesionEventoWSClient();
-            evento.nombre = txtNombre.Text;
-            evento.fecha = dtpFechaEvento.Value;
-            evento.estado = true;
-            evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
-            evento.horaInicio = dtpInicio.Value;
-            evento.horaFina = dtpFin.Value;
-            evento.id_coordinador = 11;
-            evento.lugar = txtLugar.Text;
-            
-            evento.ponentes = lista.ToArray() ;
-            DialogResult dr =
-                MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.None);
-            if (dr == DialogResult.Yes)
+            if (validacionDatos()==1)
             {
-                if (eventoDao.insertarEvento(evento)==1)
+                evento = new GestionEventoWS.evento();
+                eventoDao = new GestionEventoWS.GesionEventoWSClient();
+                evento.nombre = txtNombre.Text;
+                evento.fecha = dtpFechaEvento.Value;
+                evento.estado = true;
+                evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
+                evento.horaInicio = dtpInicio.Value;
+                evento.horaFina = dtpFin.Value;
+                evento.id_coordinador = 11;
+                evento.lugar = txtLugar.Text;
+
+                evento.ponentes = lista.ToArray();
+                DialogResult dr =
+                    MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.None);
+                if (dr == DialogResult.Yes)
                 {
-                    MessageBox.Show("Exito");
+                    if (eventoDao.insertarEvento(evento) == 1)
+                    {
+                        MessageBox.Show("Exito");
+                    }
+                    else MessageBox.Show("Fallo");
                 }
-                else MessageBox.Show("Fallo");
             }
-        
 
 
 
 
-            
+
         }
 
-        private void validacionDatos()
+        private int validacionDatos()
         {
             if (lista.Count == 0)
+            {
                 MessageBox.Show("Debe ingresar al menos un ponente", "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+                return 0;
+            }
 
-
+            return 1;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -192,12 +205,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea modificar este evento?", "Confirmacion", MessageBoxButtons.OKCancel,
-                MessageBoxIcon.Question) == DialogResult.OK)
-            {
-                MessageBox.Show("Evento Actualizado", "Exito!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                componentes(Estado.Nuevo);
-            }
+            componentes(Estado.Nuevo);
             
         }
 

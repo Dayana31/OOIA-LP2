@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/CodigoWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+  <message name="insertarCodigo">
+    <part name="parameters" element="tns:insertarCodigo" />
+  </message>
+  <message name="insertarCodigoResponse">
+    <part name="parameters" element="tns:insertarCodigoResponse" />
+  </message>
   <message name="modificarCodigo">
     <part name="parameters" element="tns:modificarCodigo" />
   </message>
@@ -17,13 +23,11 @@
   <message name="listarCodigoResponse">
     <part name="parameters" element="tns:listarCodigoResponse" />
   </message>
-  <message name="insertarCodigo">
-    <part name="parameters" element="tns:insertarCodigo" />
-  </message>
-  <message name="insertarCodigoResponse">
-    <part name="parameters" element="tns:insertarCodigoResponse" />
-  </message>
   <portType name="CodigoAtencionWS">
+    <operation name="insertarCodigo">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoRequest" message="tns:insertarCodigo" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoResponse" message="tns:insertarCodigoResponse" />
+    </operation>
     <operation name="modificarCodigo">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoRequest" message="tns:modificarCodigo" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoResponse" message="tns:modificarCodigoResponse" />
@@ -32,13 +36,18 @@
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/listarCodigoRequest" message="tns:listarCodigo" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/listarCodigoResponse" message="tns:listarCodigoResponse" />
     </operation>
-    <operation name="insertarCodigo">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoRequest" message="tns:insertarCodigo" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoResponse" message="tns:insertarCodigoResponse" />
-    </operation>
   </portType>
   <binding name="CodigoAtencionWSPortBinding" type="tns:CodigoAtencionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarCodigo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="modificarCodigo">
       <soap:operation soapAction="" />
       <input>
@@ -49,15 +58,6 @@
       </output>
     </operation>
     <operation name="listarCodigo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarCodigo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

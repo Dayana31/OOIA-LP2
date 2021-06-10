@@ -5,9 +5,14 @@
  */
 package pruebamysql;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pe.edu.pucp.gestion_academica.controller.mysql.CategoriaMySQL;
 import pe.edu.pucp.gestion_academica.controller.mysql.CursoLlevadoMySQL;
 import pe.edu.pucp.gestion_academica.controller.mysql.CursoMySQL;
@@ -83,11 +88,7 @@ public class PruebaMySql {
        //new EventoMySQL().insertar(evento);
                Evento ev = new EventoMySQL().listar("").get(0);
                 System.out.println(ev.getNombre()+" "+ev.getId_evento());
-//                for(Persona per:ev.getPonentes()){
-//                    System.out.println(per.getId_persona()+" "+per.getNombre());
-                
-   //new EventoMySQL().modificar(evento);
-    //new EventoMySQL().eliminar(evento.getId_evento());
+        
     }
     
     private static void pruebaCursoLlevado(){

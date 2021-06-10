@@ -209,22 +209,22 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarEspecialidad">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarEspecialidadResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarPsicologo">
     <xs:sequence>
       <xs:element minOccurs="0" name="invitado" type="tns:psicologo" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarPsicologoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEspecialidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEspecialidadResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -274,22 +274,22 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarPsicologo">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="invitado" type="tns:psicologo" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarPsicologoResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarProfesores">
     <xs:sequence>
       <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarProfesoresResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPsicologo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="invitado" type="tns:psicologo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPsicologoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -302,6 +302,14 @@
   <xs:complexType name="eliminarEspecialidadResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarInvitado">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarInvitadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:invitado" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPsicologo">
@@ -318,14 +326,6 @@
   <xs:complexType name="listarAlumnoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarInvitado">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarInvitadoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:invitado" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarProfesores">
@@ -346,14 +346,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarEspecialidad">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarEspecialidadResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:especialidad" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarInvitado">
     <xs:sequence>
       <xs:element minOccurs="0" name="invitado" type="tns:invitado" />
@@ -362,6 +354,14 @@
   <xs:complexType name="modificarInvitadoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEspecialidad">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarEspecialidadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:especialidad" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarAlumno">
