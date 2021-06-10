@@ -17,10 +17,11 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmGestionEventosOOIA : Form
     {
+        
         ErrorProvider error = new ErrorProvider();
-        private EventoWS.EventoWSClient eventoDao;
-        private EventoWS.evento evento;
-        private BindingList<EventoWS.persona> lista = new BindingList<EventoWS.persona>();
+        private GestionEventoWS.GesionEventoWS eventoDao;
+        private GestionEventoWS.evento evento;
+        private BindingList<GesionEventoWS> lista = new BindingList<EventoWS.persona>();
         private ProfesorWS.profesor profesor = null;
         private AlumnoWS.alumno alumno = null;
         private InvitadoWS.invitado invitado = null;
