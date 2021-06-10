@@ -42,5 +42,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 this.DialogResult = DialogResult.OK;
             }
         }
+
+        private void dgvAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            AlumnoWS.alumno data = dgvAlumnos.Rows[e.RowIndex].DataBoundItem
+          as AlumnoWS.alumno;
+            dgvAlumnos.Rows[e.RowIndex].Cells["Especialidad"].Value = data.especialidad.nombre_especialidad;
+        }
     }
 }

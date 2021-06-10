@@ -31,7 +31,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarAlumno));
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.txtHeader = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -86,7 +85,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.pnlHeader.Controls.Add(this.btnLogout);
             this.pnlHeader.Controls.Add(this.btnBack);
             this.pnlHeader.Controls.Add(this.txtHeader);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -95,28 +93,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(991, 94);
             this.pnlHeader.TabIndex = 1;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackgroundImage = global::ProyectoOOIA.Properties.Resources.log_out__1_;
-            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(917, 23);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(47, 42);
-            this.btnLogout.TabIndex = 14;
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnBack
             // 
@@ -229,7 +205,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlDatos.Controls.Add(this.txtIdAlumno);
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlDatos.Location = new System.Drawing.Point(4, 4);
-            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(696, 305);
             this.pnlDatos.TabIndex = 3;
@@ -237,7 +213,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // txtUsuario
             // 
             this.txtUsuario.Location = new System.Drawing.Point(203, 37);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(192, 22);
             this.txtUsuario.TabIndex = 13;
@@ -245,7 +221,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(203, 69);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(192, 22);
             this.txtPassword.TabIndex = 12;
@@ -287,7 +263,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.cbEspecialidad.FormattingEnabled = true;
             this.cbEspecialidad.Location = new System.Drawing.Point(203, 260);
-            this.cbEspecialidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEspecialidad.Margin = new System.Windows.Forms.Padding(4);
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(237, 24);
             this.cbEspecialidad.TabIndex = 6;
@@ -317,7 +293,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(203, 228);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(132, 22);
             this.txtCodigo.TabIndex = 3;
@@ -347,7 +323,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // txtIdAlumno
             // 
             this.txtIdAlumno.Location = new System.Drawing.Point(203, 196);
-            this.txtIdAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdAlumno.Name = "txtIdAlumno";
             this.txtIdAlumno.Size = new System.Drawing.Size(132, 22);
             this.txtIdAlumno.TabIndex = 0;
@@ -358,7 +334,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabControl.Controls.Add(this.tabAlumno);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl.Location = new System.Drawing.Point(0, 121);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(991, 342);
@@ -368,9 +344,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.tabPersona.Controls.Add(this.pnlPersona);
             this.tabPersona.Location = new System.Drawing.Point(4, 25);
-            this.tabPersona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPersona.Margin = new System.Windows.Forms.Padding(4);
             this.tabPersona.Name = "tabPersona";
-            this.tabPersona.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPersona.Padding = new System.Windows.Forms.Padding(4);
             this.tabPersona.Size = new System.Drawing.Size(983, 313);
             this.tabPersona.TabIndex = 1;
             this.tabPersona.Text = "Datos Persona";
@@ -391,7 +367,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlPersona.Controls.Add(this.lblPersona);
             this.pnlPersona.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlPersona.Location = new System.Drawing.Point(4, 4);
-            this.pnlPersona.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPersona.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPersona.Name = "pnlPersona";
             this.pnlPersona.Size = new System.Drawing.Size(975, 299);
             this.pnlPersona.TabIndex = 9;
@@ -399,7 +375,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // txtCorreo
             // 
             this.txtCorreo.Location = new System.Drawing.Point(187, 165);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(360, 22);
             this.txtCorreo.TabIndex = 21;
@@ -418,7 +394,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // txtDireccion
             // 
             this.txtDireccion.Location = new System.Drawing.Point(187, 133);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(360, 22);
             this.txtDireccion.TabIndex = 19;
@@ -437,7 +413,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // txtEdad
             // 
             this.txtEdad.Location = new System.Drawing.Point(187, 100);
-            this.txtEdad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(132, 22);
             this.txtEdad.TabIndex = 17;
@@ -456,7 +432,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(187, 68);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(360, 22);
             this.txtNombre.TabIndex = 15;
@@ -475,7 +451,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // txtDni
             // 
             this.txtDni.Location = new System.Drawing.Point(187, 36);
-            this.txtDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDni.Margin = new System.Windows.Forms.Padding(4);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(132, 22);
             this.txtDni.TabIndex = 13;
@@ -508,9 +484,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabAlumno.Controls.Add(this.pbPerfil);
             this.tabAlumno.Controls.Add(this.pnlDatos);
             this.tabAlumno.Location = new System.Drawing.Point(4, 25);
-            this.tabAlumno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabAlumno.Margin = new System.Windows.Forms.Padding(4);
             this.tabAlumno.Name = "tabAlumno";
-            this.tabAlumno.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabAlumno.Padding = new System.Windows.Forms.Padding(4);
             this.tabAlumno.Size = new System.Drawing.Size(983, 313);
             this.tabAlumno.TabIndex = 0;
             this.tabAlumno.Text = "Datos Alumno";
@@ -520,7 +496,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.btnImagen.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImagen.Location = new System.Drawing.Point(749, 263);
-            this.btnImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnImagen.Margin = new System.Windows.Forms.Padding(4);
             this.btnImagen.Name = "btnImagen";
             this.btnImagen.Size = new System.Drawing.Size(185, 39);
             this.btnImagen.TabIndex = 5;
@@ -532,7 +508,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.pbPerfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbPerfil.Location = new System.Drawing.Point(708, 7);
-            this.pbPerfil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbPerfil.Margin = new System.Windows.Forms.Padding(4);
             this.pbPerfil.Name = "pbPerfil";
             this.pbPerfil.Size = new System.Drawing.Size(261, 248);
             this.pbPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -551,7 +527,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pnlHeader);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmCargarAlumno";
             this.Text = "Cargar Alumno";
             this.pnlHeader.ResumeLayout(false);
@@ -574,7 +550,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         #endregion
 
         private System.Windows.Forms.Panel pnlHeader;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.Label txtHeader;
         private System.Windows.Forms.ToolStrip toolStrip1;
