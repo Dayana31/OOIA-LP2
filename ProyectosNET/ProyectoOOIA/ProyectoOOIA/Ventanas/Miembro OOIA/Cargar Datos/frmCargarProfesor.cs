@@ -7,20 +7,20 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
-    public partial class frmCargarAlumno : Form
+    public partial class frmCargarProfesor: Form
     {
         private EspecialidadWS.EspecialidadWSClient daoEspecialidad;
-        private AlumnoWS.AlumnoWSClient daoAlumno;
-        private AlumnoWS.alumno alumno;
+        private ProfesorWS.ProfesorWSClient daoProfesor;
+        private ProfesorWS.profesor profesor;
         private Estado estado;
 
-        public frmCargarAlumno()
+        public frmCargarProfesor()
         {
             InitializeComponent();
             estado = Estado.Inicial;
             cambiarEstado();
             daoEspecialidad = new EspecialidadWS.EspecialidadWSClient();
-            daoAlumno = new AlumnoWS.AlumnoWSClient();
+            daoProfesor = new ProfesorWS.ProfesorWSClient();
             cbEspecialidad.DataSource = new BindingList<EspecialidadWS.especialidad>
                 (daoEspecialidad.listarEsppecialidad().ToList());
             cbEspecialidad.DisplayMember = "nombre_especialidad";
@@ -41,9 +41,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             txtUsuario.Text = "";
             txtPassword.Text = "";
             pbPerfil.Image = null;
-            /*Alumno*/
-            txtIdAlumno.Text = "";
-            txtCodigo.Text = "";
+            /*Profesor*/
+            txtIdProfesor.Text = "";
+            txtFacultad.Text = "";
+            txtCategoria.Text = "";
             cbEspecialidad.SelectedIndex = -1;
         }
 
@@ -62,19 +63,18 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = false;
                     //Texto
                     /*Persona*/
-
                     txtDni.Enabled = false;
                     txtNombre.Enabled = false;
                     txtEdad.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtCorreo.Enabled = false;
                     /*Miembro PUCP*/
-
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
-                    /*Alumno*/
-                    txtIdAlumno.Enabled = false;
-                    txtCodigo.Enabled = false;
+                    /*Profesor*/
+                    txtIdProfesor.Enabled = false;
+                    txtFacultad.Enabled = false;
+                    txtCategoria.Enabled = false;
                     cbEspecialidad.Enabled = false;
                     break;
                 case Estado.Nuevo:
@@ -89,19 +89,18 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = true;
                     //Texto
                     /*Persona*/
-
                     txtDni.Enabled = true;
                     txtNombre.Enabled = true;
                     txtEdad.Enabled = true;
                     txtDireccion.Enabled = true;
                     txtCorreo.Enabled = true;
                     /*Miembro PUCP*/
-
                     txtUsuario.Enabled = true;
                     txtPassword.Enabled = true;
-                    /*Alumno*/
-                    txtIdAlumno.Enabled = false;
-                    txtCodigo.Enabled = true;
+                    /*Profesor*/
+                    txtIdProfesor.Enabled = false;
+                    txtFacultad.Enabled = true;
+                    txtCategoria.Enabled = true;
                     cbEspecialidad.Enabled = true;
                     break;
                 case Estado.Busqueda:
@@ -115,19 +114,18 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     btnImagen.Enabled = false;
                     //Texto
                     /*Persona*/
-
                     txtDni.Enabled = false;
                     txtNombre.Enabled = false;
                     txtEdad.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtCorreo.Enabled = false;
                     /*Miembro PUCP*/
-
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
-                    /*Alumno*/
-                    txtIdAlumno.Enabled = false;
-                    txtCodigo.Enabled = false;
+                    /*Profesor*/
+                    txtIdProfesor.Enabled = false;
+                    txtFacultad.Enabled = false;
+                    txtCategoria.Enabled = false;
                     cbEspecialidad.Enabled = false;
                     break;
             }
@@ -154,26 +152,27 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         /*Botones de Toolstrip*/
 
-        public void fillText(AlumnoWS.alumno alu)
+        public void fillText(ProfesorWS.profesor profe)
         {
             //Persona
-            txtDni.Text = alu.dni;
-            txtNombre.Text = alu.nombre;
-            txtEdad.Text = alu.edad.ToString();
-            txtDireccion.Text = alu.direccion;
-            txtCorreo.Text = alu.correo;
+            txtDni.Text = profe.dni;
+            txtNombre.Text = profe.nombre;
+            txtEdad.Text = profe.edad.ToString();
+            txtDireccion.Text = profe.direccion;
+            txtCorreo.Text = profe.correo;
             //Miembro PUCP
-            txtUsuario.Text = alu.usuario_pucp;
-            txtPassword.Text = alu.contraseña;
+            txtUsuario.Text = profe.usuario_pucp;
+            txtPassword.Text = profe.contraseña;
             //Alumno
-            txtIdAlumno.Text = alu.id_alumno.ToString();
-            txtCodigo.Text = alumno.codigo_pucp;
-            cbEspecialidad.SelectedValue = alu.especialidad.id_especialidad;
+            txtIdProfesor.Text = profe.id_profesor.ToString();
+            txtFacultad.Text = profe.facultad;
+            txtCategoria.Text = profe.categoria;
+            cbEspecialidad.SelectedValue = profe.especialidad.id_especialidad;
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            this.alumno = new AlumnoWS.alumno();
+            this.profesor = new ProfesorWS.profesor();
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
@@ -222,10 +221,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("No ha ingresado la contraseña", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            //Validación Alumno
-            if (txtCodigo.Text == "")
+            //Validación Profesor
+            if (txtFacultad.Text == "")
             {
-                MessageBox.Show("No ha ingresado el código", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No ha ingresado la facultad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (txtCategoria.Text == "")
+            {
+                MessageBox.Show("No ha ingresado la categoría", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (cbEspecialidad.SelectedIndex == -1)
@@ -234,36 +238,29 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 return;
             }
             //Persona
-
-            alumno.dni = txtDni.Text;
-            alumno.nombre = txtNombre.Text;
-            alumno.edad = Int32.Parse(txtEdad.Text);
-            alumno.direccion = txtDireccion.Text;
-            alumno.correo = txtCorreo.Text;
+            profesor.dni = txtDni.Text;
+            profesor.nombre = txtNombre.Text;
+            profesor.edad = Int32.Parse(txtEdad.Text);
+            profesor.direccion = txtDireccion.Text;
+            profesor.correo = txtCorreo.Text;
             //Miembro PUCP
-            alumno.usuario_pucp = txtUsuario.Text;
-            alumno.contraseña = txtPassword.Text;
-            alumno.fecha_inclusion = DateTime.Today.Date;
+            profesor.usuario_pucp = txtUsuario.Text;
+            profesor.contraseña = txtPassword.Text;
+            profesor.fecha_inclusion = DateTime.Today;
             //Alumno
-            alumno.codigo_pucp = txtCodigo.Text;
+            profesor.facultad = txtFacultad.Text;
+            profesor.categoria = txtCategoria.Text;
             EspecialidadWS.especialidad esp_selected = (EspecialidadWS.especialidad)cbEspecialidad.SelectedItem;
-            alumno.especialidad = new AlumnoWS.especialidad();
-            alumno.especialidad.id_especialidad = esp_selected.id_especialidad;
-            alumno.especialidad.nombre_especialidad = esp_selected.nombre_especialidad;
-            alumno.craest = 0;
-            alumno.creditos_aprobados = 0;
-            alumno.cursos_por_primera = 0;
-            alumno.cursos_por_segunda = 0;
-            alumno.cursos_por_tercera = 0;
-            alumno.imagenDePerfil = null;
-
+            profesor.especialidad = new ProfesorWS.especialidad();
+            profesor.especialidad.id_especialidad = esp_selected.id_especialidad;
+            profesor.especialidad.nombre_especialidad = esp_selected.nombre_especialidad;
             if (estado.Equals(Estado.Nuevo))
             {
-                int resultado = daoAlumno.insertarAlumno(alumno);
+                int resultado = daoProfesor.insertarProfesores(profesor);
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha registrado con exito", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtIdAlumno.Text = resultado.ToString();
+                    txtIdProfesor.Text = resultado.ToString();
                     this.estado = Estado.Inicial;
                     cambiarEstado();
                 }
@@ -271,7 +268,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             }
             else if (estado == Estado.Modificar)
             {
-                int resultado = daoAlumno.modificarAlumno(alumno);
+                int resultado = daoProfesor.m(profesor);
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -297,11 +294,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
-            frmBuscarAlumno frmBuscar = new frmBuscarAlumno();
+            frmBuscarProfesor frmBuscar = new frmBuscarProfesor();
             if (frmBuscar.ShowDialog() == DialogResult.OK)
             {
-                this.alumno = frmBuscar.Alumno;
-                fillText(this.alumno);
+                this.profesor = frmBuscar.Profesor;
+                fillText(this.profesor);
                 estado = Estado.Busqueda;
                 cambiarEstado();
             }
@@ -321,10 +318,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 FileStream fs = new FileStream(ofd_Imagen.FileName, FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
                 //Asignamos el archivo al objeto
-                this.alumno.imagenDePerfil = br.ReadBytes((int)fs.Length);
+                this.profesor.imagenDePerfil = br.ReadBytes((int)fs.Length);
                 br.Close();
                 fs.Close();
-                displayImage(this.alumno.imagenDePerfil);
+                displayImage(this.profesor.imagenDePerfil);
             }
 
         }
