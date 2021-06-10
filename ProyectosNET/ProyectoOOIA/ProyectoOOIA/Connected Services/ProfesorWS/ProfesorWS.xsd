@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.OOIA.pucp.edu.pe/" targetNamespace="http://services.OOIA.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarProfesor" type="tns:eliminarProfesor" />
+  <xs:element name="eliminarProfesorResponse" type="tns:eliminarProfesorResponse" />
+  <xs:element name="insertarProfesores" type="tns:insertarProfesores" />
+  <xs:element name="insertarProfesoresResponse" type="tns:insertarProfesoresResponse" />
+  <xs:element name="listarProfesores" type="tns:listarProfesores" />
+  <xs:element name="listarProfesoresResponse" type="tns:listarProfesoresResponse" />
+  <xs:element name="modificarProfesores" type="tns:modificarProfesores" />
+  <xs:element name="modificarProfesoresResponse" type="tns:modificarProfesoresResponse" />
+  <xs:complexType name="listarProfesores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarProfesoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="profesor">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:miembroPUCP">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="categoria" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="cursosDicta" nillable="true" type="tns:curso" />
+          <xs:element minOccurs="0" name="especialidad" type="tns:especialidad" />
+          <xs:element name="estado" type="xs:int" />
+          <xs:element minOccurs="0" name="facultad" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="horariosDisponibles" nillable="true" type="tns:horario" />
+          <xs:element name="id_profesor" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="miembroPUCP" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:persona">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+          <xs:element minOccurs="0" name="fecha_inclusion" type="xs:dateTime" />
+          <xs:element name="id_miembro_pucp" type="xs:int" />
+          <xs:element minOccurs="0" name="imagenDePerfil" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="usuario_pucp" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="persona" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element name="edad" type="xs:int" />
+      <xs:element name="id_persona" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoCurso" type="xs:string" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element name="id_curso" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreCurso" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="especialidad">
+    <xs:sequence>
+      <xs:element name="id_especialidad" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre_especialidad" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horario">
+    <xs:sequence>
+      <xs:element name="dia" type="xs:int" />
+      <xs:element name="estado" type="xs:int" />
+      <xs:element minOccurs="0" name="horaFin" type="tns:time" />
+      <xs:element minOccurs="0" name="horaInicio" type="tns:time" />
+      <xs:element name="id_horario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="time">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="modificarProfesores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarProfesoresResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarProfesor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarProfesorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarProfesores">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarProfesoresResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

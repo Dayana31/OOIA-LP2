@@ -246,7 +246,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Miembro PUCP
             profesor.usuario_pucp = txtUsuario.Text;
             profesor.contraseña = txtPassword.Text;
-            profesor.fecha_inclusion = DateTime.Today;
+            profesor.fecha_inclusion = DateTime.Today.Date;
             //Alumno
             profesor.facultad = txtFacultad.Text;
             profesor.categoria = txtCategoria.Text;
@@ -254,9 +254,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             profesor.especialidad = new ProfesorWS.especialidad();
             profesor.especialidad.id_especialidad = esp_selected.id_especialidad;
             profesor.especialidad.nombre_especialidad = esp_selected.nombre_especialidad;
+
             if (estado.Equals(Estado.Nuevo))
             {
-                int resultado = daoProfesor.insertarProfesores(profesor);
+                int resultado = daoProfesor.insertarProfesores(this.profesor);
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha registrado con exito", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
