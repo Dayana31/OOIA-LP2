@@ -54,8 +54,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     dtpFechaEvento.Enabled = false;
-                    dtpFin.Enabled = true;
-                    dtpInicio.Enabled = true;
+                    //dtpFin.Enabled = true;
+                    //dtpInicio.Enabled = true;
                     txtNombre.Enabled = false;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -78,8 +78,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
                     dtpFechaEvento.Enabled = true;
-                    dtpFin.Enabled = true;
-                    dtpInicio.Enabled = true;
+                    //dtpFin.Enabled = true;
+                    //dtpInicio.Enabled = true;
                     txtNombre.Enabled = true;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = true;
@@ -101,8 +101,8 @@ namespace ProyectoOOIA.Ventanas
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = true;
                     dtpFechaEvento.Enabled = false;
-                    dtpFin.Enabled = true;
-                    dtpInicio.Enabled = true;
+                    //dtpFin.Enabled = true;
+                    //dtpInicio.Enabled = true;
                     txtNombre.Enabled = false;
                     txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = false;
@@ -139,11 +139,11 @@ namespace ProyectoOOIA.Ventanas
             evento.fecha = dtpFechaEvento.Value;
             evento.estado = true;
             evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
-            evento.horaInicio = dtpInicio.Value;
-            evento.horaFina = dtpFin.Value;
+            //evento.horaInicio = dtpInicio.Value;
+            //evento.horaFina = dtpFin.Value;
             evento.id_coordinador = 12;
             evento.lugar = txtLugar.Text;
-            evento.ponentes = lista.ToArray();
+            //evento.ponentes = lista.ToArray();
             DialogResult dr =
                 MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",
                     MessageBoxButtons.YesNo, MessageBoxIcon.None);
@@ -219,8 +219,8 @@ namespace ProyectoOOIA.Ventanas
                 invitado = mostrar.Invitado;
                 txtNombre.Text = invitado.nombre;
                 
-                aux.id_persona = invitado.id_persona;
-                lista.Add(aux);
+                //aux.id_persona = invitado.id_persona;
+                //lista.Add(aux);
                 dgvPonentes.Rows[numeroElementos].Cells[0].Value = invitado.nombre;
 
             }
@@ -236,7 +236,7 @@ namespace ProyectoOOIA.Ventanas
             {
                 alumno = mostrar.Alumno;
                 txtNombre.Text = alumno.nombre;
-                lista.Add(alumno);
+                //lista.Add(alumno);
                 dgvPonentes.Rows[numeroElementos].Cells[0].Value = alumno.nombre;
                 
             }
