@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/CitaWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CitaWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CitaWS.xsd" MetadataType="Schema" ID="3b5c83e9-8db0-419e-a289-9c512613398e" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CitaWS?xsd=1" />
-    <MetadataFile FileName="CitaWS.wsdl" MetadataType="Wsdl" ID="cfb9bfb8-56ca-437a-9232-456b0b6b35f6" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CitaWS?wsdl" />
+    <MetadataFile FileName="CitaWS1.wsdl" MetadataType="Wsdl" ID="bb982d62-5ed0-4951-8420-6884e5036107" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CitaWS?wsdl" />
+    <MetadataFile FileName="CitaWS1.xsd" MetadataType="Schema" ID="69500d7e-8f8b-46de-ac3a-8652fa8b2de0" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CitaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -19,7 +19,10 @@ namespace ProyectoOOIA.Ventanas
             tabTutor.HorizontalScroll.Visible = false;
             tabTutor.HorizontalScroll.Maximum = 0;
             tabTutor.AutoScroll = true;
-
+            tabPsic.HorizontalScroll.Enabled = false;
+            tabPsic.HorizontalScroll.Visible = false;
+            tabPsic.HorizontalScroll.Maximum = 0;
+            tabPsic.AutoScroll = true;
             daoProfesor = new ProfesorWS.ProfesorWSClient();
             daoPsicologo = new PsicologoWS.PsicologoWSClient();
 

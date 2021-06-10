@@ -16,6 +16,19 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
     public interface CoordinadorEventoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/insertarCoordinadorEventoReq" +
+            "uest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/insertarCoordinadorEventoRes" +
+            "ponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse insertarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/insertarCoordinadorEventoReq" +
+            "uest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/insertarCoordinadorEventoRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse> insertarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/listarCoordinadorEventoReque" +
             "st", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/listarCoordinadorEventoRespo" +
             "nse")]
@@ -53,23 +66,10 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
             "quest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/modificarCoordinadorEventoRe" +
             "sponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse> modificarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/insertarCoordinadorEventoReq" +
-            "uest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/insertarCoordinadorEventoRes" +
-            "ponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse insertarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/insertarCoordinadorEventoReq" +
-            "uest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorEventoWS/insertarCoordinadorEventoRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse> insertarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -120,7 +120,7 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -322,7 +322,7 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroOOIA))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -425,7 +425,7 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroOOIA))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -514,6 +514,42 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
                 this.usuario_pucpField = value;
                 this.RaisePropertyChanged("usuario_pucp");
             }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCoordinadorEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarCoordinadorEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador;
+        
+        public insertarCoordinadorEventoRequest() {
+        }
+        
+        public insertarCoordinadorEventoRequest(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
+            this.coordinador = coordinador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCoordinadorEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarCoordinadorEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarCoordinadorEventoResponse() {
+        }
+        
+        public insertarCoordinadorEventoResponse(int @return) {
+            this.@return = @return;
         }
     }
     
@@ -617,42 +653,6 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCoordinadorEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCoordinadorEventoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador;
-        
-        public insertarCoordinadorEventoRequest() {
-        }
-        
-        public insertarCoordinadorEventoRequest(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
-            this.coordinador = coordinador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCoordinadorEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCoordinadorEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarCoordinadorEventoResponse() {
-        }
-        
-        public insertarCoordinadorEventoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CoordinadorEventoWSChannel : ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS, System.ServiceModel.IClientChannel {
     }
@@ -678,6 +678,29 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
         
         public CoordinadorEventoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.insertarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest request) {
+            return base.Channel.insertarCoordinadorEvento(request);
+        }
+        
+        public int insertarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
+            ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest();
+            inValue.coordinador = coordinador;
+            ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse retVal = ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).insertarCoordinadorEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse> ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.insertarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest request) {
+            return base.Channel.insertarCoordinadorEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse> insertarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
+            ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest();
+            inValue.coordinador = coordinador;
+            return ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).insertarCoordinadorEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -745,29 +768,6 @@ namespace ProyectoOOIA.CoordinadorEventoWS {
             ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoRequest();
             inValue.coordinador = coordinador;
             return ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).modificarCoordinadorEventoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.insertarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest request) {
-            return base.Channel.insertarCoordinadorEvento(request);
-        }
-        
-        public int insertarCoordinadorEvento(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
-            ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest();
-            inValue.coordinador = coordinador;
-            ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse retVal = ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).insertarCoordinadorEvento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse> ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS.insertarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest request) {
-            return base.Channel.insertarCoordinadorEventoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse> insertarCoordinadorEventoAsync(ProyectoOOIA.CoordinadorEventoWS.miembroOOIA coordinador) {
-            ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest inValue = new ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoRequest();
-            inValue.coordinador = coordinador;
-            return ((ProyectoOOIA.CoordinadorEventoWS.CoordinadorEventoWS)(this)).insertarCoordinadorEventoAsync(inValue);
         }
     }
 }

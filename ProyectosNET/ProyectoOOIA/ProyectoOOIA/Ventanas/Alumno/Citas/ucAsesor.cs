@@ -7,10 +7,11 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
     {
         private ProfesorWS.profesor tutor;
         private PsicologoWS.psicologo psicologo;
-
+        
 
         public ucAsesor(ProfesorWS.profesor t)
         {
+            this.tutor = new ProfesorWS.profesor();
             InitializeComponent();
             tutor = t;
 
@@ -21,10 +22,11 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
 
         public ucAsesor(PsicologoWS.psicologo p)
         {
+            this.psicologo = new PsicologoWS.psicologo();
             InitializeComponent();
             psicologo = p;
 
-            lblNombre.Text = tutor.nombre;
+            lblNombre.Text = psicologo.nombre;
             lblEspecialidad.Visible = false;
         }
 

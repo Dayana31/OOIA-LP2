@@ -243,7 +243,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Miembro PUCP
             alumno.usuario_pucp = txtUsuario.Text;
             alumno.contraseña = txtPassword.Text;
-            alumno.fecha_inclusion = DateTime.Today;
+            alumno.fecha_inclusion = DateTime.Today.Date;
             //Alumno
             alumno.codigo_pucp = txtCodigo.Text;
             EspecialidadWS.especialidad esp_selected = (EspecialidadWS.especialidad)cbEspecialidad.SelectedItem;
@@ -255,6 +255,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             alumno.cursos_por_primera = 0;
             alumno.cursos_por_segunda = 0;
             alumno.cursos_por_tercera = 0;
+            alumno.imagenDePerfil = null;
 
             if (estado.Equals(Estado.Nuevo))
             {
