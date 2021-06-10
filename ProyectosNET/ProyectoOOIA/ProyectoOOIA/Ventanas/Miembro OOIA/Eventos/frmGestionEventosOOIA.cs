@@ -21,7 +21,7 @@ namespace ProyectoOOIA.Ventanas
         ErrorProvider error = new ErrorProvider();
         private GestionEventoWS.GesionEventoWS eventoDao;
         private GestionEventoWS.evento evento;
-        private BindingList<GesionEventoWS> lista = new BindingList<EventoWS.persona>();
+        //private BindingList<GesionEventoWS> lista = new BindingList<EventoWS.persona>();
         private ProfesorWS.profesor profesor = null;
         private AlumnoWS.alumno alumno = null;
         private InvitadoWS.invitado invitado = null;
@@ -133,8 +133,8 @@ namespace ProyectoOOIA.Ventanas
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             validacionDatos();
-            evento = new EventoWS.evento();
-            eventoDao = new EventoWS.EventoWSClient();
+            //evento = new EventoWS.evento();
+            //eventoDao = new EventoWS.EventoWSClient();
             evento.nombre = txtNombre.Text;
             evento.fecha = dtpFechaEvento.Value;
             evento.estado = true;
@@ -149,11 +149,11 @@ namespace ProyectoOOIA.Ventanas
                     MessageBoxButtons.YesNo, MessageBoxIcon.None);
             if (dr == DialogResult.Yes)
             {
-                if (eventoDao.insertarEvento(evento)==1)
-                {
-                    MessageBox.Show("Exito");
-                }
-                else MessageBox.Show("Fallo");
+                //if (eventoDao.insertarEvento(evento)==1)
+                //{
+                //    MessageBox.Show("Exito");
+                //}
+                //else MessageBox.Show("Fallo");
             }
         
 
@@ -165,9 +165,9 @@ namespace ProyectoOOIA.Ventanas
 
         private void validacionDatos()
         {
-            if (lista.Count == 0)
-                MessageBox.Show("Debe ingresar al menos un ponente", "Error", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+            //if (lista.Count == 0)
+            //    MessageBox.Show("Debe ingresar al menos un ponente", "Error", MessageBoxButtons.OK,
+            //        MessageBoxIcon.Error);
 
 
         }
@@ -249,7 +249,7 @@ namespace ProyectoOOIA.Ventanas
         {
             if (dgvPonentes.CurrentRow.Index >= 0)
             {
-                lista.RemoveAt(dgvPonentes.CurrentRow.Index);
+                //lista.RemoveAt(dgvPonentes.CurrentRow.Index);
                 dgvPonentes.Rows.RemoveAt(dgvPonentes.CurrentRow.Index);
             }
         }
