@@ -255,6 +255,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             alumno.cursos_por_primera = 0;
             alumno.cursos_por_segunda = 0;
             alumno.cursos_por_tercera = 0;
+            alumno.imagenDePerfil = null;
 
             if (estado.Equals(Estado.Nuevo))
             {

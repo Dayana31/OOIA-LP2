@@ -16,6 +16,26 @@ namespace ProyectoOOIA.CitaWS {
     public interface CitaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaHistoricoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaHistoricoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.CitaWS.listarCitaHistoricoResponse listarCitaHistorico(ProyectoOOIA.CitaWS.listarCitaHistoricoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaHistoricoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaHistoricoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaHistoricoResponse> listarCitaHistoricoAsync(ProyectoOOIA.CitaWS.listarCitaHistoricoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaPendienteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaPendienteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.CitaWS.listarCitaPendienteResponse listarCitaPendiente(ProyectoOOIA.CitaWS.listarCitaPendienteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaPendienteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaPendienteResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaPendienteResponse> listarCitaPendienteAsync(ProyectoOOIA.CitaWS.listarCitaPendienteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/insertarCitaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/insertarCitaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -44,30 +64,10 @@ namespace ProyectoOOIA.CitaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/modificarCitaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/modificarCitaResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.modificarCitaResponse> modificarCitaAsync(ProyectoOOIA.CitaWS.modificarCitaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaPendienteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaPendienteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CitaWS.listarCitaPendienteResponse listarCitaPendiente(ProyectoOOIA.CitaWS.listarCitaPendienteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaPendienteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaPendienteResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaPendienteResponse> listarCitaPendienteAsync(ProyectoOOIA.CitaWS.listarCitaPendienteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaHistoricoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaHistoricoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CitaWS.listarCitaHistoricoResponse listarCitaHistorico(ProyectoOOIA.CitaWS.listarCitaHistoricoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaHistoricoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaHistoricoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaHistoricoResponse> listarCitaHistoricoAsync(ProyectoOOIA.CitaWS.listarCitaHistoricoRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -211,7 +211,7 @@ namespace ProyectoOOIA.CitaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -374,7 +374,7 @@ namespace ProyectoOOIA.CitaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -420,7 +420,7 @@ namespace ProyectoOOIA.CitaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -438,7 +438,7 @@ namespace ProyectoOOIA.CitaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -526,7 +526,7 @@ namespace ProyectoOOIA.CitaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -586,7 +586,7 @@ namespace ProyectoOOIA.CitaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -660,7 +660,7 @@ namespace ProyectoOOIA.CitaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -792,7 +792,7 @@ namespace ProyectoOOIA.CitaWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -895,7 +895,7 @@ namespace ProyectoOOIA.CitaWS {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -984,6 +984,78 @@ namespace ProyectoOOIA.CitaWS {
                 this.usuario_pucpField = value;
                 this.RaisePropertyChanged("usuario_pucp");
             }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistorico", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCitaHistoricoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_alumno;
+        
+        public listarCitaHistoricoRequest() {
+        }
+        
+        public listarCitaHistoricoRequest(int id_alumno) {
+            this.id_alumno = id_alumno;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistoricoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCitaHistoricoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CitaWS.cita[] @return;
+        
+        public listarCitaHistoricoResponse() {
+        }
+        
+        public listarCitaHistoricoResponse(ProyectoOOIA.CitaWS.cita[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaPendiente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCitaPendienteRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_alumno;
+        
+        public listarCitaPendienteRequest() {
+        }
+        
+        public listarCitaPendienteRequest(int id_alumno) {
+            this.id_alumno = id_alumno;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaPendienteResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCitaPendienteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CitaWS.cita[] @return;
+        
+        public listarCitaPendienteResponse() {
+        }
+        
+        public listarCitaPendienteResponse(ProyectoOOIA.CitaWS.cita[] @return) {
+            this.@return = @return;
         }
     }
     
@@ -1095,78 +1167,6 @@ namespace ProyectoOOIA.CitaWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaPendiente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCitaPendienteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_alumno;
-        
-        public listarCitaPendienteRequest() {
-        }
-        
-        public listarCitaPendienteRequest(int id_alumno) {
-            this.id_alumno = id_alumno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaPendienteResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCitaPendienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CitaWS.cita[] @return;
-        
-        public listarCitaPendienteResponse() {
-        }
-        
-        public listarCitaPendienteResponse(ProyectoOOIA.CitaWS.cita[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistorico", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCitaHistoricoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_alumno;
-        
-        public listarCitaHistoricoRequest() {
-        }
-        
-        public listarCitaHistoricoRequest(int id_alumno) {
-            this.id_alumno = id_alumno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCitaHistoricoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCitaHistoricoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CitaWS.cita[] @return;
-        
-        public listarCitaHistoricoResponse() {
-        }
-        
-        public listarCitaHistoricoResponse(ProyectoOOIA.CitaWS.cita[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CitaWSChannel : ProyectoOOIA.CitaWS.CitaWS, System.ServiceModel.IClientChannel {
     }
@@ -1192,6 +1192,52 @@ namespace ProyectoOOIA.CitaWS {
         
         public CitaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.CitaWS.listarCitaHistoricoResponse ProyectoOOIA.CitaWS.CitaWS.listarCitaHistorico(ProyectoOOIA.CitaWS.listarCitaHistoricoRequest request) {
+            return base.Channel.listarCitaHistorico(request);
+        }
+        
+        public ProyectoOOIA.CitaWS.cita[] listarCitaHistorico(int id_alumno) {
+            ProyectoOOIA.CitaWS.listarCitaHistoricoRequest inValue = new ProyectoOOIA.CitaWS.listarCitaHistoricoRequest();
+            inValue.id_alumno = id_alumno;
+            ProyectoOOIA.CitaWS.listarCitaHistoricoResponse retVal = ((ProyectoOOIA.CitaWS.CitaWS)(this)).listarCitaHistorico(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaHistoricoResponse> ProyectoOOIA.CitaWS.CitaWS.listarCitaHistoricoAsync(ProyectoOOIA.CitaWS.listarCitaHistoricoRequest request) {
+            return base.Channel.listarCitaHistoricoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaHistoricoResponse> listarCitaHistoricoAsync(int id_alumno) {
+            ProyectoOOIA.CitaWS.listarCitaHistoricoRequest inValue = new ProyectoOOIA.CitaWS.listarCitaHistoricoRequest();
+            inValue.id_alumno = id_alumno;
+            return ((ProyectoOOIA.CitaWS.CitaWS)(this)).listarCitaHistoricoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.CitaWS.listarCitaPendienteResponse ProyectoOOIA.CitaWS.CitaWS.listarCitaPendiente(ProyectoOOIA.CitaWS.listarCitaPendienteRequest request) {
+            return base.Channel.listarCitaPendiente(request);
+        }
+        
+        public ProyectoOOIA.CitaWS.cita[] listarCitaPendiente(int id_alumno) {
+            ProyectoOOIA.CitaWS.listarCitaPendienteRequest inValue = new ProyectoOOIA.CitaWS.listarCitaPendienteRequest();
+            inValue.id_alumno = id_alumno;
+            ProyectoOOIA.CitaWS.listarCitaPendienteResponse retVal = ((ProyectoOOIA.CitaWS.CitaWS)(this)).listarCitaPendiente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaPendienteResponse> ProyectoOOIA.CitaWS.CitaWS.listarCitaPendienteAsync(ProyectoOOIA.CitaWS.listarCitaPendienteRequest request) {
+            return base.Channel.listarCitaPendienteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaPendienteResponse> listarCitaPendienteAsync(int id_alumno) {
+            ProyectoOOIA.CitaWS.listarCitaPendienteRequest inValue = new ProyectoOOIA.CitaWS.listarCitaPendienteRequest();
+            inValue.id_alumno = id_alumno;
+            return ((ProyectoOOIA.CitaWS.CitaWS)(this)).listarCitaPendienteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1261,52 +1307,6 @@ namespace ProyectoOOIA.CitaWS {
             ProyectoOOIA.CitaWS.modificarCitaRequest inValue = new ProyectoOOIA.CitaWS.modificarCitaRequest();
             inValue.cita = cita;
             return ((ProyectoOOIA.CitaWS.CitaWS)(this)).modificarCitaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CitaWS.listarCitaPendienteResponse ProyectoOOIA.CitaWS.CitaWS.listarCitaPendiente(ProyectoOOIA.CitaWS.listarCitaPendienteRequest request) {
-            return base.Channel.listarCitaPendiente(request);
-        }
-        
-        public ProyectoOOIA.CitaWS.cita[] listarCitaPendiente(int id_alumno) {
-            ProyectoOOIA.CitaWS.listarCitaPendienteRequest inValue = new ProyectoOOIA.CitaWS.listarCitaPendienteRequest();
-            inValue.id_alumno = id_alumno;
-            ProyectoOOIA.CitaWS.listarCitaPendienteResponse retVal = ((ProyectoOOIA.CitaWS.CitaWS)(this)).listarCitaPendiente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaPendienteResponse> ProyectoOOIA.CitaWS.CitaWS.listarCitaPendienteAsync(ProyectoOOIA.CitaWS.listarCitaPendienteRequest request) {
-            return base.Channel.listarCitaPendienteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaPendienteResponse> listarCitaPendienteAsync(int id_alumno) {
-            ProyectoOOIA.CitaWS.listarCitaPendienteRequest inValue = new ProyectoOOIA.CitaWS.listarCitaPendienteRequest();
-            inValue.id_alumno = id_alumno;
-            return ((ProyectoOOIA.CitaWS.CitaWS)(this)).listarCitaPendienteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CitaWS.listarCitaHistoricoResponse ProyectoOOIA.CitaWS.CitaWS.listarCitaHistorico(ProyectoOOIA.CitaWS.listarCitaHistoricoRequest request) {
-            return base.Channel.listarCitaHistorico(request);
-        }
-        
-        public ProyectoOOIA.CitaWS.cita[] listarCitaHistorico(int id_alumno) {
-            ProyectoOOIA.CitaWS.listarCitaHistoricoRequest inValue = new ProyectoOOIA.CitaWS.listarCitaHistoricoRequest();
-            inValue.id_alumno = id_alumno;
-            ProyectoOOIA.CitaWS.listarCitaHistoricoResponse retVal = ((ProyectoOOIA.CitaWS.CitaWS)(this)).listarCitaHistorico(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaHistoricoResponse> ProyectoOOIA.CitaWS.CitaWS.listarCitaHistoricoAsync(ProyectoOOIA.CitaWS.listarCitaHistoricoRequest request) {
-            return base.Channel.listarCitaHistoricoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.listarCitaHistoricoResponse> listarCitaHistoricoAsync(int id_alumno) {
-            ProyectoOOIA.CitaWS.listarCitaHistoricoRequest inValue = new ProyectoOOIA.CitaWS.listarCitaHistoricoRequest();
-            inValue.id_alumno = id_alumno;
-            return ((ProyectoOOIA.CitaWS.CitaWS)(this)).listarCitaHistoricoAsync(inValue);
         }
     }
 }
