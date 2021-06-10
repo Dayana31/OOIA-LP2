@@ -64,6 +64,8 @@ namespace ProyectoOOIA.Ventanas
                     dgvPonentes.RowCount = 1;
                     btnBuscarPonente.Enabled = false;
                     txtIdEvento.Enabled = false;
+                    dtpFin.Enabled = false;
+                    dtpInicio.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = true;
@@ -109,6 +111,8 @@ namespace ProyectoOOIA.Ventanas
                     npdCapacidad.Enabled = false;
                     txtLugar.Enabled = false;
                     txtIdEvento.Enabled = false;
+                    dtpFin.Enabled = false;
+                    dtpInicio.Enabled = false;
                     break;
                 
             }
@@ -128,7 +132,7 @@ namespace ProyectoOOIA.Ventanas
             dtpFechaEvento.Value = evento.fecha;
             dtpInicio.Value = evento.horaInicio;
             dtpFin.Value = evento.horaFina;
-
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -145,17 +149,19 @@ namespace ProyectoOOIA.Ventanas
                 eventoDao = new GestionEventoWS.GesionEventoWSClient();
                 evento.nombre = txtNombre.Text;
                 evento.fecha = dtpFechaEvento.Value;
+                evento.fechaSpecified = true;
                 evento.estado = true;
                 evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
                 evento.horaInicio = dtpInicio.Value;
+                evento.horaInicioSpecified = true;
                 evento.horaFina = dtpFin.Value;
+                evento.horaFinaSpecified = true;
                 evento.id_coordinador = 11;
                 evento.lugar = txtLugar.Text;
 
                 evento.ponentes = lista.ToArray();
                 DialogResult dr =
-                    MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.None);
+                    MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (dr == DialogResult.Yes)
                 {
                     if (eventoDao.insertarEvento(evento) == 1)

@@ -25,6 +25,15 @@ namespace ProyectoOOIA.EventosWS {
         System.Threading.Tasks.Task<ProyectoOOIA.EventosWS.eliminarEventoResponse> eliminarEventoAsync(ProyectoOOIA.EventosWS.eliminarEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.EventosWS.insertarEventoResponse insertarEvento(ProyectoOOIA.EventosWS.insertarEventoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.EventosWS.insertarEventoResponse> insertarEventoAsync(ProyectoOOIA.EventosWS.insertarEventoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,15 +50,6 @@ namespace ProyectoOOIA.EventosWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/listarEventoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.EventosWS.listarEventoResponse> listarEventoAsync(ProyectoOOIA.EventosWS.listarEventoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.EventosWS.insertarEventoResponse insertarEvento(ProyectoOOIA.EventosWS.insertarEventoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.EventosWS.insertarEventoResponse> insertarEventoAsync(ProyectoOOIA.EventosWS.insertarEventoRequest request);
     }
     
     /// <remarks/>
@@ -393,6 +393,42 @@ namespace ProyectoOOIA.EventosWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarEventoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.EventosWS.evento evento;
+        
+        public insertarEventoRequest() {
+        }
+        
+        public insertarEventoRequest(ProyectoOOIA.EventosWS.evento evento) {
+            this.evento = evento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarEventoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarEventoResponse() {
+        }
+        
+        public insertarEventoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class modificarEventoRequest {
         
@@ -462,42 +498,6 @@ namespace ProyectoOOIA.EventosWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarEventoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.EventosWS.evento evento;
-        
-        public insertarEventoRequest() {
-        }
-        
-        public insertarEventoRequest(ProyectoOOIA.EventosWS.evento evento) {
-            this.evento = evento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarEventoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarEventoResponse() {
-        }
-        
-        public insertarEventoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface EventoWSChannel : ProyectoOOIA.EventosWS.EventoWS, System.ServiceModel.IClientChannel {
     }
@@ -549,6 +549,29 @@ namespace ProyectoOOIA.EventosWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.EventosWS.insertarEventoResponse ProyectoOOIA.EventosWS.EventoWS.insertarEvento(ProyectoOOIA.EventosWS.insertarEventoRequest request) {
+            return base.Channel.insertarEvento(request);
+        }
+        
+        public int insertarEvento(ProyectoOOIA.EventosWS.evento evento) {
+            ProyectoOOIA.EventosWS.insertarEventoRequest inValue = new ProyectoOOIA.EventosWS.insertarEventoRequest();
+            inValue.evento = evento;
+            ProyectoOOIA.EventosWS.insertarEventoResponse retVal = ((ProyectoOOIA.EventosWS.EventoWS)(this)).insertarEvento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.EventosWS.insertarEventoResponse> ProyectoOOIA.EventosWS.EventoWS.insertarEventoAsync(ProyectoOOIA.EventosWS.insertarEventoRequest request) {
+            return base.Channel.insertarEventoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.EventosWS.insertarEventoResponse> insertarEventoAsync(ProyectoOOIA.EventosWS.evento evento) {
+            ProyectoOOIA.EventosWS.insertarEventoRequest inValue = new ProyectoOOIA.EventosWS.insertarEventoRequest();
+            inValue.evento = evento;
+            return ((ProyectoOOIA.EventosWS.EventoWS)(this)).insertarEventoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.EventosWS.modificarEventoResponse ProyectoOOIA.EventosWS.EventoWS.modificarEvento(ProyectoOOIA.EventosWS.modificarEventoRequest request) {
             return base.Channel.modificarEvento(request);
         }
@@ -592,29 +615,6 @@ namespace ProyectoOOIA.EventosWS {
             ProyectoOOIA.EventosWS.listarEventoRequest inValue = new ProyectoOOIA.EventosWS.listarEventoRequest();
             inValue.nombre = nombre;
             return ((ProyectoOOIA.EventosWS.EventoWS)(this)).listarEventoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.EventosWS.insertarEventoResponse ProyectoOOIA.EventosWS.EventoWS.insertarEvento(ProyectoOOIA.EventosWS.insertarEventoRequest request) {
-            return base.Channel.insertarEvento(request);
-        }
-        
-        public int insertarEvento(ProyectoOOIA.EventosWS.evento evento) {
-            ProyectoOOIA.EventosWS.insertarEventoRequest inValue = new ProyectoOOIA.EventosWS.insertarEventoRequest();
-            inValue.evento = evento;
-            ProyectoOOIA.EventosWS.insertarEventoResponse retVal = ((ProyectoOOIA.EventosWS.EventoWS)(this)).insertarEvento(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.EventosWS.insertarEventoResponse> ProyectoOOIA.EventosWS.EventoWS.insertarEventoAsync(ProyectoOOIA.EventosWS.insertarEventoRequest request) {
-            return base.Channel.insertarEventoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.EventosWS.insertarEventoResponse> insertarEventoAsync(ProyectoOOIA.EventosWS.evento evento) {
-            ProyectoOOIA.EventosWS.insertarEventoRequest inValue = new ProyectoOOIA.EventosWS.insertarEventoRequest();
-            inValue.evento = evento;
-            return ((ProyectoOOIA.EventosWS.EventoWS)(this)).insertarEventoAsync(inValue);
         }
     }
 }
