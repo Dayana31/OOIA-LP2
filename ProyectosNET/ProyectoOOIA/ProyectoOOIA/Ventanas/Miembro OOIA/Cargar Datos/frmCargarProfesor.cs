@@ -247,6 +247,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             profesor.usuario_pucp = txtUsuario.Text;
             profesor.contraseña = txtPassword.Text;
             profesor.fecha_inclusion = DateTime.Today.Date;
+            profesor.fecha_inclusionSpecified = true;
             //Alumno
             profesor.facultad = txtFacultad.Text;
             profesor.categoria = txtCategoria.Text;

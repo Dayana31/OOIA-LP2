@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="CIEGfFuDoD/1pxiYml7VUz5WaiE7dPruoodenQljICI=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="IDE9g0m5dNXPfYCZeJPJjdv7VNT0kRqgAIRSiwl4KL4=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="AlumnosCSVcargaWS1PortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="AlumnosCSVcargaWS1Port" contract="CargarCSValumnos.AlumnosCSVcargaWS1" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/AuxiliarWS/AlumnosCSVcargaWS" bindingConfiguration="AlumnosCSVcargaWS1PortBinding">
+    <endpoint name="AlumnosCSVcargaWS1Port" contract="CargarCSValumnos.AlumnosCSVcargaWS1" bindingType="basicHttpBinding" address="http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS" bindingConfiguration="AlumnosCSVcargaWS1PortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://54.157.187.65:8080/AuxiliarWS/AlumnosCSVcargaWS</serializedValue>
+          <serializedValue>http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

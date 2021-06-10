@@ -5,7 +5,11 @@
  */
 package services;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.ParseException;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -21,12 +25,20 @@ public class AlumnosCSVcargaWS1 {
 
     private AlumnosCSV csvAlumnos;
     
+    
     @WebMethod(operationName = "CargarCSValumnos")
-    public int cargarCSVAlumnos(@WebParam(name = "Rutaarchivo") String ruta) throws FileNotFoundException, ParseException{
+    public int cargarCSVAlumnos(@WebParam(name = "Rutaarchivo")byte[] ruta) throws FileNotFoundException, ParseException, IOException{
         int resultado = 0;
         csvAlumnos = new AlumnosCSV();
-        csvAlumnos.setRutaCSV(ruta);
+
+        FileOutputStream outputStream = new FileOutputStream("Auxiliar");
+        outputStream.write(ruta);
+        outputStream.close();
+        FileInputStream inputStream = new FileInputStream("Auxiliar");
+        
+        csvAlumnos.setRutaCSV(inputStream);
         resultado = csvAlumnos.cargarDatos();
+        inputStream.close();
         return resultado;
     }
 }

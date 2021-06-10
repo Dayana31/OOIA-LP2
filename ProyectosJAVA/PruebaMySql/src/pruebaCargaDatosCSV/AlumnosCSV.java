@@ -6,7 +6,9 @@
 package pruebaCargaDatosCSV;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,9 +27,8 @@ public class AlumnosCSV {
     private Scanner sc;
     private AlumnoDAO daoAlumno;
     
-    public void setRutaCSV(String ruta) throws FileNotFoundException{
-        sc = new Scanner(new File
-        (ruta));
+    public void setRutaCSV(FileInputStream archivo) throws FileNotFoundException{
+        sc = new Scanner(archivo);
         daoAlumno = new AlumnoMySQL();
     }
     public int cargarDatos() throws ParseException{

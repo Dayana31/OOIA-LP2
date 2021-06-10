@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             CargarCSVpsicologos.PsicologosCSVcargaWSClient cargaCSVpsicologos =
                 new CargarCSVpsicologos.PsicologosCSVcargaWSClient();
-            int resultado = cargaCSVpsicologos.CargarCSVpsicologos(txtRutaArchivo.Text);
+            FileStream fs = new FileStream(txtRutaArchivo.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            //Asignamos el archivo al objeto
+
+            int resultado = cargaCSVpsicologos.CargarCSVpsicologos(br.ReadBytes((int)fs.Length));
+            br.Close();
+            fs.Close();
+            //int resultado = cargaCSVpsicologos.CargarCSVpsicologos(txtRutaArchivo.Text);
             if (resultado == 0)
             {
                 MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
