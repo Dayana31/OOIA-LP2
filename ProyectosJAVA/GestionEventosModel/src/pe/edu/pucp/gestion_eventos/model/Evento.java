@@ -3,8 +3,8 @@ package pe.edu.pucp.gestion_eventos.model;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import pe.edu.pucp.gestion_humana.model.Persona;
-import pe.edu.pucp.interfaces.IConsultable;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -22,15 +22,16 @@ public class Evento{
     private int capacidad;
     private String nombre;
     private Date fecha;
-    private LocalTime horaInicio;
-    private LocalTime horaFin;
     private String lugar;
     private boolean estado;
     private ArrayList <Persona> ponentes ;
-
+    private Date  horaInicio;
+    private Date horaFin;
+   
 
     public Evento() {
         ponentes=new ArrayList<>();
+        
     }
 
     
@@ -103,21 +104,6 @@ public class Evento{
         this.fecha = fecha;
     }
 
-    public LocalTime getHoraInicio() {
-        return horaInicio;
-    }
-
-    public void setHoraInicio(LocalTime horaInicio) {
-        this.horaInicio = horaInicio;
-    }
-
-    public LocalTime getHoraFin() {
-        return horaFin;
-    }
-
-    public void setHoraFin(LocalTime horaFin) {
-        this.horaFin = horaFin;
-    }
 
     
  
@@ -127,5 +113,23 @@ public class Evento{
     public void agregarOrganizador(Persona organizador){
         ponentes.add(organizador);
     }
+
+    public Date getHoraInicio() {
+        return horaInicio;
+    }
+
+    public void setHoraInicio(Date horaInicio) {
+        this.horaInicio = horaInicio;
+    }
+
+    public Date getHoraFina() {
+        return horaFin;
+    }
+
+    public void setHoraFina(Date horaFina) {
+        this.horaFin = horaFina;
+    }
+    
+  
     
 }

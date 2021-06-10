@@ -7,6 +7,7 @@ package pruebamysql;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import pe.edu.pucp.gestion_academica.controller.mysql.CategoriaMySQL;
 import pe.edu.pucp.gestion_academica.controller.mysql.CursoLlevadoMySQL;
 import pe.edu.pucp.gestion_academica.controller.mysql.CursoMySQL;
@@ -15,11 +16,16 @@ import pe.edu.pucp.gestion_academica.model.Curso;
 import pe.edu.pucp.gestion_academica.model.CursoLlevado;
 import pe.edu.pucp.gestion_atencion.controller.mysql.CodigoAtencionMySQL;
 import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
+import pe.edu.pucp.gestion_eventos.model.Evento;
+import pe.edu.pucp.gestion_eventos.model.MiembroOOIA;
+import pe.edu.pucp.gestion_eventos.mysql.CoordinadorEventosMySQL;
+import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
 import pe.edu.pucp.gestion_humana.controller.mysql.EspecialidadMySQL;
 import pe.edu.pucp.gestion_humana.controller.mysql.ProfesorMySQL;
 import pe.edu.pucp.gestion_humana.controller.mysql.PsicologoMySQL;
 import pe.edu.pucp.gestion_humana.model.Alumno;
 import pe.edu.pucp.gestion_humana.model.Especialidad;
+import pe.edu.pucp.gestion_humana.model.Persona;
 import pe.edu.pucp.gestion_humana.model.Profesor;
 import pe.edu.pucp.gestion_humana.model.Psicologo;
 
@@ -36,9 +42,9 @@ public class PruebaMySql {
         
 //pruebaCategoria();
          //pruebaCodigoAtencion();
-        //  pruebaProfesor();
+         
        // pruebaPsicologo();
-       pruebaCursoLlevado();
+       //pruebaCursoLlevado();
 //       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Informatica"));
 //       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Mecatronica"));
 //       new EspecialidadMySQL().insertar(new Especialidad(0, "Ingenieria Industrial"));
@@ -46,7 +52,42 @@ public class PruebaMySql {
 //        new CursoMySQL().insertar(new Curso("INF282", "Lenguajes de programacion 2", 1));
 //        new CursoMySQL().insertar(new Curso("INF281", "Lenguajes de programacion 1", 1));
 //        new CursoMySQL().insertar(new Curso("INF282", "Sistemas de información 2", 1));
-
+//pruebaProfesor();
+    Evento evento= new Evento();
+    evento.setCapacidad(10);
+    evento.setFecha(new Date());
+    evento.setHoraFina(new Date());
+    evento.setHoraInicio(new Date());
+    evento.setId_coordinador(11);
+    evento.setLugar("Generales");
+    evento.setNombre("Amistad ");
+//        MiembroOOIA psicologo=new MiembroOOIA();
+//        psicologo.setNombre("Psicologo 1");
+//                psicologo.setDni("98765432");
+//                psicologo.setEdad(40);
+//                psicologo.setDireccion("En algun lugar de Lima");
+//                psicologo.setUsuario_pucp("25896314");
+//                psicologo.setFecha_inclusion(new Date());
+//               psicologo.setCorreo("Rony@pucp.edu.pe");
+//               psicologo.setNombre("Psicologo 3");
+//               evento.setId_evento(1);
+//               new CoordinadorEventosMySQL().insertar(psicologo);
+                 evento.setId_evento(8); 
+                 ArrayList<Persona>persona=new ArrayList<>();
+                 Alumno al=new Alumno();
+                 al.setId_persona(1);
+                 persona.add(al);
+                 al.setId_persona(13);
+                 persona.add(al);
+                 evento.setPonentes(persona);
+      //  new EventoMySQL().insertar(evento);
+                Evento ev = new EventoMySQL().listar("Amistad").get(0);
+                System.out.println(ev.getNombre()+" "+ev.getId_evento());
+                for(Persona per:ev.getPonentes()){
+                    System.out.println(per.getId_persona()+" "+per.getNombre());
+                }
+   //new EventoMySQL().modificar(evento);
+    //new EventoMySQL().eliminar(evento.getId_evento());
     }
     
     private static void pruebaCursoLlevado(){
@@ -134,11 +175,11 @@ public class PruebaMySql {
                 profesor.setEspecialidad(new Especialidad(3, ""));
                 profesor.setFacultad("Ciencias e Ingenieria");
                 profesor.setCategoria("Contratado");
-                //profesorMySQL.insertar(profesor);
-                profesor.setId_profesor(1);
+                profesorMySQL.insertar(profesor);
+         
                 
                 
-                profesorMySQL.modificar(profesor);
+                //profesorMySQL.modificar(profesor);
                 //profesorMySQL.eliminar(profesor);
                 prueba.impresion(profesorMySQL.listar());
     } 

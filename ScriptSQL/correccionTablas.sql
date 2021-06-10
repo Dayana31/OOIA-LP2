@@ -60,7 +60,7 @@ create table especialidad(
 )engine = innodb;
 
 create table alumno(
-	id_alumno int,
+	id_alumno int auto_increment,
 	fid_especialidad int,
     fid_miembro_pucp int,
 	codigo_pucp varchar(150),
@@ -287,7 +287,7 @@ create table tramite_alumno(
 
 
 create table coordinador_eventos_ooia(
-    id_coordinador int,
+    id_coordinador int auto_increment,
 	fid_miembro_pucp int,
     estado boolean,
     primary key(id_coordinador),
@@ -295,12 +295,13 @@ create table coordinador_eventos_ooia(
 )engine = innodb;
 
 create table evento(
-	id_evento int,
+	id_evento int auto_increment,
 	fid_coordinador int,
     capacidad int,
     nombre varchar(150),
-    fecha_inicio date,
-    fecha_fin date,
+    fecha date,
+    hora_inicio time,
+    hora_fin time,
     lugar varchar(150),
     estado boolean,
     primary key(id_evento),
@@ -308,7 +309,7 @@ create table evento(
 )engine = innodb;
 
 create table evento_alumno(
-	id_encuesta int,
+	id_encuesta int auto_increment,
     fid_alumno int,
     fid_evento int,
     valoracion_ponentes int,
@@ -325,7 +326,7 @@ create table evento_alumno(
 
 
 create table evento_ponente(
-	id_evento_ponente int,
+	id_evento_ponente int auto_increment,
 	fid_persona int,
     fid_evento int,
     primary key(id_evento_ponente),
@@ -334,7 +335,7 @@ create table evento_ponente(
 )engine = innodb;
 
 create table evento_organizador(
-	id_evento_organizador int,
+	id_evento_organizador int auto_increment,
 	fid_persona int,
     fid_evento int,
     primary key (id_evento_organizador),

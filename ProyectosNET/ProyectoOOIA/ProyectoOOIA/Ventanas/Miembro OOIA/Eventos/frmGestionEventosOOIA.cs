@@ -3,26 +3,40 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoOOIA.AlumnoWS;
+using ProyectoOOIA.EventoWS;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
+using persona = ProyectoOOIA.EventoWS.persona;
 
 namespace ProyectoOOIA.Ventanas
 {
     public partial class frmGestionEventosOOIA : Form
     {
-
+        ErrorProvider error = new ErrorProvider();
+        private EventoWS.EventoWSClient eventoDao;
+        private EventoWS.evento evento;
+        private BindingList<Object> lista = new BindingList<Object>();
         private ProfesorWS.profesor profesor = null;
         private AlumnoWS.alumno alumno = null;
         private InvitadoWS.invitado invitado = null;
+        private int numeroElementos = 0;
+        
 
         public frmGestionEventosOOIA(Estado estado)
         {
             InitializeComponent();
             componentes(estado);
+            
+            error.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            dgvPonentes.AutoGenerateColumns = false;
+            dgvPonentes.RowCount = 0;
+            
         }
 
         private void componentes(Estado estado)
@@ -47,7 +61,11 @@ namespace ProyectoOOIA.Ventanas
                     txtDescripcion.Enabled = false;
                     cboCategoria.Enabled = false;
                     dgvPonentes.Enabled = false;
+                    npdCapacidad.Enabled = false;
+                    txtLugar.Enabled = false;
                     dgvPonentes.RowCount = 1;
+                    btnBuscarPonente.Enabled = false;
+                    txtIdEvento.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = true;
@@ -55,7 +73,7 @@ namespace ProyectoOOIA.Ventanas
                     btnAgregarPonente.Enabled = true;
                     btnBuscar.Enabled = false;
                     btnCancelar.Enabled = true;
-                    btnEliminarPonente.Enabled = false;
+                    btnEliminarPonente.Enabled = true;
                     btnGuardar.Enabled = true;
                     btnNuevo.Enabled = true;
                     btnModificar.Enabled = false;
@@ -63,10 +81,14 @@ namespace ProyectoOOIA.Ventanas
                     txtHoraFin.Enabled = true;
                     txtHoraInicio.Enabled = true;
                     txtNombre.Enabled = true;
-                    txtNombrePonente.Enabled = true;
+                    txtNombrePonente.Enabled = false;
                     txtDescripcion.Enabled = true;
                     cboCategoria.Enabled = true;
                     dgvPonentes.Enabled = true;
+                    npdCapacidad.Enabled = true;
+                    txtLugar.Enabled = true;
+                    btnBuscarPonente.Enabled = true;
+                    txtIdEvento.Enabled = false;
                     break;
                 case Estado.Busqueda:
                     btnNuevo.Enabled = false;
@@ -86,6 +108,9 @@ namespace ProyectoOOIA.Ventanas
                     txtDescripcion.Enabled = false;
                     cboCategoria.Enabled = false;
                     dgvPonentes.Enabled = false;
+                    npdCapacidad.Enabled = false;
+                    txtLugar.Enabled = false;
+                    txtIdEvento.Enabled = false;
                     break;
                 
             }
@@ -96,6 +121,7 @@ namespace ProyectoOOIA.Ventanas
         {
             new frmBuscarEventoAlumno().Show();
             componentes(Estado.Busqueda);
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -106,20 +132,37 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            DialogResult dr =
-               MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",
-               MessageBoxButtons.YesNo, MessageBoxIcon.None);
+            validacionDatos();
+            evento = new EventoWS.evento();
+            eventoDao = new EventoWS.EventoWSClient();
+            evento.nombre = txtNombre.Text;
+            evento.fecha = dtpFechaEvento.Value;
+            evento.estado = true;
+            evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
+            int hora=0, minuto=0;
+            
 
-            string patron = @"\s?\d?\d:\d\d";
-            Regex regex = new Regex(patron);
-            if (!regex.IsMatch(txtHoraInicio.Text))
-            {
-                MessageBox.Show("Formato de hora Inicio incorrecto","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-            if (!regex.IsMatch(txtHoraFin.Text))
-            {
-                MessageBox.Show("Formato de hora Fin incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+            evento.id_coordinador = 0;
+            evento.lugar = txtLugar.Text;
+            evento.ponentes = (persona[])lista.ToArray();
+            DialogResult dr =
+                MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.None);
+            if(dr==DialogResult.Yes)
+                eventoDao.insertarEvento(evento);
+
+
+            
+        }
+
+        private void validacionDatos()
+        {
+            if (lista.Count == 0)
+                MessageBox.Show("Debe ingresar al menos un ponente", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -154,7 +197,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAgregarPonente_Click(object sender, EventArgs e)
         {
-
+            if (txtNombre.Text == "") return;
             dgvPonentes.Rows[dgvPonentes.Rows.Add()].Cells[0].Value = txtNombrePonente.Text;
         }
 
@@ -163,9 +206,130 @@ namespace ProyectoOOIA.Ventanas
             frmMostrarPonentes mostrar = new frmMostrarPonentes();
             mostrar.ShowDialog();
             int tipo = mostrar.TipoUsuario;
-            if (tipo == 0) invitado = mostrar.Invitado;
-            else if (tipo == 1) profesor = mostrar.Profesor;
-            else alumno = mostrar.Alumno;
+            dgvPonentes.Rows.Add();
+            if (tipo == 0)
+            {
+                invitado = mostrar.Invitado;
+                txtNombre.Text = invitado.nombre;
+                lista.Add(invitado);
+                dgvPonentes.Rows[numeroElementos].Cells[0].Value = invitado.nombre;
+
+            }
+            else if (tipo == 1)
+            {
+                profesor = mostrar.Profesor;
+                txtNombre.Text = profesor.nombre;
+                lista.Add(profesor);
+                dgvPonentes.Rows[numeroElementos].Cells[0].Value = profesor.nombre;
+            }
+            else if(tipo==2)
+            {
+                alumno = mostrar.Alumno;
+                txtNombre.Text = alumno.nombre;
+                lista.Add(alumno);
+                dgvPonentes.Rows[numeroElementos].Cells[0].Value = alumno.nombre;
+                
+            }
+
+            
+
+        }
+
+        private void btnEliminarPonente_Click(object sender, EventArgs e)
+        {
+            if (dgvPonentes.CurrentRow.Index >= 0)
+            {
+                lista.RemoveAt(dgvPonentes.CurrentRow.Index);
+                dgvPonentes.Rows.RemoveAt(dgvPonentes.CurrentRow.Index);
+            }
+        }
+        
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            
+            if (txtNombre.Text == "")
+                error.SetError(txtNombre,"El campo es obligatorio");
+
+
+        }
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            error.Clear();
+        }
+
+        private void txtHoraInicio_Enter(object sender, EventArgs e)
+        {
+            if (txtHoraInicio.Text == "Ejempo 15:30")
+            {
+                txtHoraInicio.Text = "";
+                txtHoraInicio.ForeColor = Color.Black;
+            }
+            error.Clear();
+        }
+
+        private void txtHoraInicio_Leave(object sender, EventArgs e)
+        {
+
+            if (txtHoraInicio.Text == "")
+            {
+                txtHoraInicio.Text = "Ejempo 15:30";
+                txtHoraInicio.ForeColor = Color.Gray;
+            }
+            string patron = @"\s?\d?\d:\d\d";
+            Regex regex = new Regex(patron);
+            if (!regex.IsMatch(txtHoraInicio.Text))
+            {
+                error.SetError(txtHoraInicio,"Formato de hora incorrecto");
+            }
+        }
+        private void txtHoraFin_Enter(object sender, EventArgs e)
+        {
+            if (txtHoraFin.Text == "Ejempo 15:30")
+            {
+                txtHoraFin.Text = "";
+                txtHoraFin.ForeColor = Color.Black;
+            }
+            error.Clear();
+        }
+
+        private void txtHoraFin_Leave(object sender, EventArgs e)
+        {
+            if (txtHoraFin.Text == "")
+            {
+                txtHoraFin.Text = "Ejempo 15:30";
+                txtHoraFin.ForeColor = Color.Gray;
+            }
+            string patron = @"\s?\d?\d:\d\d";
+            Regex regex = new Regex(patron);
+
+
+            if (!regex.IsMatch(txtHoraFin.Text))
+            {
+                error.SetError(txtHoraFin, "Formato de hora incorrecto");
+            }
+        }
+
+        private void txtLugar_Enter(object sender, EventArgs e)
+        {
+            error.Clear();
+        }
+
+        private void txtLugar_Leave(object sender, EventArgs e)
+        {
+            if(txtLugar.Text=="")
+                error.SetError(txtLugar,"El campo es obligatorio");
+        }
+
+        private void txtDescripcion_Enter(object sender, EventArgs e)
+        {
+            if (txtDescripcion.Text == "")
+                error.SetError(txtDescripcion, "El campo es obligatorio");
+        }
+
+        private void txtHoraInicio_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

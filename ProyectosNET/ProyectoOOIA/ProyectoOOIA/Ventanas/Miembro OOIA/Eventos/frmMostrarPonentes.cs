@@ -85,21 +85,21 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             {
                 invitado = dgvPonentes.Rows[e.RowIndex].DataBoundItem as InvitadoWS.invitado;
                 dgvPonentes.Rows[e.RowIndex].Cells[0].Value = invitado.nombre;
-                dgvPonentes.Rows[e.RowIndex].Cells[0].Value = "Invitado";
+                dgvPonentes.Rows[e.RowIndex].Cells[1].Value = "Invitado";
 
             }
             else if (tipoUsuario == 1)
             {
                 profesor=dgvPonentes.Rows[e.RowIndex].DataBoundItem as profesor;
                 dgvPonentes.Rows[e.RowIndex].Cells[0].Value = profesor.nombre;
-                dgvPonentes.Rows[e.RowIndex].Cells[0].Value = profesor.especialidad.nombre_especialidad;
+                dgvPonentes.Rows[e.RowIndex].Cells[1].Value = profesor.especialidad.nombre_especialidad;
 
             }
             else
             {
                 alumno= dgvPonentes.Rows[e.RowIndex].DataBoundItem as alumno;
                 dgvPonentes.Rows[e.RowIndex].Cells[0].Value = alumno.nombre;
-                dgvPonentes.Rows[e.RowIndex].Cells[0].Value = alumno.especialidad.nombre_especialidad;
+                dgvPonentes.Rows[e.RowIndex].Cells[1].Value = alumno.especialidad.nombre_especialidad;
             }
         }
 

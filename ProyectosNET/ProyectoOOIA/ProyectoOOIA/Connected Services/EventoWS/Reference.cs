@@ -68,9 +68,13 @@ namespace ProyectoOOIA.EventoWS {
         
         private bool fechaFieldSpecified;
         
-        private localTime horaFinField;
+        private System.DateTime horaFinaField;
         
-        private localTime horaInicioField;
+        private bool horaFinaFieldSpecified;
+        
+        private System.DateTime horaInicioField;
+        
+        private bool horaInicioFieldSpecified;
         
         private int id_coordinadorField;
         
@@ -132,25 +136,49 @@ namespace ProyectoOOIA.EventoWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public localTime horaFin {
+        public System.DateTime horaFina {
             get {
-                return this.horaFinField;
+                return this.horaFinaField;
             }
             set {
-                this.horaFinField = value;
-                this.RaisePropertyChanged("horaFin");
+                this.horaFinaField = value;
+                this.RaisePropertyChanged("horaFina");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool horaFinaSpecified {
+            get {
+                return this.horaFinaFieldSpecified;
+            }
+            set {
+                this.horaFinaFieldSpecified = value;
+                this.RaisePropertyChanged("horaFinaSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public localTime horaInicio {
+        public System.DateTime horaInicio {
             get {
                 return this.horaInicioField;
             }
             set {
                 this.horaInicioField = value;
                 this.RaisePropertyChanged("horaInicio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool horaInicioSpecified {
+            get {
+                return this.horaInicioFieldSpecified;
+            }
+            set {
+                this.horaInicioFieldSpecified = value;
+                this.RaisePropertyChanged("horaInicioSpecified");
             }
         }
         
@@ -213,24 +241,6 @@ namespace ProyectoOOIA.EventoWS {
                 this.RaisePropertyChanged("ponentes");
             }
         }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public partial class localTime : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -350,7 +360,15 @@ namespace ProyectoOOIA.EventoWS {
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarEventoRequest {
         
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
         public listarEventoRequest() {
+        }
+        
+        public listarEventoRequest(string nombre) {
+            this.nombre = nombre;
         }
     }
     
@@ -512,8 +530,9 @@ namespace ProyectoOOIA.EventoWS {
             return base.Channel.listarEvento(request);
         }
         
-        public ProyectoOOIA.EventoWS.evento[] listarEvento() {
+        public ProyectoOOIA.EventoWS.evento[] listarEvento(string nombre) {
             ProyectoOOIA.EventoWS.listarEventoRequest inValue = new ProyectoOOIA.EventoWS.listarEventoRequest();
+            inValue.nombre = nombre;
             ProyectoOOIA.EventoWS.listarEventoResponse retVal = ((ProyectoOOIA.EventoWS.EventoWS)(this)).listarEvento(inValue);
             return retVal.@return;
         }
@@ -523,8 +542,9 @@ namespace ProyectoOOIA.EventoWS {
             return base.Channel.listarEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.listarEventoResponse> listarEventoAsync() {
+        public System.Threading.Tasks.Task<ProyectoOOIA.EventoWS.listarEventoResponse> listarEventoAsync(string nombre) {
             ProyectoOOIA.EventoWS.listarEventoRequest inValue = new ProyectoOOIA.EventoWS.listarEventoRequest();
+            inValue.nombre = nombre;
             return ((ProyectoOOIA.EventoWS.EventoWS)(this)).listarEventoAsync(inValue);
         }
         

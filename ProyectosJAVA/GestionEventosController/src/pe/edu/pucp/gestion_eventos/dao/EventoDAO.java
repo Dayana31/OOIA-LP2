@@ -13,7 +13,7 @@ import pe.edu.pucp.gestion_eventos.model.Evento;
  * @author PC
  */
 public interface EventoDAO {
-    public ArrayList<Evento> listar();//devuelve un arreglo de empleados
+    public ArrayList<Evento> listar(String nombre);//devuelve un arreglo de empleados
     public int insertar(Evento evento);
     public int modificar(Evento evento);
     public int eliminar(int id_evento);
