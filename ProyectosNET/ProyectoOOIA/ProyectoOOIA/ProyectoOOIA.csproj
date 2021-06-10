@@ -185,6 +185,12 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarPsicologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarPsicologo.Designer.cs">
+      <DependentUpon>frmBuscarPsicologo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,12 @@
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarAlumno.Designer.cs">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarPsicologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarPsicologo.Designer.cs">
+      <DependentUpon>frmCargarPsicologo.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarProfesor.cs">
       <SubType>Form</SubType>
@@ -454,11 +466,17 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarPsicologo.resx">
+      <DependentUpon>frmBuscarPsicologo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarProfesor.resx">
       <DependentUpon>frmBuscarProfesor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmBuscarAlumno.resx">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarPsicologo.resx">
+      <DependentUpon>frmCargarPsicologo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\frmCargarProfesor.resx">
       <DependentUpon>frmCargarProfesor.cs</DependentUpon>
@@ -609,8 +627,8 @@
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.modificarAlumnoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS.wsdl" />
-    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS.xsd">
+    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS1.wsdl" />
+    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CargarCSValumnos\ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse.datasource">
@@ -652,8 +670,8 @@
     <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.modificarCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CodigoAtencionWS\CodigoWS.wsdl" />
-    <None Include="Connected Services\CodigoAtencionWS\CodigoWS.xsd">
+    <None Include="Connected Services\CodigoAtencionWS\CodigoWS1.wsdl" />
+    <None Include="Connected Services\CodigoAtencionWS\CodigoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CodigoAtencionWS\ProyectoOOIA.CodigoAtencionWS.codigoAtencion.datasource">
@@ -821,8 +839,8 @@
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.modificarHorarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionEventoWS\GesionEventoWS.wsdl" />
-    <None Include="Connected Services\GestionEventoWS\GesionEventoWS.xsd">
+    <None Include="Connected Services\GestionEventoWS\GesionEventoWS1.wsdl" />
+    <None Include="Connected Services\GestionEventoWS\GesionEventoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.eliminarCoordinadorEventoResponse.datasource">
@@ -870,8 +888,8 @@
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.wsdl" />
-    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.xsd">
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.wsdl" />
+    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.alumno.datasource">

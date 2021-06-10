@@ -26,6 +26,7 @@ public class ProfesoresCSVcargaWS {
     @WebMethod(operationName = "CargarCSVprofesores")
     public int cargarCSVProfesores(@WebParam(name = "RutaArchivo") String ruta) throws FileNotFoundException, ParseException {
         int resultado = 0;
+        csvProfesores = new ProfesoresCSV();
         csvProfesores.setRutaCSV(ruta);
         resultado = csvProfesores.cargarDatos();
         return resultado;

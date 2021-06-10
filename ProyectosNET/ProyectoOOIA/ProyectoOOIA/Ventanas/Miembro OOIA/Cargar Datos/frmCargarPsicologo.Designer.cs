@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
-    partial class frmCargarProfesor
+    partial class frmCargarPsicologo
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarProfesor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarPsicologo));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.txtHeader = new System.Windows.Forms.Label();
@@ -40,21 +40,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
-            this.pnlDatos = new System.Windows.Forms.Panel();
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblMiembroPucp = new System.Windows.Forms.Label();
-            this.cbEspecialidad = new System.Windows.Forms.ComboBox();
-            this.lblEspecialidad = new System.Windows.Forms.Label();
-            this.lblProfesor = new System.Windows.Forms.Label();
-            this.txtFacultad = new System.Windows.Forms.TextBox();
-            this.lblFacultad = new System.Windows.Forms.Label();
-            this.lblIdProfesor = new System.Windows.Forms.Label();
-            this.txtIdProfesor = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPersona = new System.Windows.Forms.TabPage();
             this.pnlPersona = new System.Windows.Forms.Panel();
@@ -69,19 +54,28 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtDni = new System.Windows.Forms.TextBox();
             this.lblDni = new System.Windows.Forms.Label();
             this.lblPersona = new System.Windows.Forms.Label();
-            this.tabProfesor = new System.Windows.Forms.TabPage();
+            this.tabPsico = new System.Windows.Forms.TabPage();
             this.btnImagen = new System.Windows.Forms.Button();
             this.pbPerfil = new System.Windows.Forms.PictureBox();
+            this.pnlDatos = new System.Windows.Forms.Panel();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblMiembroPucp = new System.Windows.Forms.Label();
+            this.lblPsico = new System.Windows.Forms.Label();
+            this.lblIdPsico = new System.Windows.Forms.Label();
+            this.txtIdPsico = new System.Windows.Forms.TextBox();
             this.ofd_Imagen = new System.Windows.Forms.OpenFileDialog();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            this.pnlDatos.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPersona.SuspendLayout();
             this.pnlPersona.SuspendLayout();
-            this.tabProfesor.SuspendLayout();
+            this.tabPsico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).BeginInit();
+            this.pnlDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -118,7 +112,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtHeader.Name = "txtHeader";
             this.txtHeader.Size = new System.Drawing.Size(317, 43);
             this.txtHeader.TabIndex = 2;
-            this.txtHeader.Text = "Cargar Asesor";
+            this.txtHeader.Text = "Cargar Psicologo";
             // 
             // toolStrip1
             // 
@@ -191,170 +185,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tsbCancelar.Text = "Cancelar";
             this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
-            // pnlDatos
-            // 
-            this.pnlDatos.Controls.Add(this.lblCategoria);
-            this.pnlDatos.Controls.Add(this.txtCategoria);
-            this.pnlDatos.Controls.Add(this.txtUsuario);
-            this.pnlDatos.Controls.Add(this.txtPassword);
-            this.pnlDatos.Controls.Add(this.lblPassword);
-            this.pnlDatos.Controls.Add(this.lblUsuario);
-            this.pnlDatos.Controls.Add(this.lblMiembroPucp);
-            this.pnlDatos.Controls.Add(this.cbEspecialidad);
-            this.pnlDatos.Controls.Add(this.lblEspecialidad);
-            this.pnlDatos.Controls.Add(this.lblProfesor);
-            this.pnlDatos.Controls.Add(this.txtFacultad);
-            this.pnlDatos.Controls.Add(this.lblFacultad);
-            this.pnlDatos.Controls.Add(this.lblIdProfesor);
-            this.pnlDatos.Controls.Add(this.txtIdProfesor);
-            this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlDatos.Location = new System.Drawing.Point(4, 4);
-            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(696, 305);
-            this.pnlDatos.TabIndex = 3;
-            // 
-            // lblCategoria
-            // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(7, 222);
-            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(86, 27);
-            this.lblCategoria.TabIndex = 15;
-            this.lblCategoria.Text = "Categoria";
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Location = new System.Drawing.Point(203, 224);
-            this.txtCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(237, 22);
-            this.txtCategoria.TabIndex = 14;
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(203, 37);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(192, 22);
-            this.txtUsuario.TabIndex = 13;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(203, 69);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(192, 22);
-            this.txtPassword.TabIndex = 12;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(8, 69);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(101, 27);
-            this.lblPassword.TabIndex = 10;
-            this.lblPassword.Text = "Contraseña";
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(8, 33);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(72, 27);
-            this.lblUsuario.TabIndex = 9;
-            this.lblUsuario.Text = "Usuario";
-            // 
-            // lblMiembroPucp
-            // 
-            this.lblMiembroPucp.AutoSize = true;
-            this.lblMiembroPucp.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMiembroPucp.Location = new System.Drawing.Point(4, 0);
-            this.lblMiembroPucp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblMiembroPucp.Name = "lblMiembroPucp";
-            this.lblMiembroPucp.Size = new System.Drawing.Size(303, 34);
-            this.lblMiembroPucp.TabIndex = 7;
-            this.lblMiembroPucp.Text = "Datos de Miembro PUCP";
-            // 
-            // cbEspecialidad
-            // 
-            this.cbEspecialidad.FormattingEnabled = true;
-            this.cbEspecialidad.Location = new System.Drawing.Point(203, 260);
-            this.cbEspecialidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbEspecialidad.Name = "cbEspecialidad";
-            this.cbEspecialidad.Size = new System.Drawing.Size(237, 24);
-            this.cbEspecialidad.TabIndex = 6;
-            // 
-            // lblEspecialidad
-            // 
-            this.lblEspecialidad.AutoSize = true;
-            this.lblEspecialidad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecialidad.Location = new System.Drawing.Point(8, 257);
-            this.lblEspecialidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblEspecialidad.Name = "lblEspecialidad";
-            this.lblEspecialidad.Size = new System.Drawing.Size(104, 27);
-            this.lblEspecialidad.TabIndex = 5;
-            this.lblEspecialidad.Text = "Especialidad";
-            // 
-            // lblProfesor
-            // 
-            this.lblProfesor.AutoSize = true;
-            this.lblProfesor.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfesor.Location = new System.Drawing.Point(7, 123);
-            this.lblProfesor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblProfesor.Name = "lblProfesor";
-            this.lblProfesor.Size = new System.Drawing.Size(225, 34);
-            this.lblProfesor.TabIndex = 4;
-            this.lblProfesor.Text = "Datos del Profesor";
-            // 
-            // txtFacultad
-            // 
-            this.txtFacultad.Location = new System.Drawing.Point(203, 192);
-            this.txtFacultad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtFacultad.Name = "txtFacultad";
-            this.txtFacultad.Size = new System.Drawing.Size(237, 22);
-            this.txtFacultad.TabIndex = 3;
-            // 
-            // lblFacultad
-            // 
-            this.lblFacultad.AutoSize = true;
-            this.lblFacultad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacultad.Location = new System.Drawing.Point(8, 190);
-            this.lblFacultad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFacultad.Name = "lblFacultad";
-            this.lblFacultad.Size = new System.Drawing.Size(75, 27);
-            this.lblFacultad.TabIndex = 2;
-            this.lblFacultad.Text = "Facultad";
-            // 
-            // lblIdProfesor
-            // 
-            this.lblIdProfesor.AutoSize = true;
-            this.lblIdProfesor.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdProfesor.Location = new System.Drawing.Point(7, 159);
-            this.lblIdProfesor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIdProfesor.Name = "lblIdProfesor";
-            this.lblIdProfesor.Size = new System.Drawing.Size(103, 27);
-            this.lblIdProfesor.TabIndex = 1;
-            this.lblIdProfesor.Text = "ID Profesor";
-            // 
-            // txtIdProfesor
-            // 
-            this.txtIdProfesor.Location = new System.Drawing.Point(203, 160);
-            this.txtIdProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtIdProfesor.Name = "txtIdProfesor";
-            this.txtIdProfesor.Size = new System.Drawing.Size(132, 22);
-            this.txtIdProfesor.TabIndex = 0;
-            // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabPersona);
-            this.tabControl.Controls.Add(this.tabProfesor);
+            this.tabControl.Controls.Add(this.tabPsico);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl.Location = new System.Drawing.Point(0, 121);
             this.tabControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -501,19 +335,19 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblPersona.TabIndex = 8;
             this.lblPersona.Text = "Datos de Persona";
             // 
-            // tabProfesor
+            // tabPsico
             // 
-            this.tabProfesor.Controls.Add(this.btnImagen);
-            this.tabProfesor.Controls.Add(this.pbPerfil);
-            this.tabProfesor.Controls.Add(this.pnlDatos);
-            this.tabProfesor.Location = new System.Drawing.Point(4, 25);
-            this.tabProfesor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabProfesor.Name = "tabProfesor";
-            this.tabProfesor.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabProfesor.Size = new System.Drawing.Size(983, 313);
-            this.tabProfesor.TabIndex = 0;
-            this.tabProfesor.Text = "Datos Profesor";
-            this.tabProfesor.UseVisualStyleBackColor = true;
+            this.tabPsico.Controls.Add(this.btnImagen);
+            this.tabPsico.Controls.Add(this.pbPerfil);
+            this.tabPsico.Controls.Add(this.pnlDatos);
+            this.tabPsico.Location = new System.Drawing.Point(4, 25);
+            this.tabPsico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPsico.Name = "tabPsico";
+            this.tabPsico.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPsico.Size = new System.Drawing.Size(983, 313);
+            this.tabPsico.TabIndex = 0;
+            this.tabPsico.Text = "Datos Psicologo";
+            this.tabPsico.UseVisualStyleBackColor = true;
             // 
             // btnImagen
             // 
@@ -538,11 +372,107 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pbPerfil.TabIndex = 4;
             this.pbPerfil.TabStop = false;
             // 
+            // pnlDatos
+            // 
+            this.pnlDatos.Controls.Add(this.txtUsuario);
+            this.pnlDatos.Controls.Add(this.txtPassword);
+            this.pnlDatos.Controls.Add(this.lblPassword);
+            this.pnlDatos.Controls.Add(this.lblUsuario);
+            this.pnlDatos.Controls.Add(this.lblMiembroPucp);
+            this.pnlDatos.Controls.Add(this.lblPsico);
+            this.pnlDatos.Controls.Add(this.lblIdPsico);
+            this.pnlDatos.Controls.Add(this.txtIdPsico);
+            this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlDatos.Location = new System.Drawing.Point(4, 4);
+            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlDatos.Name = "pnlDatos";
+            this.pnlDatos.Size = new System.Drawing.Size(696, 305);
+            this.pnlDatos.TabIndex = 3;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(203, 37);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(192, 22);
+            this.txtUsuario.TabIndex = 13;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(203, 69);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(192, 22);
+            this.txtPassword.TabIndex = 12;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(8, 69);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(101, 27);
+            this.lblPassword.TabIndex = 10;
+            this.lblPassword.Text = "Contraseña";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(8, 33);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(72, 27);
+            this.lblUsuario.TabIndex = 9;
+            this.lblUsuario.Text = "Usuario";
+            // 
+            // lblMiembroPucp
+            // 
+            this.lblMiembroPucp.AutoSize = true;
+            this.lblMiembroPucp.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiembroPucp.Location = new System.Drawing.Point(4, 0);
+            this.lblMiembroPucp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMiembroPucp.Name = "lblMiembroPucp";
+            this.lblMiembroPucp.Size = new System.Drawing.Size(303, 34);
+            this.lblMiembroPucp.TabIndex = 7;
+            this.lblMiembroPucp.Text = "Datos de Miembro PUCP";
+            // 
+            // lblPsico
+            // 
+            this.lblPsico.AutoSize = true;
+            this.lblPsico.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPsico.Location = new System.Drawing.Point(7, 123);
+            this.lblPsico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPsico.Name = "lblPsico";
+            this.lblPsico.Size = new System.Drawing.Size(236, 34);
+            this.lblPsico.TabIndex = 4;
+            this.lblPsico.Text = "Datos del Psicologo";
+            // 
+            // lblIdPsico
+            // 
+            this.lblIdPsico.AutoSize = true;
+            this.lblIdPsico.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdPsico.Location = new System.Drawing.Point(7, 159);
+            this.lblIdPsico.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdPsico.Name = "lblIdPsico";
+            this.lblIdPsico.Size = new System.Drawing.Size(107, 27);
+            this.lblIdPsico.TabIndex = 1;
+            this.lblIdPsico.Text = "ID Psicologo";
+            // 
+            // txtIdPsico
+            // 
+            this.txtIdPsico.Location = new System.Drawing.Point(203, 160);
+            this.txtIdPsico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIdPsico.Name = "txtIdPsico";
+            this.txtIdPsico.Size = new System.Drawing.Size(132, 22);
+            this.txtIdPsico.TabIndex = 0;
+            // 
             // ofd_Imagen
             // 
             this.ofd_Imagen.FileName = "Alumno_Perfil";
             // 
-            // frmCargarProfesor
+            // frmCargarPsicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -551,20 +481,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pnlHeader);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "frmCargarProfesor";
+            this.Name = "frmCargarPsicologo";
             this.Text = "Cargar Alumno";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.pnlDatos.ResumeLayout(false);
-            this.pnlDatos.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.tabPersona.ResumeLayout(false);
             this.pnlPersona.ResumeLayout(false);
             this.pnlPersona.PerformLayout();
-            this.tabProfesor.ResumeLayout(false);
+            this.tabPsico.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil)).EndInit();
+            this.pnlDatos.ResumeLayout(false);
+            this.pnlDatos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -582,19 +512,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.ToolStripButton tsbEliminar;
         private System.Windows.Forms.ToolStripButton tsbBuscar;
         private System.Windows.Forms.ToolStripButton tsbCancelar;
-        private System.Windows.Forms.Panel pnlDatos;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label lblMiembroPucp;
-        private System.Windows.Forms.ComboBox cbEspecialidad;
-        private System.Windows.Forms.Label lblEspecialidad;
-        private System.Windows.Forms.Label lblProfesor;
-        private System.Windows.Forms.TextBox txtFacultad;
-        private System.Windows.Forms.Label lblFacultad;
-        private System.Windows.Forms.Label lblIdProfesor;
-        private System.Windows.Forms.TextBox txtIdProfesor;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPersona;
         private System.Windows.Forms.Panel pnlPersona;
@@ -609,11 +526,18 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.Label lblPersona;
-        private System.Windows.Forms.TabPage tabProfesor;
+        private System.Windows.Forms.TabPage tabPsico;
         private System.Windows.Forms.Button btnImagen;
         private System.Windows.Forms.PictureBox pbPerfil;
         private System.Windows.Forms.OpenFileDialog ofd_Imagen;
-        private System.Windows.Forms.TextBox txtCategoria;
-        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Panel pnlDatos;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblMiembroPucp;
+        private System.Windows.Forms.Label lblPsico;
+        private System.Windows.Forms.Label lblIdPsico;
+        private System.Windows.Forms.TextBox txtIdPsico;
     }
 }

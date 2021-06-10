@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://alvaro:8080/AuxiliarWS/AlumnosCSVcargaWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AlumnosCSVcargaWS.xsd" MetadataType="Schema" ID="129d0281-9ea7-4fa9-8169-52c4ded4972a" SourceId="1" SourceUrl="http://alvaro:8080/AuxiliarWS/AlumnosCSVcargaWS?xsd=1" />
-    <MetadataFile FileName="AlumnosCSVcargaWS.wsdl" MetadataType="Wsdl" ID="00d65780-c20a-4322-8a45-bd272ff25f4d" SourceId="1" SourceUrl="http://alvaro:8080/AuxiliarWS/AlumnosCSVcargaWS?wsdl" />
+    <MetadataFile FileName="AlumnosCSVcargaWS1.xsd" MetadataType="Schema" ID="008951c9-1bda-4ccc-ab2e-5c9cd185c2d1" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS?xsd=1" />
+    <MetadataFile FileName="AlumnosCSVcargaWS1.wsdl" MetadataType="Wsdl" ID="57fb81a0-175d-4bd1-8700-4cd15653d455" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/AlumnosCSVcargaWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

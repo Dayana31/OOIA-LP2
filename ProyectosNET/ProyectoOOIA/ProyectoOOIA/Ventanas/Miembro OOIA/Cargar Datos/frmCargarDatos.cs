@@ -46,10 +46,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         private void btnPsicologo_Click(object sender, EventArgs e)
         {
-            if (archivos.ShowDialog() == DialogResult.OK)
+            /*if (archivos.ShowDialog() == DialogResult.OK)
             {
                 cmbPsicologo.Text = archivos.FileName;
-            }
+            }*/
+            new frmCargarPsicologo().ShowDialog();
+
         }
 
         private void btnMax_Click(object sender, EventArgs e)
@@ -90,6 +92,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private void btnCargaCSVPsicologos_Click(object sender, EventArgs e)
         {
             new frmCargarCSVPsicologos().ShowDialog();
+        }
+
+        private void btnProfesores_Click_1(object sender, EventArgs e)
+        {
+            new frmCargarProfesor().ShowDialog();
         }
     }
 }

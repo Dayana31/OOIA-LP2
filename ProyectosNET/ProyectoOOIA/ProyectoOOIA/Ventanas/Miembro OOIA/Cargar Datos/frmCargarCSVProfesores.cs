@@ -31,7 +31,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void btnCargaDatosCSVAlumnos_Click(object sender, EventArgs e)
         {
-
+            CargarCSVprofesores.ProfesoresCSVcargaWSClient cargaCSVprofesores =
+                new CargarCSVprofesores.ProfesoresCSVcargaWSClient();
+            int resultado = cargaCSVprofesores.CargarCSVprofesores(txtRutaArchivo.Text);
+            if (resultado == 0)
+            {
+                MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
+                    MessageBoxButtons.OK);
+                this.Close();
+            }
         }
     }
 }

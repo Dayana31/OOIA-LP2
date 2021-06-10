@@ -46,7 +46,7 @@ create table persona(
 create table miembro_pucp(
 	id_miembro_pucp int auto_increment,
     fid_persona int,
-    usuario_pucp varchar(150),
+    usuario varchar(150),
     password varchar(150),
     fecha_de_inclusion date,
     imagen_perfil longblob,
