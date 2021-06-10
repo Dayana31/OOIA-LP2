@@ -143,7 +143,7 @@ namespace ProyectoOOIA.Ventanas
             evento.horaFina = dtpFin.Value;
             evento.id_coordinador = 12;
             evento.lugar = txtLugar.Text;
-            evento.ponentes = lista.ToArray();
+            //evento.ponentes = lista.ToArray();
             DialogResult dr =
                 MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",
                     MessageBoxButtons.YesNo, MessageBoxIcon.None);
@@ -219,8 +219,8 @@ namespace ProyectoOOIA.Ventanas
                 invitado = mostrar.Invitado;
                 txtNombre.Text = invitado.nombre;
                 
-                aux.id_persona = invitado.id_persona;
-                lista.Add(aux);
+                //aux.id_persona = invitado.id_persona;
+                //lista.Add(aux);
                 dgvPonentes.Rows[numeroElementos].Cells[0].Value = invitado.nombre;
 
             }
@@ -236,7 +236,7 @@ namespace ProyectoOOIA.Ventanas
             {
                 alumno = mostrar.Alumno;
                 txtNombre.Text = alumno.nombre;
-                lista.Add(alumno);
+                //lista.Add(alumno);
                 dgvPonentes.Rows[numeroElementos].Cells[0].Value = alumno.nombre;
                 
             }

@@ -231,8 +231,8 @@ namespace ProyectoOOIA.EventoWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("ponentes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
-        public AlumnoWS.persona[] ponentes {
+       // [System.Xml.Serialization.XmlElementAttribute("ponentes", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
+       /* public AlumnoWS.persona[] ponentes {
             get {
                 return this.ponentesField;
             }
@@ -241,7 +241,7 @@ namespace ProyectoOOIA.EventoWS {
                 this.RaisePropertyChanged("ponentes");
             }
         }
-        
+        */
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {

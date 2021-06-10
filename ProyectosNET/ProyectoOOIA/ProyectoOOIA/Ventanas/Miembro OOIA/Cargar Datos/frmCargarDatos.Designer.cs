@@ -262,6 +262,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnProfesores.TabIndex = 16;
             this.btnProfesores.Text = "Cargar Datos";
             this.btnProfesores.UseVisualStyleBackColor = true;
+            this.btnProfesores.Click += new System.EventHandler(this.btnProfesores_Click_1);
             // 
             // btnAlumno
             // 
