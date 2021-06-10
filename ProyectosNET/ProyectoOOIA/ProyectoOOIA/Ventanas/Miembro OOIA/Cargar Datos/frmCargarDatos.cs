@@ -91,5 +91,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         {
             new frmCargarCSVPsicologos().ShowDialog();
         }
+
+        private void btnProfesores_Click_1(object sender, EventArgs e)
+        {
+            new frmCargarProfesor().ShowDialog();
+        }
     }
 }
