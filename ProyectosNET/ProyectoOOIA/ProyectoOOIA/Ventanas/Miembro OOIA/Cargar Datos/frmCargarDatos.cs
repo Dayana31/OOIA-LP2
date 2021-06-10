@@ -46,10 +46,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         private void btnPsicologo_Click(object sender, EventArgs e)
         {
-            if (archivos.ShowDialog() == DialogResult.OK)
+            /*if (archivos.ShowDialog() == DialogResult.OK)
             {
                 cmbPsicologo.Text = archivos.FileName;
-            }
+            }*/
+            new frmCargarPsicologo().ShowDialog();
+
         }
 
         private void btnMax_Click(object sender, EventArgs e)
