@@ -56,6 +56,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\CargarCSValumnos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CargarCSVprofesores\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CargarCSVpsicologos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\GestionAtencionWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -515,6 +530,27 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmDetalleEvento.resx">
       <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS.wsdl" />
+    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CargarCSValumnos\ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CargarCSVprofesores\ProfesoresCSVcargaWS.wsdl" />
+    <None Include="Connected Services\CargarCSVprofesores\ProfesoresCSVcargaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CargarCSVprofesores\ProyectoOOIA.CargarCSVprofesores.CargarCSVprofesoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CargarCSVpsicologos\ProyectoOOIA.CargarCSVpsicologos.CargarCSVpsicologosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CargarCSVpsicologos\PsicologosCSVcargaWS.wsdl" />
+    <None Include="Connected Services\CargarCSVpsicologos\PsicologosCSVcargaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS.wsdl" />
     <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS.xsd">
       <SubType>Designer</SubType>
@@ -762,6 +798,24 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\CargarCSValumnos\configuration91.svcinfo" />
+    <None Include="Connected Services\CargarCSValumnos\configuration.svcinfo" />
+    <None Include="Connected Services\CargarCSValumnos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CargarCSVpsicologos\configuration91.svcinfo" />
+    <None Include="Connected Services\CargarCSVpsicologos\configuration.svcinfo" />
+    <None Include="Connected Services\CargarCSVpsicologos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\CargarCSVprofesores\configuration91.svcinfo" />
+    <None Include="Connected Services\CargarCSVprofesores\configuration.svcinfo" />
+    <None Include="Connected Services\CargarCSVprofesores\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\Bunifu_UI_v1.5.dll" />
     <None Include="Resources\menos.png" />
     <None Include="Resources\mas.png" />
@@ -772,6 +826,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\CargarCSValumnos\" />
+    <WCFMetadataStorage Include="Connected Services\CargarCSVprofesores\" />
+    <WCFMetadataStorage Include="Connected Services\CargarCSVpsicologos\" />
     <WCFMetadataStorage Include="Connected Services\GestionAtencionWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionEventoWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionHumanaWS\" />

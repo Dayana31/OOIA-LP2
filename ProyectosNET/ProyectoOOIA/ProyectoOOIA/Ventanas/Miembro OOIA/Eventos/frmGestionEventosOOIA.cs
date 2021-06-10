@@ -9,10 +9,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOOIA.AlumnoWS;
-using ProyectoOOIA.EventoWS;
+using ProyectoOOIA.GestionEventoWS;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
-using persona = ProyectoOOIA.EventoWS.persona;
+
 
 namespace ProyectoOOIA.Ventanas
 {
