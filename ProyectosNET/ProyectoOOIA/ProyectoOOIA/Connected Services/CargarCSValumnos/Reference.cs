@@ -12,7 +12,7 @@ namespace ProyectoOOIA.CargarCSValumnos {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44,7 +44,7 @@ namespace ProyectoOOIA.CargarCSValumnos {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -89,6 +89,38 @@ namespace ProyectoOOIA.CargarCSValumnos {
         }
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class IOException : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string messageField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string message {
+            get {
+                return this.messageField;
+            }
+            set {
+                this.messageField = value;
+                this.RaisePropertyChanged("message");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services/", ConfigurationName="CargarCSValumnos.AlumnosCSVcargaWS1")]
     public interface AlumnosCSVcargaWS1 {
@@ -97,6 +129,7 @@ namespace ProyectoOOIA.CargarCSValumnos {
         [System.ServiceModel.OperationContractAttribute(Action="http://services/AlumnosCSVcargaWS1/CargarCSValumnosRequest", ReplyAction="http://services/AlumnosCSVcargaWS1/CargarCSValumnosResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(ProyectoOOIA.CargarCSValumnos.FileNotFoundException), Action="http://services/AlumnosCSVcargaWS1/CargarCSValumnos/Fault/FileNotFoundException", Name="FileNotFoundException")]
         [System.ServiceModel.FaultContractAttribute(typeof(ProyectoOOIA.CargarCSValumnos.ParseException), Action="http://services/AlumnosCSVcargaWS1/CargarCSValumnos/Fault/ParseException", Name="ParseException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProyectoOOIA.CargarCSValumnos.IOException), Action="http://services/AlumnosCSVcargaWS1/CargarCSValumnos/Fault/IOException", Name="IOException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse CargarCSValumnos(ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest request);
@@ -112,13 +145,13 @@ namespace ProyectoOOIA.CargarCSValumnos {
     public partial class CargarCSValumnosRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string Rutaarchivo;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] Rutaarchivo;
         
         public CargarCSValumnosRequest() {
         }
         
-        public CargarCSValumnosRequest(string Rutaarchivo) {
+        public CargarCSValumnosRequest(byte[] Rutaarchivo) {
             this.Rutaarchivo = Rutaarchivo;
         }
     }
@@ -173,7 +206,7 @@ namespace ProyectoOOIA.CargarCSValumnos {
             return base.Channel.CargarCSValumnos(request);
         }
         
-        public int CargarCSValumnos(string Rutaarchivo) {
+        public int CargarCSValumnos(byte[] Rutaarchivo) {
             ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest inValue = new ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest();
             inValue.Rutaarchivo = Rutaarchivo;
             ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse retVal = ((ProyectoOOIA.CargarCSValumnos.AlumnosCSVcargaWS1)(this)).CargarCSValumnos(inValue);
@@ -185,7 +218,7 @@ namespace ProyectoOOIA.CargarCSValumnos {
             return base.Channel.CargarCSValumnosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse> CargarCSValumnosAsync(string Rutaarchivo) {
+        public System.Threading.Tasks.Task<ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse> CargarCSValumnosAsync(byte[] Rutaarchivo) {
             ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest inValue = new ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest();
             inValue.Rutaarchivo = Rutaarchivo;
             return ((ProyectoOOIA.CargarCSValumnos.AlumnosCSVcargaWS1)(this)).CargarCSValumnosAsync(inValue);

@@ -627,15 +627,15 @@
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.modificarAlumnoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS.wsdl" />
-    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS.xsd">
+    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS1.wsdl" />
+    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CargarCSValumnos\ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CargarCSVprofesores\ProfesoresCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\CargarCSVprofesores\ProfesoresCSVcargaWS1.xsd">
+    <None Include="Connected Services\CargarCSVprofesores\ProfesoresCSVcargaWS.wsdl" />
+    <None Include="Connected Services\CargarCSVprofesores\ProfesoresCSVcargaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CargarCSVprofesores\ProyectoOOIA.CargarCSVprofesores.CargarCSVprofesoresResponse.datasource">
@@ -644,8 +644,8 @@
     <None Include="Connected Services\CargarCSVpsicologos\ProyectoOOIA.CargarCSVpsicologos.CargarCSVpsicologosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CargarCSVpsicologos\PsicologosCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\CargarCSVpsicologos\PsicologosCSVcargaWS1.xsd">
+    <None Include="Connected Services\CargarCSVpsicologos\PsicologosCSVcargaWS.wsdl" />
+    <None Include="Connected Services\CargarCSVpsicologos\PsicologosCSVcargaWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CitaWS\CitaWS1.wsdl" />

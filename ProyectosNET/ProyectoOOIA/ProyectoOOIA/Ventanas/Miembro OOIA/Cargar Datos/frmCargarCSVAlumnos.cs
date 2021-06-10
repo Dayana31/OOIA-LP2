@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,7 +40,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             if(openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 string ruta = openFileDialog1.FileName;
-
+                
                 txtRutaArchivo.Text = ruta;
             }
         }
@@ -48,7 +49,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             CargarCSValumnos.AlumnosCSVcargaWS1Client cargaCSVAlumnos =
                 new CargarCSValumnos.AlumnosCSVcargaWS1Client();
-            int resultado = cargaCSVAlumnos.CargarCSValumnos(txtRutaArchivo.Text);
+            
+
+            FileStream fs = new FileStream(txtRutaArchivo.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            //Asignamos el archivo al objeto
+          
+            int resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
+            br.Close();
+            fs.Close();
             if(resultado == 0)
             {
                 MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",

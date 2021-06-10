@@ -5,7 +5,11 @@
  */
 package services;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.text.ParseException;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -24,11 +28,16 @@ public class PsicologosCSVcargaWS {
      */
     private PsicologosCSV csvPsicologos;
     @WebMethod(operationName = "CargarCSVpsicologos")
-    public int cargarCSVProfesores(@WebParam(name = "RutaArchivo") String ruta) throws FileNotFoundException, ParseException {
+    public int cargarCSVProfesores(@WebParam(name = "RutaArchivo") byte[] ruta) throws FileNotFoundException, ParseException, IOException {
         int resultado = 0;
         csvPsicologos = new PsicologosCSV();
-        csvPsicologos.setRutaCSV(ruta);
+        FileOutputStream outputStream = new FileOutputStream("Auxiliar");
+        outputStream.write(ruta);
+        outputStream.close();
+        FileInputStream inputStream = new FileInputStream("Auxiliar");
+        csvPsicologos.setRutaCSV(inputStream);
         resultado = csvPsicologos.cargarDatos();
+        inputStream.close();
         return resultado;
     }
     
