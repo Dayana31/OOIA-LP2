@@ -19,6 +19,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             InitializeComponent();
             estado = Estado.Inicial;
+            clearall();
             cambiarEstado();
             daoEspecialidad = new EspecialidadWS.EspecialidadWSClient();
             daoAlumno = new AlumnoWS.AlumnoWSClient();
@@ -39,11 +40,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             /*Miembro PUCP*/
             txtUsuario.Text = "";
             txtPassword.Text = "";
-            pbPerfil.Image = null;
             /*Alumno*/
             txtIdAlumno.Text = "";
             txtCodigo.Text = "";
             cbEspecialidad.SelectedIndex = -1;
+            /*Imagen*/
             Image img = Properties.Resources.placeholder_profile;
             imagen_perfil = ImageToByte2(img);
             displayImage(imagen_perfil);
@@ -64,14 +65,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             {
                 case Estado.Inicial:
                     //Botones
-                    clearall();
                     tsbNuevo.Enabled = true;
                     tsbGuardar.Enabled = false;
                     tsbModificar.Enabled = false;
                     tsbBuscar.Enabled = true;
                     tsbEliminar.Enabled = false;
                     tsbCancelar.Enabled = true;
-                    btnImagen.Enabled = false;
+                    btnImagen1.Enabled = false;
+                    btnImagen2.Enabled = false;
                     //Texto
                     /*Persona*/
                     txtDni.Enabled = false;
@@ -96,7 +97,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     tsbBuscar.Enabled = false;
                     tsbEliminar.Enabled = false;
                     tsbCancelar.Enabled = true;
-                    btnImagen.Enabled = true;
+                    btnImagen1.Enabled = true;
+                    btnImagen2.Enabled = true;
                     //Texto
                     /*Persona*/
                     txtDni.Enabled = true;
@@ -120,7 +122,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     tsbBuscar.Enabled = false;
                     tsbEliminar.Enabled = true;
                     tsbCancelar.Enabled = true;
-                    btnImagen.Enabled = false;
+                    btnImagen1.Enabled = false;
+                    btnImagen2.Enabled = false;
                     //Texto
                     /*Persona*/
                     txtDni.Enabled = false;
@@ -142,7 +145,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         public void displayImage(byte[] image)
         {
             MemoryStream ms = new MemoryStream(image);
-            pbPerfil.Image = Image.FromStream(ms);
+            pbPerfil1.Image = Image.FromStream(ms);
+            pbPerfil2.Image = Image.FromStream(ms);
         }
 
         /*Botones de Header*/

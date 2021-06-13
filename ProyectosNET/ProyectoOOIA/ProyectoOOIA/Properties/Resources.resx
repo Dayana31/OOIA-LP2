@@ -193,16 +193,19 @@
   <data name="placeholder_profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\placeholder_profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arroba1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="arroba" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\arroba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mobile_phone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\mobile-phone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PUCP_logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="PUCP_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\pucp_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="telephone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="telephone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\telephone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
