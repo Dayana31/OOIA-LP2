@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/AlumnoWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/AlumnoWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AlumnoWS.xsd" MetadataType="Schema" ID="06df42a0-daeb-4a2e-8dbd-b8c774ee80e6" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/AlumnoWS?xsd=1" />
-    <MetadataFile FileName="AlumnoWS.wsdl" MetadataType="Wsdl" ID="1121a01c-21a2-4433-ad66-a89a4c36d730" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/AlumnoWS?wsdl" />
+    <MetadataFile FileName="AlumnoWS1.xsd" MetadataType="Schema" ID="1f801d8a-c563-4ae6-a0ff-2e9f32ba397b" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/AlumnoWS?xsd=1" />
+    <MetadataFile FileName="AlumnoWS1.wsdl" MetadataType="Wsdl" ID="1d592432-5e13-4269-afce-e52f9126a8ae" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/AlumnoWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

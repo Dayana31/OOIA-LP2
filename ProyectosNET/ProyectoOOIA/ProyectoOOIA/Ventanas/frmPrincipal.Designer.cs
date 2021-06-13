@@ -102,7 +102,7 @@ namespace ProyectoOOIA.Ventanas
             // btnAtras
             // 
             this.btnAtras.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.log_out__1_;
+            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.logout_white;
             this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
@@ -123,7 +123,7 @@ namespace ProyectoOOIA.Ventanas
             // btnEventos
             // 
             this.btnEventos.BackColor = System.Drawing.Color.Transparent;
-            this.btnEventos.BackgroundImage = global::ProyectoOOIA.Properties.Resources.foto_29;
+            this.btnEventos.BackgroundImage = global::ProyectoOOIA.Properties.Resources.Evento;
             this.btnEventos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEventos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEventos.FlatAppearance.BorderSize = 0;
@@ -284,7 +284,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnTramites.AccessibleName = "hola";
             this.btnTramites.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.btnTramites.BackColor = System.Drawing.Color.Transparent;
-            this.btnTramites.BackgroundImage = global::ProyectoOOIA.Properties.Resources.pexels_pixabay_261621;
+            this.btnTramites.BackgroundImage = global::ProyectoOOIA.Properties.Resources.Tramite;
             this.btnTramites.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTramites.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTramites.Enabled = false;

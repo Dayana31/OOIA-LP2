@@ -176,7 +176,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
+            this.pictureBox2.Image = global::ProyectoOOIA.Properties.Resources.Estudiante;
             this.pictureBox2.Location = new System.Drawing.Point(515, 32);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(234, 221);

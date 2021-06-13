@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="nntJrx1g/h1J05adP2111aC2pg3UmL+HTXoyUQqCAfY=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="bg864xSZxfHm/6gO1Uzx+YJ3D1EQFg3lor7tdX2ONCc=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="AlumnoWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="AlumnoWSPort" contract="AlumnoWS.AlumnoWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/AlumnoWS" bindingConfiguration="AlumnoWSPortBinding">
+    <endpoint name="AlumnoWSPort" contract="AlumnoWS.AlumnoWS" bindingType="basicHttpBinding" address="http://localhost:8082/WebServicesOOIA/AlumnoWS" bindingConfiguration="AlumnoWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/WebServicesOOIA/AlumnoWS</serializedValue>
+          <serializedValue>http://localhost:8082/WebServicesOOIA/AlumnoWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

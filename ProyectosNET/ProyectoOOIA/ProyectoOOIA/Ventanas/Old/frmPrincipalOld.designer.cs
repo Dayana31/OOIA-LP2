@@ -84,7 +84,7 @@ namespace ProyectoOOIA.Ventanas
             // btnAtras
             // 
             this.btnAtras.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.log_out__1_;
+            this.btnAtras.BackgroundImage = global::ProyectoOOIA.Properties.Resources.logout_white;
             this.btnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAtras.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAtras.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
@@ -123,7 +123,7 @@ namespace ProyectoOOIA.Ventanas
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::ProyectoOOIA.Properties.Resources.foto_29;
+            this.button4.BackgroundImage = global::ProyectoOOIA.Properties.Resources.Evento;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
@@ -155,7 +155,7 @@ namespace ProyectoOOIA.Ventanas
             // ovalPictureBox1
             // 
             this.ovalPictureBox1.BackColor = System.Drawing.Color.DarkGray;
-            this.ovalPictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante1;
+            this.ovalPictureBox1.Image = global::ProyectoOOIA.Properties.Resources.Estudiante;
             this.ovalPictureBox1.Location = new System.Drawing.Point(45, 12);
             this.ovalPictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.ovalPictureBox1.Name = "ovalPictureBox1";

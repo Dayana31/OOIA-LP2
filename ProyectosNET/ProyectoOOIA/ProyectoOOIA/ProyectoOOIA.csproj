@@ -608,8 +608,8 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmDetalleEvento.resx">
       <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AlumnoWS\AlumnoWS.wsdl" />
-    <None Include="Connected Services\AlumnoWS\AlumnoWS.xsd">
+    <None Include="Connected Services\AlumnoWS\AlumnoWS1.wsdl" />
+    <None Include="Connected Services\AlumnoWS\AlumnoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.alumno.datasource">
@@ -1194,7 +1194,9 @@
     <Content Include="Resources\Bunifu_UI_v1.5.dll" />
     <None Include="Resources\menos.png" />
     <None Include="Resources\mas.png" />
+    <None Include="Resources\placeholder_profile.jpg" />
     <Content Include="Resources\profesor.jpg" />
+    <None Include="Resources\Profile.bmp" />
     <Content Include="Resources\psicologo.jpg" />
   </ItemGroup>
   <ItemGroup>
