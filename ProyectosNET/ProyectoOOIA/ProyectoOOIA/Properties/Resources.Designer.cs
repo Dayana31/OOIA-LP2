@@ -63,9 +63,9 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arroba {
+        internal static System.Drawing.Bitmap arroba1 {
             get {
-                object obj = ResourceManager.GetObject("arroba", resourceCulture);
+                object obj = ResourceManager.GetObject("arroba1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,16 +233,6 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mail {
-            get {
-                object obj = ResourceManager.GetObject("mail", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap mas {
             get {
                 object obj = ResourceManager.GetObject("mas", resourceCulture);
@@ -313,9 +303,9 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PUCP_logo {
+        internal static System.Drawing.Bitmap PUCP_logo1 {
             get {
-                object obj = ResourceManager.GetObject("PUCP_logo", resourceCulture);
+                object obj = ResourceManager.GetObject("PUCP_logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +333,9 @@ namespace ProyectoOOIA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap telephone {
+        internal static System.Drawing.Bitmap telephone1 {
             get {
-                object obj = ResourceManager.GetObject("telephone", resourceCulture);
+                object obj = ResourceManager.GetObject("telephone1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
