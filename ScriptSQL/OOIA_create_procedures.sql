@@ -1052,14 +1052,13 @@ end$
 
 delimiter $
 create procedure LISTAR_EVENTO(
+in _nombre varchar(250)
 )begin
-	select 	e.id_evento, e.nombre, e.descripcion, e.fid_coordinador,
-		c.id_categoria_evento, c.nombre as nombre_categoria,
-		e.capacidad, e.cupo, e.fecha, e.hora_inicio, e.hora_fin, e.lugar, e.imagen
-    	from evento e
-	inner join categoria_evento c on e.fid_categoria_evento = c.id_categoria_evento
-	where e.activo = true;
-end$
+	/*tabla evento*/
+	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.categoria,e.imagen
+    from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador
+    where  (e.nombre LIKE CONCAT('%',_nombre,'%')) and e.estado=1;
+end $
 
 --ENCUESTA_EVENTO
 delimiter $
