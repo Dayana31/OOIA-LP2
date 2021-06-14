@@ -29,12 +29,13 @@ public class EventoMySQL implements EventoDAO{
     CallableStatement cs;
 
     @Override
-    public ArrayList<Evento> listar() {
+    public ArrayList<Evento> listar(String nombre) {
         ArrayList<Evento> eventos = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_EVENTO()}");
+            cs = con.prepareCall("{call LISTAR_EVENTO(?)}");
+            cs.setString("_nombre", nombre);
             rs = cs.executeQuery();
             while(rs.next()){
                 Evento evento = new Evento();
@@ -162,6 +163,25 @@ public class EventoMySQL implements EventoDAO{
         return null;
     }
     
-    
+//    private ArrayList<Integer> listarPonente(int id_evento){
+//           ArrayList<Integer> lista=new ArrayList<>();
+//           
+//         try {
+//            Class.forName("com.mysql.cj.jdbc.Driver");
+//            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+//            cs = con.prepareCall("call listar_ponente_evento(?)");
+//            cs.setInt("_id_evento", id_evento);
+//            rs=cs.executeQuery();
+//            while(rs.next()){
+//                lista.add(rs.getInt("id_persona"));
+//            }
+//        } catch (Exception e) {
+//             System.out.println(e.getMessage());
+//        }
+            
+           
+           return lista;
+           
+    }
     
 }
