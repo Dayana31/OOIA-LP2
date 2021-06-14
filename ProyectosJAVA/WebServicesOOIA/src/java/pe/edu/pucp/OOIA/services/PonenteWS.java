@@ -11,26 +11,26 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import pe.edu.pucp.ooia.gest_humana.mysql.PonenteMySQL;
 import pe.edu.pucp.ooia.gest_humana.model.Ponente;
-import pe.edu.pucp.ooia.gest_humana.dao.PonenteDao;
+import pe.edu.pucp.ooia.gest_humana.dao.PonenteDAO;
 
 /**
  *
  * @author LENOVO
  */
-@WebService(serviceName = "InvitadoWS")
+@WebService(serviceName = "PonenteWS")
 public class PonenteWS {
 
     /**
      * This is a sample web service operation
      */
-    private PonenteDao ponente;
+    private PonenteDAO ponente;
 
     public PonenteWS() {
         ponente=new PonenteMySQL();
     }
     
-    @WebMethod(operationName = "listarInvitado")
-    public ArrayList<Ponente> listarInvitado(){
+    @WebMethod(operationName = "listarPonente")
+    public ArrayList<Ponente> listarPonente(){
         ArrayList<Ponente> lista=new ArrayList<>();
         try {
             lista=ponente.listar();
@@ -39,30 +39,30 @@ public class PonenteWS {
         }
         return lista;
     }
-    @WebMethod(operationName = "insertarInvitado")
-    public int insertarInvitado(@WebParam(name = "invitado")Ponente invitado){
+    @WebMethod(operationName = "insertarPonente")
+    public int insertarPonente(@WebParam(name = "invitado")Ponente ponente){
         int resultado=0;
         try {
-            resultado=this.ponente.insertar(invitado);
+            resultado=this.ponente.insertar(ponente);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return resultado;
         
     }
-    @WebMethod(operationName = "modificarInvitado")
-    public int modificarInvitado(@WebParam(name = "invitado")Ponente invitado){
+    @WebMethod(operationName = "modificarPonente")
+    public int modificarPonente(@WebParam(name = "invitado")Ponente ponente){
         int resultado=0;
         try {
-            resultado=this.ponente.modificar(invitado);
+            resultado=this.ponente.modificar(ponente);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return resultado;
         
     }
-    @WebMethod(operationName = "eliminarInvitado")
-    public int eliminarInvitado(@WebParam(name = "id_ponente")int id_ponente){
+    @WebMethod(operationName = "eliminarPonente")
+    public int eliminarPonente(@WebParam(name = "id_ponente")int id_ponente){
         int resultado=0;
         try {
             resultado=this.ponente.eliminar(id_ponente);

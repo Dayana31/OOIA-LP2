@@ -29,7 +29,7 @@ public class EspecialidadWS {
         especialidad=new EspecialidadMySQL();
     }
     
-    @WebMethod(operationName = "listarEsppecialidad")
+    @WebMethod(operationName = "listarEspecialidad")
     public ArrayList<Especialidad> listarEspecialidad(){
         ArrayList<Especialidad>listaEspecialidad=new ArrayList<>();
         try {
