@@ -46,8 +46,6 @@ namespace ProyectoOOIA.Ventanas
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvPonentes = new System.Windows.Forms.DataGridView();
             this.NombreCompletoPonente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtIdEvento = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtLugar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,21 +64,26 @@ namespace ProyectoOOIA.Ventanas
             this.txtDescripcion = new System.Windows.Forms.RichTextBox();
             this.dtpInicio = new System.Windows.Forms.DateTimePicker();
             this.dtpFin = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lblBuscarEventos = new System.Windows.Forms.Label();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdCapacidad)).BeginInit();
+            this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBack
             // 
-            this.btnBack.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrow;
+            this.btnBack.BackgroundImage = global::ProyectoOOIA.Properties.Resources.arrowWhite;
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Location = new System.Drawing.Point(757, 8);
+            this.btnBack.Location = new System.Drawing.Point(21, 29);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(22, 25);
             this.btnBack.TabIndex = 42;
@@ -99,6 +102,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnGuardar,
             this.btnBuscar,
             this.btnModificar,
+            this.btnEliminar,
             this.btnCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -241,42 +245,28 @@ namespace ProyectoOOIA.Ventanas
             this.NombreCompletoPonente.ReadOnly = true;
             this.NombreCompletoPonente.Width = 700;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 93);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 13);
-            this.label6.TabIndex = 68;
-            this.label6.Text = "id Evento:";
-            // 
-            // txtIdEvento
-            // 
-            this.txtIdEvento.Location = new System.Drawing.Point(144, 88);
-            this.txtIdEvento.Name = "txtIdEvento";
-            this.txtIdEvento.Size = new System.Drawing.Size(366, 20);
-            this.txtIdEvento.TabIndex = 69;
-            // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(527, 125);
+            this.pictureBox1.Location = new System.Drawing.Point(529, 173);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 199);
+            this.pictureBox1.Size = new System.Drawing.Size(224, 177);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
             // 
             // txtLugar
             // 
-            this.txtLugar.Location = new System.Drawing.Point(144, 200);
+            this.txtLugar.Location = new System.Drawing.Point(146, 226);
             this.txtLugar.Name = "txtLugar";
             this.txtLugar.Size = new System.Drawing.Size(138, 20);
             this.txtLugar.TabIndex = 67;
+            this.txtLugar.Enter += new System.EventHandler(this.txtLugar_Enter);
+            this.txtLugar.Leave += new System.EventHandler(this.txtLugar_Leave);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 123);
+            this.label1.Location = new System.Drawing.Point(20, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 50;
@@ -285,7 +275,7 @@ namespace ProyectoOOIA.Ventanas
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 203);
+            this.label10.Location = new System.Drawing.Point(20, 229);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(37, 13);
             this.label10.TabIndex = 66;
@@ -294,7 +284,7 @@ namespace ProyectoOOIA.Ventanas
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 153);
+            this.label2.Location = new System.Drawing.Point(20, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 51;
@@ -302,15 +292,25 @@ namespace ProyectoOOIA.Ventanas
             // 
             // npdCapacidad
             // 
-            this.npdCapacidad.Location = new System.Drawing.Point(368, 233);
+            this.npdCapacidad.Location = new System.Drawing.Point(370, 259);
+            this.npdCapacidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.npdCapacidad.Name = "npdCapacidad";
             this.npdCapacidad.Size = new System.Drawing.Size(142, 20);
             this.npdCapacidad.TabIndex = 65;
+            this.npdCapacidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 177);
+            this.label3.Location = new System.Drawing.Point(20, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 52;
@@ -319,7 +319,7 @@ namespace ProyectoOOIA.Ventanas
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(309, 234);
+            this.label9.Location = new System.Drawing.Point(311, 260);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 13);
             this.label9.TabIndex = 64;
@@ -328,7 +328,7 @@ namespace ProyectoOOIA.Ventanas
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(309, 174);
+            this.label4.Location = new System.Drawing.Point(311, 200);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 53;
@@ -337,7 +337,7 @@ namespace ProyectoOOIA.Ventanas
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 265);
+            this.label5.Location = new System.Drawing.Point(20, 291);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 13);
             this.label5.TabIndex = 54;
@@ -345,21 +345,25 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(144, 118);
+            this.txtNombre.Location = new System.Drawing.Point(146, 144);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(366, 20);
             this.txtNombre.TabIndex = 55;
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // dtpFechaEvento
             // 
-            this.dtpFechaEvento.Location = new System.Drawing.Point(144, 147);
+            this.dtpFechaEvento.Location = new System.Drawing.Point(146, 173);
             this.dtpFechaEvento.Name = "dtpFechaEvento";
             this.dtpFechaEvento.Size = new System.Drawing.Size(366, 20);
             this.dtpFechaEvento.TabIndex = 56;
+            this.dtpFechaEvento.Enter += new System.EventHandler(this.dtpFecha_Enter);
+            this.dtpFechaEvento.Leave += new System.EventHandler(this.dtpFecha_Leave);
             // 
             // btnAgregarImagen
             // 
-            this.btnAgregarImagen.Location = new System.Drawing.Point(565, 88);
+            this.btnAgregarImagen.Location = new System.Drawing.Point(564, 141);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
             this.btnAgregarImagen.Size = new System.Drawing.Size(162, 23);
             this.btnAgregarImagen.TabIndex = 62;
@@ -374,7 +378,7 @@ namespace ProyectoOOIA.Ventanas
             "Introduccion a la vida universitaria",
             "Introduccion al campus virtual",
             "Como socializar"});
-            this.cboCategoria.Location = new System.Drawing.Point(144, 226);
+            this.cboCategoria.Location = new System.Drawing.Point(146, 252);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(138, 21);
             this.cboCategoria.TabIndex = 61;
@@ -382,7 +386,7 @@ namespace ProyectoOOIA.Ventanas
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 229);
+            this.label8.Location = new System.Drawing.Point(20, 255);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 60;
@@ -390,41 +394,90 @@ namespace ProyectoOOIA.Ventanas
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(144, 262);
+            this.txtDescripcion.Location = new System.Drawing.Point(146, 288);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(367, 62);
             this.txtDescripcion.TabIndex = 59;
             this.txtDescripcion.Text = "";
+            this.txtDescripcion.Enter += new System.EventHandler(this.txtDescripcion_Enter_1);
+            this.txtDescripcion.Leave += new System.EventHandler(this.txtDescripcion_Leave);
             // 
             // dtpInicio
             // 
             this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpInicio.Location = new System.Drawing.Point(144, 174);
+            this.dtpInicio.Location = new System.Drawing.Point(146, 200);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.ShowUpDown = true;
             this.dtpInicio.Size = new System.Drawing.Size(138, 20);
             this.dtpInicio.TabIndex = 70;
+            this.dtpInicio.Enter += new System.EventHandler(this.dtpInicio_Enter);
+            this.dtpInicio.Leave += new System.EventHandler(this.dtpInicio_Leave);
             // 
             // dtpFin
             // 
             this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpFin.Location = new System.Drawing.Point(368, 174);
+            this.dtpFin.Location = new System.Drawing.Point(370, 200);
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.ShowUpDown = true;
             this.dtpFin.Size = new System.Drawing.Size(142, 20);
             this.dtpFin.TabIndex = 71;
+            this.dtpFin.Enter += new System.EventHandler(this.txtHoraFin_Enter);
+            this.dtpFin.Leave += new System.EventHandler(this.txtHoraFin_Leave);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(288, 25);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 37);
+            this.label11.TabIndex = 72;
+            this.label11.Text = "Eventos";
+            // 
+            // lblBuscarEventos
+            // 
+            this.lblBuscarEventos.AutoSize = true;
+            this.lblBuscarEventos.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarEventos.ForeColor = System.Drawing.SystemColors.Window;
+            this.lblBuscarEventos.Location = new System.Drawing.Point(50, 24);
+            this.lblBuscarEventos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBuscarEventos.Name = "lblBuscarEventos";
+            this.lblBuscarEventos.Size = new System.Drawing.Size(175, 30);
+            this.lblBuscarEventos.TabIndex = 38;
+            this.lblBuscarEventos.Text = "Gestor de Eventos";
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.pnlHeader.Controls.Add(this.lblBuscarEventos);
+            this.pnlHeader.Controls.Add(this.btnBack);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 25);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(797, 71);
+            this.pnlHeader.TabIndex = 73;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(54, 22);
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.ToolTipText = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // frmGestionEventosOOIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 570);
+            this.Controls.Add(this.pnlHeader);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.dtpFin);
             this.Controls.Add(this.dtpInicio);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.txtIdEvento);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.txtLugar);
@@ -452,6 +505,8 @@ namespace ProyectoOOIA.Ventanas
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdCapacidad)).EndInit();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,8 +529,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvPonentes;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompletoPonente;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtIdEvento;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtLugar;
         private System.Windows.Forms.Label label1;
@@ -494,5 +547,9 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.RichTextBox txtDescripcion;
         private System.Windows.Forms.DateTimePicker dtpInicio;
         private System.Windows.Forms.DateTimePicker dtpFin;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblBuscarEventos;
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.ToolStripButton btnEliminar;
     }
 }

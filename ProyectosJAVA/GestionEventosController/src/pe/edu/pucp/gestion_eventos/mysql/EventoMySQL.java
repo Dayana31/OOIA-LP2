@@ -49,7 +49,7 @@ public class EventoMySQL implements EventoDAO{
                 evento.setHoraInicio(new java.util.Date(0, 0, 0, hora, minuto));
                  hora=rs.getTime("hora_fin").toLocalTime().getHour();
                         minuto=rs.getTime("hora_fin").toLocalTime().getMinute();
-                   evento.setHoraFina(new java.util.Date(0, 0, 0, hora, minuto));
+                   evento.setHoraFin(new java.util.Date(0, 0, 0, hora, minuto));
                    //evento.setPonentes(obtenerPonentes(evento.getId_evento()));
                 eventos.add(evento);
                 
@@ -74,7 +74,7 @@ public class EventoMySQL implements EventoDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
             
-            cs = con.prepareCall("call INSERTAR_EVENTO(?,?,?,?,?,?,?,?)");
+            cs = con.prepareCall("call INSERTAR_EVENTO(?,?,?,?,?,?,?,?,?,?,?)");
             //SETEAMOS los parametros
             cs.registerOutParameter("_id_evento", java.sql.Types.INTEGER);
             //Insertamos en evento
@@ -86,7 +86,10 @@ public class EventoMySQL implements EventoDAO{
             cs.setDate("_fecha", new Date(evento.getFecha().getTime()));
             cs.setString("_lugar", evento.getLugar());
             cs.setTime("inicio", new Time(evento.getHoraInicio().getTime()));
-            cs.setTime("final", new Time(evento.getHoraFina().getTime()));
+            cs.setTime("final", new Time(evento.getHoraFin().getTime()));
+            cs.setString("_descripcion", evento.getDescripcion());
+            cs.setString("_categoria", evento.getCategoria());
+            cs.setBytes("_imagen", evento.getImagen());
             //Ejecutamos el procedimiento
             cs.executeUpdate();
             evento.setId_evento(cs.getInt("_id_evento")); 
@@ -126,8 +129,10 @@ public class EventoMySQL implements EventoDAO{
             cs.setDate("_fecha", new Date(evento.getFecha().getTime()));
             cs.setString("_lugar", evento.getLugar());
             cs.setTime("inicio", new Time(evento.getHoraInicio().getTime()));
-            cs.setTime("final", new Time(evento.getHoraFina().getTime()));
-            
+            cs.setTime("final", new Time(evento.getHoraFin().getTime()));
+            cs.setString("_descripcion", evento.getDescripcion());
+            cs.setString("_categoria", evento.getCategoria());
+            cs.setBytes("_imagen", evento.getImagen());
             //Ejecutamos el procedimiento
             cs.executeUpdate();
             
@@ -176,6 +181,10 @@ public class EventoMySQL implements EventoDAO{
              Invitado invitado=new Invitado();
              invitado.setId_persona(rs1.getInt("id_persona"));
              invitado.setNombre(rs1.getString("nombre"));
+             invitado.setEdad(rs1.getInt("edad"));
+             invitado.setDni(rs1.getString("dni"));
+             invitado.setCorreo(rs1.getString("correo"));
+             invitado.setDireccion(rs1.getString("direccion"));
              lista.add(invitado);
          }
         return lista;

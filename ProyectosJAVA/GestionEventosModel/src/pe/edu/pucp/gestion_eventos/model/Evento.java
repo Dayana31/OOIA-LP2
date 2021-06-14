@@ -4,6 +4,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import javax.swing.ImageIcon;
 import pe.edu.pucp.gestion_humana.model.Persona;
 
 /*
@@ -27,7 +28,9 @@ public class Evento{
     private ArrayList <Persona> ponentes ;
     private Date  horaInicio;
     private Date horaFin;
-   
+    private String descripcion;
+    private String categoria;
+   private byte [] imagen;
 
     public Evento() {
         ponentes=new ArrayList<>();
@@ -122,13 +125,39 @@ public class Evento{
         this.horaInicio = horaInicio;
     }
 
-    public Date getHoraFina() {
+    public Date getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFina(Date horaFina) {
-        this.horaFin = horaFina;
+    public void setHoraFin(Date horaFin) {
+        this.horaFin = horaFin;
     }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public byte[] getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(byte[] imagen) {
+        this.imagen = imagen;
+    }
+
+   
     
   
     

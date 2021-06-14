@@ -18,7 +18,12 @@ namespace ProyectoOOIA.Ventanas
     public partial class frmGestionEventosOOIA : Form
     {
         
-        ErrorProvider error = new ErrorProvider();
+        ErrorProvider errorNombre = new ErrorProvider();
+        ErrorProvider errorFecha = new ErrorProvider();
+        ErrorProvider errorFin = new ErrorProvider();
+        ErrorProvider errorInicio = new ErrorProvider();
+        ErrorProvider errorDescripcion = new ErrorProvider();
+        ErrorProvider errorLugar = new ErrorProvider();
         private GestionEventoWS.GesionEventoWSClient eventoDao;
         private GestionEventoWS.evento evento;
         private BindingList<GestionEventoWS.persona> lista = new BindingList<GestionEventoWS.persona>();
@@ -30,11 +35,18 @@ namespace ProyectoOOIA.Ventanas
         {
             InitializeComponent();
             componentes(estado);
-            
-            error.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+
+            errorNombre.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             dgvPonentes.AutoGenerateColumns = false;
             dgvPonentes.RowCount = 0;
-            
+            errorFin.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorInicio.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorFecha.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorNombre.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorLugar.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorDescripcion.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            evento = new GestionEventoWS.evento();
+            eventoDao = new GestionEventoWS.GesionEventoWSClient();
         }
 
         private void componentes(Estado estado)
@@ -63,9 +75,10 @@ namespace ProyectoOOIA.Ventanas
                     txtLugar.Enabled = false;
                     dgvPonentes.RowCount = 1;
                     btnBuscarPonente.Enabled = false;
-                    txtIdEvento.Enabled = false;
+                    
                     dtpFin.Enabled = false;
                     dtpInicio.Enabled = false;
+                    btnEliminar.Enabled = false;
                     break;
                 case Estado.Nuevo:
                     btnNuevo.Enabled = true;
@@ -88,7 +101,9 @@ namespace ProyectoOOIA.Ventanas
                     npdCapacidad.Enabled = true;
                     txtLugar.Enabled = true;
                     btnBuscarPonente.Enabled = true;
-                    txtIdEvento.Enabled = false;
+                    
+                    btnEliminar.Enabled = false;
+
                     break;
                 case Estado.Busqueda:
                     btnNuevo.Enabled = false;
@@ -110,11 +125,36 @@ namespace ProyectoOOIA.Ventanas
                     dgvPonentes.Enabled = false;
                     npdCapacidad.Enabled = false;
                     txtLugar.Enabled = false;
-                    txtIdEvento.Enabled = false;
+                    
                     dtpFin.Enabled = false;
                     dtpInicio.Enabled = false;
+                    btnEliminar.Enabled = true;
                     break;
-                
+                case Estado.Modificar:
+                    btnNuevo.Enabled = true;
+                    btnAgregarImagen.Enabled = true;
+                    btnAgregarPonente.Enabled = true;
+                    btnBuscar.Enabled = false;
+                    btnCancelar.Enabled = true;
+                    btnEliminarPonente.Enabled = true;
+                    btnGuardar.Enabled = true;
+                    btnNuevo.Enabled = true;
+                    btnModificar.Enabled = false;
+                    dtpFechaEvento.Enabled = true;
+                    dtpFin.Enabled = true;
+                    dtpInicio.Enabled = true;
+                    txtNombre.Enabled = true;
+                    txtNombrePonente.Enabled = false;
+                    txtDescripcion.Enabled = true;
+                    cboCategoria.Enabled = true;
+                    dgvPonentes.Enabled = true;
+                    npdCapacidad.Enabled = true;
+                    txtLugar.Enabled = true;
+                    btnBuscarPonente.Enabled = true;
+                    
+                    btnEliminar.Enabled = true;
+                    break;
+
             }
         }
 
@@ -128,7 +168,7 @@ namespace ProyectoOOIA.Ventanas
             txtNombre.Text = evento.nombre;
             txtDescripcion.Text = "Descripcion";
             txtLugar.Text = evento.lugar;
-            txtIdEvento.Text = evento.id_evento.ToString();
+            
             dtpFechaEvento.Value = evento.fecha;
             dtpInicio.Value = evento.horaInicio;
             dtpFin.Value = evento.horaFina;
@@ -145,8 +185,6 @@ namespace ProyectoOOIA.Ventanas
         {
             if (validacionDatos()==1)
             {
-                evento = new GestionEventoWS.evento();
-                eventoDao = new GestionEventoWS.GesionEventoWSClient();
                 evento.nombre = txtNombre.Text;
                 evento.fecha = dtpFechaEvento.Value;
                 evento.fechaSpecified = true;
@@ -171,11 +209,6 @@ namespace ProyectoOOIA.Ventanas
                     else MessageBox.Show("Fallo");
                 }
             }
-
-
-
-
-
         }
 
         private int validacionDatos()
@@ -212,7 +245,31 @@ namespace ProyectoOOIA.Ventanas
         private void btnModificar_Click(object sender, EventArgs e)
         {
             componentes(Estado.Nuevo);
-            
+            if (validacionDatos() == 1)
+            {
+                evento.nombre = txtNombre.Text;
+                evento.fecha = dtpFechaEvento.Value;
+                evento.fechaSpecified = true;
+                evento.estado = true;
+                evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
+                evento.horaInicio = dtpInicio.Value;
+                evento.horaInicioSpecified = true;
+                evento.horaFina = dtpFin.Value;
+                evento.horaFinaSpecified = true;
+                evento.lugar = txtLugar.Text;
+
+                evento.ponentes = lista.ToArray();
+                DialogResult dr =
+                    MessageBox.Show("¿Desea modificar este evento?", "Modificar Evento", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dr == DialogResult.Yes)
+                {
+                    if (eventoDao.modificarEvento(evento) == 1)
+                    {
+                        MessageBox.Show("Se ha registrado el evento","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
+                    else MessageBox.Show("Ha fallado el registro del evento","Fallo",MessageBoxButtons.RetryCancel,MessageBoxIcon.Error);
+                }
+            } 
         }
 
         private void btnAgregarPonente_Click(object sender, EventArgs e)
@@ -266,68 +323,104 @@ namespace ProyectoOOIA.Ventanas
         {
             
             if (txtNombre.Text == "")
-                error.SetError(txtNombre,"El campo es obligatorio");
+                errorNombre.SetError(txtNombre,"El campo es obligatorio");
 
 
         }
 
         private void txtNombre_Enter(object sender, EventArgs e)
         {
-            error.Clear();
+            errorNombre.Clear();
         }
 
         private void txtHoraInicio_Enter(object sender, EventArgs e)
         {
            
-            error.Clear();
+            errorInicio.Clear();
         }
 
-        private void txtHoraInicio_Leave(object sender, EventArgs e)
+        private void txtHora_Leave(object sender, EventArgs e)
         {
-
+            if(dtpFin.Value<dtpInicio.Value)
+                errorFin.SetError(dtpFin,"La hora final debe ser mayor que la inicial");
             
            
         }
         private void txtHoraFin_Enter(object sender, EventArgs e)
         {
            
-            error.Clear();
+            errorFin.Clear();
+            
         }
 
         private void txtHoraFin_Leave(object sender, EventArgs e)
         {
             
-            string patron = @"\s?\d?\d:\d\d";
-            Regex regex = new Regex(patron);
+           if(dtpFin.Value<dtpInicio.Value)
+               errorFin.SetError(dtpFin,"La hora final debe ser mayor que la inicial");
+           else errorInicio.Clear();
 
 
         }
 
         private void txtLugar_Enter(object sender, EventArgs e)
         {
-            error.Clear();
+            errorLugar.Clear();
         }
 
         private void txtLugar_Leave(object sender, EventArgs e)
         {
             if(txtLugar.Text=="")
-                error.SetError(txtLugar,"El campo es obligatorio");
+                errorLugar.SetError(txtLugar,"El campo es obligatorio");
         }
 
-        private void txtDescripcion_Enter(object sender, EventArgs e)
+     
+
+      
+        
+
+      
+
+        private void dtpInicio_Enter(object sender, EventArgs e)
         {
-            if (txtDescripcion.Text == "")
-                error.SetError(txtDescripcion, "El campo es obligatorio");
+            errorInicio.Clear();
+            
         }
 
-        private void txtHoraInicio_TextChanged(object sender, EventArgs e)
+        private void dtpInicio_Leave(object sender, EventArgs e)
         {
+            if(dtpInicio.Value>dtpFin.Value)
+                errorInicio.SetError(dtpInicio,"La hora inicial debe ser menor que la inicial");
+           else errorFin.Clear();
 
         }
 
-        private void btnEliminarPonente_Click_1(object sender, EventArgs e)
+        private void dtpFecha_Enter(object sender, EventArgs e)
         {
+            errorFecha.Clear();
+        }
 
+        private void dtpFecha_Leave(object sender, EventArgs e)
+        {
+            if(dtpFechaEvento.Value< DateTime.Today)
+                errorFecha.SetError(dtpFechaEvento,"No puede seleccionr un dia pasado");
+        }
+
+        private void txtDescripcion_Enter_1(object sender, EventArgs e)
+        {
+            errorDescripcion.Clear();
+        }
+
+        private void txtDescripcion_Leave(object sender, EventArgs e)
+        {
+            if(txtDescripcion.Text=="")
+                errorDescripcion.SetError(txtDescripcion,"Debe llenar este campo");
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            eventoDao.eliminarEvento(evento);
         }
     }
+    
 }
