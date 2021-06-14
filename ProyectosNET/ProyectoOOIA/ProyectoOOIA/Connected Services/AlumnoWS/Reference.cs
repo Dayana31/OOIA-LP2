@@ -36,6 +36,16 @@ namespace ProyectoOOIA.AlumnoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.listarAlumnoResponse> listarAlumnoAsync(ProyectoOOIA.AlumnoWS.listarAlumnoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+<<<<<<< HEAD
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/listarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/listarAlumnoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.AlumnoWS.listarAlumnoResponse listarAlumno(ProyectoOOIA.AlumnoWS.listarAlumnoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/listarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/listarAlumnoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.listarAlumnoResponse> listarAlumnoAsync(ProyectoOOIA.AlumnoWS.listarAlumnoRequest request);
+=======
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/insertarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/insertarAlumnoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -44,6 +54,7 @@ namespace ProyectoOOIA.AlumnoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/insertarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/insertarAlumnoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.insertarAlumnoResponse> insertarAlumnoAsync(ProyectoOOIA.AlumnoWS.insertarAlumnoRequest request);
+>>>>>>> 68ad3f2014d4ffaceb6853074ee495e6a5121fb0
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/AlumnoWS/modificarAlumnoResponse")]
@@ -57,7 +68,7 @@ namespace ProyectoOOIA.AlumnoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -220,7 +231,7 @@ namespace ProyectoOOIA.AlumnoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -266,7 +277,7 @@ namespace ProyectoOOIA.AlumnoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -340,7 +351,7 @@ namespace ProyectoOOIA.AlumnoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -470,7 +481,7 @@ namespace ProyectoOOIA.AlumnoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -488,7 +499,7 @@ namespace ProyectoOOIA.AlumnoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -576,7 +587,7 @@ namespace ProyectoOOIA.AlumnoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -636,7 +647,7 @@ namespace ProyectoOOIA.AlumnoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -782,7 +793,7 @@ namespace ProyectoOOIA.AlumnoWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -885,7 +896,7 @@ namespace ProyectoOOIA.AlumnoWS {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1044,6 +1055,12 @@ namespace ProyectoOOIA.AlumnoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlumno", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarAlumnoRequest {
+        
+        public listarAlumnoRequest() {
+=======
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlumno", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarAlumnoRequest {
         
@@ -1056,23 +1073,36 @@ namespace ProyectoOOIA.AlumnoWS {
         
         public insertarAlumnoRequest(ProyectoOOIA.AlumnoWS.alumno alumno) {
             this.alumno = alumno;
+>>>>>>> 68ad3f2014d4ffaceb6853074ee495e6a5121fb0
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+<<<<<<< HEAD
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlumnoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarAlumnoResponse {
+=======
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlumnoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarAlumnoResponse {
+>>>>>>> 68ad3f2014d4ffaceb6853074ee495e6a5121fb0
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.AlumnoWS.alumno[] @return;
         
+<<<<<<< HEAD
+        public listarAlumnoResponse() {
+        }
+        
+        public listarAlumnoResponse(ProyectoOOIA.AlumnoWS.alumno[] @return) {
+=======
         public insertarAlumnoResponse() {
         }
         
         public insertarAlumnoResponse(int @return) {
+>>>>>>> 68ad3f2014d4ffaceb6853074ee495e6a5121fb0
             this.@return = @return;
         }
     }
@@ -1205,6 +1235,27 @@ namespace ProyectoOOIA.AlumnoWS {
             ProyectoOOIA.AlumnoWS.insertarAlumnoRequest inValue = new ProyectoOOIA.AlumnoWS.insertarAlumnoRequest();
             inValue.alumno = alumno;
             return ((ProyectoOOIA.AlumnoWS.AlumnoWS)(this)).insertarAlumnoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.AlumnoWS.listarAlumnoResponse ProyectoOOIA.AlumnoWS.AlumnoWS.listarAlumno(ProyectoOOIA.AlumnoWS.listarAlumnoRequest request) {
+            return base.Channel.listarAlumno(request);
+        }
+        
+        public ProyectoOOIA.AlumnoWS.alumno[] listarAlumno() {
+            ProyectoOOIA.AlumnoWS.listarAlumnoRequest inValue = new ProyectoOOIA.AlumnoWS.listarAlumnoRequest();
+            ProyectoOOIA.AlumnoWS.listarAlumnoResponse retVal = ((ProyectoOOIA.AlumnoWS.AlumnoWS)(this)).listarAlumno(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.listarAlumnoResponse> ProyectoOOIA.AlumnoWS.AlumnoWS.listarAlumnoAsync(ProyectoOOIA.AlumnoWS.listarAlumnoRequest request) {
+            return base.Channel.listarAlumnoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.AlumnoWS.listarAlumnoResponse> listarAlumnoAsync() {
+            ProyectoOOIA.AlumnoWS.listarAlumnoRequest inValue = new ProyectoOOIA.AlumnoWS.listarAlumnoRequest();
+            return ((ProyectoOOIA.AlumnoWS.AlumnoWS)(this)).listarAlumnoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

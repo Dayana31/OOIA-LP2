@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="+ZJcJLFh+r9clPbfy8h5AS74+zBCki0GE9PimUuoC7c=">
+=======
 <SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="bg864xSZxfHm/6gO1Uzx+YJ3D1EQFg3lor7tdX2ONCc=">
+>>>>>>> 68ad3f2014d4ffaceb6853074ee495e6a5121fb0
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="AlumnoWSPortBinding">
       <properties>
@@ -112,10 +116,17 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
+<<<<<<< HEAD
+    <endpoint name="AlumnoWSPort" contract="AlumnoWS.AlumnoWS" bindingType="basicHttpBinding" address="http://54.157.187.65:8080/WebServicesOOIA/AlumnoWS" bindingConfiguration="AlumnoWSPortBinding">
+      <properties>
+        <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <serializedValue>http://54.157.187.65:8080/WebServicesOOIA/AlumnoWS</serializedValue>
+=======
     <endpoint name="AlumnoWSPort" contract="AlumnoWS.AlumnoWS" bindingType="basicHttpBinding" address="http://localhost:8082/WebServicesOOIA/AlumnoWS" bindingConfiguration="AlumnoWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8082/WebServicesOOIA/AlumnoWS</serializedValue>
+>>>>>>> 68ad3f2014d4ffaceb6853074ee495e6a5121fb0
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

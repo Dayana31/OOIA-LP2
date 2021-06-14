@@ -43,6 +43,7 @@ drop procedure if exists INSERTAR_EVENTO;
 drop procedure if exists MODIFICAR_EVENTO;
 drop procedure if exists ELIMINAR_EVENTO;
 drop procedure if exists LISTAR_EVENTO;
+drop procedure if exists listar_ponente_evento;
 
 drop procedure if exists INSERTAR_ENCUESTA_EVENTO;
 drop procedure if exists MODIFICAR_ENCUESTA_EVENTO;
@@ -91,22 +92,26 @@ drop procedure if exists LISTAR_ALUMNO;
 drop procedure if exists INSERTAR_ALUMNO;
 drop procedure if exists MODIFICAR_ALUMNO;
 drop procedure if exists ELIMINAR_ALUMNO;
+drop procedure if exists LISTAR_ALUMNO_POR_NOMBRE;
 
 drop procedure if exists LISTAR_PROFESOR;
 drop procedure if exists INSERTAR_PROFESOR;
 drop procedure if exists MODIFICAR_PROFESOR;
 drop procedure if exists ELIMINAR_PROFESOR;
+drop procedure if exists LISTAR_PROFESOR_POR_NOMBRE;
 
 drop procedure if exists LISTAR_PSICOLOGO;
 drop procedure if exists INSERTAR_PSICOLOGO;
 drop procedure if exists MODIFICAR_PSICOLOGO;
 drop procedure if exists ELIMINAR_PSICOLOGO;
+drop procedure if exists LISTAR_PSICOLOGO_POR_NOMBRE;
+
 
 drop procedure if exists LISTAR_INVITADO;
 drop procedure if exists INSERTAR_INVITADO;
 drop procedure if exists MODIFICAR_INVITADO;
 drop procedure if exists ELIMINAR_INVITADO;
-
+drop procedure if exists LISTAR_INVITADO_POR_NOMBRE;
 
 DELIMITER $
 CREATE PROCEDURE INSERTAR_CODIGO_ATENCION(
@@ -497,16 +502,21 @@ end $
 delimiter $
 create procedure INSERTAR_EVENTO(
 	in _fid_coordinador int,
-    in _id_evento int,
+    out _id_evento int,
     in _capacidad int,
     in _nombre varchar(150),
-    in _fecha_inicio date,
-    in _fecha_fin date,
-    in _lugar varchar(150)
+    in _fecha date,
+    in inicio time,
+    in final time,
+    in _lugar varchar(150),
+    in _descripcion varchar(250),
+    in _categoria varchar(250),
+    in _imagen longblob
 )begin
 	/*tabla evento*/
-	insert into evento(fid_coordinador, id_evento, capacidad, nombre, fecha_inicio, fecha_fin,lugar,estado)
-    values (_fid_coordinador, _id_evento, _capacidad, _nombre, _fecha_inicio, _fecha_fin,_lugar,1);
+	insert into evento(fid_coordinador, capacidad, nombre, fecha_inicio, fecha_fin,lugar,estado,descripcion,categoria,imagen)
+    values (_fid_coordinador, _capacidad, _nombre, _fecha_inicio, _fecha_fin,_lugar,1,_descripcion,_categoria,_imagen);
+    set _id_evento = @@last_insert_id;
 end $
 
 delimiter $
@@ -515,13 +525,18 @@ create procedure MODIFICAR_EVENTO(
     in _id_evento int,
     in _capacidad int,
     in _nombre varchar(150),
-    in _fecha_inicio date,
-    in _fecha_fin date,
-    in _lugar varchar(150)
+    in _fecha date,
+    in inicio time,
+    in final time,
+    in _lugar varchar(150),
+    in _descripcion varchar(250),
+    in _categoria varchar(250),
+    in _imagen longblob
 )begin
 	/*tabla evento*/
 	update evento set fid_coordinador = _fid_coordinador, capacidad = _capacidad, nombre = _nombre, 
-    fecha_inicio = _fecha_inicio, fecha_fin = _fecha_fin, lugar = _lugar where id_evento = _id_evento;
+    fecha = _fecha, lugar = _lugar, hora_inicio=inicio,hora_fin=final,descripcion=_descripcion, _categoria=categoria,_imagen=imagen
+    where id_evento = _id_evento;
 end $
 
 delimiter $
@@ -534,11 +549,23 @@ end $
 
 delimiter $
 create procedure LISTAR_EVENTO(
+in _nombre varchar(250)
 )begin
 	/*tabla evento*/
-	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha_inicio, e.fecha_fin
-    from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador where e.estado = 1;
+	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.categoria,e.imagen
+    from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador
+    where  (e.nombre LIKE CONCAT('%',_nombre,'%')) and e.estado=1;
 end $
+
+create procedure listar_ponente_evento(
+in _id_evento int
+)begin
+	select p.id_persona,p.nombre,p.dni,p.edad,p.correo,p.direccion
+    from evento e 
+    inner join evento_ponente ep on e.id_evento=ep.fid_evento
+    inner join persona p on ep.fid_persona=p.id_persona
+    where e.id_evento=_id_evento;
+end$
 
 /*Para encuestas, tabla evento_alumno*/
 delimiter $
@@ -966,6 +993,19 @@ create procedure LISTAR_ALUMNO(
 	where a.estado = 1;
 end$
 
+create procedure LISTAR_ALUMNO_POR_NOMBRE(
+in _nombre varchar(250)
+)begin
+	select p.id_persona, p.nombre, p.dni, p.edad,p.correo ,p.direccion, 
+		   m.usuario, m.password, m.fecha_de_inclusion, m.imagen_perfil,
+           a.codigo_pucp, a.fid_especialidad, e.nombre as nombre_especialidad, a.craest, a.id_alumno, 
+           a.cursos_por_primera,a.cursos_por_segunda,a.cursos_por_tercera,a.creditos_aprobados
+	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
+                   inner join alumno a on a.id_alumno = m.id_miembro_pucp
+                   inner join especialidad  e on e.id_especialidad=a.fid_especialidad 
+	where a.estado = 1 and  (p.nombre LIKE CONCAT('%',_nombre,'%'));
+end$
+
 /*Procedures de clase Profesor*/
 delimiter $
 create procedure INSERTAR_PROFESOR(
@@ -1055,6 +1095,20 @@ create procedure LISTAR_PROFESOR(
 	where pr.estado = 1;
 end$
 
+create procedure LISTAR_PROFESOR_POR_NOMBRE(
+in _nombre  varchar(250)
+)begin
+	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
+		   m.usuario, m.password, m.fecha_de_inclusion, m.imagen_perfil, 
+           e.id_especialidad ,e.nombre as nombre_especialidad, pr.facultad, pr.categoria,pr.id_profesor,m.id_miembro_pucp
+	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
+                   inner join profesor pr on pr.fid_miembro_pucp = m.id_miembro_pucp
+                   inner join especialidad e on e.id_especialidad=pr.fid_especialidad
+	where pr.estado = 1 and (p.nombre LIKE CONCAT('%',_nombre,'%'));
+end$
+
+
+
 /*Procedures de la clase Psicologo*/
 delimiter $
 create procedure INSERTAR_PSICOLOGO(
@@ -1129,6 +1183,18 @@ create procedure LISTAR_PSICOLOGO(
 	where ps.estado = 1;
 end$
 
+create procedure LISTAR_PSICOLOGO_POR_NOMBRE(
+in _nombre varchar(250)
+)begin
+	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
+		   m.usuario, m.password, m.fecha_de_inclusion, m.imagen_perfil, ps.id_psicologo
+	from persona p inner join miembro_pucp m on p.id_persona = m.fid_persona
+                   inner join psicologo ps on ps.fid_miembro_pucp = m.id_miembro_pucp
+	where ps.estado = 1 and (p.nombre LIKE CONCAT('%',_nombre,'%'));
+end$
+
+
+
 /*Procedures de la clase Invitado*/
 delimiter $
 create procedure INSERTAR_INVITADO(
@@ -1198,4 +1264,15 @@ create procedure LISTAR_INVITADO(
 	from persona p inner join miembro_externo m on p.id_persona = m.fid_persona
                    inner join invitado i on i.fid_miembro_externo = m.id_miembro_externo
 	where i.estado = 1;
+end$
+
+delimiter $
+create procedure LISTAR_INVITADO_POR_NOMBRE(
+in _nombre varchar(250)
+)begin
+	select p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
+		   m.telefono, m.ocupacion
+	from persona p inner join miembro_externo m on p.id_persona = m.fid_persona
+                   inner join invitado i on i.fid_miembro_externo = m.id_miembro_externo
+	where i.estado = 1 and (e.nombre LIKE CONCAT('%',_nombre,'%'));
 end$

@@ -839,8 +839,8 @@
     <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.modificarHorarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionEventoWS\GesionEventoWS1.wsdl" />
-    <None Include="Connected Services\GestionEventoWS\GesionEventoWS1.xsd">
+    <None Include="Connected Services\GestionEventoWS\GesionEventoWS.wsdl" />
+    <None Include="Connected Services\GestionEventoWS\GesionEventoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.eliminarCoordinadorEventoResponse.datasource">
