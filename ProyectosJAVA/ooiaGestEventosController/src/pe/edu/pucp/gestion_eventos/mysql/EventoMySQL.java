@@ -43,7 +43,7 @@ public class EventoMySQL implements EventoDAO{
                 evento.setNombre(rs.getString("nombre"));
                 evento.setDescripcion(rs.getString("descripcion"));
                 evento.setCategoria(new CategoriaEvento(rs.getInt("id_categoria_evento"), 
-                        rs.getString("nombre_categoria")));
+                rs.getString("nombre_categoria")));
                 evento.setCoordinador(new Coordinador());
                 evento.setCoordinador(obtenerCoordinador(rs.getInt("fid_coordinador")));
                 evento.setCapacidad(rs.getInt("capacidad"));
@@ -180,8 +180,8 @@ public class EventoMySQL implements EventoDAO{
 //        }
             
            
-           return lista;
+           //return lista;
            
-    }
+   // }
     
 }

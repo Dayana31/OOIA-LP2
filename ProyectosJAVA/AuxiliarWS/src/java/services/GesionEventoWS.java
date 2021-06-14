@@ -11,12 +11,15 @@ import java.util.logging.Logger;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import pe.edu.pucp.gestion_eventos.dao.CategoriaEventoDAO;
 import pe.edu.pucp.gestion_eventos.dao.CoordinadorEventosDAO;
 import pe.edu.pucp.gestion_eventos.dao.EventoAlumnoDAO;
 import pe.edu.pucp.gestion_eventos.dao.EventoDAO;
+import pe.edu.pucp.gestion_eventos.model.CategoriaEvento;
 import pe.edu.pucp.gestion_eventos.model.Evento;
 import pe.edu.pucp.gestion_eventos.model.EventoAlumno;
 import pe.edu.pucp.gestion_eventos.model.MiembroOOIA;
+import pe.edu.pucp.gestion_eventos.mysql.CategoriaEventoMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.CoordinadorEventosMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.EventoAlumnoMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
@@ -35,12 +38,11 @@ public class GesionEventoWS {
     private EventoDAO eventoSQL=new EventoMySQL();
     private EventoAlumnoDAO eventoAl=new EventoAlumnoMySQL();
     private CoordinadorEventosDAO coordinador=new CoordinadorEventosMySQL();;
-    
+    private CategoriaEventoDAO categoria=new CategoriaEventoMySQL();
     public GesionEventoWS() {
     eventoSQL=new EventoMySQL();
     eventoAl=new EventoAlumnoMySQL();
-    coordinador=new CoordinadorEventosMySQL();
-        
+    coordinador=new CoordinadorEventosMySQL();    
     }
     
     @WebMethod(operationName = "listarEvento")
@@ -162,6 +164,48 @@ public class GesionEventoWS {
         int resultado=0;
         try {
             resultado=this.coordinador.eliminar(coordinador.getId_coordinadorEventosOOIA());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "listarCategoriaEvento")
+    public ArrayList<CategoriaEvento> listarCategoriaEvento(){
+        ArrayList<CategoriaEvento>lista=new ArrayList<>();
+        try {
+            lista=categoria.listar();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        
+        return lista;
+    }
+    @WebMethod(operationName = "insertarCategoriaEvento")
+    public int insertarCategoriaEvento(@WebParam(name="categoria")CategoriaEvento categoria){
+           int resultado=0;
+        try {
+            resultado=this.categoria.insertar(categoria);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "modificarCategoriaEvento")
+    public int modificarCategoriaEvento(@WebParam(name="categoria")CategoriaEvento categoria){
+           int resultado=0;
+        try {
+            resultado=this.categoria.modificar(categoria);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "eliminarCategoriaEvento")
+    public int eliminarCategoriaEvento(@WebParam(name="categoria")CategoriaEvento categoria){
+           int resultado=0;
+        try {
+            resultado=this.categoria.eliminar(categoria.getId_categoria());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
