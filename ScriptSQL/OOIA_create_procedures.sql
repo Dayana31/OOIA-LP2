@@ -848,6 +848,7 @@ delimiter $
 create procedure MODIFICAR_CITA(
     	in _id_cita int,
 	in _fid_alumno int,
+	in _tipo_asesor int,
 	in _fid_asesor int,
     	in _fid_horario int,
 	in _fid_atencion int,

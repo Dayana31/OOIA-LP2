@@ -13,6 +13,7 @@
   </xs:complexType>
   <xs:complexType name="codigoAtencion">
     <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
       <xs:element minOccurs="0" name="codigo" type="xs:string" />
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element name="id_codigo_atencion" type="xs:int" />

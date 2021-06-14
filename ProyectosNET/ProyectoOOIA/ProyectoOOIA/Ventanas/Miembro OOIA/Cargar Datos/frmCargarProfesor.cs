@@ -22,7 +22,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             daoEspecialidad = new EspecialidadWS.EspecialidadWSClient();
             daoProfesor = new ProfesorWS.ProfesorWSClient();
             cbEspecialidad.DataSource = new BindingList<EspecialidadWS.especialidad>
-                (daoEspecialidad.listarEsppecialidad().ToList());
+                (daoEspecialidad.listarEspecialidad().ToList());
             cbEspecialidad.DisplayMember = "nombre_especialidad";
             cbEspecialidad.ValueMember = "id_especialidad";
         }
@@ -157,12 +157,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Persona
             txtDni.Text = profe.dni;
             txtNombre.Text = profe.nombre;
-            txtEdad.Text = profe.edad.ToString();
+            //txtEdad.Text = profe.edad.ToString();
             txtDireccion.Text = profe.direccion;
             txtCorreo.Text = profe.correo;
             //Miembro PUCP
-            txtUsuario.Text = profe.usuario_pucp;
-            txtPassword.Text = profe.contraseña;
+            txtUsuario.Text = profe.usuario;
+            txtPassword.Text = profe.password;
             //Alumno
             txtIdProfesor.Text = profe.id_profesor.ToString();
             txtFacultad.Text = profe.facultad;
@@ -240,12 +240,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Persona
             profesor.dni = txtDni.Text;
             profesor.nombre = txtNombre.Text;
-            profesor.edad = Int32.Parse(txtEdad.Text);
+            //profesor.edad = Int32.Parse(txtEdad.Text);
             profesor.direccion = txtDireccion.Text;
             profesor.correo = txtCorreo.Text;
             //Miembro PUCP
-            profesor.usuario_pucp = txtUsuario.Text;
-            profesor.contraseña = txtPassword.Text;
+            profesor.usuario = txtUsuario.Text;
+            profesor.password = txtPassword.Text;
             profesor.fecha_inclusion = DateTime.Today.Date;
             profesor.fecha_inclusionSpecified = true;
             //Alumno
@@ -254,7 +254,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             EspecialidadWS.especialidad esp_selected = (EspecialidadWS.especialidad)cbEspecialidad.SelectedItem;
             profesor.especialidad = new ProfesorWS.especialidad();
             profesor.especialidad.id_especialidad = esp_selected.id_especialidad;
-            profesor.especialidad.nombre_especialidad = esp_selected.nombre_especialidad;
+            profesor.especialidad.nombre = esp_selected.nombre;
 
             if (estado.Equals(Estado.Nuevo))
             {

@@ -139,12 +139,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Persona
             txtDni.Text = psico.dni;
             txtNombre.Text = psico.nombre;
-            txtEdad.Text = psico.edad.ToString();
+            //txtEdad.Text = psico.edad.ToString();
             txtDireccion.Text = psico.direccion;
             txtCorreo.Text = psico.correo;
             //Miembro PUCP
-            txtUsuario.Text = psico.usuario_pucp;
-            txtPassword.Text = psico.contraseña;
+            txtUsuario.Text = psico.usuario;
+            txtPassword.Text = psico.password;
             //Alumno
             txtIdPsico.Text = psico.id_psicologo.ToString();
         }
@@ -205,12 +205,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Persona
             psicologo.dni = txtDni.Text;
             psicologo.nombre = txtNombre.Text;
-            psicologo.edad = Int32.Parse(txtEdad.Text);
+            //psicologo.edad = Int32.Parse(txtEdad.Text);
             psicologo.direccion = txtDireccion.Text;
             psicologo.correo = txtCorreo.Text;
             //Miembro PUCP
-            psicologo.usuario_pucp = txtUsuario.Text;
-            psicologo.contraseña = txtPassword.Text;
+            psicologo.usuario = txtUsuario.Text;
+            psicologo.password = txtPassword.Text;
             psicologo.fecha_inclusion = DateTime.Today.Date;
             psicologo.fecha_inclusionSpecified = true;
             //Psicologo

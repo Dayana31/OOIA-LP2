@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9d4eb793-4a7b-4618-a2f3-69980835827e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="30e18669-e214-4c1e-b6fa-3453f48d74ef" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,19 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-<<<<<<< HEAD
-    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/AlumnoWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/AlumnoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="AlumnoWS1.wsdl" MetadataType="Wsdl" ID="ddc6d0a2-28c7-40f8-875f-444ee261faff" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/AlumnoWS?wsdl" />
-    <MetadataFile FileName="AlumnoWS1.xsd" MetadataType="Schema" ID="74de61ce-371b-4a73-b411-876d53ed7480" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/AlumnoWS?xsd=1" />
-=======
-    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/AlumnoWS?wsdl" Protocol="http" SourceId="1" />
-  </MetadataSources>
-  <Metadata>
-    <MetadataFile FileName="AlumnoWS1.xsd" MetadataType="Schema" ID="1f801d8a-c563-4ae6-a0ff-2e9f32ba397b" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/AlumnoWS?xsd=1" />
-    <MetadataFile FileName="AlumnoWS1.wsdl" MetadataType="Wsdl" ID="1d592432-5e13-4269-afce-e52f9126a8ae" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/AlumnoWS?wsdl" />
->>>>>>> 68ad3f2014d4ffaceb6853074ee495e6a5121fb0
+    <MetadataFile FileName="AlumnoWS.xsd" MetadataType="Schema" ID="9a51e2ad-9cff-4f81-a8b9-9f394e18ec6e" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/AlumnoWS?xsd=1" />
+    <MetadataFile FileName="AlumnoWS.wsdl" MetadataType="Wsdl" ID="fac2b8e6-d4b6-4ef0-8301-cf9f6ae23efd" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/AlumnoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

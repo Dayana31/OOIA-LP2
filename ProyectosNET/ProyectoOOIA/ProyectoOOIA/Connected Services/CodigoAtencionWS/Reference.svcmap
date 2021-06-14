@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4db262a6-070f-49d8-b418-ae63805658f4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5f24d1b0-f2f2-4c7a-b67d-070df04113d5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/CodigoWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/CodigoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CodigoWS.wsdl" MetadataType="Wsdl" ID="47b46239-ff4e-417b-b1a8-818aba969ad7" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CodigoWS?wsdl" />
-    <MetadataFile FileName="CodigoWS.xsd" MetadataType="Schema" ID="ec07b551-6a08-4bf3-a15e-4d7b18ff831d" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/CodigoWS?xsd=1" />
+    <MetadataFile FileName="CodigoWS.xsd" MetadataType="Schema" ID="a73b59af-099f-48fd-acfc-43e33800c00c" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/CodigoWS?xsd=1" />
+    <MetadataFile FileName="CodigoWS.wsdl" MetadataType="Wsdl" ID="d74ba870-f548-479f-a4e0-7ff8b5ec4a59" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/CodigoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

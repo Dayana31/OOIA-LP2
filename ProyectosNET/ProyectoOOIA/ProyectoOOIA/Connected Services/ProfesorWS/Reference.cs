@@ -16,24 +16,14 @@ namespace ProyectoOOIA.ProfesorWS {
     public interface ProfesorWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesoresRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesoresResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesoresRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesoresResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.ProfesorWS.listarProfesoresResponse listarProfesores(ProyectoOOIA.ProfesorWS.listarProfesoresRequest request);
+        ProyectoOOIA.ProfesorWS.insertarProfesoresResponse insertarProfesores(ProyectoOOIA.ProfesorWS.insertarProfesoresRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesoresRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesoresResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.listarProfesoresResponse> listarProfesoresAsync(ProyectoOOIA.ProfesorWS.listarProfesoresRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.ProfesorWS.eliminarProfesorResponse eliminarProfesor(ProyectoOOIA.ProfesorWS.eliminarProfesorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.eliminarProfesorResponse> eliminarProfesorAsync(ProyectoOOIA.ProfesorWS.eliminarProfesorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesoresRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesoresResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.insertarProfesoresResponse> insertarProfesoresAsync(ProyectoOOIA.ProfesorWS.insertarProfesoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/modificarProfesoresRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/modificarProfesoresResponse")]
@@ -46,14 +36,24 @@ namespace ProyectoOOIA.ProfesorWS {
         System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.modificarProfesoresResponse> modificarProfesoresAsync(ProyectoOOIA.ProfesorWS.modificarProfesoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesoresRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesoresResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.ProfesorWS.insertarProfesoresResponse insertarProfesores(ProyectoOOIA.ProfesorWS.insertarProfesoresRequest request);
+        ProyectoOOIA.ProfesorWS.eliminarProfesorResponse eliminarProfesor(ProyectoOOIA.ProfesorWS.eliminarProfesorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesoresRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesoresResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.insertarProfesoresResponse> insertarProfesoresAsync(ProyectoOOIA.ProfesorWS.insertarProfesoresRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.eliminarProfesorResponse> eliminarProfesorAsync(ProyectoOOIA.ProfesorWS.eliminarProfesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesoresRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesoresResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.ProfesorWS.listarProfesoresResponse listarProfesores(ProyectoOOIA.ProfesorWS.listarProfesoresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesoresRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesoresResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.listarProfesoresResponse> listarProfesoresAsync(ProyectoOOIA.ProfesorWS.listarProfesoresRequest request);
     }
     
     /// <remarks/>
@@ -64,22 +64,30 @@ namespace ProyectoOOIA.ProfesorWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
     public partial class profesor : miembroPUCP {
         
-        private string categoriaField;
+        private bool activoField;
         
-        private curso[] cursosDictaField;
+        private string categoriaField;
         
         private especialidad especialidadField;
         
-        private int estadoField;
-        
         private string facultadField;
-        
-        private horario[] horariosDisponiblesField;
         
         private int id_profesorField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public string categoria {
             get {
                 return this.categoriaField;
@@ -87,18 +95,6 @@ namespace ProyectoOOIA.ProfesorWS {
             set {
                 this.categoriaField = value;
                 this.RaisePropertyChanged("categoria");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("cursosDicta", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
-        public curso[] cursosDicta {
-            get {
-                return this.cursosDictaField;
-            }
-            set {
-                this.cursosDictaField = value;
-                this.RaisePropertyChanged("cursosDicta");
             }
         }
         
@@ -116,18 +112,6 @@ namespace ProyectoOOIA.ProfesorWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-                this.RaisePropertyChanged("estado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public string facultad {
             get {
                 return this.facultadField;
@@ -139,19 +123,7 @@ namespace ProyectoOOIA.ProfesorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("horariosDisponibles", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
-        public horario[] horariosDisponibles {
-            get {
-                return this.horariosDisponiblesField;
-            }
-            set {
-                this.horariosDisponiblesField = value;
-                this.RaisePropertyChanged("horariosDisponibles");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int id_profesor {
             get {
                 return this.id_profesorField;
@@ -169,194 +141,28 @@ namespace ProyectoOOIA.ProfesorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public partial class curso : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string codigoCursoField;
-        
-        private int estadoField;
-        
-        private int id_cursoField;
-        
-        private string nombreCursoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string codigoCurso {
-            get {
-                return this.codigoCursoField;
-            }
-            set {
-                this.codigoCursoField = value;
-                this.RaisePropertyChanged("codigoCurso");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-                this.RaisePropertyChanged("estado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int id_curso {
-            get {
-                return this.id_cursoField;
-            }
-            set {
-                this.id_cursoField = value;
-                this.RaisePropertyChanged("id_curso");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string nombreCurso {
-            get {
-                return this.nombreCursoField;
-            }
-            set {
-                this.nombreCursoField = value;
-                this.RaisePropertyChanged("nombreCurso");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public partial class time : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
-    public partial class horario : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int diaField;
-        
-        private int estadoField;
-        
-        private time horaFinField;
-        
-        private time horaInicioField;
-        
-        private int id_horarioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int dia {
-            get {
-                return this.diaField;
-            }
-            set {
-                this.diaField = value;
-                this.RaisePropertyChanged("dia");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int estado {
-            get {
-                return this.estadoField;
-            }
-            set {
-                this.estadoField = value;
-                this.RaisePropertyChanged("estado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public time horaFin {
-            get {
-                return this.horaFinField;
-            }
-            set {
-                this.horaFinField = value;
-                this.RaisePropertyChanged("horaFin");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public time horaInicio {
-            get {
-                return this.horaInicioField;
-            }
-            set {
-                this.horaInicioField = value;
-                this.RaisePropertyChanged("horaInicio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_horario {
-            get {
-                return this.id_horarioField;
-            }
-            set {
-                this.id_horarioField = value;
-                this.RaisePropertyChanged("id_horario");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
     public partial class especialidad : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool activoField;
         
         private int id_especialidadField;
         
-        private string nombre_especialidadField;
+        private string nombreField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int id_especialidad {
             get {
                 return this.id_especialidadField;
@@ -368,14 +174,14 @@ namespace ProyectoOOIA.ProfesorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nombre_especialidad {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
             get {
-                return this.nombre_especialidadField;
+                return this.nombreField;
             }
             set {
-                this.nombre_especialidadField = value;
-                this.RaisePropertyChanged("nombre_especialidad");
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
             }
         }
         
@@ -405,7 +211,9 @@ namespace ProyectoOOIA.ProfesorWS {
         
         private string dniField;
         
-        private int edadField;
+        private System.DateTime fecha_nacimientoField;
+        
+        private bool fecha_nacimientoFieldSpecified;
         
         private int id_personaField;
         
@@ -449,13 +257,25 @@ namespace ProyectoOOIA.ProfesorWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int edad {
+        public System.DateTime fecha_nacimiento {
             get {
-                return this.edadField;
+                return this.fecha_nacimientoField;
             }
             set {
-                this.edadField = value;
-                this.RaisePropertyChanged("edad");
+                this.fecha_nacimientoField = value;
+                this.RaisePropertyChanged("fecha_nacimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_nacimientoSpecified {
+            get {
+                return this.fecha_nacimientoFieldSpecified;
+            }
+            set {
+                this.fecha_nacimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_nacimientoSpecified");
             }
         }
         
@@ -502,8 +322,6 @@ namespace ProyectoOOIA.ProfesorWS {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.OOIA.pucp.edu.pe/")]
     public abstract partial class miembroPUCP : persona {
         
-        private string contraseñaField;
-        
         private System.DateTime fecha_inclusionField;
         
         private bool fecha_inclusionFieldSpecified;
@@ -512,22 +330,12 @@ namespace ProyectoOOIA.ProfesorWS {
         
         private byte[] imagenDePerfilField;
         
-        private string usuario_pucpField;
+        private string passwordField;
+        
+        private string usuarioField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string contraseña {
-            get {
-                return this.contraseñaField;
-            }
-            set {
-                this.contraseñaField = value;
-                this.RaisePropertyChanged("contraseña");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public System.DateTime fecha_inclusion {
             get {
                 return this.fecha_inclusionField;
@@ -551,7 +359,7 @@ namespace ProyectoOOIA.ProfesorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
         public int id_miembro_pucp {
             get {
                 return this.id_miembro_pucpField;
@@ -563,7 +371,7 @@ namespace ProyectoOOIA.ProfesorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=2)]
         public byte[] imagenDePerfil {
             get {
                 return this.imagenDePerfilField;
@@ -575,14 +383,26 @@ namespace ProyectoOOIA.ProfesorWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string usuario_pucp {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string password {
             get {
-                return this.usuario_pucpField;
+                return this.passwordField;
             }
             set {
-                this.usuario_pucpField = value;
-                this.RaisePropertyChanged("usuario_pucp");
+                this.passwordField = value;
+                this.RaisePropertyChanged("password");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
+                this.RaisePropertyChanged("usuario");
             }
         }
     }
@@ -590,45 +410,17 @@ namespace ProyectoOOIA.ProfesorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesores", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarProfesoresRequest {
-        
-        public listarProfesoresRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesoresResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarProfesoresResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.ProfesorWS.profesor[] @return;
-        
-        public listarProfesoresResponse() {
-        }
-        
-        public listarProfesoresResponse(ProyectoOOIA.ProfesorWS.profesor[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesor", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarProfesorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesores", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarProfesoresRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public ProyectoOOIA.ProfesorWS.profesor profesor;
         
-        public eliminarProfesorRequest() {
+        public insertarProfesoresRequest() {
         }
         
-        public eliminarProfesorRequest(ProyectoOOIA.ProfesorWS.profesor profesor) {
+        public insertarProfesoresRequest(ProyectoOOIA.ProfesorWS.profesor profesor) {
             this.profesor = profesor;
         }
     }
@@ -636,17 +428,17 @@ namespace ProyectoOOIA.ProfesorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesorResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarProfesorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesoresResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarProfesoresResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarProfesorResponse() {
+        public insertarProfesoresResponse() {
         }
         
-        public eliminarProfesorResponse(int @return) {
+        public insertarProfesoresResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -690,35 +482,63 @@ namespace ProyectoOOIA.ProfesorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesores", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarProfesoresRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesor", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarProfesorRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.ProfesorWS.profesor profesor;
+        public int id_profesor;
         
-        public insertarProfesoresRequest() {
+        public eliminarProfesorRequest() {
         }
         
-        public insertarProfesoresRequest(ProyectoOOIA.ProfesorWS.profesor profesor) {
-            this.profesor = profesor;
+        public eliminarProfesorRequest(int id_profesor) {
+            this.id_profesor = id_profesor;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesoresResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarProfesoresResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesorResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarProfesorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarProfesoresResponse() {
+        public eliminarProfesorResponse() {
         }
         
-        public insertarProfesoresResponse(int @return) {
+        public eliminarProfesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesores", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarProfesoresRequest {
+        
+        public listarProfesoresRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesoresResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarProfesoresResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.ProfesorWS.profesor[] @return;
+        
+        public listarProfesoresResponse() {
+        }
+        
+        public listarProfesoresResponse(ProyectoOOIA.ProfesorWS.profesor[] @return) {
             this.@return = @return;
         }
     }
@@ -751,47 +571,26 @@ namespace ProyectoOOIA.ProfesorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.ProfesorWS.listarProfesoresResponse ProyectoOOIA.ProfesorWS.ProfesorWS.listarProfesores(ProyectoOOIA.ProfesorWS.listarProfesoresRequest request) {
-            return base.Channel.listarProfesores(request);
+        ProyectoOOIA.ProfesorWS.insertarProfesoresResponse ProyectoOOIA.ProfesorWS.ProfesorWS.insertarProfesores(ProyectoOOIA.ProfesorWS.insertarProfesoresRequest request) {
+            return base.Channel.insertarProfesores(request);
         }
         
-        public ProyectoOOIA.ProfesorWS.profesor[] listarProfesores() {
-            ProyectoOOIA.ProfesorWS.listarProfesoresRequest inValue = new ProyectoOOIA.ProfesorWS.listarProfesoresRequest();
-            ProyectoOOIA.ProfesorWS.listarProfesoresResponse retVal = ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).listarProfesores(inValue);
+        public int insertarProfesores(ProyectoOOIA.ProfesorWS.profesor profesor) {
+            ProyectoOOIA.ProfesorWS.insertarProfesoresRequest inValue = new ProyectoOOIA.ProfesorWS.insertarProfesoresRequest();
+            inValue.profesor = profesor;
+            ProyectoOOIA.ProfesorWS.insertarProfesoresResponse retVal = ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).insertarProfesores(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.listarProfesoresResponse> ProyectoOOIA.ProfesorWS.ProfesorWS.listarProfesoresAsync(ProyectoOOIA.ProfesorWS.listarProfesoresRequest request) {
-            return base.Channel.listarProfesoresAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.insertarProfesoresResponse> ProyectoOOIA.ProfesorWS.ProfesorWS.insertarProfesoresAsync(ProyectoOOIA.ProfesorWS.insertarProfesoresRequest request) {
+            return base.Channel.insertarProfesoresAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.listarProfesoresResponse> listarProfesoresAsync() {
-            ProyectoOOIA.ProfesorWS.listarProfesoresRequest inValue = new ProyectoOOIA.ProfesorWS.listarProfesoresRequest();
-            return ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).listarProfesoresAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.ProfesorWS.eliminarProfesorResponse ProyectoOOIA.ProfesorWS.ProfesorWS.eliminarProfesor(ProyectoOOIA.ProfesorWS.eliminarProfesorRequest request) {
-            return base.Channel.eliminarProfesor(request);
-        }
-        
-        public int eliminarProfesor(ProyectoOOIA.ProfesorWS.profesor profesor) {
-            ProyectoOOIA.ProfesorWS.eliminarProfesorRequest inValue = new ProyectoOOIA.ProfesorWS.eliminarProfesorRequest();
+        public System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.insertarProfesoresResponse> insertarProfesoresAsync(ProyectoOOIA.ProfesorWS.profesor profesor) {
+            ProyectoOOIA.ProfesorWS.insertarProfesoresRequest inValue = new ProyectoOOIA.ProfesorWS.insertarProfesoresRequest();
             inValue.profesor = profesor;
-            ProyectoOOIA.ProfesorWS.eliminarProfesorResponse retVal = ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).eliminarProfesor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.eliminarProfesorResponse> ProyectoOOIA.ProfesorWS.ProfesorWS.eliminarProfesorAsync(ProyectoOOIA.ProfesorWS.eliminarProfesorRequest request) {
-            return base.Channel.eliminarProfesorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.eliminarProfesorResponse> eliminarProfesorAsync(ProyectoOOIA.ProfesorWS.profesor profesor) {
-            ProyectoOOIA.ProfesorWS.eliminarProfesorRequest inValue = new ProyectoOOIA.ProfesorWS.eliminarProfesorRequest();
-            inValue.profesor = profesor;
-            return ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).eliminarProfesorAsync(inValue);
+            return ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).insertarProfesoresAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -818,26 +617,47 @@ namespace ProyectoOOIA.ProfesorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.ProfesorWS.insertarProfesoresResponse ProyectoOOIA.ProfesorWS.ProfesorWS.insertarProfesores(ProyectoOOIA.ProfesorWS.insertarProfesoresRequest request) {
-            return base.Channel.insertarProfesores(request);
+        ProyectoOOIA.ProfesorWS.eliminarProfesorResponse ProyectoOOIA.ProfesorWS.ProfesorWS.eliminarProfesor(ProyectoOOIA.ProfesorWS.eliminarProfesorRequest request) {
+            return base.Channel.eliminarProfesor(request);
         }
         
-        public int insertarProfesores(ProyectoOOIA.ProfesorWS.profesor profesor) {
-            ProyectoOOIA.ProfesorWS.insertarProfesoresRequest inValue = new ProyectoOOIA.ProfesorWS.insertarProfesoresRequest();
-            inValue.profesor = profesor;
-            ProyectoOOIA.ProfesorWS.insertarProfesoresResponse retVal = ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).insertarProfesores(inValue);
+        public int eliminarProfesor(int id_profesor) {
+            ProyectoOOIA.ProfesorWS.eliminarProfesorRequest inValue = new ProyectoOOIA.ProfesorWS.eliminarProfesorRequest();
+            inValue.id_profesor = id_profesor;
+            ProyectoOOIA.ProfesorWS.eliminarProfesorResponse retVal = ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).eliminarProfesor(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.insertarProfesoresResponse> ProyectoOOIA.ProfesorWS.ProfesorWS.insertarProfesoresAsync(ProyectoOOIA.ProfesorWS.insertarProfesoresRequest request) {
-            return base.Channel.insertarProfesoresAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.eliminarProfesorResponse> ProyectoOOIA.ProfesorWS.ProfesorWS.eliminarProfesorAsync(ProyectoOOIA.ProfesorWS.eliminarProfesorRequest request) {
+            return base.Channel.eliminarProfesorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.insertarProfesoresResponse> insertarProfesoresAsync(ProyectoOOIA.ProfesorWS.profesor profesor) {
-            ProyectoOOIA.ProfesorWS.insertarProfesoresRequest inValue = new ProyectoOOIA.ProfesorWS.insertarProfesoresRequest();
-            inValue.profesor = profesor;
-            return ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).insertarProfesoresAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.eliminarProfesorResponse> eliminarProfesorAsync(int id_profesor) {
+            ProyectoOOIA.ProfesorWS.eliminarProfesorRequest inValue = new ProyectoOOIA.ProfesorWS.eliminarProfesorRequest();
+            inValue.id_profesor = id_profesor;
+            return ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).eliminarProfesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.ProfesorWS.listarProfesoresResponse ProyectoOOIA.ProfesorWS.ProfesorWS.listarProfesores(ProyectoOOIA.ProfesorWS.listarProfesoresRequest request) {
+            return base.Channel.listarProfesores(request);
+        }
+        
+        public ProyectoOOIA.ProfesorWS.profesor[] listarProfesores() {
+            ProyectoOOIA.ProfesorWS.listarProfesoresRequest inValue = new ProyectoOOIA.ProfesorWS.listarProfesoresRequest();
+            ProyectoOOIA.ProfesorWS.listarProfesoresResponse retVal = ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).listarProfesores(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.listarProfesoresResponse> ProyectoOOIA.ProfesorWS.ProfesorWS.listarProfesoresAsync(ProyectoOOIA.ProfesorWS.listarProfesoresRequest request) {
+            return base.Channel.listarProfesoresAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.ProfesorWS.listarProfesoresResponse> listarProfesoresAsync() {
+            ProyectoOOIA.ProfesorWS.listarProfesoresRequest inValue = new ProyectoOOIA.ProfesorWS.listarProfesoresRequest();
+            return ((ProyectoOOIA.ProfesorWS.ProfesorWS)(this)).listarProfesoresAsync(inValue);
         }
     }
 }

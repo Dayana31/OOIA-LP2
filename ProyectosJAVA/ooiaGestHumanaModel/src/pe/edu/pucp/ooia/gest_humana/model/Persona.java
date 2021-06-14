@@ -1,5 +1,5 @@
 package pe.edu.pucp.ooia.gest_humana.model;
-import java.sql.Date;
+import java.util.Date;
 import pe.edu.pucp.interfaces.IConsultable;
 
 public abstract class Persona implements IConsultable {

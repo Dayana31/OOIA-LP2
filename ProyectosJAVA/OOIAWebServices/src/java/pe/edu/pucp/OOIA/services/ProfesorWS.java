@@ -9,11 +9,9 @@ import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.gestion_humana.controller.dao.AlumnoDAO;
-import pe.edu.pucp.gestion_humana.controller.dao.ProfesorDAO;
-import pe.edu.pucp.gestion_humana.controller.mysql.AlumnoMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.ProfesorMySQL;
-import pe.edu.pucp.gestion_humana.model.Profesor;
+import pe.edu.pucp.ooia.gest_humana.dao.ProfesorDAO;
+import pe.edu.pucp.ooia.gest_humana.model.Profesor;
+import pe.edu.pucp.ooia.gest_humana.mysql.ProfesorMySQL;
 
 /**
  *
@@ -69,10 +67,10 @@ public class ProfesorWS {
         return resultado;
     }
     @WebMethod(operationName = "eliminarProfesor")
-    public int eliminarProfesor(@WebParam(name = "profesor")Profesor profesor){
+    public int eliminarProfesor(@WebParam(name = "id_profesor")int id_profesor){
         int resultado=0;
         try {
-            resultado=daoProfesor.eliminar(profesor);
+            resultado=daoProfesor.eliminar(id_profesor);
             
         } catch (Exception e) {
             System.out.println(e.getMessage());

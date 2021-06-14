@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="27f31fbc-191d-4b41-98b9-3dac6f93e370" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e38baa7d-74bd-4e38-8a3b-731ffc030bae" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://54.157.187.65:8080/WebServicesOOIA/PsicologoWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/PsicologoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PsicologoWS1.wsdl" MetadataType="Wsdl" ID="25bb8999-09b1-4826-986e-61133f7fc2c8" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/PsicologoWS?wsdl" />
-    <MetadataFile FileName="PsicologoWS1.xsd" MetadataType="Schema" ID="e1157de3-6f51-41fd-991e-36187fb5a52d" SourceId="1" SourceUrl="http://54.157.187.65:8080/WebServicesOOIA/PsicologoWS?xsd=1" />
+    <MetadataFile FileName="PsicologoWS.xsd" MetadataType="Schema" ID="e729e5b6-506a-4a54-a551-d6a20626537d" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/PsicologoWS?xsd=1" />
+    <MetadataFile FileName="PsicologoWS.wsdl" MetadataType="Wsdl" ID="71b22aea-4111-4ca7-859a-25f10f2f7faf" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/PsicologoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

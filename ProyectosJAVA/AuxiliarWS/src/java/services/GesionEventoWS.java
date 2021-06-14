@@ -11,19 +11,16 @@ import java.util.logging.Logger;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.gestion_eventos.dao.CoordinadorEventosDAO;
 import pe.edu.pucp.gestion_eventos.dao.EventoAlumnoDAO;
 import pe.edu.pucp.gestion_eventos.dao.EventoDAO;
 import pe.edu.pucp.gestion_eventos.model.Evento;
 import pe.edu.pucp.gestion_eventos.model.EventoAlumno;
-import pe.edu.pucp.gestion_eventos.model.MiembroOOIA;
-import pe.edu.pucp.gestion_eventos.mysql.CoordinadorEventosMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.EventoAlumnoMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
-import pe.edu.pucp.gestion_humana.model.Alumno;
-import pe.edu.pucp.gestion_humana.model.Invitado;
-import pe.edu.pucp.gestion_humana.model.Profesor;
-import pruebamysql.PruebaMySql;
+import pe.edu.pucp.ooia.gest_humana.dao.CoordinadorDAO;
+import pe.edu.pucp.ooia.gest_humana.model.Coordinador;
+import pe.edu.pucp.ooia.gest_humana.mysql.CoordinadorMySQL;
+
 
 /**
  *
@@ -34,12 +31,12 @@ public class GesionEventoWS {
 
     private EventoDAO eventoSQL=new EventoMySQL();
     private EventoAlumnoDAO eventoAl=new EventoAlumnoMySQL();
-    private CoordinadorEventosDAO coordinador=new CoordinadorEventosMySQL();;
+    private CoordinadorDAO coordinador=new CoordinadorMySQL();;
     
     public GesionEventoWS() {
     eventoSQL=new EventoMySQL();
     eventoAl=new EventoAlumnoMySQL();
-    coordinador=new CoordinadorEventosMySQL();
+    coordinador=new CoordinadorMySQL();
         
     }
     
@@ -47,7 +44,7 @@ public class GesionEventoWS {
     public ArrayList<Evento> listarEvento(@WebParam(name = "nombre")String nombre) {
         ArrayList<Evento> lista= new ArrayList<>();
         try {
-            lista=eventoSQL.listar(nombre);
+            lista = eventoSQL.listar();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -128,8 +125,8 @@ public class GesionEventoWS {
     }
     
     @WebMethod(operationName = "listarCoordinadorEvento")
-    public ArrayList<MiembroOOIA> listarCoordinadorEvento() {
-        ArrayList<MiembroOOIA> lista= new ArrayList<>();
+    public ArrayList<Coordinador> listarCoordinador() {
+        ArrayList<Coordinador> lista= new ArrayList<>();
         try {
             lista=coordinador.listar();
         } catch (Exception e) {
@@ -138,7 +135,7 @@ public class GesionEventoWS {
         return lista;
     }
     @WebMethod(operationName = "insertarCoordinadorEvento")
-    public int insertarCoordinadorEvento(@WebParam(name = "coordinador")MiembroOOIA coordinador){
+    public int insertarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
         int resultado=0;
         try {
             resultado=this.coordinador.insertar(coordinador);
@@ -148,7 +145,7 @@ public class GesionEventoWS {
         return resultado;
     }
     @WebMethod(operationName = "modificarCoordinadorEvento")
-    public int modificarCoordinadorEvento(@WebParam(name = "coordinador")MiembroOOIA coordinador){
+    public int modificarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
         int resultado=0;
         try {
             resultado=this.coordinador.modificar(coordinador);
@@ -158,10 +155,10 @@ public class GesionEventoWS {
         return resultado;
     }
     @WebMethod(operationName = "eliminarCoordinadorEvento")
-    public int eliminarCoordinadorEvento(@WebParam(name = "coordinador")MiembroOOIA coordinador){
+    public int eliminarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
         int resultado=0;
         try {
-            resultado=this.coordinador.eliminar(coordinador.getId_coordinadorEventosOOIA());
+            resultado=this.coordinador.eliminar(coordinador.getId_coordinador());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

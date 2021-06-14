@@ -9,21 +9,21 @@ import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.gestion_humana.controller.dao.AlumnoDAO;
-import pe.edu.pucp.gestion_humana.controller.dao.EspecialidadDAO;
-import pe.edu.pucp.gestion_humana.controller.dao.InvitadoDAO;
-import pe.edu.pucp.gestion_humana.controller.dao.ProfesorDAO;
-import pe.edu.pucp.gestion_humana.controller.dao.PsicologoDAO;
-import pe.edu.pucp.gestion_humana.controller.mysql.AlumnoMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.EspecialidadMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.InvitadoMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.ProfesorMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.PsicologoMySQL;
-import pe.edu.pucp.gestion_humana.model.Alumno;
-import pe.edu.pucp.gestion_humana.model.Especialidad;
-import pe.edu.pucp.gestion_humana.model.Invitado;
-import pe.edu.pucp.gestion_humana.model.Profesor;
-import pe.edu.pucp.gestion_humana.model.Psicologo;
+import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.EspecialidadDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.PonenteDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.ProfesorDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.PsicologoDAO;
+import pe.edu.pucp.ooia.gest_humana.model.Alumno;
+import pe.edu.pucp.ooia.gest_humana.model.Especialidad;
+import pe.edu.pucp.ooia.gest_humana.model.Ponente;
+import pe.edu.pucp.ooia.gest_humana.model.Profesor;
+import pe.edu.pucp.ooia.gest_humana.model.Psicologo;
+import pe.edu.pucp.ooia.gest_humana.mysql.AlumnoMySQL;
+import pe.edu.pucp.ooia.gest_humana.mysql.EspecialidadMySQL;
+import pe.edu.pucp.ooia.gest_humana.mysql.PonenteMySQL;
+import pe.edu.pucp.ooia.gest_humana.mysql.ProfesorMySQL;
+import pe.edu.pucp.ooia.gest_humana.mysql.PsicologoMySQL;
 
 /**
  *
@@ -31,16 +31,17 @@ import pe.edu.pucp.gestion_humana.model.Psicologo;
  */
 @WebService(serviceName = "GestionHumanaWS")
 public class GestionHumanaWS {
-private AlumnoDAO alumno;
-private EspecialidadDAO especialidad;    
-private ProfesorDAO daoProfesor;
- private InvitadoDAO invitado;   
- private PsicologoDAO psicologo;
+    private AlumnoDAO alumno;
+    private EspecialidadDAO especialidad;    
+    private ProfesorDAO daoProfesor;
+    private PonenteDAO ponente;   
+    private PsicologoDAO psicologo;
+    
     public GestionHumanaWS() {
         alumno=new AlumnoMySQL();
         especialidad=new EspecialidadMySQL();
         daoProfesor=new ProfesorMySQL();
-        invitado=new InvitadoMySQL();
+        ponente =new PonenteMySQL();
         psicologo=new PsicologoMySQL();
         
     }
@@ -76,10 +77,10 @@ private ProfesorDAO daoProfesor;
         return resultado;
     }
     @WebMethod(operationName = "eliminarAlumno")
-    public int eliminarAlumno(@WebParam(name = "alumno")Alumno alumno){
+    public int eliminarAlumno(@WebParam(name = "id_alumno")int id_alumno){
         int resultado=0;
         try {
-            resultado=this.alumno.eliminar(alumno);
+            resultado=this.alumno.eliminar(id_alumno);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -117,17 +118,17 @@ private ProfesorDAO daoProfesor;
         return resultado;
     }
     @WebMethod(operationName = "eliminarEspecialidad")
-    public int eliminarEspecialidad(@WebParam(name = "especialidad")Especialidad especialidad){
+    public int eliminarEspecialidad(@WebParam(name = "id_especialidad")int id_especialidad){
         int resultado=0;
         try {
-            resultado=this.especialidad.eliminar(especialidad);
+            resultado=this.especialidad.eliminar(id_especialidad);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return resultado;
     }
  
-    @WebMethod(operationName = "listarProfesores")
+    @WebMethod(operationName = "listarProfesor")
     public ArrayList <Profesor>listarProfesores(){
         ArrayList<Profesor> empleador=new ArrayList<>();
         try {
@@ -137,7 +138,7 @@ private ProfesorDAO daoProfesor;
         }
         return empleador;
     }
-    @WebMethod(operationName = "insertarProfesores")
+    @WebMethod(operationName = "insertarProfesor")
     public int insertarProfesores( @WebParam(name="profesor") Profesor profesor){
         int resultado=0;
         try {
@@ -162,10 +163,10 @@ private ProfesorDAO daoProfesor;
         return resultado;
     }
     @WebMethod(operationName = "eliminarProfesor")
-    public int eliminarProfesor(@WebParam(name = "profesor")Profesor profesor){
+    public int eliminarProfesor(@WebParam(name = "id_profesor")int id_profesor){
         int resultado=0;
         try {
-            resultado=daoProfesor.eliminar(profesor);
+            resultado=daoProfesor.eliminar(id_profesor);
             
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -174,43 +175,43 @@ private ProfesorDAO daoProfesor;
         return resultado;
     }
     
-    @WebMethod(operationName = "listarInvitado")
-    public ArrayList<Invitado> listarInvitado(){
-        ArrayList<Invitado> lista=new ArrayList<>();
+    @WebMethod(operationName = "listarPonente")
+    public ArrayList<Ponente> listarPonente(){
+        ArrayList<Ponente> lista=new ArrayList<>();
         try {
-            lista=invitado.listar();
+            lista=ponente.listar();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return lista;
     }
-    @WebMethod(operationName = "insertarInvitado")
-    public int insertarInvitado(@WebParam(name = "invitado")Invitado invitado){
+    @WebMethod(operationName = "insertarPonente")
+    public int insertarInvitado(@WebParam(name = "Ponente")Ponente ponente){
         int resultado=0;
         try {
-            resultado=this.invitado.insertar(invitado);
+            resultado=this.ponente.insertar(ponente);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return resultado;
         
     }
-    @WebMethod(operationName = "modificarInvitado")
-    public int modificarInvitado(@WebParam(name = "invitado")Invitado invitado){
+    @WebMethod(operationName = "modificarPonente")
+    public int modificarInvitado(@WebParam(name = "invitado")Ponente ponente){
         int resultado=0;
         try {
-            resultado=this.invitado.modificar(invitado);
+            resultado=this.ponente.modificar(ponente);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return resultado;
         
     }
-    @WebMethod(operationName = "eliminarInvitado")
-    public int eliminarInvitado(@WebParam(name = "invitado")Invitado invitado){
+    @WebMethod(operationName = "eliminarPonente")
+    public int eliminarInvitado(@WebParam(name = "id_ponente")int id_ponente){
         int resultado=0;
         try {
-            resultado=this.invitado.eliminar(invitado);
+            resultado=this.ponente.eliminar(id_ponente);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
@@ -251,10 +252,10 @@ private ProfesorDAO daoProfesor;
         
     }
     @WebMethod(operationName = "eliminarPsicologo")
-    public int eliminarPsicologo(@WebParam(name = "invitado")Psicologo psicologo){
+    public int eliminarPsicologo(@WebParam(name = "id_psicologo")int id_psicologo){
         int resultado=0;
         try {
-            resultado=this.psicologo.eliminar(psicologo);
+            resultado=this.psicologo.eliminar(id_psicologo);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

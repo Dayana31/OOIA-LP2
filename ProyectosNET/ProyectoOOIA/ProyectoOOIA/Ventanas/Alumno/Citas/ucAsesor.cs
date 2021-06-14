@@ -16,7 +16,7 @@ namespace ProyectoOOIA.Ventanas.Alumno.Citas
             tutor = t;
 
             lblNombre.Text = tutor.nombre;
-            lblEspecialidad.Text = tutor.especialidad.nombre_especialidad;
+            lblEspecialidad.Text = tutor.especialidad.nombre;
 
         }
 

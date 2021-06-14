@@ -9,7 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProyectoOOIA.GestionEventoWS;
+using ProyectoOOIA.EventoWS;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
 
 
@@ -24,11 +24,10 @@ namespace ProyectoOOIA.Ventanas
         ErrorProvider errorInicio = new ErrorProvider();
         ErrorProvider errorDescripcion = new ErrorProvider();
         ErrorProvider errorLugar = new ErrorProvider();
-        private GestionEventoWS.GesionEventoWSClient eventoDao;
-        private GestionEventoWS.evento evento;
-        private BindingList<GestionEventoWS.persona> lista = new BindingList<GestionEventoWS.persona>();
-        private GestionEventoWS.persona persona = null;
-        private int numeroElementos = 0;
+        private EventoWS.EventoWSClient eventoDao;
+        private EventoWS.evento evento;
+        private BindingList<PonenteWS.ponente> lista = new BindingList<PonenteWS.ponente>();
+        private PonenteWS.ponente ponente;
         
 
         public frmGestionEventosOOIA(Estado estado)
@@ -45,8 +44,8 @@ namespace ProyectoOOIA.Ventanas
             errorNombre.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             errorLugar.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             errorDescripcion.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            evento = new GestionEventoWS.evento();
-            eventoDao = new GestionEventoWS.GesionEventoWSClient();
+            evento = new EventoWS.evento();
+            eventoDao = new EventoWS.EventoWSClient();
         }
 
         private void componentes(Estado estado)
@@ -170,8 +169,8 @@ namespace ProyectoOOIA.Ventanas
             txtLugar.Text = evento.lugar;
             
             dtpFechaEvento.Value = evento.fecha;
-            dtpInicio.Value = evento.horaInicio;
-            dtpFin.Value = evento.horaFina;
+            //dtpInicio.Value = evento.horaInicio;
+            //dtpFin.Value = evento.horaFin;
             
         }
 
@@ -188,16 +187,16 @@ namespace ProyectoOOIA.Ventanas
                 evento.nombre = txtNombre.Text;
                 evento.fecha = dtpFechaEvento.Value;
                 evento.fechaSpecified = true;
-                evento.estado = true;
+                evento.activo = true;
                 evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
-                evento.horaInicio = dtpInicio.Value;
-                evento.horaInicioSpecified = true;
-                evento.horaFina = dtpFin.Value;
-                evento.horaFinaSpecified = true;
-                evento.id_coordinador = 11;
+                //evento.horaInicio = dtpInicio.Value;
+                //evento.horaInicio = true;
+                //evento.horaFin = dtpFin.Value;
+                //evento.horaFin = true;
+                //evento.id_coordinador = 11;
                 evento.lugar = txtLugar.Text;
 
-                evento.ponentes = lista.ToArray();
+                //evento.ponentes = lista.ToArray();
                 DialogResult dr =
                     MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (dr == DialogResult.Yes)
@@ -250,15 +249,15 @@ namespace ProyectoOOIA.Ventanas
                 evento.nombre = txtNombre.Text;
                 evento.fecha = dtpFechaEvento.Value;
                 evento.fechaSpecified = true;
-                evento.estado = true;
+                evento.activo = true;
                 evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
-                evento.horaInicio = dtpInicio.Value;
-                evento.horaInicioSpecified = true;
-                evento.horaFina = dtpFin.Value;
-                evento.horaFinaSpecified = true;
+                //evento.horaInicio = dtpInicio.Value;
+                //evento.horaInicioSpecified = true;
+                //evento.horaFina = dtpFin.Value;
+                //evento.horaFinaSpecified = true;
                 evento.lugar = txtLugar.Text;
 
-                evento.ponentes = lista.ToArray();
+                //evento.ponentes = lista.ToArray();
                 DialogResult dr =
                     MessageBox.Show("¿Desea modificar este evento?", "Modificar Evento", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dr == DialogResult.Yes)
@@ -274,12 +273,12 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAgregarPonente_Click(object sender, EventArgs e)
         {
-            if (persona != null)
+            if (ponente != null)
             {
                 dgvPonentes.Rows.Add();
-                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[0].Value = persona.nombre;
-                lista.Add(persona);
-                persona = null;
+                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[0].Value = ponente.nombre;
+                lista.Add(ponente);
+                ponente = null;
             }
             else
                 MessageBox.Show("no puede agregar a un ponente dos veces", "error", MessageBoxButtons.OK,
@@ -291,20 +290,19 @@ namespace ProyectoOOIA.Ventanas
         {
             frmMostrarPonentes mostrar = new frmMostrarPonentes();
             mostrar.ShowDialog();
-            int tipo = mostrar.TipoUsuario;
-            persona = asignarPersona(mostrar.Persona, mostrar.TipoUsuario);
-            txtNombrePonente.Text = persona.nombre;
+            //ponente = asignarPersona(mostrar.Ponente);
+            txtNombrePonente.Text = ponente.nombre;
 
         }
 
-        private persona asignarPersona(GestionHumanaWS.persona mostrarPersona, int TipoUsuario)
+        private CoordinadorWS.coordinador asignarPersona(PonenteWS.ponente mostrarPersona)
         {
-            GestionEventoWS.persona aux= new GestionEventoWS.miembroOOIA();
+            CoordinadorWS.coordinador aux= new CoordinadorWS.coordinador();
             aux.nombre = mostrarPersona.nombre;
             aux.correo = mostrarPersona.correo;
             aux.id_persona = mostrarPersona.id_persona;
             aux.direccion = mostrarPersona.direccion;
-            aux.edad = mostrarPersona.edad;
+            //aux.edad = mostrarPersona.edad;
             aux.dni = mostrarPersona.dni;
             return aux;
 

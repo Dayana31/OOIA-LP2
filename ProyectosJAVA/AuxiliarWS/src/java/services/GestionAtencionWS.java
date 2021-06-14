@@ -9,18 +9,16 @@ import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.gestion_atencion.controller.dao.CitaDAO;
-import pe.edu.pucp.gestion_atencion.controller.dao.CodigoAtencionDAO;
-import pe.edu.pucp.gestion_atencion.controller.dao.CompromisoDAO;
-import pe.edu.pucp.gestion_atencion.controller.dao.HorarioDAO;
-import pe.edu.pucp.gestion_atencion.controller.mysql.CitaMySQL;
-import pe.edu.pucp.gestion_atencion.controller.mysql.CodigoAtencionMySQL;
-import pe.edu.pucp.gestion_atencion.controller.mysql.CompromisoMySQL;
-import pe.edu.pucp.gestion_atencion.controller.mysql.HorarioMySQL;
-import pe.edu.pucp.gestion_atencion.model.Cita;
-import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
-import pe.edu.pucp.gestion_atencion.model.Compromiso;
-import pe.edu.pucp.gestion_atencion.model.Horario;
+import pe.edu.pucp.ooia.gest_atencion.dao.CitaDAO;
+import pe.edu.pucp.ooia.gest_atencion.dao.CodigoAtencionDAO;
+import pe.edu.pucp.ooia.gest_atencion.dao.HorarioDAO;
+import pe.edu.pucp.ooia.gest_atencion.model.Cita;
+import pe.edu.pucp.ooia.gest_atencion.model.CodigoAtencion;
+import pe.edu.pucp.ooia.gest_atencion.model.Horario;
+import pe.edu.pucp.ooia.gest_atencion.mysql.CitaMySQL;
+import pe.edu.pucp.ooia.gest_atencion.mysql.CodigoAtencionMySQL;
+import pe.edu.pucp.ooia.gest_atencion.mysql.HorarioMySQL;
+
 
 /**
  *
@@ -29,14 +27,12 @@ import pe.edu.pucp.gestion_atencion.model.Horario;
 @WebService(serviceName = "GestionAtencionWS")
 public class GestionAtencionWS {
     private HorarioDAO horario;
-   private CitaDAO cita;
-private CodigoAtencionDAO daoCodigo;
-   private CompromisoDAO compromiso;
+    private CitaDAO cita;
+    private CodigoAtencionDAO daoCodigo;
     public GestionAtencionWS() {
-       cita=new CitaMySQL();
-           daoCodigo=new CodigoAtencionMySQL();
-           compromiso=new CompromisoMySQL();
-           horario=new HorarioMySQL();
+    cita=new CitaMySQL();
+    daoCodigo=new CodigoAtencionMySQL();
+    horario=new HorarioMySQL();
     }
    @WebMethod(operationName = "listarCitaHistorico")
     public ArrayList<Cita> listarCitaHistorico(@WebParam(name = "id_alumno" )int id_alumno) {
@@ -121,41 +117,13 @@ private CodigoAtencionDAO daoCodigo;
         }
                 return resultado;
     } 
-   
-        @WebMethod(operationName = "listarCompromiso")
-    public ArrayList<Compromiso> listarCompromiso(@WebParam(name = "id_cita") int id_cita) {
-        ArrayList<Compromiso>lista=new ArrayList<>();
-        try {
-            lista=this.compromiso.listar(id_cita);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return lista;
-    }
-    @WebMethod(operationName = "insertarCompromiso")
-    public int insertarCompromiso(@WebParam(name = "compromiso")Compromiso compromiso){
-        int resultado=0;
-        try {
-            resultado=this.compromiso.insertar(compromiso);
-        } catch (Exception e) {
-        }
-        return resultado;
-    }
-    @WebMethod(operationName = "modificarCompromiso")
-    public int modificarCompromiso(@WebParam(name = "compromiso")Compromiso compromiso){
-        int resultado=0;
-        try {
-            resultado=this.compromiso.modificar(compromiso);
-        } catch (Exception e) {
-        }
-        return resultado;
-    }
+  
     
     @WebMethod(operationName = "listarHorario")
-    public ArrayList<Horario> listarHorario(@WebParam(name = "id_asesor")int id_asesor){
+    public ArrayList<Horario> listarHorario(){
         ArrayList<Horario >lista=new ArrayList<>();
         try {
-            lista=this.horario.listar(id_asesor);
+            lista=this.horario.listar();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

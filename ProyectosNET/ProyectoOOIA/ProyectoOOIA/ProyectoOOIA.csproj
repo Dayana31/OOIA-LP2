@@ -61,37 +61,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\CargarCSValumnos\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\CargarCSVprofesores\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\CargarCSVpsicologos\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\CitaWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\CodigoAtencionWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\CompromisoWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\CoordinadorEventoWS\Reference.cs">
+    <Compile Include="Connected Services\CoordinadorWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -101,37 +76,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\EventoAlumnoWS\Reference.cs">
+    <Compile Include="Connected Services\EventoWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\EventosWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\GestionAtencionWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\GestionEventoWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\GestionHumanaWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\HorarioWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\InvitadoWS\Reference.cs">
+    <Compile Include="Connected Services\PonenteWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -608,8 +558,8 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmDetalleEvento.resx">
       <DependentUpon>frmDetalleEvento.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Connected Services\AlumnoWS\AlumnoWS1.wsdl" />
-    <None Include="Connected Services\AlumnoWS\AlumnoWS1.xsd">
+    <None Include="Connected Services\AlumnoWS\AlumnoWS.wsdl" />
+    <None Include="Connected Services\AlumnoWS\AlumnoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.alumno.datasource">
@@ -625,49 +575,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\AlumnoWS\ProyectoOOIA.AlumnoWS.modificarAlumnoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS.wsdl" />
-    <None Include="Connected Services\CargarCSValumnos\AlumnosCSVcargaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CargarCSValumnos\ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CargarCSVprofesores\ProfesoresCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\CargarCSVprofesores\ProfesoresCSVcargaWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CargarCSVprofesores\ProyectoOOIA.CargarCSVprofesores.CargarCSVprofesoresResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CargarCSVpsicologos\ProyectoOOIA.CargarCSVpsicologos.CargarCSVpsicologosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CargarCSVpsicologos\PsicologosCSVcargaWS1.wsdl" />
-    <None Include="Connected Services\CargarCSVpsicologos\PsicologosCSVcargaWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CitaWS\CitaWS1.wsdl" />
-    <None Include="Connected Services\CitaWS\CitaWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.cita.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.eliminarCitaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.insertarCitaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.listarCitaHistoricoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.listarCitaPendienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CitaWS\ProyectoOOIA.CitaWS.modificarCitaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CodigoAtencionWS\CodigoWS.wsdl" />
@@ -686,43 +593,27 @@
     <None Include="Connected Services\CodigoAtencionWS\ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CompromisoWS\ComprimisoWS1.wsdl" />
-    <None Include="Connected Services\CompromisoWS\ComprimisoWS1.xsd">
+    <None Include="Connected Services\CoordinadorWS\CoordinadorWS.wsdl" />
+    <None Include="Connected Services\CoordinadorWS\CoordinadorWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\CompromisoWS\ProyectoOOIA.CompromisoWS.compromiso.datasource">
+    <None Include="Connected Services\CoordinadorWS\ProyectoOOIA.CoordinadorWS.coordinador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CompromisoWS\ProyectoOOIA.CompromisoWS.insertarCompromisoResponse.datasource">
+    <None Include="Connected Services\CoordinadorWS\ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CompromisoWS\ProyectoOOIA.CompromisoWS.listarCompromisoResponse.datasource">
+    <None Include="Connected Services\CoordinadorWS\ProyectoOOIA.CoordinadorWS.insertarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CompromisoWS\ProyectoOOIA.CompromisoWS.modificarCompromisoResponse.datasource">
+    <None Include="Connected Services\CoordinadorWS\ProyectoOOIA.CoordinadorWS.listarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CoordinadorEventoWS\CoordinadorEventoWS1.wsdl" />
-    <None Include="Connected Services\CoordinadorEventoWS\CoordinadorEventoWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CoordinadorEventoWS\ProyectoOOIA.CoordinadorEventoWS.eliminarCoordinadorEventoResponse.datasource">
+    <None Include="Connected Services\CoordinadorWS\ProyectoOOIA.CoordinadorWS.modificarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CoordinadorEventoWS\ProyectoOOIA.CoordinadorEventoWS.insertarCoordinadorEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CoordinadorEventoWS\ProyectoOOIA.CoordinadorEventoWS.listarCoordinadorEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CoordinadorEventoWS\ProyectoOOIA.CoordinadorEventoWS.miembroOOIA.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\CoordinadorEventoWS\ProyectoOOIA.CoordinadorEventoWS.modificarCoordinadorEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.wsdl" />
-    <None Include="Connected Services\EspecialidadWS\EspecialidadWS1.xsd">
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS.wsdl" />
+    <None Include="Connected Services\EspecialidadWS\EspecialidadWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.eliminarEspecialidadResponse.datasource">
@@ -734,279 +625,52 @@
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.insertarEspecialidadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.listarEsppecialidadResponse.datasource">
+    <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno1.wsdl" />
-    <None Include="Connected Services\EventoAlumnoWS\EventoAlumno1.xsd">
+    <None Include="Connected Services\EventoWS\EventoWS.wsdl" />
+    <None Include="Connected Services\EventoWS\EventoWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse.datasource">
+    <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.eliminarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.eventoAlumno.datasource">
+    <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.evento.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse.datasource">
+    <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.insertarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.listarEncuestaEventoResponse.datasource">
+    <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.listarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoAlumnoWS\ProyectoOOIA.EventoAlumnoWS.modificarEncuestaEventoResponse.datasource">
+    <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.modificarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventosWS\EventoWS.wsdl" />
-    <None Include="Connected Services\EventosWS\EventoWS.xsd">
+    <None Include="Connected Services\PonenteWS\PonenteWS.wsdl" />
+    <None Include="Connected Services\PonenteWS\PonenteWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\EventosWS\ProyectoOOIA.EventosWS.eliminarEventoResponse.datasource">
+    <None Include="Connected Services\PonenteWS\ProyectoOOIA.PonenteWS.eliminarPonenteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventosWS\ProyectoOOIA.EventosWS.evento.datasource">
+    <None Include="Connected Services\PonenteWS\ProyectoOOIA.PonenteWS.insertarPonenteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventosWS\ProyectoOOIA.EventosWS.insertarEventoResponse.datasource">
+    <None Include="Connected Services\PonenteWS\ProyectoOOIA.PonenteWS.listarPonenteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventosWS\ProyectoOOIA.EventosWS.listarEventoResponse.datasource">
+    <None Include="Connected Services\PonenteWS\ProyectoOOIA.PonenteWS.modificarPonenteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventosWS\ProyectoOOIA.EventosWS.modificarEventoResponse.datasource">
+    <None Include="Connected Services\PonenteWS\ProyectoOOIA.PonenteWS.ponente.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS1.wsdl" />
-    <None Include="Connected Services\GestionAtencionWS\GestionAtencionWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.cita.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.codigoAtencion.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.compromiso.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.eliminarCitaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.eliminarHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.horario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.insertarCitaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.insertarCodigoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.insertarCompromisoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.insertarHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCitaHistoricoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCitaPendienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCodigoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarCompromisoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.listarHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.modificarCitaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.modificarCodigoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.modificarCompromisoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\ProyectoOOIA.GestionAtencionWS.modificarHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\GesionEventoWS.wsdl" />
-    <None Include="Connected Services\GestionEventoWS\GesionEventoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.eliminarCoordinadorEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.eliminarEncuestaEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.eliminarEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.evento.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.eventoAlumno.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.insertarCoordinadorEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.insertarEncuestaEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.insertarEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarCoordinadorEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarEncuestaEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.miembroOOIA.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarCoordinadorEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarEncuestaEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarEventoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.wsdl" />
-    <None Include="Connected Services\GestionHumanaWS\GestionHumanaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.alumno.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarInvitadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarProfesorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarPsicologoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.especialidad.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarInvitadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarProfesoresResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.insertarPsicologoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.invitado.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listarAlumnoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listarEspecialidadResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listarInvitadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listarProfesoresResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.listarPsicologoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarAlumnoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarEspecialidadResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarInvitadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarProfesoresResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.modificarPsicologoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.profesor.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.psicologo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\HorarioWS\HorarioWS1.wsdl" />
-    <None Include="Connected Services\HorarioWS\HorarioWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\HorarioWS\ProyectoOOIA.HorarioWS.eliminarHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\HorarioWS\ProyectoOOIA.HorarioWS.horario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\HorarioWS\ProyectoOOIA.HorarioWS.insertarHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\HorarioWS\ProyectoOOIA.HorarioWS.listarHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\HorarioWS\ProyectoOOIA.HorarioWS.modificarHorarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\InvitadoWS\InvitadoWS1.wsdl" />
-    <None Include="Connected Services\InvitadoWS\InvitadoWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\InvitadoWS\ProyectoOOIA.InvitadoWS.eliminarInvitadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\InvitadoWS\ProyectoOOIA.InvitadoWS.insertarInvitadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\InvitadoWS\ProyectoOOIA.InvitadoWS.invitado.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\InvitadoWS\ProyectoOOIA.InvitadoWS.listarInvitadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\InvitadoWS\ProyectoOOIA.InvitadoWS.modificarInvitadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ProfesorWS\ProfesorWS1.wsdl" />
-    <None Include="Connected Services\ProfesorWS\ProfesorWS1.xsd">
+    <None Include="Connected Services\ProfesorWS\ProfesorWS.wsdl" />
+    <None Include="Connected Services\ProfesorWS\ProfesorWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.eliminarProfesorResponse.datasource">
@@ -1039,8 +703,8 @@
     <None Include="Connected Services\PsicologoWS\ProyectoOOIA.PsicologoWS.psicologo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PsicologoWS\PsicologoWS1.wsdl" />
-    <None Include="Connected Services\PsicologoWS\PsicologoWS1.xsd">
+    <None Include="Connected Services\PsicologoWS\PsicologoWS.wsdl" />
+    <None Include="Connected Services\PsicologoWS\PsicologoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\MaterialSkin.Controls.MaterialCheckBox.datasource" />
@@ -1083,63 +747,9 @@
     <None Include="Resources\home.png" />
     <None Include="Resources\arrowWhite.png" />
     <None Include="Resources\calendar.png" />
-    <None Include="Connected Services\GestionEventoWS\configuration91.svcinfo" />
-    <None Include="Connected Services\GestionEventoWS\configuration.svcinfo" />
-    <None Include="Connected Services\GestionEventoWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\GestionHumanaWS\configuration91.svcinfo" />
-    <None Include="Connected Services\GestionHumanaWS\configuration.svcinfo" />
-    <None Include="Connected Services\GestionHumanaWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\GestionAtencionWS\configuration91.svcinfo" />
-    <None Include="Connected Services\GestionAtencionWS\configuration.svcinfo" />
-    <None Include="Connected Services\GestionAtencionWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\CargarCSValumnos\configuration91.svcinfo" />
-    <None Include="Connected Services\CargarCSValumnos\configuration.svcinfo" />
-    <None Include="Connected Services\CargarCSValumnos\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\CargarCSVpsicologos\configuration91.svcinfo" />
-    <None Include="Connected Services\CargarCSVpsicologos\configuration.svcinfo" />
-    <None Include="Connected Services\CargarCSVpsicologos\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\CargarCSVprofesores\configuration91.svcinfo" />
-    <None Include="Connected Services\CargarCSVprofesores\configuration.svcinfo" />
-    <None Include="Connected Services\CargarCSVprofesores\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\CoordinadorEventoWS\configuration91.svcinfo" />
-    <None Include="Connected Services\CoordinadorEventoWS\configuration.svcinfo" />
-    <None Include="Connected Services\CoordinadorEventoWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\InvitadoWS\configuration91.svcinfo" />
-    <None Include="Connected Services\InvitadoWS\configuration.svcinfo" />
-    <None Include="Connected Services\InvitadoWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Connected Services\AlumnoWS\configuration91.svcinfo" />
     <None Include="Connected Services\AlumnoWS\configuration.svcinfo" />
     <None Include="Connected Services\AlumnoWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\ProfesorWS\configuration91.svcinfo" />
-    <None Include="Connected Services\ProfesorWS\configuration.svcinfo" />
-    <None Include="Connected Services\ProfesorWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -1149,27 +759,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\CompromisoWS\configuration91.svcinfo" />
-    <None Include="Connected Services\CompromisoWS\configuration.svcinfo" />
-    <None Include="Connected Services\CompromisoWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\HorarioWS\configuration91.svcinfo" />
-    <None Include="Connected Services\HorarioWS\configuration.svcinfo" />
-    <None Include="Connected Services\HorarioWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\EventoAlumnoWS\configuration91.svcinfo" />
-    <None Include="Connected Services\EventoAlumnoWS\configuration.svcinfo" />
-    <None Include="Connected Services\EventoAlumnoWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\CitaWS\configuration91.svcinfo" />
-    <None Include="Connected Services\CitaWS\configuration.svcinfo" />
-    <None Include="Connected Services\CitaWS\Reference.svcmap">
+    <None Include="Connected Services\ProfesorWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ProfesorWS\configuration.svcinfo" />
+    <None Include="Connected Services\ProfesorWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -1179,15 +771,27 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\EventosWS\configuration91.svcinfo" />
-    <None Include="Connected Services\EventosWS\configuration.svcinfo" />
-    <None Include="Connected Services\EventosWS\Reference.svcmap">
+    <None Include="Connected Services\CoordinadorWS\configuration91.svcinfo" />
+    <None Include="Connected Services\CoordinadorWS\configuration.svcinfo" />
+    <None Include="Connected Services\CoordinadorWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\PonenteWS\configuration91.svcinfo" />
+    <None Include="Connected Services\PonenteWS\configuration.svcinfo" />
+    <None Include="Connected Services\PonenteWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Connected Services\CodigoAtencionWS\configuration91.svcinfo" />
     <None Include="Connected Services\CodigoAtencionWS\configuration.svcinfo" />
     <None Include="Connected Services\CodigoAtencionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\EventoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\EventoWS\configuration.svcinfo" />
+    <None Include="Connected Services\EventoWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -1204,21 +808,11 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AlumnoWS\" />
-    <WCFMetadataStorage Include="Connected Services\CargarCSValumnos\" />
-    <WCFMetadataStorage Include="Connected Services\CargarCSVprofesores\" />
-    <WCFMetadataStorage Include="Connected Services\CargarCSVpsicologos\" />
-    <WCFMetadataStorage Include="Connected Services\CitaWS\" />
     <WCFMetadataStorage Include="Connected Services\CodigoAtencionWS\" />
-    <WCFMetadataStorage Include="Connected Services\CompromisoWS\" />
-    <WCFMetadataStorage Include="Connected Services\CoordinadorEventoWS\" />
+    <WCFMetadataStorage Include="Connected Services\CoordinadorWS\" />
     <WCFMetadataStorage Include="Connected Services\EspecialidadWS\" />
-    <WCFMetadataStorage Include="Connected Services\EventoAlumnoWS\" />
-    <WCFMetadataStorage Include="Connected Services\EventosWS\" />
-    <WCFMetadataStorage Include="Connected Services\GestionAtencionWS\" />
-    <WCFMetadataStorage Include="Connected Services\GestionEventoWS\" />
-    <WCFMetadataStorage Include="Connected Services\GestionHumanaWS\" />
-    <WCFMetadataStorage Include="Connected Services\HorarioWS\" />
-    <WCFMetadataStorage Include="Connected Services\InvitadoWS\" />
+    <WCFMetadataStorage Include="Connected Services\EventoWS\" />
+    <WCFMetadataStorage Include="Connected Services\PonenteWS\" />
     <WCFMetadataStorage Include="Connected Services\ProfesorWS\" />
     <WCFMetadataStorage Include="Connected Services\PsicologoWS\" />
   </ItemGroup>

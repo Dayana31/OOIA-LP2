@@ -32,7 +32,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void btnCargaDatosCSVAlumnos_Click(object sender, EventArgs e)
         {
-            CargarCSVpsicologos.PsicologosCSVcargaWSClient cargaCSVpsicologos =
+            /*CargarCSVpsicologos.PsicologosCSVcargaWSClient cargaCSVpsicologos =
                 new CargarCSVpsicologos.PsicologosCSVcargaWSClient();
             FileStream fs = new FileStream(txtRutaArchivo.Text, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
@@ -47,7 +47,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
                     MessageBoxButtons.OK);
                 this.Close();
-            }
+            }*/
         }
     }
 }

@@ -11,7 +11,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
     {
         private EspecialidadWS.EspecialidadWSClient daoEspecialidad;
         private AlumnoWS.AlumnoWSClient daoAlumno;
-        private AlumnoWS.alumno alumno;
+       private AlumnoWS.alumno alumno;
         private byte[] imagen_perfil;
         private Estado estado;
 
@@ -24,7 +24,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             daoEspecialidad = new EspecialidadWS.EspecialidadWSClient();
             daoAlumno = new AlumnoWS.AlumnoWSClient();
             cbEspecialidad.DataSource = new BindingList<EspecialidadWS.especialidad>
-                (daoEspecialidad.listarEsppecialidad().ToList());
+                (daoEspecialidad.listarEspecialidad().ToList());
             cbEspecialidad.DisplayMember = "nombre_especialidad";
             cbEspecialidad.ValueMember = "id_especialidad";
         }
@@ -169,20 +169,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Persona
             txtDni.Text = alu.dni;
             txtNombre.Text = alu.nombre;
-            txtEdad.Text = alu.edad.ToString();
+            //txtEdad.Text = alu.edad.ToString();
             txtDireccion.Text = alu.direccion;
             txtCorreo.Text = alu.correo;
             //Miembro PUCP
-            txtUsuario.Text = alu.usuario_pucp;
-            txtPassword.Text = alu.contraseña;
+            txtUsuario.Text = alu.usuario;
+            txtPassword.Text = alu.password;
             imagen_perfil = alu.imagenDePerfil;
             if(imagen_perfil != null)displayImage(imagen_perfil);
             //Alumno
             txtIdAlumno.Text = alu.id_alumno.ToString();
-            txtCodigo.Text = alumno.codigo_pucp;
+            txtCodigo.Text = alumno.codigo;
             EspecialidadWS.especialidad esp_selected = new EspecialidadWS.especialidad();
             esp_selected.id_especialidad = alu.especialidad.id_especialidad;
-            esp_selected.nombre_especialidad = alu.especialidad.nombre_especialidad;
+            esp_selected.nombre = alu.especialidad.nombre;
             cbEspecialidad.SelectedValue = esp_selected.id_especialidad;
         }
 
@@ -251,25 +251,22 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Persona
             alumno.dni = txtDni.Text;
             alumno.nombre = txtNombre.Text;
-            alumno.edad = Int32.Parse(txtEdad.Text);
+            //alumno.edad = Int32.Parse(txtEdad.Text);
             alumno.direccion = txtDireccion.Text;
             alumno.correo = txtCorreo.Text;
             //Miembro PUCP
-            alumno.usuario_pucp = txtUsuario.Text;
-            alumno.contraseña = txtPassword.Text;
+            alumno.usuario = txtUsuario.Text;
+            alumno.password = txtPassword.Text;
             alumno.imagenDePerfil = imagen_perfil;
             alumno.fecha_inclusion = DateTime.Today.Date;
             alumno.fecha_inclusionSpecified = true;
             //Alumno
-            alumno.codigo_pucp = txtCodigo.Text;
+            alumno.codigo = txtCodigo.Text;
             EspecialidadWS.especialidad esp_selected = (EspecialidadWS.especialidad)cbEspecialidad.SelectedItem;
             alumno.especialidad = new AlumnoWS.especialidad();
             alumno.especialidad.id_especialidad = esp_selected.id_especialidad;
             alumno.craest = 0;
             alumno.creditos_aprobados = 0;
-            alumno.cursos_por_primera = 0;
-            alumno.cursos_por_segunda = 0;
-            alumno.cursos_por_tercera = 0;
 
             if (estado.Equals(Estado.Nuevo))
             {
@@ -309,7 +306,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar este empleado?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
-                int resultado = daoAlumno.eliminarAlumno(alumno);
+                int resultado = daoAlumno.eliminarAlumno(alumno.id_alumno);
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha eliminado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);

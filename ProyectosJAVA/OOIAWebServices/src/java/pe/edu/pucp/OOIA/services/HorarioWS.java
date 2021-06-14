@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.gestion_atencion.controller.dao.HorarioDAO;
-import pe.edu.pucp.gestion_atencion.controller.mysql.HorarioMySQL;
-import pe.edu.pucp.gestion_atencion.model.Horario;
+import pe.edu.pucp.ooia.gest_atencion.dao.HorarioDAO;
+import pe.edu.pucp.ooia.gest_atencion.model.Horario;
+import pe.edu.pucp.ooia.gest_atencion.mysql.HorarioMySQL;
 
 /**
  *
@@ -29,10 +29,10 @@ public class HorarioWS {
      * This is a sample web service operation
      */
     @WebMethod(operationName = "listarHorario")
-    public ArrayList<Horario>listarHorario(@WebParam(name = "id_asesor")int id_asesor){
+    public ArrayList<Horario>listarHorario(){
         ArrayList<Horario >lista=null;
         try {
-            lista=this.horario.listar(id_asesor);
+            lista=this.horario.listar();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

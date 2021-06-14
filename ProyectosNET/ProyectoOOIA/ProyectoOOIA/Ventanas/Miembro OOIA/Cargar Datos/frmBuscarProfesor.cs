@@ -47,7 +47,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             ProfesorWS.profesor data = dgvProfesores.Rows[e.RowIndex].DataBoundItem
                as ProfesorWS.profesor;
-            dgvProfesores.Rows[e.RowIndex].Cells["Especialidad"].Value = data.especialidad.nombre_especialidad;
+            dgvProfesores.Rows[e.RowIndex].Cells["Especialidad"].Value = data.especialidad.nombre;
         }
     }
 }

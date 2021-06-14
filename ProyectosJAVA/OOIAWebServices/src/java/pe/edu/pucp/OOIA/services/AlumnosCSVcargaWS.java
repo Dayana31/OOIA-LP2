@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.OOIA.services;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.text.ParseException;
 import javax.jws.WebService;
@@ -22,7 +23,7 @@ public class AlumnosCSVcargaWS {
     private AlumnosCSV csvAlumnos;
     
     @WebMethod(operationName = "CargarCSValumnos")
-    public int cargarCSVAlumnos(@WebParam(name = "Ruta archivo")  ruta) throws FileNotFoundException, ParseException{
+    public int cargarCSVAlumnos(@WebParam(name = "Ruta archivo") FileInputStream ruta) throws FileNotFoundException, ParseException{
         int resultado = 0;
         csvAlumnos.setRutaCSV(ruta);
         resultado = csvAlumnos.cargarDatos();

@@ -47,15 +47,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void btnCargaDatosCSVAlumnos_Click(object sender, EventArgs e)
         {
-            CargarCSValumnos.AlumnosCSVcargaWS1Client cargaCSVAlumnos =
-                new CargarCSValumnos.AlumnosCSVcargaWS1Client();
-            
+            /*CargarCSValumnos.AlumnosCSVcargaWSClient cargaCSVAlumnos =
+                new CargarCSValumnos.AlumnosCSVcargaWS1Client();*/
+           
 
             FileStream fs = new FileStream(txtRutaArchivo.Text, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
             //Asignamos el archivo al objeto
           
-            int resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
+            /*int resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
             br.Close();
             fs.Close();
             if(resultado == 0)
@@ -63,7 +63,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
                     MessageBoxButtons.OK);
                 this.Close();
-            }
+            }*/
         }
     }
 }
