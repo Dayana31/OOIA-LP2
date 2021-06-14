@@ -7,13 +7,13 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import pe.edu.pucp.config.DBManager;
 import pe.edu.pucp.ooia.gest_humana.model.Ponente;
-import pe.edu.pucp.ooia.gest_humana.dao.PonenteDao;
+import pe.edu.pucp.ooia.gest_humana.dao.PonenteDAO;
 
 /**
  *
  * @author Gerardo
  */
-public class PonenteMySQL implements PonenteDao{
+public class PonenteMySQL implements PonenteDAO{
 
     Connection con;
     ResultSet rs;
