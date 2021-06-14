@@ -23,7 +23,7 @@ public class HorarioMySQL implements HorarioDAO{
     
 
     @Override
-    public ArrayList<Horario> listar(int id_asesor) {
+    public ArrayList<Horario> listar() {
         ArrayList<Horario> horarios = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
