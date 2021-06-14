@@ -13,26 +13,11 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import pe.edu.pucp.gestion_academica.controller.mysql.CategoriaMySQL;
-import pe.edu.pucp.gestion_academica.controller.mysql.CursoLlevadoMySQL;
-import pe.edu.pucp.gestion_academica.controller.mysql.CursoMySQL;
-import pe.edu.pucp.gestion_academica.model.Categoria;
-import pe.edu.pucp.gestion_academica.model.Curso;
-import pe.edu.pucp.gestion_academica.model.CursoLlevado;
-import pe.edu.pucp.gestion_atencion.controller.mysql.CodigoAtencionMySQL;
-import pe.edu.pucp.gestion_atencion.model.CodigoAtencion;
 import pe.edu.pucp.gestion_eventos.model.Evento;
-import pe.edu.pucp.gestion_eventos.model.MiembroOOIA;
-import pe.edu.pucp.gestion_eventos.mysql.CoordinadorEventosMySQL;
 import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.EspecialidadMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.ProfesorMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.PsicologoMySQL;
-import pe.edu.pucp.gestion_humana.model.Alumno;
-import pe.edu.pucp.gestion_humana.model.Especialidad;
-import pe.edu.pucp.gestion_humana.model.Persona;
-import pe.edu.pucp.gestion_humana.model.Profesor;
-import pe.edu.pucp.gestion_humana.model.Psicologo;
+import pe.edu.pucp.ooia.gest_humana.model.Alumno;
+import pe.edu.pucp.ooia.gest_humana.model.Persona;
+
 
 /**
  *
@@ -61,9 +46,9 @@ public class PruebaMySql {
     Evento evento= new Evento();
     evento.setCapacidad(10);
     evento.setFecha(new Date());
-    evento.setHoraFina(new Date());
-    evento.setHoraInicio(new Date());
-    evento.setId_coordinador(11);
+    //evento.setHora_fin();
+    //evento.setHora_inicio(new Date());
+    //evento.setId_coordinador(11);
     evento.setLugar("Generales");
     evento.setNombre("Amistad ");
 //        MiembroOOIA psicologo=new MiembroOOIA();
@@ -84,13 +69,13 @@ public class PruebaMySql {
                  persona.add(al);
                  al.setId_persona(2);
                  persona.add(al);
-                 evento.setPonentes(persona);
+ 
        //new EventoMySQL().insertar(evento);
-               Evento ev = new EventoMySQL().listar("").get(0);
-                System.out.println(ev.getNombre()+" "+ev.getId_evento());
+               //Evento ev = new EventoMySQL().listar("").get(0);
+                //System.out.println(ev.getNombre()+" "+ev.getId_evento());
         
     }
-    
+/*    
     private static void pruebaCursoLlevado(){
         CursoLlevado curso=new CursoLlevado();
         CursoLlevadoMySQL cursoMySQL=new CursoLlevadoMySQL();
@@ -196,5 +181,5 @@ public class PruebaMySql {
         
     }
     
-    
+    */
 }

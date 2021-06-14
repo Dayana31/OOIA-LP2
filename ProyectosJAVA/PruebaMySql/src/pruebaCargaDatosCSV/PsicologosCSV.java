@@ -12,12 +12,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-import pe.edu.pucp.gestion_humana.controller.dao.PsicologoDAO;
-import pe.edu.pucp.gestion_humana.controller.mysql.ProfesorMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.PsicologoMySQL;
-import pe.edu.pucp.gestion_humana.model.Especialidad;
-import pe.edu.pucp.gestion_humana.model.Profesor;
-import pe.edu.pucp.gestion_humana.model.Psicologo;
+import pe.edu.pucp.ooia.gest_humana.dao.PsicologoDAO;
+import pe.edu.pucp.ooia.gest_humana.model.Psicologo;
+import pe.edu.pucp.ooia.gest_humana.mysql.PsicologoMySQL;
 
 /**
  *
@@ -46,10 +43,11 @@ public class PsicologosCSV {
             }
             psicologo.setNombre(datosCorrectos[0]);
             psicologo.setDni(datosCorrectos[1]);
-            psicologo.setEdad(Integer.parseInt(datosCorrectos[2]));
+            Date date_birth = new SimpleDateFormat("yyyy-MM-dd").parse(datosCorrectos[2]); 
+            psicologo.setFecha_nacimiento(date_birth);
             psicologo.setDireccion(datosCorrectos[3]);
-            psicologo.setUsuario_pucp(datosCorrectos[4]);
-            psicologo.setContraseña(datosCorrectos[5]);
+            psicologo.setUsuario(datosCorrectos[4]);
+            psicologo.setPassword(datosCorrectos[5]);
             psicologo.setCorreo(datosCorrectos[6]);
             Date date1=new SimpleDateFormat("yyyy-MM-dd").parse(datosCorrectos[7]); 
             psicologo.setFecha_inclusion(date1);

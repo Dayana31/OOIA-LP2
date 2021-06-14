@@ -1069,33 +1069,6 @@ is divided into following sections:
         </propertyfile>
         <antcall target="-maybe-call-dep">
             <param name="call.built.properties" value="${built-jar.properties}"/>
-            <param location="${project.GestionEventosController}" name="call.subproject"/>
-            <param location="${project.GestionEventosController}/build.xml" name="call.script"/>
-            <param name="call.target" value="jar"/>
-            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
-            <param name="transfer.not.archive.disabled" value="true"/>
-            <param name="transfer.do.jlink" value="false"/>
-        </antcall>
-        <antcall target="-maybe-call-dep">
-            <param name="call.built.properties" value="${built-jar.properties}"/>
-            <param location="${project.GestionEventosModel}" name="call.subproject"/>
-            <param location="${project.GestionEventosModel}/build.xml" name="call.script"/>
-            <param name="call.target" value="jar"/>
-            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
-            <param name="transfer.not.archive.disabled" value="true"/>
-            <param name="transfer.do.jlink" value="false"/>
-        </antcall>
-        <antcall target="-maybe-call-dep">
-            <param name="call.built.properties" value="${built-jar.properties}"/>
-            <param location="${project.GestionHumanaController}" name="call.subproject"/>
-            <param location="${project.GestionHumanaController}/build.xml" name="call.script"/>
-            <param name="call.target" value="jar"/>
-            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
-            <param name="transfer.not.archive.disabled" value="true"/>
-            <param name="transfer.do.jlink" value="false"/>
-        </antcall>
-        <antcall target="-maybe-call-dep">
-            <param name="call.built.properties" value="${built-jar.properties}"/>
             <param location="${project.GestionHumanaModel}" name="call.subproject"/>
             <param location="${project.GestionHumanaModel}/build.xml" name="call.script"/>
             <param name="call.target" value="jar"/>
@@ -1125,6 +1098,60 @@ is divided into following sections:
             <param name="call.built.properties" value="${built-jar.properties}"/>
             <param location="${project.OOIAConfigMySql}" name="call.subproject"/>
             <param location="${project.OOIAConfigMySql}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.ooiaGestAtencionController}" name="call.subproject"/>
+            <param location="${project.ooiaGestAtencionController}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.ooiaGestAtencionModel}" name="call.subproject"/>
+            <param location="${project.ooiaGestAtencionModel}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.ooiaGestEventosController}" name="call.subproject"/>
+            <param location="${project.ooiaGestEventosController}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.ooiaGestEventosModel}" name="call.subproject"/>
+            <param location="${project.ooiaGestEventosModel}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.ooiaGestHumanaController}" name="call.subproject"/>
+            <param location="${project.ooiaGestHumanaController}/build.xml" name="call.script"/>
+            <param name="call.target" value="jar"/>
+            <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-jar.properties}"/>
+            <param location="${project.ooiaGestHumanaModel}" name="call.subproject"/>
+            <param location="${project.ooiaGestHumanaModel}/build.xml" name="call.script"/>
             <param name="call.target" value="jar"/>
             <param name="transfer.built-jar.properties" value="${built-jar.properties}"/>
             <param name="transfer.not.archive.disabled" value="true"/>
@@ -1803,33 +1830,6 @@ is divided into following sections:
         </propertyfile>
         <antcall target="-maybe-call-dep">
             <param name="call.built.properties" value="${built-clean.properties}"/>
-            <param location="${project.GestionEventosController}" name="call.subproject"/>
-            <param location="${project.GestionEventosController}/build.xml" name="call.script"/>
-            <param name="call.target" value="clean"/>
-            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
-            <param name="transfer.not.archive.disabled" value="true"/>
-            <param name="transfer.do.jlink" value="false"/>
-        </antcall>
-        <antcall target="-maybe-call-dep">
-            <param name="call.built.properties" value="${built-clean.properties}"/>
-            <param location="${project.GestionEventosModel}" name="call.subproject"/>
-            <param location="${project.GestionEventosModel}/build.xml" name="call.script"/>
-            <param name="call.target" value="clean"/>
-            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
-            <param name="transfer.not.archive.disabled" value="true"/>
-            <param name="transfer.do.jlink" value="false"/>
-        </antcall>
-        <antcall target="-maybe-call-dep">
-            <param name="call.built.properties" value="${built-clean.properties}"/>
-            <param location="${project.GestionHumanaController}" name="call.subproject"/>
-            <param location="${project.GestionHumanaController}/build.xml" name="call.script"/>
-            <param name="call.target" value="clean"/>
-            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
-            <param name="transfer.not.archive.disabled" value="true"/>
-            <param name="transfer.do.jlink" value="false"/>
-        </antcall>
-        <antcall target="-maybe-call-dep">
-            <param name="call.built.properties" value="${built-clean.properties}"/>
             <param location="${project.GestionHumanaModel}" name="call.subproject"/>
             <param location="${project.GestionHumanaModel}/build.xml" name="call.script"/>
             <param name="call.target" value="clean"/>
@@ -1859,6 +1859,60 @@ is divided into following sections:
             <param name="call.built.properties" value="${built-clean.properties}"/>
             <param location="${project.OOIAConfigMySql}" name="call.subproject"/>
             <param location="${project.OOIAConfigMySql}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.ooiaGestAtencionController}" name="call.subproject"/>
+            <param location="${project.ooiaGestAtencionController}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.ooiaGestAtencionModel}" name="call.subproject"/>
+            <param location="${project.ooiaGestAtencionModel}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.ooiaGestEventosController}" name="call.subproject"/>
+            <param location="${project.ooiaGestEventosController}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.ooiaGestEventosModel}" name="call.subproject"/>
+            <param location="${project.ooiaGestEventosModel}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.ooiaGestHumanaController}" name="call.subproject"/>
+            <param location="${project.ooiaGestHumanaController}/build.xml" name="call.script"/>
+            <param name="call.target" value="clean"/>
+            <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
+            <param name="transfer.not.archive.disabled" value="true"/>
+            <param name="transfer.do.jlink" value="false"/>
+        </antcall>
+        <antcall target="-maybe-call-dep">
+            <param name="call.built.properties" value="${built-clean.properties}"/>
+            <param location="${project.ooiaGestHumanaModel}" name="call.subproject"/>
+            <param location="${project.ooiaGestHumanaModel}/build.xml" name="call.script"/>
             <param name="call.target" value="clean"/>
             <param name="transfer.built-clean.properties" value="${built-clean.properties}"/>
             <param name="transfer.not.archive.disabled" value="true"/>

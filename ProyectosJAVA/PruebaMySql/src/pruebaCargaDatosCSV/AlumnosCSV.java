@@ -13,10 +13,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-import pe.edu.pucp.gestion_humana.controller.dao.AlumnoDAO;
-import pe.edu.pucp.gestion_humana.controller.mysql.AlumnoMySQL;
-import pe.edu.pucp.gestion_humana.model.Alumno;
-import pe.edu.pucp.gestion_humana.model.Especialidad;
+import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
+import pe.edu.pucp.ooia.gest_humana.model.Alumno;
+import pe.edu.pucp.ooia.gest_humana.model.Especialidad;
+import pe.edu.pucp.ooia.gest_humana.mysql.AlumnoMySQL;
 
 /**
  *
@@ -45,19 +45,19 @@ public class AlumnosCSV {
             }
             alumno.setNombre(datosCorrectos[0]);
             alumno.setDni(datosCorrectos[1]);
-            alumno.setEdad(Integer.parseInt(datosCorrectos[2]));
+            Date date_birth = new SimpleDateFormat("yyyy-MM-dd").parse(datosCorrectos[2]); 
+            alumno.setFecha_nacimiento(date_birth);
             alumno.setCorreo(datosCorrectos[3]);
             alumno.setDireccion(datosCorrectos[4]);
-            alumno.setUsuario_pucp(datosCorrectos[5]);
-            alumno.setContraseña(datosCorrectos[6]);
-            Date date1=new SimpleDateFormat("yyyy-MM-dd").parse(datosCorrectos[7]); 
-            alumno.setFecha_inclusion(date1);
+            alumno.setUsuario(datosCorrectos[5]);
+            alumno.setPassword(datosCorrectos[6]);
+            Date date_inclusion = new SimpleDateFormat("yyyy-MM-dd").parse(datosCorrectos[7]); 
+            alumno.setFecha_inclusion(date_inclusion);
             alumno.setCodigo(datosCorrectos[8]);
             Especialidad especialidad = new Especialidad();
             especialidad.setId_especialidad(Integer.parseInt(datosCorrectos[9]));
             alumno.setEspecialidad(especialidad);
             alumno.setCraest(Double.parseDouble(datosCorrectos[10]));
-            
             alumno.setCreditos_aprobados(Double.parseDouble(datosCorrectos[14]));
             
             int resultado = daoAlumno.insertar(alumno);

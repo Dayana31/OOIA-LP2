@@ -12,11 +12,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-import pe.edu.pucp.gestion_humana.controller.dao.ProfesorDAO;
-import pe.edu.pucp.gestion_humana.controller.mysql.AlumnoMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.ProfesorMySQL;
-import pe.edu.pucp.gestion_humana.model.Especialidad;
-import pe.edu.pucp.gestion_humana.model.Profesor;
+import pe.edu.pucp.ooia.gest_humana.dao.ProfesorDAO;
+import pe.edu.pucp.ooia.gest_humana.model.Especialidad;
+import pe.edu.pucp.ooia.gest_humana.model.Profesor;
+import pe.edu.pucp.ooia.gest_humana.mysql.ProfesorMySQL;
+
 
 /**
  *
@@ -44,11 +44,12 @@ public class ProfesoresCSV {
             }
             profesor.setNombre(datosCorrectos[0]);
             profesor.setDni(datosCorrectos[1]);
-            profesor.setEdad(Integer.parseInt(datosCorrectos[2]));
+            Date date_birth = new SimpleDateFormat("yyyy-MM-dd").parse(datosCorrectos[2]); 
+            profesor.setFecha_nacimiento(date_birth);
             profesor.setDireccion(datosCorrectos[3]);
             profesor.setCorreo(datosCorrectos[4]);
-            profesor.setUsuario_pucp(datosCorrectos[5]);
-            profesor.setContraseña(datosCorrectos[6]);
+            profesor.setUsuario(datosCorrectos[5]);
+            profesor.setPassword(datosCorrectos[6]);
             Date date1=new SimpleDateFormat("yyyy-MM-dd").parse(datosCorrectos[7]); 
             profesor.setFecha_inclusion(date1);
             Especialidad especialidad = new Especialidad();

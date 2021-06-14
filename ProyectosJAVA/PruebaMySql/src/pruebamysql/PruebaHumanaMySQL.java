@@ -2,20 +2,16 @@ package pruebamysql;
 
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.gestion_academica.model.Curso;
-import pe.edu.pucp.gestion_academica.model.CursoLlevado;
-import pe.edu.pucp.gestion_humana.controller.dao.AlumnoDAO;
-import pe.edu.pucp.gestion_humana.controller.dao.EspecialidadDAO;
-import pe.edu.pucp.gestion_humana.controller.dao.ProfesorDAO;
-import pe.edu.pucp.gestion_humana.controller.dao.PsicologoDAO;
-import pe.edu.pucp.gestion_humana.controller.mysql.AlumnoMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.EspecialidadMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.ProfesorMySQL;
-import pe.edu.pucp.gestion_humana.controller.mysql.PsicologoMySQL;
-import pe.edu.pucp.gestion_humana.model.Alumno;
-import pe.edu.pucp.gestion_humana.model.Especialidad;
-import pe.edu.pucp.gestion_humana.model.Profesor;
-import pe.edu.pucp.gestion_humana.model.Psicologo;
+import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.ProfesorDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.PsicologoDAO;
+import pe.edu.pucp.ooia.gest_humana.model.Alumno;
+import pe.edu.pucp.ooia.gest_humana.model.Especialidad;
+import pe.edu.pucp.ooia.gest_humana.model.Profesor;
+import pe.edu.pucp.ooia.gest_humana.model.Psicologo;
+import pe.edu.pucp.ooia.gest_humana.mysql.AlumnoMySQL;
+import pe.edu.pucp.ooia.gest_humana.mysql.PsicologoMySQL;
+
 
 /**
  *
@@ -40,7 +36,7 @@ public class PruebaHumanaMySQL {
         psicologos = daoPsicologo.listar();
         for(Psicologo a : psicologos){
 //            System.out.println("Entro");
-            System.out.println(a.getNombre() + " " + a.getCorreo()  +  " " + a.getUsuario_pucp());
+            System.out.println(a.getNombre() + " " + a.getCorreo()  +  " " + a.getUsuario());
         }
     }
     
@@ -51,13 +47,12 @@ public class PruebaHumanaMySQL {
         //Atributos persona
         psicologo.setDni("06292910");
         psicologo.setNombre("Jorge Gonzales");
-        psicologo.setEdad(45);
         psicologo.setDireccion("Lima");
         psicologo.setCorreo("a10303919@pucp.edu");
         
         //Atributos miembro pucp
-        psicologo.setUsuario_pucp("2083123@pucp.edu.pe");
-        psicologo.setContraseña("password");
+        psicologo.setUsuario("2083123@pucp.edu.pe");
+        psicologo.setPassword("password");
         psicologo.setFecha_inclusion(new Date());
      
 
@@ -75,7 +70,7 @@ public class PruebaHumanaMySQL {
         for(Profesor a : profesores){
 //            System.out.println("Entro");
             System.out.println(a.getNombre() + " " + a.getCorreo()  + " " + 
-                    a.getFacultad() + " " + a.getUsuario_pucp() + " " + a.getCategoria());
+                    a.getFacultad() + " " + a.getUsuario() + " " + a.getCategoria());
         }
     }
     public static void listarAlumno(){
@@ -94,13 +89,12 @@ public class PruebaHumanaMySQL {
         //Atributos persona
         alum.setDni("66666666");
         alum.setNombre("Jorge Basadre");
-        alum.setEdad(21);
         alum.setDireccion("jr. banhio de los incas, urb manco capac");
         alum.setCorreo("dasjdjasdjasjdas@pucp.edu.pe");
         
         //Atributos miembro pucp
-        alum.setUsuario_pucp("2083123@pucp.edu.pe");
-        alum.setContraseña("password");
+        alum.setUsuario("2083123@pucp.edu.pe");
+        alum.setPassword("password");
         alum.setFecha_inclusion(new Date());
         
         //Atributos Alumno
