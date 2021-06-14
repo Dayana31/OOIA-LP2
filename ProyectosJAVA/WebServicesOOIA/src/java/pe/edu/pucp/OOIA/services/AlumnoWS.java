@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.gestion_humana.controller.dao.AlumnoDAO;
-import pe.edu.pucp.gestion_humana.controller.mysql.AlumnoMySQL;
-import pe.edu.pucp.gestion_humana.model.Alumno;
+import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
+import pe.edu.pucp.ooia.gest_humana.mysql.AlumnoMySQL;
+import pe.edu.pucp.ooia.gest_humana.model.Alumno;
 
 /**
  *
@@ -19,10 +19,6 @@ import pe.edu.pucp.gestion_humana.model.Alumno;
  */
 @WebService(serviceName = "AlumnoWS")
 public class AlumnoWS {
-
-    /**
-     * This is a sample web service operation
-     */
     
     private AlumnoDAO alumno;
 
@@ -63,10 +59,10 @@ public class AlumnoWS {
         return resultado;
     }
     @WebMethod(operationName = "eliminarAlumno")
-    public int eliminarAlumno(@WebParam(name = "alumno")Alumno alumno){
+    public int eliminarAlumno(@WebParam(name = "id_alumno")int id_alumno){
         int resultado=0;
         try {
-            resultado=this.alumno.eliminar(alumno);
+            resultado=this.alumno.eliminar(id_alumno);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

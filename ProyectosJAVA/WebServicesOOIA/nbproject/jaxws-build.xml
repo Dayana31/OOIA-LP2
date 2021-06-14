@@ -35,14 +35,6 @@
             <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </wsgen>
     </target>
-    <target name="wsgen-ComprimisoWS" depends="wsgen-init">
-        <copy todir="${build.classes.dir}/META-INF">
-            <fileset dir="${webinf.dir}" includes="wsit-pe.edu.pucp.OOIA.services.ComprimisoWS.xml"/>
-        </copy>
-        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="pe.edu.pucp.OOIA.services.ComprimisoWS" xendorsed="true">
-            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
-        </wsgen>
-    </target>
     <target name="wsgen-EspecialidadWS" depends="wsgen-init">
         <copy todir="${build.classes.dir}/META-INF">
             <fileset dir="${webinf.dir}" includes="wsit-pe.edu.pucp.OOIA.services.EspecialidadWS.xml"/>
@@ -83,22 +75,6 @@
             <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </wsgen>
     </target>
-    <target name="wsgen-InvitadoWS" depends="wsgen-init">
-        <copy todir="${build.classes.dir}/META-INF">
-            <fileset dir="${webinf.dir}" includes="wsit-pe.edu.pucp.OOIA.services.InvitadoWS.xml"/>
-        </copy>
-        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="pe.edu.pucp.OOIA.services.InvitadoWS" xendorsed="true">
-            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
-        </wsgen>
-    </target>
-    <target name="wsgen-CoordinadorEventoWS" depends="wsgen-init">
-        <copy todir="${build.classes.dir}/META-INF">
-            <fileset dir="${webinf.dir}" includes="wsit-pe.edu.pucp.OOIA.services.CoordinadorEventoWS.xml"/>
-        </copy>
-        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="pe.edu.pucp.OOIA.services.CoordinadorEventoWS" xendorsed="true">
-            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
-        </wsgen>
-    </target>
     <target name="wsgen-EventoAlumnoWS" depends="wsgen-init">
         <copy todir="${build.classes.dir}/META-INF">
             <fileset dir="${webinf.dir}" includes="wsit-pe.edu.pucp.OOIA.services.EventoAlumnoWS.xml"/>
@@ -112,6 +88,22 @@
             <fileset dir="${webinf.dir}" includes="wsit-pe.edu.pucp.OOIA.services.EventoWS.xml"/>
         </copy>
         <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="pe.edu.pucp.OOIA.services.EventoWS" xendorsed="true">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-CoordinadorWS" depends="wsgen-init">
+        <copy todir="${build.classes.dir}/META-INF">
+            <fileset dir="${webinf.dir}" includes="wsit-pe.edu.pucp.OOIA.services.CoordinadorWS.xml"/>
+        </copy>
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="pe.edu.pucp.OOIA.services.CoordinadorWS" xendorsed="true">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-PonenteWS" depends="wsgen-init">
+        <copy todir="${build.classes.dir}/META-INF">
+            <fileset dir="${webinf.dir}" includes="wsit-pe.edu.pucp.OOIA.services.PonenteWS.xml"/>
+        </copy>
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="pe.edu.pucp.OOIA.services.PonenteWS" xendorsed="true">
             <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </wsgen>
     </target>

@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.gestion_atencion.controller.dao.HorarioDAO;
-import pe.edu.pucp.gestion_atencion.controller.mysql.HorarioMySQL;
-import pe.edu.pucp.gestion_atencion.model.Horario;
+import pe.edu.pucp.ooia.gest_atencion.dao.HorarioDAO;
+import pe.edu.pucp.ooia.gest_atencion.mysql.HorarioMySQL;
+import pe.edu.pucp.ooia.gest_atencion.model.Horario;
 
 /**
  *

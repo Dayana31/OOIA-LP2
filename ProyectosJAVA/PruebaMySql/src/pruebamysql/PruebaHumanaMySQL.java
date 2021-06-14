@@ -83,7 +83,7 @@ public class PruebaHumanaMySQL {
         alumnos = daoAlumno.listar();
         for(Alumno a : alumnos){
             System.out.println("Entro");
-            System.out.println(a.getId_alumno() + " " + a.getNombre() + " " + a.getCorreo() + " " + a.getCodigo_pucp() + " " + 
+            System.out.println(a.getId_alumno() + " " + a.getNombre() + " " + a.getCorreo() + " " + a.getCodigo() + " " + 
                     a.getCraest());
         }
     }
@@ -104,18 +104,12 @@ public class PruebaHumanaMySQL {
         alum.setFecha_inclusion(new Date());
         
         //Atributos Alumno
-        alum.setCodigo_pucp("20203212");
+        alum.setCodigo("20203212");
         Especialidad esp = new Especialidad();
         esp.setId_especialidad(3);
       
         alum.setEspecialidad(esp);
         alum.setCraest(54.5);
-        alum.setCursos_por_primera(0);
-        alum.setCursos_por_segunda(0);
-        alum.setCursos_por_tercera(0);
-        alum.setCreditos_aprobados(0);//hay un problema aqui, el decimal debe ser mas grande 
-        //para que pueda recoger una mayor cantidad de creditos. Solo se admiten alumnos 
-        //con cantidad de creditos 
 
         int resultado = daoAlumno.insertar(alum);//no lo pobre, falta modificar el mySQL
         if(resultado !=0){

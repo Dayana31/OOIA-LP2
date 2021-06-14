@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.gestion_humana.controller.dao.EspecialidadDAO;
-import pe.edu.pucp.gestion_humana.controller.mysql.EspecialidadMySQL;
-import pe.edu.pucp.gestion_humana.model.Especialidad;
+import pe.edu.pucp.ooia.gest_humana.dao.EspecialidadDAO;
+import pe.edu.pucp.ooia.gest_humana.mysql.EspecialidadMySQL;
+import pe.edu.pucp.ooia.gest_humana.model.Especialidad;
 
 /**
  *
@@ -60,10 +60,10 @@ public class EspecialidadWS {
         return resultado;
     }
     @WebMethod(operationName = "eliminarEspecialidad")
-    public int eliminarEspecialidad(@WebParam(name = "especialidad")Especialidad especialidad){
+    public int eliminarEspecialidad(@WebParam(name = "id_especialidad")int id_especialidad){
         int resultado=0;
         try {
-            resultado=this.especialidad.eliminar(especialidad);
+            resultado=this.especialidad.eliminar(id_especialidad);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

@@ -7,9 +7,6 @@
     <service name="HorarioWS">
       <implementation-class>pe.edu.pucp.OOIA.services.HorarioWS</implementation-class>
     </service>
-    <service name="ComprimisoWS">
-      <implementation-class>pe.edu.pucp.OOIA.services.ComprimisoWS</implementation-class>
-    </service>
     <service name="EspecialidadWS">
       <implementation-class>pe.edu.pucp.OOIA.services.EspecialidadWS</implementation-class>
     </service>
@@ -25,17 +22,17 @@
     <service name="AlumnoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.AlumnoWS</implementation-class>
     </service>
-    <service name="InvitadoWS">
-      <implementation-class>pe.edu.pucp.OOIA.services.InvitadoWS</implementation-class>
-    </service>
-    <service name="CoordinadorEventoWS">
-      <implementation-class>pe.edu.pucp.OOIA.services.CoordinadorEventoWS</implementation-class>
-    </service>
     <service name="EventoAlumnoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.EventoAlumnoWS</implementation-class>
     </service>
     <service name="EventoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.EventoWS</implementation-class>
+    </service>
+    <service name="CoordinadorWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.CoordinadorWS</implementation-class>
+    </service>
+    <service name="PonenteWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.PonenteWS</implementation-class>
     </service>
   </services>
   <clients/>

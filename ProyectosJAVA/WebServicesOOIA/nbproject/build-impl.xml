@@ -842,19 +842,28 @@ exists or setup the property manually. For example like this:
         <ant antfile="${project.GestionEventosController}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
-        <ant antfile="${project.GestionEventosModel}/build.xml" inheritall="false" target="jar">
-            <property name="deploy.on.save" value="false"/>
-        </ant>
-        <ant antfile="${project.GestionHumanaController}/build.xml" inheritall="false" target="jar">
-            <property name="deploy.on.save" value="false"/>
-        </ant>
-        <ant antfile="${project.GestionHumanaModel}/build.xml" inheritall="false" target="jar">
-            <property name="deploy.on.save" value="false"/>
-        </ant>
         <ant antfile="${project.Interfaces}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.OOIAConfigMySql}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestAcademicaController}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestAtencionController}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestAtencionModel}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestEventosModel}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestHumanaController}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestHumanaModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
     </target>
@@ -862,19 +871,28 @@ exists or setup the property manually. For example like this:
         <ant antfile="${project.GestionEventosController}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
-        <ant antfile="${project.GestionEventosModel}/build.xml" inheritall="false" target="jar">
-            <property name="deploy.on.save" value="false"/>
-        </ant>
-        <ant antfile="${project.GestionHumanaController}/build.xml" inheritall="false" target="jar">
-            <property name="deploy.on.save" value="false"/>
-        </ant>
-        <ant antfile="${project.GestionHumanaModel}/build.xml" inheritall="false" target="jar">
-            <property name="deploy.on.save" value="false"/>
-        </ant>
         <ant antfile="${project.Interfaces}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.OOIAConfigMySql}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestAcademicaController}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestAtencionController}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestAtencionModel}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestEventosModel}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestHumanaController}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaGestHumanaModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
     </target>
@@ -1021,24 +1039,30 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init,compile,compile-jsps,-pre-dist,-do-dist-with-manifest,-do-dist-without-manifest" name="do-dist"/>
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
-        <copyfiles files="${reference.GestionHumanaModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${reference.GestionHumanaController.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.Interfaces.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${file.reference.mysql-connector-java-8.0.24.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${reference.GestionEventosController.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${reference.GestionEventosModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.OOIAConfigMySql.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.GestionEventosController.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.ooiaGestHumanaController.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.ooiaGestAcademicaController.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.ooiaGestHumanaModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.ooiaGestAtencionModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.ooiaGestEventosModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.ooiaGestAtencionController.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
-        <copyfiles files="${reference.GestionHumanaModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${reference.GestionHumanaController.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.Interfaces.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.mysql-connector-java-8.0.24.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${reference.GestionEventosController.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${reference.GestionEventosModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.OOIAConfigMySql.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.GestionEventosController.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.ooiaGestHumanaController.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.ooiaGestAcademicaController.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.ooiaGestHumanaModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.ooiaGestAtencionModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.ooiaGestEventosModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.ooiaGestAtencionController.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
@@ -1454,11 +1478,14 @@ exists or setup the property manually. For example like this:
             -->
     <target depends="init" name="deps-clean" unless="no.deps">
         <ant antfile="${project.GestionEventosController}/build.xml" inheritall="false" target="clean"/>
-        <ant antfile="${project.GestionEventosModel}/build.xml" inheritall="false" target="clean"/>
-        <ant antfile="${project.GestionHumanaController}/build.xml" inheritall="false" target="clean"/>
-        <ant antfile="${project.GestionHumanaModel}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.Interfaces}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.OOIAConfigMySql}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.ooiaGestAcademicaController}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.ooiaGestAtencionController}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.ooiaGestAtencionModel}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.ooiaGestEventosModel}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.ooiaGestHumanaController}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.ooiaGestHumanaModel}/build.xml" inheritall="false" target="clean"/>
     </target>
     <target depends="init" name="do-clean">
         <condition property="build.dir.to.clean" value="${build.web.dir}">

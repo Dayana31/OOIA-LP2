@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.gestion_humana.controller.dao.PsicologoDAO;
-import pe.edu.pucp.gestion_humana.controller.mysql.PsicologoMySQL;
-import pe.edu.pucp.gestion_humana.model.Psicologo;
+import pe.edu.pucp.ooia.gest_humana.dao.PsicologoDAO;
+import pe.edu.pucp.ooia.gest_humana.mysql.PsicologoMySQL;
+import pe.edu.pucp.ooia.gest_humana.model.Psicologo;
 
 /**
  *
@@ -61,10 +61,10 @@ public class PsicologoWS {
         
     }
     @WebMethod(operationName = "eliminarPsicologo")
-    public int eliminarPsicologo(@WebParam(name = "invitado")Psicologo psicologo){
+    public int eliminarPsicologo(@WebParam(name = "id_psicologo")int id_psicologo){
         int resultado=0;
         try {
-            resultado=this.psicologo.eliminar(psicologo);
+            resultado=this.psicologo.eliminar(id_psicologo);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

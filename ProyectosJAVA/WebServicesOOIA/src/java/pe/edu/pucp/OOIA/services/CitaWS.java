@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.gestion_atencion.controller.dao.CitaDAO;
-import pe.edu.pucp.gestion_atencion.controller.mysql.CitaMySQL;
-import pe.edu.pucp.gestion_atencion.model.Cita;
+import pe.edu.pucp.ooia.gest_atencion.dao.CitaDAO;
+import pe.edu.pucp.ooia.gest_atencion.mysql.CitaMySQL;
+import pe.edu.pucp.ooia.gest_atencion.model.Cita;
 
 /**
  *

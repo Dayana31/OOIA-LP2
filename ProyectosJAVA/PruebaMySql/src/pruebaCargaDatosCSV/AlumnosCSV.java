@@ -52,14 +52,11 @@ public class AlumnosCSV {
             alumno.setContraseña(datosCorrectos[6]);
             Date date1=new SimpleDateFormat("yyyy-MM-dd").parse(datosCorrectos[7]); 
             alumno.setFecha_inclusion(date1);
-            alumno.setCodigo_pucp(datosCorrectos[8]);
+            alumno.setCodigo(datosCorrectos[8]);
             Especialidad especialidad = new Especialidad();
             especialidad.setId_especialidad(Integer.parseInt(datosCorrectos[9]));
             alumno.setEspecialidad(especialidad);
             alumno.setCraest(Double.parseDouble(datosCorrectos[10]));
-            alumno.setCursos_por_primera(Integer.parseInt(datosCorrectos[11]));
-            alumno.setCursos_por_segunda(Integer.parseInt(datosCorrectos[12]));
-            alumno.setCursos_por_tercera(Integer.parseInt(datosCorrectos[13]));
             
             alumno.setCreditos_aprobados(Double.parseDouble(datosCorrectos[14]));
             
