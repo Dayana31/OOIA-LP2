@@ -216,7 +216,7 @@ namespace ProyectoOOIA.Ventanas
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::ProyectoOOIA.Properties.Resources._028_telephone_2;
+            this.button3.BackgroundImage = global::ProyectoOOIA.Properties.Resources.telephone;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -229,7 +229,7 @@ namespace ProyectoOOIA.Ventanas
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::ProyectoOOIA.Properties.Resources._017_mobile_phone;
+            this.button2.BackgroundImage = global::ProyectoOOIA.Properties.Resources.mobile_phone;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -242,7 +242,7 @@ namespace ProyectoOOIA.Ventanas
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::ProyectoOOIA.Properties.Resources._013_mail;
+            this.button1.BackgroundImage = global::ProyectoOOIA.Properties.Resources.mail;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -254,7 +254,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // pbPUCP
             // 
-            this.pbPUCP.Image = global::ProyectoOOIA.Properties.Resources._1200px_PUCP_text_logo_svg;
+            this.pbPUCP.Image = global::ProyectoOOIA.Properties.Resources.PUCP_logo;
             this.pbPUCP.Location = new System.Drawing.Point(66, 24);
             this.pbPUCP.Name = "pbPUCP";
             this.pbPUCP.Size = new System.Drawing.Size(180, 88);

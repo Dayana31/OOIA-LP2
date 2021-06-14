@@ -146,6 +146,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TipoUsuario.cs" />
     <Compile Include="Componentes\Card.cs">
       <SubType>UserControl</SubType>
@@ -567,14 +572,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Ventanas\Alumno\Citas\frmListaTutores.resx">
       <DependentUpon>frmListaTutores.cs</DependentUpon>
     </EmbeddedResource>
@@ -1058,22 +1058,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1200px-PUCP_text_logo.svg.png" />
+    <None Include="Resources\PUCP_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\EEGGCC.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\013-mail.png" />
+    <None Include="Resources\mail.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\017-mobile-phone.png" />
+    <None Include="Resources\mobile-phone.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\025-arroba.png" />
+    <None Include="Resources\arroba.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\028-telephone-2.png" />
+    <None Include="Resources\telephone.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout.png" />
@@ -1194,7 +1194,9 @@
     <Content Include="Resources\Bunifu_UI_v1.5.dll" />
     <None Include="Resources\menos.png" />
     <None Include="Resources\mas.png" />
+    <None Include="Resources\placeholder_profile.jpg" />
     <Content Include="Resources\profesor.jpg" />
+    <None Include="Resources\Profile.bmp" />
     <Content Include="Resources\psicologo.jpg" />
   </ItemGroup>
   <ItemGroup>

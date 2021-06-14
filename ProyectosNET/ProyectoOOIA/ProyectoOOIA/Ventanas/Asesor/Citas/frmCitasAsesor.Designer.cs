@@ -72,7 +72,7 @@ namespace ProyectoOOIA.Ventanas
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackgroundImage = global::ProyectoOOIA.Properties.Resources.log_out__1_;
+            this.btnLogout.BackgroundImage = global::ProyectoOOIA.Properties.Resources.logout_white;
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
@@ -91,7 +91,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnHome
             // 
-            this.btnHome.Image = global::ProyectoOOIA.Properties.Resources.home;
+            this.btnHome.Image = global::ProyectoOOIA.Properties.Resources.home_white;
             this.btnHome.Location = new System.Drawing.Point(11, 35);
             this.btnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnHome.Name = "btnHome";

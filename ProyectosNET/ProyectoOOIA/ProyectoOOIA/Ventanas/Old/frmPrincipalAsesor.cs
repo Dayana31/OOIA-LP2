@@ -15,8 +15,8 @@ namespace ProyectoOOIA.Ventanas
             InitializeComponent();
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.EEGGCC);
-            listaImagenes.Add(ProyectoOOIA.Properties.Resources.Estudiante1);
-            listaImagenes.Add(ProyectoOOIA.Properties.Resources.pexels_pixabay_261621);
+            listaImagenes.Add(ProyectoOOIA.Properties.Resources.Estudiante);
+            listaImagenes.Add(ProyectoOOIA.Properties.Resources.Tramite);
             imagenes.Image = listaImagenes[0];
             //ToolTip ttEjemplo = new ToolTip();
 
