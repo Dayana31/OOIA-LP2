@@ -14,8 +14,6 @@ import pe.edu.pucp.gestion_eventos.model.Evento;
 import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
 
 
-
-
 /**
  *
  * @author LENOVO
@@ -32,7 +30,7 @@ public class EventoWS {
     public ArrayList<Evento> listarEvento(@WebParam(name = "nombre")String nombre) {
         ArrayList<Evento> lista= new ArrayList<>();
         try {
-            lista=evento.listar();
+            lista=evento.listar(nombre);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

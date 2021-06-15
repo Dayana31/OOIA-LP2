@@ -116,7 +116,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtHeader.Name = "txtHeader";
             this.txtHeader.Size = new System.Drawing.Size(238, 35);
             this.txtHeader.TabIndex = 2;
-            this.txtHeader.Text = "Cargar Alumnos";
+            this.txtHeader.Text = "Gestionar Alumnos";
             // 
             // tsAlumno
             // 

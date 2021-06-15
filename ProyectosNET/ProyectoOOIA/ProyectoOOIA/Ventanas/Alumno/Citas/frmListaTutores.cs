@@ -28,7 +28,7 @@ namespace ProyectoOOIA.Ventanas
 
             BindingList<ProfesorWS.profesor>
                 profesores = new BindingList<ProfesorWS.profesor>
-                (daoProfesor.listarProfesores());
+                (daoProfesor.listarProfesor());
 
             BindingList<PsicologoWS.psicologo>
                 psicologos = new BindingList<PsicologoWS.psicologo>

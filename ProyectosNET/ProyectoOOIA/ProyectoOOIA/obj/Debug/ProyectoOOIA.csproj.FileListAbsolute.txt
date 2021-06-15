@@ -264,7 +264,6 @@ D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OO
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVAlumnos.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVProfesores.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVPsicologos.resources
-<<<<<<< HEAD
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
@@ -326,7 +325,6 @@ D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.C
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
-=======
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos.frmMostrarPonentes.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.frmCargarDatos.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.frmCodigosAtencion.resources
@@ -368,4 +366,3 @@ D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OO
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
->>>>>>> 00f2359a55c55adb02b10efd85abe371201d7dee
