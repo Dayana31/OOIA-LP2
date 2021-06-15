@@ -38,13 +38,7 @@ namespace ProyectoOOIA.Ventanas
             }
             else
             {
-                //if(toggle1.Checked==false)
-                //    new frmNuevoPrincipal().Show(); 
-                //else
-                //    new frmPrincipalProfesor().Show();
-
-                //this.Close();
-
+           
                 if (rbtAlumno.Checked == true)
                 {
                     new frmPrincipal(TipoUsuario.Alumno).Show();

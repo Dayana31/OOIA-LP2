@@ -12,4 +12,5 @@ public interface ProfesorDAO {
     public int insertar(Profesor profesor);
     public int modificar(Profesor profesor);
     public int eliminar(int id_profesor);
+    public int inicioSesion(String usuario,String password);
 }

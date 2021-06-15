@@ -8,4 +8,5 @@ public interface CoordinadorDAO{
     public int insertar(Coordinador coordinador);
     public int modificar(Coordinador coordinador);
     public int eliminar(int id_coordinador);
+    public int inicioSesion(String usuario,String password);
 }

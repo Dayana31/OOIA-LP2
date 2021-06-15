@@ -12,4 +12,5 @@ public interface PsicologoDAO {
     public int insertar(Psicologo psicologo);
     public int modificar(Psicologo psicologo);
     public int eliminar(int id_psicologo);
+    public int inicioSesion(String usuario,String password);
 }

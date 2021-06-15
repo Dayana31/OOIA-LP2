@@ -5,6 +5,7 @@
  */
 package pe.edu.pucp.OOIA.services;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -12,6 +13,8 @@ import javax.jws.WebParam;
 import pe.edu.pucp.gestion_eventos.dao.EventoDAO;
 import pe.edu.pucp.gestion_eventos.model.Evento;
 import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
+
+
 
 
 /**
@@ -26,16 +29,28 @@ public class EventoWS {
         evento=new EventoMySQL();
     }
 
-    @WebMethod(operationName = "listarEvento")
-    public ArrayList<Evento> listarEvento(@WebParam(name = "nombre")String nombre) {
+    @WebMethod(operationName = "listarEvento_por_nombre_categoria")
+    public ArrayList<Evento> listarEvento_por_nombre_categoria(@WebParam(name = "nombre")String nombreCategoria) {
         ArrayList<Evento> lista= new ArrayList<>();
         try {
-            lista=evento.listar(nombre);
+            lista=evento.listar(nombreCategoria);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return lista;
     }
+    
+     @WebMethod(operationName = "listarEvento_por_fecha")
+    public ArrayList<Evento> listarEvento_por_fecha(@WebParam(name = "fecha")Date fecha) {
+        ArrayList<Evento> lista= new ArrayList<>();
+        try {
+            lista=evento.listar_x_fecha(fecha);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
+    
     @WebMethod(operationName = "insertarEvento")
     public int insertarEvento(@WebParam(name = "evento")Evento evento){
         int resultado=0;

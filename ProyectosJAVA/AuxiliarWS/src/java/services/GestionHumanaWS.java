@@ -262,4 +262,14 @@ public class GestionHumanaWS {
         return resultado;
         
     }
+    @WebMethod(operationName = "autenticarUsuario")
+    public int autenticarUsuario(@WebParam(name = "usuario")String usuario,@WebParam(name = "password")String password){
+        int resultado=0;
+        try {
+            resultado=this.alumno.inicioSesion(usuario,password);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;//se devuelve el id persona
+    }
 }

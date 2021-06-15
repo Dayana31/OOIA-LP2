@@ -12,4 +12,5 @@ public interface AlumnoDAO {
     public int insertar(Alumno alumno);
     public int modificar(Alumno alumno);
     public int eliminar(int id_alumno);
+    public int inicioSesion(String usuario,String password);
 }
