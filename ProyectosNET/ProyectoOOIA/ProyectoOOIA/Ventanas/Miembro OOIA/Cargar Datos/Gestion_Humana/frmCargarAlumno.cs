@@ -11,7 +11,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
     {
         private EspecialidadWS.EspecialidadWSClient daoEspecialidad;
         private AlumnoWS.AlumnoWSClient daoAlumno;
-       private AlumnoWS.alumno alumno;
+        private AlumnoWS.alumno alumno;
         private byte[] imagen_perfil;
         private Estado estado;
 

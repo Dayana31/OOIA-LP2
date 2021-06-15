@@ -1,4 +1,5 @@
 ﻿using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos;
+using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana;
 using System;
 using System.IO;
 using System.Windows.Forms;
@@ -101,11 +102,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         }
 
         /*TAB Gestion Atencion*/
-                private void btnCodigoAtencion_Click(object sender, EventArgs e)
+        private void btnCodigoAtencion_Click(object sender, EventArgs e)
         {
             new frmCodigosAtencion().ShowDialog();
         }
 
-        
+        private void btnEspecialidad_Click(object sender, EventArgs e)
+        {
+            new frmCargarEspecialidad().ShowDialog();
+        }
     }
 }

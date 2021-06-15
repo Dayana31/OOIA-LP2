@@ -35,7 +35,8 @@ create procedure LISTAR_ESPECIALIDAD(
 )
 begin
 	select id_especialidad, nombre, activo
-	from especialidad;
+	from especialidad
+	where activo = true;
 end$
 
 -- ALUMNO
