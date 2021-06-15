@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         {
             BindingList<ProfesorWS.profesor>
                 profesores = new BindingList<ProfesorWS.profesor>
-                (daoProfesor.listarProfesores().ToList());
+                (daoProfesor.listarProfesor().ToList());
             dgvProfesores.DataSource = profesores;
         }
 
@@ -46,7 +46,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private void dgvProfesores_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             ProfesorWS.profesor data = dgvProfesores.Rows[e.RowIndex].DataBoundItem
-               as ProfesorWS.profesor;
+            as ProfesorWS.profesor;
             dgvProfesores.Rows[e.RowIndex].Cells["Especialidad"].Value = data.especialidad.nombre;
         }
     }
