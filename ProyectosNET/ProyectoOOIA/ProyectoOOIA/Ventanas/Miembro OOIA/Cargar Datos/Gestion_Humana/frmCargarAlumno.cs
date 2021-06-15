@@ -163,7 +163,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             txtCorreo.Text = alu.correo;
             //Miembro PUCP
             txtUsuario.Text = alu.usuario;
-            txtPassword.Text = alu.password;
+            txtPassword.Text = "*********";
             imagen_perfil = alu.imagenDePerfil;
             if(imagen_perfil != null)displayImage(imagen_perfil);
             //Alumno
@@ -180,6 +180,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
+            txtPassword.Text = "12345";
         }
 
         private void tsbGuardar_Click_1(object sender, EventArgs e)

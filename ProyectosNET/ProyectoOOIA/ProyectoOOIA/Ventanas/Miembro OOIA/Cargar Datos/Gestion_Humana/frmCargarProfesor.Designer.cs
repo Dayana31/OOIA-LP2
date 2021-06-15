@@ -524,7 +524,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pnlHeader);
             this.Name = "frmCargarProfesor";
-            this.Text = "Cargar Alumno";
+            this.Text = "Gestionar Profesores";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.toolStrip1.ResumeLayout(false);

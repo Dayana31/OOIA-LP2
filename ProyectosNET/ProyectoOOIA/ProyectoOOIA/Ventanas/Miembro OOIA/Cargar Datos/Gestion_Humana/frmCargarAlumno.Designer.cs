@@ -92,7 +92,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(743, 76);
+            this.pnlHeader.Size = new System.Drawing.Size(744, 76);
             this.pnlHeader.TabIndex = 1;
             // 
             // btnBack
@@ -130,7 +130,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tsbCancelar});
             this.tsAlumno.Location = new System.Drawing.Point(0, 76);
             this.tsAlumno.Name = "tsAlumno";
-            this.tsAlumno.Size = new System.Drawing.Size(743, 27);
+            this.tsAlumno.Size = new System.Drawing.Size(744, 27);
             this.tsAlumno.TabIndex = 2;
             this.tsAlumno.Text = "tsAlumno";
             // 
@@ -304,7 +304,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabControl.Location = new System.Drawing.Point(0, 103);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(743, 278);
+            this.tabControl.Size = new System.Drawing.Size(744, 278);
             this.tabControl.TabIndex = 4;
             // 
             // tabPersona
@@ -315,7 +315,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabPersona.Location = new System.Drawing.Point(4, 22);
             this.tabPersona.Name = "tabPersona";
             this.tabPersona.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPersona.Size = new System.Drawing.Size(735, 252);
+            this.tabPersona.Size = new System.Drawing.Size(736, 252);
             this.tabPersona.TabIndex = 1;
             this.tabPersona.Text = "Datos Persona";
             this.tabPersona.UseVisualStyleBackColor = true;
@@ -363,7 +363,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // dtpFechaNacimiento
             // 
             this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(151, 81);
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(151, 82);
             this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             this.dtpFechaNacimiento.Size = new System.Drawing.Size(89, 20);
             this.dtpFechaNacimiento.TabIndex = 22;
@@ -379,7 +379,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(7, 130);
+            this.lblCorreo.Location = new System.Drawing.Point(7, 132);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(56, 21);
             this.lblCorreo.TabIndex = 20;
@@ -396,7 +396,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(7, 105);
+            this.lblDireccion.Location = new System.Drawing.Point(7, 106);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(70, 21);
             this.lblDireccion.TabIndex = 18;
@@ -406,7 +406,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.lblFechaNacimiento.AutoSize = true;
             this.lblFechaNacimiento.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(7, 77);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(7, 83);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(138, 21);
             this.lblFechaNacimiento.TabIndex = 16;
@@ -423,7 +423,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(7, 52);
+            this.lblNombre.Location = new System.Drawing.Point(7, 53);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(127, 21);
             this.lblNombre.TabIndex = 14;
@@ -498,7 +498,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 399);
+            this.ClientSize = new System.Drawing.Size(744, 401);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.tsAlumno);
             this.Controls.Add(this.pnlHeader);
