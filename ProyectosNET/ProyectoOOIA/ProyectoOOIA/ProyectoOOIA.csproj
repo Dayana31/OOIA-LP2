@@ -655,8 +655,8 @@
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoWS\EventoWS.wsdl" />
-    <None Include="Connected Services\EventoWS\EventoWS.xsd">
+    <None Include="Connected Services\EventoWS\EventoWS1.wsdl" />
+    <None Include="Connected Services\EventoWS\EventoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.eliminarEventoResponse.datasource">
@@ -668,7 +668,10 @@
     <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.insertarEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.listarEventoResponse.datasource">
+    <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.listarEvento_por_fechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.listarEvento_por_nombre_categoriaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EventoWS\ProyectoOOIA.EventoWS.modificarEventoResponse.datasource">
@@ -772,7 +775,10 @@
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarEncuestaEventoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarEventoResponse.datasource">
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarEvento_por_fechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.listarEvento_por_nombre_categoriaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\GestionEventoWS\ProyectoOOIA.GestionEventoWS.modificarCategoriaEventoResponse.datasource">

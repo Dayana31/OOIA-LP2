@@ -33,7 +33,7 @@ namespace ProyectoOOIA.Ventanas
         {
             //dgvEventos.DataSource = new EventosWS.EventoWSClient().listarEvento(txtNombre.Text);
             //dgvEventos.DataSource
-            dgvEventos.DataSource = new EventoWS.EventoWSClient().listarEvento("");
+            dgvEventos.DataSource = new EventoWS.EventoWSClient().listarEvento_por_nombre_categoria("");
 
         }
 

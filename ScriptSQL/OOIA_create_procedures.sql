@@ -1075,6 +1075,7 @@ in _fecha date
     where  (e.fecha = _fecha) and e.estado=1;
 end $
 
+
 --ENCUESTA_EVENTO
 delimiter $
 create procedure INSERTAR_EVENTO_ALUMNO(
