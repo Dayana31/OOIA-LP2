@@ -931,13 +931,13 @@
     <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.eliminarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.insertarProfesoresResponse.datasource">
+    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.insertarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.listarProfesoresResponse.datasource">
+    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.listarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.modificarProfesoresResponse.datasource">
+    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.modificarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.profesor.datasource">

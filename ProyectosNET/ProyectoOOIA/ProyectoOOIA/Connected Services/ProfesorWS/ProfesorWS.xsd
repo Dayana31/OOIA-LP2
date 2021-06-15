@@ -2,18 +2,15 @@
 <xs:schema xmlns:tns="http://services.OOIA.pucp.edu.pe/" targetNamespace="http://services.OOIA.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="eliminarProfesor" type="tns:eliminarProfesor" />
   <xs:element name="eliminarProfesorResponse" type="tns:eliminarProfesorResponse" />
-  <xs:element name="insertarProfesores" type="tns:insertarProfesores" />
-  <xs:element name="insertarProfesoresResponse" type="tns:insertarProfesoresResponse" />
-  <xs:element name="listarProfesores" type="tns:listarProfesores" />
-  <xs:element name="listarProfesoresResponse" type="tns:listarProfesoresResponse" />
-  <xs:element name="modificarProfesores" type="tns:modificarProfesores" />
-  <xs:element name="modificarProfesoresResponse" type="tns:modificarProfesoresResponse" />
-  <xs:complexType name="listarProfesores">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarProfesoresResponse">
+  <xs:element name="insertarProfesor" type="tns:insertarProfesor" />
+  <xs:element name="insertarProfesorResponse" type="tns:insertarProfesorResponse" />
+  <xs:element name="listarProfesor" type="tns:listarProfesor" />
+  <xs:element name="listarProfesorResponse" type="tns:listarProfesorResponse" />
+  <xs:element name="modificarProfesor" type="tns:modificarProfesor" />
+  <xs:element name="modificarProfesorResponse" type="tns:modificarProfesorResponse" />
+  <xs:complexType name="modificarProfesor">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
+      <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="profesor">
@@ -59,14 +56,17 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarProfesores">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarProfesoresResponse">
+  <xs:complexType name="modificarProfesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarProfesor">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarProfesorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarProfesor">
@@ -79,12 +79,12 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarProfesores">
+  <xs:complexType name="insertarProfesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarProfesoresResponse">
+  <xs:complexType name="insertarProfesorResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

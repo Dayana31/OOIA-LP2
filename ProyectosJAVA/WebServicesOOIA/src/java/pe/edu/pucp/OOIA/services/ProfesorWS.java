@@ -31,21 +31,19 @@ public class ProfesorWS {
     public ProfesorWS() {
         daoProfesor=new ProfesorMySQL();
     }
-    
-
             
-    @WebMethod(operationName = "listarProfesores")
-    public ArrayList <Profesor>listarProfesores(){
-        ArrayList<Profesor> empleador=new ArrayList<>();
+    @WebMethod(operationName = "listarProfesor")
+    public ArrayList <Profesor>listarProfesor(){
+        ArrayList<Profesor> profesores=new ArrayList<>();
         try {
-            empleador= daoProfesor.listar();
+            profesores= daoProfesor.listar();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return empleador;
+        return profesores;
     }
-    @WebMethod(operationName = "insertarProfesores")
-    public int insertarProfesores( @WebParam(name="profesor") Profesor profesor){
+    @WebMethod(operationName = "insertarProfesor")
+    public int insertarProfesor( @WebParam(name="profesor") Profesor profesor){
         int resultado=0;
         try {
             resultado=daoProfesor.insertar(profesor);
@@ -56,8 +54,8 @@ public class ProfesorWS {
         
         return resultado;
     }
-    @WebMethod(operationName = "modificarProfesores")
-    public int modificarProfesores(@WebParam(name = "profesor")Profesor profesor){
+    @WebMethod(operationName = "modificarProfesor")
+    public int modificarProfesor(@WebParam(name = "profesor")Profesor profesor){
         int resultado=0;
         try {
             resultado=daoProfesor.modificar(profesor);

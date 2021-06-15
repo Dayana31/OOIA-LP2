@@ -10,7 +10,6 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import pe.edu.pucp.config.DBManager;
 
 import pe.edu.pucp.gestion_eventos.dao.EventoDAO;
@@ -29,13 +28,13 @@ public class EventoMySQL implements EventoDAO{
     CallableStatement cs;
 
     @Override
-    public ArrayList<Evento> listar(String nombre) {
+    public ArrayList<Evento> listar(String nombreCategoria) {
         ArrayList<Evento> eventos = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
             cs = con.prepareCall("{call LISTAR_EVENTO(?)}");
-            cs.setString("_nombre", nombre);
+            cs.setString("_nombreCategoria", nombreCategoria);
             rs = cs.executeQuery();
             while(rs.next()){
                 Evento evento = new Evento();
@@ -67,7 +66,47 @@ public class EventoMySQL implements EventoDAO{
         }
         return eventos;
     }
-
+    
+    @Override
+    public ArrayList<Evento> listar_x_fecha(Date fecha) {
+        ArrayList<Evento> eventos = new ArrayList<>();
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call LISTAR_EVENTO_X_FECHA(?)}");
+            cs.setDate("_nombreCategoria", fecha);
+            rs = cs.executeQuery();
+            while(rs.next()){
+                Evento evento = new Evento();
+                evento.setId_evento(rs.getInt("id_evento"));
+                evento.setNombre(rs.getString("nombre"));
+                evento.setDescripcion(rs.getString("descripcion"));
+                evento.setCategoria(new CategoriaEvento(rs.getInt("id_categoria_evento"), 
+                rs.getString("nombre_categoria")));
+                evento.setCoordinador(new Coordinador());
+                evento.setCoordinador(obtenerCoordinador(rs.getInt("fid_coordinador")));
+                evento.setCapacidad(rs.getInt("capacidad"));
+                evento.setCupo(rs.getInt("cupo"));
+                evento.setFecha(rs.getDate("fecha"));
+                evento.setHoraInicio(rs.getTime("hora_inicio"));
+                evento.setHoraFin(rs.getTime("hora_fin"));
+                evento.setLugar(rs.getString("lugar"));
+                evento.setImagen(rs.getBytes("imagen"));
+                evento.setActivo(true);
+                eventos.add(evento);
+                
+            }
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());};
+            
+        }
+        return eventos;
+    }
+    
     @Override
     public int insertar(Evento evento) {
         int resultado = 0;
@@ -184,5 +223,7 @@ public class EventoMySQL implements EventoDAO{
            //return lista;
            
     //}
+
+ 
     
 }

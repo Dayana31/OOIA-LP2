@@ -46,7 +46,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private void dgvAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             AlumnoWS.alumno data = dgvAlumnos.Rows[e.RowIndex].DataBoundItem
-          as AlumnoWS.alumno;
+            as AlumnoWS.alumno;
             dgvAlumnos.Rows[e.RowIndex].Cells["Especialidad"].Value = data.especialidad.nombre;
         }
     }

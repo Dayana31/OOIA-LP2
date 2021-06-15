@@ -239,7 +239,7 @@ create procedure LISTAR_PROFESOR(
 )begin
 	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
 		m.id_miembro_pucp, m.usuario, m.password, m.fecha_inclusion, m.imagen_perfil,
- 		pr.id_profesor, e.nombre as nombre_especialidad, pr.facultad, pr.categoria
+ 		pr.id_profesor, e.id_especialidad, e.nombre as nombre_especialidad, pr.facultad, pr.categoria
 	from persona p 
 	inner join miembro_pucp m on p.id_persona = m.fid_persona
         inner join profesor pr on pr.fid_miembro_pucp = m.id_miembro_pucp
@@ -253,7 +253,7 @@ create procedure LISTAR_PROFESOR_X_NOMBRE(
 )begin
 	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
 		m.id_miembro_pucp, m.usuario, m.password, m.fecha_inclusion, m.imagen_perfil,
- 		pr.id_profesor, e.nombre as nombre_especialidad, pr.facultad, pr.categoria
+ 		pr.id_profesor, e.id_especialidad, e.nombre as nombre_especialidad, pr.facultad, pr.categoria
 	from persona p 
 	inner join miembro_pucp m on p.id_persona = m.fid_persona
         inner join profesor pr on pr.fid_miembro_pucp = m.id_miembro_pucp
@@ -1052,13 +1052,27 @@ create procedure ELIMINAR_EVENTO(
 end$
 
 delimiter $
-create procedure LISTAR_EVENTO(
-in _nombre varchar(250)
+create procedure LISTAR_EVENTO_X_NOMBRE_CATEGORIA(
+in _nombreCategoria varchar(250)
 )begin
 	/*tabla evento*/
-	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.categoria,e.imagen
+	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.imagen,
+    e.fid_coordinador, e.fid_categoria_evento, ce.nombre as nombre_categoria
     from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador
-    where  (e.nombre LIKE CONCAT('%',_nombre,'%')) and e.estado=1;
+    inner join categoria_evento ce on ce.id_categoria_evento = e.fid_categoria_evento
+    where  (e.nombre LIKE CONCAT('%',_nombreCategoria,'%')) OR (ce.nombre LIKE CONCAT('%',_nombreCategoria,'%')) and e.estado=1;
+end $
+
+delimiter $
+create procedure LISTAR_EVENTO_X_FECHA(
+in _fecha date
+)begin
+	/*tabla evento*/
+	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.imagen,
+    e.fid_coordinador, e.fid_categoria_evento, ce.nombre as nombre_categoria
+    from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador
+    inner join categoria_evento ce on ce.id_categoria_evento = e.fid_categoria_evento
+    where  (e.fecha = _fecha) and e.estado=1;
 end $
 
 --ENCUESTA_EVENTO
