@@ -34,6 +34,9 @@
     <service name="AlumnoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.AlumnoWS</implementation-class>
     </service>
+    <service name="CursoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.CursoWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
