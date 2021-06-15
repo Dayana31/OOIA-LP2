@@ -153,6 +153,30 @@ public class AlumnoMySQL implements AlumnoDAO{
         }
         return resultado;
     }
+
+    @Override
+    public int inicioSesion(String usuario, String password) {
+        int resultado = 0;
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs = con.prepareCall("{call autenticarUsuario(?,?)}");
+            cs.setString("_usuario", usuario);
+            cs.setString("_password", password);
+            rs=cs.executeQuery();
+            if(rs.next())
+                resultado=rs.getInt("fid_persona");
+            
+            resultado = 1;
+            rs.close();
+            cs.close();
+        }catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }finally{
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
+        }
+        return resultado;
+    }
     
 }
 

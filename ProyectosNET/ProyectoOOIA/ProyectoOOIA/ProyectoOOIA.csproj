@@ -794,6 +794,9 @@
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.alumno.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.autenticarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\GestionHumanaWS\ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
