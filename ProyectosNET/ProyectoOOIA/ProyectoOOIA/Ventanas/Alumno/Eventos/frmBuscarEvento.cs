@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
-using ProyectoOOIA.EventoWS;
+using ProyectoOOIA.GestionEventoWS;
 
 namespace ProyectoOOIA.Ventanas
 {
     public partial class frmBuscarEventoAlumno : Form
     {
-        private EventoWS.evento evento = new evento();
+        private GestionEventoWS.evento evento = new GestionEventoWS.evento();
         public frmBuscarEventoAlumno()
         {
             InitializeComponent();
@@ -39,7 +39,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void dgvEventos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            evento=  dgvEventos.Rows[e.RowIndex].DataBoundItem as EventoWS.evento;
+            evento=  dgvEventos.Rows[e.RowIndex].DataBoundItem as GestionEventoWS.evento;
             dgvEventos.Rows[e.RowIndex].Cells[0].Value = evento.nombre;
             dgvEventos.Rows[e.RowIndex].Cells[1].Value = evento.fecha;
             dgvEventos.Rows[e.RowIndex].Cells[2].Value = evento.horaInicio;
@@ -50,7 +50,7 @@ namespace ProyectoOOIA.Ventanas
         {
             if (dgvEventos.CurrentRow.Index >= 0)
             {
-                evento=dgvEventos.CurrentRow.DataBoundItem as EventoWS.evento;
+                evento=dgvEventos.CurrentRow.DataBoundItem as GestionEventoWS.evento;
                 this.Dispose();
             }
         }

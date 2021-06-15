@@ -7,7 +7,7 @@ import pe.edu.pucp.ooia.gest_humana.model.Ponente;
  *
  * @author Gerardo
  */
-public interface PonenteDAO {
+public interface PonenteDao {
     public ArrayList<Ponente> listar();
     public int insertar(Ponente ponente);
     public int modificar(Ponente ponente);

@@ -29,12 +29,13 @@ public class EventoMySQL implements EventoDAO{
     CallableStatement cs;
 
     @Override
-    public ArrayList<Evento> listar() {
+    public ArrayList<Evento> listar(String nombre) {
         ArrayList<Evento> eventos = new ArrayList<>();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_EVENTO()}");
+            cs = con.prepareCall("{call LISTAR_EVENTO(?)}");
+            cs.setString("_nombre", nombre);
             rs = cs.executeQuery();
             while(rs.next()){
                 Evento evento = new Evento();
@@ -42,7 +43,7 @@ public class EventoMySQL implements EventoDAO{
                 evento.setNombre(rs.getString("nombre"));
                 evento.setDescripcion(rs.getString("descripcion"));
                 evento.setCategoria(new CategoriaEvento(rs.getInt("id_categoria_evento"), 
-                        rs.getString("nombre_categoria")));
+                rs.getString("nombre_categoria")));
                 evento.setCoordinador(new Coordinador());
                 evento.setCoordinador(obtenerCoordinador(rs.getInt("fid_coordinador")));
                 evento.setCapacidad(rs.getInt("capacidad"));
@@ -108,8 +109,9 @@ public class EventoMySQL implements EventoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call MODIFICAR_EVENTO(?,?,?,?,?,?,?,?)}");
+            cs = con.prepareCall("{call MODIFICAR_EVENTO(?,?,?,?,?,?,?,?,?,?,?,?)}");
             //Modificamos en evento
+            cs.setInt("_id_evento", evento.getId_evento());
             cs.setString("_nombre", evento.getNombre());
             cs.setString("_descripcion", evento.getDescripcion());
             cs.setInt("_fid_coordinador", evento.getCoordinador().getId_coordinador());
