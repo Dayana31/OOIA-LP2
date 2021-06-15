@@ -37,6 +37,7 @@ namespace ProyectoOOIA.Ventanas
             this.btnGuardar = new System.Windows.Forms.ToolStripButton();
             this.btnBuscar = new System.Windows.Forms.ToolStripButton();
             this.btnModificar = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.txtNombrePonente = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,7 +68,6 @@ namespace ProyectoOOIA.Ventanas
             this.label11 = new System.Windows.Forms.Label();
             this.lblBuscarEventos = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
@@ -151,6 +151,17 @@ namespace ProyectoOOIA.Ventanas
             this.btnModificar.Size = new System.Drawing.Size(62, 22);
             this.btnModificar.Text = "Modificar";
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(54, 22);
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.ToolTipText = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // btnCancelar
             // 
@@ -292,7 +303,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // npdCapacidad
             // 
-            this.npdCapacidad.Location = new System.Drawing.Point(370, 259);
+            this.npdCapacidad.Location = new System.Drawing.Point(370, 229);
             this.npdCapacidad.Minimum = new decimal(new int[] {
             1,
             0,
@@ -319,7 +330,7 @@ namespace ProyectoOOIA.Ventanas
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(311, 260);
+            this.label9.Location = new System.Drawing.Point(311, 230);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 13);
             this.label9.TabIndex = 64;
@@ -363,7 +374,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             // btnAgregarImagen
             // 
-            this.btnAgregarImagen.Location = new System.Drawing.Point(564, 141);
+            this.btnAgregarImagen.Location = new System.Drawing.Point(558, 139);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
             this.btnAgregarImagen.Size = new System.Drawing.Size(162, 23);
             this.btnAgregarImagen.TabIndex = 62;
@@ -380,8 +391,9 @@ namespace ProyectoOOIA.Ventanas
             "Como socializar"});
             this.cboCategoria.Location = new System.Drawing.Point(146, 252);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(138, 21);
+            this.cboCategoria.Size = new System.Drawing.Size(366, 21);
             this.cboCategoria.TabIndex = 61;
+            this.cboCategoria.EnabledChanged += new System.EventHandler(this.cboCategoria_EnabledChanged);
             // 
             // label8
             // 
@@ -404,18 +416,21 @@ namespace ProyectoOOIA.Ventanas
             // 
             // dtpInicio
             // 
-            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpInicio.CustomFormat = "HH:mm";
+            this.dtpInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpInicio.Location = new System.Drawing.Point(146, 200);
             this.dtpInicio.Name = "dtpInicio";
             this.dtpInicio.ShowUpDown = true;
             this.dtpInicio.Size = new System.Drawing.Size(138, 20);
             this.dtpInicio.TabIndex = 70;
+            this.dtpInicio.LocationChanged += new System.EventHandler(this.dtpInicio_LocationChanged);
             this.dtpInicio.Enter += new System.EventHandler(this.dtpInicio_Enter);
             this.dtpInicio.Leave += new System.EventHandler(this.dtpInicio_Leave);
             // 
             // dtpFin
             // 
-            this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpFin.CustomFormat = "HH:mm";
+            this.dtpFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFin.Location = new System.Drawing.Point(370, 200);
             this.dtpFin.Name = "dtpFin";
             this.dtpFin.ShowUpDown = true;
@@ -456,17 +471,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(797, 71);
             this.pnlHeader.TabIndex = 73;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(54, 22);
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.ToolTipText = "Eliminar";
-            this.btnEliminar.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // frmGestionEventosOOIA
             // 

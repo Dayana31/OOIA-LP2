@@ -11,7 +11,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.EspecialidadDAO;
-import pe.edu.pucp.ooia.gest_humana.dao.PonenteDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.PonenteDao;
 import pe.edu.pucp.ooia.gest_humana.dao.ProfesorDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.PsicologoDAO;
 import pe.edu.pucp.ooia.gest_humana.model.Alumno;
@@ -34,7 +34,7 @@ public class GestionHumanaWS {
     private AlumnoDAO alumno;
     private EspecialidadDAO especialidad;    
     private ProfesorDAO daoProfesor;
-    private PonenteDAO ponente;   
+    private PonenteDao ponente;   
     private PsicologoDAO psicologo;
     
     public GestionHumanaWS() {

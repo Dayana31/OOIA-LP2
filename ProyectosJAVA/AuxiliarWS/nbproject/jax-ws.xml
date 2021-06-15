@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="GesionEventoWS">
-      <implementation-class>services.GesionEventoWS</implementation-class>
-    </service>
     <service name="AlumnosCSVcargaWS1">
       <implementation-class>services.AlumnosCSVcargaWS1</implementation-class>
     </service>
@@ -18,6 +15,9 @@
     </service>
     <service name="PsicologosCSVcargaWS">
       <implementation-class>services.PsicologosCSVcargaWS</implementation-class>
+    </service>
+    <service name="GestionEventoWS">
+      <implementation-class>services.GestionEventoWS</implementation-class>
     </service>
   </services>
   <clients/>

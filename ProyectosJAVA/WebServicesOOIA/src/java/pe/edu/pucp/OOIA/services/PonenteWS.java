@@ -11,7 +11,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import pe.edu.pucp.ooia.gest_humana.mysql.PonenteMySQL;
 import pe.edu.pucp.ooia.gest_humana.model.Ponente;
-import pe.edu.pucp.ooia.gest_humana.dao.PonenteDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.PonenteDao;
 
 /**
  *
@@ -23,7 +23,7 @@ public class PonenteWS {
     /**
      * This is a sample web service operation
      */
-    private PonenteDAO ponente;
+    private PonenteDao ponente;
 
     public PonenteWS() {
         ponente=new PonenteMySQL();

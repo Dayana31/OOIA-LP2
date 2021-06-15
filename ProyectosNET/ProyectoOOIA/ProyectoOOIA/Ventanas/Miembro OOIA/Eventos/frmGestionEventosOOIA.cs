@@ -4,12 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProyectoOOIA.EventoWS;
+using ProyectoOOIA.GestionEventoWS;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
 
 
@@ -24,12 +26,12 @@ namespace ProyectoOOIA.Ventanas
         ErrorProvider errorInicio = new ErrorProvider();
         ErrorProvider errorDescripcion = new ErrorProvider();
         ErrorProvider errorLugar = new ErrorProvider();
-        private EventoWS.EventoWSClient eventoDao;
-        private EventoWS.evento evento;
-        private BindingList<PonenteWS.ponente> lista = new BindingList<PonenteWS.ponente>();
-        private PonenteWS.ponente ponente;
-        
-
+        private GestionEventoWS.GestionEventoWSClient eventoDao;
+        private GestionEventoWS.evento evento;
+        private BindingList<GestionEventoWS.ponente> lista = new BindingList<GestionEventoWS.ponente>();
+        private GestionEventoWS.ponente ponente;
+        private Byte[] imagen;
+        private Estado estado = Estado.Inicial;
         public frmGestionEventosOOIA(Estado estado)
         {
             InitializeComponent();
@@ -44,8 +46,8 @@ namespace ProyectoOOIA.Ventanas
             errorNombre.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             errorLugar.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             errorDescripcion.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            evento = new EventoWS.evento();
-            eventoDao = new EventoWS.EventoWSClient();
+            evento = new GestionEventoWS.evento();
+            eventoDao = new GestionEventoWS.GestionEventoWSClient();
         }
 
         private void componentes(Estado estado)
@@ -74,7 +76,7 @@ namespace ProyectoOOIA.Ventanas
                     txtLugar.Enabled = false;
                     dgvPonentes.RowCount = 1;
                     btnBuscarPonente.Enabled = false;
-                    
+                    cboCategoria.Enabled = false;
                     dtpFin.Enabled = false;
                     dtpInicio.Enabled = false;
                     btnEliminar.Enabled = false;
@@ -100,7 +102,7 @@ namespace ProyectoOOIA.Ventanas
                     npdCapacidad.Enabled = true;
                     txtLugar.Enabled = true;
                     btnBuscarPonente.Enabled = true;
-                    
+                    cboCategoria.Enabled = true;
                     btnEliminar.Enabled = false;
 
                     break;
@@ -124,7 +126,7 @@ namespace ProyectoOOIA.Ventanas
                     dgvPonentes.Enabled = false;
                     npdCapacidad.Enabled = false;
                     txtLugar.Enabled = false;
-                    
+                    cboCategoria.Enabled = false;
                     dtpFin.Enabled = false;
                     dtpInicio.Enabled = false;
                     btnEliminar.Enabled = true;
@@ -150,7 +152,7 @@ namespace ProyectoOOIA.Ventanas
                     npdCapacidad.Enabled = true;
                     txtLugar.Enabled = true;
                     btnBuscarPonente.Enabled = true;
-                    
+                    cboCategoria.Enabled = true;
                     btnEliminar.Enabled = true;
                     break;
 
@@ -167,11 +169,23 @@ namespace ProyectoOOIA.Ventanas
             txtNombre.Text = evento.nombre;
             txtDescripcion.Text = "Descripcion";
             txtLugar.Text = evento.lugar;
-            
             dtpFechaEvento.Value = evento.fecha;
-            //dtpInicio.Value = evento.horaInicio;
-            //dtpFin.Value = evento.horaFin;
+            dtpInicio.Value = evento.horaInicio;
+            dtpFin.Value = evento.horaFin;
+            cboCategoria.SelectedIndex = evento.categoria.id_categoria - 1;
+            npdCapacidad.Value = evento.capacidad;
+            try
+            {
+                pictureBox1.Image = new Bitmap(new MemoryStream(evento.imagen));
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Este evento no tiene imagen asociada", "Imagen",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            }
             
+
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -189,23 +203,48 @@ namespace ProyectoOOIA.Ventanas
                 evento.fechaSpecified = true;
                 evento.activo = true;
                 evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
-                //evento.horaInicio = dtpInicio.Value;
-                //evento.horaInicio = true;
-                //evento.horaFin = dtpFin.Value;
-                //evento.horaFin = true;
-                //evento.id_coordinador = 11;
+                evento.horaInicio = dtpInicio.Value;
+                evento.horaFin = dtpFin.Value;
+                evento.horaFinSpecified = true;
+                evento.horaInicioSpecified = true;
+                evento.categoria = new GestionEventoWS.categoriaEvento();
+                evento.categoria=cboCategoria.SelectedItem as GestionEventoWS.categoriaEvento;
                 evento.lugar = txtLugar.Text;
+                evento.descripcion = txtDescripcion.Text;
+                evento.imagen = imagen;
+                evento.ponentes = lista.ToArray();
+                evento.coordinador = new GestionEventoWS.coordinador();
+                evento.coordinador.id_coordinador = 1;
+                
 
                 //evento.ponentes = lista.ToArray();
                 DialogResult dr =
                     MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 if (dr == DialogResult.Yes)
                 {
-                    if (eventoDao.insertarEvento(evento) == 1)
+                    if(estado==Estado.Nuevo)
                     {
-                        MessageBox.Show("Exito");
+                        if (eventoDao.insertarEvento(evento) == 1)
+                        {
+                            MessageBox.Show("El registro ha sido exitoso", "Exito", MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                        }
+                        else
+                            MessageBox.Show("Ha habido un error", "Error", MessageBoxButtons.RetryCancel,
+                                MessageBoxIcon.Error);
                     }
-                    else MessageBox.Show("Fallo");
+                    else if (estado == Estado.Modificar)
+                    {
+                        if (eventoDao.modificarEvento(evento) == 1)
+                        {
+                            MessageBox.Show("El registro ha sido exitoso", "Exito", MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                        }
+                        else
+                            MessageBox.Show("Ha habido un error", "Error", MessageBoxButtons.RetryCancel,
+                                MessageBoxIcon.Error);
+                    }
+
                 }
             }
         }
@@ -218,6 +257,8 @@ namespace ProyectoOOIA.Ventanas
                     MessageBoxIcon.Error);
                 return 0;
             }
+            else if(dtpInicio.Value>dtpFin.Value ) MessageBox.Show("La hora final debe ser mayor a la inicial", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if(txtDescripcion.Text=="" || txtLugar.Text=="" || txtNombre.Text=="") MessageBox.Show("Debe ingresar algún texto en los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             return 1;
         }
@@ -225,12 +266,16 @@ namespace ProyectoOOIA.Ventanas
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             componentes(Estado.Nuevo);
+            estado = Estado.Nuevo;
+
+
         }
 
         private void btnAgregarImagen_Click(object sender, EventArgs e)
         {
             if (agregarImagen.ShowDialog() == DialogResult.OK)
             {
+                imagen = File.ReadAllBytes(agregarImagen.InitialDirectory + agregarImagen.FileName);
                 pictureBox1.Image = new Bitmap(agregarImagen.InitialDirectory + agregarImagen.FileName);
                 
             }
@@ -239,36 +284,28 @@ namespace ProyectoOOIA.Ventanas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             componentes(Estado.Inicial);
+            limpiar();
         }
 
+        private void limpiar()
+        {
+             txtNombre.Text="";
+            dtpFechaEvento.Value=DateTime.Today;
+            npdCapacidad.Value=1;
+             dtpInicio.Value=DateTime.Now;
+             dtpFin.Value = DateTime.Now;
+             cboCategoria.SelectedIndex = 0;
+            txtLugar.Text="";
+            txtDescripcion.Text="";
+            pictureBox1.Image = null;
+            lista.Clear();
+            evento.coordinador = null;
+        }
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            estado = Estado.Modificar;
             componentes(Estado.Nuevo);
-            if (validacionDatos() == 1)
-            {
-                evento.nombre = txtNombre.Text;
-                evento.fecha = dtpFechaEvento.Value;
-                evento.fechaSpecified = true;
-                evento.activo = true;
-                evento.capacidad = Decimal.ToInt32(npdCapacidad.Value);
-                //evento.horaInicio = dtpInicio.Value;
-                //evento.horaInicioSpecified = true;
-                //evento.horaFina = dtpFin.Value;
-                //evento.horaFinaSpecified = true;
-                evento.lugar = txtLugar.Text;
-
-                //evento.ponentes = lista.ToArray();
-                DialogResult dr =
-                    MessageBox.Show("¿Desea modificar este evento?", "Modificar Evento", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (dr == DialogResult.Yes)
-                {
-                    if (eventoDao.modificarEvento(evento) == 1)
-                    {
-                        MessageBox.Show("Se ha registrado el evento","Exito",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    }
-                    else MessageBox.Show("Ha fallado el registro del evento","Fallo",MessageBoxButtons.RetryCancel,MessageBoxIcon.Error);
-                }
-            } 
+            
         }
 
         private void btnAgregarPonente_Click(object sender, EventArgs e)
@@ -290,6 +327,7 @@ namespace ProyectoOOIA.Ventanas
         {
             frmMostrarPonentes mostrar = new frmMostrarPonentes();
             mostrar.ShowDialog();
+            lista.Add(mostrar.Ponente);
             //ponente = asignarPersona(mostrar.Ponente);
             txtNombrePonente.Text = ponente.nombre;
 
@@ -339,7 +377,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void txtHora_Leave(object sender, EventArgs e)
         {
-            if(dtpFin.Value<dtpInicio.Value)
+            if(dtpFin.Value.TimeOfDay <= dtpInicio.Value.TimeOfDay)
                 errorFin.SetError(dtpFin,"La hora final debe ser mayor que la inicial");
             
            
@@ -354,7 +392,7 @@ namespace ProyectoOOIA.Ventanas
         private void txtHoraFin_Leave(object sender, EventArgs e)
         {
             
-           if(dtpFin.Value<dtpInicio.Value)
+           if(dtpFin.Value<=dtpInicio.Value)
                errorFin.SetError(dtpFin,"La hora final debe ser mayor que la inicial");
            else errorInicio.Clear();
 
@@ -387,7 +425,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void dtpInicio_Leave(object sender, EventArgs e)
         {
-            if(dtpInicio.Value>dtpFin.Value)
+            if(dtpFin.Value <= dtpInicio.Value)
                 errorInicio.SetError(dtpInicio,"La hora inicial debe ser menor que la inicial");
            else errorFin.Clear();
 
@@ -418,6 +456,16 @@ namespace ProyectoOOIA.Ventanas
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             eventoDao.eliminarEvento(evento);
+        }
+
+        private void cboCategoria_EnabledChanged(object sender, EventArgs e)
+        {
+            if(cboCategoria.Enabled=true) cboCategoria.DataSource = new GestionEventoWS.GestionEventoWSClient().listarCategoriaEvento();
+        }
+
+        private void dtpInicio_LocationChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

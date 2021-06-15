@@ -10,7 +10,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
     {
 
         private int tipoUsuario = -1;
-        private PonenteWS.ponente ponente=null;
+        private GestionEventoWS.ponente ponente=null;
         public frmMostrarPonentes()
         {
             InitializeComponent();
@@ -28,8 +28,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             tipoUsuario = cmbHorario.SelectedIndex;
             
 
-            ponente = new PonenteWS.ponente();
-            dgvPonentes.DataSource = new PonenteWS.PonenteWSClient().listarPonente();
+            ponente = new GestionEventoWS.ponente();
+            dgvPonentes.DataSource = new GestionHumanaWS.GestionHumanaWSClient().listarPonente();
 
         }
 
@@ -41,7 +41,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
 
        
 
-        public ponente Ponente
+        public GestionEventoWS.ponente Ponente
         {
             get => ponente;
             set => ponente = value;
@@ -50,7 +50,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
         private void dgvPonentes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
 
-            ponente = dgvPonentes.Rows[e.RowIndex].DataBoundItem as PonenteWS.ponente;
+            ponente = dgvPonentes.Rows[e.RowIndex].DataBoundItem as GestionEventoWS.ponente;
             dgvPonentes.Rows[e.RowIndex].Cells[0].Value = ponente.nombre;
             dgvPonentes.Rows[e.RowIndex].Cells[1].Value = ponente.correo;
         }
@@ -58,7 +58,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             if (ponente == null) return;
-            ponente = dgvPonentes.CurrentRow.DataBoundItem as PonenteWS.ponente;
+            ponente = dgvPonentes.CurrentRow.DataBoundItem as GestionEventoWS.ponente;
 
 
             this.Dispose();

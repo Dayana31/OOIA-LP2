@@ -19,8 +19,8 @@ public class Evento{
     private int capacidad;
     private int cupo;
     private Date fecha;
-    private Time  horaInicio;
-    private Time  horaFin;
+    private Date  horaInicio;
+    private Date  horaFin;
     private String lugar;
     private byte[] imagen;
     private ArrayList <Ponente> ponentes;
@@ -95,21 +95,23 @@ public class Evento{
         this.fecha = fecha;
     }
 
-    public Time getHoraInicio() {
+    public Date getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(Time horaInicio) {
+    public void setHoraInicio(Date horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public Time getHoraFin() {
+    public Date getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(Time horaFin) {
+    public void setHoraFin(Date horaFin) {
         this.horaFin = horaFin;
     }
+
+
 
     public String getLugar() {
         return lugar;
