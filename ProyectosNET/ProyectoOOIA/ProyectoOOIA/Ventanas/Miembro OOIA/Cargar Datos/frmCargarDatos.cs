@@ -46,10 +46,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             
             FileStream fs = new FileStream(txtAlumno.Text, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
-            /*CargarCSValumnos.AlumnosCSVcargaWSClient cargaCSVAlumnos =
-                new CargarCSValumnos.AlumnosCSVcargaWS1Client();*/
+            CargarCSValumnosWS.AlumnosCSVcargaWS1Client cargaCSVAlumnos =
+                new CargarCSValumnosWS.AlumnosCSVcargaWS1Client();
             int resultado = 1;
-            //resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
+            resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
             br.Close();
             fs.Close();
             if(resultado == 0)
@@ -93,15 +93,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             int resultado = 1;
             if (rbProfesor.Checked)
             {
-                /*CargarCSVprofesores.ProfesoresCSVcargaWSClient cargaCSVprofesores =
-                    new CargarCSVprofesores.ProfesoresCSVcargaWSClient();*/
-                //resultado = cargaCSVprofesores.CargarCSVprofesores(br.ReadBytes((int)fs.Length));
+                CargarCSVprofesoresWS.ProfesoresCSVcargaWSClient cargaCSVprofesores =
+                    new CargarCSVprofesoresWS.ProfesoresCSVcargaWSClient();
+                resultado = cargaCSVprofesores.CargarCSVprofesores(br.ReadBytes((int)fs.Length));
             }
             if (rbPsicologo.Checked)
             {
-                /*CargarCSVpsicologos.PsicologosCSVcargaWSClient cargaCSVpsicologos =
-                new CargarCSVpsicologos.PsicologosCSVcargaWSClient();*/
-                //int resultado = cargaCSVpsicologos.CargarCSVpsicologos(txtRutaArchivo.Text);
+                CargarCSVpsicologosWS.PsicologosCSVcargaWSClient cargaCSVpsicologos =
+                new CargarCSVpsicologosWS.PsicologosCSVcargaWSClient();
+                resultado = cargaCSVpsicologos.CargarCSVpsicologos(br.ReadBytes((int)fs.Length));
             }
             br.Close();
             fs.Close();

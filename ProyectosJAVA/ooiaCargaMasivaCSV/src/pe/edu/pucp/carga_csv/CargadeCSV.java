@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pruebaCargaDatosCSV;
+package pe.edu.pucp.carga_csv;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -18,7 +18,7 @@ import java.util.Scanner;
 public class CargadeCSV {
     public static void main(String[] args) throws Exception{
         /*Alumnos, ya funciona*/
-//        FileInputStream file = new FileInputStream("C:\\7mo ciclo\\LP2\\Proyecto Lp2\\Lab 7\\Archivos de carga\\Alumnos.csv");
+//        FileInputStream file = new FileInputStream("C:\\7mo ciclo\\LP2\\Proyecto Lp2\\Proyecto\\OOIA-LP2\\Archivos de carga\\Alumnos.csv");
 //        AlumnosCSV alumnosCsv = new AlumnosCSV();
 //        
 //        alumnosCsv.setRutaCSV(file);
@@ -29,7 +29,7 @@ public class CargadeCSV {
 //            System.out.println("Hubieron " + filasNoInsertadas + " filas que no se pudieron insertar");
 //        }
         /*Profesores, ya funciona*/
-//        FileInputStream file = new FileInputStream("C:\\7mo ciclo\\LP2\\Proyecto Lp2\\Lab 7\\Archivos de carga\\Profesores.csv");
+//        FileInputStream file = new FileInputStream("C:\\7mo ciclo\\LP2\\Proyecto Lp2\\Proyecto\\OOIA-LP2\\Archivos de carga\\Profesores.csv");
 //        ProfesoresCSV profesores = new ProfesoresCSV();
 //        
 //        profesores.setRutaCSV(file);
@@ -40,7 +40,7 @@ public class CargadeCSV {
 //            System.out.println("Hubieron " + filasNoInsertadas + " filas que no se pudieron insertar");
 //        }
         /*Psicologos, ya funciona*/
-        FileInputStream file = new FileInputStream("C:\\7mo ciclo\\LP2\\Proyecto Lp2\\Lab 7\\Archivos de carga\\Psicologos.csv");
+        FileInputStream file = new FileInputStream("C:\\7mo ciclo\\LP2\\Proyecto Lp2\\Proyecto\\OOIA-LP2\\Archivos de carga\\Psicologos.csv");
         PsicologosCSV psicologos = new PsicologosCSV();
         
         psicologos.setRutaCSV(file);

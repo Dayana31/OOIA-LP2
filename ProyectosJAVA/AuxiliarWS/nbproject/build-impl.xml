@@ -1040,7 +1040,6 @@ exists or setup the property manually. For example like this:
     <target depends="init,compile,compile-jsps,-pre-dist,-do-dist-with-manifest,-do-dist-without-manifest" name="do-dist"/>
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
         <copyfiles files="${reference.OOIAConfigMySql.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${reference.PruebaMySql.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${file.reference.mysql-connector-java-8.0.24.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.Interfaces.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.ooiaGestHumanaController.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
@@ -1049,12 +1048,12 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${reference.ooiaGestEventosController.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.ooiaGestAtencionModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.ooiaGestAtencionController.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.PruebaMySql.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
         <copyfiles files="${reference.OOIAConfigMySql.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${reference.PruebaMySql.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${file.reference.mysql-connector-java-8.0.24.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.Interfaces.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.ooiaGestHumanaController.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
@@ -1063,6 +1062,7 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${reference.ooiaGestEventosController.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.ooiaGestAtencionModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.ooiaGestAtencionController.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.PruebaMySql.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
