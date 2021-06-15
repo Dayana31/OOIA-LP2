@@ -75,6 +75,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnCodigoAtencion = new System.Windows.Forms.Button();
             this.lblCodigoAtencionForm = new System.Windows.Forms.Label();
             this.lblCodigoAtencion = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.PictureBox();
             this.pnlHeader.SuspendLayout();
             this.panelGestionHumana.SuspendLayout();
             this.tabGestionHumana.SuspendLayout();
@@ -86,6 +87,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlAlumno.SuspendLayout();
             this.tabGestionAtencion.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // archivos
@@ -95,6 +97,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // pnlHeader
             // 
             this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.pnlHeader.Controls.Add(this.btnBack);
             this.pnlHeader.Controls.Add(this.txtHeader);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -106,7 +109,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             this.txtHeader.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHeader.ForeColor = System.Drawing.SystemColors.Control;
-            this.txtHeader.Location = new System.Drawing.Point(51, 34);
+            this.txtHeader.Location = new System.Drawing.Point(41, 34);
             this.txtHeader.Name = "txtHeader";
             this.txtHeader.Size = new System.Drawing.Size(356, 37);
             this.txtHeader.TabIndex = 1;
@@ -333,6 +336,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnAsesorFile.TabIndex = 40;
             this.btnAsesorFile.Text = "...";
             this.btnAsesorFile.UseVisualStyleBackColor = true;
+            this.btnAsesorFile.Click += new System.EventHandler(this.btnAsesorFile_Click);
             // 
             // rbPsicologo
             // 
@@ -385,6 +389,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnAsesorCSV.TabIndex = 34;
             this.btnAsesorCSV.Text = "Cargar desde csv";
             this.btnAsesorCSV.UseVisualStyleBackColor = true;
+            this.btnAsesorCSV.Click += new System.EventHandler(this.btnAsesorCSV_Click);
             // 
             // lblAsesorCSV
             // 
@@ -450,6 +455,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnAlumnoFile.TabIndex = 37;
             this.btnAlumnoFile.Text = "...";
             this.btnAlumnoFile.UseVisualStyleBackColor = true;
+            this.btnAlumnoFile.Click += new System.EventHandler(this.btnAlumnoFile_Click);
             // 
             // lblAlumno
             // 
@@ -469,6 +475,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnAlumnoCSV.TabIndex = 34;
             this.btnAlumnoCSV.Text = "Cargar desde csv";
             this.btnAlumnoCSV.UseVisualStyleBackColor = true;
+            this.btnAlumnoCSV.Click += new System.EventHandler(this.btnAlumnoCSV_Click);
             // 
             // lblAlumnoCSV
             // 
@@ -573,6 +580,19 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.lblCodigoAtencion.TabIndex = 12;
             this.lblCodigoAtencion.Text = "Códigos de Atención";
             // 
+            // btnBack
+            // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.Image = global::ProyectoOOIA.Properties.Resources.arrowWhite;
+            this.btnBack.Location = new System.Drawing.Point(11, 34);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(25, 25);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnBack.TabIndex = 4;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmCargarDatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -603,6 +623,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabGestionAtencion.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -654,5 +675,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private System.Windows.Forms.Button btnCodigoAtencion;
         private System.Windows.Forms.Label lblCodigoAtencionForm;
         private System.Windows.Forms.Label lblCodigoAtencion;
+        private System.Windows.Forms.PictureBox btnBack;
     }
 }
