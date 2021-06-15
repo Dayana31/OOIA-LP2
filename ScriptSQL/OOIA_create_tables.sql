@@ -2,7 +2,7 @@
 /*Gestion Humana*/
 create table especialidad(
 	id_especialidad int auto_increment,
-	nombre_especialidad varchar(100),
+	nombre varchar(100),
 	activo bool,
 
     	primary key (id_especialidad)

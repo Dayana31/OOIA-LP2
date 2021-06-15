@@ -11,7 +11,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
     {
         private EspecialidadWS.EspecialidadWSClient daoEspecialidad;
         private AlumnoWS.AlumnoWSClient daoAlumno;
-       private AlumnoWS.alumno alumno;
+        private AlumnoWS.alumno alumno;
         private byte[] imagen_perfil;
         private Estado estado;
 
@@ -25,7 +25,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             daoAlumno = new AlumnoWS.AlumnoWSClient();
             cbEspecialidad.DataSource = new BindingList<EspecialidadWS.especialidad>
                 (daoEspecialidad.listarEspecialidad().ToList());
-            cbEspecialidad.DisplayMember = "nombre_especialidad";
+            cbEspecialidad.DisplayMember = "nombre";
             cbEspecialidad.ValueMember = "id_especialidad";
         }
 

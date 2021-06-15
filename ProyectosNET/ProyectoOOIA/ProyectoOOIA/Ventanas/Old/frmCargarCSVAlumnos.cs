@@ -35,12 +35,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void btnSeleccionArchivo_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            if(openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if(openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string ruta = openFileDialog1.FileName;
-                
+                string ruta = openFileDialog.FileName;
                 txtRutaArchivo.Text = ruta;
             }
         }

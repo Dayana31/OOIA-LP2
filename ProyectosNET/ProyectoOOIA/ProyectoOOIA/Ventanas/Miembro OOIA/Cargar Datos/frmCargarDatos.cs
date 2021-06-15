@@ -1,5 +1,7 @@
 ﻿using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos;
+using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana;
 using System;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA
@@ -9,94 +11,105 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         public frmCargarDatos()
         {
             InitializeComponent();
-            data.AutoGenerateColumns = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            if (archivos.ShowDialog() == DialogResult.OK)
-            {
-                cmbAlumno.Text = archivos.FileName;
-            }
+            this.Close();
         }
 
-        private void btnProfesores_Click(object sender, EventArgs e)
-        {
-            if (archivos.ShowDialog() == DialogResult.OK)
-            {
-                cmbProfesor.Text = archivos.FileName;
-            }
-        }
-
-        private void btnCursos_Click(object sender, EventArgs e)
-        {
-            if (archivos.ShowDialog() == DialogResult.OK)
-            {
-                cmbCurso.Text = archivos.FileName;
-            }
-        }
-
-        private void btnNotas_Click(object sender, EventArgs e)
-        {
-            if (archivos.ShowDialog() == DialogResult.OK)
-            {
-                cmbNotas.Text = archivos.FileName;
-            }
-        }
-
-        private void btnPsicologo_Click(object sender, EventArgs e)
-        {
-            /*if (archivos.ShowDialog() == DialogResult.OK)
-            {
-                cmbPsicologo.Text = archivos.FileName;
-            }*/
-            new frmCargarPsicologo().ShowDialog();
-
-        }
-
-        private void btnMax_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Enter(object sender, EventArgs e)
-        {
-            txtHeader.Text = "Cargar datos de Gestion Humana";
-        }
-
-        private void panelGestionHumana_Enter(object sender, EventArgs e)
-        {
-            txtHeader.Text = "Cargar datos de Gestion Humana";
-        }
-
+        /*TAB Gestion Humana*/
+        //Alumno
         private void btnAlumno_Click(object sender, EventArgs e)
         {
             new frmCargarAlumno().ShowDialog();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnAlumnoFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string ruta = openFileDialog.FileName;
+                txtAlumno.Text = ruta;
+            }
+        }
+
+        private void btnAlumnoCSV_Click(object sender, EventArgs e)
+        {
+            FileStream fs = new FileStream(txtAlumno.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            /*CargarCSValumnos.AlumnosCSVcargaWSClient cargaCSVAlumnos =
+                new CargarCSValumnos.AlumnosCSVcargaWS1Client();*/
+            int resultado = 1;
+            //resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
+            br.Close();
+            fs.Close();
+            if(resultado == 0)
+                MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
+                    MessageBoxButtons.OK);
+            else
+                MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        //Asesor
+        private void btnAsesor_Click(object sender, EventArgs e)
+        {
+            if (rbProfesor.Checked) new frmCargarProfesor().ShowDialog();
+            if (rbPsicologo.Checked) new frmCargarPsicologo().ShowDialog();
+        }
+
+        private void btnAsesorFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string ruta = openFileDialog.FileName;
+
+                txtAsesor.Text = ruta;
+            }
+        }
+
+        private void btnAsesorCSV_Click(object sender, EventArgs e)
+        {
+            FileStream fs = new FileStream(txtAsesor.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            
+            int resultado = 1;
+            if (rbProfesor.Checked)
+            {
+                /*CargarCSVprofesores.ProfesoresCSVcargaWSClient cargaCSVprofesores =
+                    new CargarCSVprofesores.ProfesoresCSVcargaWSClient();*/
+                //resultado = cargaCSVprofesores.CargarCSVprofesores(br.ReadBytes((int)fs.Length));
+            }
+            if (rbPsicologo.Checked)
+            {
+                /*CargarCSVpsicologos.PsicologosCSVcargaWSClient cargaCSVpsicologos =
+                new CargarCSVpsicologos.PsicologosCSVcargaWSClient();*/
+                //int resultado = cargaCSVpsicologos.CargarCSVpsicologos(txtRutaArchivo.Text);
+            }
+            br.Close();
+            fs.Close();
+            if (resultado == 0)
+                MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else 
+                MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        /*TAB Gestion Atencion*/
+        private void btnCodigoAtencion_Click(object sender, EventArgs e)
         {
             new frmCodigosAtencion().ShowDialog();
         }
 
-        private void btnCargaCSVAlumnos_Click(object sender, EventArgs e)
+        private void btnEspecialidad_Click(object sender, EventArgs e)
         {
-            new frmCargarCSVAlumnos().ShowDialog();
-        }
-
-        private void btnCargaCSVProfesores_Click(object sender, EventArgs e)
-        {
-            new frmCargarCSVProfesores().ShowDialog();
-        }
-
-        private void btnCargaCSVPsicologos_Click(object sender, EventArgs e)
-        {
-            new frmCargarCSVPsicologos().ShowDialog();
-        }
-
-        private void btnProfesores_Click_1(object sender, EventArgs e)
-        {
-            new frmCargarProfesor().ShowDialog();
+            new frmCargarEspecialidad().ShowDialog();
         }
     }
 }

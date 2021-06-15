@@ -32,7 +32,7 @@ public class EventoWS {
     public ArrayList<Evento> listarEvento(@WebParam(name = "nombre")String nombre) {
         ArrayList<Evento> lista= new ArrayList<>();
         try {
-            lista=evento.listar(nombre);
+            lista=evento.listar();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
