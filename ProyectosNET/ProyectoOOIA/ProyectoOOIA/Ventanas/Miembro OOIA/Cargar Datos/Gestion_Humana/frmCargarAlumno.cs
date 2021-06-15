@@ -34,14 +34,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             /*Persona*/
             txtDni.Text = "";
             txtNombre.Text = "";
-            txtEdad.Text = "";
+            dtpFechaNacimiento.Value = DateTime.Today;
             txtDireccion.Text = "";
             txtCorreo.Text = "";
             /*Miembro PUCP*/
             txtUsuario.Text = "";
             txtPassword.Text = "";
             /*Alumno*/
-            txtIdAlumno.Text = "";
             txtCodigo.Text = "";
             cbEspecialidad.SelectedIndex = -1;
             /*Imagen*/
@@ -77,14 +76,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     /*Persona*/
                     txtDni.Enabled = false;
                     txtNombre.Enabled = false;
-                    txtEdad.Enabled = false;
+                    dtpFechaNacimiento.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtCorreo.Enabled = false;
                     /*Miembro PUCP*/
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
                     /*Alumno*/
-                    txtIdAlumno.Enabled = false;
                     txtCodigo.Enabled = false;
                     cbEspecialidad.Enabled = false;
                     break;
@@ -103,14 +101,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     /*Persona*/
                     txtDni.Enabled = true;
                     txtNombre.Enabled = true;
-                    txtEdad.Enabled = true;
+                    dtpFechaNacimiento.Enabled = true;
                     txtDireccion.Enabled = true;
                     txtCorreo.Enabled = true;
                     /*Miembro PUCP*/
                     txtUsuario.Enabled = true;
                     txtPassword.Enabled = true;
                     /*Alumno*/
-                    txtIdAlumno.Enabled = false;
                     txtCodigo.Enabled = true;
                     cbEspecialidad.Enabled = true;
                     break;
@@ -128,14 +125,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     /*Persona*/
                     txtDni.Enabled = false;
                     txtNombre.Enabled = false;
-                    txtEdad.Enabled = false;
+                    dtpFechaNacimiento.Enabled = false;
                     txtDireccion.Enabled = false;
                     txtCorreo.Enabled = false;
                     /*Miembro PUCP*/
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
                     /*Alumno*/
-                    txtIdAlumno.Enabled = false;
                     txtCodigo.Enabled = false;
                     cbEspecialidad.Enabled = false;
                     break;
@@ -178,7 +174,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             imagen_perfil = alu.imagenDePerfil;
             if(imagen_perfil != null)displayImage(imagen_perfil);
             //Alumno
-            txtIdAlumno.Text = alu.id_alumno.ToString();
             txtCodigo.Text = alumno.codigo;
             EspecialidadWS.especialidad esp_selected = new EspecialidadWS.especialidad();
             esp_selected.id_especialidad = alu.especialidad.id_especialidad;
@@ -194,7 +189,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             clearall();
         }
 
-        private void tsbGuardar_Click(object sender, EventArgs e)
+        private void tsbGuardar_Click_1(object sender, EventArgs e)
         {
             //Validación Persona
             if (txtDni.Text == "")
@@ -207,13 +202,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("No ha ingresado el nombre", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            try
-            {
-                Int32.Parse(txtEdad.Text);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No ha ingresado correctamente la edad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if(dtpFechaNacimiento.Value == DateTime.Today)
+            { 
+                MessageBox.Show("No ha ingresado correctamente la fecha de nacimiento", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (txtDireccion.Text == "")
@@ -251,7 +242,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Persona
             alumno.dni = txtDni.Text;
             alumno.nombre = txtNombre.Text;
-            //alumno.edad = Int32.Parse(txtEdad.Text);
+            alumno.fecha_nacimiento = dtpFechaNacimiento.Value;
+            alumno.fecha_nacimientoSpecified = true;
             alumno.direccion = txtDireccion.Text;
             alumno.correo = txtCorreo.Text;
             //Miembro PUCP
@@ -274,7 +266,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha registrado con exito", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtIdAlumno.Text = resultado.ToString();
                     this.estado = Estado.Inicial;
                     cambiarEstado();
                 }
@@ -353,5 +344,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             }
 
         }
+
     }
 }

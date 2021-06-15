@@ -51,28 +51,26 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblAlumno = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblIdAlumno = new System.Windows.Forms.Label();
-            this.txtIdAlumno = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPersona = new System.Windows.Forms.TabPage();
             this.btnImagen1 = new System.Windows.Forms.Button();
             this.pbPerfil1 = new System.Windows.Forms.PictureBox();
             this.pnlDatosPersona = new System.Windows.Forms.Panel();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.lblEdad = new System.Windows.Forms.Label();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.lblDni = new System.Windows.Forms.Label();
             this.lblPersona = new System.Windows.Forms.Label();
             this.tabAlumno = new System.Windows.Forms.TabPage();
+            this.btnImagen2 = new System.Windows.Forms.Button();
             this.pbPerfil2 = new System.Windows.Forms.PictureBox();
             this.ofd_Imagen = new System.Windows.Forms.OpenFileDialog();
-            this.btnImagen2 = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.tsAlumno.SuspendLayout();
@@ -153,7 +151,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(73, 24);
             this.tsbGuardar.Text = "Guardar";
-            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click_1);
             // 
             // tsbModificar
             // 
@@ -203,8 +201,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlDatosAlumno.Controls.Add(this.lblAlumno);
             this.pnlDatosAlumno.Controls.Add(this.txtCodigo);
             this.pnlDatosAlumno.Controls.Add(this.lblCodigo);
-            this.pnlDatosAlumno.Controls.Add(this.lblIdAlumno);
-            this.pnlDatosAlumno.Controls.Add(this.txtIdAlumno);
             this.pnlDatosAlumno.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlDatosAlumno.Location = new System.Drawing.Point(3, 3);
             this.pnlDatosAlumno.Name = "pnlDatosAlumno";
@@ -258,7 +254,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // cbEspecialidad
             // 
             this.cbEspecialidad.FormattingEnabled = true;
-            this.cbEspecialidad.Location = new System.Drawing.Point(152, 211);
+            this.cbEspecialidad.Location = new System.Drawing.Point(152, 155);
             this.cbEspecialidad.Name = "cbEspecialidad";
             this.cbEspecialidad.Size = new System.Drawing.Size(179, 21);
             this.cbEspecialidad.TabIndex = 6;
@@ -267,7 +263,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.lblEspecialidad.AutoSize = true;
             this.lblEspecialidad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecialidad.Location = new System.Drawing.Point(6, 209);
+            this.lblEspecialidad.Location = new System.Drawing.Point(6, 153);
             this.lblEspecialidad.Name = "lblEspecialidad";
             this.lblEspecialidad.Size = new System.Drawing.Size(83, 21);
             this.lblEspecialidad.TabIndex = 5;
@@ -277,7 +273,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.lblAlumno.AutoSize = true;
             this.lblAlumno.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlumno.Location = new System.Drawing.Point(5, 129);
+            this.lblAlumno.Location = new System.Drawing.Point(3, 99);
             this.lblAlumno.Name = "lblAlumno";
             this.lblAlumno.Size = new System.Drawing.Size(171, 27);
             this.lblAlumno.TabIndex = 4;
@@ -285,7 +281,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(152, 185);
+            this.txtCodigo.Location = new System.Drawing.Point(152, 129);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 3;
@@ -294,28 +290,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(5, 183);
+            this.lblCodigo.Location = new System.Drawing.Point(3, 126);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(96, 21);
             this.lblCodigo.TabIndex = 2;
             this.lblCodigo.Text = "Codigo PUCP";
-            // 
-            // lblIdAlumno
-            // 
-            this.lblIdAlumno.AutoSize = true;
-            this.lblIdAlumno.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdAlumno.Location = new System.Drawing.Point(5, 157);
-            this.lblIdAlumno.Name = "lblIdAlumno";
-            this.lblIdAlumno.Size = new System.Drawing.Size(77, 21);
-            this.lblIdAlumno.TabIndex = 1;
-            this.lblIdAlumno.Text = "ID Alumno";
-            // 
-            // txtIdAlumno
-            // 
-            this.txtIdAlumno.Location = new System.Drawing.Point(152, 159);
-            this.txtIdAlumno.Name = "txtIdAlumno";
-            this.txtIdAlumno.Size = new System.Drawing.Size(100, 20);
-            this.txtIdAlumno.TabIndex = 0;
             // 
             // tabControl
             // 
@@ -364,12 +343,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             // pnlDatosPersona
             // 
+            this.pnlDatosPersona.Controls.Add(this.dtpFechaNacimiento);
             this.pnlDatosPersona.Controls.Add(this.txtCorreo);
             this.pnlDatosPersona.Controls.Add(this.lblCorreo);
             this.pnlDatosPersona.Controls.Add(this.txtDireccion);
             this.pnlDatosPersona.Controls.Add(this.lblDireccion);
-            this.pnlDatosPersona.Controls.Add(this.txtEdad);
-            this.pnlDatosPersona.Controls.Add(this.lblEdad);
+            this.pnlDatosPersona.Controls.Add(this.lblFechaNacimiento);
             this.pnlDatosPersona.Controls.Add(this.txtNombre);
             this.pnlDatosPersona.Controls.Add(this.lblNombre);
             this.pnlDatosPersona.Controls.Add(this.txtDni);
@@ -381,9 +360,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlDatosPersona.Size = new System.Drawing.Size(522, 246);
             this.pnlDatosPersona.TabIndex = 9;
             // 
+            // dtpFechaNacimiento
+            // 
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(151, 81);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(89, 20);
+            this.dtpFechaNacimiento.TabIndex = 22;
+            // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(140, 134);
+            this.txtCorreo.Location = new System.Drawing.Point(151, 134);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(271, 20);
             this.txtCorreo.TabIndex = 21;
@@ -400,7 +387,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(140, 108);
+            this.txtDireccion.Location = new System.Drawing.Point(151, 108);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(271, 20);
             this.txtDireccion.TabIndex = 19;
@@ -415,26 +402,19 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblDireccion.TabIndex = 18;
             this.lblDireccion.Text = "Dirección";
             // 
-            // txtEdad
+            // lblFechaNacimiento
             // 
-            this.txtEdad.Location = new System.Drawing.Point(140, 81);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(100, 20);
-            this.txtEdad.TabIndex = 17;
-            // 
-            // lblEdad
-            // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(7, 77);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(40, 21);
-            this.lblEdad.TabIndex = 16;
-            this.lblEdad.Text = "Edad";
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(7, 77);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(138, 21);
+            this.lblFechaNacimiento.TabIndex = 16;
+            this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(140, 55);
+            this.txtNombre.Location = new System.Drawing.Point(151, 55);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(271, 20);
             this.txtNombre.TabIndex = 15;
@@ -451,7 +431,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(140, 29);
+            this.txtDni.Location = new System.Drawing.Point(151, 29);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(100, 20);
             this.txtDni.TabIndex = 13;
@@ -489,6 +469,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabAlumno.Text = "Datos Alumno";
             this.tabAlumno.UseVisualStyleBackColor = true;
             // 
+            // btnImagen2
+            // 
+            this.btnImagen2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImagen2.Location = new System.Drawing.Point(564, 214);
+            this.btnImagen2.Name = "btnImagen2";
+            this.btnImagen2.Size = new System.Drawing.Size(139, 32);
+            this.btnImagen2.TabIndex = 12;
+            this.btnImagen2.Text = "Seleccionar Imagen";
+            this.btnImagen2.UseVisualStyleBackColor = true;
+            this.btnImagen2.Click += new System.EventHandler(this.btnImagen_Click);
+            // 
             // pbPerfil2
             // 
             this.pbPerfil2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -502,17 +493,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // ofd_Imagen
             // 
             this.ofd_Imagen.FileName = "Alumno_Perfil";
-            // 
-            // btnImagen2
-            // 
-            this.btnImagen2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImagen2.Location = new System.Drawing.Point(564, 214);
-            this.btnImagen2.Name = "btnImagen2";
-            this.btnImagen2.Size = new System.Drawing.Size(139, 32);
-            this.btnImagen2.TabIndex = 12;
-            this.btnImagen2.Text = "Seleccionar Imagen";
-            this.btnImagen2.UseVisualStyleBackColor = true;
-            this.btnImagen2.Click += new System.EventHandler(this.btnImagen_Click);
             // 
             // frmCargarAlumno
             // 
@@ -564,8 +544,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.Label lblAlumno;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label lblIdAlumno;
-        private System.Windows.Forms.TextBox txtIdAlumno;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPersona;
         private System.Windows.Forms.Panel pnlDatosPersona;
@@ -573,8 +551,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label lblDireccion;
-        private System.Windows.Forms.TextBox txtEdad;
-        private System.Windows.Forms.Label lblEdad;
+        private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtDni;
@@ -587,5 +564,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.PictureBox pbPerfil1;
         private System.Windows.Forms.PictureBox pbPerfil2;
         private System.Windows.Forms.Button btnImagen2;
+        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
     }
 }

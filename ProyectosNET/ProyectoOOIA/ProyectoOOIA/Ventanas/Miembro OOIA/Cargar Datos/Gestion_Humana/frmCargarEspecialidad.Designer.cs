@@ -35,23 +35,23 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.lblHeader = new System.Windows.Forms.Label();
             this.tsAlumno = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
-            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
             this.pnlDatos = new System.Windows.Forms.Panel();
-            this.lblEspecialidad = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.lblBuscar = new System.Windows.Forms.Label();
+            this.lblLista = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgvEspecialidad = new System.Windows.Forms.DataGridView();
+            this.id_especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtId_especialidad = new System.Windows.Forms.TextBox();
             this.lblId_especialidad = new System.Windows.Forms.Label();
-            this.dgvEspecialidad = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblLista = new System.Windows.Forms.Label();
-            this.lblBuscar = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.id_especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblEspecialidad = new System.Windows.Forms.Label();
+            this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.tsAlumno.SuspendLayout();
@@ -119,15 +119,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.tsbNuevo.ToolTipText = "Nuevo";
             this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
-            // tsbGuardar
-            // 
-            this.tsbGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardar.Image")));
-            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbGuardar.Name = "tsbGuardar";
-            this.tsbGuardar.Size = new System.Drawing.Size(73, 24);
-            this.tsbGuardar.Text = "Guardar";
-            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
-            // 
             // tsbModificar
             // 
             this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
@@ -173,15 +164,69 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.pnlDatos.Size = new System.Drawing.Size(744, 296);
             this.pnlDatos.TabIndex = 4;
             // 
-            // lblEspecialidad
+            // btnBuscar
             // 
-            this.lblEspecialidad.AutoSize = true;
-            this.lblEspecialidad.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecialidad.Location = new System.Drawing.Point(12, 9);
-            this.lblEspecialidad.Name = "lblEspecialidad";
-            this.lblEspecialidad.Size = new System.Drawing.Size(120, 27);
-            this.lblEspecialidad.TabIndex = 9;
-            this.lblEspecialidad.Text = "Especialidad";
+            this.btnBuscar.Location = new System.Drawing.Point(457, 126);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 24;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Location = new System.Drawing.Point(14, 128);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(123, 21);
+            this.lblBuscar.TabIndex = 23;
+            this.lblBuscar.Text = "Ingrese el nombre:";
+            // 
+            // lblLista
+            // 
+            this.lblLista.AutoSize = true;
+            this.lblLista.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLista.Location = new System.Drawing.Point(12, 91);
+            this.lblLista.Name = "lblLista";
+            this.lblLista.Size = new System.Drawing.Size(212, 27);
+            this.lblLista.TabIndex = 22;
+            this.lblLista.Text = "Lista de Especialidades";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(159, 129);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(292, 20);
+            this.textBox1.TabIndex = 21;
+            // 
+            // dgvEspecialidad
+            // 
+            this.dgvEspecialidad.AllowUserToAddRows = false;
+            this.dgvEspecialidad.AllowUserToDeleteRows = false;
+            this.dgvEspecialidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEspecialidad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_especialidad,
+            this.nombre});
+            this.dgvEspecialidad.Location = new System.Drawing.Point(17, 155);
+            this.dgvEspecialidad.Name = "dgvEspecialidad";
+            this.dgvEspecialidad.Size = new System.Drawing.Size(515, 131);
+            this.dgvEspecialidad.TabIndex = 20;
+            // 
+            // id_especialidad
+            // 
+            this.id_especialidad.DataPropertyName = "id_especialidad";
+            this.id_especialidad.HeaderText = "Id Especialidad";
+            this.id_especialidad.Name = "id_especialidad";
+            this.id_especialidad.Width = 150;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombre";
+            this.nombre.HeaderText = "Nombre de la especialidad";
+            this.nombre.Name = "nombre";
+            this.nombre.Width = 320;
             // 
             // txtNombre
             // 
@@ -217,69 +262,24 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             this.lblId_especialidad.TabIndex = 16;
             this.lblId_especialidad.Text = "Id_especialidad";
             // 
-            // dgvEspecialidad
+            // lblEspecialidad
             // 
-            this.dgvEspecialidad.AllowUserToAddRows = false;
-            this.dgvEspecialidad.AllowUserToDeleteRows = false;
-            this.dgvEspecialidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEspecialidad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_especialidad,
-            this.nombre});
-            this.dgvEspecialidad.Location = new System.Drawing.Point(17, 155);
-            this.dgvEspecialidad.Name = "dgvEspecialidad";
-            this.dgvEspecialidad.Size = new System.Drawing.Size(515, 131);
-            this.dgvEspecialidad.TabIndex = 20;
+            this.lblEspecialidad.AutoSize = true;
+            this.lblEspecialidad.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecialidad.Location = new System.Drawing.Point(12, 9);
+            this.lblEspecialidad.Name = "lblEspecialidad";
+            this.lblEspecialidad.Size = new System.Drawing.Size(120, 27);
+            this.lblEspecialidad.TabIndex = 9;
+            this.lblEspecialidad.Text = "Especialidad";
             // 
-            // textBox1
+            // tsbGuardar
             // 
-            this.textBox1.Location = new System.Drawing.Point(159, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 20);
-            this.textBox1.TabIndex = 21;
-            // 
-            // lblLista
-            // 
-            this.lblLista.AutoSize = true;
-            this.lblLista.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLista.Location = new System.Drawing.Point(12, 91);
-            this.lblLista.Name = "lblLista";
-            this.lblLista.Size = new System.Drawing.Size(212, 27);
-            this.lblLista.TabIndex = 22;
-            this.lblLista.Text = "Lista de Especialidades";
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(14, 128);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(123, 21);
-            this.lblBuscar.TabIndex = 23;
-            this.lblBuscar.Text = "Ingrese el nombre:";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(457, 126);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 24;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // id_especialidad
-            // 
-            this.id_especialidad.DataPropertyName = "id_especialidad";
-            this.id_especialidad.HeaderText = "Id Especialidad";
-            this.id_especialidad.Name = "id_especialidad";
-            this.id_especialidad.Width = 150;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.HeaderText = "Nombre de la especialidad";
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 320;
+            this.tsbGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsbGuardar.Image")));
+            this.tsbGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbGuardar.Name = "tsbGuardar";
+            this.tsbGuardar.Size = new System.Drawing.Size(73, 24);
+            this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // frmCargarEspecialidad
             // 
@@ -310,7 +310,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.ToolStrip tsAlumno;
         private System.Windows.Forms.ToolStripButton tsbNuevo;
-        private System.Windows.Forms.ToolStripButton tsbGuardar;
         private System.Windows.Forms.ToolStripButton tsbModificar;
         private System.Windows.Forms.ToolStripButton tsbEliminar;
         private System.Windows.Forms.ToolStripButton tsbCancelar;
@@ -327,5 +326,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_especialidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.ToolStripButton tsbGuardar;
     }
 }

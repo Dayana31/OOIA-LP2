@@ -126,7 +126,7 @@ end$
 delimiter $
 create procedure LISTAR_ALUMNO(
 )begin
-	select 	p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
+	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
 		m.id_miembro_pucp, m.usuario, m.password, m.fecha_inclusion, m.imagen_perfil,
            	a.id_alumno, a.codigo, a.fid_especialidad, e.nombre as nombre_especialidad, a.craest, a.creditos_aprobados
 	from persona p 
@@ -140,7 +140,7 @@ delimiter $
 create procedure LISTAR_ALUMNO_X_NOMBRE(
 	in _nombre varchar(250)
 )begin
-	select 	p.id_persona, p.nombre, p.dni, p.edad, p.direccion, p.correo,
+	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
 		m.id_miembro_pucp, m.usuario, m.password, m.fecha_inclusion, m.imagen_perfil,
            	a.id_alumno, a.codigo, a.fid_especialidad, e.nombre as nombre_especialidad, a.craest, a.creditos_aprobados
 	from persona p 
