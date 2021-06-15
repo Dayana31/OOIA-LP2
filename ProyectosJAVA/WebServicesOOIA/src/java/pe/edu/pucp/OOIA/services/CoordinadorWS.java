@@ -60,10 +60,10 @@ public class CoordinadorWS {
         return resultado;
     }
     @WebMethod(operationName = "eliminarCoordinador")
-    public int eliminarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
+    public int eliminarCoordinadorEvento(@WebParam(name = "id_coordinador")int id_coordinador){
         int resultado=0;
         try {
-            resultado=this.coordinador.eliminar(coordinador.getId_coordinador());
+            resultado=this.coordinador.eliminar(id_coordinador);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

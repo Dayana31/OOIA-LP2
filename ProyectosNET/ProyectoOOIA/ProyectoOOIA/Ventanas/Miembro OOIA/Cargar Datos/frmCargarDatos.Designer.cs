@@ -71,19 +71,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.txtAlumno = new System.Windows.Forms.TextBox();
             this.btnAlumno = new System.Windows.Forms.Button();
             this.tabGestionAcademica = new System.Windows.Forms.TabPage();
-            this.tabGestionAtencion = new System.Windows.Forms.TabPage();
-            this.pnlCodigoAtencion = new System.Windows.Forms.Panel();
-            this.btnCodigoAtencion = new System.Windows.Forms.Button();
-            this.lblCodigoAtencionForm = new System.Windows.Forms.Label();
-            this.lblCodigoAtencion = new System.Windows.Forms.Label();
-            this.pnlCursoLLevado = new System.Windows.Forms.Panel();
-            this.btnCursoLlevadoFile = new System.Windows.Forms.Button();
-            this.lblCursoLlevado = new System.Windows.Forms.Label();
-            this.btnCursoLlevadoCSV = new System.Windows.Forms.Button();
-            this.lblCursoLlevadoCSV = new System.Windows.Forms.Label();
-            this.lblCursoLlevadoForm = new System.Windows.Forms.Label();
-            this.txtCursoLlevado = new System.Windows.Forms.TextBox();
-            this.btnCursoLlevado = new System.Windows.Forms.Button();
+            this.pnlCurso = new System.Windows.Forms.Panel();
+            this.btnCurso = new System.Windows.Forms.Button();
+            this.lblCursoForm = new System.Windows.Forms.Label();
+            this.lblCurso = new System.Windows.Forms.Label();
             this.pnlEvaluacion = new System.Windows.Forms.Panel();
             this.btnEvaluacionFile = new System.Windows.Forms.Button();
             this.lblEvaluacion = new System.Windows.Forms.Label();
@@ -92,10 +83,19 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.lblEvaluacionForm = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnEvaluacion = new System.Windows.Forms.Button();
-            this.pnlCurso = new System.Windows.Forms.Panel();
-            this.btnCurso = new System.Windows.Forms.Button();
-            this.lblCursoForm = new System.Windows.Forms.Label();
-            this.lblCurso = new System.Windows.Forms.Label();
+            this.pnlCursoLLevado = new System.Windows.Forms.Panel();
+            this.btnCursoLlevadoFile = new System.Windows.Forms.Button();
+            this.lblCursoLlevado = new System.Windows.Forms.Label();
+            this.btnCursoLlevadoCSV = new System.Windows.Forms.Button();
+            this.lblCursoLlevadoCSV = new System.Windows.Forms.Label();
+            this.lblCursoLlevadoForm = new System.Windows.Forms.Label();
+            this.txtCursoLlevado = new System.Windows.Forms.TextBox();
+            this.btnCursoLlevado = new System.Windows.Forms.Button();
+            this.tabGestionAtencion = new System.Windows.Forms.TabPage();
+            this.pnlCodigoAtencion = new System.Windows.Forms.Panel();
+            this.btnCodigoAtencion = new System.Windows.Forms.Button();
+            this.lblCodigoAtencionForm = new System.Windows.Forms.Label();
+            this.lblCodigoAtencion = new System.Windows.Forms.Label();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.panelGestionHumana.SuspendLayout();
@@ -107,11 +107,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlAsesor.SuspendLayout();
             this.pnlAlumno.SuspendLayout();
             this.tabGestionAcademica.SuspendLayout();
+            this.pnlCurso.SuspendLayout();
+            this.pnlEvaluacion.SuspendLayout();
+            this.pnlCursoLLevado.SuspendLayout();
             this.tabGestionAtencion.SuspendLayout();
             this.pnlCodigoAtencion.SuspendLayout();
-            this.pnlCursoLLevado.SuspendLayout();
-            this.pnlEvaluacion.SuspendLayout();
-            this.pnlCurso.SuspendLayout();
             this.SuspendLayout();
             // 
             // archivos
@@ -254,6 +254,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnCoordinador.TabIndex = 37;
             this.btnCoordinador.Text = "Gestionar Coordinadores";
             this.btnCoordinador.UseVisualStyleBackColor = true;
+            this.btnCoordinador.Click += new System.EventHandler(this.btnCoordinador_Click);
             // 
             // lblCoordinadorForm
             // 
@@ -567,142 +568,46 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabGestionAcademica.Text = "Gestion Academica";
             this.tabGestionAcademica.UseVisualStyleBackColor = true;
             // 
-            // tabGestionAtencion
+            // pnlCurso
             // 
-            this.tabGestionAtencion.AutoScroll = true;
-            this.tabGestionAtencion.Controls.Add(this.pnlCodigoAtencion);
-            this.tabGestionAtencion.Location = new System.Drawing.Point(4, 22);
-            this.tabGestionAtencion.Name = "tabGestionAtencion";
-            this.tabGestionAtencion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGestionAtencion.Size = new System.Drawing.Size(676, 364);
-            this.tabGestionAtencion.TabIndex = 2;
-            this.tabGestionAtencion.Text = "Gestion Atencion";
-            this.tabGestionAtencion.UseVisualStyleBackColor = true;
+            this.pnlCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCurso.Controls.Add(this.btnCurso);
+            this.pnlCurso.Controls.Add(this.lblCursoForm);
+            this.pnlCurso.Controls.Add(this.lblCurso);
+            this.pnlCurso.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCurso.Location = new System.Drawing.Point(3, 223);
+            this.pnlCurso.Name = "pnlCurso";
+            this.pnlCurso.Size = new System.Drawing.Size(670, 78);
+            this.pnlCurso.TabIndex = 40;
             // 
-            // pnlCodigoAtencion
+            // btnCurso
             // 
-            this.pnlCodigoAtencion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCodigoAtencion.Controls.Add(this.btnCodigoAtencion);
-            this.pnlCodigoAtencion.Controls.Add(this.lblCodigoAtencionForm);
-            this.pnlCodigoAtencion.Controls.Add(this.lblCodigoAtencion);
-            this.pnlCodigoAtencion.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCodigoAtencion.Location = new System.Drawing.Point(3, 3);
-            this.pnlCodigoAtencion.Name = "pnlCodigoAtencion";
-            this.pnlCodigoAtencion.Size = new System.Drawing.Size(670, 78);
-            this.pnlCodigoAtencion.TabIndex = 40;
+            this.btnCurso.Location = new System.Drawing.Point(404, 31);
+            this.btnCurso.Name = "btnCurso";
+            this.btnCurso.Size = new System.Drawing.Size(138, 29);
+            this.btnCurso.TabIndex = 37;
+            this.btnCurso.Text = "Gestionar Cursos";
+            this.btnCurso.UseVisualStyleBackColor = true;
             // 
-            // btnCodigoAtencion
+            // lblCursoForm
             // 
-            this.btnCodigoAtencion.Location = new System.Drawing.Point(404, 31);
-            this.btnCodigoAtencion.Name = "btnCodigoAtencion";
-            this.btnCodigoAtencion.Size = new System.Drawing.Size(138, 29);
-            this.btnCodigoAtencion.TabIndex = 37;
-            this.btnCodigoAtencion.Text = "Gestionar Códigos";
-            this.btnCodigoAtencion.UseVisualStyleBackColor = true;
-            this.btnCodigoAtencion.Click += new System.EventHandler(this.btnCodigoAtencion_Click);
+            this.lblCursoForm.AutoSize = true;
+            this.lblCursoForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoForm.Location = new System.Drawing.Point(6, 34);
+            this.lblCursoForm.Name = "lblCursoForm";
+            this.lblCursoForm.Size = new System.Drawing.Size(208, 21);
+            this.lblCursoForm.TabIndex = 36;
+            this.lblCursoForm.Text = "Gestionar cursos por formulario";
             // 
-            // lblCodigoAtencionForm
+            // lblCurso
             // 
-            this.lblCodigoAtencionForm.AutoSize = true;
-            this.lblCodigoAtencionForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoAtencionForm.Location = new System.Drawing.Point(6, 34);
-            this.lblCodigoAtencionForm.Name = "lblCodigoAtencionForm";
-            this.lblCodigoAtencionForm.Size = new System.Drawing.Size(288, 21);
-            this.lblCodigoAtencionForm.TabIndex = 36;
-            this.lblCodigoAtencionForm.Text = "Gestionar códigos de atención por formulario";
-            // 
-            // lblCodigoAtencion
-            // 
-            this.lblCodigoAtencion.AutoSize = true;
-            this.lblCodigoAtencion.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigoAtencion.Location = new System.Drawing.Point(5, 3);
-            this.lblCodigoAtencion.Name = "lblCodigoAtencion";
-            this.lblCodigoAtencion.Size = new System.Drawing.Size(197, 30);
-            this.lblCodigoAtencion.TabIndex = 12;
-            this.lblCodigoAtencion.Text = "Códigos de Atención";
-            // 
-            // pnlCursoLLevado
-            // 
-            this.pnlCursoLLevado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCursoLLevado.Controls.Add(this.btnCursoLlevadoFile);
-            this.pnlCursoLLevado.Controls.Add(this.lblCursoLlevado);
-            this.pnlCursoLLevado.Controls.Add(this.btnCursoLlevadoCSV);
-            this.pnlCursoLLevado.Controls.Add(this.lblCursoLlevadoCSV);
-            this.pnlCursoLLevado.Controls.Add(this.lblCursoLlevadoForm);
-            this.pnlCursoLLevado.Controls.Add(this.txtCursoLlevado);
-            this.pnlCursoLLevado.Controls.Add(this.btnCursoLlevado);
-            this.pnlCursoLLevado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCursoLLevado.Location = new System.Drawing.Point(3, 3);
-            this.pnlCursoLLevado.Name = "pnlCursoLLevado";
-            this.pnlCursoLLevado.Size = new System.Drawing.Size(670, 110);
-            this.pnlCursoLLevado.TabIndex = 38;
-            // 
-            // btnCursoLlevadoFile
-            // 
-            this.btnCursoLlevadoFile.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCursoLlevadoFile.Location = new System.Drawing.Point(366, 73);
-            this.btnCursoLlevadoFile.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCursoLlevadoFile.Name = "btnCursoLlevadoFile";
-            this.btnCursoLlevadoFile.Size = new System.Drawing.Size(33, 22);
-            this.btnCursoLlevadoFile.TabIndex = 37;
-            this.btnCursoLlevadoFile.Text = "...";
-            this.btnCursoLlevadoFile.UseVisualStyleBackColor = true;
-            // 
-            // lblCursoLlevado
-            // 
-            this.lblCursoLlevado.AutoSize = true;
-            this.lblCursoLlevado.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoLlevado.Location = new System.Drawing.Point(5, 0);
-            this.lblCursoLlevado.Name = "lblCursoLlevado";
-            this.lblCursoLlevado.Size = new System.Drawing.Size(155, 30);
-            this.lblCursoLlevado.TabIndex = 12;
-            this.lblCursoLlevado.Text = "Cursos Llevados";
-            // 
-            // btnCursoLlevadoCSV
-            // 
-            this.btnCursoLlevadoCSV.Location = new System.Drawing.Point(404, 70);
-            this.btnCursoLlevadoCSV.Name = "btnCursoLlevadoCSV";
-            this.btnCursoLlevadoCSV.Size = new System.Drawing.Size(138, 28);
-            this.btnCursoLlevadoCSV.TabIndex = 34;
-            this.btnCursoLlevadoCSV.Text = "Cargar desde csv";
-            this.btnCursoLlevadoCSV.UseVisualStyleBackColor = true;
-            // 
-            // lblCursoLlevadoCSV
-            // 
-            this.lblCursoLlevadoCSV.AutoSize = true;
-            this.lblCursoLlevadoCSV.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoLlevadoCSV.Location = new System.Drawing.Point(6, 51);
-            this.lblCursoLlevadoCSV.Name = "lblCursoLlevadoCSV";
-            this.lblCursoLlevadoCSV.Size = new System.Drawing.Size(229, 21);
-            this.lblCursoLlevadoCSV.TabIndex = 36;
-            this.lblCursoLlevadoCSV.Text = "Cargar Alumnos desde archivo CSV";
-            // 
-            // lblCursoLlevadoForm
-            // 
-            this.lblCursoLlevadoForm.AutoSize = true;
-            this.lblCursoLlevadoForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoLlevadoForm.Location = new System.Drawing.Point(6, 30);
-            this.lblCursoLlevadoForm.Name = "lblCursoLlevadoForm";
-            this.lblCursoLlevadoForm.Size = new System.Drawing.Size(276, 21);
-            this.lblCursoLlevadoForm.TabIndex = 35;
-            this.lblCursoLlevadoForm.Text = "Gestionar los cursos de alumnos formulario";
-            // 
-            // txtCursoLlevado
-            // 
-            this.txtCursoLlevado.Enabled = false;
-            this.txtCursoLlevado.Location = new System.Drawing.Point(10, 75);
-            this.txtCursoLlevado.Name = "txtCursoLlevado";
-            this.txtCursoLlevado.Size = new System.Drawing.Size(351, 20);
-            this.txtCursoLlevado.TabIndex = 18;
-            // 
-            // btnCursoLlevado
-            // 
-            this.btnCursoLlevado.Location = new System.Drawing.Point(404, 27);
-            this.btnCursoLlevado.Name = "btnCursoLlevado";
-            this.btnCursoLlevado.Size = new System.Drawing.Size(138, 29);
-            this.btnCursoLlevado.TabIndex = 15;
-            this.btnCursoLlevado.Text = "Gestionar Historia";
-            this.btnCursoLlevado.UseVisualStyleBackColor = true;
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.Location = new System.Drawing.Point(5, 3);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(75, 30);
+            this.lblCurso.TabIndex = 12;
+            this.lblCurso.Text = "Cursos";
             // 
             // pnlEvaluacion
             // 
@@ -787,46 +692,142 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnEvaluacion.Text = "Gestionar Evaluaciones";
             this.btnEvaluacion.UseVisualStyleBackColor = true;
             // 
-            // pnlCurso
+            // pnlCursoLLevado
             // 
-            this.pnlCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCurso.Controls.Add(this.btnCurso);
-            this.pnlCurso.Controls.Add(this.lblCursoForm);
-            this.pnlCurso.Controls.Add(this.lblCurso);
-            this.pnlCurso.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlCurso.Location = new System.Drawing.Point(3, 223);
-            this.pnlCurso.Name = "pnlCurso";
-            this.pnlCurso.Size = new System.Drawing.Size(670, 78);
-            this.pnlCurso.TabIndex = 40;
+            this.pnlCursoLLevado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCursoLLevado.Controls.Add(this.btnCursoLlevadoFile);
+            this.pnlCursoLLevado.Controls.Add(this.lblCursoLlevado);
+            this.pnlCursoLLevado.Controls.Add(this.btnCursoLlevadoCSV);
+            this.pnlCursoLLevado.Controls.Add(this.lblCursoLlevadoCSV);
+            this.pnlCursoLLevado.Controls.Add(this.lblCursoLlevadoForm);
+            this.pnlCursoLLevado.Controls.Add(this.txtCursoLlevado);
+            this.pnlCursoLLevado.Controls.Add(this.btnCursoLlevado);
+            this.pnlCursoLLevado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCursoLLevado.Location = new System.Drawing.Point(3, 3);
+            this.pnlCursoLLevado.Name = "pnlCursoLLevado";
+            this.pnlCursoLLevado.Size = new System.Drawing.Size(670, 110);
+            this.pnlCursoLLevado.TabIndex = 38;
             // 
-            // btnCurso
+            // btnCursoLlevadoFile
             // 
-            this.btnCurso.Location = new System.Drawing.Point(404, 31);
-            this.btnCurso.Name = "btnCurso";
-            this.btnCurso.Size = new System.Drawing.Size(138, 29);
-            this.btnCurso.TabIndex = 37;
-            this.btnCurso.Text = "Gestionar Cursos";
-            this.btnCurso.UseVisualStyleBackColor = true;
+            this.btnCursoLlevadoFile.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursoLlevadoFile.Location = new System.Drawing.Point(366, 73);
+            this.btnCursoLlevadoFile.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCursoLlevadoFile.Name = "btnCursoLlevadoFile";
+            this.btnCursoLlevadoFile.Size = new System.Drawing.Size(33, 22);
+            this.btnCursoLlevadoFile.TabIndex = 37;
+            this.btnCursoLlevadoFile.Text = "...";
+            this.btnCursoLlevadoFile.UseVisualStyleBackColor = true;
             // 
-            // lblCursoForm
+            // lblCursoLlevado
             // 
-            this.lblCursoForm.AutoSize = true;
-            this.lblCursoForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoForm.Location = new System.Drawing.Point(6, 34);
-            this.lblCursoForm.Name = "lblCursoForm";
-            this.lblCursoForm.Size = new System.Drawing.Size(208, 21);
-            this.lblCursoForm.TabIndex = 36;
-            this.lblCursoForm.Text = "Gestionar cursos por formulario";
+            this.lblCursoLlevado.AutoSize = true;
+            this.lblCursoLlevado.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoLlevado.Location = new System.Drawing.Point(5, 0);
+            this.lblCursoLlevado.Name = "lblCursoLlevado";
+            this.lblCursoLlevado.Size = new System.Drawing.Size(155, 30);
+            this.lblCursoLlevado.TabIndex = 12;
+            this.lblCursoLlevado.Text = "Cursos Llevados";
             // 
-            // lblCurso
+            // btnCursoLlevadoCSV
             // 
-            this.lblCurso.AutoSize = true;
-            this.lblCurso.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.Location = new System.Drawing.Point(5, 3);
-            this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(75, 30);
-            this.lblCurso.TabIndex = 12;
-            this.lblCurso.Text = "Cursos";
+            this.btnCursoLlevadoCSV.Location = new System.Drawing.Point(404, 70);
+            this.btnCursoLlevadoCSV.Name = "btnCursoLlevadoCSV";
+            this.btnCursoLlevadoCSV.Size = new System.Drawing.Size(138, 28);
+            this.btnCursoLlevadoCSV.TabIndex = 34;
+            this.btnCursoLlevadoCSV.Text = "Cargar desde csv";
+            this.btnCursoLlevadoCSV.UseVisualStyleBackColor = true;
+            // 
+            // lblCursoLlevadoCSV
+            // 
+            this.lblCursoLlevadoCSV.AutoSize = true;
+            this.lblCursoLlevadoCSV.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoLlevadoCSV.Location = new System.Drawing.Point(6, 51);
+            this.lblCursoLlevadoCSV.Name = "lblCursoLlevadoCSV";
+            this.lblCursoLlevadoCSV.Size = new System.Drawing.Size(229, 21);
+            this.lblCursoLlevadoCSV.TabIndex = 36;
+            this.lblCursoLlevadoCSV.Text = "Cargar Alumnos desde archivo CSV";
+            // 
+            // lblCursoLlevadoForm
+            // 
+            this.lblCursoLlevadoForm.AutoSize = true;
+            this.lblCursoLlevadoForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoLlevadoForm.Location = new System.Drawing.Point(6, 30);
+            this.lblCursoLlevadoForm.Name = "lblCursoLlevadoForm";
+            this.lblCursoLlevadoForm.Size = new System.Drawing.Size(276, 21);
+            this.lblCursoLlevadoForm.TabIndex = 35;
+            this.lblCursoLlevadoForm.Text = "Gestionar los cursos de alumnos formulario";
+            // 
+            // txtCursoLlevado
+            // 
+            this.txtCursoLlevado.Enabled = false;
+            this.txtCursoLlevado.Location = new System.Drawing.Point(10, 75);
+            this.txtCursoLlevado.Name = "txtCursoLlevado";
+            this.txtCursoLlevado.Size = new System.Drawing.Size(351, 20);
+            this.txtCursoLlevado.TabIndex = 18;
+            // 
+            // btnCursoLlevado
+            // 
+            this.btnCursoLlevado.Location = new System.Drawing.Point(404, 27);
+            this.btnCursoLlevado.Name = "btnCursoLlevado";
+            this.btnCursoLlevado.Size = new System.Drawing.Size(138, 29);
+            this.btnCursoLlevado.TabIndex = 15;
+            this.btnCursoLlevado.Text = "Gestionar Historia";
+            this.btnCursoLlevado.UseVisualStyleBackColor = true;
+            // 
+            // tabGestionAtencion
+            // 
+            this.tabGestionAtencion.AutoScroll = true;
+            this.tabGestionAtencion.Controls.Add(this.pnlCodigoAtencion);
+            this.tabGestionAtencion.Location = new System.Drawing.Point(4, 22);
+            this.tabGestionAtencion.Name = "tabGestionAtencion";
+            this.tabGestionAtencion.Padding = new System.Windows.Forms.Padding(3);
+            this.tabGestionAtencion.Size = new System.Drawing.Size(676, 364);
+            this.tabGestionAtencion.TabIndex = 2;
+            this.tabGestionAtencion.Text = "Gestion Atencion";
+            this.tabGestionAtencion.UseVisualStyleBackColor = true;
+            // 
+            // pnlCodigoAtencion
+            // 
+            this.pnlCodigoAtencion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCodigoAtencion.Controls.Add(this.btnCodigoAtencion);
+            this.pnlCodigoAtencion.Controls.Add(this.lblCodigoAtencionForm);
+            this.pnlCodigoAtencion.Controls.Add(this.lblCodigoAtencion);
+            this.pnlCodigoAtencion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCodigoAtencion.Location = new System.Drawing.Point(3, 3);
+            this.pnlCodigoAtencion.Name = "pnlCodigoAtencion";
+            this.pnlCodigoAtencion.Size = new System.Drawing.Size(670, 78);
+            this.pnlCodigoAtencion.TabIndex = 40;
+            // 
+            // btnCodigoAtencion
+            // 
+            this.btnCodigoAtencion.Location = new System.Drawing.Point(404, 31);
+            this.btnCodigoAtencion.Name = "btnCodigoAtencion";
+            this.btnCodigoAtencion.Size = new System.Drawing.Size(138, 29);
+            this.btnCodigoAtencion.TabIndex = 37;
+            this.btnCodigoAtencion.Text = "Gestionar Códigos";
+            this.btnCodigoAtencion.UseVisualStyleBackColor = true;
+            this.btnCodigoAtencion.Click += new System.EventHandler(this.btnCodigoAtencion_Click);
+            // 
+            // lblCodigoAtencionForm
+            // 
+            this.lblCodigoAtencionForm.AutoSize = true;
+            this.lblCodigoAtencionForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoAtencionForm.Location = new System.Drawing.Point(6, 34);
+            this.lblCodigoAtencionForm.Name = "lblCodigoAtencionForm";
+            this.lblCodigoAtencionForm.Size = new System.Drawing.Size(288, 21);
+            this.lblCodigoAtencionForm.TabIndex = 36;
+            this.lblCodigoAtencionForm.Text = "Gestionar códigos de atención por formulario";
+            // 
+            // lblCodigoAtencion
+            // 
+            this.lblCodigoAtencion.AutoSize = true;
+            this.lblCodigoAtencion.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoAtencion.Location = new System.Drawing.Point(5, 3);
+            this.lblCodigoAtencion.Name = "lblCodigoAtencion";
+            this.lblCodigoAtencion.Size = new System.Drawing.Size(197, 30);
+            this.lblCodigoAtencion.TabIndex = 12;
+            this.lblCodigoAtencion.Text = "Códigos de Atención";
             // 
             // frmCargarDatos
             // 
@@ -857,15 +858,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlAlumno.ResumeLayout(false);
             this.pnlAlumno.PerformLayout();
             this.tabGestionAcademica.ResumeLayout(false);
+            this.pnlCurso.ResumeLayout(false);
+            this.pnlCurso.PerformLayout();
+            this.pnlEvaluacion.ResumeLayout(false);
+            this.pnlEvaluacion.PerformLayout();
+            this.pnlCursoLLevado.ResumeLayout(false);
+            this.pnlCursoLLevado.PerformLayout();
             this.tabGestionAtencion.ResumeLayout(false);
             this.pnlCodigoAtencion.ResumeLayout(false);
             this.pnlCodigoAtencion.PerformLayout();
-            this.pnlCursoLLevado.ResumeLayout(false);
-            this.pnlCursoLLevado.PerformLayout();
-            this.pnlEvaluacion.ResumeLayout(false);
-            this.pnlEvaluacion.PerformLayout();
-            this.pnlCurso.ResumeLayout(false);
-            this.pnlCurso.PerformLayout();
             this.ResumeLayout(false);
 
         }

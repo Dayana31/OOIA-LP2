@@ -453,7 +453,7 @@ create procedure LISTAR_COORDINADOR(
 	from persona p 
 	inner join miembro_pucp m on p.id_persona = m.fid_persona
         inner join coordinador c on c.fid_miembro_pucp = m.id_miembro_pucp
-	where ps.activo = true;
+	where c.activo = true;
 end$
 
 delimiter $
@@ -466,7 +466,7 @@ create procedure LISTAR_COORDINADOR_X_NOMBRE(
 	from persona p 
 	inner join miembro_pucp m on p.id_persona = m.fid_persona
         inner join coordinador c on c.fid_miembro_pucp = m.id_miembro_pucp
-	where ps.activo = true
+	where c.activo = true
 	and (p.nombre LIKE CONCAT('%',_nombre,'%'));
 end$
 
@@ -1052,27 +1052,13 @@ create procedure ELIMINAR_EVENTO(
 end$
 
 delimiter $
-create procedure LISTAR_EVENTO_X_NOMBRE_CATEGORIA(
-in _nombreCategoria varchar(250)
+create procedure LISTAR_EVENTO(
+in _nombre varchar(250)
 )begin
 	/*tabla evento*/
-	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.imagen,
-    e.fid_coordinador, e.fid_categoria_evento, ce.nombre as nombre_categoria
+	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.categoria,e.imagen
     from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador
-    inner join categoria_evento ce on ce.id_categoria_evento = e.fid_categoria_evento
-    where  (e.nombre LIKE CONCAT('%',_nombreCategoria,'%')) OR (ce.nombre LIKE CONCAT('%',_nombreCategoria,'%')) and e.estado=1;
-end $
-
-delimiter $
-create procedure LISTAR_EVENTO_X_FECHA(
-in _fecha date
-)begin
-	/*tabla evento*/
-	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.imagen,
-    e.fid_coordinador, e.fid_categoria_evento, ce.nombre as nombre_categoria
-    from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador
-    inner join categoria_evento ce on ce.id_categoria_evento = e.fid_categoria_evento
-    where  (e.fecha = _fecha) and e.estado=1;
+    where  (e.nombre LIKE CONCAT('%',_nombre,'%')) and e.estado=1;
 end $
 
 --ENCUESTA_EVENTO

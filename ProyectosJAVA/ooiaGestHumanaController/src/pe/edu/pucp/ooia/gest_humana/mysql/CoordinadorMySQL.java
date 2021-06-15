@@ -75,7 +75,7 @@ public class CoordinadorMySQL implements CoordinadorDAO{
             /*Miembro PUCP*/
             cs.setString("_usuario", coordinador.getUsuario());
             cs.setString("_password", coordinador.getPassword());
-            cs.setDate("_fecha_de_inclusion", new java.sql.Date(coordinador.getFecha_inclusion().getTime()));
+            cs.setDate("_fecha_inclusion", new java.sql.Date(coordinador.getFecha_inclusion().getTime()));
             cs.setBytes("_imagen_perfil", coordinador.getImagenDePerfil());
             /*Coordinador*/
             cs.setString("_rol", coordinador.getRol());
