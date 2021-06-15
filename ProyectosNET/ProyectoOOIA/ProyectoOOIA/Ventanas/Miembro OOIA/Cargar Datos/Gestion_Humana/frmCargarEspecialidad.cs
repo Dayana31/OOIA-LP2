@@ -99,41 +99,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
             clearall();
         }
 
-        private void tsbGuardar_Click(object sender, EventArgs e)
-        {
-            if(txtNombre.Text == "")
-            {
-                MessageBox.Show("No ha ingresado el nombre de la especialidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            especialidad.nombre = txtNombre.Text;
-            if (estado.Equals(Estado.Nuevo))
-            {
-                int resultado = daoEspecialidad.insertarEspecialidad(especialidad);
-                if (resultado != 0)
-                {
-                    MessageBox.Show("Se ha registrado con exito", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtId_especialidad.Text = resultado.ToString();
-                    this.estado = Estado.Inicial;
-                    cambiarEstado();
-                    mostrarEspecialidades();
-                }
-                else MessageBox.Show("Ha ocurrido un error en la inserción", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (estado == Estado.Modificar)
-            {
-                int resultado = daoEspecialidad.modificarEspecialidad(especialidad);
-                if (resultado != 0)
-                {
-                    MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.estado = Estado.Inicial;
-                    cambiarEstado();
-                    mostrarEspecialidades();
-                }
-                else
-                    MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         private void tsbModificar_Click(object sender, EventArgs e)
         {
@@ -187,6 +152,43 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
                 especialidades = new BindingList<EspecialidadWS.especialidad>
                 (daoEspecialidad.listarEspecialidad().ToList());
             dgvEspecialidad.DataSource = especialidades;
+        }
+
+        private void tsbGuardar_Click(object sender, EventArgs e)
+        {   
+            //Validar Especialidad
+            if (txtNombre.Text == "")
+            {
+                MessageBox.Show("No ha ingresado el nombre de la especialidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            especialidad.nombre = txtNombre.Text;
+            if (estado.Equals(Estado.Nuevo))
+            {
+                int resultado = daoEspecialidad.insertarEspecialidad(especialidad);
+                if (resultado != 0)
+                {
+                    MessageBox.Show("Se ha registrado con exito", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtId_especialidad.Text = resultado.ToString();
+                    this.estado = Estado.Inicial;
+                    cambiarEstado();
+                    mostrarEspecialidades();
+                }
+                else MessageBox.Show("Ha ocurrido un error en la inserción", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (estado == Estado.Modificar)
+            {
+                int resultado = daoEspecialidad.modificarEspecialidad(especialidad);
+                if (resultado != 0)
+                {
+                    MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.estado = Estado.Inicial;
+                    cambiarEstado();
+                    mostrarEspecialidades();
+                }
+                else
+                    MessageBox.Show("Ha ocurrido un error", "Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -38,6 +38,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         private void btnAlumnoCSV_Click(object sender, EventArgs e)
         {
+            if(txtAlumno.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar una archivo de carga.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
             FileStream fs = new FileStream(txtAlumno.Text, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
             /*CargarCSValumnos.AlumnosCSVcargaWSClient cargaCSVAlumnos =
@@ -75,6 +81,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         private void btnAsesorCSV_Click(object sender, EventArgs e)
         {
+            if (txtAsesor.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar una archivo de carga.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             FileStream fs = new FileStream(txtAsesor.Text, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
             
