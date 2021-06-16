@@ -28,7 +28,7 @@ public class CursoLlevadoMySQL implements CursoLlevadoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_CURSOS_LLEVADO(?)}");
+            cs = con.prepareCall("{call LISTAR_CURSO_LLEVADO(?)}");
             cs.setInt("_id_alumno",id_alumno);
             rs = cs.executeQuery();
             while(rs.next()){
@@ -99,7 +99,7 @@ public class CursoLlevadoMySQL implements CursoLlevadoDAO{
            con = DriverManager.getConnection(DBManager.url,
                    DBManager.user,DBManager.password);
           
-           cs = con.prepareCall("{call MODIFICAR_CURSOLLEVADO(?,?,?,?,?,?,?,?)}");
+           cs = con.prepareCall("{call MODIFICAR_CURSO_LLEVADO(?,?,?,?,?,?,?,?)}");
            cs.setInt("_id_curso_llevado",cursoLlevado.getId_curso_llevado());
            cs.setInt("_fid_alumno",cursoLlevado.getAlumno().getId_alumno());
            cs.setInt("_fid_curso",cursoLlevado.getCurso().getId_curso());
