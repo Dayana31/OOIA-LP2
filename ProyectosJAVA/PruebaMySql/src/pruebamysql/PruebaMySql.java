@@ -17,9 +17,6 @@ import pe.edu.pucp.gestion_eventos.model.Evento;
 import pe.edu.pucp.gestion_eventos.mysql.EventoMySQL;
 import pe.edu.pucp.ooia.gest_humana.model.Alumno;
 import pe.edu.pucp.ooia.gest_humana.model.Persona;
-import pe.edu.pucp.ooia.gest_humana.mysql.AlumnoMySQL;
-import pe.edu.pucp.ooia.gest_humana.mysql.ProfesorMySQL;
-import pe.edu.pucp.ooia.gest_humana.mysql.inicioSesionMySQL;
 
 
 /**
@@ -46,14 +43,14 @@ public class PruebaMySql {
 //        new CursoMySQL().insertar(new Curso("INF281", "Lenguajes de programacion 1", 1));
 //        new CursoMySQL().insertar(new Curso("INF282", "Sistemas de información 2", 1));
 //pruebaProfesor();
-//    Evento evento= new Evento();
-//    evento.setCapacidad(10);
-//    evento.setFecha(new Date());
+    Evento evento= new Evento();
+    evento.setCapacidad(10);
+    evento.setFecha(new Date());
     //evento.setHora_fin();
     //evento.setHora_inicio(new Date());
     //evento.setId_coordinador(11);
-//    evento.setLugar("Generales");
-//    evento.setNombre("Amistad ");
+    evento.setLugar("Generales");
+    evento.setNombre("Amistad ");
 //        MiembroOOIA psicologo=new MiembroOOIA();
 //                  psicologo.setNombre("Psicologo 1");
 //                psicologo.setDni("98765432");
@@ -65,22 +62,18 @@ public class PruebaMySql {
 //               psicologo.setNombre("Psicologo 3");
 //               evento.setId_evento(1);
 //               new CoordinadorEventosMySQL().insertar(psicologo);
-////                 evento.setId_evento(8); 
-//                 ArrayList<Persona>persona=new ArrayList<>();
-//                 Alumno al=new Alumno();
-//                 al.setId_persona(1);
-//                 persona.add(al);
-//                 al.setId_persona(2);
-//                 persona.add(al);
-// 
+//                 evento.setId_evento(8); 
+                 ArrayList<Persona>persona=new ArrayList<>();
+                 Alumno al=new Alumno();
+                 al.setId_persona(1);
+                 persona.add(al);
+                 al.setId_persona(2);
+                 persona.add(al);
+ 
        //new EventoMySQL().insertar(evento);
                //Evento ev = new EventoMySQL().listar("").get(0);
                 //System.out.println(ev.getNombre()+" "+ev.getId_evento());
         
-                
-                //System.out.println(new inicioSesionMySQL().inicioSesion("r20201234@pucp.edu.pe", "1231dasf12fdfa1312s"));
-                //System.out.println(new AlumnoMySQL().listar_x_id(9));
-                System.out.println(new ProfesorMySQL().listar_x_id(4));
     }
 /*    
     private static void pruebaCursoLlevado(){

@@ -46,12 +46,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             
             FileStream fs = new FileStream(txtAlumno.Text, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
-            CargarCSValumnos.AlumnosCSVcargaWS1Client cargaCSVAlumnos =
-                new CargarCSValumnos.AlumnosCSVcargaWS1Client();
+            /*CargarCSValumnos.AlumnosCSVcargaWSClient cargaCSVAlumnos =
+                new CargarCSValumnos.AlumnosCSVcargaWS1Client();*/
             int resultado = 1;
-            resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
-            
-            
+            //resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
             br.Close();
             fs.Close();
             if(resultado == 0)
@@ -95,15 +93,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             int resultado = 1;
             if (rbProfesor.Checked)
             {
-                CargarCSVprofesores.ProfesoresCSVcargaWSClient cargaCSVprofesores =
-                    new CargarCSVprofesores.ProfesoresCSVcargaWSClient();
-                resultado = cargaCSVprofesores.CargarCSVprofesores(br.ReadBytes((int)fs.Length));
+                /*CargarCSVprofesores.ProfesoresCSVcargaWSClient cargaCSVprofesores =
+                    new CargarCSVprofesores.ProfesoresCSVcargaWSClient();*/
+                //resultado = cargaCSVprofesores.CargarCSVprofesores(br.ReadBytes((int)fs.Length));
             }
             if (rbPsicologo.Checked)
             {
-                CargarCSVpsicologos.PsicologosCSVcargaWSClient cargaCSVpsicologos =
-                new CargarCSVpsicologos.PsicologosCSVcargaWSClient();
-                 resultado = cargaCSVpsicologos.CargarCSVpsicologos(br.ReadBytes((int)fs.Length));
+                /*CargarCSVpsicologos.PsicologosCSVcargaWSClient cargaCSVpsicologos =
+                new CargarCSVpsicologos.PsicologosCSVcargaWSClient();*/
+                //int resultado = cargaCSVpsicologos.CargarCSVpsicologos(txtRutaArchivo.Text);
             }
             br.Close();
             fs.Close();

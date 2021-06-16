@@ -71,6 +71,7 @@
   <message name="listarPonenteResponse">
     <part name="parameters" element="tns:listarPonenteResponse" />
   </message>
+<<<<<<< HEAD
   <message name="modificarPsicologo">
     <part name="parameters" element="tns:modificarPsicologo" />
   </message>
@@ -79,6 +80,10 @@
   </message>
   <message name="listar_alumno_x_id">
     <part name="parameters" element="tns:listar_alumno_x_id" />
+=======
+  <message name="eliminarProfesor">
+    <part name="parameters" element="tns:eliminarProfesor" />
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
   </message>
   <message name="listar_alumno_x_idResponse">
     <part name="parameters" element="tns:listar_alumno_x_idResponse" />
@@ -143,6 +148,7 @@
   <message name="listar_psicologo_x_idResponse">
     <part name="parameters" element="tns:listar_psicologo_x_idResponse" />
   </message>
+<<<<<<< HEAD
   <message name="insertarCoordinador">
     <part name="parameters" element="tns:insertarCoordinador" />
   </message>
@@ -185,6 +191,8 @@
   <message name="insertarPsicologoResponse">
     <part name="parameters" element="tns:insertarPsicologoResponse" />
   </message>
+=======
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
   <portType name="GestionHumanaWS">
     <operation name="listarAlumno">
       <input wsam:Action="http://services/GestionHumanaWS/listarAlumnoRequest" message="tns:listarAlumno" />
@@ -246,9 +254,23 @@
       <input wsam:Action="http://services/GestionHumanaWS/autenticarUsuarioRequest" message="tns:autenticarUsuario" />
       <output wsam:Action="http://services/GestionHumanaWS/autenticarUsuarioResponse" message="tns:autenticarUsuarioResponse" />
     </operation>
+<<<<<<< HEAD
     <operation name="listarEspecialidad">
       <input wsam:Action="http://services/GestionHumanaWS/listarEspecialidadRequest" message="tns:listarEspecialidad" />
       <output wsam:Action="http://services/GestionHumanaWS/listarEspecialidadResponse" message="tns:listarEspecialidadResponse" />
+=======
+    <operation name="listarPonente">
+      <input wsam:Action="http://services/GestionHumanaWS/listarPonenteRequest" message="tns:listarPonente" />
+      <output wsam:Action="http://services/GestionHumanaWS/listarPonenteResponse" message="tns:listarPonenteResponse" />
+    </operation>
+    <operation name="eliminarProfesor">
+      <input wsam:Action="http://services/GestionHumanaWS/eliminarProfesorRequest" message="tns:eliminarProfesor" />
+      <output wsam:Action="http://services/GestionHumanaWS/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
+    </operation>
+    <operation name="modificarAlumno">
+      <input wsam:Action="http://services/GestionHumanaWS/modificarAlumnoRequest" message="tns:modificarAlumno" />
+      <output wsam:Action="http://services/GestionHumanaWS/modificarAlumnoResponse" message="tns:modificarAlumnoResponse" />
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
     </operation>
     <operation name="listarCoordinador">
       <input wsam:Action="http://services/GestionHumanaWS/listarCoordinadorRequest" message="tns:listarCoordinador" />
@@ -278,6 +300,7 @@
       <input wsam:Action="http://services/GestionHumanaWS/listar_psicologo_x_idRequest" message="tns:listar_psicologo_x_id" />
       <output wsam:Action="http://services/GestionHumanaWS/listar_psicologo_x_idResponse" message="tns:listar_psicologo_x_idResponse" />
     </operation>
+<<<<<<< HEAD
     <operation name="insertarCoordinador">
       <input wsam:Action="http://services/GestionHumanaWS/insertarCoordinadorRequest" message="tns:insertarCoordinador" />
       <output wsam:Action="http://services/GestionHumanaWS/insertarCoordinadorResponse" message="tns:insertarCoordinadorResponse" />
@@ -306,6 +329,8 @@
       <input wsam:Action="http://services/GestionHumanaWS/insertarPsicologoRequest" message="tns:insertarPsicologo" />
       <output wsam:Action="http://services/GestionHumanaWS/insertarPsicologoResponse" message="tns:insertarPsicologoResponse" />
     </operation>
+=======
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
   </portType>
   <binding name="GestionHumanaWSPortBinding" type="tns:GestionHumanaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -417,6 +442,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
     <operation name="listar_alumno_x_id">
       <soap:operation soapAction="" />
       <input>
@@ -427,6 +453,9 @@
       </output>
     </operation>
     <operation name="listar_profesor_x_id">
+=======
+    <operation name="eliminarProfesor">
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -507,6 +536,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
     <operation name="listar_psicologo_x_id">
       <soap:operation soapAction="" />
       <input>
@@ -579,6 +609,8 @@
         <soap:body use="literal" />
       </output>
     </operation>
+=======
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
   </binding>
   <service name="GestionHumanaWS">
     <port name="GestionHumanaWSPort" binding="tns:GestionHumanaWSPortBinding">

@@ -32,8 +32,6 @@ namespace ProyectoOOIA.Ventanas
         private GestionEventoWS.ponente ponente;
         private Byte[] imagen;
         private Estado estado = Estado.Inicial;
-        private GestionHumanaWS.persona persona;
-
         public frmGestionEventosOOIA(Estado estado)
         {
             InitializeComponent();
@@ -51,23 +49,7 @@ namespace ProyectoOOIA.Ventanas
             evento = new GestionEventoWS.evento();
             eventoDao = new GestionEventoWS.GestionEventoWSClient();
         }
-        public frmGestionEventosOOIA(Estado estado,GestionHumanaWS.persona persona)
-        {
-            InitializeComponent();
-            componentes(estado);
-            this.persona = persona;
-            errorNombre.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            dgvPonentes.AutoGenerateColumns = false;
-            dgvPonentes.RowCount = 0;
-            errorFin.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            errorInicio.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            errorFecha.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            errorNombre.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            errorLugar.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            errorDescripcion.BlinkStyle = ErrorBlinkStyle.NeverBlink;
-            evento = new GestionEventoWS.evento();
-            eventoDao = new GestionEventoWS.GestionEventoWSClient();
-        }
+
         private void componentes(Estado estado)
         {
             switch (estado)
@@ -208,7 +190,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            new frmPrincipal(TipoUsuario.OOIA,persona).Show();
+            new frmPrincipal(TipoUsuario.OOIA).Show();
             this.Close();
         }
 
@@ -345,12 +327,9 @@ namespace ProyectoOOIA.Ventanas
         {
             frmMostrarPonentes mostrar = new frmMostrarPonentes();
             mostrar.ShowDialog();
-            if(mostrar.Ponente!=null)
-            {
-                lista.Add(mostrar.Ponente);
-                //ponente = asignarPersona(mostrar.Ponente);
-                txtNombrePonente.Text = ponente.nombre;
-            }
+            lista.Add(mostrar.Ponente);
+            //ponente = asignarPersona(mostrar.Ponente);
+            txtNombrePonente.Text = ponente.nombre;
 
         }
 
@@ -481,7 +460,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void cboCategoria_EnabledChanged(object sender, EventArgs e)
         {
-            if(cboCategoria.Enabled==true) cboCategoria.DataSource = new GestionEventoWS.GestionEventoWSClient().listarCategoriaEvento();
+            if(cboCategoria.Enabled=true) cboCategoria.DataSource = new GestionEventoWS.GestionEventoWSClient().listarCategoriaEvento();
         }
 
         private void dtpInicio_LocationChanged(object sender, EventArgs e)

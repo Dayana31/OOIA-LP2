@@ -19,11 +19,29 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
+<<<<<<< HEAD
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/EventoWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="EventoWS.wsdl" MetadataType="Wsdl" ID="bf792d04-b65b-434d-91fd-292ed5d0b255" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?wsdl" />
     <MetadataFile FileName="EventoWS.xsd" MetadataType="Schema" ID="e1bfa3c8-c966-411e-b3dc-55051380da9c" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?xsd=1" />
+=======
+    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/EventoWS?WSDL" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <MetadataFile FileName="EventoWS1.xsd" MetadataType="Schema" ID="7113a4c7-7756-4beb-a063-186cab63d475" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?xsd=1" />
+    <MetadataFile FileName="EventoWS1.wsdl" MetadataType="Wsdl" ID="667091a3-4517-443c-b8b5-7208a5f219f6" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?WSDL" />
+=======
+    <MetadataFile FileName="EventoWS1.xsd" MetadataType="Schema" ID="d5f4f900-0ac5-4e9c-b793-d2f4236b81c0" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?xsd=1" />
+    <MetadataFile FileName="EventoWS1.wsdl" MetadataType="Wsdl" ID="e69ded9f-aab9-407b-bd0b-ec7b0df2a916" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?WSDL" />
+>>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <MetadataFile FileName="EventoWS.wsdl" MetadataType="Wsdl" ID="2903eedf-5056-453d-9997-cb5bf7755ed0" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/EventoWS?WSDL" />
+    <MetadataFile FileName="EventoWS.xsd" MetadataType="Schema" ID="8ecc9848-f725-4af2-9e3c-71f2a16e3b3d" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/EventoWS?xsd=1" />
+>>>>>>> parent of 945bb9f (Inicio de sesion)
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

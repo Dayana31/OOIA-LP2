@@ -146,49 +146,29 @@ public class CoordinadorMySQL implements CoordinadorDAO{
         }
         return resultado;
     }
-
-    @Override
-    public Coordinador listar_x_id(int id) {
-                        Coordinador coordinador = new Coordinador();
-
+    
+    public int inicioSesion(String usuario, String password) {
+        int resultado = 0;
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_COORDINADOR_X_ID (?)}");
-            cs.setInt("id", id);
-            rs = cs.executeQuery();
-            rs.next();
-                /*Persona*/
-                coordinador.setId_persona(rs.getInt("id_persona"));
-                coordinador.setNombre(rs.getString("nombre"));
-                coordinador.setDni(rs.getString("dni"));
-                coordinador.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
-                coordinador.setDireccion(rs.getString("direccion"));
-                coordinador.setCorreo(rs.getString("correo"));
-                /*Miembro PUCP*/
-                coordinador.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
-                coordinador.setUsuario(rs.getString("usuario"));
-                coordinador.setPassword(rs.getString("password"));
-                coordinador.setFecha_inclusion(rs.getDate("fecha_inclusion"));
-                coordinador.setImagenDePerfil(rs.getBytes("imagen_perfil"));
-                /*Coordinador*/
-                coordinador.setId_coordinador(rs.getInt("id_coordinador"));
-                coordinador.setRol(rs.getString("rol"));
-                coordinador.setActivo(true);
-                
-
+            cs = con.prepareCall("{call autenticarUsuario(?,?)}");
+            cs.setString("_usuario", usuario);
+            cs.setString("_password", password);
+            rs=cs.executeQuery();
+            if(rs.next())
+                resultado=rs.getInt("fid_miembro_pucp");
+            
+            resultado = 1;
             rs.close();
             cs.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());};
-            
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        return coordinador;
+        return resultado;
     }
-    
-    
     
     
 }

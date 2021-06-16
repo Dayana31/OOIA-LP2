@@ -2,7 +2,7 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.OOIA.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="PsicologoWS" targetNamespace="http://services.OOIA.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/PsicologoWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
+      <xsd:import schemaLocation="http://localhost:8082/WebServicesOOIA/PsicologoWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
     </xsd:schema>
   </types>
   <message name="listarPsicologo">
@@ -11,20 +11,25 @@
   <message name="listarPsicologoResponse">
     <part name="parameters" element="tns:listarPsicologoResponse" />
   </message>
-  <message name="modificarPsicologo">
-    <part name="parameters" element="tns:modificarPsicologo" />
-  </message>
-  <message name="modificarPsicologoResponse">
-    <part name="parameters" element="tns:modificarPsicologoResponse" />
-  </message>
   <message name="eliminarPsicologo">
     <part name="parameters" element="tns:eliminarPsicologo" />
   </message>
   <message name="eliminarPsicologoResponse">
     <part name="parameters" element="tns:eliminarPsicologoResponse" />
   </message>
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/PsicologoWS/PsicologoWS.wsdl
   <message name="insertarPsicologo">
     <part name="parameters" element="tns:insertarPsicologo" />
+=======
+  <message name="modificarPsicologo">
+    <part name="parameters" element="tns:modificarPsicologo" />
+  </message>
+  <message name="modificarPsicologoResponse">
+    <part name="parameters" element="tns:modificarPsicologoResponse" />
+  </message>
+  <message name="listarPsicologo">
+    <part name="parameters" element="tns:listarPsicologo" />
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/PsicologoWS/PsicologoWS1.wsdl
   </message>
   <message name="insertarPsicologoResponse">
     <part name="parameters" element="tns:insertarPsicologoResponse" />
@@ -34,17 +39,23 @@
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoRequest" message="tns:listarPsicologo" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoResponse" message="tns:listarPsicologoResponse" />
     </operation>
-    <operation name="modificarPsicologo">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoRequest" message="tns:modificarPsicologo" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoResponse" message="tns:modificarPsicologoResponse" />
-    </operation>
     <operation name="eliminarPsicologo">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoRequest" message="tns:eliminarPsicologo" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoResponse" message="tns:eliminarPsicologoResponse" />
     </operation>
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/PsicologoWS/PsicologoWS.wsdl
     <operation name="insertarPsicologo">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/insertarPsicologoRequest" message="tns:insertarPsicologo" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/insertarPsicologoResponse" message="tns:insertarPsicologoResponse" />
+=======
+    <operation name="modificarPsicologo">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoRequest" message="tns:modificarPsicologo" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoResponse" message="tns:modificarPsicologoResponse" />
+    </operation>
+    <operation name="listarPsicologo">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoRequest" message="tns:listarPsicologo" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoResponse" message="tns:listarPsicologoResponse" />
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/PsicologoWS/PsicologoWS1.wsdl
     </operation>
   </portType>
   <binding name="PsicologoWSPortBinding" type="tns:PsicologoWS">
@@ -58,7 +69,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarPsicologo">
+    <operation name="eliminarPsicologo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +78,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarPsicologo">
+    <operation name="modificarPsicologo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -88,7 +99,7 @@
   </binding>
   <service name="PsicologoWS">
     <port name="PsicologoWSPort" binding="tns:PsicologoWSPortBinding">
-      <soap:address location="http://localhost:8080/WebServicesOOIA/PsicologoWS" />
+      <soap:address location="http://localhost:8082/WebServicesOOIA/PsicologoWS" />
     </port>
   </service>
 </definitions>

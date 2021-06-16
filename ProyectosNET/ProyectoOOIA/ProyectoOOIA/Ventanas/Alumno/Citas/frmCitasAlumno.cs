@@ -10,7 +10,7 @@ namespace ProyectoOOIA.Ventanas
         //private HorarioAWS.HorarioAWSClient daoHorario;
         //private MiembroPUCPAWS.MiembroPUCPAWSClient daoMiembroPUCP;
         private Estado estado;
-        private GestionHumanaWS.persona persona;
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -19,23 +19,6 @@ namespace ProyectoOOIA.Ventanas
 
         public frmCitasAlumno()
         {
-            InitializeComponent();
-            this.estado = Estado.Inicial;
-            cambiarEstado();
-            //dgvCitasProgramadas.DataSource = 
-
-            //esto hace que no se genere mas columnas de las que yo he definido en la interfaz grafica
-            dgvCitasProgramadas.AutoGenerateColumns = false;
-            dgvHistorialCitas.AutoGenerateColumns = false;
-            tabCitasProgramadas.AutoScroll = false;
-            tabCitasProgramadas.HorizontalScroll.Enabled = false;
-            tabCitasProgramadas.HorizontalScroll.Visible = false;
-            tabCitasProgramadas.HorizontalScroll.Maximum = 0;
-            tabCitasProgramadas.AutoScroll = true;
-        }
-        public frmCitasAlumno(GestionHumanaWS.persona persona)
-        {
-            this.persona = persona;
             InitializeComponent();
             this.estado = Estado.Inicial;
             cambiarEstado();
@@ -106,7 +89,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            new frmPrincipal(TipoUsuario.Alumno,persona).Show();
+            new frmPrincipal(TipoUsuario.Alumno).Show();
             this.Close();
         }
 

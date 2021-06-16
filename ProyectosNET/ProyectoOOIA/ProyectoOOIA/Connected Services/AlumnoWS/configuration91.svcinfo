@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="nntJrx1g/h1J05adP2111aC2pg3UmL+HTXoyUQqCAfY=">
+=======
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="IaROCcAHuN31JAWxPNjhNnaXpFnmWOsyG/X0zu0O6C4=">
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="AlumnoWSPortBinding">
       <properties>
@@ -112,10 +116,14 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
+<<<<<<< HEAD
     <endpoint name="AlumnoWSPort" contract="AlumnoWS.AlumnoWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/AlumnoWS" bindingConfiguration="AlumnoWSPortBinding">
+=======
+    <endpoint name="AlumnoWSPort1" contract="AlumnoWS.AlumnoWS" bindingType="basicHttpBinding" address="http://localhost:8082/WebServicesOOIA/AlumnoWS" bindingConfiguration="AlumnoWSPortBinding1">
+>>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/WebServicesOOIA/AlumnoWS</serializedValue>
+          <serializedValue>http://localhost:8082/WebServicesOOIA/AlumnoWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -187,7 +195,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>AlumnoWSPort</serializedValue>
+          <serializedValue>AlumnoWSPort1</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
