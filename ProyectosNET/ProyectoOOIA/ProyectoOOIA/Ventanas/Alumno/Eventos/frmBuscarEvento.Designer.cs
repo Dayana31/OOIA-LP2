@@ -186,6 +186,7 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(844, 450);
             this.Controls.Add(this.pnlHeader);
@@ -194,6 +195,7 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombreEvento);
+            this.MaximizeBox = false;
             this.Name = "frmBuscarEventoAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar evento";

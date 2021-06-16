@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/CoordinadorWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+  <message name="modificarCoordinador">
+    <part name="parameters" element="tns:modificarCoordinador" />
+  </message>
+  <message name="modificarCoordinadorResponse">
+    <part name="parameters" element="tns:modificarCoordinadorResponse" />
+  </message>
   <message name="listarCoordinador">
     <part name="parameters" element="tns:listarCoordinador" />
   </message>
   <message name="listarCoordinadorResponse">
     <part name="parameters" element="tns:listarCoordinadorResponse" />
-  </message>
-  <message name="insertarCoordinador">
-    <part name="parameters" element="tns:insertarCoordinador" />
-  </message>
-  <message name="insertarCoordinadorResponse">
-    <part name="parameters" element="tns:insertarCoordinadorResponse" />
   </message>
   <message name="eliminarCoordinador">
     <part name="parameters" element="tns:eliminarCoordinador" />
@@ -23,33 +23,33 @@
   <message name="eliminarCoordinadorResponse">
     <part name="parameters" element="tns:eliminarCoordinadorResponse" />
   </message>
-  <message name="modificarCoordinador">
-    <part name="parameters" element="tns:modificarCoordinador" />
+  <message name="insertarCoordinador">
+    <part name="parameters" element="tns:insertarCoordinador" />
   </message>
-  <message name="modificarCoordinadorResponse">
-    <part name="parameters" element="tns:modificarCoordinadorResponse" />
+  <message name="insertarCoordinadorResponse">
+    <part name="parameters" element="tns:insertarCoordinadorResponse" />
   </message>
   <portType name="CoordinadorWS">
+    <operation name="modificarCoordinador">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorRequest" message="tns:modificarCoordinador" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorResponse" message="tns:modificarCoordinadorResponse" />
+    </operation>
     <operation name="listarCoordinador">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/listarCoordinadorRequest" message="tns:listarCoordinador" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/listarCoordinadorResponse" message="tns:listarCoordinadorResponse" />
-    </operation>
-    <operation name="insertarCoordinador">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorRequest" message="tns:insertarCoordinador" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorResponse" message="tns:insertarCoordinadorResponse" />
     </operation>
     <operation name="eliminarCoordinador">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorRequest" message="tns:eliminarCoordinador" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorResponse" message="tns:eliminarCoordinadorResponse" />
     </operation>
-    <operation name="modificarCoordinador">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorRequest" message="tns:modificarCoordinador" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorResponse" message="tns:modificarCoordinadorResponse" />
+    <operation name="insertarCoordinador">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorRequest" message="tns:insertarCoordinador" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorResponse" message="tns:insertarCoordinadorResponse" />
     </operation>
   </portType>
   <binding name="CoordinadorWSPortBinding" type="tns:CoordinadorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarCoordinador">
+    <operation name="modificarCoordinador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -58,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarCoordinador">
+    <operation name="listarCoordinador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarCoordinador">
+    <operation name="insertarCoordinador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

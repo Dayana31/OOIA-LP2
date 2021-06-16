@@ -104,3 +104,4 @@ drop procedure if exists INSERTAR_EVENTO_PONENTE;
 drop procedure if exists MODIFICAR_EVENTO_PONENTE;
 drop procedure if exists ELIMINAR_EVENTO_PONENTE;
 drop procedure if exists LISTAR_EVENTO_PONENTE;
+drop procedure if exists LISTAR_EVENTO_X_NOMBRE_CATEGORIA;

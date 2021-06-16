@@ -25,9 +25,6 @@
     <service name="EventoAlumnoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.EventoAlumnoWS</implementation-class>
     </service>
-    <service name="EventoWS">
-      <implementation-class>pe.edu.pucp.OOIA.services.EventoWS</implementation-class>
-    </service>
     <service name="CoordinadorWS">
       <implementation-class>pe.edu.pucp.OOIA.services.CoordinadorWS</implementation-class>
     </service>
@@ -36,6 +33,9 @@
     </service>
     <service name="CursoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.CursoWS</implementation-class>
+    </service>
+    <service name="EventoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.EventoWS</implementation-class>
     </service>
   </services>
   <clients/>

@@ -148,7 +148,7 @@ create procedure LISTAR_ALUMNO_X_NOMBRE(
         inner join alumno a on a.fid_miembro_pucp = m.id_miembro_pucp
         inner join especialidad e on e.id_especialidad = a.fid_especialidad 
 	where a.activo = true
-	and (p.nombre LIKE CONCAT('%',_nombre,'%'));
+	and (p.nombre LIKE CONCAT('%',_nombre,'%')) ;
 end$
 
 
@@ -1052,14 +1052,17 @@ create procedure ELIMINAR_EVENTO(
 end$
 
 delimiter $
-create procedure LISTAR_EVENTO(
-in _nombre varchar(250)
-)begin
+CREATE  PROCEDURE LISTAR_EVENTO_X_NOMBRE_CATEGORIA(
+in _nombreCategoria varchar(250)
+)
+begin
 	/*tabla evento*/
-	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.categoria,e.imagen
-    from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador
-    where  (e.nombre LIKE CONCAT('%',_nombre,'%')) and e.estado=1;
-end $
+	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.imagen,e.cupo,
+    e.fid_coordinador, e.fid_categoria_evento, ce.nombre as nombre_categoria
+    from evento e inner join coordinador c on e.fid_coordinador = c.id_coordinador
+    inner join categoria_evento ce on ce.id_categoria_evento = e.fid_categoria_evento
+    where  ((e.nombre LIKE CONCAT('%',_nombreCategoria,'%')) OR (ce.nombre LIKE CONCAT('%',_nombreCategoria,'%'))) and e.activo=1;
+end$
 
 
 --ENCUESTA_EVENTO
@@ -1142,19 +1145,112 @@ end$
 
 delimiter $
 create procedure ELIMINAR_EVENTO_PONENTE(
-    	in _id_evento_ponente int
+    	in _id_evento int
+        
 )begin
-	update evento_ponente set activo = false where id_evento_ponente = _id_evento_ponente;
+	update evento_ponente set activo = false where fid_evento = _id_evento ;
 end$
 
 delimiter $
-create procedure LISTAR_EVENTO_PONENTE(
+CREATE PROCEDURE LISTAR_EVENTO_PONENTE(
 	in _id_evento int
-)begin
-	select p.id_ponente, p.nombre as nombre_ponente, e.id_evento, e.nombre as nombre_evento
+)
+begin
+	select per.id_persona, me.id_miembro_externo, p.id_ponente, per.nombre as nombre_ponente, e.id_evento, e.nombre as nombre_evento
 	from evento_ponente ep
 	inner join ponente p on ep.fid_ponente = p.id_ponente
+    inner join miembro_externo me on me.id_miembro_externo=p.fid_miembro_externo
+    inner join persona per on per.id_persona=me.fid_persona
 	inner join evento e on ep.fid_evento = e.id_evento
-	where activo = true
+	where ep.activo = true
 	and ep.fid_evento = _id_evento;
+end$
+
+delimiter $
+create procedure autenticarUsuario(
+in _usuario varchar(250),
+in _password varchar(250)
+)begin
+select * 
+from miembro_pucp
+where usuario=_usuario and password=md5(_password);
+end$
+
+
+delimiter $
+create procedure tipoUsuario(in _id_persona int)
+begin
+select  case
+when _id_persona in 
+(select p.id_persona
+ from persona p 
+ inner join miembro_pucp mp on mp.fid_persona=p.id_persona
+ inner join alumno a on a.fid_miembro_pucp=mp.id_miembro_pucp) then 1
+ when _id_persona in 
+ (select p.id_persona
+ from persona p 
+ inner join miembro_pucp mp on mp.fid_persona=p.id_persona
+ inner join profesor pr on pr.fid_miembro_pucp=mp.id_miembro_pucp) then 2
+ when _id_persona in 
+ (select p.id_persona
+ from persona p 
+ inner join miembro_pucp mp on mp.fid_persona=p.id_persona
+ inner join psicologo ps on ps.fid_miembro_pucp=mp.id_miembro_pucp) then 3
+ when _id_persona in 
+ (select p.id_persona
+ from persona p 
+ inner join miembro_pucp mp on mp.fid_persona=p.id_persona
+ inner join coordinador c on c.fid_miembro_pucp=mp.id_miembro_pucp) then 4
+ end as tipo_de_usuario;
+end$
+
+delimiter $
+create procedure LISTAR_ALUMNO_X_ID(
+in _id int
+)begin
+	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
+		m.id_miembro_pucp, m.usuario,m.password, m.fecha_inclusion, m.imagen_perfil,
+           	a.id_alumno, a.codigo, a.fid_especialidad, e.nombre as nombre_especialidad, a.craest, a.creditos_aprobados
+	from persona p 
+	inner join miembro_pucp m on p.id_persona = m.fid_persona
+        inner join alumno a on a.fid_miembro_pucp = m.id_miembro_pucp
+        inner join especialidad e on e.id_especialidad = a.fid_especialidad 
+	where a.activo = true and p.id_persona=_id;
+end$
+delimiter $
+create procedure LISTAR_PROFESOR_X_ID(
+in id int
+)begin
+	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
+		m.id_miembro_pucp, m.usuario,  m.password, m.fecha_inclusion, m.imagen_perfil,
+ 		pr.id_profesor, e.id_especialidad,e.nombre as nombre_especialidad, pr.facultad, pr.categoria
+	from persona p 
+	inner join miembro_pucp m on p.id_persona = m.fid_persona
+        inner join profesor pr on pr.fid_miembro_pucp = m.id_miembro_pucp
+       	inner join especialidad e on e.id_especialidad = pr.fid_especialidad
+	where pr.activo = true and p.id_persona=id;
+end$
+delimiter $
+create procedure LISTAR_COORDINADOR_X_ID(
+in id int
+)begin
+	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
+		m.id_miembro_pucp, m.usuario, m.password, m.fecha_inclusion, m.imagen_perfil,
+		c.id_coordinador, c.rol
+	from persona p 
+	inner join miembro_pucp m on p.id_persona = m.fid_persona
+        inner join coordinador c on c.fid_miembro_pucp = m.id_miembro_pucp
+	where c.activo = true and p.id_persona=id;
+end$
+delimiter $
+create procedure LISTAR_PSICOLOGO_X_ID(
+in id int 
+)begin
+	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
+		m.id_miembro_pucp, m.usuario, m.password, m.fecha_inclusion, m.imagen_perfil,
+		ps.id_psicologo, ps.rama
+	from persona p 
+	inner join miembro_pucp m on p.id_persona = m.fid_persona
+        inner join psicologo ps on ps.fid_miembro_pucp = m.id_miembro_pucp
+	where ps.activo = true and p.id_persona=id;
 end$

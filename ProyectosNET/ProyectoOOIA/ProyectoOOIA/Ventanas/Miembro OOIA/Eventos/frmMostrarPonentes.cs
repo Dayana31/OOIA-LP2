@@ -11,6 +11,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
 
         private int tipoUsuario = -1;
         private GestionEventoWS.ponente ponente=null;
+
         public frmMostrarPonentes()
         {
             InitializeComponent();
@@ -25,8 +26,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            tipoUsuario = cmbHorario.SelectedIndex;
-            
+            //tipoUsuario = cmbHorario.SelectedIndex;
+
 
             ponente = new GestionEventoWS.ponente();
             dgvPonentes.DataSource = new GestionHumanaWS.GestionHumanaWSClient().listarPonente();
@@ -50,18 +51,33 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
         private void dgvPonentes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
 
-            ponente = dgvPonentes.Rows[e.RowIndex].DataBoundItem as GestionEventoWS.ponente;
-            dgvPonentes.Rows[e.RowIndex].Cells[0].Value = ponente.nombre;
-            dgvPonentes.Rows[e.RowIndex].Cells[1].Value = ponente.correo;
+            GestionHumanaWS.ponente aux = (GestionHumanaWS.ponente)dgvPonentes.Rows[e.RowIndex].DataBoundItem ;
+            
+                dgvPonentes.Rows[e.RowIndex].Cells[0].Value = aux.nombre;
+                dgvPonentes.Rows[e.RowIndex].Cells[1].Value = aux.correo;
+            
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
             if (ponente == null) return;
-            ponente = dgvPonentes.CurrentRow.DataBoundItem as GestionEventoWS.ponente;
+             GestionHumanaWS.ponente persona= dgvPonentes.CurrentRow.DataBoundItem as GestionHumanaWS.ponente;
+             ponente.activo = persona.activo;
+             ponente.id_ponente = persona.id_ponente;
+             ponente.organizacion = persona.organizacion;
+             ponente.correo = persona.correo;
+             ponente.direccion = persona.direccion;
+             ponente.dni = persona.dni;
+             ponente.fecha_nacimiento = persona.fecha_nacimiento;
+             ponente.fecha_nacimientoSpecified = true;
+             ponente.id_miembro_externo = persona.id_miembro_externo;
+             ponente.id_persona = persona.id_persona;
+             ponente.nombre = persona.nombre;
+             ponente.ocupacion = persona.ocupacion;
+             ponente.telefono = persona.telefono;
 
 
-            this.Dispose();
+             this.Dispose();
         }
     }
 }

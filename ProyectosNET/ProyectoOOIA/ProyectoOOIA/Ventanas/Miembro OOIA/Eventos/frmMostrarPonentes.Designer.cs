@@ -30,14 +30,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
         private void InitializeComponent()
         {
             this.dgvPonentes = new System.Windows.Forms.DataGridView();
-            this.cmbHorario = new System.Windows.Forms.ComboBox();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.Button();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Especialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,17 +54,19 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             this.dgvPonentes.TabIndex = 0;
             this.dgvPonentes.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPonentes_CellFormatting);
             // 
-            // cmbHorario
+            // Nombre
             // 
-            this.cmbHorario.FormattingEnabled = true;
-            this.cmbHorario.Items.AddRange(new object[] {
-            "Invitado",
-            "Profesor",
-            "Alumno"});
-            this.cmbHorario.Location = new System.Drawing.Point(458, 28);
-            this.cmbHorario.Name = "cmbHorario";
-            this.cmbHorario.Size = new System.Drawing.Size(121, 21);
-            this.cmbHorario.TabIndex = 1;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 388;
+            // 
+            // Especialidad
+            // 
+            this.Especialidad.HeaderText = "Correo";
+            this.Especialidad.Name = "Especialidad";
+            this.Especialidad.ReadOnly = true;
+            this.Especialidad.Width = 388;
             // 
             // label1
             // 
@@ -95,15 +95,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(371, 32);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Tipo de horario:";
-            // 
             // btnSeleccionar
             // 
             this.btnSeleccionar.Location = new System.Drawing.Point(713, 27);
@@ -114,31 +105,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
             this.btnSeleccionar.UseVisualStyleBackColor = true;
             this.btnSeleccionar.Click += new System.EventHandler(this.btnSeleccionar_Click);
             // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 388;
-            // 
-            // Especialidad
-            // 
-            this.Especialidad.HeaderText = "Correo";
-            this.Especialidad.Name = "Especialidad";
-            this.Especialidad.ReadOnly = true;
-            this.Especialidad.Width = 388;
-            // 
             // frmMostrarPonentes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSeleccionar);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmbHorario);
             this.Controls.Add(this.dgvPonentes);
             this.Name = "frmMostrarPonentes";
             this.Text = "frmMostrarPonentes";
@@ -151,11 +126,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPonentes;
-        private System.Windows.Forms.ComboBox cmbHorario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Especialidad;

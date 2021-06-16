@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using ProyectoOOIA.EventoWS;
 using ProyectoOOIA.GestionEventoWS;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos;
+using ponente = ProyectoOOIA.GestionEventoWS.ponente;
 
 
 namespace ProyectoOOIA.Ventanas
@@ -30,6 +31,7 @@ namespace ProyectoOOIA.Ventanas
         private GestionEventoWS.GestionEventoWSClient eventoDao;
         private GestionEventoWS.evento evento;
         private BindingList<GestionEventoWS.ponente> lista = new BindingList<GestionEventoWS.ponente>();
+        private BindingList<GestionEventoWS.ponente> listaModificar = new BindingList<GestionEventoWS.ponente>();
         private GestionEventoWS.ponente ponente;
         private Byte[] imagen;
         private Estado estado = Estado.Inicial;
@@ -37,7 +39,7 @@ namespace ProyectoOOIA.Ventanas
         {
             InitializeComponent();
             componentes(estado);
-
+            cboCategoria.DataSource = new GestionEventoWS.GestionEventoWSClient().listarCategoriaEvento();
             errorNombre.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             dgvPonentes.AutoGenerateColumns = false;
             dgvPonentes.RowCount = 0;
@@ -68,6 +70,12 @@ namespace ProyectoOOIA.Ventanas
             evento = new GestionEventoWS.evento();
             eventoDao = new GestionEventoWS.GestionEventoWSClient();
             this.persona = persona;
+            cboCategoria.DataSource = eventoDao.listarCategoriaEvento();
+
+            cboCategoria.DisplayMember = "nombre";
+            
+
+
         }
 
         private void componentes(Estado estado)
@@ -192,7 +200,8 @@ namespace ProyectoOOIA.Ventanas
             dtpFechaEvento.Value = evento.fecha;
             dtpInicio.Value = evento.horaInicio;
             dtpFin.Value = evento.horaFin;
-            cboCategoria.SelectedIndex = evento.categoria.id_categoria - 1;
+            cboCategoria.SelectedItem = evento.categoria;
+            
             npdCapacidad.Value = evento.capacidad;
             try
             {
@@ -203,7 +212,20 @@ namespace ProyectoOOIA.Ventanas
                 MessageBox.Show("Este evento no tiene imagen asociada", "Imagen",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             }
+            lista = new BindingList<ponente>();
+            if (evento.ponentes== null) return;
+            foreach (GestionEventoWS.ponente auxPonente in evento.ponentes)
+
+            {
+                dgvPonentes.Rows.Add();
+                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[0].Value = auxPonente.nombre;
+                listaModificar.Add(auxPonente);
+                
+
+            }
             
+            
+
 
 
         }
@@ -228,22 +250,23 @@ namespace ProyectoOOIA.Ventanas
                 evento.horaFinSpecified = true;
                 evento.horaInicioSpecified = true;
                 evento.categoria = new GestionEventoWS.categoriaEvento();
-                evento.categoria=cboCategoria.SelectedItem as GestionEventoWS.categoriaEvento;
+                evento.categoria=(GestionEventoWS.categoriaEvento)cboCategoria.SelectedItem ;
                 evento.lugar = txtLugar.Text;
                 evento.descripcion = txtDescripcion.Text;
                 evento.imagen = imagen;
                 evento.ponentes = lista.ToArray();
-                evento.coordinador = new GestionEventoWS.coordinador();
-                evento.coordinador.id_coordinador = 1;
+                
                 
 
                 //evento.ponentes = lista.ToArray();
                 DialogResult dr =
-                    MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("¿Desea registrar este evento?", "Guardar Evento",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
                 if (dr == DialogResult.Yes)
                 {
                     if(estado==Estado.Nuevo)
                     {
+                        evento.coordinador = new GestionEventoWS.coordinador();
+                        evento.coordinador.id_coordinador = (persona as GestionHumanaWS.coordinador).id_coordinador;
                         if (eventoDao.insertarEvento(evento) == 1)
                         {
                             MessageBox.Show("El registro ha sido exitoso", "Exito", MessageBoxButtons.OK,
@@ -255,13 +278,18 @@ namespace ProyectoOOIA.Ventanas
                     }
                     else if (estado == Estado.Modificar)
                     {
+                        foreach (GestionEventoWS.ponente xPonente in listaModificar)
+                        {
+                                Console.WriteLine(xPonente.id_ponente);
+                        }
+                        evento.ponentes = listaModificar.ToArray();
                         if (eventoDao.modificarEvento(evento) == 1)
                         {
-                            MessageBox.Show("El registro ha sido exitoso", "Exito", MessageBoxButtons.OK,
+                            MessageBox.Show("La modificacion ha sido exitoso", "Exito", MessageBoxButtons.OK,
                                 MessageBoxIcon.Exclamation);
                         }
                         else
-                            MessageBox.Show("Ha habido un error", "Error", MessageBoxButtons.RetryCancel,
+                            MessageBox.Show("Ha habido un error en la modificación", "Error", MessageBoxButtons.RetryCancel,
                                 MessageBoxIcon.Error);
                     }
 
@@ -271,10 +299,15 @@ namespace ProyectoOOIA.Ventanas
 
         private int validacionDatos()
         {
-            if (lista.Count == 0)
+            if (lista.Count == 0 && estado==Estado.Inicial)
             {
                 MessageBox.Show("Debe ingresar al menos un ponente", "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+                return 0;
+            }
+            else if(listaModificar.Count==0 && estado==Estado.Modificar){
+                MessageBox.Show("Debe ingresar al menos un ponente", "Error", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
                 return 0;
             }
             else if(dtpInicio.Value>dtpFin.Value ) MessageBox.Show("La hora final debe ser mayor a la inicial", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -330,6 +363,27 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnAgregarPonente_Click(object sender, EventArgs e)
         {
+            if (estado == Estado.Nuevo) agregaNuevo();
+            else agregaModificar();
+        }
+
+        private void agregaModificar()
+        {
+            if (ponente != null)
+            {
+                dgvPonentes.Rows.Add();
+                dgvPonentes.Rows[dgvPonentes.RowCount - 1].Cells[0].Value = ponente.nombre;
+                listaModificar.Add(ponente);
+                ponente = null;
+            }
+            else
+                MessageBox.Show("no puede agregar a un ponente dos veces", "error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+        }
+
+
+        private void agregaNuevo()
+        {
             if (ponente != null)
             {
                 dgvPonentes.Rows.Add();
@@ -340,14 +394,12 @@ namespace ProyectoOOIA.Ventanas
             else
                 MessageBox.Show("no puede agregar a un ponente dos veces", "error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-
         }
-
         private void btnBuscarPonente_Click(object sender, EventArgs e)
         {
             frmMostrarPonentes mostrar = new frmMostrarPonentes();
             mostrar.ShowDialog();
-            lista.Add(mostrar.Ponente);
+            ponente = mostrar.Ponente;
             //ponente = asignarPersona(mostrar.Ponente);
             txtNombrePonente.Text = ponente.nombre;
 
@@ -368,9 +420,14 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnEliminarPonente_Click(object sender, EventArgs e)
         {
-            if (dgvPonentes.CurrentRow.Index >= 0)
+            if (dgvPonentes.CurrentRow.Index >= 0 && estado==Estado.Nuevo)
             {
                 lista.RemoveAt(dgvPonentes.CurrentRow.Index);
+                dgvPonentes.Rows.RemoveAt(dgvPonentes.CurrentRow.Index);
+            }
+            else if (dgvPonentes.CurrentRow.Index >= 0 && estado == Estado.Modificar)
+            {
+                listaModificar.RemoveAt(dgvPonentes.CurrentRow.Index);
                 dgvPonentes.Rows.RemoveAt(dgvPonentes.CurrentRow.Index);
             }
         }
@@ -480,12 +537,18 @@ namespace ProyectoOOIA.Ventanas
 
         private void cboCategoria_EnabledChanged(object sender, EventArgs e)
         {
-            if(cboCategoria.Enabled=true) cboCategoria.DataSource = new GestionEventoWS.GestionEventoWSClient().listarCategoriaEvento();
+            
         }
 
         private void dtpInicio_LocationChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvPonentes_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+           
+            
         }
     }
     

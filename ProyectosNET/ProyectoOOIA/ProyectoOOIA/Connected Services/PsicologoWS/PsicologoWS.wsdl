@@ -11,12 +11,6 @@
   <message name="listarPsicologoResponse">
     <part name="parameters" element="tns:listarPsicologoResponse" />
   </message>
-  <message name="modificarPsicologo">
-    <part name="parameters" element="tns:modificarPsicologo" />
-  </message>
-  <message name="modificarPsicologoResponse">
-    <part name="parameters" element="tns:modificarPsicologoResponse" />
-  </message>
   <message name="eliminarPsicologo">
     <part name="parameters" element="tns:eliminarPsicologo" />
   </message>
@@ -29,14 +23,16 @@
   <message name="insertarPsicologoResponse">
     <part name="parameters" element="tns:insertarPsicologoResponse" />
   </message>
+  <message name="modificarPsicologo">
+    <part name="parameters" element="tns:modificarPsicologo" />
+  </message>
+  <message name="modificarPsicologoResponse">
+    <part name="parameters" element="tns:modificarPsicologoResponse" />
+  </message>
   <portType name="PsicologoWS">
     <operation name="listarPsicologo">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoRequest" message="tns:listarPsicologo" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoResponse" message="tns:listarPsicologoResponse" />
-    </operation>
-    <operation name="modificarPsicologo">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoRequest" message="tns:modificarPsicologo" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoResponse" message="tns:modificarPsicologoResponse" />
     </operation>
     <operation name="eliminarPsicologo">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoRequest" message="tns:eliminarPsicologo" />
@@ -45,6 +41,10 @@
     <operation name="insertarPsicologo">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/insertarPsicologoRequest" message="tns:insertarPsicologo" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/insertarPsicologoResponse" message="tns:insertarPsicologoResponse" />
+    </operation>
+    <operation name="modificarPsicologo">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoRequest" message="tns:modificarPsicologo" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoResponse" message="tns:modificarPsicologoResponse" />
     </operation>
   </portType>
   <binding name="PsicologoWSPortBinding" type="tns:PsicologoWS">
@@ -58,15 +58,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarPsicologo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarPsicologo">
       <soap:operation soapAction="" />
       <input>
@@ -77,6 +68,15 @@
       </output>
     </operation>
     <operation name="insertarPsicologo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPsicologo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

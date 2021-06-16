@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/HorarioWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="eliminarHorario">
-    <part name="parameters" element="tns:eliminarHorario" />
+  <message name="listarHorario">
+    <part name="parameters" element="tns:listarHorario" />
   </message>
-  <message name="eliminarHorarioResponse">
-    <part name="parameters" element="tns:eliminarHorarioResponse" />
+  <message name="listarHorarioResponse">
+    <part name="parameters" element="tns:listarHorarioResponse" />
   </message>
   <message name="insertarHorario">
     <part name="parameters" element="tns:insertarHorario" />
@@ -17,11 +17,11 @@
   <message name="insertarHorarioResponse">
     <part name="parameters" element="tns:insertarHorarioResponse" />
   </message>
-  <message name="listarHorario">
-    <part name="parameters" element="tns:listarHorario" />
+  <message name="eliminarHorario">
+    <part name="parameters" element="tns:eliminarHorario" />
   </message>
-  <message name="listarHorarioResponse">
-    <part name="parameters" element="tns:listarHorarioResponse" />
+  <message name="eliminarHorarioResponse">
+    <part name="parameters" element="tns:eliminarHorarioResponse" />
   </message>
   <message name="modificarHorario">
     <part name="parameters" element="tns:modificarHorario" />
@@ -30,17 +30,17 @@
     <part name="parameters" element="tns:modificarHorarioResponse" />
   </message>
   <portType name="HorarioWS">
-    <operation name="eliminarHorario">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/eliminarHorarioRequest" message="tns:eliminarHorario" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/eliminarHorarioResponse" message="tns:eliminarHorarioResponse" />
+    <operation name="listarHorario">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/listarHorarioRequest" message="tns:listarHorario" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/listarHorarioResponse" message="tns:listarHorarioResponse" />
     </operation>
     <operation name="insertarHorario">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/insertarHorarioRequest" message="tns:insertarHorario" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/insertarHorarioResponse" message="tns:insertarHorarioResponse" />
     </operation>
-    <operation name="listarHorario">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/listarHorarioRequest" message="tns:listarHorario" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/listarHorarioResponse" message="tns:listarHorarioResponse" />
+    <operation name="eliminarHorario">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/eliminarHorarioRequest" message="tns:eliminarHorario" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/eliminarHorarioResponse" message="tns:eliminarHorarioResponse" />
     </operation>
     <operation name="modificarHorario">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/HorarioWS/modificarHorarioRequest" message="tns:modificarHorario" />
@@ -49,7 +49,7 @@
   </portType>
   <binding name="HorarioWSPortBinding" type="tns:HorarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarHorario">
+    <operation name="listarHorario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarHorario">
+    <operation name="eliminarHorario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

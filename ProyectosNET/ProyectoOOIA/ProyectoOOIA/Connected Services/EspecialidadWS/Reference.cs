@@ -16,24 +16,6 @@ namespace ProyectoOOIA.EspecialidadWS {
     public interface EspecialidadWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EspecialidadWS/listarEspecialidadRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EspecialidadWS/listarEspecialidadResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse listarEspecialidad(ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EspecialidadWS/listarEspecialidadRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EspecialidadWS/listarEspecialidadResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse> listarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EspecialidadWS/modificarEspecialidadRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EspecialidadWS/modificarEspecialidadResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse modificarEspecialidad(ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EspecialidadWS/modificarEspecialidadRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EspecialidadWS/modificarEspecialidadResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse> modificarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EspecialidadWS/eliminarEspecialidadRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EspecialidadWS/eliminarEspecialidadResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -50,6 +32,60 @@ namespace ProyectoOOIA.EspecialidadWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EspecialidadWS/insertarEspecialidadRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EspecialidadWS/insertarEspecialidadResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.insertarEspecialidadResponse> insertarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.insertarEspecialidadRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EspecialidadWS/listarEspecialidadRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EspecialidadWS/listarEspecialidadResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse listarEspecialidad(ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EspecialidadWS/listarEspecialidadRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EspecialidadWS/listarEspecialidadResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse> listarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EspecialidadWS/modificarEspecialidadRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EspecialidadWS/modificarEspecialidadResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse modificarEspecialidad(ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EspecialidadWS/modificarEspecialidadRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EspecialidadWS/modificarEspecialidadResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse> modificarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEspecialidad", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarEspecialidadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_especialidad;
+        
+        public eliminarEspecialidadRequest() {
+        }
+        
+        public eliminarEspecialidadRequest(int id_especialidad) {
+            this.id_especialidad = id_especialidad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEspecialidadResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarEspecialidadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarEspecialidadResponse() {
+        }
+        
+        public eliminarEspecialidadResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -109,6 +145,42 @@ namespace ProyectoOOIA.EspecialidadWS {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEspecialidad", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarEspecialidadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.EspecialidadWS.especialidad especialidad;
+        
+        public insertarEspecialidadRequest() {
+        }
+        
+        public insertarEspecialidadRequest(ProyectoOOIA.EspecialidadWS.especialidad especialidad) {
+            this.especialidad = especialidad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEspecialidadResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarEspecialidadResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarEspecialidadResponse() {
+        }
+        
+        public insertarEspecialidadResponse(int @return) {
+            this.@return = @return;
         }
     }
     
@@ -176,78 +248,6 @@ namespace ProyectoOOIA.EspecialidadWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEspecialidad", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarEspecialidadRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_especialidad;
-        
-        public eliminarEspecialidadRequest() {
-        }
-        
-        public eliminarEspecialidadRequest(int id_especialidad) {
-            this.id_especialidad = id_especialidad;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEspecialidadResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarEspecialidadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarEspecialidadResponse() {
-        }
-        
-        public eliminarEspecialidadResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEspecialidad", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarEspecialidadRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.EspecialidadWS.especialidad especialidad;
-        
-        public insertarEspecialidadRequest() {
-        }
-        
-        public insertarEspecialidadRequest(ProyectoOOIA.EspecialidadWS.especialidad especialidad) {
-            this.especialidad = especialidad;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEspecialidadResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarEspecialidadResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarEspecialidadResponse() {
-        }
-        
-        public insertarEspecialidadResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface EspecialidadWSChannel : ProyectoOOIA.EspecialidadWS.EspecialidadWS, System.ServiceModel.IClientChannel {
     }
@@ -273,50 +273,6 @@ namespace ProyectoOOIA.EspecialidadWS {
         
         public EspecialidadWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse ProyectoOOIA.EspecialidadWS.EspecialidadWS.listarEspecialidad(ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest request) {
-            return base.Channel.listarEspecialidad(request);
-        }
-        
-        public ProyectoOOIA.EspecialidadWS.especialidad[] listarEspecialidad() {
-            ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest inValue = new ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest();
-            ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse retVal = ((ProyectoOOIA.EspecialidadWS.EspecialidadWS)(this)).listarEspecialidad(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse> ProyectoOOIA.EspecialidadWS.EspecialidadWS.listarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest request) {
-            return base.Channel.listarEspecialidadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse> listarEspecialidadAsync() {
-            ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest inValue = new ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest();
-            return ((ProyectoOOIA.EspecialidadWS.EspecialidadWS)(this)).listarEspecialidadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse ProyectoOOIA.EspecialidadWS.EspecialidadWS.modificarEspecialidad(ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest request) {
-            return base.Channel.modificarEspecialidad(request);
-        }
-        
-        public int modificarEspecialidad(ProyectoOOIA.EspecialidadWS.especialidad especialidad) {
-            ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest inValue = new ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest();
-            inValue.especialidad = especialidad;
-            ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse retVal = ((ProyectoOOIA.EspecialidadWS.EspecialidadWS)(this)).modificarEspecialidad(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse> ProyectoOOIA.EspecialidadWS.EspecialidadWS.modificarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest request) {
-            return base.Channel.modificarEspecialidadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse> modificarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.especialidad especialidad) {
-            ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest inValue = new ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest();
-            inValue.especialidad = especialidad;
-            return ((ProyectoOOIA.EspecialidadWS.EspecialidadWS)(this)).modificarEspecialidadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -363,6 +319,50 @@ namespace ProyectoOOIA.EspecialidadWS {
             ProyectoOOIA.EspecialidadWS.insertarEspecialidadRequest inValue = new ProyectoOOIA.EspecialidadWS.insertarEspecialidadRequest();
             inValue.especialidad = especialidad;
             return ((ProyectoOOIA.EspecialidadWS.EspecialidadWS)(this)).insertarEspecialidadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse ProyectoOOIA.EspecialidadWS.EspecialidadWS.listarEspecialidad(ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest request) {
+            return base.Channel.listarEspecialidad(request);
+        }
+        
+        public ProyectoOOIA.EspecialidadWS.especialidad[] listarEspecialidad() {
+            ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest inValue = new ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest();
+            ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse retVal = ((ProyectoOOIA.EspecialidadWS.EspecialidadWS)(this)).listarEspecialidad(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse> ProyectoOOIA.EspecialidadWS.EspecialidadWS.listarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest request) {
+            return base.Channel.listarEspecialidadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.listarEspecialidadResponse> listarEspecialidadAsync() {
+            ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest inValue = new ProyectoOOIA.EspecialidadWS.listarEspecialidadRequest();
+            return ((ProyectoOOIA.EspecialidadWS.EspecialidadWS)(this)).listarEspecialidadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse ProyectoOOIA.EspecialidadWS.EspecialidadWS.modificarEspecialidad(ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest request) {
+            return base.Channel.modificarEspecialidad(request);
+        }
+        
+        public int modificarEspecialidad(ProyectoOOIA.EspecialidadWS.especialidad especialidad) {
+            ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest inValue = new ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest();
+            inValue.especialidad = especialidad;
+            ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse retVal = ((ProyectoOOIA.EspecialidadWS.EspecialidadWS)(this)).modificarEspecialidad(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse> ProyectoOOIA.EspecialidadWS.EspecialidadWS.modificarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest request) {
+            return base.Channel.modificarEspecialidadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse> modificarEspecialidadAsync(ProyectoOOIA.EspecialidadWS.especialidad especialidad) {
+            ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest inValue = new ProyectoOOIA.EspecialidadWS.modificarEspecialidadRequest();
+            inValue.especialidad = especialidad;
+            return ((ProyectoOOIA.EspecialidadWS.EspecialidadWS)(this)).modificarEspecialidadAsync(inValue);
         }
     }
 }

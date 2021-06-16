@@ -33,7 +33,7 @@ public class EventoMySQL implements EventoDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_EVENTO(?)}");
+            cs = con.prepareCall("{call LISTAR_EVENTO_X_NOMBRE_CATEGORIA(?)}");
             cs.setString("_nombreCategoria", nombreCategoria);
             rs = cs.executeQuery();
             while(rs.next()){
@@ -41,7 +41,7 @@ public class EventoMySQL implements EventoDAO{
                 evento.setId_evento(rs.getInt("id_evento"));
                 evento.setNombre(rs.getString("nombre"));
                 evento.setDescripcion(rs.getString("descripcion"));
-                evento.setCategoria(new CategoriaEvento(rs.getInt("id_categoria_evento"), 
+                evento.setCategoria(new CategoriaEvento(rs.getInt("fid_categoria_evento"), 
                 rs.getString("nombre_categoria")));
                 evento.setCoordinador(new Coordinador());
                 evento.setCoordinador(obtenerCoordinador(rs.getInt("fid_coordinador")));
@@ -53,15 +53,17 @@ public class EventoMySQL implements EventoDAO{
                 evento.setLugar(rs.getString("lugar"));
                 evento.setImagen(rs.getBytes("imagen"));
                 evento.setActivo(true);
+                evento.setPonentes(listarPonente(evento.getId_evento()));
+               // System.out.println(evento.getPonentes().get(0));
                 eventos.add(evento);
                 
             }
             rs.close();
             cs.close();
         }catch(Exception ex){
-            System.out.println(ex.getMessage());
+            Logger.getLogger(EventoMySQL.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
-            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());};
+            try{con.close();}catch(Exception ex){System.out.println(ex.getMessage()+"El error es aqui");};
             
         }
         return eventos;
@@ -74,7 +76,7 @@ public class EventoMySQL implements EventoDAO{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
             cs = con.prepareCall("{call LISTAR_EVENTO_X_FECHA(?)}");
-            cs.setDate("_nombreCategoria", fecha);
+            cs.setDate("_fecha", fecha);
             rs = cs.executeQuery();
             while(rs.next()){
                 Evento evento = new Evento();
@@ -93,6 +95,7 @@ public class EventoMySQL implements EventoDAO{
                 evento.setLugar(rs.getString("lugar"));
                 evento.setImagen(rs.getBytes("imagen"));
                 evento.setActivo(true);
+                evento.setPonentes(listarPonente(evento.getId_evento()));
                 eventos.add(evento);
                 
             }
@@ -120,16 +123,25 @@ public class EventoMySQL implements EventoDAO{
             cs.setString("_nombre", evento.getNombre());
             cs.setString("_descripcion", evento.getDescripcion());
             cs.setInt("_fid_coordinador", evento.getCoordinador().getId_coordinador());
-            cs.setInt("_fid_categoria", evento.getCategoria().getId_categoria());
+            cs.setInt("_fid_categoria_evento", evento.getCategoria().getId_categoria());
             cs.setInt("_capacidad", evento.getCapacidad());
             cs.setString("_lugar", evento.getLugar());
             cs.setDate("_fecha", new Date(evento.getFecha().getTime()));
-            cs.setTime("hora_inicio", new Time(evento.getHoraInicio().getTime()));
-            cs.setTime("hora_final", new Time(evento.getHoraFin().getTime()));
+            cs.setTime("_hora_inicio", new Time(evento.getHoraInicio().getTime()));
+            cs.setTime("_hora_fin", new Time(evento.getHoraFin().getTime()));
             cs.setBytes("_imagen", evento.getImagen());
+            //INSERTAR_EVENTO_PONENTE
+            
             //Ejecutamos el procedimiento
             cs.executeUpdate();
             evento.setId_evento(cs.getInt("_id_evento")); 
+            for(Ponente ponente : evento.getPonentes()){
+                cs=con.prepareCall("{call INSERTAR_EVENTO_PONENTE(?,?,?)}");
+                cs.registerOutParameter("_id_evento_ponente", java.sql.Types.INTEGER);
+                cs.setInt("_fid_ponente", ponente.getId_ponente());
+                cs.setInt("_fid_evento",evento.getId_evento());
+                cs.executeUpdate();
+            }
             resultado = 1;
             cs.close();
         }catch(Exception ex){
@@ -154,16 +166,29 @@ public class EventoMySQL implements EventoDAO{
             cs.setString("_nombre", evento.getNombre());
             cs.setString("_descripcion", evento.getDescripcion());
             cs.setInt("_fid_coordinador", evento.getCoordinador().getId_coordinador());
-            cs.setInt("_fid_categoria", evento.getCategoria().getId_categoria());
+            cs.setInt("_fid_categoria_evento", evento.getCategoria().getId_categoria());
             cs.setInt("_capacidad", evento.getCapacidad());
             cs.setInt("_cupo", evento.getCupo());
             cs.setString("_lugar", evento.getLugar());
             cs.setDate("_fecha", new Date(evento.getFecha().getTime()));
-            cs.setTime("hora_inicio", new Time(evento.getHoraInicio().getTime()));
-            cs.setTime("hora_final", new Time(evento.getHoraFin().getTime()));
+            cs.setTime("_hora_inicio", new Time(evento.getHoraInicio().getTime()));
+            cs.setTime("_hora_fin", new Time(evento.getHoraFin().getTime()));
             cs.setBytes("_imagen", evento.getImagen());
             //Ejecutamos el procedimiento
             cs.executeUpdate();
+                cs=con.prepareCall("{call ELIMINAR_EVENTO_PONENTE(?)}");
+                cs.setInt("_id_evento", evento.getId_evento());
+                cs.executeUpdate();
+            
+                for(Ponente ponente : evento.getPonentes()){
+                cs=con.prepareCall("{call INSERTAR_EVENTO_PONENTE(?,?,?)}");
+                cs.registerOutParameter("_id_evento_ponente", java.sql.Types.INTEGER);
+                cs.setInt("_fid_ponente", ponente.getId_ponente());
+                cs.setInt("_fid_evento",evento.getId_evento());
+                cs.executeUpdate();
+                
+            }
+            
             resultado = 1;
             cs.close();
         }catch(Exception ex){
@@ -203,26 +228,32 @@ public class EventoMySQL implements EventoDAO{
         return null;
     }
     
-//    private ArrayList<Integer> listarPonente(int id_evento){
-//           ArrayList<Integer> lista=new ArrayList<>();
-//           
-//         try {
-//            Class.forName("com.mysql.cj.jdbc.Driver");
-//            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-//            cs = con.prepareCall("call listar_ponente_evento(?)");
-//            cs.setInt("_id_evento", id_evento);
-//            rs=cs.executeQuery();
-//            while(rs.next()){
-//                lista.add(rs.getInt("id_persona"));
-//            }
-//        } catch (Exception e) {
-//             System.out.println(e.getMessage());
-//        }
+    private ArrayList<Ponente> listarPonente(int id_evento){
+           ArrayList<Ponente> lista=new ArrayList<>();
+        Connection con1;
+        
+        ResultSet rs1;
+        CallableStatement cs1;       
+         try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con1 = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+            cs1 = con1.prepareCall("call LISTAR_EVENTO_PONENTE(?)");
+            cs1.setInt("_id_evento", id_evento);
+            rs1=cs1.executeQuery();
+            while(rs1.next()){
+                Ponente ponente=new Ponente();
+                ponente.setId_ponente(rs1.getInt("id_ponente"));
+                ponente.setNombre(rs1.getString("nombre_ponente"));
+                lista.add(ponente);
+            }
+        } catch (Exception e) {
+             System.out.println(e.getMessage() + "Aqui");
+        }
             
            
-           //return lista;
+           return lista;
            
-    //}
+    }
 
  
     

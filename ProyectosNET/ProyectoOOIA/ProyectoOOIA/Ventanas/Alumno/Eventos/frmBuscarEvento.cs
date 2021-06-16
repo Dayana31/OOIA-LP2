@@ -6,12 +6,21 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmBuscarEventoAlumno : Form
     {
+        private GestionHumanaWS.persona persona;
         private GestionEventoWS.evento evento = new GestionEventoWS.evento();
         public frmBuscarEventoAlumno()
         {
             InitializeComponent();
             dgvEventos.AutoGenerateColumns = false;
         }
+
+        public frmBuscarEventoAlumno(GestionHumanaWS.persona persona)
+        {
+            InitializeComponent();
+            dgvEventos.AutoGenerateColumns = false;
+            this.persona = persona;
+        }
+
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -31,9 +40,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //dgvEventos.DataSource = new EventosWS.EventoWSClient().listarEvento(txtNombre.Text);
-            //dgvEventos.DataSource
-            dgvEventos.DataSource = new EventoWS.EventoWSClient().listarEvento_por_nombre_categoria("");
+            dgvEventos.DataSource = new GestionEventoWS.GestionEventoWSClient().listarEvento_por_nombre_categoria(txtNombre.Text);
 
         }
 
@@ -41,9 +48,9 @@ namespace ProyectoOOIA.Ventanas
         {
             evento=  dgvEventos.Rows[e.RowIndex].DataBoundItem as GestionEventoWS.evento;
             dgvEventos.Rows[e.RowIndex].Cells[0].Value = evento.nombre;
-            dgvEventos.Rows[e.RowIndex].Cells[1].Value = evento.fecha;
-            dgvEventos.Rows[e.RowIndex].Cells[2].Value = evento.horaInicio;
-            dgvEventos.Rows[e.RowIndex].Cells[3].Value = evento.horaFin;
+            dgvEventos.Rows[e.RowIndex].Cells[1].Value = evento.fecha.Date;
+            dgvEventos.Rows[e.RowIndex].Cells[2].Value = evento.horaInicio.Hour;
+            dgvEventos.Rows[e.RowIndex].Cells[3].Value = evento.horaFin.Hour;
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)

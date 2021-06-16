@@ -1,4 +1,3 @@
-
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb

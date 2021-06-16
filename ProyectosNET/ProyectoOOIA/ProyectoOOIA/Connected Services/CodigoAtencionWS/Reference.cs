@@ -16,6 +16,15 @@ namespace ProyectoOOIA.CodigoAtencionWS {
     public interface CodigoAtencionWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse modificarCodigo(ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse> modificarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/listarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/listarCodigoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,15 +41,6 @@ namespace ProyectoOOIA.CodigoAtencionWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.insertarCodigoResponse> insertarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.insertarCodigoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse modificarCodigo(ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse> modificarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest request);
     }
     
     /// <remarks/>
@@ -120,6 +120,42 @@ namespace ProyectoOOIA.CodigoAtencionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCodigo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarCodigoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CodigoAtencionWS.codigoAtencion codigo;
+        
+        public modificarCodigoRequest() {
+        }
+        
+        public modificarCodigoRequest(ProyectoOOIA.CodigoAtencionWS.codigoAtencion codigo) {
+            this.codigo = codigo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCodigoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarCodigoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarCodigoResponse() {
+        }
+        
+        public modificarCodigoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarCodigo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarCodigoRequest {
         
@@ -181,42 +217,6 @@ namespace ProyectoOOIA.CodigoAtencionWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCodigo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarCodigoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CodigoAtencionWS.codigoAtencion codigo;
-        
-        public modificarCodigoRequest() {
-        }
-        
-        public modificarCodigoRequest(ProyectoOOIA.CodigoAtencionWS.codigoAtencion codigo) {
-            this.codigo = codigo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCodigoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarCodigoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarCodigoResponse() {
-        }
-        
-        public modificarCodigoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CodigoAtencionWSChannel : ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS, System.ServiceModel.IClientChannel {
     }
@@ -242,6 +242,29 @@ namespace ProyectoOOIA.CodigoAtencionWS {
         
         public CodigoAtencionWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS.modificarCodigo(ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest request) {
+            return base.Channel.modificarCodigo(request);
+        }
+        
+        public int modificarCodigo(ProyectoOOIA.CodigoAtencionWS.codigoAtencion codigo) {
+            ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest inValue = new ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest();
+            inValue.codigo = codigo;
+            ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse retVal = ((ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS)(this)).modificarCodigo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse> ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS.modificarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest request) {
+            return base.Channel.modificarCodigoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse> modificarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.codigoAtencion codigo) {
+            ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest inValue = new ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest();
+            inValue.codigo = codigo;
+            return ((ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS)(this)).modificarCodigoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -286,29 +309,6 @@ namespace ProyectoOOIA.CodigoAtencionWS {
             ProyectoOOIA.CodigoAtencionWS.insertarCodigoRequest inValue = new ProyectoOOIA.CodigoAtencionWS.insertarCodigoRequest();
             inValue.codigo = codigo;
             return ((ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS)(this)).insertarCodigoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS.modificarCodigo(ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest request) {
-            return base.Channel.modificarCodigo(request);
-        }
-        
-        public int modificarCodigo(ProyectoOOIA.CodigoAtencionWS.codigoAtencion codigo) {
-            ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest inValue = new ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest();
-            inValue.codigo = codigo;
-            ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse retVal = ((ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS)(this)).modificarCodigo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse> ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS.modificarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest request) {
-            return base.Channel.modificarCodigoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.modificarCodigoResponse> modificarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.codigoAtencion codigo) {
-            ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest inValue = new ProyectoOOIA.CodigoAtencionWS.modificarCodigoRequest();
-            inValue.codigo = codigo;
-            return ((ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS)(this)).modificarCodigoAsync(inValue);
         }
     }
 }

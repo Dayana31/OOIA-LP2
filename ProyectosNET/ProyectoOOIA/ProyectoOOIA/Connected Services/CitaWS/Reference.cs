@@ -16,6 +16,16 @@ namespace ProyectoOOIA.CitaWS {
     public interface CitaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/eliminarCitaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/eliminarCitaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.CitaWS.eliminarCitaResponse eliminarCita(ProyectoOOIA.CitaWS.eliminarCitaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/eliminarCitaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/eliminarCitaResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.eliminarCitaResponse> eliminarCitaAsync(ProyectoOOIA.CitaWS.eliminarCitaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/insertarCitaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/insertarCitaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -34,16 +44,6 @@ namespace ProyectoOOIA.CitaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/modificarCitaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/modificarCitaResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.modificarCitaResponse> modificarCitaAsync(ProyectoOOIA.CitaWS.modificarCitaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/eliminarCitaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/eliminarCitaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CitaWS.eliminarCitaResponse eliminarCita(ProyectoOOIA.CitaWS.eliminarCitaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/eliminarCitaRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/eliminarCitaResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.eliminarCitaResponse> eliminarCitaAsync(ProyectoOOIA.CitaWS.eliminarCitaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaHistoricoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CitaWS/listarCitaHistoricoResponse")]
@@ -814,6 +814,42 @@ namespace ProyectoOOIA.CitaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCita", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCitaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CitaWS.cita cita;
+        
+        public eliminarCitaRequest() {
+        }
+        
+        public eliminarCitaRequest(ProyectoOOIA.CitaWS.cita cita) {
+            this.cita = cita;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCitaResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCitaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarCitaResponse() {
+        }
+        
+        public eliminarCitaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCita", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarCitaRequest {
         
@@ -879,42 +915,6 @@ namespace ProyectoOOIA.CitaWS {
         }
         
         public modificarCitaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCita", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCitaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CitaWS.cita cita;
-        
-        public eliminarCitaRequest() {
-        }
-        
-        public eliminarCitaRequest(ProyectoOOIA.CitaWS.cita cita) {
-            this.cita = cita;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCitaResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCitaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarCitaResponse() {
-        }
-        
-        public eliminarCitaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1019,6 +1019,29 @@ namespace ProyectoOOIA.CitaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.CitaWS.eliminarCitaResponse ProyectoOOIA.CitaWS.CitaWS.eliminarCita(ProyectoOOIA.CitaWS.eliminarCitaRequest request) {
+            return base.Channel.eliminarCita(request);
+        }
+        
+        public int eliminarCita(ProyectoOOIA.CitaWS.cita cita) {
+            ProyectoOOIA.CitaWS.eliminarCitaRequest inValue = new ProyectoOOIA.CitaWS.eliminarCitaRequest();
+            inValue.cita = cita;
+            ProyectoOOIA.CitaWS.eliminarCitaResponse retVal = ((ProyectoOOIA.CitaWS.CitaWS)(this)).eliminarCita(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.eliminarCitaResponse> ProyectoOOIA.CitaWS.CitaWS.eliminarCitaAsync(ProyectoOOIA.CitaWS.eliminarCitaRequest request) {
+            return base.Channel.eliminarCitaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.eliminarCitaResponse> eliminarCitaAsync(ProyectoOOIA.CitaWS.cita cita) {
+            ProyectoOOIA.CitaWS.eliminarCitaRequest inValue = new ProyectoOOIA.CitaWS.eliminarCitaRequest();
+            inValue.cita = cita;
+            return ((ProyectoOOIA.CitaWS.CitaWS)(this)).eliminarCitaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.CitaWS.insertarCitaResponse ProyectoOOIA.CitaWS.CitaWS.insertarCita(ProyectoOOIA.CitaWS.insertarCitaRequest request) {
             return base.Channel.insertarCita(request);
         }
@@ -1062,29 +1085,6 @@ namespace ProyectoOOIA.CitaWS {
             ProyectoOOIA.CitaWS.modificarCitaRequest inValue = new ProyectoOOIA.CitaWS.modificarCitaRequest();
             inValue.cita = cita;
             return ((ProyectoOOIA.CitaWS.CitaWS)(this)).modificarCitaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CitaWS.eliminarCitaResponse ProyectoOOIA.CitaWS.CitaWS.eliminarCita(ProyectoOOIA.CitaWS.eliminarCitaRequest request) {
-            return base.Channel.eliminarCita(request);
-        }
-        
-        public int eliminarCita(ProyectoOOIA.CitaWS.cita cita) {
-            ProyectoOOIA.CitaWS.eliminarCitaRequest inValue = new ProyectoOOIA.CitaWS.eliminarCitaRequest();
-            inValue.cita = cita;
-            ProyectoOOIA.CitaWS.eliminarCitaResponse retVal = ((ProyectoOOIA.CitaWS.CitaWS)(this)).eliminarCita(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.eliminarCitaResponse> ProyectoOOIA.CitaWS.CitaWS.eliminarCitaAsync(ProyectoOOIA.CitaWS.eliminarCitaRequest request) {
-            return base.Channel.eliminarCitaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.CitaWS.eliminarCitaResponse> eliminarCitaAsync(ProyectoOOIA.CitaWS.cita cita) {
-            ProyectoOOIA.CitaWS.eliminarCitaRequest inValue = new ProyectoOOIA.CitaWS.eliminarCitaRequest();
-            inValue.cita = cita;
-            return ((ProyectoOOIA.CitaWS.CitaWS)(this)).eliminarCitaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

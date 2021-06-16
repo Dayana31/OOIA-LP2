@@ -5,18 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/ProfesorWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="modificarProfesor">
-    <part name="parameters" element="tns:modificarProfesor" />
-  </message>
-  <message name="modificarProfesorResponse">
-    <part name="parameters" element="tns:modificarProfesorResponse" />
-  </message>
-  <message name="eliminarProfesor">
-    <part name="parameters" element="tns:eliminarProfesor" />
-  </message>
-  <message name="eliminarProfesorResponse">
-    <part name="parameters" element="tns:eliminarProfesorResponse" />
-  </message>
   <message name="listarProfesor">
     <part name="parameters" element="tns:listarProfesor" />
   </message>
@@ -29,15 +17,19 @@
   <message name="insertarProfesorResponse">
     <part name="parameters" element="tns:insertarProfesorResponse" />
   </message>
+  <message name="eliminarProfesor">
+    <part name="parameters" element="tns:eliminarProfesor" />
+  </message>
+  <message name="eliminarProfesorResponse">
+    <part name="parameters" element="tns:eliminarProfesorResponse" />
+  </message>
+  <message name="modificarProfesor">
+    <part name="parameters" element="tns:modificarProfesor" />
+  </message>
+  <message name="modificarProfesorResponse">
+    <part name="parameters" element="tns:modificarProfesorResponse" />
+  </message>
   <portType name="ProfesorWS">
-    <operation name="modificarProfesor">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/modificarProfesorRequest" message="tns:modificarProfesor" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/modificarProfesorResponse" message="tns:modificarProfesorResponse" />
-    </operation>
-    <operation name="eliminarProfesor">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest" message="tns:eliminarProfesor" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
-    </operation>
     <operation name="listarProfesor">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesorRequest" message="tns:listarProfesor" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesorResponse" message="tns:listarProfesorResponse" />
@@ -46,10 +38,27 @@
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesorRequest" message="tns:insertarProfesor" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
     </operation>
+    <operation name="eliminarProfesor">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest" message="tns:eliminarProfesor" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
+    </operation>
+    <operation name="modificarProfesor">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/modificarProfesorRequest" message="tns:modificarProfesor" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/modificarProfesorResponse" message="tns:modificarProfesorResponse" />
+    </operation>
   </portType>
   <binding name="ProfesorWSPortBinding" type="tns:ProfesorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="modificarProfesor">
+    <operation name="listarProfesor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,16 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarProfesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarProfesor">
+    <operation name="modificarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
