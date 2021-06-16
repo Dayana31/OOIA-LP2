@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProyectoOOIA.CargarCSValumnos {
+namespace ProyectoOOIA.CargarCSVprofesoresWS {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -44,7 +44,7 @@ namespace ProyectoOOIA.CargarCSValumnos {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -90,7 +90,7 @@ namespace ProyectoOOIA.CargarCSValumnos {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -122,106 +122,107 @@ namespace ProyectoOOIA.CargarCSValumnos {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services/", ConfigurationName="CargarCSValumnos.AlumnosCSVcargaWS1")]
-    public interface AlumnosCSVcargaWS1 {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services/", ConfigurationName="CargarCSVprofesoresWS.ProfesoresCSVcargaWS")]
+    public interface ProfesoresCSVcargaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/AlumnosCSVcargaWS1/CargarCSValumnosRequest", ReplyAction="http://services/AlumnosCSVcargaWS1/CargarCSValumnosResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProyectoOOIA.CargarCSValumnos.FileNotFoundException), Action="http://services/AlumnosCSVcargaWS1/CargarCSValumnos/Fault/FileNotFoundException", Name="FileNotFoundException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProyectoOOIA.CargarCSValumnos.ParseException), Action="http://services/AlumnosCSVcargaWS1/CargarCSValumnos/Fault/ParseException", Name="ParseException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(ProyectoOOIA.CargarCSValumnos.IOException), Action="http://services/AlumnosCSVcargaWS1/CargarCSValumnos/Fault/IOException", Name="IOException")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/ProfesoresCSVcargaWS/CargarCSVprofesoresRequest", ReplyAction="http://services/ProfesoresCSVcargaWS/CargarCSVprofesoresResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProyectoOOIA.CargarCSVprofesoresWS.FileNotFoundException), Action="http://services/ProfesoresCSVcargaWS/CargarCSVprofesores/Fault/FileNotFoundExcept" +
+            "ion", Name="FileNotFoundException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProyectoOOIA.CargarCSVprofesoresWS.ParseException), Action="http://services/ProfesoresCSVcargaWS/CargarCSVprofesores/Fault/ParseException", Name="ParseException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ProyectoOOIA.CargarCSVprofesoresWS.IOException), Action="http://services/ProfesoresCSVcargaWS/CargarCSVprofesores/Fault/IOException", Name="IOException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse CargarCSValumnos(ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest request);
+        ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresResponse CargarCSVprofesores(ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/AlumnosCSVcargaWS1/CargarCSValumnosRequest", ReplyAction="http://services/AlumnosCSVcargaWS1/CargarCSValumnosResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse> CargarCSValumnosAsync(ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/ProfesoresCSVcargaWS/CargarCSVprofesoresRequest", ReplyAction="http://services/ProfesoresCSVcargaWS/CargarCSVprofesoresResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresResponse> CargarCSVprofesoresAsync(ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CargarCSValumnos", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class CargarCSValumnosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CargarCSVprofesores", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class CargarCSVprofesoresRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
-        public byte[] Rutaarchivo;
+        public byte[] RutaArchivo;
         
-        public CargarCSValumnosRequest() {
+        public CargarCSVprofesoresRequest() {
         }
         
-        public CargarCSValumnosRequest(byte[] Rutaarchivo) {
-            this.Rutaarchivo = Rutaarchivo;
+        public CargarCSVprofesoresRequest(byte[] RutaArchivo) {
+            this.RutaArchivo = RutaArchivo;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="CargarCSValumnosResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class CargarCSValumnosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="CargarCSVprofesoresResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class CargarCSVprofesoresResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public CargarCSValumnosResponse() {
+        public CargarCSVprofesoresResponse() {
         }
         
-        public CargarCSValumnosResponse(int @return) {
+        public CargarCSVprofesoresResponse(int @return) {
             this.@return = @return;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface AlumnosCSVcargaWS1Channel : ProyectoOOIA.CargarCSValumnos.AlumnosCSVcargaWS1, System.ServiceModel.IClientChannel {
+    public interface ProfesoresCSVcargaWSChannel : ProyectoOOIA.CargarCSVprofesoresWS.ProfesoresCSVcargaWS, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AlumnosCSVcargaWS1Client : System.ServiceModel.ClientBase<ProyectoOOIA.CargarCSValumnos.AlumnosCSVcargaWS1>, ProyectoOOIA.CargarCSValumnos.AlumnosCSVcargaWS1 {
+    public partial class ProfesoresCSVcargaWSClient : System.ServiceModel.ClientBase<ProyectoOOIA.CargarCSVprofesoresWS.ProfesoresCSVcargaWS>, ProyectoOOIA.CargarCSVprofesoresWS.ProfesoresCSVcargaWS {
         
-        public AlumnosCSVcargaWS1Client() {
+        public ProfesoresCSVcargaWSClient() {
         }
         
-        public AlumnosCSVcargaWS1Client(string endpointConfigurationName) : 
+        public ProfesoresCSVcargaWSClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public AlumnosCSVcargaWS1Client(string endpointConfigurationName, string remoteAddress) : 
+        public ProfesoresCSVcargaWSClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public AlumnosCSVcargaWS1Client(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ProfesoresCSVcargaWSClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public AlumnosCSVcargaWS1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ProfesoresCSVcargaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse ProyectoOOIA.CargarCSValumnos.AlumnosCSVcargaWS1.CargarCSValumnos(ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest request) {
-            return base.Channel.CargarCSValumnos(request);
+        ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresResponse ProyectoOOIA.CargarCSVprofesoresWS.ProfesoresCSVcargaWS.CargarCSVprofesores(ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresRequest request) {
+            return base.Channel.CargarCSVprofesores(request);
         }
         
-        public int CargarCSValumnos(byte[] Rutaarchivo) {
-            ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest inValue = new ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest();
-            inValue.Rutaarchivo = Rutaarchivo;
-            ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse retVal = ((ProyectoOOIA.CargarCSValumnos.AlumnosCSVcargaWS1)(this)).CargarCSValumnos(inValue);
+        public int CargarCSVprofesores(byte[] RutaArchivo) {
+            ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresRequest inValue = new ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresRequest();
+            inValue.RutaArchivo = RutaArchivo;
+            ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresResponse retVal = ((ProyectoOOIA.CargarCSVprofesoresWS.ProfesoresCSVcargaWS)(this)).CargarCSVprofesores(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse> ProyectoOOIA.CargarCSValumnos.AlumnosCSVcargaWS1.CargarCSValumnosAsync(ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest request) {
-            return base.Channel.CargarCSValumnosAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresResponse> ProyectoOOIA.CargarCSVprofesoresWS.ProfesoresCSVcargaWS.CargarCSVprofesoresAsync(ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresRequest request) {
+            return base.Channel.CargarCSVprofesoresAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.CargarCSValumnos.CargarCSValumnosResponse> CargarCSValumnosAsync(byte[] Rutaarchivo) {
-            ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest inValue = new ProyectoOOIA.CargarCSValumnos.CargarCSValumnosRequest();
-            inValue.Rutaarchivo = Rutaarchivo;
-            return ((ProyectoOOIA.CargarCSValumnos.AlumnosCSVcargaWS1)(this)).CargarCSValumnosAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresResponse> CargarCSVprofesoresAsync(byte[] RutaArchivo) {
+            ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresRequest inValue = new ProyectoOOIA.CargarCSVprofesoresWS.CargarCSVprofesoresRequest();
+            inValue.RutaArchivo = RutaArchivo;
+            return ((ProyectoOOIA.CargarCSVprofesoresWS.ProfesoresCSVcargaWS)(this)).CargarCSVprofesoresAsync(inValue);
         }
     }
 }

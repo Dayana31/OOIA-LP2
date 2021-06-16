@@ -81,7 +81,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnEvaluacionCSV = new System.Windows.Forms.Button();
             this.lblEvaluacionCSV = new System.Windows.Forms.Label();
             this.lblEvaluacionForm = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEvaluacion = new System.Windows.Forms.TextBox();
             this.btnEvaluacion = new System.Windows.Forms.Button();
             this.pnlCursoLLevado = new System.Windows.Forms.Panel();
             this.btnCursoLlevadoFile = new System.Windows.Forms.Button();
@@ -144,7 +144,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             // txtHeader
             // 
-            this.txtHeader.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHeader.ForeColor = System.Drawing.SystemColors.Control;
             this.txtHeader.Location = new System.Drawing.Point(41, 34);
             this.txtHeader.Name = "txtHeader";
@@ -205,20 +205,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // lblEspecialidadForm
             // 
             this.lblEspecialidadForm.AutoSize = true;
-            this.lblEspecialidadForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecialidadForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecialidadForm.Location = new System.Drawing.Point(6, 34);
             this.lblEspecialidadForm.Name = "lblEspecialidadForm";
-            this.lblEspecialidadForm.Size = new System.Drawing.Size(252, 21);
+            this.lblEspecialidadForm.Size = new System.Drawing.Size(271, 18);
             this.lblEspecialidadForm.TabIndex = 36;
             this.lblEspecialidadForm.Text = "Gestionar especialidades por formulario";
             // 
             // lblEspecialidad
             // 
             this.lblEspecialidad.AutoSize = true;
-            this.lblEspecialidad.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecialidad.Location = new System.Drawing.Point(5, 3);
             this.lblEspecialidad.Name = "lblEspecialidad";
-            this.lblEspecialidad.Size = new System.Drawing.Size(135, 30);
+            this.lblEspecialidad.Size = new System.Drawing.Size(158, 25);
             this.lblEspecialidad.TabIndex = 12;
             this.lblEspecialidad.Text = "Especialidades";
             // 
@@ -259,20 +259,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // lblCoordinadorForm
             // 
             this.lblCoordinadorForm.AutoSize = true;
-            this.lblCoordinadorForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoordinadorForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCoordinadorForm.Location = new System.Drawing.Point(6, 34);
             this.lblCoordinadorForm.Name = "lblCoordinadorForm";
-            this.lblCoordinadorForm.Size = new System.Drawing.Size(256, 21);
+            this.lblCoordinadorForm.Size = new System.Drawing.Size(270, 18);
             this.lblCoordinadorForm.TabIndex = 36;
             this.lblCoordinadorForm.Text = "Gestionar coordinadores por formulario";
             // 
             // lblCoordinador
             // 
             this.lblCoordinador.AutoSize = true;
-            this.lblCoordinador.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoordinador.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCoordinador.Location = new System.Drawing.Point(5, 3);
             this.lblCoordinador.Name = "lblCoordinador";
-            this.lblCoordinador.Size = new System.Drawing.Size(145, 30);
+            this.lblCoordinador.Size = new System.Drawing.Size(153, 25);
             this.lblCoordinador.TabIndex = 12;
             this.lblCoordinador.Text = "Coordinadores";
             // 
@@ -288,20 +288,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(6, 34);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(252, 21);
+            this.label6.Size = new System.Drawing.Size(271, 18);
             this.label6.TabIndex = 36;
             this.label6.Text = "Gestionar especialidades por formulario";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(5, 3);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(135, 30);
+            this.label13.Size = new System.Drawing.Size(158, 25);
             this.label13.TabIndex = 12;
             this.label13.Text = "Especialidades";
             // 
@@ -329,20 +329,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // lblPonenteForm
             // 
             this.lblPonenteForm.AutoSize = true;
-            this.lblPonenteForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPonenteForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPonenteForm.Location = new System.Drawing.Point(6, 34);
             this.lblPonenteForm.Name = "lblPonenteForm";
-            this.lblPonenteForm.Size = new System.Drawing.Size(224, 21);
+            this.lblPonenteForm.Size = new System.Drawing.Size(235, 18);
             this.lblPonenteForm.TabIndex = 36;
             this.lblPonenteForm.Text = "Gestionar ponentes por formulario";
             // 
             // lblPonente
             // 
             this.lblPonente.AutoSize = true;
-            this.lblPonente.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPonente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPonente.Location = new System.Drawing.Point(5, 3);
             this.lblPonente.Name = "lblPonente";
-            this.lblPonente.Size = new System.Drawing.Size(93, 30);
+            this.lblPonente.Size = new System.Drawing.Size(103, 25);
             this.lblPonente.TabIndex = 12;
             this.lblPonente.Text = "Ponentes";
             // 
@@ -367,7 +367,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             // btnAsesorFile
             // 
-            this.btnAsesorFile.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsesorFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsesorFile.Location = new System.Drawing.Point(366, 94);
             this.btnAsesorFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnAsesorFile.Name = "btnAsesorFile";
@@ -403,20 +403,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // lblTipoAsesor
             // 
             this.lblTipoAsesor.AutoSize = true;
-            this.lblTipoAsesor.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoAsesor.Location = new System.Drawing.Point(6, 30);
             this.lblTipoAsesor.Name = "lblTipoAsesor";
-            this.lblTipoAsesor.Size = new System.Drawing.Size(100, 21);
+            this.lblTipoAsesor.Size = new System.Drawing.Size(107, 18);
             this.lblTipoAsesor.TabIndex = 37;
             this.lblTipoAsesor.Text = "Tipo de asesor";
             // 
             // lblAsesor
             // 
             this.lblAsesor.AutoSize = true;
-            this.lblAsesor.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsesor.Location = new System.Drawing.Point(5, 0);
             this.lblAsesor.Name = "lblAsesor";
-            this.lblAsesor.Size = new System.Drawing.Size(91, 30);
+            this.lblAsesor.Size = new System.Drawing.Size(102, 25);
             this.lblAsesor.TabIndex = 12;
             this.lblAsesor.Text = "Asesores";
             // 
@@ -433,20 +433,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // lblAsesorCSV
             // 
             this.lblAsesorCSV.AutoSize = true;
-            this.lblAsesorCSV.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsesorCSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsesorCSV.Location = new System.Drawing.Point(6, 72);
             this.lblAsesorCSV.Name = "lblAsesorCSV";
-            this.lblAsesorCSV.Size = new System.Drawing.Size(231, 21);
+            this.lblAsesorCSV.Size = new System.Drawing.Size(250, 18);
             this.lblAsesorCSV.TabIndex = 36;
             this.lblAsesorCSV.Text = "Cargar Asesores desde archivo CSV";
             // 
             // lblAsesorForm
             // 
             this.lblAsesorForm.AutoSize = true;
-            this.lblAsesorForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsesorForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAsesorForm.Location = new System.Drawing.Point(6, 51);
             this.lblAsesorForm.Name = "lblAsesorForm";
-            this.lblAsesorForm.Size = new System.Drawing.Size(219, 21);
+            this.lblAsesorForm.Size = new System.Drawing.Size(236, 18);
             this.lblAsesorForm.TabIndex = 35;
             this.lblAsesorForm.Text = "Gestionar asesores por formulario";
             // 
@@ -486,7 +486,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             // btnAlumnoFile
             // 
-            this.btnAlumnoFile.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlumnoFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlumnoFile.Location = new System.Drawing.Point(366, 73);
             this.btnAlumnoFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnAlumnoFile.Name = "btnAlumnoFile";
@@ -499,10 +499,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // lblAlumno
             // 
             this.lblAlumno.AutoSize = true;
-            this.lblAlumno.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlumno.Location = new System.Drawing.Point(5, 0);
             this.lblAlumno.Name = "lblAlumno";
-            this.lblAlumno.Size = new System.Drawing.Size(90, 30);
+            this.lblAlumno.Size = new System.Drawing.Size(95, 25);
             this.lblAlumno.TabIndex = 12;
             this.lblAlumno.Text = "Alumnos";
             // 
@@ -519,20 +519,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // lblAlumnoCSV
             // 
             this.lblAlumnoCSV.AutoSize = true;
-            this.lblAlumnoCSV.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlumnoCSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlumnoCSV.Location = new System.Drawing.Point(6, 51);
             this.lblAlumnoCSV.Name = "lblAlumnoCSV";
-            this.lblAlumnoCSV.Size = new System.Drawing.Size(229, 21);
+            this.lblAlumnoCSV.Size = new System.Drawing.Size(245, 18);
             this.lblAlumnoCSV.TabIndex = 36;
             this.lblAlumnoCSV.Text = "Cargar Alumnos desde archivo CSV";
             // 
             // lblAlumnoForm
             // 
             this.lblAlumnoForm.AutoSize = true;
-            this.lblAlumnoForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlumnoForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlumnoForm.Location = new System.Drawing.Point(6, 30);
             this.lblAlumnoForm.Name = "lblAlumnoForm";
-            this.lblAlumnoForm.Size = new System.Drawing.Size(217, 21);
+            this.lblAlumnoForm.Size = new System.Drawing.Size(231, 18);
             this.lblAlumnoForm.TabIndex = 35;
             this.lblAlumnoForm.Text = "Gestionar alumnos por formulario";
             // 
@@ -592,20 +592,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // lblCursoForm
             // 
             this.lblCursoForm.AutoSize = true;
-            this.lblCursoForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCursoForm.Location = new System.Drawing.Point(6, 34);
             this.lblCursoForm.Name = "lblCursoForm";
-            this.lblCursoForm.Size = new System.Drawing.Size(208, 21);
+            this.lblCursoForm.Size = new System.Drawing.Size(220, 18);
             this.lblCursoForm.TabIndex = 36;
             this.lblCursoForm.Text = "Gestionar cursos por formulario";
             // 
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
-            this.lblCurso.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurso.Location = new System.Drawing.Point(5, 3);
             this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(75, 30);
+            this.lblCurso.Size = new System.Drawing.Size(80, 25);
             this.lblCurso.TabIndex = 12;
             this.lblCurso.Text = "Cursos";
             // 
@@ -617,7 +617,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlEvaluacion.Controls.Add(this.btnEvaluacionCSV);
             this.pnlEvaluacion.Controls.Add(this.lblEvaluacionCSV);
             this.pnlEvaluacion.Controls.Add(this.lblEvaluacionForm);
-            this.pnlEvaluacion.Controls.Add(this.textBox2);
+            this.pnlEvaluacion.Controls.Add(this.txtEvaluacion);
             this.pnlEvaluacion.Controls.Add(this.btnEvaluacion);
             this.pnlEvaluacion.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEvaluacion.Location = new System.Drawing.Point(3, 113);
@@ -627,7 +627,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             // btnEvaluacionFile
             // 
-            this.btnEvaluacionFile.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEvaluacionFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEvaluacionFile.Location = new System.Drawing.Point(366, 73);
             this.btnEvaluacionFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnEvaluacionFile.Name = "btnEvaluacionFile";
@@ -635,14 +635,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnEvaluacionFile.TabIndex = 37;
             this.btnEvaluacionFile.Text = "...";
             this.btnEvaluacionFile.UseVisualStyleBackColor = true;
+            this.btnEvaluacionFile.Click += new System.EventHandler(this.btnEvaluacionFile_Click);
             // 
             // lblEvaluacion
             // 
             this.lblEvaluacion.AutoSize = true;
-            this.lblEvaluacion.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvaluacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEvaluacion.Location = new System.Drawing.Point(5, 0);
             this.lblEvaluacion.Name = "lblEvaluacion";
-            this.lblEvaluacion.Size = new System.Drawing.Size(122, 30);
+            this.lblEvaluacion.Size = new System.Drawing.Size(141, 25);
             this.lblEvaluacion.TabIndex = 12;
             this.lblEvaluacion.Text = "Evaluaciones";
             // 
@@ -654,34 +655,35 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnEvaluacionCSV.TabIndex = 34;
             this.btnEvaluacionCSV.Text = "Cargar desde csv";
             this.btnEvaluacionCSV.UseVisualStyleBackColor = true;
+            this.btnEvaluacionCSV.Click += new System.EventHandler(this.btnEvaluacionCSV_Click);
             // 
             // lblEvaluacionCSV
             // 
             this.lblEvaluacionCSV.AutoSize = true;
-            this.lblEvaluacionCSV.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvaluacionCSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEvaluacionCSV.Location = new System.Drawing.Point(6, 51);
             this.lblEvaluacionCSV.Name = "lblEvaluacionCSV";
-            this.lblEvaluacionCSV.Size = new System.Drawing.Size(229, 21);
+            this.lblEvaluacionCSV.Size = new System.Drawing.Size(245, 18);
             this.lblEvaluacionCSV.TabIndex = 36;
             this.lblEvaluacionCSV.Text = "Cargar Alumnos desde archivo CSV";
             // 
             // lblEvaluacionForm
             // 
             this.lblEvaluacionForm.AutoSize = true;
-            this.lblEvaluacionForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvaluacionForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEvaluacionForm.Location = new System.Drawing.Point(6, 30);
             this.lblEvaluacionForm.Name = "lblEvaluacionForm";
-            this.lblEvaluacionForm.Size = new System.Drawing.Size(243, 21);
+            this.lblEvaluacionForm.Size = new System.Drawing.Size(260, 18);
             this.lblEvaluacionForm.TabIndex = 35;
             this.lblEvaluacionForm.Text = "Gestionar evaluaciones por formulario";
             // 
-            // textBox2
+            // txtEvaluacion
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(10, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(351, 20);
-            this.textBox2.TabIndex = 18;
+            this.txtEvaluacion.Enabled = false;
+            this.txtEvaluacion.Location = new System.Drawing.Point(10, 75);
+            this.txtEvaluacion.Name = "txtEvaluacion";
+            this.txtEvaluacion.Size = new System.Drawing.Size(351, 20);
+            this.txtEvaluacion.TabIndex = 18;
             // 
             // btnEvaluacion
             // 
@@ -710,7 +712,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // 
             // btnCursoLlevadoFile
             // 
-            this.btnCursoLlevadoFile.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursoLlevadoFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCursoLlevadoFile.Location = new System.Drawing.Point(366, 73);
             this.btnCursoLlevadoFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnCursoLlevadoFile.Name = "btnCursoLlevadoFile";
@@ -718,14 +720,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnCursoLlevadoFile.TabIndex = 37;
             this.btnCursoLlevadoFile.Text = "...";
             this.btnCursoLlevadoFile.UseVisualStyleBackColor = true;
+            this.btnCursoLlevadoFile.Click += new System.EventHandler(this.btnCursoLlevadoFile_Click);
             // 
             // lblCursoLlevado
             // 
             this.lblCursoLlevado.AutoSize = true;
-            this.lblCursoLlevado.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoLlevado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCursoLlevado.Location = new System.Drawing.Point(5, 0);
             this.lblCursoLlevado.Name = "lblCursoLlevado";
-            this.lblCursoLlevado.Size = new System.Drawing.Size(155, 30);
+            this.lblCursoLlevado.Size = new System.Drawing.Size(173, 25);
             this.lblCursoLlevado.TabIndex = 12;
             this.lblCursoLlevado.Text = "Cursos Llevados";
             // 
@@ -737,24 +740,25 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnCursoLlevadoCSV.TabIndex = 34;
             this.btnCursoLlevadoCSV.Text = "Cargar desde csv";
             this.btnCursoLlevadoCSV.UseVisualStyleBackColor = true;
+            this.btnCursoLlevadoCSV.Click += new System.EventHandler(this.btnCursoLlevadoCSV_Click);
             // 
             // lblCursoLlevadoCSV
             // 
             this.lblCursoLlevadoCSV.AutoSize = true;
-            this.lblCursoLlevadoCSV.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoLlevadoCSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCursoLlevadoCSV.Location = new System.Drawing.Point(6, 51);
             this.lblCursoLlevadoCSV.Name = "lblCursoLlevadoCSV";
-            this.lblCursoLlevadoCSV.Size = new System.Drawing.Size(229, 21);
+            this.lblCursoLlevadoCSV.Size = new System.Drawing.Size(245, 18);
             this.lblCursoLlevadoCSV.TabIndex = 36;
             this.lblCursoLlevadoCSV.Text = "Cargar Alumnos desde archivo CSV";
             // 
             // lblCursoLlevadoForm
             // 
             this.lblCursoLlevadoForm.AutoSize = true;
-            this.lblCursoLlevadoForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoLlevadoForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCursoLlevadoForm.Location = new System.Drawing.Point(6, 30);
             this.lblCursoLlevadoForm.Name = "lblCursoLlevadoForm";
-            this.lblCursoLlevadoForm.Size = new System.Drawing.Size(276, 21);
+            this.lblCursoLlevadoForm.Size = new System.Drawing.Size(299, 18);
             this.lblCursoLlevadoForm.TabIndex = 35;
             this.lblCursoLlevadoForm.Text = "Gestionar los cursos de alumnos formulario";
             // 
@@ -812,20 +816,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // lblCodigoAtencionForm
             // 
             this.lblCodigoAtencionForm.AutoSize = true;
-            this.lblCodigoAtencionForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoAtencionForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoAtencionForm.Location = new System.Drawing.Point(6, 34);
             this.lblCodigoAtencionForm.Name = "lblCodigoAtencionForm";
-            this.lblCodigoAtencionForm.Size = new System.Drawing.Size(288, 21);
+            this.lblCodigoAtencionForm.Size = new System.Drawing.Size(307, 18);
             this.lblCodigoAtencionForm.TabIndex = 36;
             this.lblCodigoAtencionForm.Text = "Gestionar códigos de atención por formulario";
             // 
             // lblCodigoAtencion
             // 
             this.lblCodigoAtencion.AutoSize = true;
-            this.lblCodigoAtencion.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoAtencion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigoAtencion.Location = new System.Drawing.Point(5, 3);
             this.lblCodigoAtencion.Name = "lblCodigoAtencion";
-            this.lblCodigoAtencion.Size = new System.Drawing.Size(197, 30);
+            this.lblCodigoAtencion.Size = new System.Drawing.Size(211, 25);
             this.lblCodigoAtencion.TabIndex = 12;
             this.lblCodigoAtencion.Text = "Códigos de Atención";
             // 
@@ -929,7 +933,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private System.Windows.Forms.Button btnEvaluacionCSV;
         private System.Windows.Forms.Label lblEvaluacionCSV;
         private System.Windows.Forms.Label lblEvaluacionForm;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEvaluacion;
         private System.Windows.Forms.Button btnEvaluacion;
         private System.Windows.Forms.Panel pnlCursoLLevado;
         private System.Windows.Forms.Button btnCursoLlevadoFile;

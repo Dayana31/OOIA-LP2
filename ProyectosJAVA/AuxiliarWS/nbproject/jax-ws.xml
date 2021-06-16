@@ -19,6 +19,12 @@
     <service name="GestionHumanaWS">
       <implementation-class>services.GestionHumanaWS</implementation-class>
     </service>
+    <service name="CursosLlevadosCSVcargaWS">
+      <implementation-class>services.CursosLlevadosCSVcargaWS</implementation-class>
+    </service>
+    <service name="EvaluacionesCSVcargaWS">
+      <implementation-class>services.EvaluacionesCSVcargaWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

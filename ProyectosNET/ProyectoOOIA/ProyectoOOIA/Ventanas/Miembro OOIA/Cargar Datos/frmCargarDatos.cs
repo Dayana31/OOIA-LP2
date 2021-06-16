@@ -46,10 +46,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             
             FileStream fs = new FileStream(txtAlumno.Text, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
-            /*CargarCSValumnos.AlumnosCSVcargaWSClient cargaCSVAlumnos =
-                new CargarCSValumnos.AlumnosCSVcargaWS1Client();*/
+            CargarCSValumnosWS.AlumnosCSVcargaWS1Client cargaCSVAlumnos =
+                new CargarCSValumnosWS.AlumnosCSVcargaWS1Client();
             int resultado = 1;
-            //resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
+            resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
             br.Close();
             fs.Close();
             if(resultado == 0)
@@ -93,15 +93,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             int resultado = 1;
             if (rbProfesor.Checked)
             {
-                /*CargarCSVprofesores.ProfesoresCSVcargaWSClient cargaCSVprofesores =
-                    new CargarCSVprofesores.ProfesoresCSVcargaWSClient();*/
-                //resultado = cargaCSVprofesores.CargarCSVprofesores(br.ReadBytes((int)fs.Length));
+                CargarCSVprofesoresWS.ProfesoresCSVcargaWSClient cargaCSVprofesores =
+                    new CargarCSVprofesoresWS.ProfesoresCSVcargaWSClient();
+                resultado = cargaCSVprofesores.CargarCSVprofesores(br.ReadBytes((int)fs.Length));
             }
             if (rbPsicologo.Checked)
             {
-                /*CargarCSVpsicologos.PsicologosCSVcargaWSClient cargaCSVpsicologos =
-                new CargarCSVpsicologos.PsicologosCSVcargaWSClient();*/
-                //int resultado = cargaCSVpsicologos.CargarCSVpsicologos(txtRutaArchivo.Text);
+                CargarCSVpsicologosWS.PsicologosCSVcargaWSClient cargaCSVpsicologos =
+                new CargarCSVpsicologosWS.PsicologosCSVcargaWSClient();
+                resultado = cargaCSVpsicologos.CargarCSVpsicologos(br.ReadBytes((int)fs.Length));
             }
             br.Close();
             fs.Close();
@@ -128,5 +128,77 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         {
             new frmCargarCoordinador().ShowDialog();
         }
+
+        private void btnEvaluacionFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string ruta = openFileDialog.FileName;
+                txtEvaluacion.Text = ruta;
+            }
+        }
+
+        private void btnEvaluacionCSV_Click(object sender, EventArgs e)
+        {
+            if (txtEvaluacion.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar una archivo de carga.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            FileStream fs = new FileStream(txtEvaluacion.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            CargarCSVevaluacionesWS.EvaluacionesCSVcargaWSClient cargaCSVcursosLlevados =
+                new CargarCSVevaluacionesWS.EvaluacionesCSVcargaWSClient();
+            int resultado = 1;
+            resultado = cargaCSVcursosLlevados.CargarCSVevaluaciones(br.ReadBytes((int)fs.Length));
+            br.Close();
+            fs.Close();
+            if (resultado == 0)
+                MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
+                    MessageBoxButtons.OK);
+            else
+                MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnCursoLlevadoFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                string ruta = openFileDialog.FileName;
+                txtCursoLlevado.Text = ruta;
+            }
+        }
+
+        private void btnCursoLlevadoCSV_Click(object sender, EventArgs e)
+        {
+            if (txtCursoLlevado.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar una archivo de carga.", "Mensaje de Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            FileStream fs = new FileStream(txtCursoLlevado.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            CargarCSVcursosLlevadosWS.CursosLlevadosCSVcargaWSClient cargaCSVcursosLlevados =
+                new CargarCSVcursosLlevadosWS.CursosLlevadosCSVcargaWSClient();
+            int resultado = 1;
+            resultado = cargaCSVcursosLlevados.CargarCSVcursosLlevados(br.ReadBytes((int)fs.Length));
+            br.Close();
+            fs.Close();
+            if (resultado == 0)
+                MessageBox.Show("Se han cargado los datos correctamente", "Confirmacion",
+                    MessageBoxButtons.OK);
+            else
+                MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        
     }
 }

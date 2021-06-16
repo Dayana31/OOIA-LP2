@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ZRDevGUVqmC671Kr94wBp4xhdzxWtA+Vin8Y6iyrdMQ=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="vu+M2AIIC7cQNRmdyeJSIfnr8pHkll0O67aZdxlZlaA=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="ProfesoresCSVcargaWSPortBinding">
+    <bindingConfiguration bindingType="basicHttpBinding" name="CursosLlevadosCSVcargaWSPortBinding">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ProfesoresCSVcargaWSPortBinding</serializedValue>
+          <serializedValue>CursosLlevadosCSVcargaWSPortBinding</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="ProfesoresCSVcargaWSPort" contract="CargarCSVprofesores.ProfesoresCSVcargaWS" bindingType="basicHttpBinding" address="http://localhost:8080/AuxiliarWS/ProfesoresCSVcargaWS" bindingConfiguration="ProfesoresCSVcargaWSPortBinding">
+    <endpoint name="CursosLlevadosCSVcargaWSPort" contract="CargarCSVcursosLlevadosWS.CursosLlevadosCSVcargaWS" bindingType="basicHttpBinding" address="http://localhost:8080/AuxiliarWS/CursosLlevadosCSVcargaWS" bindingConfiguration="CursosLlevadosCSVcargaWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8080/AuxiliarWS/ProfesoresCSVcargaWS</serializedValue>
+          <serializedValue>http://localhost:8080/AuxiliarWS/CursosLlevadosCSVcargaWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -124,10 +124,10 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ProfesoresCSVcargaWSPortBinding</serializedValue>
+          <serializedValue>CursosLlevadosCSVcargaWSPortBinding</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>CargarCSVprofesores.ProfesoresCSVcargaWS</serializedValue>
+          <serializedValue>CargarCSVcursosLlevadosWS.CursosLlevadosCSVcargaWS</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>ProfesoresCSVcargaWSPort</serializedValue>
+          <serializedValue>CursosLlevadosCSVcargaWSPort</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
