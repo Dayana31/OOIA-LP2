@@ -63,7 +63,7 @@ public class CursoMySQL implements CursoDAO {
            cs.setDouble("_creditos",curso.getCreditos());
            cs.executeUpdate();
            curso.setId_curso(cs.getInt("_id_curso"));
-           resultado=1;
+           resultado=curso.getId_curso();
            cs.close();
         }catch(Exception ex){
             System.out.println(ex.getMessage());

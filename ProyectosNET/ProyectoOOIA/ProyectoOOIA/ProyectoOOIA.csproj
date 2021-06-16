@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\CursoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\EspecialidadWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -154,6 +159,12 @@
     </Compile>
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Academica\frmCargarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Academica\frmCargarCursos.Designer.cs">
+      <DependentUpon>frmCargarCursos.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmBuscarCoordinador.cs">
       <SubType>Form</SubType>
@@ -454,6 +465,9 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Academica\frmCargarCursos.resx">
+      <DependentUpon>frmCargarCursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmBuscarCoordinador.resx">
       <DependentUpon>frmBuscarCoordinador.cs</DependentUpon>
     </EmbeddedResource>
@@ -652,6 +666,25 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\CoordinadorWS\ProyectoOOIA.CoordinadorWS.modificarCoordinadorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\CursoWS.wsdl" />
+    <None Include="Connected Services\CursoWS\CursoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CursoWS\ProyectoOOIA.CursoWS.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\ProyectoOOIA.CursoWS.eliminarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\ProyectoOOIA.CursoWS.insertarrCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\ProyectoOOIA.CursoWS.listarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoWS\ProyectoOOIA.CursoWS.modificarCursoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EspecialidadWS\EspecialidadWS.wsdl" />
@@ -1050,6 +1083,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\CursoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\CursoWS\configuration.svcinfo" />
+    <None Include="Connected Services\CursoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\Bunifu_UI_v1.5.dll" />
     <None Include="Resources\menos.png" />
     <None Include="Resources\mas.png" />
@@ -1065,6 +1104,7 @@
     <WCFMetadataStorage Include="Connected Services\AlumnoWS\" />
     <WCFMetadataStorage Include="Connected Services\CodigoAtencionWS\" />
     <WCFMetadataStorage Include="Connected Services\CoordinadorWS\" />
+    <WCFMetadataStorage Include="Connected Services\CursoWS\" />
     <WCFMetadataStorage Include="Connected Services\EspecialidadWS\" />
     <WCFMetadataStorage Include="Connected Services\EventoWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionAtencionWS\" />
