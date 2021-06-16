@@ -1,6 +1,8 @@
 *.class
 *.jar
 *.war
+*.suo
+/ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug
 
 /SISTEMA-OOIA/nbproject/private/
 /GestionAcademicaModel/nbproject/private/
