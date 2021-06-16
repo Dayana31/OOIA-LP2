@@ -325,6 +325,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnPonente.TabIndex = 37;
             this.btnPonente.Text = "Gestionar Ponentes";
             this.btnPonente.UseVisualStyleBackColor = true;
+            this.btnPonente.Click += new System.EventHandler(this.btnPonente_Click);
             // 
             // lblPonenteForm
             // 

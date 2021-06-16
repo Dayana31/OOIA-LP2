@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
-    partial class frmCargarProfesor
+    partial class frmGestionarPsicologo
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarProfesor));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarPsicologo));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.txtHeader = new System.Windows.Forms.Label();
@@ -40,19 +40,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbBuscar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
-            this.pnlDatos = new System.Windows.Forms.Panel();
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.txtCategoria = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblMiembroPucp = new System.Windows.Forms.Label();
-            this.cbEspecialidad = new System.Windows.Forms.ComboBox();
-            this.lblEspecialidad = new System.Windows.Forms.Label();
-            this.lblProfesor = new System.Windows.Forms.Label();
-            this.txtFacultad = new System.Windows.Forms.TextBox();
-            this.lblFacultad = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPersona = new System.Windows.Forms.TabPage();
             this.btnImagen1 = new System.Windows.Forms.Button();
@@ -69,20 +56,29 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtDni = new System.Windows.Forms.TextBox();
             this.lblDni = new System.Windows.Forms.Label();
             this.lblPersona = new System.Windows.Forms.Label();
-            this.tabProfesor = new System.Windows.Forms.TabPage();
+            this.tabPsico = new System.Windows.Forms.TabPage();
             this.btnImagen2 = new System.Windows.Forms.Button();
             this.pbPerfil2 = new System.Windows.Forms.PictureBox();
+            this.pnlDatos = new System.Windows.Forms.Panel();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.lblMiembroPucp = new System.Windows.Forms.Label();
+            this.lblPsico = new System.Windows.Forms.Label();
+            this.lblRama = new System.Windows.Forms.Label();
+            this.txtRama = new System.Windows.Forms.TextBox();
             this.ofd_Imagen = new System.Windows.Forms.OpenFileDialog();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.toolStrip1.SuspendLayout();
-            this.pnlDatos.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPersona.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil1)).BeginInit();
             this.pnlPersona.SuspendLayout();
-            this.tabProfesor.SuspendLayout();
+            this.tabPsico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil2)).BeginInit();
+            this.pnlDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -94,7 +90,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(743, 76);
+            this.pnlHeader.Size = new System.Drawing.Size(744, 76);
             this.pnlHeader.TabIndex = 1;
             // 
             // btnBack
@@ -118,7 +114,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.txtHeader.Name = "txtHeader";
             this.txtHeader.Size = new System.Drawing.Size(238, 35);
             this.txtHeader.TabIndex = 2;
-            this.txtHeader.Text = "Gestionar Profesores";
+            this.txtHeader.Text = "Gestionar Psicologos";
             // 
             // toolStrip1
             // 
@@ -132,7 +128,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tsbCancelar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 76);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(743, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(744, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -191,42 +187,215 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tsbCancelar.Text = "Cancelar";
             this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.tabPersona);
+            this.tabControl.Controls.Add(this.tabPsico);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabControl.Location = new System.Drawing.Point(0, 103);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(744, 278);
+            this.tabControl.TabIndex = 4;
+            // 
+            // tabPersona
+            // 
+            this.tabPersona.Controls.Add(this.btnImagen1);
+            this.tabPersona.Controls.Add(this.pbPerfil1);
+            this.tabPersona.Controls.Add(this.pnlPersona);
+            this.tabPersona.Location = new System.Drawing.Point(4, 22);
+            this.tabPersona.Name = "tabPersona";
+            this.tabPersona.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPersona.Size = new System.Drawing.Size(736, 252);
+            this.tabPersona.TabIndex = 1;
+            this.tabPersona.Text = "Datos Persona";
+            this.tabPersona.UseVisualStyleBackColor = true;
+            // 
+            // btnImagen1
+            // 
+            this.btnImagen1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImagen1.Location = new System.Drawing.Point(562, 214);
+            this.btnImagen1.Name = "btnImagen1";
+            this.btnImagen1.Size = new System.Drawing.Size(139, 32);
+            this.btnImagen1.TabIndex = 11;
+            this.btnImagen1.Text = "Seleccionar Imagen";
+            this.btnImagen1.UseVisualStyleBackColor = true;
+            this.btnImagen1.Click += new System.EventHandler(this.btnImagen_Click);
+            // 
+            // pbPerfil1
+            // 
+            this.pbPerfil1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPerfil1.Location = new System.Drawing.Point(531, 6);
+            this.pbPerfil1.Name = "pbPerfil1";
+            this.pbPerfil1.Size = new System.Drawing.Size(196, 202);
+            this.pbPerfil1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPerfil1.TabIndex = 10;
+            this.pbPerfil1.TabStop = false;
+            // 
+            // pnlPersona
+            // 
+            this.pnlPersona.Controls.Add(this.dtpFechaNacimiento);
+            this.pnlPersona.Controls.Add(this.txtCorreo);
+            this.pnlPersona.Controls.Add(this.lblCorreo);
+            this.pnlPersona.Controls.Add(this.txtDireccion);
+            this.pnlPersona.Controls.Add(this.lblDireccion);
+            this.pnlPersona.Controls.Add(this.lblFechaNacimiento);
+            this.pnlPersona.Controls.Add(this.txtNombre);
+            this.pnlPersona.Controls.Add(this.lblNombre);
+            this.pnlPersona.Controls.Add(this.txtDni);
+            this.pnlPersona.Controls.Add(this.lblDni);
+            this.pnlPersona.Controls.Add(this.lblPersona);
+            this.pnlPersona.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlPersona.Location = new System.Drawing.Point(3, 3);
+            this.pnlPersona.Name = "pnlPersona";
+            this.pnlPersona.Size = new System.Drawing.Size(522, 246);
+            this.pnlPersona.TabIndex = 9;
+            // 
+            // dtpFechaNacimiento
+            // 
+            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(151, 82);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(89, 20);
+            this.dtpFechaNacimiento.TabIndex = 23;
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(151, 134);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(271, 20);
+            this.txtCorreo.TabIndex = 21;
+            // 
+            // lblCorreo
+            // 
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.Location = new System.Drawing.Point(7, 132);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(56, 21);
+            this.lblCorreo.TabIndex = 20;
+            this.lblCorreo.Text = "Correo";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(151, 108);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(271, 20);
+            this.txtDireccion.TabIndex = 19;
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(7, 106);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(70, 21);
+            this.lblDireccion.TabIndex = 18;
+            this.lblDireccion.Text = "Dirección";
+            // 
+            // lblFechaNacimiento
+            // 
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(7, 83);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(138, 21);
+            this.lblFechaNacimiento.TabIndex = 16;
+            this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(151, 56);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(271, 20);
+            this.txtNombre.TabIndex = 15;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(7, 54);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(127, 21);
+            this.lblNombre.TabIndex = 14;
+            this.lblNombre.Text = "Nombre Completo";
+            // 
+            // txtDni
+            // 
+            this.txtDni.Location = new System.Drawing.Point(151, 30);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(100, 20);
+            this.txtDni.TabIndex = 13;
+            // 
+            // lblDni
+            // 
+            this.lblDni.AutoSize = true;
+            this.lblDni.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDni.Location = new System.Drawing.Point(7, 28);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(37, 21);
+            this.lblDni.TabIndex = 10;
+            this.lblDni.Text = "DNI";
+            // 
+            // lblPersona
+            // 
+            this.lblPersona.AutoSize = true;
+            this.lblPersona.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersona.Location = new System.Drawing.Point(3, 0);
+            this.lblPersona.Name = "lblPersona";
+            this.lblPersona.Size = new System.Drawing.Size(166, 27);
+            this.lblPersona.TabIndex = 8;
+            this.lblPersona.Text = "Datos de Persona";
+            // 
+            // tabPsico
+            // 
+            this.tabPsico.Controls.Add(this.btnImagen2);
+            this.tabPsico.Controls.Add(this.pbPerfil2);
+            this.tabPsico.Controls.Add(this.pnlDatos);
+            this.tabPsico.Location = new System.Drawing.Point(4, 22);
+            this.tabPsico.Name = "tabPsico";
+            this.tabPsico.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPsico.Size = new System.Drawing.Size(736, 252);
+            this.tabPsico.TabIndex = 0;
+            this.tabPsico.Text = "Datos Psicologo";
+            this.tabPsico.UseVisualStyleBackColor = true;
+            // 
+            // btnImagen2
+            // 
+            this.btnImagen2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImagen2.Location = new System.Drawing.Point(562, 214);
+            this.btnImagen2.Name = "btnImagen2";
+            this.btnImagen2.Size = new System.Drawing.Size(139, 32);
+            this.btnImagen2.TabIndex = 5;
+            this.btnImagen2.Text = "Seleccionar Imagen";
+            this.btnImagen2.UseVisualStyleBackColor = true;
+            this.btnImagen2.Click += new System.EventHandler(this.btnImagen_Click);
+            // 
+            // pbPerfil2
+            // 
+            this.pbPerfil2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPerfil2.Location = new System.Drawing.Point(531, 6);
+            this.pbPerfil2.Name = "pbPerfil2";
+            this.pbPerfil2.Size = new System.Drawing.Size(196, 202);
+            this.pbPerfil2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPerfil2.TabIndex = 4;
+            this.pbPerfil2.TabStop = false;
+            // 
             // pnlDatos
             // 
-            this.pnlDatos.Controls.Add(this.lblCategoria);
-            this.pnlDatos.Controls.Add(this.txtCategoria);
             this.pnlDatos.Controls.Add(this.txtUsuario);
             this.pnlDatos.Controls.Add(this.txtPassword);
             this.pnlDatos.Controls.Add(this.lblPassword);
             this.pnlDatos.Controls.Add(this.lblUsuario);
             this.pnlDatos.Controls.Add(this.lblMiembroPucp);
-            this.pnlDatos.Controls.Add(this.cbEspecialidad);
-            this.pnlDatos.Controls.Add(this.lblEspecialidad);
-            this.pnlDatos.Controls.Add(this.lblProfesor);
-            this.pnlDatos.Controls.Add(this.txtFacultad);
-            this.pnlDatos.Controls.Add(this.lblFacultad);
+            this.pnlDatos.Controls.Add(this.lblPsico);
+            this.pnlDatos.Controls.Add(this.lblRama);
+            this.pnlDatos.Controls.Add(this.txtRama);
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlDatos.Location = new System.Drawing.Point(3, 3);
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(522, 246);
             this.pnlDatos.TabIndex = 3;
-            // 
-            // lblCategoria
-            // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(6, 182);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(68, 21);
-            this.lblCategoria.TabIndex = 15;
-            this.lblCategoria.Text = "Categoria";
-            // 
-            // txtCategoria
-            // 
-            this.txtCategoria.Location = new System.Drawing.Point(152, 184);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(179, 20);
-            this.txtCategoria.TabIndex = 14;
             // 
             // txtUsuario
             // 
@@ -272,272 +441,60 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.lblMiembroPucp.TabIndex = 7;
             this.lblMiembroPucp.Text = "Datos de Miembro PUCP";
             // 
-            // cbEspecialidad
+            // lblPsico
             // 
-            this.cbEspecialidad.FormattingEnabled = true;
-            this.cbEspecialidad.Location = new System.Drawing.Point(152, 130);
-            this.cbEspecialidad.Name = "cbEspecialidad";
-            this.cbEspecialidad.Size = new System.Drawing.Size(179, 21);
-            this.cbEspecialidad.TabIndex = 6;
+            this.lblPsico.AutoSize = true;
+            this.lblPsico.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPsico.Location = new System.Drawing.Point(5, 100);
+            this.lblPsico.Name = "lblPsico";
+            this.lblPsico.Size = new System.Drawing.Size(183, 27);
+            this.lblPsico.TabIndex = 4;
+            this.lblPsico.Text = "Datos del Psicologo";
             // 
-            // lblEspecialidad
+            // lblRama
             // 
-            this.lblEspecialidad.AutoSize = true;
-            this.lblEspecialidad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecialidad.Location = new System.Drawing.Point(6, 128);
-            this.lblEspecialidad.Name = "lblEspecialidad";
-            this.lblEspecialidad.Size = new System.Drawing.Size(83, 21);
-            this.lblEspecialidad.TabIndex = 5;
-            this.lblEspecialidad.Text = "Especialidad";
+            this.lblRama.AutoSize = true;
+            this.lblRama.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRama.Location = new System.Drawing.Point(5, 129);
+            this.lblRama.Name = "lblRama";
+            this.lblRama.Size = new System.Drawing.Size(42, 21);
+            this.lblRama.TabIndex = 1;
+            this.lblRama.Text = "Rama";
             // 
-            // lblProfesor
+            // txtRama
             // 
-            this.lblProfesor.AutoSize = true;
-            this.lblProfesor.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfesor.Location = new System.Drawing.Point(5, 100);
-            this.lblProfesor.Name = "lblProfesor";
-            this.lblProfesor.Size = new System.Drawing.Size(176, 27);
-            this.lblProfesor.TabIndex = 4;
-            this.lblProfesor.Text = "Datos del Profesor";
-            // 
-            // txtFacultad
-            // 
-            this.txtFacultad.Location = new System.Drawing.Point(152, 157);
-            this.txtFacultad.Name = "txtFacultad";
-            this.txtFacultad.Size = new System.Drawing.Size(179, 20);
-            this.txtFacultad.TabIndex = 3;
-            // 
-            // lblFacultad
-            // 
-            this.lblFacultad.AutoSize = true;
-            this.lblFacultad.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacultad.Location = new System.Drawing.Point(5, 154);
-            this.lblFacultad.Name = "lblFacultad";
-            this.lblFacultad.Size = new System.Drawing.Size(60, 21);
-            this.lblFacultad.TabIndex = 2;
-            this.lblFacultad.Text = "Facultad";
-            // 
-            // tabControl
-            // 
-            this.tabControl.Controls.Add(this.tabPersona);
-            this.tabControl.Controls.Add(this.tabProfesor);
-            this.tabControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabControl.Location = new System.Drawing.Point(0, 103);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(743, 278);
-            this.tabControl.TabIndex = 4;
-            // 
-            // tabPersona
-            // 
-            this.tabPersona.Controls.Add(this.btnImagen1);
-            this.tabPersona.Controls.Add(this.pbPerfil1);
-            this.tabPersona.Controls.Add(this.pnlPersona);
-            this.tabPersona.Location = new System.Drawing.Point(4, 22);
-            this.tabPersona.Name = "tabPersona";
-            this.tabPersona.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPersona.Size = new System.Drawing.Size(735, 252);
-            this.tabPersona.TabIndex = 1;
-            this.tabPersona.Text = "Datos Persona";
-            this.tabPersona.UseVisualStyleBackColor = true;
-            // 
-            // btnImagen1
-            // 
-            this.btnImagen1.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImagen1.Location = new System.Drawing.Point(561, 214);
-            this.btnImagen1.Name = "btnImagen1";
-            this.btnImagen1.Size = new System.Drawing.Size(139, 32);
-            this.btnImagen1.TabIndex = 11;
-            this.btnImagen1.Text = "Seleccionar Imagen";
-            this.btnImagen1.UseVisualStyleBackColor = true;
-            this.btnImagen1.Click += new System.EventHandler(this.btnImagen_Click);
-            // 
-            // pbPerfil1
-            // 
-            this.pbPerfil1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbPerfil1.Location = new System.Drawing.Point(531, 6);
-            this.pbPerfil1.Name = "pbPerfil1";
-            this.pbPerfil1.Size = new System.Drawing.Size(196, 202);
-            this.pbPerfil1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbPerfil1.TabIndex = 10;
-            this.pbPerfil1.TabStop = false;
-            // 
-            // pnlPersona
-            // 
-            this.pnlPersona.Controls.Add(this.dtpFechaNacimiento);
-            this.pnlPersona.Controls.Add(this.txtCorreo);
-            this.pnlPersona.Controls.Add(this.lblCorreo);
-            this.pnlPersona.Controls.Add(this.txtDireccion);
-            this.pnlPersona.Controls.Add(this.lblDireccion);
-            this.pnlPersona.Controls.Add(this.lblFechaNacimiento);
-            this.pnlPersona.Controls.Add(this.txtNombre);
-            this.pnlPersona.Controls.Add(this.lblNombre);
-            this.pnlPersona.Controls.Add(this.txtDni);
-            this.pnlPersona.Controls.Add(this.lblDni);
-            this.pnlPersona.Controls.Add(this.lblPersona);
-            this.pnlPersona.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlPersona.Location = new System.Drawing.Point(3, 3);
-            this.pnlPersona.Name = "pnlPersona";
-            this.pnlPersona.Size = new System.Drawing.Size(522, 246);
-            this.pnlPersona.TabIndex = 9;
-            // 
-            // dtpFechaNacimiento
-            // 
-            this.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(151, 80);
-            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(89, 20);
-            this.dtpFechaNacimiento.TabIndex = 23;
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(151, 134);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(271, 20);
-            this.txtCorreo.TabIndex = 21;
-            // 
-            // lblCorreo
-            // 
-            this.lblCorreo.AutoSize = true;
-            this.lblCorreo.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreo.Location = new System.Drawing.Point(7, 130);
-            this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(56, 21);
-            this.lblCorreo.TabIndex = 20;
-            this.lblCorreo.Text = "Correo";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(151, 108);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(271, 20);
-            this.txtDireccion.TabIndex = 19;
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(7, 105);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(70, 21);
-            this.lblDireccion.TabIndex = 18;
-            this.lblDireccion.Text = "Dirección";
-            // 
-            // lblFechaNacimiento
-            // 
-            this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(7, 77);
-            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(138, 21);
-            this.lblFechaNacimiento.TabIndex = 16;
-            this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(151, 54);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(271, 20);
-            this.txtNombre.TabIndex = 15;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(7, 52);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(127, 21);
-            this.lblNombre.TabIndex = 14;
-            this.lblNombre.Text = "Nombre Completo";
-            // 
-            // txtDni
-            // 
-            this.txtDni.Location = new System.Drawing.Point(151, 29);
-            this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(100, 20);
-            this.txtDni.TabIndex = 13;
-            // 
-            // lblDni
-            // 
-            this.lblDni.AutoSize = true;
-            this.lblDni.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDni.Location = new System.Drawing.Point(7, 27);
-            this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(37, 21);
-            this.lblDni.TabIndex = 10;
-            this.lblDni.Text = "DNI";
-            // 
-            // lblPersona
-            // 
-            this.lblPersona.AutoSize = true;
-            this.lblPersona.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersona.Location = new System.Drawing.Point(3, 0);
-            this.lblPersona.Name = "lblPersona";
-            this.lblPersona.Size = new System.Drawing.Size(166, 27);
-            this.lblPersona.TabIndex = 8;
-            this.lblPersona.Text = "Datos de Persona";
-            // 
-            // tabProfesor
-            // 
-            this.tabProfesor.Controls.Add(this.btnImagen2);
-            this.tabProfesor.Controls.Add(this.pbPerfil2);
-            this.tabProfesor.Controls.Add(this.pnlDatos);
-            this.tabProfesor.Location = new System.Drawing.Point(4, 22);
-            this.tabProfesor.Name = "tabProfesor";
-            this.tabProfesor.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProfesor.Size = new System.Drawing.Size(735, 252);
-            this.tabProfesor.TabIndex = 0;
-            this.tabProfesor.Text = "Datos Profesor";
-            this.tabProfesor.UseVisualStyleBackColor = true;
-            // 
-            // btnImagen2
-            // 
-            this.btnImagen2.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImagen2.Location = new System.Drawing.Point(561, 214);
-            this.btnImagen2.Name = "btnImagen2";
-            this.btnImagen2.Size = new System.Drawing.Size(139, 32);
-            this.btnImagen2.TabIndex = 5;
-            this.btnImagen2.Text = "Seleccionar Imagen";
-            this.btnImagen2.UseVisualStyleBackColor = true;
-            this.btnImagen2.Click += new System.EventHandler(this.btnImagen_Click);
-            // 
-            // pbPerfil2
-            // 
-            this.pbPerfil2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbPerfil2.Location = new System.Drawing.Point(531, 6);
-            this.pbPerfil2.Name = "pbPerfil2";
-            this.pbPerfil2.Size = new System.Drawing.Size(196, 202);
-            this.pbPerfil2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbPerfil2.TabIndex = 4;
-            this.pbPerfil2.TabStop = false;
+            this.txtRama.Location = new System.Drawing.Point(152, 130);
+            this.txtRama.Name = "txtRama";
+            this.txtRama.Size = new System.Drawing.Size(145, 20);
+            this.txtRama.TabIndex = 0;
             // 
             // ofd_Imagen
             // 
             this.ofd_Imagen.FileName = "Alumno_Perfil";
             // 
-            // frmCargarProfesor
+            // frmGestionarPsicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 399);
+            this.ClientSize = new System.Drawing.Size(744, 401);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pnlHeader);
-            this.Name = "frmCargarProfesor";
-            this.Text = "Gestionar Profesores";
+            this.Name = "frmGestionarPsicologo";
+            this.Text = "Gestionar Psicologos";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.pnlDatos.ResumeLayout(false);
-            this.pnlDatos.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.tabPersona.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil1)).EndInit();
             this.pnlPersona.ResumeLayout(false);
             this.pnlPersona.PerformLayout();
-            this.tabProfesor.ResumeLayout(false);
+            this.tabPsico.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPerfil2)).EndInit();
+            this.pnlDatos.ResumeLayout(false);
+            this.pnlDatos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -555,17 +512,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.ToolStripButton tsbEliminar;
         private System.Windows.Forms.ToolStripButton tsbBuscar;
         private System.Windows.Forms.ToolStripButton tsbCancelar;
-        private System.Windows.Forms.Panel pnlDatos;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblUsuario;
-        private System.Windows.Forms.Label lblMiembroPucp;
-        private System.Windows.Forms.ComboBox cbEspecialidad;
-        private System.Windows.Forms.Label lblEspecialidad;
-        private System.Windows.Forms.Label lblProfesor;
-        private System.Windows.Forms.TextBox txtFacultad;
-        private System.Windows.Forms.Label lblFacultad;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPersona;
         private System.Windows.Forms.Panel pnlPersona;
@@ -579,12 +525,19 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         private System.Windows.Forms.TextBox txtDni;
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.Label lblPersona;
-        private System.Windows.Forms.TabPage tabProfesor;
+        private System.Windows.Forms.TabPage tabPsico;
         private System.Windows.Forms.Button btnImagen2;
         private System.Windows.Forms.PictureBox pbPerfil2;
         private System.Windows.Forms.OpenFileDialog ofd_Imagen;
-        private System.Windows.Forms.TextBox txtCategoria;
-        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Panel pnlDatos;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Label lblMiembroPucp;
+        private System.Windows.Forms.Label lblPsico;
+        private System.Windows.Forms.Label lblRama;
+        private System.Windows.Forms.TextBox txtRama;
         private System.Windows.Forms.Button btnImagen1;
         private System.Windows.Forms.PictureBox pbPerfil1;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;

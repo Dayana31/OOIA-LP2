@@ -22,7 +22,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         //Alumno
         private void btnAlumno_Click(object sender, EventArgs e)
         {
-            new frmCargarAlumno().ShowDialog();
+            new frmGestionarAlumno().ShowDialog();
         }
 
         private void btnAlumnoFile_Click(object sender, EventArgs e)
@@ -63,8 +63,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         //Asesor
         private void btnAsesor_Click(object sender, EventArgs e)
         {
-            if (rbProfesor.Checked) new frmCargarProfesor().ShowDialog();
-            if (rbPsicologo.Checked) new frmCargarPsicologo().ShowDialog();
+            if (rbProfesor.Checked) new frmGestionarProfesor().ShowDialog();
+            if (rbPsicologo.Checked) new frmGestionarPsicologo().ShowDialog();
         }
 
         private void btnAsesorFile_Click(object sender, EventArgs e)
@@ -113,10 +113,14 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        /*TAB Gestion Atencion*/
-        private void btnCodigoAtencion_Click(object sender, EventArgs e)
+        private void btnPonente_Click(object sender, EventArgs e)
         {
-            new frmCodigosAtencion().ShowDialog();
+            new frmGestionarEspecialidad().ShowDialog();
+        }
+
+        private void btnCoordinador_Click(object sender, EventArgs e)
+        {
+            new frmGestionarCoordinador().ShowDialog();
         }
 
         private void btnEspecialidad_Click(object sender, EventArgs e)
@@ -124,11 +128,13 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             new frmGestionarEspecialidad().ShowDialog();
         }
 
-        private void btnCoordinador_Click(object sender, EventArgs e)
+        /*TAB Gestion Atencion*/
+        private void btnCodigoAtencion_Click(object sender, EventArgs e)
         {
-            new frmCargarCoordinador().ShowDialog();
+            new frmCodigosAtencion().ShowDialog();
         }
 
+        /*TAB Gestion Academica*/
         private void btnEvaluacionFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -198,7 +204,5 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
                 MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
-        
     }
 }

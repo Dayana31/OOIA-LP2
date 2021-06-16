@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
-    partial class frmCargarAlumno
+    partial class frmGestionarAlumno
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarAlumno));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionarAlumno));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.txtHeader = new System.Windows.Forms.Label();
@@ -464,7 +464,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.tabAlumno.Location = new System.Drawing.Point(4, 22);
             this.tabAlumno.Name = "tabAlumno";
             this.tabAlumno.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAlumno.Size = new System.Drawing.Size(735, 252);
+            this.tabAlumno.Size = new System.Drawing.Size(736, 252);
             this.tabAlumno.TabIndex = 0;
             this.tabAlumno.Text = "Datos Alumno";
             this.tabAlumno.UseVisualStyleBackColor = true;
@@ -494,7 +494,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             // 
             this.ofd_Imagen.FileName = "Alumno_Perfil";
             // 
-            // frmCargarAlumno
+            // frmGestionarAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -502,7 +502,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.tsAlumno);
             this.Controls.Add(this.pnlHeader);
-            this.Name = "frmCargarAlumno";
+            this.Name = "frmGestionarAlumno";
             this.Text = "Cargar Alumno";
             this.pnlHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();

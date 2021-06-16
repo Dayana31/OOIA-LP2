@@ -7,32 +7,25 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
-    public partial class frmCargarProfesor : Form
+    public partial class frmGestionarCoordinador: Form
     {
-        private EspecialidadWS.EspecialidadWSClient daoEspecialidad;
-        private ProfesorWS.ProfesorWSClient daoProfesor;
-        private ProfesorWS.profesor profesor;
-        private byte[] imagen_perfil;
+        private CoordinadorWS.CoordinadorWSClient daoCoordinador;
+        private CoordinadorWS.coordinador coordinador;
         private Estado estado;
+        private byte[] imagen_perfil;
 
-        public frmCargarProfesor()
+        public frmGestionarCoordinador()
         {
             InitializeComponent();
             estado = Estado.Inicial;
             clearall();
             cambiarEstado();
-            daoEspecialidad = new EspecialidadWS.EspecialidadWSClient();
-            daoProfesor = new ProfesorWS.ProfesorWSClient();
-            cbEspecialidad.DataSource = new BindingList<EspecialidadWS.especialidad>
-                (daoEspecialidad.listarEspecialidad().ToList());
-            cbEspecialidad.DisplayMember = "nombre";
-            cbEspecialidad.ValueMember = "id_especialidad";
+            daoCoordinador = new CoordinadorWS.CoordinadorWSClient();
         }
 
         public void clearall()
         {
             /*Persona*/
-
             txtDni.Text = "";
             txtNombre.Text = "";
             dtpFechaNacimiento.Value = DateTime.Today;
@@ -41,10 +34,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             /*Miembro PUCP*/
             txtUsuario.Text = "";
             txtPassword.Text = "";
-            /*Profesor*/
-            cbEspecialidad.SelectedIndex = -1;
-            txtFacultad.Text = "";
-            txtCategoria.Text = "";
+            /*Coordinador*/
+            txtRol.Text = "";
             /*Imagen*/
             Image img = Properties.Resources.placeholder_profile;
             imagen_perfil = ImageToByte2(img);
@@ -59,6 +50,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 return stream.ToArray();
             }
         }
+
 
         public void cambiarEstado()
         {
@@ -84,10 +76,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     /*Miembro PUCP*/
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
-                    /*Profesor*/
-                    txtFacultad.Enabled = false;
-                    txtCategoria.Enabled = false;
-                    cbEspecialidad.Enabled = false;
+                    /*Coordinador*/
+                    txtRol.Enabled = false;
                     break;
                 case Estado.Nuevo:
                 case Estado.Modificar:
@@ -98,7 +88,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     tsbBuscar.Enabled = false;
                     tsbEliminar.Enabled = false;
                     tsbCancelar.Enabled = true;
-                    btnImagen1.Enabled = false;
+                    btnImagen1.Enabled = true;
                     btnImagen2.Enabled = true;
                     //Texto
                     /*Persona*/
@@ -110,10 +100,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     /*Miembro PUCP*/
                     txtUsuario.Enabled = true;
                     txtPassword.Enabled = true;
-                    /*Profesor*/
-                    txtFacultad.Enabled = true;
-                    txtCategoria.Enabled = true;
-                    cbEspecialidad.Enabled = true;
+                    /*Coordinador*/
+                    txtRol.Enabled = true;
                     break;
                 case Estado.Busqueda:
                     //Botones
@@ -135,10 +123,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                     /*Miembro PUCP*/
                     txtUsuario.Enabled = false;
                     txtPassword.Enabled = false;
-                    /*Profesor*/
-                    txtFacultad.Enabled = false;
-                    txtCategoria.Enabled = false;
-                    cbEspecialidad.Enabled = false;
+                    /*Coordinador*/
+                    txtRol.Enabled = false;
                     break;
             }
         }
@@ -151,6 +137,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         }
 
         /*Botones de Header*/
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -158,28 +145,26 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         /*Botones de Toolstrip*/
 
-        public void fillText(ProfesorWS.profesor profe)
+        public void fillText(CoordinadorWS.coordinador coord)
         {
             //Persona
-            txtDni.Text = profe.dni;
-            txtNombre.Text = profe.nombre;
-            dtpFechaNacimiento.Value = profe.fecha_nacimiento;
-            txtDireccion.Text = profe.direccion;
-            txtCorreo.Text = profe.correo;
+            txtDni.Text = coord.dni;
+            txtNombre.Text = coord.nombre;
+            dtpFechaNacimiento.Value = coord.fecha_nacimiento;
+            txtDireccion.Text = coord.direccion;
+            txtCorreo.Text = coord.correo;
             //Miembro PUCP
-            txtUsuario.Text = profe.usuario;
-            txtPassword.Text = "*********";;
-            imagen_perfil = profe.imagenDePerfil;
+            txtUsuario.Text = coord.usuario;
+            txtPassword.Text = "*********";
+            imagen_perfil = coord.imagenDePerfil;
             if (imagen_perfil != null) displayImage(imagen_perfil);
             //Alumno
-            txtFacultad.Text = profe.facultad;
-            txtCategoria.Text = profe.categoria;
-            cbEspecialidad.SelectedValue = profe.especialidad.id_especialidad;
+            txtRol.Text = coord.rol;
         }
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            this.profesor = new ProfesorWS.profesor();
+            this.coordinador = new CoordinadorWS.coordinador();
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
@@ -225,47 +210,32 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
                 MessageBox.Show("No ha ingresado la contraseña", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            //Validación Profesor
-            if (cbEspecialidad.SelectedIndex == -1)
+            //Validación Coordinador
+            if (txtRol.Text == "")
             {
-                MessageBox.Show("No ha seleccionado la especialidad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("No ha ingresado el rol", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (txtFacultad.Text == "")
-            {
-                MessageBox.Show("No ha ingresado la facultad", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (txtCategoria.Text == "")
-            {
-                MessageBox.Show("No ha ingresado la categoría", "Mensaje de advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            
+
             //Persona
-            profesor.dni = txtDni.Text;
-            profesor.nombre = txtNombre.Text;
-            profesor.fecha_nacimiento = dtpFechaNacimiento.Value;
-            profesor.fecha_nacimientoSpecified = true;
-            profesor.direccion = txtDireccion.Text;
-            profesor.correo = txtCorreo.Text;
+            coordinador.dni = txtDni.Text;
+            coordinador.nombre = txtNombre.Text;
+            coordinador.fecha_nacimiento = dtpFechaNacimiento.Value;
+            coordinador.fecha_nacimientoSpecified = true;
+            coordinador.direccion = txtDireccion.Text;
+            coordinador.correo = txtCorreo.Text;
             //Miembro PUCP
-            profesor.usuario = txtUsuario.Text;
-            profesor.password = txtPassword.Text;
-            profesor.imagenDePerfil = imagen_perfil;
-            profesor.fecha_inclusion = DateTime.Today.Date;
-            profesor.fecha_inclusionSpecified = true;
-            //Alumno
-            profesor.facultad = txtFacultad.Text;
-            profesor.categoria = txtCategoria.Text;
-            EspecialidadWS.especialidad esp_selected = (EspecialidadWS.especialidad)cbEspecialidad.SelectedItem;
-            profesor.especialidad = new ProfesorWS.especialidad();
-            profesor.especialidad.id_especialidad = esp_selected.id_especialidad;
-            profesor.especialidad.nombre = esp_selected.nombre;
+            coordinador.usuario = txtUsuario.Text;
+            coordinador.password = txtPassword.Text;
+            coordinador.imagenDePerfil = imagen_perfil;
+            coordinador.fecha_inclusion = DateTime.Today.Date;
+            coordinador.fecha_inclusionSpecified = true;
+            //Psicologo
+            coordinador.rol = txtRol.Text;
 
             if (estado.Equals(Estado.Nuevo))
             {
-                int resultado = daoProfesor.insertarProfesor(this.profesor);
+                int resultado = daoCoordinador.insertarCoordinador(coordinador);
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha registrado con exito", "Mensaje Confirmacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -276,7 +246,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             }
             else if (estado == Estado.Modificar)
             {
-                int resultado = daoProfesor.modificarProfesor(profesor);
+                int resultado = daoCoordinador.modificarCoordinador(coordinador);
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha actualizado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -297,10 +267,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar este profesor?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar este coordinador?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
-                int resultado = daoProfesor.eliminarProfesor(profesor.id_profesor);
+                int resultado = daoCoordinador.eliminarCoordinador(coordinador.id_coordinador);
                 if (resultado != 0)
                 {
                     MessageBox.Show("Se ha eliminado con exito", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -313,11 +283,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void tsbBuscar_Click(object sender, EventArgs e)
         {
-            frmBuscarProfesor frmBuscar = new frmBuscarProfesor();
+            frmBuscarCoordinador frmBuscar = new frmBuscarCoordinador();
             if (frmBuscar.ShowDialog() == DialogResult.OK)
             {
-                this.profesor = frmBuscar.Profesor;
-                fillText(this.profesor);
+                this.coordinador = frmBuscar.Coordinador;
+                fillText(this.coordinador);
                 estado = Estado.Busqueda;
                 cambiarEstado();
             }
@@ -344,6 +314,5 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             }
 
         }
-
     }
 }

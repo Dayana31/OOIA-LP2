@@ -57,15 +57,18 @@ public class GestionHumanaWS {
         inicioSesion=new inicioSesionMySQL();
     coordinador=new CoordinadorMySQL();        
     }
-@WebMethod(operationName = "listarAlumno")
-    public ArrayList<Alumno> listarAlumno(){
-        ArrayList<Alumno> lista= new ArrayList<>();
-        try {
-            lista=alumno.listar();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return lista;
+    
+    
+    
+    @WebMethod(operationName = "listarAlumno")
+        public ArrayList<Alumno> listarAlumno(){
+            ArrayList<Alumno> lista= new ArrayList<>();
+            try {
+                lista=alumno.listar();
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+            return lista;
         
     }
     @WebMethod(operationName = "insertarAlumno")
@@ -274,7 +277,50 @@ public class GestionHumanaWS {
         return resultado;
         
     }
-        @WebMethod(operationName = "autenticarUsuario")
+    
+    @WebMethod(operationName = "listarCoordinador")
+    public ArrayList<Coordinador> listarCoordinadorEvento() {
+        ArrayList<Coordinador> lista= new ArrayList<>();
+        try {
+            lista=coordinador.listar();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
+    @WebMethod(operationName = "insertarCoordinador")
+    public int insertarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
+        int resultado=0;
+        try {
+            resultado=this.coordinador.insertar(coordinador);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "modificarCoordinador")
+    public int modificarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
+        int resultado=0;
+        try {
+            resultado=this.coordinador.modificar(coordinador);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "eliminarCoordinador")
+    public int eliminarCoordinadorEvento(@WebParam(name = "id_coordinador")int  id_coordinador){
+        int resultado=0;
+        try {
+            resultado=this.coordinador.eliminar(id_coordinador);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    
+    
+    @WebMethod(operationName = "autenticarUsuario")
     public int autenticarUsuario(@WebParam(name = "usuario")String usuario,@WebParam(name = "password")String password){
         int resultado=0;
         try {
@@ -333,51 +379,6 @@ public class GestionHumanaWS {
             System.out.println(e.getMessage());
         }
         return resultado;//se devuelve el id persona
-    }
-    
-    
-    
-    
-
-    @WebMethod(operationName = "listarCoordinador")
-    public ArrayList<Coordinador> listarCoordinadorEvento() {
-        ArrayList<Coordinador> lista= new ArrayList<>();
-        try {
-            lista=coordinador.listar();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return lista;
-    }
-    @WebMethod(operationName = "insertarCoordinador")
-    public int insertarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
-        int resultado=0;
-        try {
-            resultado=this.coordinador.insertar(coordinador);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return resultado;
-    }
-    @WebMethod(operationName = "modificarCoordinador")
-    public int modificarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
-        int resultado=0;
-        try {
-            resultado=this.coordinador.modificar(coordinador);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return resultado;
-    }
-    @WebMethod(operationName = "eliminarCoordinador")
-    public int eliminarCoordinadorEvento(@WebParam(name = "id_coordinador")int  id_coordinador){
-        int resultado=0;
-        try {
-            resultado=this.coordinador.eliminar(id_coordinador);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return resultado;
     }
     
     
