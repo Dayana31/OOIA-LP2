@@ -43,6 +43,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.lblLista = new System.Windows.Forms.Label();
             this.txtBuscarCurso = new System.Windows.Forms.TextBox();
             this.dgvCursos = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
@@ -53,9 +56,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Creditos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlHeader.SuspendLayout();
             this.pnlDatos.SuspendLayout();
@@ -213,10 +213,38 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.dgvCursos.Location = new System.Drawing.Point(23, 191);
             this.dgvCursos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCursos.Name = "dgvCursos";
-            this.dgvCursos.RowHeadersWidth = 51;
+            this.dgvCursos.ReadOnly = true;
+            this.dgvCursos.RowHeadersWidth = 10;
             this.dgvCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCursos.Size = new System.Drawing.Size(687, 161);
             this.dgvCursos.TabIndex = 20;
+            // 
+            // Codigo
+            // 
+            this.Codigo.DataPropertyName = "codigoCurso";
+            this.Codigo.HeaderText = "Código";
+            this.Codigo.MinimumWidth = 6;
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            this.Codigo.Width = 125;
+            // 
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "nombreCurso";
+            this.nombre.HeaderText = "Nombre del curso";
+            this.nombre.MinimumWidth = 6;
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 200;
+            // 
+            // Creditos
+            // 
+            this.Creditos.DataPropertyName = "creditos";
+            this.Creditos.HeaderText = "Créditos";
+            this.Creditos.MinimumWidth = 6;
+            this.Creditos.Name = "Creditos";
+            this.Creditos.ReadOnly = true;
+            this.Creditos.Width = 125;
             // 
             // txtCodigo
             // 
@@ -316,30 +344,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbCancelar.Size = new System.Drawing.Size(90, 24);
             this.tsbCancelar.Text = "Cancelar";
             this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
-            // 
-            // Codigo
-            // 
-            this.Codigo.DataPropertyName = "codigoCurso";
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.MinimumWidth = 6;
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Width = 125;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombreCurso";
-            this.nombre.HeaderText = "Nombre del curso";
-            this.nombre.MinimumWidth = 6;
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 320;
-            // 
-            // Creditos
-            // 
-            this.Creditos.DataPropertyName = "creditos";
-            this.Creditos.HeaderText = "Créditos";
-            this.Creditos.MinimumWidth = 6;
-            this.Creditos.Name = "Creditos";
-            this.Creditos.Width = 125;
             // 
             // frmCargarCursos
             // 
