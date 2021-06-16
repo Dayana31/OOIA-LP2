@@ -29,12 +29,20 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarEvaluaciones));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargarEvaluaciones));
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.lblHeader = new System.Windows.Forms.Label();
             this.pnlDatos = new System.Windows.Forms.Panel();
+            this.lblLista = new System.Windows.Forms.Label();
+            this.dgvCursos = new System.Windows.Forms.DataGridView();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCursoAlumno = new System.Windows.Forms.Button();
+            this.txtNota = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtNombreEvaluacion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,19 +56,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtNota = new System.Windows.Forms.TextBox();
-            this.btnAlumnoFile = new System.Windows.Forms.Button();
-            this.lblLista = new System.Windows.Forms.Label();
-            this.dgvCursos = new System.Windows.Forms.DataGridView();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlDatos.SuspendLayout();
-            this.tsAlumno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).BeginInit();
+            this.tsAlumno.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlHeader
@@ -86,6 +86,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBack.TabIndex = 3;
             this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblHeader
             // 
@@ -102,7 +103,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             // 
             this.pnlDatos.Controls.Add(this.lblLista);
             this.pnlDatos.Controls.Add(this.dgvCursos);
-            this.pnlDatos.Controls.Add(this.btnAlumnoFile);
+            this.pnlDatos.Controls.Add(this.btnCursoAlumno);
             this.pnlDatos.Controls.Add(this.txtNota);
             this.pnlDatos.Controls.Add(this.label3);
             this.pnlDatos.Controls.Add(this.txtNombreEvaluacion);
@@ -118,6 +119,103 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(992, 364);
             this.pnlDatos.TabIndex = 8;
+            // 
+            // lblLista
+            // 
+            this.lblLista.AutoSize = true;
+            this.lblLista.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLista.Location = new System.Drawing.Point(19, 161);
+            this.lblLista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLista.Name = "lblLista";
+            this.lblLista.Size = new System.Drawing.Size(255, 34);
+            this.lblLista.TabIndex = 41;
+            this.lblLista.Text = "Lista de Evaluaciones";
+            // 
+            // dgvCursos
+            // 
+            this.dgvCursos.AllowUserToAddRows = false;
+            this.dgvCursos.AllowUserToDeleteRows = false;
+            this.dgvCursos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCursos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Tipo,
+            this.Nombre,
+            this.Nota});
+            this.dgvCursos.EnableHeadersVisualStyles = false;
+            this.dgvCursos.Location = new System.Drawing.Point(24, 199);
+            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCursos.Name = "dgvCursos";
+            this.dgvCursos.ReadOnly = true;
+            this.dgvCursos.RowHeadersWidth = 10;
+            this.dgvCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCursos.Size = new System.Drawing.Size(819, 161);
+            this.dgvCursos.TabIndex = 40;
+            // 
+            // Tipo
+            // 
+            this.Tipo.DataPropertyName = "tipo";
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.MinimumWidth = 6;
+            this.Tipo.Name = "Tipo";
+            this.Tipo.ReadOnly = true;
+            this.Tipo.Width = 125;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "nombre";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 125;
+            // 
+            // Nota
+            // 
+            this.Nota.DataPropertyName = "nota";
+            this.Nota.HeaderText = "Nota";
+            this.Nota.MinimumWidth = 6;
+            this.Nota.Name = "Nota";
+            this.Nota.ReadOnly = true;
+            this.Nota.Width = 125;
+            // 
+            // btnCursoAlumno
+            // 
+            this.btnCursoAlumno.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursoAlumno.Location = new System.Drawing.Point(861, 56);
+            this.btnCursoAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCursoAlumno.Name = "btnCursoAlumno";
+            this.btnCursoAlumno.Size = new System.Drawing.Size(44, 27);
+            this.btnCursoAlumno.TabIndex = 39;
+            this.btnCursoAlumno.Text = "...";
+            this.btnCursoAlumno.UseVisualStyleBackColor = true;
+            this.btnCursoAlumno.Click += new System.EventHandler(this.btnAlumnoFile_Click);
+            // 
+            // txtNota
+            // 
+            this.txtNota.Location = new System.Drawing.Point(394, 128);
+            this.txtNota.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNota.Name = "txtNota";
+            this.txtNota.Size = new System.Drawing.Size(168, 22);
+            this.txtNota.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 55);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(235, 27);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Curso llevado por el alumno:";
             // 
             // txtNombreEvaluacion
             // 
@@ -210,6 +308,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbNuevo.Size = new System.Drawing.Size(76, 24);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.ToolTipText = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbGuardar
             // 
@@ -218,6 +317,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(86, 24);
             this.tsbGuardar.Text = "Guardar";
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // tsbModificar
             // 
@@ -226,6 +326,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbModificar.Name = "tsbModificar";
             this.tsbModificar.Size = new System.Drawing.Size(97, 24);
             this.tsbModificar.Text = "Modificar";
+            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
             // 
             // tsbEliminar
             // 
@@ -234,6 +335,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbEliminar.Name = "tsbEliminar";
             this.tsbEliminar.Size = new System.Drawing.Size(87, 24);
             this.tsbEliminar.Text = "Eliminar";
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
             // 
             // tsbCancelar
             // 
@@ -242,102 +344,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbCancelar.Name = "tsbCancelar";
             this.tsbCancelar.Size = new System.Drawing.Size(90, 24);
             this.tsbCancelar.Text = "Cancelar";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 55);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(235, 27);
-            this.label3.TabIndex = 28;
-            this.label3.Text = "Curso llevado por el alumno:";
-            // 
-            // txtNota
-            // 
-            this.txtNota.Location = new System.Drawing.Point(394, 128);
-            this.txtNota.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNota.Name = "txtNota";
-            this.txtNota.Size = new System.Drawing.Size(168, 22);
-            this.txtNota.TabIndex = 29;
-            // 
-            // btnAlumnoFile
-            // 
-            this.btnAlumnoFile.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlumnoFile.Location = new System.Drawing.Point(861, 56);
-            this.btnAlumnoFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAlumnoFile.Name = "btnAlumnoFile";
-            this.btnAlumnoFile.Size = new System.Drawing.Size(44, 27);
-            this.btnAlumnoFile.TabIndex = 39;
-            this.btnAlumnoFile.Text = "...";
-            this.btnAlumnoFile.UseVisualStyleBackColor = true;
-            // 
-            // lblLista
-            // 
-            this.lblLista.AutoSize = true;
-            this.lblLista.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLista.Location = new System.Drawing.Point(19, 161);
-            this.lblLista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLista.Name = "lblLista";
-            this.lblLista.Size = new System.Drawing.Size(255, 34);
-            this.lblLista.TabIndex = 41;
-            this.lblLista.Text = "Lista de Evaluaciones";
-            // 
-            // dgvCursos
-            // 
-            this.dgvCursos.AllowUserToAddRows = false;
-            this.dgvCursos.AllowUserToDeleteRows = false;
-            this.dgvCursos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCursos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCursos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Tipo,
-            this.Nombre,
-            this.Nota});
-            this.dgvCursos.EnableHeadersVisualStyles = false;
-            this.dgvCursos.Location = new System.Drawing.Point(24, 199);
-            this.dgvCursos.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvCursos.Name = "dgvCursos";
-            this.dgvCursos.ReadOnly = true;
-            this.dgvCursos.RowHeadersWidth = 10;
-            this.dgvCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCursos.Size = new System.Drawing.Size(819, 161);
-            this.dgvCursos.TabIndex = 40;
-            // 
-            // Tipo
-            // 
-            this.Tipo.DataPropertyName = "tipo";
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.MinimumWidth = 6;
-            this.Tipo.Name = "Tipo";
-            this.Tipo.ReadOnly = true;
-            this.Tipo.Width = 125;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 125;
-            // 
-            // Nota
-            // 
-            this.Nota.DataPropertyName = "nota";
-            this.Nota.HeaderText = "Nota";
-            this.Nota.MinimumWidth = 6;
-            this.Nota.Name = "Nota";
-            this.Nota.ReadOnly = true;
-            this.Nota.Width = 125;
+            this.tsbCancelar.Click += new System.EventHandler(this.tsbCancelar_Click);
             // 
             // frmCargarEvaluaciones
             // 
@@ -353,9 +360,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             this.tsAlumno.ResumeLayout(false);
             this.tsAlumno.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -382,7 +389,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
         private System.Windows.Forms.ToolStripButton tsbCancelar;
         private System.Windows.Forms.TextBox txtNota;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnAlumnoFile;
+        private System.Windows.Forms.Button btnCursoAlumno;
         private System.Windows.Forms.Label lblLista;
         private System.Windows.Forms.DataGridView dgvCursos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;

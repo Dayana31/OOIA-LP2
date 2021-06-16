@@ -16,5 +16,40 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
         {
             InitializeComponent();
         }
+
+        private void btnAlumno_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCurso_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

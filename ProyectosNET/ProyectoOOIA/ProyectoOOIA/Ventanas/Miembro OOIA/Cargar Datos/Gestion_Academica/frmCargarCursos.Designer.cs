@@ -213,7 +213,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.dgvCursos.Location = new System.Drawing.Point(23, 191);
             this.dgvCursos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCursos.Name = "dgvCursos";
-            this.dgvCursos.ReadOnly = true;
             this.dgvCursos.RowHeadersWidth = 10;
             this.dgvCursos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCursos.Size = new System.Drawing.Size(687, 161);
@@ -225,7 +224,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.Codigo.HeaderText = "Código";
             this.Codigo.MinimumWidth = 6;
             this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
             this.Codigo.Width = 125;
             // 
             // nombre
@@ -234,8 +232,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.nombre.HeaderText = "Nombre del curso";
             this.nombre.MinimumWidth = 6;
             this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 200;
+            this.nombre.Width = 320;
             // 
             // Creditos
             // 
@@ -243,7 +240,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.Creditos.HeaderText = "Créditos";
             this.Creditos.MinimumWidth = 6;
             this.Creditos.Name = "Creditos";
-            this.Creditos.ReadOnly = true;
             this.Creditos.Width = 125;
             // 
             // txtCodigo

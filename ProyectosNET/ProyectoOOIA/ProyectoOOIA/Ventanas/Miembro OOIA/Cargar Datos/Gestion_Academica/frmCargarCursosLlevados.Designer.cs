@@ -34,6 +34,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.lblHeader = new System.Windows.Forms.Label();
             this.pnlDatos = new System.Windows.Forms.Panel();
+            this.txtNotaFinal = new System.Windows.Forms.TextBox();
+            this.rbNoRetirado = new System.Windows.Forms.RadioButton();
+            this.rbRetirado = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnCurso = new System.Windows.Forms.Button();
+            this.btnAlumno = new System.Windows.Forms.Button();
+            this.txtAlumno = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCiclo = new System.Windows.Forms.TextBox();
             this.txtCodigoCurso = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,21 +55,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsAlumno = new System.Windows.Forms.ToolStrip();
             this.tsbNuevo = new System.Windows.Forms.ToolStripButton();
             this.tsbGuardar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
-            this.txtCiclo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtAlumno = new System.Windows.Forms.TextBox();
-            this.btnAlumno = new System.Windows.Forms.Button();
-            this.btnCurso = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.rbRetirado = new System.Windows.Forms.RadioButton();
-            this.rbNoRetirado = new System.Windows.Forms.RadioButton();
-            this.txtNotaFinal = new System.Windows.Forms.TextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlDatos.SuspendLayout();
@@ -126,6 +126,120 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(992, 364);
             this.pnlDatos.TabIndex = 8;
+            // 
+            // txtNotaFinal
+            // 
+            this.txtNotaFinal.Location = new System.Drawing.Point(212, 305);
+            this.txtNotaFinal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNotaFinal.Name = "txtNotaFinal";
+            this.txtNotaFinal.Size = new System.Drawing.Size(168, 22);
+            this.txtNotaFinal.TabIndex = 44;
+            // 
+            // rbNoRetirado
+            // 
+            this.rbNoRetirado.AutoSize = true;
+            this.rbNoRetirado.Location = new System.Drawing.Point(339, 257);
+            this.rbNoRetirado.Name = "rbNoRetirado";
+            this.rbNoRetirado.Size = new System.Drawing.Size(47, 21);
+            this.rbNoRetirado.TabIndex = 43;
+            this.rbNoRetirado.TabStop = true;
+            this.rbNoRetirado.Text = "No";
+            this.rbNoRetirado.UseVisualStyleBackColor = true;
+            // 
+            // rbRetirado
+            // 
+            this.rbRetirado.AutoSize = true;
+            this.rbRetirado.Location = new System.Drawing.Point(212, 257);
+            this.rbRetirado.Name = "rbRetirado";
+            this.rbRetirado.Size = new System.Drawing.Size(41, 21);
+            this.rbRetirado.TabIndex = 42;
+            this.rbRetirado.TabStop = true;
+            this.rbRetirado.Text = "Sí";
+            this.rbRetirado.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(19, 257);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 27);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Retirado:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 213);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(153, 27);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Número de veces:";
+            // 
+            // btnCurso
+            // 
+            this.btnCurso.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCurso.Location = new System.Drawing.Point(617, 100);
+            this.btnCurso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCurso.Name = "btnCurso";
+            this.btnCurso.Size = new System.Drawing.Size(44, 27);
+            this.btnCurso.TabIndex = 39;
+            this.btnCurso.Text = "...";
+            this.btnCurso.UseVisualStyleBackColor = true;
+            this.btnCurso.Click += new System.EventHandler(this.btnCurso_Click);
+            // 
+            // btnAlumno
+            // 
+            this.btnAlumno.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlumno.Location = new System.Drawing.Point(617, 57);
+            this.btnAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAlumno.Name = "btnAlumno";
+            this.btnAlumno.Size = new System.Drawing.Size(44, 27);
+            this.btnAlumno.TabIndex = 38;
+            this.btnAlumno.Text = "...";
+            this.btnAlumno.UseVisualStyleBackColor = true;
+            this.btnAlumno.Click += new System.EventHandler(this.btnAlumno_Click);
+            // 
+            // txtAlumno
+            // 
+            this.txtAlumno.Location = new System.Drawing.Point(212, 60);
+            this.txtAlumno.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAlumno.Name = "txtAlumno";
+            this.txtAlumno.Size = new System.Drawing.Size(382, 22);
+            this.txtAlumno.TabIndex = 31;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 56);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(78, 27);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Alumno:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 300);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(91, 27);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Nota final:";
+            // 
+            // txtCiclo
+            // 
+            this.txtCiclo.Location = new System.Drawing.Point(212, 178);
+            this.txtCiclo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCiclo.Name = "txtCiclo";
+            this.txtCiclo.Size = new System.Drawing.Size(168, 22);
+            this.txtCiclo.TabIndex = 28;
             // 
             // txtCodigoCurso
             // 
@@ -219,6 +333,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbNuevo.Size = new System.Drawing.Size(76, 24);
             this.tsbNuevo.Text = "Nuevo";
             this.tsbNuevo.ToolTipText = "Nuevo";
+            this.tsbNuevo.Click += new System.EventHandler(this.tsbNuevo_Click);
             // 
             // tsbGuardar
             // 
@@ -227,142 +342,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbGuardar.Name = "tsbGuardar";
             this.tsbGuardar.Size = new System.Drawing.Size(86, 24);
             this.tsbGuardar.Text = "Guardar";
-            // 
-            // tsbModificar
-            // 
-            this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
-            this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbModificar.Name = "tsbModificar";
-            this.tsbModificar.Size = new System.Drawing.Size(97, 24);
-            this.tsbModificar.Text = "Modificar";
-            // 
-            // tsbEliminar
-            // 
-            this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
-            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbEliminar.Name = "tsbEliminar";
-            this.tsbEliminar.Size = new System.Drawing.Size(87, 24);
-            this.tsbEliminar.Text = "Eliminar";
-            // 
-            // tsbCancelar
-            // 
-            this.tsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelar.Image")));
-            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbCancelar.Name = "tsbCancelar";
-            this.tsbCancelar.Size = new System.Drawing.Size(90, 24);
-            this.tsbCancelar.Text = "Cancelar";
-            // 
-            // txtCiclo
-            // 
-            this.txtCiclo.Location = new System.Drawing.Point(212, 178);
-            this.txtCiclo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCiclo.Name = "txtCiclo";
-            this.txtCiclo.Size = new System.Drawing.Size(168, 22);
-            this.txtCiclo.TabIndex = 28;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 300);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 27);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Nota final:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 56);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 27);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Alumno:";
-            // 
-            // txtAlumno
-            // 
-            this.txtAlumno.Location = new System.Drawing.Point(212, 60);
-            this.txtAlumno.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAlumno.Name = "txtAlumno";
-            this.txtAlumno.Size = new System.Drawing.Size(382, 22);
-            this.txtAlumno.TabIndex = 31;
-            // 
-            // btnAlumno
-            // 
-            this.btnAlumno.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlumno.Location = new System.Drawing.Point(617, 57);
-            this.btnAlumno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAlumno.Name = "btnAlumno";
-            this.btnAlumno.Size = new System.Drawing.Size(44, 27);
-            this.btnAlumno.TabIndex = 38;
-            this.btnAlumno.Text = "...";
-            this.btnAlumno.UseVisualStyleBackColor = true;
-            // 
-            // btnCurso
-            // 
-            this.btnCurso.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCurso.Location = new System.Drawing.Point(617, 100);
-            this.btnCurso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCurso.Name = "btnCurso";
-            this.btnCurso.Size = new System.Drawing.Size(44, 27);
-            this.btnCurso.TabIndex = 39;
-            this.btnCurso.Text = "...";
-            this.btnCurso.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 213);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(153, 27);
-            this.label5.TabIndex = 40;
-            this.label5.Text = "Número de veces:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 257);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(82, 27);
-            this.label6.TabIndex = 41;
-            this.label6.Text = "Retirado:";
-            // 
-            // rbRetirado
-            // 
-            this.rbRetirado.AutoSize = true;
-            this.rbRetirado.Location = new System.Drawing.Point(212, 257);
-            this.rbRetirado.Name = "rbRetirado";
-            this.rbRetirado.Size = new System.Drawing.Size(41, 21);
-            this.rbRetirado.TabIndex = 42;
-            this.rbRetirado.TabStop = true;
-            this.rbRetirado.Text = "Sí";
-            this.rbRetirado.UseVisualStyleBackColor = true;
-            // 
-            // rbNoRetirado
-            // 
-            this.rbNoRetirado.AutoSize = true;
-            this.rbNoRetirado.Location = new System.Drawing.Point(339, 257);
-            this.rbNoRetirado.Name = "rbNoRetirado";
-            this.rbNoRetirado.Size = new System.Drawing.Size(47, 21);
-            this.rbNoRetirado.TabIndex = 43;
-            this.rbNoRetirado.TabStop = true;
-            this.rbNoRetirado.Text = "No";
-            this.rbNoRetirado.UseVisualStyleBackColor = true;
-            // 
-            // txtNotaFinal
-            // 
-            this.txtNotaFinal.Location = new System.Drawing.Point(212, 305);
-            this.txtNotaFinal.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNotaFinal.Name = "txtNotaFinal";
-            this.txtNotaFinal.Size = new System.Drawing.Size(168, 22);
-            this.txtNotaFinal.TabIndex = 44;
+            this.tsbGuardar.Click += new System.EventHandler(this.tsbGuardar_Click);
             // 
             // toolStripButton1
             // 
@@ -371,6 +351,33 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(76, 24);
             this.toolStripButton1.Text = "Buscar";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // tsbModificar
+            // 
+            this.tsbModificar.Image = ((System.Drawing.Image)(resources.GetObject("tsbModificar.Image")));
+            this.tsbModificar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbModificar.Name = "tsbModificar";
+            this.tsbModificar.Size = new System.Drawing.Size(97, 24);
+            this.tsbModificar.Text = "Modificar";
+            this.tsbModificar.Click += new System.EventHandler(this.tsbModificar_Click);
+            // 
+            // tsbEliminar
+            // 
+            this.tsbEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsbEliminar.Image")));
+            this.tsbEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEliminar.Name = "tsbEliminar";
+            this.tsbEliminar.Size = new System.Drawing.Size(87, 24);
+            this.tsbEliminar.Text = "Eliminar";
+            this.tsbEliminar.Click += new System.EventHandler(this.tsbEliminar_Click);
+            // 
+            // tsbCancelar
+            // 
+            this.tsbCancelar.Image = ((System.Drawing.Image)(resources.GetObject("tsbCancelar.Image")));
+            this.tsbCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbCancelar.Name = "tsbCancelar";
+            this.tsbCancelar.Size = new System.Drawing.Size(90, 24);
+            this.tsbCancelar.Text = "Cancelar";
             // 
             // frmCargarCursosLlevados
             // 
