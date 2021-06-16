@@ -39,7 +39,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-
+            new frmBuscarCursosLlevados().ShowDialog();
         }
 
         private void tsbModificar_Click(object sender, EventArgs e)

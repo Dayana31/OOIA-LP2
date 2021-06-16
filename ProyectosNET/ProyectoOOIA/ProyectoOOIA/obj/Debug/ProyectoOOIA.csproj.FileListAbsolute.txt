@@ -511,3 +511,4 @@ C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\Proyec
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
+C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica.frmBuscarCursosLlevados.resources
