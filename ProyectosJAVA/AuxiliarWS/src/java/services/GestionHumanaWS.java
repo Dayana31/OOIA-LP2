@@ -190,50 +190,6 @@ public class GestionHumanaWS {
         return resultado;
     }
     
-    @WebMethod(operationName = "listarPonente")
-    public ArrayList<Ponente> listarPonente(){
-        ArrayList<Ponente> lista=new ArrayList<>();
-        try {
-            lista=ponente.listar();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return lista;
-    }
-    @WebMethod(operationName = "insertarPonente")
-    public int insertarPonente(@WebParam(name = "Ponente")Ponente ponente){
-        int resultado=0;
-        try {
-            resultado=this.ponente.insertar(ponente);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return resultado;
-        
-    }
-    @WebMethod(operationName = "modificarPonente")
-    public int modificarPonente(@WebParam(name = "invitado")Ponente ponente){
-        int resultado=0;
-        try {
-            resultado=this.ponente.modificar(ponente);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return resultado;
-        
-    }
-    @WebMethod(operationName = "eliminarPonente")
-    public int eliminarPonente(@WebParam(name = "id_ponente")int id_ponente){
-        int resultado=0;
-        try {
-            resultado=this.ponente.eliminar(id_ponente);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-        return resultado;
-        
-    }
-    
     @WebMethod(operationName = "listarPsicologo")
     public ArrayList<Psicologo> listarPsicologo(){
         ArrayList<Psicologo> lista=new ArrayList<>();
@@ -319,6 +275,48 @@ public class GestionHumanaWS {
         return resultado;
     }
     
+    @WebMethod(operationName = "listarPonente")
+    public ArrayList<Ponente> listarPonente(){
+        ArrayList<Ponente> lista=new ArrayList<>();
+        try {
+            lista=ponente.listar();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
+    @WebMethod(operationName = "insertarPonente")
+    public int insertarPonente(@WebParam(name = "Ponente")Ponente ponente){
+        int resultado=0;
+        try {
+            resultado=this.ponente.insertar(ponente);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+        
+    }
+    @WebMethod(operationName = "modificarPonente")
+    public int modificarPonente(@WebParam(name = "invitado")Ponente ponente){
+        int resultado=0;
+        try {
+            resultado=this.ponente.modificar(ponente);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+        
+    }
+    @WebMethod(operationName = "eliminarPonente")
+    public int eliminarPonente(@WebParam(name = "id_ponente")int id_ponente){
+        int resultado=0;
+        try {
+            resultado=this.ponente.eliminar(id_ponente);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
     
     @WebMethod(operationName = "autenticarUsuario")
     public int autenticarUsuario(@WebParam(name = "usuario")String usuario,@WebParam(name = "password")String password){
