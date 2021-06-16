@@ -2329,6 +2329,14 @@ create procedure LISTAR_EVENTO_PONENTE(
 	and ep.fid_evento = _id_evento;
 end$
 
+-- Procedimientos para listar eventos inscritos e historial de eventos.
+delimiter $
+create procedure LISTAR_EVENTOS_INSCRITOS(
+	in _id_alumno int
+)begin
+	select 
+end $
+
 
 -- Nuevos procedimientos
 

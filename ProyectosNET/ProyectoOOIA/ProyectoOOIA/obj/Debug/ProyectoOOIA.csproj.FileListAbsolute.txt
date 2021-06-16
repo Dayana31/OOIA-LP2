@@ -449,7 +449,6 @@ C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\Proyec
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Bunifu_UI_v1.5.dll
-C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Card.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.CardEvento.resources
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Componentes.Horario.resources
@@ -511,3 +510,4 @@ C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\Proyec
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
+C:\7mo ciclo\LP2\Proyecto Lp2\Proyecto\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
