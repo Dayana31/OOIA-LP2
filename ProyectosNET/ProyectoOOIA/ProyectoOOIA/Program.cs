@@ -12,6 +12,7 @@ namespace ProyectoOOIA
         [STAThread]
         static void Main()
         {
+            string a = "Alfredo";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             frmInicioSesion pantalla = new frmInicioSesion();

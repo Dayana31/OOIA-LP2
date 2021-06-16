@@ -27,12 +27,14 @@ public class CursosLlevadosCSVcargaWS {
     @WebMethod(operationName = "CargarCSVcursosLlevados")
     public int cargarCSVcursosLlevados(@WebParam(name = "RutaArchivo") byte[] ruta) throws FileNotFoundException, ParseException, IOException {
         int resultado = 0;
-        csvCursosLlevados = new CursosLlevadosCSV();
+        System.out.println("Entro a la funcion");
+        csvCursosLlevados = new CursosLlevadosCSV();//cae en esta linea
+        System.out.println("Termino de inicializar csvCursosLlevados");
         FileOutputStream outputStream = new FileOutputStream("Auxiliar");
         outputStream.write(ruta);
         outputStream.close();
         FileInputStream inputStream = new FileInputStream("Auxiliar");
-        csvCursosLlevados.setRutaCSV(inputStream);
+        csvCursosLlevados.asignarRutaCSV(inputStream);
         resultado = csvCursosLlevados.cargarDatos();
         inputStream.close();
         return resultado;

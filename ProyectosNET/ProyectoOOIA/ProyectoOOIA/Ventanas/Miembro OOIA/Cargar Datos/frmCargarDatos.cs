@@ -150,10 +150,10 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
             FileStream fs = new FileStream(txtEvaluacion.Text, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fs);
-            CargarCSVevaluacionesWS.EvaluacionesCSVcargaWSClient cargaCSVcursosLlevados =
+            CargarCSVevaluacionesWS.EvaluacionesCSVcargaWSClient cargaCSVevaluaciones =
                 new CargarCSVevaluacionesWS.EvaluacionesCSVcargaWSClient();
             int resultado = 1;
-            resultado = cargaCSVcursosLlevados.CargarCSVevaluaciones(br.ReadBytes((int)fs.Length));
+            resultado = cargaCSVevaluaciones.CargarCSVevaluaciones(br.ReadBytes((int)fs.Length));
             br.Close();
             fs.Close();
             if (resultado == 0)

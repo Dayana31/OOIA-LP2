@@ -7,6 +7,7 @@ package pe.edu.pucp.ooia.carga_csv;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.text.ParseException;
 import java.util.Scanner;
 import pe.edu.pucp.ooia.gest_academica.dao.CursoLlevadoDAO;
 import pe.edu.pucp.ooia.gest_academica.model.Curso;
@@ -19,15 +20,19 @@ import pe.edu.pucp.ooia.gest_humana.model.Alumno;
  * @author PC
  */
 public class CursosLlevadosCSV {
+    
     private Scanner sc;
     private CursoLlevadoDAO daoCursoLlevado;
     
-    public void setRutaCSV(FileInputStream archivo) throws FileNotFoundException{
+    public CursosLlevadosCSV(){
+        daoCursoLlevado = new CursoLlevadoMySQL();
+    }
+    public void asignarRutaCSV(FileInputStream archivo) throws FileNotFoundException{
         sc = new Scanner(archivo);
         daoCursoLlevado = new CursoLlevadoMySQL();
     }
     
-    public int cargarDatos(){
+    public int cargarDatos()throws ParseException{
         sc.useDelimiter("\n");
         
         int cargaCorrecta = 0;
