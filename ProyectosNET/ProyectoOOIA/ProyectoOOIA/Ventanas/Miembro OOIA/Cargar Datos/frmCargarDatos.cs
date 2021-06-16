@@ -1,4 +1,5 @@
 ﻿using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos;
+using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana;
 using System;
 using System.IO;
@@ -127,6 +128,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private void btnCoordinador_Click(object sender, EventArgs e)
         {
             new frmCargarCoordinador().ShowDialog();
+        }
+
+        private void btnCurso_Click(object sender, EventArgs e)
+        {
+            new frmCargarCursos().ShowDialog();
         }
     }
 }
