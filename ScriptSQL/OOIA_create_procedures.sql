@@ -2209,14 +2209,27 @@ create procedure ELIMINAR_EVENTO(
 	update evento set activo = false where id_evento = _id_evento;
 end$
 
-delimiter $
-create procedure LISTAR_EVENTO(
-in _nombre varchar(250)
+create procedure LISTAR_EVENTO_X_NOMBRE_CATEGORIA(
+in _nombreCategoria varchar(250)
 )begin
 	/*tabla evento*/
-	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.categoria,e.imagen
+	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.imagen,
+    e.fid_coordinador, e.fid_categoria_evento, ce.nombre as nombre_categoria
     from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador
-    where  (e.nombre LIKE CONCAT('%',_nombre,'%')) and e.estado=1;
+    inner join categoria_evento ce on ce.id_categoria_evento = e.fid_categoria_evento
+    where  (e.nombre LIKE CONCAT('%',_nombreCategoria,'%')) OR (ce.nombre LIKE CONCAT('%',_nombreCategoria,'%')) and e.estado=1;
+end $
+
+delimiter $
+create procedure LISTAR_EVENTO_X_FECHA(
+in _fecha date
+)begin
+	/*tabla evento*/
+	select e.id_evento, e.nombre, e.lugar, e.capacidad, e.fecha, e.hora_inicio,e.hora_fin,e.descripcion,e.imagen,
+    e.fid_coordinador, e.fid_categoria_evento, ce.nombre as nombre_categoria
+    from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador
+    inner join categoria_evento ce on ce.id_categoria_evento = e.fid_categoria_evento
+    where  (e.fecha = _fecha) and e.estado=1;
 end $
 
 --ENCUESTA_EVENTO
