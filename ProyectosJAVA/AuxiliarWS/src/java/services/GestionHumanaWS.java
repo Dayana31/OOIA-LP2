@@ -141,7 +141,7 @@ public class GestionHumanaWS {
     }
  
     @WebMethod(operationName = "listarProfesor")
-    public ArrayList <Profesor>listarProfesores(){
+    public ArrayList <Profesor>listarProfesor(){
         ArrayList<Profesor> empleador=new ArrayList<>();
         try {
             empleador= daoProfesor.listar();
@@ -151,7 +151,7 @@ public class GestionHumanaWS {
         return empleador;
     }
     @WebMethod(operationName = "insertarProfesor")
-    public int insertarProfesores( @WebParam(name="profesor") Profesor profesor){
+    public int insertarProfesor( @WebParam(name="profesor") Profesor profesor){
         int resultado=0;
         try {
             resultado=daoProfesor.insertar(profesor);
@@ -162,8 +162,8 @@ public class GestionHumanaWS {
         
         return resultado;
     }
-    @WebMethod(operationName = "modificarProfesores")
-    public int modificarProfesores(@WebParam(name = "profesor")Profesor profesor){
+    @WebMethod(operationName = "modificarProfesor")
+    public int modificarProfesor(@WebParam(name = "profesor")Profesor profesor){
         int resultado=0;
         try {
             resultado=daoProfesor.modificar(profesor);
@@ -198,7 +198,7 @@ public class GestionHumanaWS {
         return lista;
     }
     @WebMethod(operationName = "insertarPonente")
-    public int insertarInvitado(@WebParam(name = "Ponente")Ponente ponente){
+    public int insertarPonente(@WebParam(name = "Ponente")Ponente ponente){
         int resultado=0;
         try {
             resultado=this.ponente.insertar(ponente);
@@ -209,7 +209,7 @@ public class GestionHumanaWS {
         
     }
     @WebMethod(operationName = "modificarPonente")
-    public int modificarInvitado(@WebParam(name = "invitado")Ponente ponente){
+    public int modificarPonente(@WebParam(name = "invitado")Ponente ponente){
         int resultado=0;
         try {
             resultado=this.ponente.modificar(ponente);
@@ -220,7 +220,7 @@ public class GestionHumanaWS {
         
     }
     @WebMethod(operationName = "eliminarPonente")
-    public int eliminarInvitado(@WebParam(name = "id_ponente")int id_ponente){
+    public int eliminarPonente(@WebParam(name = "id_ponente")int id_ponente){
         int resultado=0;
         try {
             resultado=this.ponente.eliminar(id_ponente);
@@ -370,10 +370,10 @@ public class GestionHumanaWS {
         return resultado;
     }
     @WebMethod(operationName = "eliminarCoordinador")
-    public int eliminarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
+    public int eliminarCoordinadorEvento(@WebParam(name = "id_coordinador")int  id_coordinador){
         int resultado=0;
         try {
-            resultado=this.coordinador.eliminar(coordinador.getId_coordinador());
+            resultado=this.coordinador.eliminar(id_coordinador);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
