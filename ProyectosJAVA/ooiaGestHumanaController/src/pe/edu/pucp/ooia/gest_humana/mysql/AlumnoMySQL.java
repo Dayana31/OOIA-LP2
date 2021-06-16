@@ -155,28 +155,45 @@ public class AlumnoMySQL implements AlumnoDAO{
     }
 
     @Override
-    public int inicioSesion(String usuario, String password) {
-        int resultado = 0;
+    public Alumno listar_x_id(int id) {
+        Alumno alumno = new Alumno();
+                /*Persona*/
         try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call autenticarUsuario(?,?)}");
-            cs.setString("_usuario", usuario);
-            cs.setString("_password", password);
-            rs=cs.executeQuery();
-            if(rs.next())
-                resultado=rs.getInt("fid_persona");
-            
-            resultado = 1;
-            rs.close();
-            cs.close();
-        }catch(Exception ex){
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
+                cs = con.prepareCall("{call LISTAR_ALUMNO_X_ID(?)}");
+                cs.setInt("_id", id);
+                rs = cs.executeQuery();
+                rs.next();
+                alumno.setId_persona(rs.getInt("id_persona"));
+                alumno.setNombre(rs.getString("nombre"));
+                alumno.setDni(rs.getString("dni"));
+                alumno.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
+                alumno.setDireccion(rs.getString("direccion"));
+                alumno.setCorreo(rs.getString("correo"));
+                /*Miembro PUCP*/
+                alumno.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
+                alumno.setUsuario(rs.getString("usuario"));
+                alumno.setPassword(rs.getString("password"));
+                alumno.setFecha_inclusion(rs.getDate("fecha_inclusion"));
+                alumno.setImagenDePerfil(rs.getBytes("imagen_perfil"));
+                /*Alumno*/
+                alumno.setId_alumno(rs.getInt("id_alumno") );
+                alumno.setCodigo(rs.getString("codigo"));
+                alumno.setEspecialidad(new Especialidad(rs.getInt("fid_especialidad"), rs.getString("nombre_especialidad")));
+                alumno.setCraest(rs.getDouble("craest"));
+                alumno.setCreditos_aprobados(rs.getDouble("creditos_aprobados"));
+                
+                }catch(Exception ex){
             System.out.println(ex.getMessage());
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        return resultado;
+               return alumno;
     }
+
     
-}
+    }
+  
+
 

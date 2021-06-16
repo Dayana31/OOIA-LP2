@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/EventoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/EventoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EventoWS.wsdl" MetadataType="Wsdl" ID="2903eedf-5056-453d-9997-cb5bf7755ed0" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/EventoWS?WSDL" />
-    <MetadataFile FileName="EventoWS.xsd" MetadataType="Schema" ID="8ecc9848-f725-4af2-9e3c-71f2a16e3b3d" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/EventoWS?xsd=1" />
+    <MetadataFile FileName="EventoWS1.xsd" MetadataType="Schema" ID="7113a4c7-7756-4beb-a063-186cab63d475" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?xsd=1" />
+    <MetadataFile FileName="EventoWS1.wsdl" MetadataType="Wsdl" ID="667091a3-4517-443c-b8b5-7208a5f219f6" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

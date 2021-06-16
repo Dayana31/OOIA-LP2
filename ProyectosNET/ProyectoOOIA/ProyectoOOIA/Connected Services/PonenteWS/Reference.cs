@@ -16,6 +16,16 @@ namespace ProyectoOOIA.PonenteWS {
     public interface PonenteWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/listarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/listarPonenteResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.PonenteWS.listarPonenteResponse listarPonente(ProyectoOOIA.PonenteWS.listarPonenteRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/listarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/listarPonenteResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.listarPonenteResponse> listarPonenteAsync(ProyectoOOIA.PonenteWS.listarPonenteRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -24,16 +34,6 @@ namespace ProyectoOOIA.PonenteWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/insertarPonenteResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.insertarPonenteResponse> insertarPonenteAsync(ProyectoOOIA.PonenteWS.insertarPonenteRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.PonenteWS.modificarPonenteResponse modificarPonente(ProyectoOOIA.PonenteWS.modificarPonenteRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.modificarPonenteResponse> modificarPonenteAsync(ProyectoOOIA.PonenteWS.modificarPonenteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/eliminarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/eliminarPonenteResponse")]
@@ -46,18 +46,18 @@ namespace ProyectoOOIA.PonenteWS {
         System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.eliminarPonenteResponse> eliminarPonenteAsync(ProyectoOOIA.PonenteWS.eliminarPonenteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/listarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/listarPonenteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.PonenteWS.listarPonenteResponse listarPonente(ProyectoOOIA.PonenteWS.listarPonenteRequest request);
+        ProyectoOOIA.PonenteWS.modificarPonenteResponse modificarPonente(ProyectoOOIA.PonenteWS.modificarPonenteRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/listarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/listarPonenteResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.listarPonenteResponse> listarPonenteAsync(ProyectoOOIA.PonenteWS.listarPonenteRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PonenteWS/modificarPonenteResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.modificarPonenteResponse> modificarPonenteAsync(ProyectoOOIA.PonenteWS.modificarPonenteRequest request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -109,7 +109,7 @@ namespace ProyectoOOIA.PonenteWS {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -162,7 +162,7 @@ namespace ProyectoOOIA.PonenteWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -280,6 +280,34 @@ namespace ProyectoOOIA.PonenteWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPonenteRequest {
+        
+        public listarPonenteRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPonenteResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.PonenteWS.ponente[] @return;
+        
+        public listarPonenteResponse() {
+        }
+        
+        public listarPonenteResponse(ProyectoOOIA.PonenteWS.ponente[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPonente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarPonenteRequest {
         
@@ -309,42 +337,6 @@ namespace ProyectoOOIA.PonenteWS {
         }
         
         public insertarPonenteResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPonente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarPonenteRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.PonenteWS.ponente invitado;
-        
-        public modificarPonenteRequest() {
-        }
-        
-        public modificarPonenteRequest(ProyectoOOIA.PonenteWS.ponente invitado) {
-            this.invitado = invitado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPonenteResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarPonenteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarPonenteResponse() {
-        }
-        
-        public modificarPonenteResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -388,27 +380,35 @@ namespace ProyectoOOIA.PonenteWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPonenteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPonente", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarPonenteRequest {
         
-        public listarPonenteRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.PonenteWS.ponente invitado;
+        
+        public modificarPonenteRequest() {
+        }
+        
+        public modificarPonenteRequest(ProyectoOOIA.PonenteWS.ponente invitado) {
+            this.invitado = invitado;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPonenteResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPonenteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPonenteResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarPonenteResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.PonenteWS.ponente[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarPonenteResponse() {
+        public modificarPonenteResponse() {
         }
         
-        public listarPonenteResponse(ProyectoOOIA.PonenteWS.ponente[] @return) {
+        public modificarPonenteResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -441,6 +441,27 @@ namespace ProyectoOOIA.PonenteWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.PonenteWS.listarPonenteResponse ProyectoOOIA.PonenteWS.PonenteWS.listarPonente(ProyectoOOIA.PonenteWS.listarPonenteRequest request) {
+            return base.Channel.listarPonente(request);
+        }
+        
+        public ProyectoOOIA.PonenteWS.ponente[] listarPonente() {
+            ProyectoOOIA.PonenteWS.listarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.listarPonenteRequest();
+            ProyectoOOIA.PonenteWS.listarPonenteResponse retVal = ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).listarPonente(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.listarPonenteResponse> ProyectoOOIA.PonenteWS.PonenteWS.listarPonenteAsync(ProyectoOOIA.PonenteWS.listarPonenteRequest request) {
+            return base.Channel.listarPonenteAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.listarPonenteResponse> listarPonenteAsync() {
+            ProyectoOOIA.PonenteWS.listarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.listarPonenteRequest();
+            return ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).listarPonenteAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.PonenteWS.insertarPonenteResponse ProyectoOOIA.PonenteWS.PonenteWS.insertarPonente(ProyectoOOIA.PonenteWS.insertarPonenteRequest request) {
             return base.Channel.insertarPonente(request);
         }
@@ -461,29 +482,6 @@ namespace ProyectoOOIA.PonenteWS {
             ProyectoOOIA.PonenteWS.insertarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.insertarPonenteRequest();
             inValue.invitado = invitado;
             return ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).insertarPonenteAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.PonenteWS.modificarPonenteResponse ProyectoOOIA.PonenteWS.PonenteWS.modificarPonente(ProyectoOOIA.PonenteWS.modificarPonenteRequest request) {
-            return base.Channel.modificarPonente(request);
-        }
-        
-        public int modificarPonente(ProyectoOOIA.PonenteWS.ponente invitado) {
-            ProyectoOOIA.PonenteWS.modificarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.modificarPonenteRequest();
-            inValue.invitado = invitado;
-            ProyectoOOIA.PonenteWS.modificarPonenteResponse retVal = ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).modificarPonente(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.modificarPonenteResponse> ProyectoOOIA.PonenteWS.PonenteWS.modificarPonenteAsync(ProyectoOOIA.PonenteWS.modificarPonenteRequest request) {
-            return base.Channel.modificarPonenteAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.modificarPonenteResponse> modificarPonenteAsync(ProyectoOOIA.PonenteWS.ponente invitado) {
-            ProyectoOOIA.PonenteWS.modificarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.modificarPonenteRequest();
-            inValue.invitado = invitado;
-            return ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).modificarPonenteAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -510,24 +508,26 @@ namespace ProyectoOOIA.PonenteWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.PonenteWS.listarPonenteResponse ProyectoOOIA.PonenteWS.PonenteWS.listarPonente(ProyectoOOIA.PonenteWS.listarPonenteRequest request) {
-            return base.Channel.listarPonente(request);
+        ProyectoOOIA.PonenteWS.modificarPonenteResponse ProyectoOOIA.PonenteWS.PonenteWS.modificarPonente(ProyectoOOIA.PonenteWS.modificarPonenteRequest request) {
+            return base.Channel.modificarPonente(request);
         }
         
-        public ProyectoOOIA.PonenteWS.ponente[] listarPonente() {
-            ProyectoOOIA.PonenteWS.listarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.listarPonenteRequest();
-            ProyectoOOIA.PonenteWS.listarPonenteResponse retVal = ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).listarPonente(inValue);
+        public int modificarPonente(ProyectoOOIA.PonenteWS.ponente invitado) {
+            ProyectoOOIA.PonenteWS.modificarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.modificarPonenteRequest();
+            inValue.invitado = invitado;
+            ProyectoOOIA.PonenteWS.modificarPonenteResponse retVal = ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).modificarPonente(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.listarPonenteResponse> ProyectoOOIA.PonenteWS.PonenteWS.listarPonenteAsync(ProyectoOOIA.PonenteWS.listarPonenteRequest request) {
-            return base.Channel.listarPonenteAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.modificarPonenteResponse> ProyectoOOIA.PonenteWS.PonenteWS.modificarPonenteAsync(ProyectoOOIA.PonenteWS.modificarPonenteRequest request) {
+            return base.Channel.modificarPonenteAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.listarPonenteResponse> listarPonenteAsync() {
-            ProyectoOOIA.PonenteWS.listarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.listarPonenteRequest();
-            return ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).listarPonenteAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.PonenteWS.modificarPonenteResponse> modificarPonenteAsync(ProyectoOOIA.PonenteWS.ponente invitado) {
+            ProyectoOOIA.PonenteWS.modificarPonenteRequest inValue = new ProyectoOOIA.PonenteWS.modificarPonenteRequest();
+            inValue.invitado = invitado;
+            return ((ProyectoOOIA.PonenteWS.PonenteWS)(this)).modificarPonenteAsync(inValue);
         }
     }
 }

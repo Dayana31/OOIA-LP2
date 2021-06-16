@@ -26,16 +26,6 @@ namespace ProyectoOOIA.PsicologoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.insertarPsicologoResponse> insertarPsicologoAsync(ProyectoOOIA.PsicologoWS.insertarPsicologoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse eliminarPsicologo(ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse> eliminarPsicologoAsync(ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -44,6 +34,16 @@ namespace ProyectoOOIA.PsicologoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/modificarPsicologoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.modificarPsicologoResponse> modificarPsicologoAsync(ProyectoOOIA.PsicologoWS.modificarPsicologoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse eliminarPsicologo(ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/eliminarPsicologoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse> eliminarPsicologoAsync(ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/PsicologoWS/listarPsicologoResponse")]
@@ -57,7 +57,7 @@ namespace ProyectoOOIA.PsicologoWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -109,7 +109,7 @@ namespace ProyectoOOIA.PsicologoWS {
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -204,7 +204,7 @@ namespace ProyectoOOIA.PsicologoWS {
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -358,42 +358,6 @@ namespace ProyectoOOIA.PsicologoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPsicologo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPsicologoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_psicologo;
-        
-        public eliminarPsicologoRequest() {
-        }
-        
-        public eliminarPsicologoRequest(int id_psicologo) {
-            this.id_psicologo = id_psicologo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPsicologoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarPsicologoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarPsicologoResponse() {
-        }
-        
-        public eliminarPsicologoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPsicologo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class modificarPsicologoRequest {
         
@@ -423,6 +387,42 @@ namespace ProyectoOOIA.PsicologoWS {
         }
         
         public modificarPsicologoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPsicologo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPsicologoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_psicologo;
+        
+        public eliminarPsicologoRequest() {
+        }
+        
+        public eliminarPsicologoRequest(int id_psicologo) {
+            this.id_psicologo = id_psicologo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPsicologoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarPsicologoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarPsicologoResponse() {
+        }
+        
+        public eliminarPsicologoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -506,29 +506,6 @@ namespace ProyectoOOIA.PsicologoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse ProyectoOOIA.PsicologoWS.PsicologoWS.eliminarPsicologo(ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest request) {
-            return base.Channel.eliminarPsicologo(request);
-        }
-        
-        public int eliminarPsicologo(int id_psicologo) {
-            ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest inValue = new ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest();
-            inValue.id_psicologo = id_psicologo;
-            ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse retVal = ((ProyectoOOIA.PsicologoWS.PsicologoWS)(this)).eliminarPsicologo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse> ProyectoOOIA.PsicologoWS.PsicologoWS.eliminarPsicologoAsync(ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest request) {
-            return base.Channel.eliminarPsicologoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse> eliminarPsicologoAsync(int id_psicologo) {
-            ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest inValue = new ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest();
-            inValue.id_psicologo = id_psicologo;
-            return ((ProyectoOOIA.PsicologoWS.PsicologoWS)(this)).eliminarPsicologoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.PsicologoWS.modificarPsicologoResponse ProyectoOOIA.PsicologoWS.PsicologoWS.modificarPsicologo(ProyectoOOIA.PsicologoWS.modificarPsicologoRequest request) {
             return base.Channel.modificarPsicologo(request);
         }
@@ -549,6 +526,29 @@ namespace ProyectoOOIA.PsicologoWS {
             ProyectoOOIA.PsicologoWS.modificarPsicologoRequest inValue = new ProyectoOOIA.PsicologoWS.modificarPsicologoRequest();
             inValue.invitado = invitado;
             return ((ProyectoOOIA.PsicologoWS.PsicologoWS)(this)).modificarPsicologoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse ProyectoOOIA.PsicologoWS.PsicologoWS.eliminarPsicologo(ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest request) {
+            return base.Channel.eliminarPsicologo(request);
+        }
+        
+        public int eliminarPsicologo(int id_psicologo) {
+            ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest inValue = new ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest();
+            inValue.id_psicologo = id_psicologo;
+            ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse retVal = ((ProyectoOOIA.PsicologoWS.PsicologoWS)(this)).eliminarPsicologo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse> ProyectoOOIA.PsicologoWS.PsicologoWS.eliminarPsicologoAsync(ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest request) {
+            return base.Channel.eliminarPsicologoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.PsicologoWS.eliminarPsicologoResponse> eliminarPsicologoAsync(int id_psicologo) {
+            ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest inValue = new ProyectoOOIA.PsicologoWS.eliminarPsicologoRequest();
+            inValue.id_psicologo = id_psicologo;
+            return ((ProyectoOOIA.PsicologoWS.PsicologoWS)(this)).eliminarPsicologoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

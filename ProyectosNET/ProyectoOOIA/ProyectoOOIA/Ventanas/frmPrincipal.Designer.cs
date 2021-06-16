@@ -50,6 +50,7 @@ namespace ProyectoOOIA.Ventanas
             this.pnlTramites = new System.Windows.Forms.Panel();
             this.btnTramites = new System.Windows.Forms.Button();
             this.lblTramites = new System.Windows.Forms.Label();
+            this.imagen = new OvalPictureBox();
             this.panel1.SuspendLayout();
             this.pnlCitas.SuspendLayout();
             this.pnlEventos.SuspendLayout();
@@ -57,20 +58,22 @@ namespace ProyectoOOIA.Ventanas
             this.pnlEventosProx.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).BeginInit();
             this.pnlTramites.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
+            this.panel1.Controls.Add(this.imagen);
             this.panel1.Controls.Add(this.btnCargaDatos);
             this.panel1.Controls.Add(this.lblUsername);
             this.panel1.Controls.Add(this.btnAtras);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1352, 102);
+            this.panel1.Size = new System.Drawing.Size(1014, 83);
             this.panel1.TabIndex = 18;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnCargaDatos
             // 
@@ -78,10 +81,9 @@ namespace ProyectoOOIA.Ventanas
             this.btnCargaDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargaDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargaDatos.ForeColor = System.Drawing.Color.White;
-            this.btnCargaDatos.Location = new System.Drawing.Point(935, 30);
-            this.btnCargaDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCargaDatos.Location = new System.Drawing.Point(701, 24);
             this.btnCargaDatos.Name = "btnCargaDatos";
-            this.btnCargaDatos.Size = new System.Drawing.Size(171, 57);
+            this.btnCargaDatos.Size = new System.Drawing.Size(128, 46);
             this.btnCargaDatos.TabIndex = 13;
             this.btnCargaDatos.Text = "Cargar Datos";
             this.btnCargaDatos.UseVisualStyleBackColor = true;
@@ -92,10 +94,9 @@ namespace ProyectoOOIA.Ventanas
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.White;
-            this.lblUsername.Location = new System.Drawing.Point(153, 36);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsername.Location = new System.Drawing.Point(115, 29);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(289, 38);
+            this.lblUsername.Size = new System.Drawing.Size(224, 30);
             this.lblUsername.TabIndex = 1;
             this.lblUsername.Text = "Solorzano Tapia, José";
             // 
@@ -111,10 +112,9 @@ namespace ProyectoOOIA.Ventanas
             this.btnAtras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAtras.Location = new System.Drawing.Point(1289, 37);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Location = new System.Drawing.Point(967, 30);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(47, 42);
+            this.btnAtras.Size = new System.Drawing.Size(35, 34);
             this.btnAtras.TabIndex = 12;
             this.btnAtras.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAtras.UseVisualStyleBackColor = false;
@@ -130,11 +130,10 @@ namespace ProyectoOOIA.Ventanas
             this.btnEventos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnEventos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnEventos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEventos.Location = new System.Drawing.Point(8, 41);
-            this.btnEventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEventos.Location = new System.Drawing.Point(6, 33);
             this.btnEventos.Name = "btnEventos";
             this.btnEventos.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnEventos.Size = new System.Drawing.Size(303, 210);
+            this.btnEventos.Size = new System.Drawing.Size(227, 171);
             this.btnEventos.TabIndex = 22;
             this.btnEventos.UseVisualStyleBackColor = false;
             this.btnEventos.Click += new System.EventHandler(this.botonEventos_Click);
@@ -144,10 +143,9 @@ namespace ProyectoOOIA.Ventanas
             this.txtEventos.AutoSize = true;
             this.txtEventos.Font = new System.Drawing.Font("Gill Sans MT", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEventos.ForeColor = System.Drawing.Color.Black;
-            this.txtEventos.Location = new System.Drawing.Point(104, 5);
-            this.txtEventos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtEventos.Location = new System.Drawing.Point(78, 4);
             this.txtEventos.Name = "txtEventos";
-            this.txtEventos.Size = new System.Drawing.Size(124, 40);
+            this.txtEventos.Size = new System.Drawing.Size(101, 33);
             this.txtEventos.TabIndex = 20;
             this.txtEventos.Text = "Eventos";
             // 
@@ -165,11 +163,10 @@ namespace ProyectoOOIA.Ventanas
             this.btnCitas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCitas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCitas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCitas.Location = new System.Drawing.Point(7, 48);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCitas.Location = new System.Drawing.Point(5, 39);
             this.btnCitas.Name = "btnCitas";
             this.btnCitas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnCitas.Size = new System.Drawing.Size(296, 207);
+            this.btnCitas.Size = new System.Drawing.Size(222, 168);
             this.btnCitas.TabIndex = 21;
             this.btnCitas.UseVisualStyleBackColor = false;
             this.btnCitas.Click += new System.EventHandler(this.botonCitas_Click);
@@ -179,10 +176,9 @@ namespace ProyectoOOIA.Ventanas
             this.txtCitas.AutoSize = true;
             this.txtCitas.Font = new System.Drawing.Font("Gill Sans MT", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCitas.ForeColor = System.Drawing.Color.Black;
-            this.txtCitas.Location = new System.Drawing.Point(107, 12);
-            this.txtCitas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtCitas.Location = new System.Drawing.Point(80, 10);
             this.txtCitas.Name = "txtCitas";
-            this.txtCitas.Size = new System.Drawing.Size(86, 40);
+            this.txtCitas.Size = new System.Drawing.Size(70, 33);
             this.txtCitas.TabIndex = 19;
             this.txtCitas.Text = "Citas";
             this.txtCitas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,20 +187,18 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.pnlCitas.Controls.Add(this.btnCitas);
             this.pnlCitas.Controls.Add(this.txtCitas);
-            this.pnlCitas.Location = new System.Drawing.Point(305, 492);
-            this.pnlCitas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlCitas.Location = new System.Drawing.Point(229, 400);
             this.pnlCitas.Name = "pnlCitas";
-            this.pnlCitas.Size = new System.Drawing.Size(311, 258);
+            this.pnlCitas.Size = new System.Drawing.Size(233, 210);
             this.pnlCitas.TabIndex = 23;
             // 
             // pnlEventos
             // 
             this.pnlEventos.Controls.Add(this.txtEventos);
             this.pnlEventos.Controls.Add(this.btnEventos);
-            this.pnlEventos.Location = new System.Drawing.Point(616, 496);
-            this.pnlEventos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlEventos.Location = new System.Drawing.Point(462, 403);
             this.pnlEventos.Name = "pnlEventos";
-            this.pnlEventos.Size = new System.Drawing.Size(317, 255);
+            this.pnlEventos.Size = new System.Drawing.Size(238, 207);
             this.pnlEventos.TabIndex = 24;
             // 
             // pnlEventosProximos
@@ -212,10 +206,9 @@ namespace ProyectoOOIA.Ventanas
             this.pnlEventosProximos.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlEventosProximos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlEventosProximos.Controls.Add(this.pnlEventosProx);
-            this.pnlEventosProximos.Location = new System.Drawing.Point(935, 101);
-            this.pnlEventosProximos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlEventosProximos.Location = new System.Drawing.Point(701, 82);
             this.pnlEventosProximos.Name = "pnlEventosProximos";
-            this.pnlEventosProximos.Size = new System.Drawing.Size(415, 649);
+            this.pnlEventosProximos.Size = new System.Drawing.Size(312, 528);
             this.pnlEventosProximos.TabIndex = 25;
             // 
             // pnlEventosProx
@@ -223,9 +216,8 @@ namespace ProyectoOOIA.Ventanas
             this.pnlEventosProx.BackColor = System.Drawing.SystemColors.HotTrack;
             this.pnlEventosProx.Controls.Add(this.lblEventosProximos);
             this.pnlEventosProx.Location = new System.Drawing.Point(-1, -1);
-            this.pnlEventosProx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlEventosProx.Name = "pnlEventosProx";
-            this.pnlEventosProx.Size = new System.Drawing.Size(427, 86);
+            this.pnlEventosProx.Size = new System.Drawing.Size(320, 70);
             this.pnlEventosProx.TabIndex = 0;
             // 
             // lblEventosProximos
@@ -234,20 +226,18 @@ namespace ProyectoOOIA.Ventanas
             this.lblEventosProximos.AutoSize = true;
             this.lblEventosProximos.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEventosProximos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblEventosProximos.Location = new System.Drawing.Point(75, 30);
-            this.lblEventosProximos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEventosProximos.Location = new System.Drawing.Point(56, 24);
             this.lblEventosProximos.Name = "lblEventosProximos";
-            this.lblEventosProximos.Size = new System.Drawing.Size(248, 38);
+            this.lblEventosProximos.Size = new System.Drawing.Size(191, 30);
             this.lblEventosProximos.TabIndex = 0;
             this.lblEventosProximos.Text = "Eventos Próximos";
             this.lblEventosProximos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // imagenes
             // 
-            this.imagenes.Location = new System.Drawing.Point(0, 101);
-            this.imagenes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.imagenes.Location = new System.Drawing.Point(0, 82);
             this.imagenes.Name = "imagenes";
-            this.imagenes.Size = new System.Drawing.Size(933, 394);
+            this.imagenes.Size = new System.Drawing.Size(700, 320);
             this.imagenes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imagenes.TabIndex = 26;
             this.imagenes.TabStop = false;
@@ -272,10 +262,9 @@ namespace ProyectoOOIA.Ventanas
             // 
             this.pnlTramites.Controls.Add(this.btnTramites);
             this.pnlTramites.Controls.Add(this.lblTramites);
-            this.pnlTramites.Location = new System.Drawing.Point(0, 496);
-            this.pnlTramites.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTramites.Location = new System.Drawing.Point(0, 403);
             this.pnlTramites.Name = "pnlTramites";
-            this.pnlTramites.Size = new System.Drawing.Size(304, 251);
+            this.pnlTramites.Size = new System.Drawing.Size(228, 204);
             this.pnlTramites.TabIndex = 24;
             // 
             // btnTramites
@@ -292,11 +281,10 @@ namespace ProyectoOOIA.Ventanas
             this.btnTramites.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnTramites.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnTramites.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTramites.Location = new System.Drawing.Point(4, 48);
-            this.btnTramites.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTramites.Location = new System.Drawing.Point(3, 39);
             this.btnTramites.Name = "btnTramites";
             this.btnTramites.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnTramites.Size = new System.Drawing.Size(293, 199);
+            this.btnTramites.Size = new System.Drawing.Size(220, 162);
             this.btnTramites.TabIndex = 21;
             this.btnTramites.UseVisualStyleBackColor = false;
             // 
@@ -307,19 +295,29 @@ namespace ProyectoOOIA.Ventanas
             this.lblTramites.Enabled = false;
             this.lblTramites.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTramites.ForeColor = System.Drawing.Color.Black;
-            this.lblTramites.Location = new System.Drawing.Point(87, 5);
-            this.lblTramites.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTramites.Location = new System.Drawing.Point(65, 4);
             this.lblTramites.Name = "lblTramites";
-            this.lblTramites.Size = new System.Drawing.Size(133, 38);
+            this.lblTramites.Size = new System.Drawing.Size(104, 30);
             this.lblTramites.TabIndex = 19;
             this.lblTramites.Text = "Trámites";
             this.lblTramites.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // imagen
+            // 
+            this.imagen.BackColor = System.Drawing.Color.DarkGray;
+            this.imagen.BackgroundImage = global::ProyectoOOIA.Properties.Resources.placeholder_profile;
+            this.imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imagen.Location = new System.Drawing.Point(23, 12);
+            this.imagen.Name = "imagen";
+            this.imagen.Size = new System.Drawing.Size(67, 60);
+            this.imagen.TabIndex = 27;
+            this.imagen.TabStop = false;
+            // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1352, 752);
+            this.ClientSize = new System.Drawing.Size(1014, 611);
             this.Controls.Add(this.pnlTramites);
             this.Controls.Add(this.imagenes);
             this.Controls.Add(this.pnlEventosProximos);
@@ -327,10 +325,11 @@ namespace ProyectoOOIA.Ventanas
             this.Controls.Add(this.pnlCitas);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú principal";
+            this.Load += new System.EventHandler(this.frmPrincipal_Load);
+            this.ClientSizeChanged += new System.EventHandler(this.frmPrincipal_ClientSizeChanged);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlCitas.ResumeLayout(false);
@@ -343,6 +342,7 @@ namespace ProyectoOOIA.Ventanas
             ((System.ComponentModel.ISupportInitialize)(this.imagenes)).EndInit();
             this.pnlTramites.ResumeLayout(false);
             this.pnlTramites.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -368,5 +368,6 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Button btnTramites;
         private System.Windows.Forms.Label lblTramites;
         private System.Windows.Forms.Button btnCargaDatos;
+        private OvalPictureBox imagen;
     }
 }

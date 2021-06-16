@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/PonenteWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/PonenteWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PonenteWS.xsd" MetadataType="Schema" ID="ab786045-057e-46e4-9e9e-f83860595d4d" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/PonenteWS?xsd=1" />
-    <MetadataFile FileName="PonenteWS.wsdl" MetadataType="Wsdl" ID="18e6e5b0-8aff-4ad0-adea-47b836aeeba1" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/PonenteWS?WSDL" />
+    <MetadataFile FileName="PonenteWS1.wsdl" MetadataType="Wsdl" ID="291a110c-1603-4d75-97f9-307fa4ebdecf" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PonenteWS?WSDL" />
+    <MetadataFile FileName="PonenteWS1.xsd" MetadataType="Schema" ID="0147cdaa-8069-4f3d-b101-59f7c8817aee" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PonenteWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

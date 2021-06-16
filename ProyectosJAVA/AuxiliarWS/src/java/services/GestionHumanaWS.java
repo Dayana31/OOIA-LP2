@@ -10,20 +10,25 @@ import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import pe.edu.pucp.ooia.gest_humana.dao.AlumnoDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.CoordinadorDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.EspecialidadDAO;
+import pe.edu.pucp.ooia.gest_humana.dao.InicioSesionDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.PonenteDao;
 import pe.edu.pucp.ooia.gest_humana.dao.ProfesorDAO;
 import pe.edu.pucp.ooia.gest_humana.dao.PsicologoDAO;
 import pe.edu.pucp.ooia.gest_humana.model.Alumno;
+import pe.edu.pucp.ooia.gest_humana.model.Coordinador;
 import pe.edu.pucp.ooia.gest_humana.model.Especialidad;
 import pe.edu.pucp.ooia.gest_humana.model.Ponente;
 import pe.edu.pucp.ooia.gest_humana.model.Profesor;
 import pe.edu.pucp.ooia.gest_humana.model.Psicologo;
 import pe.edu.pucp.ooia.gest_humana.mysql.AlumnoMySQL;
+import pe.edu.pucp.ooia.gest_humana.mysql.CoordinadorMySQL;
 import pe.edu.pucp.ooia.gest_humana.mysql.EspecialidadMySQL;
 import pe.edu.pucp.ooia.gest_humana.mysql.PonenteMySQL;
 import pe.edu.pucp.ooia.gest_humana.mysql.ProfesorMySQL;
 import pe.edu.pucp.ooia.gest_humana.mysql.PsicologoMySQL;
+import pe.edu.pucp.ooia.gest_humana.mysql.inicioSesionMySQL;
 
 /**
  *
@@ -36,6 +41,9 @@ public class GestionHumanaWS {
     private ProfesorDAO daoProfesor;
     private PonenteDao ponente;   
     private PsicologoDAO psicologo;
+    private InicioSesionDAO inicioSesion;
+    private CoordinadorDAO coordinador;
+    
     
     public GestionHumanaWS() {
         alumno=new AlumnoMySQL();
@@ -43,6 +51,8 @@ public class GestionHumanaWS {
         daoProfesor=new ProfesorMySQL();
         ponente =new PonenteMySQL();
         psicologo=new PsicologoMySQL();
+        inicioSesion=new inicioSesionMySQL();
+        coordinador=new CoordinadorMySQL();
         
     }
 @WebMethod(operationName = "listarAlumno")
@@ -266,10 +276,108 @@ public class GestionHumanaWS {
     public int autenticarUsuario(@WebParam(name = "usuario")String usuario,@WebParam(name = "password")String password){
         int resultado=0;
         try {
-            resultado=this.alumno.inicioSesion(usuario,password);
+            resultado=this.inicioSesion.inicioSesion(usuario,password);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
         return resultado;//se devuelve el id persona
     }
+    @WebMethod(operationName = "tipoUsuario")
+    public int tipoUsuario(@WebParam(name = "id_persona")int id_persona ){
+        int resultado=0;
+        try {
+            resultado=this.inicioSesion.tipoUsuario(id_persona);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;//se devuelve el id persona
+    }
+    @WebMethod(operationName = "listar_alumno_x_id")
+    public Alumno listar_alumno_x_id(@WebParam(name = "id_persona")int id_persona ){
+        Alumno resultado=null;
+        try {
+            resultado=alumno.listar_x_id(id_persona);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;//se devuelve el id persona
+    }
+    @WebMethod(operationName = "listar_profesor_x_id")
+    public Profesor listar_profesor_x_id(@WebParam(name = "id_persona")int id_persona ){
+        Profesor resultado=null;
+        try {
+            resultado=this.daoProfesor.listar_x_id(id_persona);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;//se devuelve el id persona
+    }
+    @WebMethod(operationName = "listar_coordinador_x_id")
+    public Coordinador listar_coordinador_x_id(@WebParam(name = "id_persona")int id_persona ){
+        Coordinador resultado=null;
+        try {
+            resultado=this.coordinador.listar_x_id(id_persona);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;//se devuelve el id persona
+    }
+    @WebMethod(operationName = "listar_psicologo_x_id")
+    public Psicologo listar_psicologo_x_id(@WebParam(name = "id_persona")int id_persona ){
+        Psicologo resultado=null;
+        try {
+            resultado=this.psicologo.listar_x_id(id_persona);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;//se devuelve el id persona
+    }
+    
+    
+    
+    
+
+    @WebMethod(operationName = "listarCoordinador")
+    public ArrayList<Coordinador> listarCoordinadorEvento() {
+        ArrayList<Coordinador> lista= new ArrayList<>();
+        try {
+            lista=coordinador.listar();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
+    @WebMethod(operationName = "insertarCoordinador")
+    public int insertarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
+        int resultado=0;
+        try {
+            resultado=this.coordinador.insertar(coordinador);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "modificarCoordinador")
+    public int modificarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
+        int resultado=0;
+        try {
+            resultado=this.coordinador.modificar(coordinador);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    @WebMethod(operationName = "eliminarCoordinador")
+    public int eliminarCoordinadorEvento(@WebParam(name = "coordinador")Coordinador coordinador){
+        int resultado=0;
+        try {
+            resultado=this.coordinador.eliminar(coordinador.getId_coordinador());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return resultado;
+    }
+    
+    
+    
 }

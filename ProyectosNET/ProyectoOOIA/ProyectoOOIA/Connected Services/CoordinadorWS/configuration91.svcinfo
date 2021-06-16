@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="oqE4o8dfEB3J4GwuL6LUL1ydq9iT4rnoNZeGXzOHa2I=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="1rJu5c1bQ8TwAacJceCJMbuPEzIaLEVgReao4Qt0iDA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="CoordinadorWSPortBinding">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="CoordinadorWSPort" contract="CoordinadorWS.CoordinadorWS" bindingType="basicHttpBinding" address="http://localhost:8082/WebServicesOOIA/CoordinadorWS" bindingConfiguration="CoordinadorWSPortBinding">
+    <endpoint name="CoordinadorWSPort" contract="CoordinadorWS.CoordinadorWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/CoordinadorWS" bindingConfiguration="CoordinadorWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8082/WebServicesOOIA/CoordinadorWS</serializedValue>
+          <serializedValue>http://localhost:8080/WebServicesOOIA/CoordinadorWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

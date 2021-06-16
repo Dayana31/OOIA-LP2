@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/ProfesorWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/ProfesorWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ProfesorWS.xsd" MetadataType="Schema" ID="b960ea41-598c-4828-833b-b5aaadbcb9dd" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/ProfesorWS?xsd=1" />
-    <MetadataFile FileName="ProfesorWS.wsdl" MetadataType="Wsdl" ID="ee272d34-2f2d-464e-9579-45701ff2dd1e" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/ProfesorWS?WSDL" />
+    <MetadataFile FileName="ProfesorWS1.xsd" MetadataType="Schema" ID="66c7dde3-e7d1-4f10-8d2b-eca1ea5f4e86" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ProfesorWS?xsd=1" />
+    <MetadataFile FileName="ProfesorWS1.wsdl" MetadataType="Wsdl" ID="8f444efc-f2fd-42b4-a527-bde01a4c647b" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ProfesorWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

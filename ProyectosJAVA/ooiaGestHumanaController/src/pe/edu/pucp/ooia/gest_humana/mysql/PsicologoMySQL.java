@@ -140,19 +140,37 @@ public class PsicologoMySQL implements PsicologoDAO {
         }
         return resultado;
     }
-    public int inicioSesion(String usuario, String password) {
-        int resultado = 0;
+
+    @Override
+    public Psicologo listar_x_id(int id) {
+        //LISTAR_PSICOLOGO_X_ID
+        Psicologo psicologo = new Psicologo();
         try{
+            
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call autenticarUsuario(?,?)}");
-            cs.setString("_usuario", usuario);
-            cs.setString("_password", password);
-            rs=cs.executeQuery();
-            if(rs.next())
-                resultado=rs.getInt("fid_miembro_pucp");
+            cs = con.prepareCall("{call LISTAR_PSICOLOGO_X_ID(?)}");
+            cs.setInt("id", id);
+            rs = cs.executeQuery();
+            rs.next();
+                /*Persona*/
+                psicologo.setId_persona(rs.getInt("id_persona"));
+                psicologo.setNombre(rs.getString("nombre"));
+                psicologo.setDni(rs.getString("dni"));
+                psicologo.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
+                psicologo.setDireccion(rs.getString("direccion"));
+                psicologo.setCorreo(rs.getString("correo"));
+                /*Miembro PUCP*/
+                psicologo.setUsuario(rs.getString("usuario"));
+                psicologo.setPassword(rs.getString("password"));
+                psicologo.setFecha_inclusion(rs.getDate("fecha_inclusion"));
+                psicologo.setImagenDePerfil(rs.getBytes("imagen_perfil"));
+                /*Psicologo*/
+                psicologo.setId_psicologo(rs.getInt("id_psicologo"));
+                psicologo.setRama(rs.getString("rama"));
+                psicologo.setActivo(true);
+                
             
-            resultado = 1;
             rs.close();
             cs.close();
         }catch(Exception ex){
@@ -160,8 +178,8 @@ public class PsicologoMySQL implements PsicologoDAO {
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        return resultado;
+        return psicologo;
     }
-    
+
     
 }

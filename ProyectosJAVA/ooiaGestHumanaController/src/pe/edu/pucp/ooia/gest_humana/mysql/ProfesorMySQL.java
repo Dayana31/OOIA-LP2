@@ -150,20 +150,39 @@ public class ProfesorMySQL implements ProfesorDAO {
         }
         return resultado;
     }
-    
-    public int inicioSesion(String usuario, String password) {
-        int resultado = 0;
+
+    @Override
+    public Profesor listar_x_id(int id) {
+            Profesor profesor = new Profesor();
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call autenticarUsuario(?,?)}");
-            cs.setString("_usuario", usuario);
-            cs.setString("_password", password);
-            rs=cs.executeQuery();
-            if(rs.next())
-                resultado=rs.getInt("fid_miembro_pucp");
+            cs = con.prepareCall("{call LISTAR_PROFESOR_X_ID(?)}");
+            cs.setInt("id", id);
+            rs = cs.executeQuery();
+            rs.next();
             
-            resultado = 1;
+                /*Persona*/
+                profesor.setId_persona(rs.getInt("id_persona"));
+                profesor.setNombre(rs.getString("nombre"));
+                profesor.setDni(rs.getString("dni"));
+                profesor.setFecha_nacimiento(rs.getDate("fecha_nacimiento"));
+                profesor.setDireccion(rs.getString("direccion"));
+                profesor.setCorreo(rs.getString("correo"));
+                /*Miembro PUCP*/
+                profesor.setId_miembro_pucp(rs.getInt("id_miembro_pucp"));
+                profesor.setUsuario(rs.getString("usuario"));
+                profesor.setPassword(rs.getString("password"));
+                profesor.setFecha_inclusion(rs.getDate("fecha_inclusion"));
+                profesor.setImagenDePerfil(rs.getBytes("imagen_perfil"));
+                /*Profesor*/
+                profesor.setId_profesor(rs.getInt("id_profesor"));
+                profesor.setEspecialidad(new Especialidad(rs.getInt("id_especialidad"),rs.getString("nombre_especialidad")));
+                profesor.setFacultad(rs.getString("facultad"));
+                profesor.setCategoria(rs.getString("categoria"));
+                profesor.setActivo(true);
+                
+            
             rs.close();
             cs.close();
         }catch(Exception ex){
@@ -171,6 +190,8 @@ public class ProfesorMySQL implements ProfesorDAO {
         }finally{
             try{con.close();}catch(Exception ex){System.out.println(ex.getMessage());}
         }
-        return resultado;
+        return profesor;
     }
+    
+    
 }
