@@ -121,7 +121,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
 
         private void btnEspecialidad_Click(object sender, EventArgs e)
         {
-            new frmCargarEspecialidad().ShowDialog();
+            new frmGestionarEspecialidad().ShowDialog();
         }
 
         private void btnCoordinador_Click(object sender, EventArgs e)

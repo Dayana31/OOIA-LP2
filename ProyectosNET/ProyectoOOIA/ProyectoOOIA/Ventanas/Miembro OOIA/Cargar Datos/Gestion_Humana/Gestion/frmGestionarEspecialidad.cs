@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana
 {
-    public partial class frmCargarEspecialidad : Form
+    public partial class frmGestionarEspecialidad : Form
     {
         private EspecialidadWS.EspecialidadWSClient daoEspecialidad;
         private EspecialidadWS.especialidad especialidad;
         private Estado estado;
 
-        public frmCargarEspecialidad()
+        public frmGestionarEspecialidad()
         {
             InitializeComponent();
             dgvEspecialidad.AutoGenerateColumns = false;
