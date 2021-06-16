@@ -229,6 +229,18 @@
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\Busqueda\frmBuscarCoordinador.Designer.cs">
       <DependentUpon>frmBuscarCoordinador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\Busqueda\frmBuscarPonente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\Busqueda\frmBuscarPonente.Designer.cs">
+      <DependentUpon>frmBuscarPonente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\Gestion\frmCargarPonente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\Gestion\frmCargarPonente.Designer.cs">
+      <DependentUpon>frmCargarPonente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\Gestion\frmGestionarEspecialidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -542,6 +554,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\Busqueda\frmBuscarAlumno.resx">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\Busqueda\frmBuscarPonente.resx">
+      <DependentUpon>frmBuscarPonente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\Gestion\frmCargarPonente.resx">
+      <DependentUpon>frmCargarPonente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\Gestion\frmGestionarEspecialidad.resx">
       <DependentUpon>frmGestionarEspecialidad.cs</DependentUpon>
