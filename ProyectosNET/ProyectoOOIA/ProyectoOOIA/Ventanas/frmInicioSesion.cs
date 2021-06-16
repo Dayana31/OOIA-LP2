@@ -39,8 +39,8 @@ namespace ProyectoOOIA.Ventanas
                 lblTipoIncorrecto.Visible = true;
                 lblIncorrecto.Visible = false;
             }
-            else 
-            if (id_persona==0)
+            else
+            if (id_persona == 0)
             {
                 lblTipoIncorrecto.Visible = false;
                 lblPassIncorrecto.Visible = true;
@@ -48,13 +48,13 @@ namespace ProyectoOOIA.Ventanas
             }
             else
             {
-                
-                if (rbtAlumno.Checked == true && tipoUsuario==1)
+
+                if (rbtAlumno.Checked == true && tipoUsuario == 1)
                 {
-                    new frmPrincipal(TipoUsuario.Alumno,id_persona,tipoUsuario).Show();
+                    new frmPrincipal(TipoUsuario.Alumno, id_persona, tipoUsuario).Show();
                     this.Close();
                 }
-                else if (rbtTutor.Checked == true && (tipoUsuario==2 || tipoUsuario==3))
+                else if (rbtTutor.Checked == true && (tipoUsuario == 2 || tipoUsuario == 3))
                 {
                     new frmPrincipal(TipoUsuario.Asesor, id_persona, tipoUsuario).Show();
                     this.Close();
@@ -70,7 +70,7 @@ namespace ProyectoOOIA.Ventanas
                     lblPassIncorrecto.Visible = false;
                     lblIncorrecto.Visible = true;
                 }
-                
+
             }
         }
 

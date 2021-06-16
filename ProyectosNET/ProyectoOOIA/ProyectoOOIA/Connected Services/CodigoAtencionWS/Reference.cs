@@ -16,15 +16,6 @@ namespace ProyectoOOIA.CodigoAtencionWS {
     public interface CodigoAtencionWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CodigoAtencionWS.insertarCodigoResponse insertarCodigo(ProyectoOOIA.CodigoAtencionWS.insertarCodigoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.insertarCodigoResponse> insertarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.insertarCodigoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/listarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/listarCodigoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,6 +23,15 @@ namespace ProyectoOOIA.CodigoAtencionWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/listarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/listarCodigoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.listarCodigoResponse> listarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.CodigoAtencionWS.insertarCodigoResponse insertarCodigo(ProyectoOOIA.CodigoAtencionWS.insertarCodigoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/insertarCodigoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.insertarCodigoResponse> insertarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.insertarCodigoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CodigoAtencionWS/modificarCodigoResponse")]
@@ -120,6 +120,34 @@ namespace ProyectoOOIA.CodigoAtencionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCodigo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCodigoRequest {
+        
+        public listarCodigoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCodigoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCodigoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CodigoAtencionWS.codigoAtencion[] @return;
+        
+        public listarCodigoResponse() {
+        }
+        
+        public listarCodigoResponse(ProyectoOOIA.CodigoAtencionWS.codigoAtencion[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCodigo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarCodigoRequest {
         
@@ -149,34 +177,6 @@ namespace ProyectoOOIA.CodigoAtencionWS {
         }
         
         public insertarCodigoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCodigo", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCodigoRequest {
-        
-        public listarCodigoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCodigoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCodigoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CodigoAtencionWS.codigoAtencion[] @return;
-        
-        public listarCodigoResponse() {
-        }
-        
-        public listarCodigoResponse(ProyectoOOIA.CodigoAtencionWS.codigoAtencion[] @return) {
             this.@return = @return;
         }
     }
@@ -245,6 +245,27 @@ namespace ProyectoOOIA.CodigoAtencionWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.CodigoAtencionWS.listarCodigoResponse ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS.listarCodigo(ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest request) {
+            return base.Channel.listarCodigo(request);
+        }
+        
+        public ProyectoOOIA.CodigoAtencionWS.codigoAtencion[] listarCodigo() {
+            ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest inValue = new ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest();
+            ProyectoOOIA.CodigoAtencionWS.listarCodigoResponse retVal = ((ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS)(this)).listarCodigo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.listarCodigoResponse> ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS.listarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest request) {
+            return base.Channel.listarCodigoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.listarCodigoResponse> listarCodigoAsync() {
+            ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest inValue = new ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest();
+            return ((ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS)(this)).listarCodigoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.CodigoAtencionWS.insertarCodigoResponse ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS.insertarCodigo(ProyectoOOIA.CodigoAtencionWS.insertarCodigoRequest request) {
             return base.Channel.insertarCodigo(request);
         }
@@ -265,27 +286,6 @@ namespace ProyectoOOIA.CodigoAtencionWS {
             ProyectoOOIA.CodigoAtencionWS.insertarCodigoRequest inValue = new ProyectoOOIA.CodigoAtencionWS.insertarCodigoRequest();
             inValue.codigo = codigo;
             return ((ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS)(this)).insertarCodigoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CodigoAtencionWS.listarCodigoResponse ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS.listarCodigo(ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest request) {
-            return base.Channel.listarCodigo(request);
-        }
-        
-        public ProyectoOOIA.CodigoAtencionWS.codigoAtencion[] listarCodigo() {
-            ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest inValue = new ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest();
-            ProyectoOOIA.CodigoAtencionWS.listarCodigoResponse retVal = ((ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS)(this)).listarCodigo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.listarCodigoResponse> ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS.listarCodigoAsync(ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest request) {
-            return base.Channel.listarCodigoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.CodigoAtencionWS.listarCodigoResponse> listarCodigoAsync() {
-            ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest inValue = new ProyectoOOIA.CodigoAtencionWS.listarCodigoRequest();
-            return ((ProyectoOOIA.CodigoAtencionWS.CodigoAtencionWS)(this)).listarCodigoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

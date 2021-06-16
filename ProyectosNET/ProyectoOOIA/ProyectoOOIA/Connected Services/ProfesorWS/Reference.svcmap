@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4c55da5a-de96-418f-bbb3-b3f71b30857c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f76ffbcd-53ef-4abb-8dfe-358719e2cf67" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/ProfesorWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/ProfesorWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ProfesorWS1.xsd" MetadataType="Schema" ID="66c7dde3-e7d1-4f10-8d2b-eca1ea5f4e86" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ProfesorWS?xsd=1" />
-    <MetadataFile FileName="ProfesorWS1.wsdl" MetadataType="Wsdl" ID="8f444efc-f2fd-42b4-a527-bde01a4c647b" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ProfesorWS?WSDL" />
+    <MetadataFile FileName="ProfesorWS.xsd" MetadataType="Schema" ID="80620250-984e-48b1-9dd2-1e35f90e88d9" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ProfesorWS?xsd=1" />
+    <MetadataFile FileName="ProfesorWS.wsdl" MetadataType="Wsdl" ID="ccf7467a-0f47-4418-be25-ea13bdf129aa" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ProfesorWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

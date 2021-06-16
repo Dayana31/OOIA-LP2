@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.ooia.gest_humana.dao.PonenteDAO;
+
+import pe.edu.pucp.ooia.gest_humana.dao.PonenteDao;
 import pe.edu.pucp.ooia.gest_humana.model.Ponente;
 import pe.edu.pucp.ooia.gest_humana.mysql.PonenteMySQL;
 
@@ -24,7 +25,7 @@ public class PonenteWS {
     /**
      * This is a sample web service operation
      */
-    private PonenteDAO ponente;
+    private PonenteDao ponente;
 
     public PonenteWS() {
         ponente=new PonenteMySQL();

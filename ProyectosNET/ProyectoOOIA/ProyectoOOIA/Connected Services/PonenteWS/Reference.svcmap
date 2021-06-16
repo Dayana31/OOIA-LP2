@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="03d9d406-1f86-44c7-a94e-90588925cf3d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1ad0ef6e-d2de-493a-a646-de3e33f4b569" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/PonenteWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PonenteWS1.wsdl" MetadataType="Wsdl" ID="291a110c-1603-4d75-97f9-307fa4ebdecf" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PonenteWS?WSDL" />
-    <MetadataFile FileName="PonenteWS1.xsd" MetadataType="Schema" ID="0147cdaa-8069-4f3d-b101-59f7c8817aee" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PonenteWS?xsd=1" />
+    <MetadataFile FileName="PonenteWS.wsdl" MetadataType="Wsdl" ID="59ea093e-ab64-499a-a6a7-86a5c35c06f2" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PonenteWS?WSDL" />
+    <MetadataFile FileName="PonenteWS.xsd" MetadataType="Schema" ID="20a8a5d1-a0d2-49d3-a62e-388ec7a96981" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PonenteWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

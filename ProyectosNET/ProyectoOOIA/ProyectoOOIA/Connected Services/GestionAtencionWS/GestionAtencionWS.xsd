@@ -24,28 +24,6 @@
   <xs:element name="modificarCodigoResponse" type="tns:modificarCodigoResponse" />
   <xs:element name="modificarHorario" type="tns:modificarHorario" />
   <xs:element name="modificarHorarioResponse" type="tns:modificarHorarioResponse" />
-  <xs:complexType name="insertarHorario">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="horario" type="tns:horario" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="horario">
-    <xs:sequence>
-      <xs:element name="activo" type="xs:boolean" />
-      <xs:element name="dia" type="xs:int" />
-      <xs:element minOccurs="0" name="horaFin" type="tns:time" />
-      <xs:element minOccurs="0" name="horaInicio" type="tns:time" />
-      <xs:element name="id_horario" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="time">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="insertarHorarioResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarCita">
     <xs:sequence>
       <xs:element minOccurs="0" name="cita" type="tns:cita" />
@@ -119,7 +97,29 @@
       <xs:element name="id_codigo_atencion" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="horario">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element name="dia" type="xs:int" />
+      <xs:element minOccurs="0" name="horaFin" type="tns:time" />
+      <xs:element minOccurs="0" name="horaInicio" type="tns:time" />
+      <xs:element name="id_horario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="time">
+    <xs:sequence />
+  </xs:complexType>
   <xs:complexType name="modificarCitaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarHorario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horario" type="tns:horario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarHorarioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
@@ -192,14 +192,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarHorario">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarHorarioResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:horario" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarCita">
     <xs:sequence>
       <xs:element minOccurs="0" name="cita" type="tns:cita" />
@@ -208,6 +200,14 @@
   <xs:complexType name="insertarCitaResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarHorario">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarHorarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:horario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarCodigo">

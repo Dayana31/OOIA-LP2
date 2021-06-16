@@ -33,11 +33,9 @@ public class EventoWS {
     public ArrayList<Evento> listarEvento_por_nombre_categoria(@WebParam(name = "nombre")String nombreCategoria) {
         ArrayList<Evento> lista= new ArrayList<>();
         try {
-<<<<<<< HEAD
-            lista=evento.listar(nombre);
-=======
+
             lista=evento.listar(nombreCategoria);
->>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

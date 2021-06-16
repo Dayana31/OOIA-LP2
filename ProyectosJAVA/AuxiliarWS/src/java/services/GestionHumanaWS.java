@@ -36,6 +36,10 @@ import pe.edu.pucp.ooia.gest_humana.mysql.inicioSesionMySQL;
  */
 @WebService(serviceName = "GestionHumanaWS")
 public class GestionHumanaWS {
+
+    /**
+     * This is a sample web service operation
+     */
     private AlumnoDAO alumno;
     private EspecialidadDAO especialidad;    
     private ProfesorDAO daoProfesor;
@@ -377,7 +381,6 @@ public class GestionHumanaWS {
         }
         return resultado;
     }
-    
     
     
 }
