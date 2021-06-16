@@ -19,7 +19,8 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmGestionEventosOOIA : Form
     {
-        
+        private GestionHumanaWS.persona persona;
+
         ErrorProvider errorNombre = new ErrorProvider();
         ErrorProvider errorFecha = new ErrorProvider();
         ErrorProvider errorFin = new ErrorProvider();
@@ -48,6 +49,25 @@ namespace ProyectoOOIA.Ventanas
             errorDescripcion.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             evento = new GestionEventoWS.evento();
             eventoDao = new GestionEventoWS.GestionEventoWSClient();
+        }
+
+        public frmGestionEventosOOIA(Estado estado, GestionHumanaWS.persona persona)
+        {
+            InitializeComponent();
+            componentes(estado);
+
+            errorNombre.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            dgvPonentes.AutoGenerateColumns = false;
+            dgvPonentes.RowCount = 0;
+            errorFin.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorInicio.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorFecha.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorNombre.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorLugar.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            errorDescripcion.BlinkStyle = ErrorBlinkStyle.NeverBlink;
+            evento = new GestionEventoWS.evento();
+            eventoDao = new GestionEventoWS.GestionEventoWSClient();
+            this.persona = persona;
         }
 
         private void componentes(Estado estado)
@@ -190,7 +210,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            new frmPrincipal(TipoUsuario.OOIA).Show();
+            new frmPrincipal(TipoUsuario.OOIA,persona).Show();
             this.Close();
         }
 
@@ -333,7 +353,7 @@ namespace ProyectoOOIA.Ventanas
 
         }
 
-        private CoordinadorWS.coordinador asignarPersona(PonenteWS.ponente mostrarPersona)
+        private CoordinadorWS.coordinador asignarPersona(PonenteWS.persona mostrarPersona)
         {
             CoordinadorWS.coordinador aux= new CoordinadorWS.coordinador();
             aux.nombre = mostrarPersona.nombre;

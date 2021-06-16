@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1ad0ef6e-d2de-493a-a646-de3e33f4b569" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="22705135-34e5-4a7f-9485-cc2fdb8bd137" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,16 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/PonenteWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/AuxiliarWS/GestionAtencionWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-<<<<<<< HEAD
-    <MetadataFile FileName="PonenteWS.wsdl" MetadataType="Wsdl" ID="59ea093e-ab64-499a-a6a7-86a5c35c06f2" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PonenteWS?WSDL" />
-    <MetadataFile FileName="PonenteWS.xsd" MetadataType="Schema" ID="20a8a5d1-a0d2-49d3-a62e-388ec7a96981" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PonenteWS?xsd=1" />
-=======
-    <MetadataFile FileName="PonenteWS.xsd" MetadataType="Schema" ID="ab786045-057e-46e4-9e9e-f83860595d4d" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/PonenteWS?xsd=1" />
-    <MetadataFile FileName="PonenteWS.wsdl" MetadataType="Wsdl" ID="18e6e5b0-8aff-4ad0-adea-47b836aeeba1" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/PonenteWS?WSDL" />
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
+    <MetadataFile FileName="GestionAtencionWS.wsdl" MetadataType="Wsdl" ID="44599907-f86f-4bb2-a21f-a6aadadadd22" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionAtencionWS?WSDL" />
+    <MetadataFile FileName="GestionAtencionWS.xsd" MetadataType="Schema" ID="410f1c6d-6fb4-42a2-9811-35f13f8eb11d" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionAtencionWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

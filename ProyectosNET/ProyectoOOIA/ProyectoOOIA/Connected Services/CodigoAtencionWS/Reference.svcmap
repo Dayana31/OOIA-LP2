@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="49aa25b1-1932-4e61-bc6e-dba1d32022f7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="00a401a3-a143-4811-aaed-d4516a887aad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,16 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/CodigoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://alvaro:8080/WebServicesOOIA/CodigoWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-<<<<<<< HEAD
-    <MetadataFile FileName="CodigoWS.wsdl" MetadataType="Wsdl" ID="036be1c7-9553-4f36-b10e-def7ec39470b" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CodigoWS?WSDL" />
-    <MetadataFile FileName="CodigoWS.xsd" MetadataType="Schema" ID="2ecbcc72-d352-4511-81d7-27157658c6e2" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CodigoWS?xsd=1" />
-=======
-    <MetadataFile FileName="CodigoWS.xsd" MetadataType="Schema" ID="a73b59af-099f-48fd-acfc-43e33800c00c" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/CodigoWS?xsd=1" />
-    <MetadataFile FileName="CodigoWS.wsdl" MetadataType="Wsdl" ID="d74ba870-f548-479f-a4e0-7ff8b5ec4a59" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/CodigoWS?WSDL" />
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
+    <MetadataFile FileName="CodigoWS.xsd" MetadataType="Schema" ID="6bea7a8b-d01a-401b-a547-30d6f3de97bd" SourceId="1" SourceUrl="http://alvaro:8080/WebServicesOOIA/CodigoWS?xsd=1" />
+    <MetadataFile FileName="CodigoWS.wsdl" MetadataType="Wsdl" ID="08dfd336-d2ee-4e3e-b79c-af1ab49bf0e6" SourceId="1" SourceUrl="http://alvaro:8080/WebServicesOOIA/CodigoWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

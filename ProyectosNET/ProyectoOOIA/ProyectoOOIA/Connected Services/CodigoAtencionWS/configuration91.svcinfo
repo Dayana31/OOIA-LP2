@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ylKF9QHToAyBO7IGkjIgOS8EoBjuIGALi7R7colmWH8=">
-=======
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="bL8OOQGQyrsHtsZPrRRIkFCFHMhQ7IXrpqOPFbmSlbo=">
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="LQT5m9T/uKCD4GQIPRla+BOPNKXAIB0VEV2EcxSX9r8=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="CodigoAtencionWSPortBinding1">
+    <bindingConfiguration bindingType="basicHttpBinding" name="CodigoAtencionWSPortBinding">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>CodigoAtencionWSPortBinding1</serializedValue>
+          <serializedValue>CodigoAtencionWSPortBinding</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -116,14 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-<<<<<<< HEAD
-    <endpoint name="CodigoAtencionWSPort1" contract="CodigoAtencionWS.CodigoAtencionWS" bindingType="basicHttpBinding" address="http://localhost:8080/WebServicesOOIA/CodigoWS" bindingConfiguration="CodigoAtencionWSPortBinding1">
-=======
-    <endpoint name="CodigoAtencionWSPort" contract="CodigoAtencionWS.CodigoAtencionWS" bindingType="basicHttpBinding" address="http://localhost:8082/WebServicesOOIA/CodigoWS" bindingConfiguration="CodigoAtencionWSPortBinding">
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
+    <endpoint name="CodigoAtencionWSPort" contract="CodigoAtencionWS.CodigoAtencionWS" bindingType="basicHttpBinding" address="http://alvaro:8080/WebServicesOOIA/CodigoWS" bindingConfiguration="CodigoAtencionWSPortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:8082/WebServicesOOIA/CodigoWS</serializedValue>
+          <serializedValue>http://alvaro:8080/WebServicesOOIA/CodigoWS</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -132,7 +124,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>CodigoAtencionWSPortBinding1</serializedValue>
+          <serializedValue>CodigoAtencionWSPortBinding</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>CodigoAtencionWS.CodigoAtencionWS</serializedValue>
@@ -195,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>CodigoAtencionWSPort1</serializedValue>
+          <serializedValue>CodigoAtencionWSPort</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

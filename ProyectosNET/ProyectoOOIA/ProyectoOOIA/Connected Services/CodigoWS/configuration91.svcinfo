@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="rFDxk5b6KJ73oTOTzmq0wJEtlokSji6wa7Z1HmMlTH4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="GefyNml0XLhjAEp1wlyqV2/ZBElOl6IpzSOkaGtGlis=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="CodigoAtencionWSPortBinding">
+    <bindingConfiguration bindingType="basicHttpBinding" name="CodigoAtencionWSPortBinding1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>CodigoAtencionWSPortBinding</serializedValue>
+          <serializedValue>CodigoAtencionWSPortBinding1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="CodigoAtencionWSPort" contract="CodigoWS.CodigoAtencionWS" bindingType="basicHttpBinding" address="http://alvaro:8080/WebServicesOOIA/CodigoWS" bindingConfiguration="CodigoAtencionWSPortBinding">
+    <endpoint name="CodigoAtencionWSPort1" contract="CodigoWS.CodigoAtencionWS" bindingType="basicHttpBinding" address="http://alvaro:8080/WebServicesOOIA/CodigoWS" bindingConfiguration="CodigoAtencionWSPortBinding1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://alvaro:8080/WebServicesOOIA/CodigoWS</serializedValue>
@@ -124,7 +124,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>CodigoAtencionWSPortBinding</serializedValue>
+          <serializedValue>CodigoAtencionWSPortBinding1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>CodigoWS.CodigoAtencionWS</serializedValue>
@@ -187,7 +187,7 @@
           <serializedValue>False</serializedValue>
         </property>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>CodigoAtencionWSPort</serializedValue>
+          <serializedValue>CodigoAtencionWSPort1</serializedValue>
         </property>
         <property path="/kind" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

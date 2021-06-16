@@ -5,11 +5,18 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmRegistroEvento : Form
     {
+        private GestionHumanaWS.persona persona;
+
         public frmRegistroEvento()
         {
             InitializeComponent();
         }
 
+        public frmRegistroEvento(GestionHumanaWS.persona persona)
+        {
+            InitializeComponent();
+            this.persona = persona;
+        }
         private void frmEventosAlumno_Load(object sender, EventArgs e)
         {
 
@@ -48,7 +55,7 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            new frmPrincipal(TipoUsuario.Alumno).Show();
+            new frmPrincipal(TipoUsuario.Alumno,persona).Show();
             this.Close();
         }
 

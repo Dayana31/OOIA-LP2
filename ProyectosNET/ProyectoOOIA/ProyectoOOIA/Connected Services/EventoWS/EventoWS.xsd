@@ -24,8 +24,8 @@
       <xs:element name="cupo" type="xs:int" />
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
       <xs:element minOccurs="0" name="fecha" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="horaFin" type="tns:time" />
-      <xs:element minOccurs="0" name="horaInicio" type="tns:time" />
+      <xs:element minOccurs="0" name="horaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="horaInicio" type="xs:dateTime" />
       <xs:element name="id_evento" type="xs:int" />
       <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="lugar" type="xs:string" />
@@ -73,9 +73,6 @@
       <xs:element name="id_persona" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="time">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="ponente">
     <xs:complexContent mixed="false">

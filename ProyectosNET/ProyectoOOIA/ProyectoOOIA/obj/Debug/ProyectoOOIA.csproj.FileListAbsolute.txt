@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of 945bb9f (Inicio de sesion)
+
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
@@ -269,11 +265,6 @@ D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OO
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVAlumnos.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVProfesores.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVPsicologos.resources
-<<<<<<< HEAD
->>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
-=======
-<<<<<<< HEAD
->>>>>>> parent of 945bb9f (Inicio de sesion)
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
@@ -335,16 +326,6 @@ D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.C
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
-<<<<<<< HEAD
-D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-D:\Github\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
-=======
->>>>>>> parent of 945bb9f (Inicio de sesion)
-=======
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Eventos.frmMostrarPonentes.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.frmCargarDatos.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.frmCodigosAtencion.resources
@@ -386,10 +367,8 @@ D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OO
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
-<<<<<<< HEAD
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCoordinador.resources
 D:\Usuarios\Gerardo\Documents\2021-1\Lenguaje de Programación 2\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmBuscarCoordinador.resources
-<<<<<<< HEAD
 C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.exe
 C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.pdb
 C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csprojAssemblyReference.cache
@@ -454,9 +433,3 @@ C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA
 C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Bunifu_UI_v1.5.dll
 C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\MaterialSkin.dll
 C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
-=======
->>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
-=======
->>>>>>> 00f2359a55c55adb02b10efd85abe371201d7dee
->>>>>>> parent of 945bb9f (Inicio de sesion)
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af

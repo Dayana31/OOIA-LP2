@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f76ffbcd-53ef-4abb-8dfe-358719e2cf67" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fc619d5b-07f8-4552-8b53-a92ebedf3770" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,19 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-<<<<<<< HEAD
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/ProfesorWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ProfesorWS.xsd" MetadataType="Schema" ID="80620250-984e-48b1-9dd2-1e35f90e88d9" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ProfesorWS?xsd=1" />
-    <MetadataFile FileName="ProfesorWS.wsdl" MetadataType="Wsdl" ID="ccf7467a-0f47-4418-be25-ea13bdf129aa" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ProfesorWS?wsdl" />
-=======
-    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/ProfesorWS?WSDL" Protocol="http" SourceId="1" />
-  </MetadataSources>
-  <Metadata>
-    <MetadataFile FileName="ProfesorWS.xsd" MetadataType="Schema" ID="b960ea41-598c-4828-833b-b5aaadbcb9dd" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/ProfesorWS?xsd=1" />
-    <MetadataFile FileName="ProfesorWS.wsdl" MetadataType="Wsdl" ID="ee272d34-2f2d-464e-9579-45701ff2dd1e" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/ProfesorWS?WSDL" />
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
+    <MetadataFile FileName="ProfesorWS.xsd" MetadataType="Schema" ID="b8cbe3d7-4533-42cf-96fd-b1e1caeab455" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ProfesorWS?xsd=1" />
+    <MetadataFile FileName="ProfesorWS.wsdl" MetadataType="Wsdl" ID="2bd8f41d-7a46-4ed8-ad22-46e4fbaff666" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/ProfesorWS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

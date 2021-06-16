@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5b726cbe-d16c-4553-9a58-8aa36dd5a8ef" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bb65e785-4213-4f2c-acf6-3821c650d5d8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,19 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-<<<<<<< HEAD
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/EspecialidadWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EspecialidadWS.wsdl" MetadataType="Wsdl" ID="a9f58dac-c635-42ee-af4a-a231aba3cb69" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EspecialidadWS?wsdl" />
-    <MetadataFile FileName="EspecialidadWS.xsd" MetadataType="Schema" ID="b672498d-f12a-4041-832f-23cbfe80d889" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EspecialidadWS?xsd=1" />
-=======
-    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/EspecialidadWS?WSDL" Protocol="http" SourceId="1" />
-  </MetadataSources>
-  <Metadata>
-    <MetadataFile FileName="EspecialidadWS.wsdl" MetadataType="Wsdl" ID="bad9c91f-5f9b-42fd-a808-88f6ba42502d" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/EspecialidadWS?WSDL" />
-    <MetadataFile FileName="EspecialidadWS.xsd" MetadataType="Schema" ID="fc16003a-6d2e-4890-9d35-69c87f213246" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/EspecialidadWS?xsd=1" />
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
+    <MetadataFile FileName="EspecialidadWS.wsdl" MetadataType="Wsdl" ID="94473adc-9ed8-4040-969f-ef9e3713fa63" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EspecialidadWS?wsdl" />
+    <MetadataFile FileName="EspecialidadWS.xsd" MetadataType="Schema" ID="db763b4b-1059-400f-bf00-e4b8e111cc05" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EspecialidadWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

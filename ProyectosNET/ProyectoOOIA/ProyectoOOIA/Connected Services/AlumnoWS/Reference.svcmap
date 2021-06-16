@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a2171769-5d25-4ce2-8dfd-2a9ddac175d2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aef8c99d-437f-4739-966c-d107ecb19c85" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,16 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/AlumnoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/AlumnoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-<<<<<<< HEAD
-    <MetadataFile FileName="AlumnoWS.wsdl" MetadataType="Wsdl" ID="cbb31187-d54c-45cc-bb5e-c71c0404298c" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/AlumnoWS?WSDL" />
-    <MetadataFile FileName="AlumnoWS.xsd" MetadataType="Schema" ID="1705d5fb-883b-43e0-9d06-d220cd5cf470" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/AlumnoWS?xsd=1" />
-=======
-    <MetadataFile FileName="AlumnoWS.xsd" MetadataType="Schema" ID="9a51e2ad-9cff-4f81-a8b9-9f394e18ec6e" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/AlumnoWS?xsd=1" />
-    <MetadataFile FileName="AlumnoWS.wsdl" MetadataType="Wsdl" ID="fac2b8e6-d4b6-4ef0-8301-cf9f6ae23efd" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/AlumnoWS?WSDL" />
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
+    <MetadataFile FileName="AlumnoWS.wsdl" MetadataType="Wsdl" ID="4c475616-115f-4a64-8cf5-9c437888ba67" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/AlumnoWS?WSDL" />
+    <MetadataFile FileName="AlumnoWS.xsd" MetadataType="Schema" ID="b1e45243-c4bf-4739-b24b-3b8dd659db30" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/AlumnoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

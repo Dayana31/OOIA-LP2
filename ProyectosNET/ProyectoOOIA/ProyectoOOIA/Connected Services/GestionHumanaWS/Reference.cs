@@ -136,7 +136,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarPsicologoResponse> modificarPsicologoAsync(ProyectoOOIA.GestionHumanaWS.modificarPsicologoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-<<<<<<< HEAD
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listar_alumno_x_idRequest", ReplyAction="http://services/GestionHumanaWS/listar_alumno_x_idResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -148,9 +147,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listar_profesor_x_idRequest", ReplyAction="http://services/GestionHumanaWS/listar_profesor_x_idResponse")]
-=======
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarProfesorRequest", ReplyAction="http://services/GestionHumanaWS/eliminarProfesorResponse")]
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -236,7 +232,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
         ProyectoOOIA.GestionHumanaWS.modificarPonenteResponse modificarPonente(ProyectoOOIA.GestionHumanaWS.modificarPonenteRequest request);
         
-<<<<<<< HEAD
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/modificarPonenteRequest", ReplyAction="http://services/GestionHumanaWS/modificarPonenteResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarPonenteResponse> modificarPonenteAsync(ProyectoOOIA.GestionHumanaWS.modificarPonenteRequest request);
         
@@ -319,10 +314,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarPsicologoRequest", ReplyAction="http://services/GestionHumanaWS/insertarPsicologoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarPsicologoResponse> insertarPsicologoAsync(ProyectoOOIA.GestionHumanaWS.insertarPsicologoRequest request);
-=======
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarPonenteRequest", ReplyAction="http://services/GestionHumanaWS/insertarPonenteResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarPonenteResponse> insertarPonenteAsync(ProyectoOOIA.GestionHumanaWS.insertarPonenteRequest request);
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
     }
     
     /// <remarks/>
@@ -482,6 +473,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroExterno))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(miembroPUCP))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(profesor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
@@ -704,6 +696,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(profesor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
@@ -805,7 +798,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-<<<<<<< HEAD
     public partial class coordinador : miembroPUCP {
         
         private bool activoField;
@@ -858,9 +850,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
     public partial class profesor : miembroPUCP {
-=======
-    public partial class alumno : miembroPUCP {
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
         
         private bool activoField;
         
@@ -1351,7 +1340,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPsicologo", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class modificarPsicologoRequest {
         
@@ -1390,10 +1378,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listar_alumno_x_id", WrapperNamespace="http://services/", IsWrapped=true)]
     public partial class listar_alumno_x_idRequest {
-=======
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesor", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class eliminarProfesorRequest {
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -1702,7 +1686,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
     }
     
-<<<<<<< HEAD
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2027,8 +2010,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
     }
     
-=======
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface GestionHumanaWSChannel : ProyectoOOIA.GestionHumanaWS.GestionHumanaWS, System.ServiceModel.IClientChannel {
     }
@@ -2325,7 +2306,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-<<<<<<< HEAD
         ProyectoOOIA.GestionHumanaWS.listar_alumno_x_idResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.listar_alumno_x_id(ProyectoOOIA.GestionHumanaWS.listar_alumno_x_idRequest request) {
             return base.Channel.listar_alumno_x_id(request);
         }
@@ -2351,10 +2331,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.listar_profesor_x_id(ProyectoOOIA.GestionHumanaWS.listar_profesor_x_idRequest request) {
             return base.Channel.listar_profesor_x_id(request);
-=======
-        ProyectoOOIA.GestionHumanaWS.eliminarProfesorResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarProfesor(ProyectoOOIA.GestionHumanaWS.eliminarProfesorRequest request) {
-            return base.Channel.eliminarProfesor(request);
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
         }
         
         public ProyectoOOIA.GestionHumanaWS.profesor listar_profesor_x_id(int id_persona) {
@@ -2579,7 +2555,6 @@ namespace ProyectoOOIA.GestionHumanaWS {
             inValue.id_persona = id_persona;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listar_psicologo_x_idAsync(inValue);
         }
-<<<<<<< HEAD
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarCoordinador(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request) {
@@ -2741,7 +2716,5 @@ namespace ProyectoOOIA.GestionHumanaWS {
             inValue.invitado = invitado;
             return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarPsicologoAsync(inValue);
         }
-=======
->>>>>>> 998d69151b7b330c8c64cd1804285d795b91d0af
     }
 }
