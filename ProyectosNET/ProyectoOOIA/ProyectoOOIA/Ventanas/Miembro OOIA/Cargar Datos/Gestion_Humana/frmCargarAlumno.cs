@@ -146,13 +146,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
         }
 
         /*Botones de Header*/
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            new frmInicioSesion().Show();
-            this.Close();
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -165,12 +158,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Persona
             txtDni.Text = alu.dni;
             txtNombre.Text = alu.nombre;
-            //txtEdad.Text = alu.edad.ToString();
+            dtpFechaNacimiento.Value = alu.fecha_nacimiento;
             txtDireccion.Text = alu.direccion;
             txtCorreo.Text = alu.correo;
             //Miembro PUCP
             txtUsuario.Text = alu.usuario;
-            txtPassword.Text = alu.password;
+            txtPassword.Text = "*********";
             imagen_perfil = alu.imagenDePerfil;
             if(imagen_perfil != null)displayImage(imagen_perfil);
             //Alumno
@@ -187,6 +180,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
+            txtPassword.Text = "12345";
         }
 
         private void tsbGuardar_Click_1(object sender, EventArgs e)
@@ -294,7 +288,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void tsbEliminar_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar este empleado?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult dr = MessageBox.Show("¿Esta seguro que desea eliminar este alumno?", "Mensaje de Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.Yes)
             {
                 int resultado = daoAlumno.eliminarAlumno(alumno.id_alumno);
@@ -315,9 +309,6 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             {
                 this.alumno = frmBuscar.Alumno;
                 fillText(this.alumno);
-
-
-
                 estado = Estado.Busqueda;
                 cambiarEstado();
             }

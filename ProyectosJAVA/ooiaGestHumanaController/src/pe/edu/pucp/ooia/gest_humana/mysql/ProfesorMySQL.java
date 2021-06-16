@@ -45,7 +45,7 @@ public class ProfesorMySQL implements ProfesorDAO {
                 profesor.setImagenDePerfil(rs.getBytes("imagen_perfil"));
                 /*Profesor*/
                 profesor.setId_profesor(rs.getInt("id_profesor"));
-                profesor.setEspecialidad(new Especialidad(rs.getInt("id_especialidad"),rs.getString("nombre")));
+                profesor.setEspecialidad(new Especialidad(rs.getInt("id_especialidad"),rs.getString("nombre_especialidad")));
                 profesor.setFacultad(rs.getString("facultad"));
                 profesor.setCategoria(rs.getString("categoria"));
                 profesor.setActivo(true);

@@ -239,7 +239,7 @@ create procedure LISTAR_PROFESOR(
 )begin
 	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
 		m.id_miembro_pucp, m.usuario, m.password, m.fecha_inclusion, m.imagen_perfil,
- 		pr.id_profesor, e.nombre as nombre_especialidad, pr.facultad, pr.categoria
+ 		pr.id_profesor, e.id_especialidad, e.nombre as nombre_especialidad, pr.facultad, pr.categoria
 	from persona p 
 	inner join miembro_pucp m on p.id_persona = m.fid_persona
         inner join profesor pr on pr.fid_miembro_pucp = m.id_miembro_pucp
@@ -253,7 +253,7 @@ create procedure LISTAR_PROFESOR_X_NOMBRE(
 )begin
 	select 	p.id_persona, p.nombre, p.dni, p.fecha_nacimiento, p.direccion, p.correo,
 		m.id_miembro_pucp, m.usuario, m.password, m.fecha_inclusion, m.imagen_perfil,
- 		pr.id_profesor, e.nombre as nombre_especialidad, pr.facultad, pr.categoria
+ 		pr.id_profesor, e.id_especialidad, e.nombre as nombre_especialidad, pr.facultad, pr.categoria
 	from persona p 
 	inner join miembro_pucp m on p.id_persona = m.fid_persona
         inner join profesor pr on pr.fid_miembro_pucp = m.id_miembro_pucp
@@ -453,7 +453,7 @@ create procedure LISTAR_COORDINADOR(
 	from persona p 
 	inner join miembro_pucp m on p.id_persona = m.fid_persona
         inner join coordinador c on c.fid_miembro_pucp = m.id_miembro_pucp
-	where ps.activo = true;
+	where c.activo = true;
 end$
 
 delimiter $
@@ -466,7 +466,7 @@ create procedure LISTAR_COORDINADOR_X_NOMBRE(
 	from persona p 
 	inner join miembro_pucp m on p.id_persona = m.fid_persona
         inner join coordinador c on c.fid_miembro_pucp = m.id_miembro_pucp
-	where ps.activo = true
+	where c.activo = true
 	and (p.nombre LIKE CONCAT('%',_nombre,'%'));
 end$
 
@@ -1060,6 +1060,7 @@ in _nombre varchar(250)
     from evento e inner join coordinador_eventos_ooia c on e.fid_coordinador = c.id_coordinador
     where  (e.nombre LIKE CONCAT('%',_nombre,'%')) and e.estado=1;
 end $
+
 
 --ENCUESTA_EVENTO
 delimiter $

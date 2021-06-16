@@ -5,11 +5,22 @@
       <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/EventoWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/EventoWS/EventoWS1.wsdl
   <message name="eliminarEvento">
     <part name="parameters" element="tns:eliminarEvento" />
+=======
+  <message name="listarEvento_por_fecha">
+    <part name="parameters" element="tns:listarEvento_por_fecha" />
   </message>
-  <message name="eliminarEventoResponse">
-    <part name="parameters" element="tns:eliminarEventoResponse" />
+  <message name="listarEvento_por_fechaResponse">
+    <part name="parameters" element="tns:listarEvento_por_fechaResponse" />
+  </message>
+  <message name="insertarEvento">
+    <part name="parameters" element="tns:insertarEvento" />
+>>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/EventoWS/EventoWS.wsdl
+  </message>
+  <message name="insertarEventoResponse">
+    <part name="parameters" element="tns:insertarEventoResponse" />
   </message>
   <message name="insertarEvento">
     <part name="parameters" element="tns:insertarEvento" />
@@ -23,6 +34,7 @@
   <message name="modificarEventoResponse">
     <part name="parameters" element="tns:modificarEventoResponse" />
   </message>
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/EventoWS/EventoWS1.wsdl
   <message name="listarEvento">
     <part name="parameters" element="tns:listarEvento" />
   </message>
@@ -33,6 +45,28 @@
     <operation name="eliminarEvento">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/eliminarEventoRequest" message="tns:eliminarEvento" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/eliminarEventoResponse" message="tns:eliminarEventoResponse" />
+=======
+  <message name="eliminarEvento">
+    <part name="parameters" element="tns:eliminarEvento" />
+  </message>
+  <message name="eliminarEventoResponse">
+    <part name="parameters" element="tns:eliminarEventoResponse" />
+  </message>
+  <message name="listarEvento_por_nombre_categoria">
+    <part name="parameters" element="tns:listarEvento_por_nombre_categoria" />
+  </message>
+  <message name="listarEvento_por_nombre_categoriaResponse">
+    <part name="parameters" element="tns:listarEvento_por_nombre_categoriaResponse" />
+  </message>
+  <portType name="EventoWS">
+    <operation name="listarEvento_por_fecha">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaRequest" message="tns:listarEvento_por_fecha" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_fechaResponse" message="tns:listarEvento_por_fechaResponse" />
+    </operation>
+    <operation name="insertarEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoRequest" message="tns:insertarEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
+>>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/EventoWS/EventoWS.wsdl
     </operation>
     <operation name="insertarEvento">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/insertarEventoRequest" message="tns:insertarEvento" />
@@ -42,14 +76,28 @@
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoRequest" message="tns:modificarEvento" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/modificarEventoResponse" message="tns:modificarEventoResponse" />
     </operation>
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/EventoWS/EventoWS1.wsdl
     <operation name="listarEvento">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEventoRequest" message="tns:listarEvento" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEventoResponse" message="tns:listarEventoResponse" />
+=======
+    <operation name="eliminarEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/eliminarEventoRequest" message="tns:eliminarEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/eliminarEventoResponse" message="tns:eliminarEventoResponse" />
+    </operation>
+    <operation name="listarEvento_por_nombre_categoria">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_nombre_categoriaRequest" message="tns:listarEvento_por_nombre_categoria" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoWS/listarEvento_por_nombre_categoriaResponse" message="tns:listarEvento_por_nombre_categoriaResponse" />
+>>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/EventoWS/EventoWS.wsdl
     </operation>
   </portType>
   <binding name="EventoWSPortBinding" type="tns:EventoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/EventoWS/EventoWS1.wsdl
     <operation name="eliminarEvento">
+=======
+    <operation name="listarEvento_por_fecha">
+>>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/EventoWS/EventoWS.wsdl
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +124,20 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/EventoWS/EventoWS1.wsdl
     <operation name="listarEvento">
+=======
+    <operation name="eliminarEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEvento_por_nombre_categoria">
+>>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/EventoWS/EventoWS.wsdl
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

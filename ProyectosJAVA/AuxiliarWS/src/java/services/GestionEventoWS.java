@@ -5,6 +5,7 @@
  */
 package services;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,11 +44,22 @@ public class GestionEventoWS {
         
     }
     
-    @WebMethod(operationName = "listarEvento")
-    public ArrayList<Evento> listarEvento(@WebParam(name = "nombre")String nombre) {
+    @WebMethod(operationName = "listarEvento_por_nombre_categoria")
+    public ArrayList<Evento> listarEvento_por_nombre_categoria(@WebParam(name = "nombre")String nombreCategoria) {
         ArrayList<Evento> lista= new ArrayList<>();
         try {
-            lista = eventoSQL.listar(nombre);
+            lista=eventoSQL.listar(nombreCategoria);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return lista;
+    }
+    
+     @WebMethod(operationName = "listarEvento_por_fecha")
+    public ArrayList<Evento> listarEvento_por_fecha(@WebParam(name = "fecha")Date fecha) {
+        ArrayList<Evento> lista= new ArrayList<>();
+        try {
+            lista=eventoSQL.listar_x_fecha(fecha);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

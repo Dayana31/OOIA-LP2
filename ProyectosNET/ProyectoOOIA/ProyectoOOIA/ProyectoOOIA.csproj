@@ -170,6 +170,12 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmBuscarCoordinador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmBuscarCoordinador.Designer.cs">
+      <DependentUpon>frmBuscarCoordinador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmCargarEspecialidad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,12 @@
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmBuscarAlumno.Designer.cs">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmCargarCoordinador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmCargarCoordinador.Designer.cs">
+      <DependentUpon>frmCargarCoordinador.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmCargarPsicologo.cs">
       <SubType>Form</SubType>
@@ -457,6 +469,9 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmBuscarCoordinador.resx">
+      <DependentUpon>frmBuscarCoordinador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmBuscarPsicologo.resx">
       <DependentUpon>frmBuscarPsicologo.cs</DependentUpon>
     </EmbeddedResource>
@@ -468,6 +483,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmCargarEspecialidad.resx">
       <DependentUpon>frmCargarEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmCargarCoordinador.resx">
+      <DependentUpon>frmCargarCoordinador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Miembro OOIA\Cargar Datos\Gestion_Humana\frmCargarPsicologo.resx">
       <DependentUpon>frmCargarPsicologo.cs</DependentUpon>
@@ -961,13 +979,13 @@
     <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.eliminarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.insertarProfesoresResponse.datasource">
+    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.insertarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.listarProfesoresResponse.datasource">
+    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.listarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.modificarProfesoresResponse.datasource">
+    <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.modificarProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ProfesorWS\ProyectoOOIA.ProfesorWS.profesor.datasource">

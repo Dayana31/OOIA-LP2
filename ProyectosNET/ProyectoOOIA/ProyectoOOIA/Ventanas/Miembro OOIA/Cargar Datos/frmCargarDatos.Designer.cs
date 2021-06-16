@@ -71,8 +71,28 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.txtAlumno = new System.Windows.Forms.TextBox();
             this.btnAlumno = new System.Windows.Forms.Button();
             this.tabGestionAcademica = new System.Windows.Forms.TabPage();
+            this.pnlCurso = new System.Windows.Forms.Panel();
+            this.btnCurso = new System.Windows.Forms.Button();
+            this.lblCursoForm = new System.Windows.Forms.Label();
+            this.lblCurso = new System.Windows.Forms.Label();
+            this.pnlEvaluacion = new System.Windows.Forms.Panel();
+            this.btnEvaluacionFile = new System.Windows.Forms.Button();
+            this.lblEvaluacion = new System.Windows.Forms.Label();
+            this.btnEvaluacionCSV = new System.Windows.Forms.Button();
+            this.lblEvaluacionCSV = new System.Windows.Forms.Label();
+            this.lblEvaluacionForm = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnEvaluacion = new System.Windows.Forms.Button();
+            this.pnlCursoLLevado = new System.Windows.Forms.Panel();
+            this.btnCursoLlevadoFile = new System.Windows.Forms.Button();
+            this.lblCursoLlevado = new System.Windows.Forms.Label();
+            this.btnCursoLlevadoCSV = new System.Windows.Forms.Button();
+            this.lblCursoLlevadoCSV = new System.Windows.Forms.Label();
+            this.lblCursoLlevadoForm = new System.Windows.Forms.Label();
+            this.txtCursoLlevado = new System.Windows.Forms.TextBox();
+            this.btnCursoLlevado = new System.Windows.Forms.Button();
             this.tabGestionAtencion = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlCodigoAtencion = new System.Windows.Forms.Panel();
             this.btnCodigoAtencion = new System.Windows.Forms.Button();
             this.lblCodigoAtencionForm = new System.Windows.Forms.Label();
             this.lblCodigoAtencion = new System.Windows.Forms.Label();
@@ -86,8 +106,12 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlEspecialidad.SuspendLayout();
             this.pnlAsesor.SuspendLayout();
             this.pnlAlumno.SuspendLayout();
+            this.tabGestionAcademica.SuspendLayout();
+            this.pnlCurso.SuspendLayout();
+            this.pnlEvaluacion.SuspendLayout();
+            this.pnlCursoLLevado.SuspendLayout();
             this.tabGestionAtencion.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlCodigoAtencion.SuspendLayout();
             this.SuspendLayout();
             // 
             // archivos
@@ -230,6 +254,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.btnCoordinador.TabIndex = 37;
             this.btnCoordinador.Text = "Gestionar Coordinadores";
             this.btnCoordinador.UseVisualStyleBackColor = true;
+            this.btnCoordinador.Click += new System.EventHandler(this.btnCoordinador_Click);
             // 
             // lblCoordinadorForm
             // 
@@ -532,6 +557,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             // tabGestionAcademica
             // 
             this.tabGestionAcademica.AutoScroll = true;
+            this.tabGestionAcademica.Controls.Add(this.pnlCurso);
+            this.tabGestionAcademica.Controls.Add(this.pnlEvaluacion);
+            this.tabGestionAcademica.Controls.Add(this.pnlCursoLLevado);
             this.tabGestionAcademica.Location = new System.Drawing.Point(4, 22);
             this.tabGestionAcademica.Name = "tabGestionAcademica";
             this.tabGestionAcademica.Padding = new System.Windows.Forms.Padding(3);
@@ -540,10 +568,217 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabGestionAcademica.Text = "Gestion Academica";
             this.tabGestionAcademica.UseVisualStyleBackColor = true;
             // 
+            // pnlCurso
+            // 
+            this.pnlCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCurso.Controls.Add(this.btnCurso);
+            this.pnlCurso.Controls.Add(this.lblCursoForm);
+            this.pnlCurso.Controls.Add(this.lblCurso);
+            this.pnlCurso.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCurso.Location = new System.Drawing.Point(3, 223);
+            this.pnlCurso.Name = "pnlCurso";
+            this.pnlCurso.Size = new System.Drawing.Size(670, 78);
+            this.pnlCurso.TabIndex = 40;
+            // 
+            // btnCurso
+            // 
+            this.btnCurso.Location = new System.Drawing.Point(404, 31);
+            this.btnCurso.Name = "btnCurso";
+            this.btnCurso.Size = new System.Drawing.Size(138, 29);
+            this.btnCurso.TabIndex = 37;
+            this.btnCurso.Text = "Gestionar Cursos";
+            this.btnCurso.UseVisualStyleBackColor = true;
+            // 
+            // lblCursoForm
+            // 
+            this.lblCursoForm.AutoSize = true;
+            this.lblCursoForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoForm.Location = new System.Drawing.Point(6, 34);
+            this.lblCursoForm.Name = "lblCursoForm";
+            this.lblCursoForm.Size = new System.Drawing.Size(208, 21);
+            this.lblCursoForm.TabIndex = 36;
+            this.lblCursoForm.Text = "Gestionar cursos por formulario";
+            // 
+            // lblCurso
+            // 
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.Location = new System.Drawing.Point(5, 3);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(75, 30);
+            this.lblCurso.TabIndex = 12;
+            this.lblCurso.Text = "Cursos";
+            // 
+            // pnlEvaluacion
+            // 
+            this.pnlEvaluacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEvaluacion.Controls.Add(this.btnEvaluacionFile);
+            this.pnlEvaluacion.Controls.Add(this.lblEvaluacion);
+            this.pnlEvaluacion.Controls.Add(this.btnEvaluacionCSV);
+            this.pnlEvaluacion.Controls.Add(this.lblEvaluacionCSV);
+            this.pnlEvaluacion.Controls.Add(this.lblEvaluacionForm);
+            this.pnlEvaluacion.Controls.Add(this.textBox2);
+            this.pnlEvaluacion.Controls.Add(this.btnEvaluacion);
+            this.pnlEvaluacion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEvaluacion.Location = new System.Drawing.Point(3, 113);
+            this.pnlEvaluacion.Name = "pnlEvaluacion";
+            this.pnlEvaluacion.Size = new System.Drawing.Size(670, 110);
+            this.pnlEvaluacion.TabIndex = 39;
+            // 
+            // btnEvaluacionFile
+            // 
+            this.btnEvaluacionFile.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEvaluacionFile.Location = new System.Drawing.Point(366, 73);
+            this.btnEvaluacionFile.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEvaluacionFile.Name = "btnEvaluacionFile";
+            this.btnEvaluacionFile.Size = new System.Drawing.Size(33, 22);
+            this.btnEvaluacionFile.TabIndex = 37;
+            this.btnEvaluacionFile.Text = "...";
+            this.btnEvaluacionFile.UseVisualStyleBackColor = true;
+            // 
+            // lblEvaluacion
+            // 
+            this.lblEvaluacion.AutoSize = true;
+            this.lblEvaluacion.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvaluacion.Location = new System.Drawing.Point(5, 0);
+            this.lblEvaluacion.Name = "lblEvaluacion";
+            this.lblEvaluacion.Size = new System.Drawing.Size(122, 30);
+            this.lblEvaluacion.TabIndex = 12;
+            this.lblEvaluacion.Text = "Evaluaciones";
+            // 
+            // btnEvaluacionCSV
+            // 
+            this.btnEvaluacionCSV.Location = new System.Drawing.Point(404, 70);
+            this.btnEvaluacionCSV.Name = "btnEvaluacionCSV";
+            this.btnEvaluacionCSV.Size = new System.Drawing.Size(138, 28);
+            this.btnEvaluacionCSV.TabIndex = 34;
+            this.btnEvaluacionCSV.Text = "Cargar desde csv";
+            this.btnEvaluacionCSV.UseVisualStyleBackColor = true;
+            // 
+            // lblEvaluacionCSV
+            // 
+            this.lblEvaluacionCSV.AutoSize = true;
+            this.lblEvaluacionCSV.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvaluacionCSV.Location = new System.Drawing.Point(6, 51);
+            this.lblEvaluacionCSV.Name = "lblEvaluacionCSV";
+            this.lblEvaluacionCSV.Size = new System.Drawing.Size(229, 21);
+            this.lblEvaluacionCSV.TabIndex = 36;
+            this.lblEvaluacionCSV.Text = "Cargar Alumnos desde archivo CSV";
+            // 
+            // lblEvaluacionForm
+            // 
+            this.lblEvaluacionForm.AutoSize = true;
+            this.lblEvaluacionForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEvaluacionForm.Location = new System.Drawing.Point(6, 30);
+            this.lblEvaluacionForm.Name = "lblEvaluacionForm";
+            this.lblEvaluacionForm.Size = new System.Drawing.Size(243, 21);
+            this.lblEvaluacionForm.TabIndex = 35;
+            this.lblEvaluacionForm.Text = "Gestionar evaluaciones por formulario";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(10, 75);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(351, 20);
+            this.textBox2.TabIndex = 18;
+            // 
+            // btnEvaluacion
+            // 
+            this.btnEvaluacion.Location = new System.Drawing.Point(404, 27);
+            this.btnEvaluacion.Name = "btnEvaluacion";
+            this.btnEvaluacion.Size = new System.Drawing.Size(138, 29);
+            this.btnEvaluacion.TabIndex = 15;
+            this.btnEvaluacion.Text = "Gestionar Evaluaciones";
+            this.btnEvaluacion.UseVisualStyleBackColor = true;
+            // 
+            // pnlCursoLLevado
+            // 
+            this.pnlCursoLLevado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCursoLLevado.Controls.Add(this.btnCursoLlevadoFile);
+            this.pnlCursoLLevado.Controls.Add(this.lblCursoLlevado);
+            this.pnlCursoLLevado.Controls.Add(this.btnCursoLlevadoCSV);
+            this.pnlCursoLLevado.Controls.Add(this.lblCursoLlevadoCSV);
+            this.pnlCursoLLevado.Controls.Add(this.lblCursoLlevadoForm);
+            this.pnlCursoLLevado.Controls.Add(this.txtCursoLlevado);
+            this.pnlCursoLLevado.Controls.Add(this.btnCursoLlevado);
+            this.pnlCursoLLevado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCursoLLevado.Location = new System.Drawing.Point(3, 3);
+            this.pnlCursoLLevado.Name = "pnlCursoLLevado";
+            this.pnlCursoLLevado.Size = new System.Drawing.Size(670, 110);
+            this.pnlCursoLLevado.TabIndex = 38;
+            // 
+            // btnCursoLlevadoFile
+            // 
+            this.btnCursoLlevadoFile.Font = new System.Drawing.Font("Gill Sans MT", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCursoLlevadoFile.Location = new System.Drawing.Point(366, 73);
+            this.btnCursoLlevadoFile.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCursoLlevadoFile.Name = "btnCursoLlevadoFile";
+            this.btnCursoLlevadoFile.Size = new System.Drawing.Size(33, 22);
+            this.btnCursoLlevadoFile.TabIndex = 37;
+            this.btnCursoLlevadoFile.Text = "...";
+            this.btnCursoLlevadoFile.UseVisualStyleBackColor = true;
+            // 
+            // lblCursoLlevado
+            // 
+            this.lblCursoLlevado.AutoSize = true;
+            this.lblCursoLlevado.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoLlevado.Location = new System.Drawing.Point(5, 0);
+            this.lblCursoLlevado.Name = "lblCursoLlevado";
+            this.lblCursoLlevado.Size = new System.Drawing.Size(155, 30);
+            this.lblCursoLlevado.TabIndex = 12;
+            this.lblCursoLlevado.Text = "Cursos Llevados";
+            // 
+            // btnCursoLlevadoCSV
+            // 
+            this.btnCursoLlevadoCSV.Location = new System.Drawing.Point(404, 70);
+            this.btnCursoLlevadoCSV.Name = "btnCursoLlevadoCSV";
+            this.btnCursoLlevadoCSV.Size = new System.Drawing.Size(138, 28);
+            this.btnCursoLlevadoCSV.TabIndex = 34;
+            this.btnCursoLlevadoCSV.Text = "Cargar desde csv";
+            this.btnCursoLlevadoCSV.UseVisualStyleBackColor = true;
+            // 
+            // lblCursoLlevadoCSV
+            // 
+            this.lblCursoLlevadoCSV.AutoSize = true;
+            this.lblCursoLlevadoCSV.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoLlevadoCSV.Location = new System.Drawing.Point(6, 51);
+            this.lblCursoLlevadoCSV.Name = "lblCursoLlevadoCSV";
+            this.lblCursoLlevadoCSV.Size = new System.Drawing.Size(229, 21);
+            this.lblCursoLlevadoCSV.TabIndex = 36;
+            this.lblCursoLlevadoCSV.Text = "Cargar Alumnos desde archivo CSV";
+            // 
+            // lblCursoLlevadoForm
+            // 
+            this.lblCursoLlevadoForm.AutoSize = true;
+            this.lblCursoLlevadoForm.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoLlevadoForm.Location = new System.Drawing.Point(6, 30);
+            this.lblCursoLlevadoForm.Name = "lblCursoLlevadoForm";
+            this.lblCursoLlevadoForm.Size = new System.Drawing.Size(276, 21);
+            this.lblCursoLlevadoForm.TabIndex = 35;
+            this.lblCursoLlevadoForm.Text = "Gestionar los cursos de alumnos formulario";
+            // 
+            // txtCursoLlevado
+            // 
+            this.txtCursoLlevado.Enabled = false;
+            this.txtCursoLlevado.Location = new System.Drawing.Point(10, 75);
+            this.txtCursoLlevado.Name = "txtCursoLlevado";
+            this.txtCursoLlevado.Size = new System.Drawing.Size(351, 20);
+            this.txtCursoLlevado.TabIndex = 18;
+            // 
+            // btnCursoLlevado
+            // 
+            this.btnCursoLlevado.Location = new System.Drawing.Point(404, 27);
+            this.btnCursoLlevado.Name = "btnCursoLlevado";
+            this.btnCursoLlevado.Size = new System.Drawing.Size(138, 29);
+            this.btnCursoLlevado.TabIndex = 15;
+            this.btnCursoLlevado.Text = "Gestionar Historia";
+            this.btnCursoLlevado.UseVisualStyleBackColor = true;
+            // 
             // tabGestionAtencion
             // 
             this.tabGestionAtencion.AutoScroll = true;
-            this.tabGestionAtencion.Controls.Add(this.panel2);
+            this.tabGestionAtencion.Controls.Add(this.pnlCodigoAtencion);
             this.tabGestionAtencion.Location = new System.Drawing.Point(4, 22);
             this.tabGestionAtencion.Name = "tabGestionAtencion";
             this.tabGestionAtencion.Padding = new System.Windows.Forms.Padding(3);
@@ -552,17 +787,17 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.tabGestionAtencion.Text = "Gestion Atencion";
             this.tabGestionAtencion.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // pnlCodigoAtencion
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnCodigoAtencion);
-            this.panel2.Controls.Add(this.lblCodigoAtencionForm);
-            this.panel2.Controls.Add(this.lblCodigoAtencion);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(670, 78);
-            this.panel2.TabIndex = 40;
+            this.pnlCodigoAtencion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCodigoAtencion.Controls.Add(this.btnCodigoAtencion);
+            this.pnlCodigoAtencion.Controls.Add(this.lblCodigoAtencionForm);
+            this.pnlCodigoAtencion.Controls.Add(this.lblCodigoAtencion);
+            this.pnlCodigoAtencion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlCodigoAtencion.Location = new System.Drawing.Point(3, 3);
+            this.pnlCodigoAtencion.Name = "pnlCodigoAtencion";
+            this.pnlCodigoAtencion.Size = new System.Drawing.Size(670, 78);
+            this.pnlCodigoAtencion.TabIndex = 40;
             // 
             // btnCodigoAtencion
             // 
@@ -622,9 +857,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             this.pnlAsesor.PerformLayout();
             this.pnlAlumno.ResumeLayout(false);
             this.pnlAlumno.PerformLayout();
+            this.tabGestionAcademica.ResumeLayout(false);
+            this.pnlCurso.ResumeLayout(false);
+            this.pnlCurso.PerformLayout();
+            this.pnlEvaluacion.ResumeLayout(false);
+            this.pnlEvaluacion.PerformLayout();
+            this.pnlCursoLLevado.ResumeLayout(false);
+            this.pnlCursoLLevado.PerformLayout();
             this.tabGestionAtencion.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlCodigoAtencion.ResumeLayout(false);
+            this.pnlCodigoAtencion.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -672,10 +914,30 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
         private System.Windows.Forms.RadioButton rbProfesor;
         private System.Windows.Forms.Button btnAsesorFile;
         private System.Windows.Forms.Button btnAlumnoFile;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlCodigoAtencion;
         private System.Windows.Forms.Button btnCodigoAtencion;
         private System.Windows.Forms.Label lblCodigoAtencionForm;
         private System.Windows.Forms.Label lblCodigoAtencion;
         private System.Windows.Forms.PictureBox btnBack;
+        private System.Windows.Forms.Panel pnlCurso;
+        private System.Windows.Forms.Button btnCurso;
+        private System.Windows.Forms.Label lblCursoForm;
+        private System.Windows.Forms.Label lblCurso;
+        private System.Windows.Forms.Panel pnlEvaluacion;
+        private System.Windows.Forms.Button btnEvaluacionFile;
+        private System.Windows.Forms.Label lblEvaluacion;
+        private System.Windows.Forms.Button btnEvaluacionCSV;
+        private System.Windows.Forms.Label lblEvaluacionCSV;
+        private System.Windows.Forms.Label lblEvaluacionForm;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnEvaluacion;
+        private System.Windows.Forms.Panel pnlCursoLLevado;
+        private System.Windows.Forms.Button btnCursoLlevadoFile;
+        private System.Windows.Forms.Label lblCursoLlevado;
+        private System.Windows.Forms.Button btnCursoLlevadoCSV;
+        private System.Windows.Forms.Label lblCursoLlevadoCSV;
+        private System.Windows.Forms.Label lblCursoLlevadoForm;
+        private System.Windows.Forms.TextBox txtCursoLlevado;
+        private System.Windows.Forms.Button btnCursoLlevado;
     }
 }
