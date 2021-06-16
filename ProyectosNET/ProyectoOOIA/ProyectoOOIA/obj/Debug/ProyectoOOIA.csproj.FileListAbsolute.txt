@@ -1,3 +1,4 @@
+
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe.config
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.exe
 C:\7mo ciclo\LP2\Proyecto Lp2\OOIA - C#\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA.pdb
@@ -432,14 +433,3 @@ C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\ProyectoOOIA
 C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\Bunifu_UI_v1.5.dll
 C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\bin\Debug\MaterialSkin.dll
 C:\Github\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.csproj.CopyComplete
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica.frmCargarCursos.resources
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmBuscarCoordinador.resources
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmBuscarPsicologo.resources
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmBuscarProfesor.resources
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana.frmCargarEspecialidad.resources
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCoordinador.resources
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarPsicologo.resources
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarProfesor.resources
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVAlumnos.resources
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVProfesores.resources
-C:\Repositorios\OOIA-LP2\ProyectosNET\ProyectoOOIA\ProyectoOOIA\obj\Debug\ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.frmCargarCSVPsicologos.resources
