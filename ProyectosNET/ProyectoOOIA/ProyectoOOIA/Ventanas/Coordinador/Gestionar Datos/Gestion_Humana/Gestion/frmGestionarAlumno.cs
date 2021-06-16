@@ -9,9 +9,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 {
     public partial class frmGestionarAlumno : Form
     {
-        private EspecialidadWS.EspecialidadWSClient daoEspecialidad;
-        private AlumnoWS.AlumnoWSClient daoAlumno;
-        private AlumnoWS.alumno alumno;
+        private GestionHumanaWS.GestionHumanaWSClient daoEspecialidad;
+        private GestionHumanaWS.GestionHumanaWSClient daoAlumno;
+        private GestionHumanaWS.alumno alumno;
         private byte[] imagen_perfil;
         private Estado estado;
 
@@ -21,9 +21,9 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             estado = Estado.Inicial;
             clearall();
             cambiarEstado();
-            daoEspecialidad = new EspecialidadWS.EspecialidadWSClient();
-            daoAlumno = new AlumnoWS.AlumnoWSClient();
-            cbEspecialidad.DataSource = new BindingList<EspecialidadWS.especialidad>
+            daoEspecialidad = new GestionHumanaWS.GestionHumanaWSClient();
+            daoAlumno = new GestionHumanaWS.GestionHumanaWSClient();
+            cbEspecialidad.DataSource = new BindingList<GestionHumanaWS.especialidad>
                 (daoEspecialidad.listarEspecialidad().ToList());
             cbEspecialidad.DisplayMember = "nombre";
             cbEspecialidad.ValueMember = "id_especialidad";
@@ -153,7 +153,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         /*Botones de Toolstrip*/
 
-        public void fillText(AlumnoWS.alumno alu)
+        public void fillText(GestionHumanaWS.alumno alu)
         {
             //Persona
             txtDni.Text = alu.dni;
@@ -176,7 +176,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void tsbNuevo_Click(object sender, EventArgs e)
         {
-            this.alumno = new AlumnoWS.alumno();
+            this.alumno = new GestionHumanaWS.alumno();
             estado = Estado.Nuevo;
             cambiarEstado();
             clearall();
@@ -249,7 +249,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             //Alumno
             alumno.codigo = txtCodigo.Text;
             EspecialidadWS.especialidad esp_selected = (EspecialidadWS.especialidad)cbEspecialidad.SelectedItem;
-            alumno.especialidad = new AlumnoWS.especialidad();
+            alumno.especialidad = new GestionHumanaWS.especialidad();
             alumno.especialidad.id_especialidad = esp_selected.id_especialidad;
             alumno.craest = 0;
             alumno.creditos_aprobados = 0;

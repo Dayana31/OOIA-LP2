@@ -8,16 +8,16 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
     public partial class frmBuscarAlumno : Form
     {
-        private AlumnoWS.AlumnoWSClient daoAlumno;
-        private AlumnoWS.alumno _alumno;
+        private GestionHumanaWS.GestionHumanaWSClient daoAlumno;
+        private GestionHumanaWS.alumno _alumno;
 
-        public AlumnoWS.alumno Alumno { get => _alumno; set => _alumno = value; }
+        public GestionHumanaWS.alumno Alumno { get => _alumno; set => _alumno = value; }
 
         public frmBuscarAlumno()
         {
             InitializeComponent();
             dgvAlumnos.AutoGenerateColumns = false;
-            daoAlumno = new AlumnoWS.AlumnoWSClient();
+            daoAlumno = new GestionHumanaWS.GestionHumanaWSClient();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -27,8 +27,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BindingList<AlumnoWS.alumno>
-                alumnos = new BindingList<AlumnoWS.alumno>
+            BindingList<GestionHumanaWS.alumno>
+                alumnos = new BindingList<GestionHumanaWS.alumno>
                 (daoAlumno.listarAlumno().ToList());
             dgvAlumnos.DataSource = alumnos;
         }
@@ -38,15 +38,15 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos
             if (dgvAlumnos.CurrentRow != null)
             {
                 _alumno =
-              (AlumnoWS.alumno)dgvAlumnos.CurrentRow.DataBoundItem;
+              (GestionHumanaWS.alumno)dgvAlumnos.CurrentRow.DataBoundItem;
                 this.DialogResult = DialogResult.OK;
             }
         }
 
         private void dgvAlumnos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            AlumnoWS.alumno data = dgvAlumnos.Rows[e.RowIndex].DataBoundItem
-            as AlumnoWS.alumno;
+            GestionHumanaWS.alumno data = dgvAlumnos.Rows[e.RowIndex].DataBoundItem
+            as GestionHumanaWS.alumno;
             dgvAlumnos.Rows[e.RowIndex].Cells["Especialidad"].Value = data.especialidad.nombre;
         }
     }
