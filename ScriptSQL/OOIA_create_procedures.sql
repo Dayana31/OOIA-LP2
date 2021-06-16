@@ -1061,6 +1061,7 @@ in _nombre varchar(250)
     where  (e.nombre LIKE CONCAT('%',_nombre,'%')) and e.estado=1;
 end $
 
+
 --ENCUESTA_EVENTO
 delimiter $
 create procedure INSERTAR_EVENTO_ALUMNO(
