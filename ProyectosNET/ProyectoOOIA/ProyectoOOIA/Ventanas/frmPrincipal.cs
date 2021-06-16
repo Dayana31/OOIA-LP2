@@ -2,9 +2,7 @@
 using System;
 using System.ComponentModel;
 using System.Drawing;
-using System.IO;
 using System.Windows.Forms;
-using ProyectoOOIA.GestionHumanaWS;
 
 namespace ProyectoOOIA.Ventanas
 {
@@ -13,37 +11,24 @@ namespace ProyectoOOIA.Ventanas
         private BindingList<Bitmap> listaImagenes = new BindingList<Bitmap>();
         private int indice = 0;
         private TipoUsuario tipo;
-        private int id_usuario;
-        private int tipoIdUsuario;
-        private GestionHumanaWS.persona usuario = null;
-        private GestionHumanaWS.GestionHumanaWSClient usuarioDao;
-        public frmPrincipal(TipoUsuario tipoUsuario,int id_usuario,int tipoIdUsuario)
+        public frmPrincipal(TipoUsuario tipoUsuario)
         {
             InitializeComponent();
-            usuarioDao = new GestionHumanaWSClient();
             btnCargaDatos.Visible = false;
             tipo = tipoUsuario;
-            this.id_usuario = id_usuario;
-            this.tipoIdUsuario = tipoIdUsuario;
             if (tipo == TipoUsuario.Asesor)
             {
-                if (tipoIdUsuario == 2) usuario = usuarioDao.listar_profesor_x_id(id_usuario);
-                else if (tipoIdUsuario == 3) usuario = usuarioDao.listar_psicologo_x_id(id_usuario);
                 btnEventos.Enabled = false;
                 //btnEventos.Visible = false;
                 txtEventos.Enabled = false;
-                
             }
-
             if (tipo == TipoUsuario.OOIA)
             {
-                usuario = usuarioDao.listar_coordinador_x_id(id_usuario);
                 btnCargaDatos.Visible = true;
                 btnCitas.Enabled = false;
                 //btnCitas.Visible = false;
                 txtCitas.Enabled = false;
             }
-            else usuario = usuarioDao.listar_alumno_x_id(id_usuario);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.EEGGCC);
             listaImagenes.Add(ProyectoOOIA.Properties.Resources.Estudiante);
@@ -54,42 +39,6 @@ namespace ProyectoOOIA.Ventanas
             ttEjemplo.SetToolTip(btnCitas, "Programar citas");
 
         }
-        public frmPrincipal(TipoUsuario tipoUsuario,GestionHumanaWS.persona persona)
-        {
-            InitializeComponent();
-            
-            btnCargaDatos.Visible = false;
-            tipo = tipoUsuario;
-            //this.id_usuario = id_usuario;
-            //this.tipoIdUsuario = tipoIdUsuario;
-            this.usuario = persona;
-            if (tipo == TipoUsuario.Asesor)
-            {
-                btnEventos.Enabled = false;
-                //btnEventos.Visible = false;
-                txtEventos.Enabled = false;
-                
-            }
-
-            if (tipo == TipoUsuario.OOIA)
-            {
-                btnCargaDatos.Visible = true;
-                btnCitas.Enabled = false;
-                //btnCitas.Visible = false;
-                txtCitas.Enabled = false;
-            }
-            
-            listaImagenes.Add(ProyectoOOIA.Properties.Resources.profesor);
-            listaImagenes.Add(ProyectoOOIA.Properties.Resources.EEGGCC);
-            listaImagenes.Add(ProyectoOOIA.Properties.Resources.Estudiante);
-            listaImagenes.Add(ProyectoOOIA.Properties.Resources.Tramite);
-            imagenes.Image = listaImagenes[0];
-            //ToolTip ttEjemplo = new ToolTip();
-
-            //ttEjemplo.SetToolTip(btnCitas, "Programar citas");
-
-        }
-
 
 
         private void imagenes_Click(object sender, EventArgs e)
@@ -101,21 +50,21 @@ namespace ProyectoOOIA.Ventanas
         {
             indice++;
             if (indice >= listaImagenes.Count)
-                indice = 0; 
+                indice = 0;
             imagenes.Image = listaImagenes[indice];
         }
 
         private void botonCitas_Click(object sender, EventArgs e)
         {
-            if (tipo == TipoUsuario.Alumno) new frmCitasAlumno(usuario).Show();
-            if (tipo == TipoUsuario.Asesor) new frmHorarioAsesor(usuario).Show();
+            if (tipo == TipoUsuario.Alumno) new frmCitasAlumno().Show();
+            if (tipo == TipoUsuario.Asesor) new frmHorarioAsesor().Show();
             this.Close();
         }
 
         private void botonEventos_Click(object sender, EventArgs e)
         {
-            if (tipo == TipoUsuario.Alumno) new frmRegistroEvento(usuario).Show();
-            if (tipo == TipoUsuario.OOIA) new frmGestionEventosOOIA(Estado.Inicial,usuario).Show();
+            if (tipo == TipoUsuario.Alumno) new frmRegistroEvento().Show();
+            if (tipo == TipoUsuario.OOIA) new frmGestionEventosOOIA(Estado.Inicial).Show();
             this.Close();
         }
 
@@ -128,31 +77,6 @@ namespace ProyectoOOIA.Ventanas
         private void btnCargaDatos_Click(object sender, EventArgs e)
         {
             new frmCargarDatos().ShowDialog();
-
-        }
-
-        private void frmPrincipal_ClientSizeChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-            lblUsername.Text = usuario.nombre;
-            try
-            {
-                imagen.BackgroundImage = new Bitmap(new MemoryStream(((miembroPUCP)usuario).imagenDePerfil));
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception);
-                //throw;
-            }
-            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }

@@ -2,9 +2,10 @@
 <definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://services.OOIA.pucp.edu.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CoordinadorWS" targetNamespace="http://services.OOIA.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://localhost:8080/WebServicesOOIA/CoordinadorWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
+      <xsd:import schemaLocation="http://localhost:8082/WebServicesOOIA/CoordinadorWS?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS1.wsdl
   <message name="insertarCoordinador">
     <part name="parameters" element="tns:insertarCoordinador" />
   </message>
@@ -26,6 +27,8 @@
   <message name="modificarCoordinadorResponse">
     <part name="parameters" element="tns:modificarCoordinadorResponse" />
   </message>
+=======
+>>>>>>> parent of 945bb9f (Inicio de sesion):ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS.wsdl
   <message name="eliminarCoordinador">
     <part name="parameters" element="tns:eliminarCoordinador" />
   </message>
@@ -39,6 +42,7 @@
   <message name="listarCoordinadorResponse">
     <part name="parameters" element="tns:listarCoordinadorResponse" />
   </message>
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS1.wsdl
 =======
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS.wsdl
   <portType name="CoordinadorWS">
@@ -57,6 +61,21 @@
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorRequest" message="tns:modificarCoordinador" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorResponse" message="tns:modificarCoordinadorResponse" />
     </operation>
+=======
+  <message name="insertarCoordinador">
+    <part name="parameters" element="tns:insertarCoordinador" />
+  </message>
+  <message name="insertarCoordinadorResponse">
+    <part name="parameters" element="tns:insertarCoordinadorResponse" />
+  </message>
+  <message name="modificarCoordinador">
+    <part name="parameters" element="tns:modificarCoordinador" />
+  </message>
+  <message name="modificarCoordinadorResponse">
+    <part name="parameters" element="tns:modificarCoordinadorResponse" />
+  </message>
+  <portType name="CoordinadorWS">
+>>>>>>> parent of 945bb9f (Inicio de sesion):ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS.wsdl
     <operation name="eliminarCoordinador">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorRequest" message="tns:eliminarCoordinador" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorResponse" message="tns:eliminarCoordinadorResponse" />
@@ -66,12 +85,23 @@
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/listarCoordinadorRequest" message="tns:listarCoordinador" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/listarCoordinadorResponse" message="tns:listarCoordinadorResponse" />
     </operation>
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS1.wsdl
 =======
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS.wsdl
+=======
+    <operation name="insertarCoordinador">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorRequest" message="tns:insertarCoordinador" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorResponse" message="tns:insertarCoordinadorResponse" />
+    </operation>
+    <operation name="modificarCoordinador">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorRequest" message="tns:modificarCoordinador" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorResponse" message="tns:modificarCoordinadorResponse" />
+    </operation>
+>>>>>>> parent of 945bb9f (Inicio de sesion):ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS.wsdl
   </portType>
   <binding name="CoordinadorWSPortBinding" type="tns:CoordinadorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarCoordinador">
+    <operation name="eliminarCoordinador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -80,7 +110,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarCoordinador">
+    <operation name="listarCoordinador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -90,10 +120,14 @@
       </output>
     </operation>
 <<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS1.wsdl
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS1.wsdl
     <operation name="eliminarCoordinador">
 =======
     <operation name="modificarCoordinador">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS.wsdl
+=======
+    <operation name="insertarCoordinador">
+>>>>>>> parent of 945bb9f (Inicio de sesion):ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS.wsdl
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -102,11 +136,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS1.wsdl
 <<<<<<< HEAD:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS1.wsdl
     <operation name="listarCoordinador">
 =======
     <operation name="eliminarCoordinador">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a:ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS.wsdl
+=======
+    <operation name="modificarCoordinador">
+>>>>>>> parent of 945bb9f (Inicio de sesion):ProyectosNET/ProyectoOOIA/ProyectoOOIA/Connected Services/CoordinadorWS/CoordinadorWS.wsdl
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -118,7 +156,7 @@
   </binding>
   <service name="CoordinadorWS">
     <port name="CoordinadorWSPort" binding="tns:CoordinadorWSPortBinding">
-      <soap:address location="http://localhost:8080/WebServicesOOIA/CoordinadorWS" />
+      <soap:address location="http://localhost:8082/WebServicesOOIA/CoordinadorWS" />
     </port>
   </service>
 </definitions>

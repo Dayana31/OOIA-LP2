@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/PsicologoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8082/WebServicesOOIA/PsicologoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PsicologoWS1.xsd" MetadataType="Schema" ID="a9eae66f-d741-47e9-9a22-d956118bfa67" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PsicologoWS?xsd=1" />
-    <MetadataFile FileName="PsicologoWS1.wsdl" MetadataType="Wsdl" ID="0d517f57-b347-4553-a090-a980e444528c" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PsicologoWS?WSDL" />
+    <MetadataFile FileName="PsicologoWS.xsd" MetadataType="Schema" ID="e729e5b6-506a-4a54-a551-d6a20626537d" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/PsicologoWS?xsd=1" />
+    <MetadataFile FileName="PsicologoWS.wsdl" MetadataType="Wsdl" ID="71b22aea-4111-4ca7-859a-25f10f2f7faf" SourceId="1" SourceUrl="http://localhost:8082/WebServicesOOIA/PsicologoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

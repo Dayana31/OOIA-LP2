@@ -26,51 +26,32 @@ namespace ProyectoOOIA.Ventanas
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            lblPassIncorrecto.Visible = false;
-            lblTipoIncorrecto.Visible = false;
-            lblIncorrecto.Visible = false;
-            int id_persona =
-                new GestionHumanaWS.GestionHumanaWSClient().autenticarUsuario(txtUsuario.Text, txtContraseña.Text);
-            int tipoUsuario = new GestionHumanaWS.GestionHumanaWSClient().tipoUsuario(id_persona);
-
             if (rbtAlumno.Checked == false && rbtTutor.Checked == false && rbtMiembroOOIA.Checked == false)
             {
                 lblPassIncorrecto.Visible = false;
                 lblTipoIncorrecto.Visible = true;
-                lblIncorrecto.Visible = false;
             }
-            else 
-            if (id_persona==0)
+            else if (txtContraseña.Text == "")
             {
                 lblTipoIncorrecto.Visible = false;
                 lblPassIncorrecto.Visible = true;
-                lblIncorrecto.Visible = false;
             }
             else
             {
-                
-                if (rbtAlumno.Checked == true && tipoUsuario==1)
+           
+                if (rbtAlumno.Checked == true)
                 {
-                    new frmPrincipal(TipoUsuario.Alumno,id_persona,tipoUsuario).Show();
-                    this.Close();
+                    new frmPrincipal(TipoUsuario.Alumno).Show();
                 }
-                else if (rbtTutor.Checked == true && (tipoUsuario==2 || tipoUsuario==3))
+                else if (rbtTutor.Checked == true)
                 {
-                    new frmPrincipal(TipoUsuario.Asesor, id_persona, tipoUsuario).Show();
-                    this.Close();
-                }
-                else if (tipoUsuario == 4)
-                {
-                    new frmPrincipal(TipoUsuario.OOIA, id_persona, tipoUsuario).Show();
-                    this.Close();
+                    new frmPrincipal(TipoUsuario.Asesor).Show();
                 }
                 else
                 {
-                    lblTipoIncorrecto.Visible = false;
-                    lblPassIncorrecto.Visible = false;
-                    lblIncorrecto.Visible = true;
+                    new frmPrincipal(TipoUsuario.OOIA).Show();
                 }
-                
+                this.Close();
             }
         }
 

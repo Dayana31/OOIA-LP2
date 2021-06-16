@@ -5,7 +5,7 @@ namespace ProyectoOOIA.Ventanas
 {
     public partial class frmHorarioAsesor : Form
     {
-        private GestionHumanaWS.persona persona;
+
         //private Horario _horarioSeleccionado;
 
         public frmHorarioAsesor()
@@ -13,15 +13,9 @@ namespace ProyectoOOIA.Ventanas
             InitializeComponent();
         }
 
-        public frmHorarioAsesor(GestionHumanaWS.persona persona)
-        {
-            InitializeComponent();
-            this.persona = persona;
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
-            new frmPrincipal(TipoUsuario.Asesor,persona).Show();
+            new frmPrincipal(TipoUsuario.Asesor).Show();
             this.Close();
         }
 

@@ -34,10 +34,14 @@ public class EventoWS {
         ArrayList<Evento> lista= new ArrayList<>();
         try {
 <<<<<<< HEAD
+<<<<<<< HEAD
             lista=evento.listar(nombre);
 =======
             lista=evento.listar(nombreCategoria);
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+            lista=evento.listar();
+>>>>>>> parent of 945bb9f (Inicio de sesion)
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

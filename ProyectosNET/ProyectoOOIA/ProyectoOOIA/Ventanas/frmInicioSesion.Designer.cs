@@ -30,7 +30,6 @@ namespace ProyectoOOIA.Ventanas
         private void InitializeComponent()
         {
             this.pnlRight = new System.Windows.Forms.Panel();
-            this.lblTipoIncorrecto = new System.Windows.Forms.Label();
             this.rbtMiembroOOIA = new System.Windows.Forms.RadioButton();
             this.rbtTutor = new System.Windows.Forms.RadioButton();
             this.rbtAlumno = new System.Windows.Forms.RadioButton();
@@ -49,7 +48,7 @@ namespace ProyectoOOIA.Ventanas
             this.pbPUCP = new System.Windows.Forms.PictureBox();
             this.pbImagen = new System.Windows.Forms.PictureBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.lblIncorrecto = new System.Windows.Forms.Label();
+            this.lblTipoIncorrecto = new System.Windows.Forms.Label();
             this.pnlRight.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPUCP)).BeginInit();
@@ -59,7 +58,6 @@ namespace ProyectoOOIA.Ventanas
             // pnlRight
             // 
             this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(71)))), ((int)(((byte)(123)))));
-            this.pnlRight.Controls.Add(this.lblIncorrecto);
             this.pnlRight.Controls.Add(this.lblTipoIncorrecto);
             this.pnlRight.Controls.Add(this.rbtMiembroOOIA);
             this.pnlRight.Controls.Add(this.rbtTutor);
@@ -78,17 +76,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlRight.Size = new System.Drawing.Size(618, 523);
             this.pnlRight.TabIndex = 8;
             this.pnlRight.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.pnlRight_PreviewKeyDown);
-            // 
-            // lblTipoIncorrecto
-            // 
-            this.lblTipoIncorrecto.AutoSize = true;
-            this.lblTipoIncorrecto.ForeColor = System.Drawing.Color.Salmon;
-            this.lblTipoIncorrecto.Location = new System.Drawing.Point(229, 325);
-            this.lblTipoIncorrecto.Name = "lblTipoIncorrecto";
-            this.lblTipoIncorrecto.Size = new System.Drawing.Size(146, 13);
-            this.lblTipoIncorrecto.TabIndex = 15;
-            this.lblTipoIncorrecto.Text = "Seleccione su tipo de usuario";
-            this.lblTipoIncorrecto.Visible = false;
             // 
             // rbtMiembroOOIA
             // 
@@ -297,16 +284,16 @@ namespace ProyectoOOIA.Ventanas
             this.splitter1.TabIndex = 9;
             this.splitter1.TabStop = false;
             // 
-            // lblIncorrecto
+            // lblTipoIncorrecto
             // 
-            this.lblIncorrecto.AutoSize = true;
-            this.lblIncorrecto.ForeColor = System.Drawing.Color.Salmon;
-            this.lblIncorrecto.Location = new System.Drawing.Point(214, 325);
-            this.lblIncorrecto.Name = "lblIncorrecto";
-            this.lblIncorrecto.Size = new System.Drawing.Size(198, 13);
-            this.lblIncorrecto.TabIndex = 16;
-            this.lblIncorrecto.Text = "El tipo de usuario escogido es incorrecto";
-            this.lblIncorrecto.Visible = false;
+            this.lblTipoIncorrecto.AutoSize = true;
+            this.lblTipoIncorrecto.ForeColor = System.Drawing.Color.Salmon;
+            this.lblTipoIncorrecto.Location = new System.Drawing.Point(229, 325);
+            this.lblTipoIncorrecto.Name = "lblTipoIncorrecto";
+            this.lblTipoIncorrecto.Size = new System.Drawing.Size(146, 13);
+            this.lblTipoIncorrecto.TabIndex = 15;
+            this.lblTipoIncorrecto.Text = "Seleccione su tipo de usuario";
+            this.lblTipoIncorrecto.Visible = false;
             // 
             // frmInicioSesion
             // 
@@ -358,6 +345,5 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.RadioButton rbtTutor;
         private System.Windows.Forms.RadioButton rbtAlumno;
         private System.Windows.Forms.Label lblTipoIncorrecto;
-        private System.Windows.Forms.Label lblIncorrecto;
     }
 }

@@ -5,17 +5,23 @@
       <xsd:import schemaLocation="http://localhost:8080/AuxiliarWS/GesionEventoWS?xsd=1" namespace="http://services/" />
     </xsd:schema>
   </types>
-  <message name="listarCategoriaEvento">
-    <part name="parameters" element="tns:listarCategoriaEvento" />
-  </message>
-  <message name="listarCategoriaEventoResponse">
-    <part name="parameters" element="tns:listarCategoriaEventoResponse" />
-  </message>
   <message name="insertarCategoriaEvento">
     <part name="parameters" element="tns:insertarCategoriaEvento" />
   </message>
   <message name="insertarCategoriaEventoResponse">
     <part name="parameters" element="tns:insertarCategoriaEventoResponse" />
+  </message>
+  <message name="eliminarCoordinadorEvento">
+    <part name="parameters" element="tns:eliminarCoordinadorEvento" />
+  </message>
+  <message name="eliminarCoordinadorEventoResponse">
+    <part name="parameters" element="tns:eliminarCoordinadorEventoResponse" />
+  </message>
+  <message name="listarCategoriaEvento">
+    <part name="parameters" element="tns:listarCategoriaEvento" />
+  </message>
+  <message name="listarCategoriaEventoResponse">
+    <part name="parameters" element="tns:listarCategoriaEventoResponse" />
   </message>
   <message name="modificarCategoriaEvento">
     <part name="parameters" element="tns:modificarCategoriaEvento" />
@@ -29,41 +35,11 @@
   <message name="eliminarCategoriaEventoResponse">
     <part name="parameters" element="tns:eliminarCategoriaEventoResponse" />
   </message>
-  <message name="eliminarEvento">
-    <part name="parameters" element="tns:eliminarEvento" />
-  </message>
-  <message name="eliminarEventoResponse">
-    <part name="parameters" element="tns:eliminarEventoResponse" />
-  </message>
-  <message name="insertarEvento">
-    <part name="parameters" element="tns:insertarEvento" />
-  </message>
-  <message name="insertarEventoResponse">
-    <part name="parameters" element="tns:insertarEventoResponse" />
-  </message>
-  <message name="modificarEvento">
-    <part name="parameters" element="tns:modificarEvento" />
-  </message>
-  <message name="modificarEventoResponse">
-    <part name="parameters" element="tns:modificarEventoResponse" />
-  </message>
-  <message name="listarEvento">
-    <part name="parameters" element="tns:listarEvento" />
-  </message>
-  <message name="listarEventoResponse">
-    <part name="parameters" element="tns:listarEventoResponse" />
-  </message>
   <message name="insertarEncuestaEvento">
     <part name="parameters" element="tns:insertarEncuestaEvento" />
   </message>
   <message name="insertarEncuestaEventoResponse">
     <part name="parameters" element="tns:insertarEncuestaEventoResponse" />
-  </message>
-  <message name="listarCoordinadorEvento">
-    <part name="parameters" element="tns:listarCoordinadorEvento" />
-  </message>
-  <message name="listarCoordinadorEventoResponse">
-    <part name="parameters" element="tns:listarCoordinadorEventoResponse" />
   </message>
   <message name="listarCoordinadorEvento">
     <part name="parameters" element="tns:listarCoordinadorEvento" />
@@ -77,6 +53,7 @@
   <message name="modificarCoordinadorEventoResponse">
     <part name="parameters" element="tns:modificarCoordinadorEventoResponse" />
   </message>
+<<<<<<< HEAD
   <message name="eliminarCoordinadorEvento">
     <part name="parameters" element="tns:eliminarCoordinadorEvento" />
 <<<<<<< HEAD
@@ -117,6 +94,8 @@
     <part name="parameters" element="tns:listarEncuestaEventoResponse" />
   </message>
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 945bb9f (Inicio de sesion)
   <message name="modificarEncuestaEvento">
     <part name="parameters" element="tns:modificarEncuestaEvento" />
   </message>
@@ -154,14 +133,54 @@
     <part name="parameters" element="tns:listarEvento_por_nombre_categoriaResponse" />
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
   </message>
+  <message name="listarEncuestaEvento">
+    <part name="parameters" element="tns:listarEncuestaEvento" />
+  </message>
+  <message name="listarEncuestaEventoResponse">
+    <part name="parameters" element="tns:listarEncuestaEventoResponse" />
+  </message>
+  <message name="listarCoordinadorEvento">
+    <part name="parameters" element="tns:listarCoordinadorEvento" />
+  </message>
+  <message name="listarCoordinadorEventoResponse">
+    <part name="parameters" element="tns:listarCoordinadorEventoResponse" />
+  </message>
+  <message name="modificarEvento">
+    <part name="parameters" element="tns:modificarEvento" />
+  </message>
+  <message name="modificarEventoResponse">
+    <part name="parameters" element="tns:modificarEventoResponse" />
+  </message>
+  <message name="eliminarEvento">
+    <part name="parameters" element="tns:eliminarEvento" />
+  </message>
+  <message name="eliminarEventoResponse">
+    <part name="parameters" element="tns:eliminarEventoResponse" />
+  </message>
+  <message name="insertarEvento">
+    <part name="parameters" element="tns:insertarEvento" />
+  </message>
+  <message name="insertarEventoResponse">
+    <part name="parameters" element="tns:insertarEventoResponse" />
+  </message>
+  <message name="listarEvento">
+    <part name="parameters" element="tns:listarEvento" />
+  </message>
+  <message name="listarEventoResponse">
+    <part name="parameters" element="tns:listarEventoResponse" />
+  </message>
   <portType name="GestionEventoWS">
-    <operation name="listarCategoriaEvento">
-      <input wsam:Action="http://services/GestionEventoWS/listarCategoriaEventoRequest" message="tns:listarCategoriaEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/listarCategoriaEventoResponse" message="tns:listarCategoriaEventoResponse" />
-    </operation>
     <operation name="insertarCategoriaEvento">
       <input wsam:Action="http://services/GestionEventoWS/insertarCategoriaEventoRequest" message="tns:insertarCategoriaEvento" />
       <output wsam:Action="http://services/GestionEventoWS/insertarCategoriaEventoResponse" message="tns:insertarCategoriaEventoResponse" />
+    </operation>
+    <operation name="eliminarCoordinadorEvento">
+      <input wsam:Action="http://services/GestionEventoWS/eliminarCoordinadorEventoRequest" message="tns:eliminarCoordinadorEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/eliminarCoordinadorEventoResponse" message="tns:eliminarCoordinadorEventoResponse" />
+    </operation>
+    <operation name="listarCategoriaEvento">
+      <input wsam:Action="http://services/GestionEventoWS/listarCategoriaEventoRequest" message="tns:listarCategoriaEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/listarCategoriaEventoResponse" message="tns:listarCategoriaEventoResponse" />
     </operation>
     <operation name="modificarCategoriaEvento">
       <input wsam:Action="http://services/GestionEventoWS/modificarCategoriaEventoRequest" message="tns:modificarCategoriaEvento" />
@@ -171,29 +190,9 @@
       <input wsam:Action="http://services/GestionEventoWS/eliminarCategoriaEventoRequest" message="tns:eliminarCategoriaEvento" />
       <output wsam:Action="http://services/GestionEventoWS/eliminarCategoriaEventoResponse" message="tns:eliminarCategoriaEventoResponse" />
     </operation>
-    <operation name="eliminarEvento">
-      <input wsam:Action="http://services/GestionEventoWS/eliminarEventoRequest" message="tns:eliminarEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/eliminarEventoResponse" message="tns:eliminarEventoResponse" />
-    </operation>
-    <operation name="insertarEvento">
-      <input wsam:Action="http://services/GestionEventoWS/insertarEventoRequest" message="tns:insertarEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
-    </operation>
-    <operation name="modificarEvento">
-      <input wsam:Action="http://services/GestionEventoWS/modificarEventoRequest" message="tns:modificarEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/modificarEventoResponse" message="tns:modificarEventoResponse" />
-    </operation>
-    <operation name="listarEvento">
-      <input wsam:Action="http://services/GestionEventoWS/listarEventoRequest" message="tns:listarEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/listarEventoResponse" message="tns:listarEventoResponse" />
-    </operation>
     <operation name="insertarEncuestaEvento">
       <input wsam:Action="http://services/GestionEventoWS/insertarEncuestaEventoRequest" message="tns:insertarEncuestaEvento" />
       <output wsam:Action="http://services/GestionEventoWS/insertarEncuestaEventoResponse" message="tns:insertarEncuestaEventoResponse" />
-    </operation>
-    <operation name="listarCoordinadorEvento">
-      <input wsam:Action="http://services/GestionEventoWS/listarCoordinadorEventoRequest" message="tns:listarCoordinadorEvento" />
-      <output wsam:Action="http://services/GestionEventoWS/listarCoordinadorEventoResponse" message="tns:listarCoordinadorEventoResponse" />
     </operation>
     <operation name="listarCoordinadorEvento">
       <input wsam:Action="http://services/GestionEventoWS/listarCoordinadorEventoRequest" message="tns:listarCoordinadorEvento" />
@@ -203,6 +202,7 @@
       <input wsam:Action="http://services/GestionEventoWS/modificarCoordinadorEventoRequest" message="tns:modificarCoordinadorEvento" />
       <output wsam:Action="http://services/GestionEventoWS/modificarCoordinadorEventoResponse" message="tns:modificarCoordinadorEventoResponse" />
     </operation>
+<<<<<<< HEAD
     <operation name="eliminarCoordinadorEvento">
       <input wsam:Action="http://services/GestionEventoWS/eliminarCoordinadorEventoRequest" message="tns:eliminarCoordinadorEvento" />
       <output wsam:Action="http://services/GestionEventoWS/eliminarCoordinadorEventoResponse" message="tns:eliminarCoordinadorEventoResponse" />
@@ -214,6 +214,8 @@
     </operation>
 =======
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+>>>>>>> parent of 945bb9f (Inicio de sesion)
     <operation name="modificarEncuestaEvento">
       <input wsam:Action="http://services/GestionEventoWS/modificarEncuestaEventoRequest" message="tns:modificarEncuestaEvento" />
       <output wsam:Action="http://services/GestionEventoWS/modificarEncuestaEventoResponse" message="tns:modificarEncuestaEventoResponse" />
@@ -231,14 +233,23 @@
       <output wsam:Action="http://services/GestionEventoWS/eliminarEncuestaEventoResponse" message="tns:eliminarEncuestaEventoResponse" />
     </operation>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 945bb9f (Inicio de sesion)
     <operation name="listarEncuestaEvento">
       <input wsam:Action="http://services/GestionEventoWS/listarEncuestaEventoRequest" message="tns:listarEncuestaEvento" />
       <output wsam:Action="http://services/GestionEventoWS/listarEncuestaEventoResponse" message="tns:listarEncuestaEventoResponse" />
     </operation>
+<<<<<<< HEAD
     <operation name="insertarEvento">
       <input wsam:Action="http://services/GestionEventoWS/insertarEventoRequest" message="tns:insertarEvento" />
       <output wsam:Action="http://services/GestionEventoWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
+=======
+    <operation name="listarCoordinadorEvento">
+      <input wsam:Action="http://services/GestionEventoWS/listarCoordinadorEventoRequest" message="tns:listarCoordinadorEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/listarCoordinadorEventoResponse" message="tns:listarCoordinadorEventoResponse" />
+>>>>>>> parent of 945bb9f (Inicio de sesion)
     </operation>
     <operation name="modificarEvento">
       <input wsam:Action="http://services/GestionEventoWS/modificarEventoRequest" message="tns:modificarEvento" />
@@ -248,15 +259,26 @@
       <input wsam:Action="http://services/GestionEventoWS/eliminarEventoRequest" message="tns:eliminarEvento" />
       <output wsam:Action="http://services/GestionEventoWS/eliminarEventoResponse" message="tns:eliminarEventoResponse" />
     </operation>
+<<<<<<< HEAD
     <operation name="listarEvento_por_nombre_categoria">
       <input wsam:Action="http://services/GestionEventoWS/listarEvento_por_nombre_categoriaRequest" message="tns:listarEvento_por_nombre_categoria" />
       <output wsam:Action="http://services/GestionEventoWS/listarEvento_por_nombre_categoriaResponse" message="tns:listarEvento_por_nombre_categoriaResponse" />
     </operation>
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="insertarEvento">
+      <input wsam:Action="http://services/GestionEventoWS/insertarEventoRequest" message="tns:insertarEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/insertarEventoResponse" message="tns:insertarEventoResponse" />
+    </operation>
+    <operation name="listarEvento">
+      <input wsam:Action="http://services/GestionEventoWS/listarEventoRequest" message="tns:listarEvento" />
+      <output wsam:Action="http://services/GestionEventoWS/listarEventoResponse" message="tns:listarEventoResponse" />
+    </operation>
+>>>>>>> parent of 945bb9f (Inicio de sesion)
   </portType>
   <binding name="GestionEventoWSPortBinding" type="tns:GestionEventoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarCategoriaEvento">
+    <operation name="insertarCategoriaEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -265,7 +287,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarCategoriaEvento">
+    <operation name="eliminarCoordinadorEvento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCategoriaEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -283,20 +314,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCategoriaEvento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <operation name="eliminarEvento">
 =======
     <operation name="insertarEncuestaEvento">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="eliminarCategoriaEvento">
+>>>>>>> parent of 945bb9f (Inicio de sesion)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -306,10 +332,14 @@
       </output>
     </operation>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <operation name="insertarEvento">
 =======
     <operation name="listarCoordinadorEvento">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="insertarEncuestaEvento">
+>>>>>>> parent of 945bb9f (Inicio de sesion)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -318,11 +348,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <operation name="modificarEvento">
 =======
     <operation name="modificarCoordinadorEvento">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="insertarCoordinadorEvento">
+>>>>>>> parent of 945bb9f (Inicio de sesion)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -331,11 +365,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <operation name="listarEvento">
 =======
     <operation name="eliminarCoordinadorEvento">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="modificarCoordinadorEvento">
+>>>>>>> parent of 945bb9f (Inicio de sesion)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -344,7 +382,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarEncuestaEvento">
+    <operation name="modificarEncuestaEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -353,7 +391,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarCoordinadorEvento">
+    <operation name="eliminarEncuestaEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -362,11 +400,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <operation name="listarCoordinadorEvento">
 =======
     <operation name="listarEvento_por_fecha">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="listarEncuestaEvento">
+>>>>>>> parent of 945bb9f (Inicio de sesion)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -375,11 +417,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <operation name="modificarCoordinadorEvento">
 =======
     <operation name="eliminarEncuestaEvento">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="listarCoordinadorEvento">
+>>>>>>> parent of 945bb9f (Inicio de sesion)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -388,11 +434,15 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <operation name="eliminarCoordinadorEvento">
 =======
     <operation name="listarEncuestaEvento">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="modificarEvento">
+>>>>>>> parent of 945bb9f (Inicio de sesion)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -402,10 +452,14 @@
       </output>
     </operation>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <operation name="listarEncuestaEvento">
 =======
     <operation name="insertarEvento">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="eliminarEvento">
+>>>>>>> parent of 945bb9f (Inicio de sesion)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -414,6 +468,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <operation name="modificarEncuestaEvento">
 =======
@@ -428,6 +483,9 @@
     </operation>
     <operation name="eliminarEvento">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="insertarEvento">
+>>>>>>> parent of 945bb9f (Inicio de sesion)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -437,10 +495,14 @@
       </output>
     </operation>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <operation name="eliminarEncuestaEvento">
 =======
     <operation name="listarEvento_por_nombre_categoria">
 >>>>>>> bff7ff63ed4950a55a3fd8fcea23321fbedb234a
+=======
+    <operation name="listarEvento">
+>>>>>>> parent of 945bb9f (Inicio de sesion)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
