@@ -1,6 +1,9 @@
 *.class
 *.jar
 *.war
+*.suo
+/ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug/
+/ProyectosNET/ProyectoOOIA/ProyectoOOIA/bin/Debug/
 
 /SISTEMA-OOIA/nbproject/private/
 /GestionAcademicaModel/nbproject/private/
@@ -120,3 +123,15 @@ ProyectosJAVA/OOIAConfigMySql/nbproject/private/private.properties
 /ProyectosJAVA/ooiaCargaMasivaCSV/nbproject/private/
 /ProyectosJAVA/ooiaCargaMasivaCSV/build/
 /ProyectosJAVA/ooiaCargaMasivaCSV/dist/
+ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug/ProyectoOOIA.csproj.FileListAbsolute.txt
+*.cache
+ProyectosNET/ProyectoOOIA/ProyectoOOIA/bin/Debug/ProyectoOOIA.exe
+ProyectosNET/ProyectoOOIA/.vs/ProyectoOOIA/v16/.suo
+*.jar
+ProyectosNET/ProyectoOOIA/.vs/ProyectoOOIA/v16/.suo
+ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.jar
+*.jar
+*.jar
+*.jar
+*.jar
