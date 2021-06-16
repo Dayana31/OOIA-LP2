@@ -1,3 +1,7 @@
+*.class
+*.jar
+*.war
+
 /SISTEMA-OOIA/nbproject/private/
 /GestionAcademicaModel/nbproject/private/
 /GestionAtencionModel/nbproject/private/
