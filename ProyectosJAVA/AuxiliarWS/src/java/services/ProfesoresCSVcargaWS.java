@@ -14,7 +14,7 @@ import java.text.ParseException;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pruebaCargaDatosCSV.ProfesoresCSV;
+import pe.edu.pucp.ooia.carga_csv.ProfesoresCSV;
 
 /**
  *
