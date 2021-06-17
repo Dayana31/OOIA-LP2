@@ -171,108 +171,87 @@ namespace ProyectoOOIA.PonenteWS {
         
         private string correoField;
         
-        private string direccionField;
+        private bool activoField;
         
-        private string dniField;
+        private string codigoField;
         
-        private System.DateTime fecha_nacimientoField;
+        private double craestField;
         
-        private bool fecha_nacimientoFieldSpecified;
+        private double creditos_aprobadosField;
         
-        private int id_personaField;
+        private especialidad especialidadField;
         
-        private string nombreField;
+        private int id_alumnoField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string correo {
+        public bool activo {
             get {
-                return this.correoField;
+                return this.activoField;
             }
             set {
-                this.correoField = value;
-                this.RaisePropertyChanged("correo");
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string direccion {
+        public string codigo {
             get {
-                return this.direccionField;
+                return this.codigoField;
             }
             set {
-                this.direccionField = value;
-                this.RaisePropertyChanged("direccion");
+                this.codigoField = value;
+                this.RaisePropertyChanged("codigo");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string dni {
+        public double craest {
             get {
-                return this.dniField;
+                return this.craestField;
             }
             set {
-                this.dniField = value;
-                this.RaisePropertyChanged("dni");
+                this.craestField = value;
+                this.RaisePropertyChanged("craest");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime fecha_nacimiento {
+        public double creditos_aprobados {
             get {
-                return this.fecha_nacimientoField;
+                return this.creditos_aprobadosField;
             }
             set {
-                this.fecha_nacimientoField = value;
-                this.RaisePropertyChanged("fecha_nacimiento");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_nacimientoSpecified {
-            get {
-                return this.fecha_nacimientoFieldSpecified;
-            }
-            set {
-                this.fecha_nacimientoFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_nacimientoSpecified");
+                this.creditos_aprobadosField = value;
+                this.RaisePropertyChanged("creditos_aprobados");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int id_persona {
+        public especialidad especialidad {
             get {
-                return this.id_personaField;
+                return this.especialidadField;
             }
             set {
-                this.id_personaField = value;
-                this.RaisePropertyChanged("id_persona");
+                this.especialidadField = value;
+                this.RaisePropertyChanged("especialidad");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nombre {
+        public int id_alumno {
             get {
-                return this.nombreField;
+                return this.id_alumnoField;
             }
             set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+                this.id_alumnoField = value;
+                this.RaisePropertyChanged("id_alumno");
             }
         }
     }
@@ -361,6 +340,15 @@ namespace ProyectoOOIA.PonenteWS {
         
         public eliminarPonenteRequest() {
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class time : object, System.ComponentModel.INotifyPropertyChanged {
         
         public eliminarPonenteRequest(int id_ponente) {
             this.id_ponente = id_ponente;

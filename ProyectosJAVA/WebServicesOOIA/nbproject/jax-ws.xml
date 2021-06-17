@@ -37,6 +37,12 @@
     <service name="EventoWS">
       <implementation-class>pe.edu.pucp.OOIA.services.EventoWS</implementation-class>
     </service>
+    <service name="EvaluacionWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.EvaluacionWS</implementation-class>
+    </service>
+    <service name="CursoLlevadoWS">
+      <implementation-class>pe.edu.pucp.OOIA.services.CursoLlevadoWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

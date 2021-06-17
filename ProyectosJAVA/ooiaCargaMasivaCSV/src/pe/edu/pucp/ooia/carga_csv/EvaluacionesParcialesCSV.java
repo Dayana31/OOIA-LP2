@@ -7,6 +7,7 @@ package pe.edu.pucp.ooia.carga_csv;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.text.ParseException;
 import java.util.Scanner;
 import pe.edu.pucp.ooia.gest_academica.dao.EvaluacionDAO;
 import pe.edu.pucp.ooia.gest_academica.model.CursoLlevado;
@@ -26,7 +27,7 @@ public class EvaluacionesParcialesCSV {
         daoEvaluacion = new EvaluacionMySQL();
     }
     
-    public int cargarDatos(){
+    public int cargarDatos()throws ParseException{
         sc.useDelimiter("\n");
         
         int cargaCorrecta = 0;
