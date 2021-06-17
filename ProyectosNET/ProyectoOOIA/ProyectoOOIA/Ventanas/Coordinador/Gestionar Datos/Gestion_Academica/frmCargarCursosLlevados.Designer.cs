@@ -59,6 +59,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbModificar = new System.Windows.Forms.ToolStripButton();
             this.tsbEliminar = new System.Windows.Forms.ToolStripButton();
             this.tsbCancelar = new System.Windows.Forms.ToolStripButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtVez = new System.Windows.Forms.TextBox();
             this.pnlHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.pnlDatos.SuspendLayout();
@@ -102,6 +104,8 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             // 
             // pnlDatos
             // 
+            this.pnlDatos.Controls.Add(this.txtVez);
+            this.pnlDatos.Controls.Add(this.label7);
             this.pnlDatos.Controls.Add(this.txtNotaFinal);
             this.pnlDatos.Controls.Add(this.rbNoRetirado);
             this.pnlDatos.Controls.Add(this.rbRetirado);
@@ -129,7 +133,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             // 
             // txtNotaFinal
             // 
-            this.txtNotaFinal.Location = new System.Drawing.Point(212, 305);
+            this.txtNotaFinal.Location = new System.Drawing.Point(212, 330);
             this.txtNotaFinal.Margin = new System.Windows.Forms.Padding(4);
             this.txtNotaFinal.Name = "txtNotaFinal";
             this.txtNotaFinal.Size = new System.Drawing.Size(168, 22);
@@ -226,7 +230,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 300);
+            this.label3.Location = new System.Drawing.Point(19, 325);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 27);
@@ -379,6 +383,25 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
             this.tsbCancelar.Size = new System.Drawing.Size(90, 24);
             this.tsbCancelar.Text = "Cancelar";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Gill Sans MT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(19, 293);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 27);
+            this.label7.TabIndex = 45;
+            this.label7.Text = "Vez:";
+            // 
+            // txtVez
+            // 
+            this.txtVez.Location = new System.Drawing.Point(212, 293);
+            this.txtVez.Margin = new System.Windows.Forms.Padding(4);
+            this.txtVez.Name = "txtVez";
+            this.txtVez.Size = new System.Drawing.Size(168, 22);
+            this.txtVez.TabIndex = 46;
+            // 
             // frmCargarCursosLlevados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -431,5 +454,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
         private System.Windows.Forms.Button btnCurso;
         private System.Windows.Forms.Button btnAlumno;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.TextBox txtVez;
+        private System.Windows.Forms.Label label7;
     }
 }

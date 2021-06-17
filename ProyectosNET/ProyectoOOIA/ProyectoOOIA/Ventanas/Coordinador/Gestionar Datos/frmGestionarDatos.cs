@@ -1,4 +1,5 @@
 ﻿using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos;
+using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica;
 using ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Humana;
 using System;
 using System.IO;
@@ -203,6 +204,11 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             else
                 MessageBox.Show("Ha ocurrido un error en la carga de los datos", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void btnCursoLlevado_Click(object sender, EventArgs e)
+        {
+            new frmCargarCursosLlevados().ShowDialog();
         }
     }
 }
