@@ -49,6 +49,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA
             BinaryReader br = new BinaryReader(fs);
             CargarCSValumnosWS.AlumnosCSVcargaWS1Client cargaCSVAlumnos =
                 new CargarCSValumnosWS.AlumnosCSVcargaWS1Client();
+            
             int resultado = 1;
             resultado = cargaCSVAlumnos.CargarCSValumnos(br.ReadBytes((int)fs.Length));
             br.Close();

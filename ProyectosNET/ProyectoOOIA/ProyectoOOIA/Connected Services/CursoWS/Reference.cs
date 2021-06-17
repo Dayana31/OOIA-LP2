@@ -16,13 +16,13 @@ namespace ProyectoOOIA.CursoWS {
     public interface CursoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/eliminarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/eliminarCursoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CursoWS.eliminarCursoResponse eliminarCurso(ProyectoOOIA.CursoWS.eliminarCursoRequest request);
+        ProyectoOOIA.CursoWS.listarCursoResponse listarCurso(ProyectoOOIA.CursoWS.listarCursoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/eliminarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/eliminarCursoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.eliminarCursoResponse> eliminarCursoAsync(ProyectoOOIA.CursoWS.eliminarCursoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> listarCursoAsync(ProyectoOOIA.CursoWS.listarCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/insertarrCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/insertarrCursoResponse")]
@@ -34,6 +34,15 @@ namespace ProyectoOOIA.CursoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.insertarrCursoResponse> insertarrCursoAsync(ProyectoOOIA.CursoWS.insertarrCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/eliminarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/eliminarCursoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.CursoWS.eliminarCursoResponse eliminarCurso(ProyectoOOIA.CursoWS.eliminarCursoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/eliminarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/eliminarCursoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.eliminarCursoResponse> eliminarCursoAsync(ProyectoOOIA.CursoWS.eliminarCursoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -41,55 +50,10 @@ namespace ProyectoOOIA.CursoWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/modificarCursoResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.modificarCursoResponse> modificarCursoAsync(ProyectoOOIA.CursoWS.modificarCursoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CursoWS.listarCursoResponse listarCurso(ProyectoOOIA.CursoWS.listarCursoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CursoWS/listarCursoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> listarCursoAsync(ProyectoOOIA.CursoWS.listarCursoRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCurso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCursoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_curso;
-        
-        public eliminarCursoRequest() {
-        }
-        
-        public eliminarCursoRequest(int id_curso) {
-            this.id_curso = id_curso;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCursoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCursoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarCursoResponse() {
-        }
-        
-        public eliminarCursoResponse(int @return) {
-            this.@return = @return;
-        }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -179,6 +143,34 @@ namespace ProyectoOOIA.CursoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCurso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCursoRequest {
+        
+        public listarCursoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarCursoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.CursoWS.curso[] @return;
+        
+        public listarCursoResponse() {
+        }
+        
+        public listarCursoResponse(ProyectoOOIA.CursoWS.curso[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarrCurso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarrCursoRequest {
         
@@ -208,6 +200,42 @@ namespace ProyectoOOIA.CursoWS {
         }
         
         public insertarrCursoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCurso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCursoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_curso;
+        
+        public eliminarCursoRequest() {
+        }
+        
+        public eliminarCursoRequest(int id_curso) {
+            this.id_curso = id_curso;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCursoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCursoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarCursoResponse() {
+        }
+        
+        public eliminarCursoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -248,34 +276,6 @@ namespace ProyectoOOIA.CursoWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCurso", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCursoRequest {
-        
-        public listarCursoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCursoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarCursoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.CursoWS.curso[] @return;
-        
-        public listarCursoResponse() {
-        }
-        
-        public listarCursoResponse(ProyectoOOIA.CursoWS.curso[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CursoWSChannel : ProyectoOOIA.CursoWS.CursoWS, System.ServiceModel.IClientChannel {
     }
@@ -304,26 +304,24 @@ namespace ProyectoOOIA.CursoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CursoWS.eliminarCursoResponse ProyectoOOIA.CursoWS.CursoWS.eliminarCurso(ProyectoOOIA.CursoWS.eliminarCursoRequest request) {
-            return base.Channel.eliminarCurso(request);
+        ProyectoOOIA.CursoWS.listarCursoResponse ProyectoOOIA.CursoWS.CursoWS.listarCurso(ProyectoOOIA.CursoWS.listarCursoRequest request) {
+            return base.Channel.listarCurso(request);
         }
         
-        public int eliminarCurso(int id_curso) {
-            ProyectoOOIA.CursoWS.eliminarCursoRequest inValue = new ProyectoOOIA.CursoWS.eliminarCursoRequest();
-            inValue.id_curso = id_curso;
-            ProyectoOOIA.CursoWS.eliminarCursoResponse retVal = ((ProyectoOOIA.CursoWS.CursoWS)(this)).eliminarCurso(inValue);
+        public ProyectoOOIA.CursoWS.curso[] listarCurso() {
+            ProyectoOOIA.CursoWS.listarCursoRequest inValue = new ProyectoOOIA.CursoWS.listarCursoRequest();
+            ProyectoOOIA.CursoWS.listarCursoResponse retVal = ((ProyectoOOIA.CursoWS.CursoWS)(this)).listarCurso(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.eliminarCursoResponse> ProyectoOOIA.CursoWS.CursoWS.eliminarCursoAsync(ProyectoOOIA.CursoWS.eliminarCursoRequest request) {
-            return base.Channel.eliminarCursoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> ProyectoOOIA.CursoWS.CursoWS.listarCursoAsync(ProyectoOOIA.CursoWS.listarCursoRequest request) {
+            return base.Channel.listarCursoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.eliminarCursoResponse> eliminarCursoAsync(int id_curso) {
-            ProyectoOOIA.CursoWS.eliminarCursoRequest inValue = new ProyectoOOIA.CursoWS.eliminarCursoRequest();
-            inValue.id_curso = id_curso;
-            return ((ProyectoOOIA.CursoWS.CursoWS)(this)).eliminarCursoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> listarCursoAsync() {
+            ProyectoOOIA.CursoWS.listarCursoRequest inValue = new ProyectoOOIA.CursoWS.listarCursoRequest();
+            return ((ProyectoOOIA.CursoWS.CursoWS)(this)).listarCursoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -350,6 +348,29 @@ namespace ProyectoOOIA.CursoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.CursoWS.eliminarCursoResponse ProyectoOOIA.CursoWS.CursoWS.eliminarCurso(ProyectoOOIA.CursoWS.eliminarCursoRequest request) {
+            return base.Channel.eliminarCurso(request);
+        }
+        
+        public int eliminarCurso(int id_curso) {
+            ProyectoOOIA.CursoWS.eliminarCursoRequest inValue = new ProyectoOOIA.CursoWS.eliminarCursoRequest();
+            inValue.id_curso = id_curso;
+            ProyectoOOIA.CursoWS.eliminarCursoResponse retVal = ((ProyectoOOIA.CursoWS.CursoWS)(this)).eliminarCurso(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.eliminarCursoResponse> ProyectoOOIA.CursoWS.CursoWS.eliminarCursoAsync(ProyectoOOIA.CursoWS.eliminarCursoRequest request) {
+            return base.Channel.eliminarCursoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.eliminarCursoResponse> eliminarCursoAsync(int id_curso) {
+            ProyectoOOIA.CursoWS.eliminarCursoRequest inValue = new ProyectoOOIA.CursoWS.eliminarCursoRequest();
+            inValue.id_curso = id_curso;
+            return ((ProyectoOOIA.CursoWS.CursoWS)(this)).eliminarCursoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.CursoWS.modificarCursoResponse ProyectoOOIA.CursoWS.CursoWS.modificarCurso(ProyectoOOIA.CursoWS.modificarCursoRequest request) {
             return base.Channel.modificarCurso(request);
         }
@@ -370,27 +391,6 @@ namespace ProyectoOOIA.CursoWS {
             ProyectoOOIA.CursoWS.modificarCursoRequest inValue = new ProyectoOOIA.CursoWS.modificarCursoRequest();
             inValue.curso = curso;
             return ((ProyectoOOIA.CursoWS.CursoWS)(this)).modificarCursoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CursoWS.listarCursoResponse ProyectoOOIA.CursoWS.CursoWS.listarCurso(ProyectoOOIA.CursoWS.listarCursoRequest request) {
-            return base.Channel.listarCurso(request);
-        }
-        
-        public ProyectoOOIA.CursoWS.curso[] listarCurso() {
-            ProyectoOOIA.CursoWS.listarCursoRequest inValue = new ProyectoOOIA.CursoWS.listarCursoRequest();
-            ProyectoOOIA.CursoWS.listarCursoResponse retVal = ((ProyectoOOIA.CursoWS.CursoWS)(this)).listarCurso(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> ProyectoOOIA.CursoWS.CursoWS.listarCursoAsync(ProyectoOOIA.CursoWS.listarCursoRequest request) {
-            return base.Channel.listarCursoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.CursoWS.listarCursoResponse> listarCursoAsync() {
-            ProyectoOOIA.CursoWS.listarCursoRequest inValue = new ProyectoOOIA.CursoWS.listarCursoRequest();
-            return ((ProyectoOOIA.CursoWS.CursoWS)(this)).listarCursoAsync(inValue);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace ProyectoOOIA.Ventanas.Miembro_OOIA.Cargar_Datos.Gestion_Academica
     {
         private CursoLlevadoWS.CursoLlevadoWSClient daoCurso;
         private CursoLlevadoWS.cursoLlevado _curso;
-        private AlumnoWS.alumno alumno;
+        private GestionHumanaWS.alumno alumno;
 
         public CursoLlevadoWS.cursoLlevado CursoLlevado { get => _curso; set => _curso = value; }
         public frmBuscarCursosLlevados()

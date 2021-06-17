@@ -20,7 +20,7 @@ namespace ProyectoOOIA.Ventanas
         public frmPrincipal(TipoUsuario tipoUsuario, int id_usuario, int tipoIdUsuario)
         {
             InitializeComponent();
-            usuarioDao = new GestionHumanaWSClient();
+            usuarioDao = new GestionHumanaWS.GestionHumanaWSClient();
             btnCargaDatos.Visible = false;
             tipo = tipoUsuario;
             this.id_usuario = id_usuario;
