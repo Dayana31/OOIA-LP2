@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="84467160-9795-4ed4-9d21-f6df8f8f691b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="882c797f-72aa-4518-bcb2-3852d61e6086" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CursoWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CodigoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CursoWS.wsdl" MetadataType="Wsdl" ID="26a6705d-1e48-4851-ac18-ad9a56c4b100" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CursoWS?WSDL" />
-    <MetadataFile FileName="CursoWS.xsd" MetadataType="Schema" ID="41422f23-641c-4b17-ae6f-56712dd3a17e" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CursoWS?xsd=1" />
+    <MetadataFile FileName="CodigoWS.wsdl" MetadataType="Wsdl" ID="8df1809e-ba4a-42ec-90d4-347b78920895" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CodigoWS?WSDL" />
+    <MetadataFile FileName="CodigoWS.xsd" MetadataType="Schema" ID="4c1f6ba9-d471-449e-946f-2c8fbf2ea6dc" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CodigoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

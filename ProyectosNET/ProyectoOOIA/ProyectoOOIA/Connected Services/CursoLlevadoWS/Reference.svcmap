@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="70e887e3-b2e0-40d6-8f1b-23d37b1e83be" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5c1d90a9-f7b8-4cc7-9a83-81f533bc3e93" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CursoLlevadoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CursoLlevadoWS.xsd" MetadataType="Schema" ID="2298decc-ca19-4cd5-82d3-f32fda8c7c49" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CursoLlevadoWS?xsd=1" />
-    <MetadataFile FileName="CursoLlevadoWS.wsdl" MetadataType="Wsdl" ID="4cf6c33a-27e9-40ea-aac9-053cc7abdd8c" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CursoLlevadoWS?WSDL" />
+    <MetadataFile FileName="CursoLlevadoWS.xsd" MetadataType="Schema" ID="99ce02e0-7d4a-40a5-a333-08793f0bc10a" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CursoLlevadoWS?xsd=1" />
+    <MetadataFile FileName="CursoLlevadoWS.wsdl" MetadataType="Wsdl" ID="6c6b8498-3a20-4290-9b18-53c240c0654d" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CursoLlevadoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

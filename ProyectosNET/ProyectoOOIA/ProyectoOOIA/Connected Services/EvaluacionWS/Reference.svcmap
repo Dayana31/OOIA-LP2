@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="450800ca-b194-4f17-b21a-a90690edb49e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8eeef8ff-ae0d-402f-9c89-8fbaaf993b44" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/EvaluacionWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EvaluacionWS.wsdl" MetadataType="Wsdl" ID="dcb0706f-8443-420f-a276-6d933f57f124" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EvaluacionWS?WSDL" />
-    <MetadataFile FileName="EvaluacionWS.xsd" MetadataType="Schema" ID="3d1c9b95-d3cb-4ba7-9239-6f1b86b26c75" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EvaluacionWS?xsd=1" />
+    <MetadataFile FileName="EvaluacionWS.wsdl" MetadataType="Wsdl" ID="6561b041-877b-403e-850f-7f5906965049" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EvaluacionWS?WSDL" />
+    <MetadataFile FileName="EvaluacionWS.xsd" MetadataType="Schema" ID="ac5c2348-b335-407f-a228-170aba855f4b" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EvaluacionWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
