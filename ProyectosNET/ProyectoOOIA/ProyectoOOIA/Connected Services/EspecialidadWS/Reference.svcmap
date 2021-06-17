@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bb65e785-4213-4f2c-acf6-3821c650d5d8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1c96850c-6d09-4ab2-b5cc-26c3c9c513a4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/EspecialidadWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EspecialidadWS.wsdl" MetadataType="Wsdl" ID="94473adc-9ed8-4040-969f-ef9e3713fa63" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EspecialidadWS?wsdl" />
-    <MetadataFile FileName="EspecialidadWS.xsd" MetadataType="Schema" ID="db763b4b-1059-400f-bf00-e4b8e111cc05" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EspecialidadWS?xsd=1" />
+    <MetadataFile FileName="EspecialidadWS.wsdl" MetadataType="Wsdl" ID="b7280f84-1113-4219-abbc-29d1c10f8ae9" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EspecialidadWS?wsdl" />
+    <MetadataFile FileName="EspecialidadWS.xsd" MetadataType="Schema" ID="3c2e3680-753e-4c1a-8cbc-1ec68482e8a6" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EspecialidadWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

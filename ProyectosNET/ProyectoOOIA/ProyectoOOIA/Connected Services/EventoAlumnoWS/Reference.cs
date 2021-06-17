@@ -16,13 +16,13 @@ namespace ProyectoOOIA.EventoAlumnoWS {
     public interface EventoAlumnoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse eliminarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest request);
+        ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse insertarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse> eliminarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse> insertarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/modificarEncuestaEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/modificarEncuestaEventoResponse")]
@@ -34,13 +34,13 @@ namespace ProyectoOOIA.EventoAlumnoWS {
         System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.modificarEncuestaEventoResponse> modificarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.modificarEncuestaEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse insertarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest request);
+        ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse eliminarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse> insertarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse> eliminarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/listarEncuestaEventoRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/listarEncuestaEventoResponse")]
@@ -185,17 +185,17 @@ namespace ProyectoOOIA.EventoAlumnoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEncuestaEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarEncuestaEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuestaEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarEncuestaEventoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento;
         
-        public eliminarEncuestaEventoRequest() {
+        public insertarEncuestaEventoRequest() {
         }
         
-        public eliminarEncuestaEventoRequest(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
+        public insertarEncuestaEventoRequest(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
             this.evento = evento;
         }
     }
@@ -203,17 +203,17 @@ namespace ProyectoOOIA.EventoAlumnoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEncuestaEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarEncuestaEventoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuestaEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarEncuestaEventoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarEncuestaEventoResponse() {
+        public insertarEncuestaEventoResponse() {
         }
         
-        public eliminarEncuestaEventoResponse(int @return) {
+        public insertarEncuestaEventoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -257,17 +257,17 @@ namespace ProyectoOOIA.EventoAlumnoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuestaEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarEncuestaEventoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEncuestaEvento", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarEncuestaEventoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento;
         
-        public insertarEncuestaEventoRequest() {
+        public eliminarEncuestaEventoRequest() {
         }
         
-        public insertarEncuestaEventoRequest(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
+        public eliminarEncuestaEventoRequest(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
             this.evento = evento;
         }
     }
@@ -275,17 +275,17 @@ namespace ProyectoOOIA.EventoAlumnoWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEncuestaEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarEncuestaEventoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarEncuestaEventoResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarEncuestaEventoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarEncuestaEventoResponse() {
+        public eliminarEncuestaEventoResponse() {
         }
         
-        public insertarEncuestaEventoResponse(int @return) {
+        public eliminarEncuestaEventoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -346,26 +346,26 @@ namespace ProyectoOOIA.EventoAlumnoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS.eliminarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest request) {
-            return base.Channel.eliminarEncuestaEvento(request);
+        ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS.insertarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest request) {
+            return base.Channel.insertarEncuestaEvento(request);
         }
         
-        public int eliminarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
-            ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest inValue = new ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest();
+        public int insertarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
+            ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest inValue = new ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest();
             inValue.evento = evento;
-            ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse retVal = ((ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS)(this)).eliminarEncuestaEvento(inValue);
+            ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse retVal = ((ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS)(this)).insertarEncuestaEvento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse> ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS.eliminarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest request) {
-            return base.Channel.eliminarEncuestaEventoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse> ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS.insertarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest request) {
+            return base.Channel.insertarEncuestaEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse> eliminarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
-            ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest inValue = new ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest();
+        public System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse> insertarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
+            ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest inValue = new ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest();
             inValue.evento = evento;
-            return ((ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS)(this)).eliminarEncuestaEventoAsync(inValue);
+            return ((ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS)(this)).insertarEncuestaEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -392,26 +392,26 @@ namespace ProyectoOOIA.EventoAlumnoWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS.insertarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest request) {
-            return base.Channel.insertarEncuestaEvento(request);
+        ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS.eliminarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest request) {
+            return base.Channel.eliminarEncuestaEvento(request);
         }
         
-        public int insertarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
-            ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest inValue = new ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest();
+        public int eliminarEncuestaEvento(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
+            ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest inValue = new ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest();
             inValue.evento = evento;
-            ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse retVal = ((ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS)(this)).insertarEncuestaEvento(inValue);
+            ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse retVal = ((ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS)(this)).eliminarEncuestaEvento(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse> ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS.insertarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest request) {
-            return base.Channel.insertarEncuestaEventoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse> ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS.eliminarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest request) {
+            return base.Channel.eliminarEncuestaEventoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoResponse> insertarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
-            ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest inValue = new ProyectoOOIA.EventoAlumnoWS.insertarEncuestaEventoRequest();
+        public System.Threading.Tasks.Task<ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoResponse> eliminarEncuestaEventoAsync(ProyectoOOIA.EventoAlumnoWS.eventoAlumno evento) {
+            ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest inValue = new ProyectoOOIA.EventoAlumnoWS.eliminarEncuestaEventoRequest();
             inValue.evento = evento;
-            return ((ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS)(this)).insertarEncuestaEventoAsync(inValue);
+            return ((ProyectoOOIA.EventoAlumnoWS.EventoAlumnoWS)(this)).eliminarEncuestaEventoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

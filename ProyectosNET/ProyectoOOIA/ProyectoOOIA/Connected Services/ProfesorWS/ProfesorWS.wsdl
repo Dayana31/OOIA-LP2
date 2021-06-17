@@ -11,17 +11,17 @@
   <message name="listarProfesorResponse">
     <part name="parameters" element="tns:listarProfesorResponse" />
   </message>
-  <message name="insertarProfesor">
-    <part name="parameters" element="tns:insertarProfesor" />
-  </message>
-  <message name="insertarProfesorResponse">
-    <part name="parameters" element="tns:insertarProfesorResponse" />
-  </message>
   <message name="eliminarProfesor">
     <part name="parameters" element="tns:eliminarProfesor" />
   </message>
   <message name="eliminarProfesorResponse">
     <part name="parameters" element="tns:eliminarProfesorResponse" />
+  </message>
+  <message name="insertarProfesor">
+    <part name="parameters" element="tns:insertarProfesor" />
+  </message>
+  <message name="insertarProfesorResponse">
+    <part name="parameters" element="tns:insertarProfesorResponse" />
   </message>
   <message name="modificarProfesor">
     <part name="parameters" element="tns:modificarProfesor" />
@@ -34,13 +34,13 @@
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesorRequest" message="tns:listarProfesor" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/listarProfesorResponse" message="tns:listarProfesorResponse" />
     </operation>
-    <operation name="insertarProfesor">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesorRequest" message="tns:insertarProfesor" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
-    </operation>
     <operation name="eliminarProfesor">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest" message="tns:eliminarProfesor" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
+    </operation>
+    <operation name="insertarProfesor">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesorRequest" message="tns:insertarProfesor" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
     </operation>
     <operation name="modificarProfesor">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/ProfesorWS/modificarProfesorRequest" message="tns:modificarProfesor" />
@@ -58,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarProfesor">
+    <operation name="eliminarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarProfesor">
+    <operation name="insertarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

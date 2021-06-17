@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9cb0ee7a-2279-4f90-b6a6-fd8f00564e59" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1106cbdc-ebb0-4677-b5ed-db7af0e653e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CoordinadorWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CoordinadorWS.wsdl" MetadataType="Wsdl" ID="6ca83580-93c9-4cd3-954c-38890eca2019" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CoordinadorWS?WSDL" />
-    <MetadataFile FileName="CoordinadorWS.xsd" MetadataType="Schema" ID="4ba0c491-43a8-4b6a-af2d-10deb4cae827" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CoordinadorWS?xsd=1" />
+    <MetadataFile FileName="CoordinadorWS.wsdl" MetadataType="Wsdl" ID="56dfa7fa-8e72-4d74-987d-498b1e5668ce" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CoordinadorWS?WSDL" />
+    <MetadataFile FileName="CoordinadorWS.xsd" MetadataType="Schema" ID="9b86b206-9d04-470f-9f2f-20da1986ad57" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CoordinadorWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

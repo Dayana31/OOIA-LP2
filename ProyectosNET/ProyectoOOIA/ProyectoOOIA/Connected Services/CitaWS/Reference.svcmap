@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1a4784be-6224-438c-ada4-b4b5f09bcce3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ca575d1-9a52-49b6-a9a6-4568480ebe7f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CitaWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CitaWS.wsdl" MetadataType="Wsdl" ID="c4c14846-31e0-4dd1-9781-5afc098165cb" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CitaWS?wsdl" />
-    <MetadataFile FileName="CitaWS.xsd" MetadataType="Schema" ID="8d2110f2-beff-41ad-a4d5-a408ef5edc29" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CitaWS?xsd=1" />
+    <MetadataFile FileName="CitaWS.wsdl" MetadataType="Wsdl" ID="c2cf9ef9-5aa8-4005-bc9b-d6e90a564446" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CitaWS?wsdl" />
+    <MetadataFile FileName="CitaWS.xsd" MetadataType="Schema" ID="0f99631e-f0ee-4810-8e27-ca64efd992a0" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CitaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

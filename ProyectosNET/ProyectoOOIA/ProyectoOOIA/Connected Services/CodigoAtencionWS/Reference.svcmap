@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="00a401a3-a143-4811-aaed-d4516a887aad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="adfbe734-d914-4737-9830-20010a0d4577" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://alvaro:8080/WebServicesOOIA/CodigoWS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/CodigoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CodigoWS.xsd" MetadataType="Schema" ID="6bea7a8b-d01a-401b-a547-30d6f3de97bd" SourceId="1" SourceUrl="http://alvaro:8080/WebServicesOOIA/CodigoWS?xsd=1" />
-    <MetadataFile FileName="CodigoWS.wsdl" MetadataType="Wsdl" ID="08dfd336-d2ee-4e3e-b79c-af1ab49bf0e6" SourceId="1" SourceUrl="http://alvaro:8080/WebServicesOOIA/CodigoWS?wsdl" />
+    <MetadataFile FileName="CodigoWS.wsdl" MetadataType="Wsdl" ID="68d76d10-e765-41ef-8453-b1d501aedcd5" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CodigoWS?WSDL" />
+    <MetadataFile FileName="CodigoWS.xsd" MetadataType="Schema" ID="ab17c087-9b32-492a-a700-8fce4f6b4833" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/CodigoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="69d2c107-a05c-4b8a-aa09-6114899e8dfb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6cff67cb-3ee0-4b8c-92c9-8188e60b484e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://alvaro:8080/WebServicesOOIA/EventoAlumno?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EventoAlumno.wsdl" MetadataType="Wsdl" ID="c19574df-9b80-48ea-b6af-096e700445f4" SourceId="1" SourceUrl="http://alvaro:8080/WebServicesOOIA/EventoAlumno?wsdl" />
-    <MetadataFile FileName="EventoAlumno.xsd" MetadataType="Schema" ID="395724d8-64d0-4bc0-b411-8c2e91e66a31" SourceId="1" SourceUrl="http://alvaro:8080/WebServicesOOIA/EventoAlumno?xsd=1" />
+    <MetadataFile FileName="EventoAlumno.wsdl" MetadataType="Wsdl" ID="758341f1-daa3-4b73-801c-a205c3d180db" SourceId="1" SourceUrl="http://alvaro:8080/WebServicesOOIA/EventoAlumno?wsdl" />
+    <MetadataFile FileName="EventoAlumno.xsd" MetadataType="Schema" ID="66cde248-e4cf-4d45-bca9-62620da6e5cf" SourceId="1" SourceUrl="http://alvaro:8080/WebServicesOOIA/EventoAlumno?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

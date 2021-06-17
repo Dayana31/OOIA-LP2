@@ -11,23 +11,17 @@
   <message name="listarHorarioResponse">
     <part name="parameters" element="tns:listarHorarioResponse" />
   </message>
-  <message name="modificarCodigo">
-    <part name="parameters" element="tns:modificarCodigo" />
-  </message>
-  <message name="modificarCodigoResponse">
-    <part name="parameters" element="tns:modificarCodigoResponse" />
-  </message>
   <message name="insertarHorario">
     <part name="parameters" element="tns:insertarHorario" />
   </message>
   <message name="insertarHorarioResponse">
     <part name="parameters" element="tns:insertarHorarioResponse" />
   </message>
-  <message name="eliminarCita">
-    <part name="parameters" element="tns:eliminarCita" />
+  <message name="eliminarHorario">
+    <part name="parameters" element="tns:eliminarHorario" />
   </message>
-  <message name="eliminarCitaResponse">
-    <part name="parameters" element="tns:eliminarCitaResponse" />
+  <message name="eliminarHorarioResponse">
+    <part name="parameters" element="tns:eliminarHorarioResponse" />
   </message>
   <message name="insertarCita">
     <part name="parameters" element="tns:insertarCita" />
@@ -41,17 +35,17 @@
   <message name="modificarCitaResponse">
     <part name="parameters" element="tns:modificarCitaResponse" />
   </message>
-  <message name="eliminarHorario">
-    <part name="parameters" element="tns:eliminarHorario" />
-  </message>
-  <message name="eliminarHorarioResponse">
-    <part name="parameters" element="tns:eliminarHorarioResponse" />
-  </message>
   <message name="modificarHorario">
     <part name="parameters" element="tns:modificarHorario" />
   </message>
   <message name="modificarHorarioResponse">
     <part name="parameters" element="tns:modificarHorarioResponse" />
+  </message>
+  <message name="eliminarCita">
+    <part name="parameters" element="tns:eliminarCita" />
+  </message>
+  <message name="eliminarCitaResponse">
+    <part name="parameters" element="tns:eliminarCitaResponse" />
   </message>
   <message name="listarCodigo">
     <part name="parameters" element="tns:listarCodigo" />
@@ -65,11 +59,11 @@
   <message name="insertarCodigoResponse">
     <part name="parameters" element="tns:insertarCodigoResponse" />
   </message>
-  <message name="listarCitaHistorico">
-    <part name="parameters" element="tns:listarCitaHistorico" />
+  <message name="modificarCodigo">
+    <part name="parameters" element="tns:modificarCodigo" />
   </message>
-  <message name="listarCitaHistoricoResponse">
-    <part name="parameters" element="tns:listarCitaHistoricoResponse" />
+  <message name="modificarCodigoResponse">
+    <part name="parameters" element="tns:modificarCodigoResponse" />
   </message>
   <message name="listarCitaPendiente">
     <part name="parameters" element="tns:listarCitaPendiente" />
@@ -77,22 +71,24 @@
   <message name="listarCitaPendienteResponse">
     <part name="parameters" element="tns:listarCitaPendienteResponse" />
   </message>
+  <message name="listarCitaHistorico">
+    <part name="parameters" element="tns:listarCitaHistorico" />
+  </message>
+  <message name="listarCitaHistoricoResponse">
+    <part name="parameters" element="tns:listarCitaHistoricoResponse" />
+  </message>
   <portType name="GestionAtencionWS">
     <operation name="listarHorario">
       <input wsam:Action="http://services/GestionAtencionWS/listarHorarioRequest" message="tns:listarHorario" />
       <output wsam:Action="http://services/GestionAtencionWS/listarHorarioResponse" message="tns:listarHorarioResponse" />
     </operation>
-    <operation name="modificarCodigo">
-      <input wsam:Action="http://services/GestionAtencionWS/modificarCodigoRequest" message="tns:modificarCodigo" />
-      <output wsam:Action="http://services/GestionAtencionWS/modificarCodigoResponse" message="tns:modificarCodigoResponse" />
-    </operation>
     <operation name="insertarHorario">
       <input wsam:Action="http://services/GestionAtencionWS/insertarHorarioRequest" message="tns:insertarHorario" />
       <output wsam:Action="http://services/GestionAtencionWS/insertarHorarioResponse" message="tns:insertarHorarioResponse" />
     </operation>
-    <operation name="eliminarCita">
-      <input wsam:Action="http://services/GestionAtencionWS/eliminarCitaRequest" message="tns:eliminarCita" />
-      <output wsam:Action="http://services/GestionAtencionWS/eliminarCitaResponse" message="tns:eliminarCitaResponse" />
+    <operation name="eliminarHorario">
+      <input wsam:Action="http://services/GestionAtencionWS/eliminarHorarioRequest" message="tns:eliminarHorario" />
+      <output wsam:Action="http://services/GestionAtencionWS/eliminarHorarioResponse" message="tns:eliminarHorarioResponse" />
     </operation>
     <operation name="insertarCita">
       <input wsam:Action="http://services/GestionAtencionWS/insertarCitaRequest" message="tns:insertarCita" />
@@ -102,13 +98,13 @@
       <input wsam:Action="http://services/GestionAtencionWS/modificarCitaRequest" message="tns:modificarCita" />
       <output wsam:Action="http://services/GestionAtencionWS/modificarCitaResponse" message="tns:modificarCitaResponse" />
     </operation>
-    <operation name="eliminarHorario">
-      <input wsam:Action="http://services/GestionAtencionWS/eliminarHorarioRequest" message="tns:eliminarHorario" />
-      <output wsam:Action="http://services/GestionAtencionWS/eliminarHorarioResponse" message="tns:eliminarHorarioResponse" />
-    </operation>
     <operation name="modificarHorario">
       <input wsam:Action="http://services/GestionAtencionWS/modificarHorarioRequest" message="tns:modificarHorario" />
       <output wsam:Action="http://services/GestionAtencionWS/modificarHorarioResponse" message="tns:modificarHorarioResponse" />
+    </operation>
+    <operation name="eliminarCita">
+      <input wsam:Action="http://services/GestionAtencionWS/eliminarCitaRequest" message="tns:eliminarCita" />
+      <output wsam:Action="http://services/GestionAtencionWS/eliminarCitaResponse" message="tns:eliminarCitaResponse" />
     </operation>
     <operation name="listarCodigo">
       <input wsam:Action="http://services/GestionAtencionWS/listarCodigoRequest" message="tns:listarCodigo" />
@@ -118,13 +114,17 @@
       <input wsam:Action="http://services/GestionAtencionWS/insertarCodigoRequest" message="tns:insertarCodigo" />
       <output wsam:Action="http://services/GestionAtencionWS/insertarCodigoResponse" message="tns:insertarCodigoResponse" />
     </operation>
-    <operation name="listarCitaHistorico">
-      <input wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoRequest" message="tns:listarCitaHistorico" />
-      <output wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoResponse" message="tns:listarCitaHistoricoResponse" />
+    <operation name="modificarCodigo">
+      <input wsam:Action="http://services/GestionAtencionWS/modificarCodigoRequest" message="tns:modificarCodigo" />
+      <output wsam:Action="http://services/GestionAtencionWS/modificarCodigoResponse" message="tns:modificarCodigoResponse" />
     </operation>
     <operation name="listarCitaPendiente">
       <input wsam:Action="http://services/GestionAtencionWS/listarCitaPendienteRequest" message="tns:listarCitaPendiente" />
       <output wsam:Action="http://services/GestionAtencionWS/listarCitaPendienteResponse" message="tns:listarCitaPendienteResponse" />
+    </operation>
+    <operation name="listarCitaHistorico">
+      <input wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoRequest" message="tns:listarCitaHistorico" />
+      <output wsam:Action="http://services/GestionAtencionWS/listarCitaHistoricoResponse" message="tns:listarCitaHistoricoResponse" />
     </operation>
   </portType>
   <binding name="GestionAtencionWSPortBinding" type="tns:GestionAtencionWS">
@@ -138,15 +138,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarCodigo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="insertarHorario">
       <soap:operation soapAction="" />
       <input>
@@ -156,7 +147,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCita">
+    <operation name="eliminarHorario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -183,7 +174,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarHorario">
+    <operation name="modificarHorario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -192,7 +183,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarHorario">
+    <operation name="eliminarCita">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -219,7 +210,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarCitaHistorico">
+    <operation name="modificarCodigo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -229,6 +220,15 @@
       </output>
     </operation>
     <operation name="listarCitaPendiente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCitaHistorico">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

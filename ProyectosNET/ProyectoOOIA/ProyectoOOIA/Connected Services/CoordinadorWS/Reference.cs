@@ -16,6 +16,15 @@ namespace ProyectoOOIA.CoordinadorWS {
     public interface CoordinadorWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse eliminarCoordinador(ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse> eliminarCoordinadorAsync(ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorWS/modificarCoordinadorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -36,16 +45,6 @@ namespace ProyectoOOIA.CoordinadorWS {
         System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorWS.listarCoordinadorResponse> listarCoordinadorAsync(ProyectoOOIA.CoordinadorWS.listarCoordinadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse eliminarCoordinador(ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorWS/eliminarCoordinadorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse> eliminarCoordinadorAsync(ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
@@ -54,6 +53,42 @@ namespace ProyectoOOIA.CoordinadorWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorRequest", ReplyAction="http://services.OOIA.pucp.edu.pe/CoordinadorWS/insertarCoordinadorResponse")]
         System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorWS.insertarCoordinadorResponse> insertarCoordinadorAsync(ProyectoOOIA.CoordinadorWS.insertarCoordinadorRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCoordinador", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCoordinadorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id_coordinador;
+        
+        public eliminarCoordinadorRequest() {
+        }
+        
+        public eliminarCoordinadorRequest(int id_coordinador) {
+            this.id_coordinador = id_coordinador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCoordinadorResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCoordinadorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarCoordinadorResponse() {
+        }
+        
+        public eliminarCoordinadorResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
@@ -386,42 +421,6 @@ namespace ProyectoOOIA.CoordinadorWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCoordinador", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCoordinadorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_coordinador;
-        
-        public eliminarCoordinadorRequest() {
-        }
-        
-        public eliminarCoordinadorRequest(int id_coordinador) {
-            this.id_coordinador = id_coordinador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCoordinadorResponse", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCoordinadorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.OOIA.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarCoordinadorResponse() {
-        }
-        
-        public eliminarCoordinadorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCoordinador", WrapperNamespace="http://services.OOIA.pucp.edu.pe/", IsWrapped=true)]
     public partial class insertarCoordinadorRequest {
         
@@ -483,6 +482,29 @@ namespace ProyectoOOIA.CoordinadorWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse ProyectoOOIA.CoordinadorWS.CoordinadorWS.eliminarCoordinador(ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest request) {
+            return base.Channel.eliminarCoordinador(request);
+        }
+        
+        public int eliminarCoordinador(int id_coordinador) {
+            ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest inValue = new ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest();
+            inValue.id_coordinador = id_coordinador;
+            ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse retVal = ((ProyectoOOIA.CoordinadorWS.CoordinadorWS)(this)).eliminarCoordinador(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse> ProyectoOOIA.CoordinadorWS.CoordinadorWS.eliminarCoordinadorAsync(ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest request) {
+            return base.Channel.eliminarCoordinadorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse> eliminarCoordinadorAsync(int id_coordinador) {
+            ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest inValue = new ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest();
+            inValue.id_coordinador = id_coordinador;
+            return ((ProyectoOOIA.CoordinadorWS.CoordinadorWS)(this)).eliminarCoordinadorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         ProyectoOOIA.CoordinadorWS.modificarCoordinadorResponse ProyectoOOIA.CoordinadorWS.CoordinadorWS.modificarCoordinador(ProyectoOOIA.CoordinadorWS.modificarCoordinadorRequest request) {
             return base.Channel.modificarCoordinador(request);
         }
@@ -524,29 +546,6 @@ namespace ProyectoOOIA.CoordinadorWS {
         public System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorWS.listarCoordinadorResponse> listarCoordinadorAsync() {
             ProyectoOOIA.CoordinadorWS.listarCoordinadorRequest inValue = new ProyectoOOIA.CoordinadorWS.listarCoordinadorRequest();
             return ((ProyectoOOIA.CoordinadorWS.CoordinadorWS)(this)).listarCoordinadorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse ProyectoOOIA.CoordinadorWS.CoordinadorWS.eliminarCoordinador(ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest request) {
-            return base.Channel.eliminarCoordinador(request);
-        }
-        
-        public int eliminarCoordinador(int id_coordinador) {
-            ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest inValue = new ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest();
-            inValue.id_coordinador = id_coordinador;
-            ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse retVal = ((ProyectoOOIA.CoordinadorWS.CoordinadorWS)(this)).eliminarCoordinador(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse> ProyectoOOIA.CoordinadorWS.CoordinadorWS.eliminarCoordinadorAsync(ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest request) {
-            return base.Channel.eliminarCoordinadorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<ProyectoOOIA.CoordinadorWS.eliminarCoordinadorResponse> eliminarCoordinadorAsync(int id_coordinador) {
-            ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest inValue = new ProyectoOOIA.CoordinadorWS.eliminarCoordinadorRequest();
-            inValue.id_coordinador = id_coordinador;
-            return ((ProyectoOOIA.CoordinadorWS.CoordinadorWS)(this)).eliminarCoordinadorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

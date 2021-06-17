@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="86f051e9-9663-4ad4-9d54-562bd3eb6ce2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9b615a89-e524-4859-923b-9248b6c0bf35" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/HorarioWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="HorarioWS.wsdl" MetadataType="Wsdl" ID="abf722d0-6ac8-4828-b90a-0f7275bed4cf" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/HorarioWS?wsdl" />
-    <MetadataFile FileName="HorarioWS.xsd" MetadataType="Schema" ID="90dcfbf7-594a-45cb-a3f1-5bbf752fcf06" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/HorarioWS?xsd=1" />
+    <MetadataFile FileName="HorarioWS.wsdl" MetadataType="Wsdl" ID="519a4a54-a0d7-4bab-9558-e2d4180239a5" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/HorarioWS?wsdl" />
+    <MetadataFile FileName="HorarioWS.xsd" MetadataType="Schema" ID="7e9e199a-ff67-4a92-a298-19aea6bffc3c" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/HorarioWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

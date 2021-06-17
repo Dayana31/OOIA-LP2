@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://alvaro:8080/WebServicesOOIA/EventoAlumno?xsd=1" namespace="http://services.OOIA.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="eliminarEncuestaEvento">
-    <part name="parameters" element="tns:eliminarEncuestaEvento" />
+  <message name="insertarEncuestaEvento">
+    <part name="parameters" element="tns:insertarEncuestaEvento" />
   </message>
-  <message name="eliminarEncuestaEventoResponse">
-    <part name="parameters" element="tns:eliminarEncuestaEventoResponse" />
+  <message name="insertarEncuestaEventoResponse">
+    <part name="parameters" element="tns:insertarEncuestaEventoResponse" />
   </message>
   <message name="modificarEncuestaEvento">
     <part name="parameters" element="tns:modificarEncuestaEvento" />
@@ -17,11 +17,11 @@
   <message name="modificarEncuestaEventoResponse">
     <part name="parameters" element="tns:modificarEncuestaEventoResponse" />
   </message>
-  <message name="insertarEncuestaEvento">
-    <part name="parameters" element="tns:insertarEncuestaEvento" />
+  <message name="eliminarEncuestaEvento">
+    <part name="parameters" element="tns:eliminarEncuestaEvento" />
   </message>
-  <message name="insertarEncuestaEventoResponse">
-    <part name="parameters" element="tns:insertarEncuestaEventoResponse" />
+  <message name="eliminarEncuestaEventoResponse">
+    <part name="parameters" element="tns:eliminarEncuestaEventoResponse" />
   </message>
   <message name="listarEncuestaEvento">
     <part name="parameters" element="tns:listarEncuestaEvento" />
@@ -30,17 +30,17 @@
     <part name="parameters" element="tns:listarEncuestaEventoResponse" />
   </message>
   <portType name="EventoAlumnoWS">
-    <operation name="eliminarEncuestaEvento">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoRequest" message="tns:eliminarEncuestaEvento" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoResponse" message="tns:eliminarEncuestaEventoResponse" />
+    <operation name="insertarEncuestaEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoRequest" message="tns:insertarEncuestaEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoResponse" message="tns:insertarEncuestaEventoResponse" />
     </operation>
     <operation name="modificarEncuestaEvento">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/modificarEncuestaEventoRequest" message="tns:modificarEncuestaEvento" />
       <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/modificarEncuestaEventoResponse" message="tns:modificarEncuestaEventoResponse" />
     </operation>
-    <operation name="insertarEncuestaEvento">
-      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoRequest" message="tns:insertarEncuestaEvento" />
-      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/insertarEncuestaEventoResponse" message="tns:insertarEncuestaEventoResponse" />
+    <operation name="eliminarEncuestaEvento">
+      <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoRequest" message="tns:eliminarEncuestaEvento" />
+      <output wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/eliminarEncuestaEventoResponse" message="tns:eliminarEncuestaEventoResponse" />
     </operation>
     <operation name="listarEncuestaEvento">
       <input wsam:Action="http://services.OOIA.pucp.edu.pe/EventoAlumnoWS/listarEncuestaEventoRequest" message="tns:listarEncuestaEvento" />
@@ -49,7 +49,7 @@
   </portType>
   <binding name="EventoAlumnoWSPortBinding" type="tns:EventoAlumnoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarEncuestaEvento">
+    <operation name="insertarEncuestaEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarEncuestaEvento">
+    <operation name="eliminarEncuestaEvento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

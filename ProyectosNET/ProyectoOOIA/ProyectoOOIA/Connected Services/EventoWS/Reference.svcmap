@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e83ed5ad-bd48-451b-87cd-68b9730fd946" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1a1ca749-8ce6-47cf-ab03-b0490adabdbe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/WebServicesOOIA/EventoWS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="EventoWS.wsdl" MetadataType="Wsdl" ID="923d4c3f-d356-44f8-a183-023a4edb90af" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?wsdl" />
-    <MetadataFile FileName="EventoWS.xsd" MetadataType="Schema" ID="5b8830cc-ef6a-46e8-b17f-d89c2dd7dae4" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?xsd=1" />
+    <MetadataFile FileName="EventoWS.wsdl" MetadataType="Wsdl" ID="fec23df4-7e4f-4250-b619-4d3a388b4e37" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?wsdl" />
+    <MetadataFile FileName="EventoWS.xsd" MetadataType="Schema" ID="57ae832d-7e9b-46ae-b766-507972ccaa99" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/EventoWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

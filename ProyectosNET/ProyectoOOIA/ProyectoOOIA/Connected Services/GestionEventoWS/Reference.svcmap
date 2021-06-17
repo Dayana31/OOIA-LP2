@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1d6cfbf6-e54f-4af2-b3bf-67a99c0e2b9e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5897816f-5476-49ef-952f-34e2931d2dc3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/AuxiliarWS/GesionEventoWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GesionEventoWS.xsd" MetadataType="Schema" ID="fef0347d-ff93-4de1-a6c8-c0e0253a73ed" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GesionEventoWS?xsd=1" />
-    <MetadataFile FileName="GesionEventoWS.wsdl" MetadataType="Wsdl" ID="c24b9e45-1cc2-44c3-8b27-a09ba2ec3d7e" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GesionEventoWS?WSDL" />
+    <MetadataFile FileName="GesionEventoWS.xsd" MetadataType="Schema" ID="00d6bfba-ae86-4933-a614-65c66ed5c6f4" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GesionEventoWS?xsd=1" />
+    <MetadataFile FileName="GesionEventoWS.wsdl" MetadataType="Wsdl" ID="a287b286-51ad-4589-bf80-cb04716973e6" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GesionEventoWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

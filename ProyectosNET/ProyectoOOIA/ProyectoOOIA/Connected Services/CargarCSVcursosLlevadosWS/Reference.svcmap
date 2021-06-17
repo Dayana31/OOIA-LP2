@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="76ab80fb-9277-424f-b778-6d536cda22d9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0554c2c2-fda1-437e-8f11-aa33f686bf92" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CursosLlevadosCSVcargaWS.wsdl" MetadataType="Wsdl" ID="882d04ed-0245-4ee7-bf2d-8795a9a4a1ff" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?WSDL" />
-    <MetadataFile FileName="CursosLlevadosCSVcargaWS.xsd" MetadataType="Schema" ID="3b7728b0-e0c2-42cc-9e68-9b74a5d0171e" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?xsd=1" />
+    <MetadataFile FileName="CursosLlevadosCSVcargaWS.wsdl" MetadataType="Wsdl" ID="dac6735b-8792-45c5-ab87-3bc8170d1831" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?WSDL" />
+    <MetadataFile FileName="CursosLlevadosCSVcargaWS.xsd" MetadataType="Schema" ID="984d4913-a82c-4848-915a-769e1546d27c" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/CursosLlevadosCSVcargaWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

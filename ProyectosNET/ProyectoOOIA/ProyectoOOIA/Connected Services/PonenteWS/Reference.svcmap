@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="22705135-34e5-4a7f-9485-cc2fdb8bd137" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9a789179-0582-49aa-b7df-38b0ae6faedb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8082/AuxiliarWS/GestionAtencionWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/WebServicesOOIA/PonenteWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestionAtencionWS1.xsd" MetadataType="Schema" ID="15b97663-0ba7-4d48-b1c6-88700793efff" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/GestionAtencionWS?xsd=1" />
-    <MetadataFile FileName="GestionAtencionWS1.wsdl" MetadataType="Wsdl" ID="a8ef9130-264b-4676-aab0-22c983c79c4e" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/GestionAtencionWS?WSDL" />
+    <MetadataFile FileName="PonenteWS.wsdl" MetadataType="Wsdl" ID="bb1f378f-b715-4124-a70a-43c14e6c57a9" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PonenteWS?WSDL" />
+    <MetadataFile FileName="PonenteWS.xsd" MetadataType="Schema" ID="ab4cdd35-d49c-47a4-b0db-38484accef32" SourceId="1" SourceUrl="http://localhost:8080/WebServicesOOIA/PonenteWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
