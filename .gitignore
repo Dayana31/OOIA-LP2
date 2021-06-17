@@ -93,12 +93,7 @@ Proyectos_Lab6.zip
 /ProyectosJAVA/WebServicesOOIA/nbproject/private/
 /ProyectosJAVA/WebServicesOOIA/build/
 /ProyectosJAVA/WebServicesOOIA/dist/
-/ProyectosJAVA/ServiciosAuxiliares/nbproject/private/
-/ProyectosJAVA/ServiciosAuxiliares/build/
-/ProyectosJAVA/ServiciosAuxiliares/dist/
-/ProyectosJAVA/AuxiliarWS/nbproject/private/
-/ProyectosJAVA/AuxiliarWS/build/
-/ProyectosJAVA/AuxiliarWS/dist/
+
 ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug/DesignTimeResolveAssemblyReferences.cache
 *.cache
@@ -140,7 +135,7 @@ ProyectosJAVA/OOIAConfigMySql/nbproject/private/private.properties
 /ProyectosJAVA/ooiaCargaMasivaCSV/nbproject/private/
 /ProyectosJAVA/ooiaCargaMasivaCSV/build/
 /ProyectosJAVA/ooiaCargaMasivaCSV/dist/
-ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug/ProyectoOOIA.csproj.FileListAbsolute.txt
+ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug/
 *.cache
 ProyectosNET/ProyectoOOIA/ProyectoOOIA/bin/Debug/ProyectoOOIA.exe
 ProyectosNET/ProyectoOOIA/.vs/ProyectoOOIA/v16/.suo

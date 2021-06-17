@@ -37,7 +37,6 @@ public class GestionEventoWS {
     private EventoAlumnoDAO eventoAl=new EventoAlumnoMySQL();
     private CoordinadorDAO coordinador=new CoordinadorMySQL();;
     private CategoriaEventoDAO categoria=new CategoriaEventoMySQL();
-    
     public GestionEventoWS() {
     eventoSQL=new EventoMySQL();
     eventoAl=new EventoAlumnoMySQL();
@@ -51,7 +50,7 @@ public class GestionEventoWS {
         try {
             lista=eventoSQL.listar(nombreCategoria);
         } catch (Exception e) {
-            Logger.getLogger(EventoMySQL.class.getName()).log(Level.SEVERE, null, e);
+            System.out.println(e.getMessage());
         }
         return lista;
     }
@@ -222,8 +221,5 @@ public class GestionEventoWS {
         }
         return resultado;
     }
-    
-    
-    
     
 }

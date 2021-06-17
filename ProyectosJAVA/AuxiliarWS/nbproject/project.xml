@@ -14,10 +14,6 @@
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
-                    <file>${reference.PruebaMySql.jar}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
-                </library>
-                <library dirs="200">
                     <file>${file.reference.mysql-connector-java-8.0.24.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
@@ -53,6 +49,14 @@
                     <file>${reference.ooiaCargaMasivaCSV.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
+                <library dirs="200">
+                    <file>${reference.ooiaGestAcademicaController.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
+                <library dirs="200">
+                    <file>${reference.ooiaGestAcademicaModel.jar}</file>
+                    <path-in-war>WEB-INF/lib</path-in-war>
+                </library>
             </web-module-libraries>
             <web-module-additional-libraries/>
             <source-roots>
@@ -80,7 +84,7 @@
                 <id>jar</id>
             </reference>
             <reference>
-                <foreign-project>PruebaMySql</foreign-project>
+                <foreign-project>ooiaCargaMasivaCSV</foreign-project>
                 <artifact-type>jar</artifact-type>
                 <script>build.xml</script>
                 <target>jar</target>
@@ -88,7 +92,15 @@
                 <id>jar</id>
             </reference>
             <reference>
-                <foreign-project>ooiaCargaMasivaCSV</foreign-project>
+                <foreign-project>ooiaGestAcademicaController</foreign-project>
+                <artifact-type>jar</artifact-type>
+                <script>build.xml</script>
+                <target>jar</target>
+                <clean-target>clean</clean-target>
+                <id>jar</id>
+            </reference>
+            <reference>
+                <foreign-project>ooiaGestAcademicaModel</foreign-project>
                 <artifact-type>jar</artifact-type>
                 <script>build.xml</script>
                 <target>jar</target>
