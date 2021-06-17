@@ -848,6 +848,9 @@ exists or setup the property manually. For example like this:
         <ant antfile="${project.OOIAConfigMySql}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
+        <ant antfile="${project.ooiaCargaMasivaCSV}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
         <ant antfile="${project.ooiaGestAcademicaController}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
@@ -878,6 +881,9 @@ exists or setup the property manually. For example like this:
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.OOIAConfigMySql}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.ooiaCargaMasivaCSV}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.ooiaGestAcademicaController}/build.xml" inheritall="false" target="jar">
@@ -1056,6 +1062,7 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${reference.ooiaGestEventosModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.ooiaGestAtencionController.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.ooiaGestAcademicaModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.ooiaCargaMasivaCSV.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
@@ -1071,6 +1078,7 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${reference.ooiaGestEventosModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.ooiaGestAtencionController.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.ooiaGestAcademicaModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.ooiaCargaMasivaCSV.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
@@ -1488,6 +1496,7 @@ exists or setup the property manually. For example like this:
         <ant antfile="${project.GestionEventosController}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.Interfaces}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.OOIAConfigMySql}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.ooiaCargaMasivaCSV}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.ooiaGestAcademicaController}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.ooiaGestAcademicaModel}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.ooiaGestAtencionController}/build.xml" inheritall="false" target="clean"/>

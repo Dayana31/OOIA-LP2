@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package services;
+package pe.edu.pucp.OOIA.services;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -14,29 +13,32 @@ import java.text.ParseException;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pruebaCargaDatosCSV.ProfesoresCSV;
+import pe.edu.pucp.ooia.carga_csv.CursosLlevadosCSV;
 
 /**
  *
- * @author PC
+ * @author LENOVO
  */
-@WebService(serviceName = "ProfesoresCSVcargaWS")
-public class ProfesoresCSVcargaWS {
+@WebService(serviceName = "CursosLlevadosCSVcargaWS")
+public class CursosLlevadosCSVcargaWS {
 
     /**
      * This is a sample web service operation
      */
-    private ProfesoresCSV csvProfesores;
-    @WebMethod(operationName = "CargarCSVprofesores")
-    public int cargarCSVProfesores(@WebParam(name = "RutaArchivo") byte[] ruta) throws FileNotFoundException, ParseException, IOException {
+private CursosLlevadosCSV csvCursosLlevados;
+    
+    @WebMethod(operationName = "CargarCSVcursosLlevados")
+    public int cargarCSVcursosLlevados(@WebParam(name = "RutaArchivo") byte[] ruta) throws FileNotFoundException, ParseException, IOException {
         int resultado = 0;
-        csvProfesores = new ProfesoresCSV();
+        System.out.println("Entro a la funcion");
+        csvCursosLlevados = new CursosLlevadosCSV();//cae en esta linea
+        System.out.println("Termino de inicializar csvCursosLlevados");
         FileOutputStream outputStream = new FileOutputStream("Auxiliar");
         outputStream.write(ruta);
         outputStream.close();
         FileInputStream inputStream = new FileInputStream("Auxiliar");
-        csvProfesores.setRutaCSV(inputStream);
-        resultado = csvProfesores.cargarDatos();
+        csvCursosLlevados.asignarRutaCSV(inputStream);
+        resultado = csvCursosLlevados.cargarDatos();
         inputStream.close();
         return resultado;
     }

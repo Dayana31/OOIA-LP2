@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package services;
+package pe.edu.pucp.OOIA.services;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -14,30 +13,26 @@ import java.text.ParseException;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pruebaCargaDatosCSV.AlumnosCSV;
+import pe.edu.pucp.ooia.carga_csv.ProfesoresCSV;
 
 /**
  *
- * @author PC
+ * @author LENOVO
  */
-@WebService(serviceName = "AlumnosCSVcargaWS")
-public class AlumnosCSVcargaWS1 {
+@WebService(serviceName = "ProfesoresCSVcargaWS")
+public class ProfesoresCSVcargaWS {
 
-    private AlumnosCSV csvAlumnos;
-    
-    
-    @WebMethod(operationName = "CargarCSValumnos")
-    public int cargarCSVAlumnos(@WebParam(name = "Rutaarchivo")byte[] ruta) throws FileNotFoundException, ParseException, IOException{
+        private ProfesoresCSV csvProfesores;
+    @WebMethod(operationName = "CargarCSVprofesores")
+    public int cargarCSVProfesores(@WebParam(name = "RutaArchivo") byte[] ruta) throws FileNotFoundException, ParseException, IOException {
         int resultado = 0;
-        csvAlumnos = new AlumnosCSV();
-
+        csvProfesores = new ProfesoresCSV();
         FileOutputStream outputStream = new FileOutputStream("Auxiliar");
         outputStream.write(ruta);
         outputStream.close();
         FileInputStream inputStream = new FileInputStream("Auxiliar");
-        
-        csvAlumnos.setRutaCSV(inputStream);
-        resultado = csvAlumnos.cargarDatos();
+        csvProfesores.setRutaCSV(inputStream);
+        resultado = csvProfesores.cargarDatos();
         inputStream.close();
         return resultado;
     }

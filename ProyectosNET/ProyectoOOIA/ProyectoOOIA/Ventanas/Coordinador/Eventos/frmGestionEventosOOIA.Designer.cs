@@ -29,7 +29,6 @@ namespace ProyectoOOIA.Ventanas
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGestionEventosOOIA));
             this.btnBack = new System.Windows.Forms.Button();
             this.agregarImagen = new System.Windows.Forms.OpenFileDialog();
@@ -69,16 +68,12 @@ namespace ProyectoOOIA.Ventanas
             this.label11 = new System.Windows.Forms.Label();
             this.lblBuscarEventos = new System.Windows.Forms.Label();
             this.pnlHeader = new System.Windows.Forms.Panel();
-            this.listarCategoriaEventoResponseBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listarCategoriaEventoResponseBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPonentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.npdCapacidad)).BeginInit();
             this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listarCategoriaEventoResponseBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listarCategoriaEventoResponseBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -475,14 +470,6 @@ namespace ProyectoOOIA.Ventanas
             this.pnlHeader.Size = new System.Drawing.Size(797, 71);
             this.pnlHeader.TabIndex = 73;
             // 
-            // listarCategoriaEventoResponseBindingSource
-            // 
-            this.listarCategoriaEventoResponseBindingSource.DataSource = typeof(ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse);
-            // 
-            // listarCategoriaEventoResponseBindingSource1
-            // 
-            this.listarCategoriaEventoResponseBindingSource1.DataSource = typeof(ProyectoOOIA.GestionEventoWS.listarCategoriaEventoResponse);
-            // 
             // frmGestionEventosOOIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -524,8 +511,6 @@ namespace ProyectoOOIA.Ventanas
             ((System.ComponentModel.ISupportInitialize)(this.npdCapacidad)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listarCategoriaEventoResponseBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listarCategoriaEventoResponseBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,7 +555,5 @@ namespace ProyectoOOIA.Ventanas
         private System.Windows.Forms.Label lblBuscarEventos;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.ToolStripButton btnEliminar;
-        private System.Windows.Forms.BindingSource listarCategoriaEventoResponseBindingSource;
-        private System.Windows.Forms.BindingSource listarCategoriaEventoResponseBindingSource1;
     }
 }

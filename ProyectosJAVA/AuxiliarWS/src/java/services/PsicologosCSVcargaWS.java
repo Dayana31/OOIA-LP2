@@ -14,7 +14,7 @@ import java.text.ParseException;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pe.edu.pucp.ooia.carga_csv.PsicologosCSV;
+import pruebaCargaDatosCSV.PsicologosCSV;
 
 /**
  *

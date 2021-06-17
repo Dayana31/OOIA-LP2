@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package services;
+package pe.edu.pucp.OOIA.services;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -14,31 +13,32 @@ import java.text.ParseException;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
-import pruebaCargaDatosCSV.AlumnosCSV;
+import pe.edu.pucp.ooia.carga_csv.EvaluacionesParcialesCSV;
 
 /**
  *
- * @author PC
+ * @author LENOVO
  */
-@WebService(serviceName = "AlumnosCSVcargaWS")
-public class AlumnosCSVcargaWS1 {
+@WebService(serviceName = "EvaluacionesCSVcargaWS")
+public class EvaluacionesCSVcargaWS {
 
-    private AlumnosCSV csvAlumnos;
+    /**
+     * This is a sample web service operation
+     */
+      private EvaluacionesParcialesCSV csvEvaluaciones;
     
-    
-    @WebMethod(operationName = "CargarCSValumnos")
-    public int cargarCSVAlumnos(@WebParam(name = "Rutaarchivo")byte[] ruta) throws FileNotFoundException, ParseException, IOException{
+    @WebMethod(operationName = "CargarCSVevaluaciones")
+    public int cargarCSVevaluaciones(@WebParam(name = "RutaArchivo") byte[] ruta) throws FileNotFoundException, ParseException, IOException {
         int resultado = 0;
-        csvAlumnos = new AlumnosCSV();
-
+        csvEvaluaciones = new EvaluacionesParcialesCSV();
         FileOutputStream outputStream = new FileOutputStream("Auxiliar");
         outputStream.write(ruta);
         outputStream.close();
         FileInputStream inputStream = new FileInputStream("Auxiliar");
-        
-        csvAlumnos.setRutaCSV(inputStream);
-        resultado = csvAlumnos.cargarDatos();
+        csvEvaluaciones.setRutaCSV(inputStream);
+        resultado = csvEvaluaciones.cargarDatos();
         inputStream.close();
         return resultado;
     }
+    
 }
