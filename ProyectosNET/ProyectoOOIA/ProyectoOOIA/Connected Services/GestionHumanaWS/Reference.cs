@@ -25,13 +25,13 @@ namespace ProyectoOOIA.GestionHumanaWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarProfesorResponse> eliminarProfesorAsync(ProyectoOOIA.GestionHumanaWS.eliminarProfesorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarAlumnoRequest", ReplyAction="http://services/GestionHumanaWS/eliminarAlumnoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarCoordinadorRequest", ReplyAction="http://services/GestionHumanaWS/insertarCoordinadorResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse eliminarAlumno(ProyectoOOIA.GestionHumanaWS.eliminarAlumnoRequest request);
+        ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse insertarCoordinador(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarAlumnoRequest", ReplyAction="http://services/GestionHumanaWS/eliminarAlumnoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse> eliminarAlumnoAsync(ProyectoOOIA.GestionHumanaWS.eliminarAlumnoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarCoordinadorRequest", ReplyAction="http://services/GestionHumanaWS/insertarCoordinadorResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse> insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listarAlumnoRequest", ReplyAction="http://services/GestionHumanaWS/listarAlumnoResponse")]
@@ -54,14 +54,14 @@ namespace ProyectoOOIA.GestionHumanaWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarAlumnoResponse> modificarAlumnoAsync(ProyectoOOIA.GestionHumanaWS.modificarAlumnoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarAlumnoRequest", ReplyAction="http://services/GestionHumanaWS/insertarAlumnoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarEspecialidadRequest", ReplyAction="http://services/GestionHumanaWS/insertarEspecialidadResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse insertarAlumno(ProyectoOOIA.GestionHumanaWS.insertarAlumnoRequest request);
+        ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse insertarEspecialidad(ProyectoOOIA.GestionHumanaWS.insertarEspecialidadRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarAlumnoRequest", ReplyAction="http://services/GestionHumanaWS/insertarAlumnoResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse> insertarAlumnoAsync(ProyectoOOIA.GestionHumanaWS.insertarAlumnoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarEspecialidadRequest", ReplyAction="http://services/GestionHumanaWS/insertarEspecialidadResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse> insertarEspecialidadAsync(ProyectoOOIA.GestionHumanaWS.insertarEspecialidadRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listarProfesorRequest", ReplyAction="http://services/GestionHumanaWS/listarProfesorResponse")]
@@ -74,14 +74,14 @@ namespace ProyectoOOIA.GestionHumanaWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarProfesorResponse> listarProfesorAsync(ProyectoOOIA.GestionHumanaWS.listarProfesorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarPonenteRequest", ReplyAction="http://services/GestionHumanaWS/eliminarPonenteResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarEspecialidadRequest", ReplyAction="http://services/GestionHumanaWS/eliminarEspecialidadResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.eliminarPonenteResponse eliminarPonente(ProyectoOOIA.GestionHumanaWS.eliminarPonenteRequest request);
+        ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse eliminarEspecialidad(ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarPonenteRequest", ReplyAction="http://services/GestionHumanaWS/eliminarPonenteResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarPonenteResponse> eliminarPonenteAsync(ProyectoOOIA.GestionHumanaWS.eliminarPonenteRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarEspecialidadRequest", ReplyAction="http://services/GestionHumanaWS/eliminarEspecialidadResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse> eliminarEspecialidadAsync(ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listarPonenteRequest", ReplyAction="http://services/GestionHumanaWS/listarPonenteResponse")]
@@ -174,14 +174,14 @@ namespace ProyectoOOIA.GestionHumanaWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarPsicologoResponse> modificarPsicologoAsync(ProyectoOOIA.GestionHumanaWS.modificarPsicologoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarEspecialidadRequest", ReplyAction="http://services/GestionHumanaWS/eliminarEspecialidadResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/autenticarUsuarioRequest", ReplyAction="http://services/GestionHumanaWS/autenticarUsuarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse eliminarEspecialidad(ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadRequest request);
+        ProyectoOOIA.GestionHumanaWS.autenticarUsuarioResponse autenticarUsuario(ProyectoOOIA.GestionHumanaWS.autenticarUsuarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarEspecialidadRequest", ReplyAction="http://services/GestionHumanaWS/eliminarEspecialidadResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse> eliminarEspecialidadAsync(ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/autenticarUsuarioRequest", ReplyAction="http://services/GestionHumanaWS/autenticarUsuarioResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.autenticarUsuarioResponse> autenticarUsuarioAsync(ProyectoOOIA.GestionHumanaWS.autenticarUsuarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarEspecialidadRequest", ReplyAction="http://services/GestionHumanaWS/insertarEspecialidadResponse")]
@@ -244,14 +244,14 @@ namespace ProyectoOOIA.GestionHumanaWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarEspecialidadResponse> modificarEspecialidadAsync(ProyectoOOIA.GestionHumanaWS.modificarEspecialidadRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarCoordinadorRequest", ReplyAction="http://services/GestionHumanaWS/insertarCoordinadorResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listarPsicologoRequest", ReplyAction="http://services/GestionHumanaWS/listarPsicologoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse insertarCoordinador(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request);
+        ProyectoOOIA.GestionHumanaWS.listarPsicologoResponse listarPsicologo(ProyectoOOIA.GestionHumanaWS.listarPsicologoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/insertarCoordinadorRequest", ReplyAction="http://services/GestionHumanaWS/insertarCoordinadorResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse> insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listarPsicologoRequest", ReplyAction="http://services/GestionHumanaWS/listarPsicologoResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listarPsicologoResponse> listarPsicologoAsync(ProyectoOOIA.GestionHumanaWS.listarPsicologoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listar_alumno_x_idRequest", ReplyAction="http://services/GestionHumanaWS/listar_alumno_x_idResponse")]
@@ -294,14 +294,14 @@ namespace ProyectoOOIA.GestionHumanaWS {
         System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listar_psicologo_x_idResponse> listar_psicologo_x_idAsync(ProyectoOOIA.GestionHumanaWS.listar_psicologo_x_idRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listar_coordinador_x_idRequest", ReplyAction="http://services/GestionHumanaWS/listar_coordinador_x_idResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarPonenteRequest", ReplyAction="http://services/GestionHumanaWS/eliminarPonenteResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(persona))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idResponse listar_coordinador_x_id(ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idRequest request);
+        ProyectoOOIA.GestionHumanaWS.eliminarPonenteResponse eliminarPonente(ProyectoOOIA.GestionHumanaWS.eliminarPonenteRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/listar_coordinador_x_idRequest", ReplyAction="http://services/GestionHumanaWS/listar_coordinador_x_idResponse")]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idResponse> listar_coordinador_x_idAsync(ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/eliminarPonenteRequest", ReplyAction="http://services/GestionHumanaWS/eliminarPonenteResponse")]
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarPonenteResponse> eliminarPonenteAsync(ProyectoOOIA.GestionHumanaWS.eliminarPonenteRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services/GestionHumanaWS/tipoUsuarioRequest", ReplyAction="http://services/GestionHumanaWS/tipoUsuarioResponse")]
@@ -420,121 +420,122 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string codigo {
+        public int id_coordinador {
             get {
-                return this.codigoField;
+                return this.id_coordinadorField;
             }
             set {
-                this.codigoField = value;
-                this.RaisePropertyChanged("codigo");
+                this.id_coordinadorField = value;
+                this.RaisePropertyChanged("id_coordinador");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public double craest {
+        public string rol {
             get {
-                return this.craestField;
+                return this.rolField;
             }
             set {
-                this.craestField = value;
-                this.RaisePropertyChanged("craest");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public double creditos_aprobados {
-            get {
-                return this.creditos_aprobadosField;
-            }
-            set {
-                this.creditos_aprobadosField = value;
-                this.RaisePropertyChanged("creditos_aprobados");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public especialidad especialidad {
-            get {
-                return this.especialidadField;
-            }
-            set {
-                this.especialidadField = value;
-                this.RaisePropertyChanged("especialidad");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int id_alumno {
-            get {
-                return this.id_alumnoField;
-            }
-            set {
-                this.id_alumnoField = value;
-                this.RaisePropertyChanged("id_alumno");
+                this.rolField = value;
+                this.RaisePropertyChanged("rol");
             }
         }
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(profesor))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class especialidad : object, System.ComponentModel.INotifyPropertyChanged {
+    public abstract partial class miembroPUCP : persona {
         
-        private bool activoField;
+        private System.DateTime fecha_inclusionField;
         
-        private int id_especialidadField;
+        private bool fecha_inclusionFieldSpecified;
         
-        private string nombreField;
+        private int id_miembro_pucpField;
+        
+        private byte[] imagenDePerfilField;
+        
+        private string passwordField;
+        
+        private string usuarioField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
+        public System.DateTime fecha_inclusion {
             get {
-                return this.activoField;
+                return this.fecha_inclusionField;
             }
             set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
+                this.fecha_inclusionField = value;
+                this.RaisePropertyChanged("fecha_inclusion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fecha_inclusionSpecified {
+            get {
+                return this.fecha_inclusionFieldSpecified;
+            }
+            set {
+                this.fecha_inclusionFieldSpecified = value;
+                this.RaisePropertyChanged("fecha_inclusionSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_especialidad {
+        public int id_miembro_pucp {
             get {
-                return this.id_especialidadField;
+                return this.id_miembro_pucpField;
             }
             set {
-                this.id_especialidadField = value;
-                this.RaisePropertyChanged("id_especialidad");
+                this.id_miembro_pucpField = value;
+                this.RaisePropertyChanged("id_miembro_pucp");
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nombre {
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=2)]
+        public byte[] imagenDePerfil {
             get {
-                return this.nombreField;
+                return this.imagenDePerfilField;
             }
             set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
+                this.imagenDePerfilField = value;
+                this.RaisePropertyChanged("imagenDePerfil");
             }
         }
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string password {
+            get {
+                return this.passwordField;
+            }
+            set {
+                this.passwordField = value;
+                this.RaisePropertyChanged("password");
+            }
+        }
         
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
+                this.RaisePropertyChanged("usuario");
             }
         }
     }
@@ -547,7 +548,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(profesor))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -663,8 +664,68 @@ namespace ProyectoOOIA.GestionHumanaWS {
     }
     
     /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class especialidad : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private bool activoField;
+        
+        private int id_especialidadField;
+        
+        private string nombreField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int id_especialidad {
+            get {
+                return this.id_especialidadField;
+            }
+            set {
+                this.id_especialidadField = value;
+                this.RaisePropertyChanged("id_especialidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ponente))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -715,7 +776,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -766,155 +827,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
     }
     
     /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(coordinador))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(profesor))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(alumno))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(psicologo))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public abstract partial class miembroPUCP : persona {
-        
-        private System.DateTime fecha_inclusionField;
-        
-        private bool fecha_inclusionFieldSpecified;
-        
-        private int id_miembro_pucpField;
-        
-        private byte[] imagenDePerfilField;
-        
-        private string passwordField;
-        
-        private string usuarioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime fecha_inclusion {
-            get {
-                return this.fecha_inclusionField;
-            }
-            set {
-                this.fecha_inclusionField = value;
-                this.RaisePropertyChanged("fecha_inclusion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fecha_inclusionSpecified {
-            get {
-                return this.fecha_inclusionFieldSpecified;
-            }
-            set {
-                this.fecha_inclusionFieldSpecified = value;
-                this.RaisePropertyChanged("fecha_inclusionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_miembro_pucp {
-            get {
-                return this.id_miembro_pucpField;
-            }
-            set {
-                this.id_miembro_pucpField = value;
-                this.RaisePropertyChanged("id_miembro_pucp");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=2)]
-        public byte[] imagenDePerfil {
-            get {
-                return this.imagenDePerfilField;
-            }
-            set {
-                this.imagenDePerfilField = value;
-                this.RaisePropertyChanged("imagenDePerfil");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string password {
-            get {
-                return this.passwordField;
-            }
-            set {
-                this.passwordField = value;
-                this.RaisePropertyChanged("password");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-                this.RaisePropertyChanged("usuario");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
-    public partial class coordinador : miembroPUCP {
-        
-        private bool activoField;
-        
-        private int id_coordinadorField;
-        
-        private string rolField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public bool activo {
-            get {
-                return this.activoField;
-            }
-            set {
-                this.activoField = value;
-                this.RaisePropertyChanged("activo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int id_coordinador {
-            get {
-                return this.id_coordinadorField;
-            }
-            set {
-                this.id_coordinadorField = value;
-                this.RaisePropertyChanged("id_coordinador");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string rol {
-            get {
-                return this.rolField;
-            }
-            set {
-                this.rolField = value;
-                this.RaisePropertyChanged("rol");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -993,7 +906,100 @@ namespace ProyectoOOIA.GestionHumanaWS {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3752.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services/")]
+    public partial class alumno : miembroPUCP {
+        
+        private bool activoField;
+        
+        private string codigoField;
+        
+        private double craestField;
+        
+        private double creditos_aprobadosField;
+        
+        private especialidad especialidadField;
+        
+        private int id_alumnoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public bool activo {
+            get {
+                return this.activoField;
+            }
+            set {
+                this.activoField = value;
+                this.RaisePropertyChanged("activo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+                this.RaisePropertyChanged("codigo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public double craest {
+            get {
+                return this.craestField;
+            }
+            set {
+                this.craestField = value;
+                this.RaisePropertyChanged("craest");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public double creditos_aprobados {
+            get {
+                return this.creditos_aprobadosField;
+            }
+            set {
+                this.creditos_aprobadosField = value;
+                this.RaisePropertyChanged("creditos_aprobados");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public especialidad especialidad {
+            get {
+                return this.especialidadField;
+            }
+            set {
+                this.especialidadField = value;
+                this.RaisePropertyChanged("especialidad");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int id_alumno {
+            get {
+                return this.id_alumnoField;
+            }
+            set {
+                this.id_alumnoField = value;
+                this.RaisePropertyChanged("id_alumno");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.4084.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1046,27 +1052,35 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlumno", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarAlumnoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinador", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarCoordinadorRequest {
         
-        public listarAlumnoRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionHumanaWS.coordinador coordinador;
+        
+        public modificarCoordinadorRequest() {
+        }
+        
+        public modificarCoordinadorRequest(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
+            this.coordinador = coordinador;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAlumnoResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarAlumnoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCoordinadorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarCoordinadorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionHumanaWS.alumno[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarAlumnoResponse() {
+        public modificarCoordinadorResponse() {
         }
         
-        public listarAlumnoResponse(ProyectoOOIA.GestionHumanaWS.alumno[] @return) {
+        public modificarCoordinadorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1196,8 +1210,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
     public partial class eliminarPonenteResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionHumanaWS.coordinador[] @return;
         
         public eliminarPonenteResponse() {
         }
@@ -1266,35 +1280,35 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPonente", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarPonenteRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEspecialidad", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarEspecialidadRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionHumanaWS.ponente Ponente;
+        public ProyectoOOIA.GestionHumanaWS.especialidad especialidad;
         
-        public insertarPonenteRequest() {
+        public modificarEspecialidadRequest() {
         }
         
-        public insertarPonenteRequest(ProyectoOOIA.GestionHumanaWS.ponente Ponente) {
-            this.Ponente = Ponente;
+        public modificarEspecialidadRequest(ProyectoOOIA.GestionHumanaWS.especialidad especialidad) {
+            this.especialidad = especialidad;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPonenteResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class insertarPonenteResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarEspecialidadResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarEspecialidadResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarPonenteResponse() {
+        public modificarEspecialidadResponse() {
         }
         
-        public insertarPonenteResponse(int @return) {
+        public modificarEspecialidadResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1577,7 +1591,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public ProyectoOOIA.GestionHumanaWS.psicologo @return;
         
         public insertarEspecialidadResponse() {
         }
@@ -1621,32 +1635,26 @@ namespace ProyectoOOIA.GestionHumanaWS {
         public modificarCoordinadorResponse(int @return) {
             this.@return = @return;
         }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinador", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCoordinadorRequest {
         
-        public listarCoordinadorRequest() {
+        public modificarPonenteRequest(ProyectoOOIA.GestionHumanaWS.ponente invitado) {
+            this.invitado = invitado;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarCoordinadorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listarCoordinadorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPonenteResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class modificarPonenteResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionHumanaWS.coordinador[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarCoordinadorResponse() {
+        public modificarPonenteResponse() {
         }
         
-        public listarCoordinadorResponse(ProyectoOOIA.GestionHumanaWS.coordinador[] @return) {
+        public modificarPonenteResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1677,7 +1685,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public ProyectoOOIA.GestionHumanaWS.alumno @return;
         
         public eliminarCoordinadorResponse() {
         }
@@ -1777,7 +1785,7 @@ namespace ProyectoOOIA.GestionHumanaWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public ProyectoOOIA.GestionHumanaWS.coordinador @return;
         
         public insertarCoordinadorResponse() {
         }
@@ -1794,8 +1802,8 @@ namespace ProyectoOOIA.GestionHumanaWS {
     public partial class listar_alumno_x_idRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id_persona;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionHumanaWS.ponente[] @return;
         
         public listar_alumno_x_idRequest() {
         }
@@ -1939,17 +1947,17 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_coordinador_x_id", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listar_coordinador_x_idRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="tipoUsuario", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class tipoUsuarioRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int id_persona;
         
-        public listar_coordinador_x_idRequest() {
+        public tipoUsuarioRequest() {
         }
         
-        public listar_coordinador_x_idRequest(int id_persona) {
+        public tipoUsuarioRequest(int id_persona) {
             this.id_persona = id_persona;
         }
     }
@@ -1957,17 +1965,17 @@ namespace ProyectoOOIA.GestionHumanaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listar_coordinador_x_idResponse", WrapperNamespace="http://services/", IsWrapped=true)]
-    public partial class listar_coordinador_x_idResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="tipoUsuarioResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class tipoUsuarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public ProyectoOOIA.GestionHumanaWS.coordinador @return;
+        public int @return;
         
-        public listar_coordinador_x_idResponse() {
+        public tipoUsuarioResponse() {
         }
         
-        public listar_coordinador_x_idResponse(ProyectoOOIA.GestionHumanaWS.coordinador @return) {
+        public tipoUsuarioResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -2004,6 +2012,34 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
         
         public tipoUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesor", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarProfesorRequest {
+        
+        public listarProfesorRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarProfesorResponse", WrapperNamespace="http://services/", IsWrapped=true)]
+    public partial class listarProfesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public ProyectoOOIA.GestionHumanaWS.profesor[] @return;
+        
+        public listarProfesorResponse() {
+        }
+        
+        public listarProfesorResponse(ProyectoOOIA.GestionHumanaWS.profesor[] @return) {
             this.@return = @return;
         }
     }
@@ -2059,26 +2095,26 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarAlumno(ProyectoOOIA.GestionHumanaWS.eliminarAlumnoRequest request) {
-            return base.Channel.eliminarAlumno(request);
+        ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarCoordinador(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request) {
+            return base.Channel.insertarCoordinador(request);
         }
         
-        public int eliminarAlumno(int id_alumno) {
-            ProyectoOOIA.GestionHumanaWS.eliminarAlumnoRequest inValue = new ProyectoOOIA.GestionHumanaWS.eliminarAlumnoRequest();
-            inValue.id_alumno = id_alumno;
-            ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).eliminarAlumno(inValue);
+        public int insertarCoordinador(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
+            ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest();
+            inValue.coordinador = coordinador;
+            ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarCoordinador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarAlumnoAsync(ProyectoOOIA.GestionHumanaWS.eliminarAlumnoRequest request) {
-            return base.Channel.eliminarAlumnoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request) {
+            return base.Channel.insertarCoordinadorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarAlumnoResponse> eliminarAlumnoAsync(int id_alumno) {
-            ProyectoOOIA.GestionHumanaWS.eliminarAlumnoRequest inValue = new ProyectoOOIA.GestionHumanaWS.eliminarAlumnoRequest();
-            inValue.id_alumno = id_alumno;
-            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).eliminarAlumnoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse> insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
+            ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest();
+            inValue.coordinador = coordinador;
+            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarCoordinadorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2126,26 +2162,26 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarAlumno(ProyectoOOIA.GestionHumanaWS.insertarAlumnoRequest request) {
-            return base.Channel.insertarAlumno(request);
+        ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarEspecialidad(ProyectoOOIA.GestionHumanaWS.insertarEspecialidadRequest request) {
+            return base.Channel.insertarEspecialidad(request);
         }
         
-        public int insertarAlumno(ProyectoOOIA.GestionHumanaWS.alumno alumno) {
-            ProyectoOOIA.GestionHumanaWS.insertarAlumnoRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarAlumnoRequest();
-            inValue.alumno = alumno;
-            ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarAlumno(inValue);
+        public int insertarEspecialidad(ProyectoOOIA.GestionHumanaWS.especialidad especialidad) {
+            ProyectoOOIA.GestionHumanaWS.insertarEspecialidadRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarEspecialidadRequest();
+            inValue.especialidad = especialidad;
+            ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarEspecialidad(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarAlumnoAsync(ProyectoOOIA.GestionHumanaWS.insertarAlumnoRequest request) {
-            return base.Channel.insertarAlumnoAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarEspecialidadAsync(ProyectoOOIA.GestionHumanaWS.insertarEspecialidadRequest request) {
+            return base.Channel.insertarEspecialidadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarAlumnoResponse> insertarAlumnoAsync(ProyectoOOIA.GestionHumanaWS.alumno alumno) {
-            ProyectoOOIA.GestionHumanaWS.insertarAlumnoRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarAlumnoRequest();
-            inValue.alumno = alumno;
-            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarAlumnoAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarEspecialidadResponse> insertarEspecialidadAsync(ProyectoOOIA.GestionHumanaWS.especialidad especialidad) {
+            ProyectoOOIA.GestionHumanaWS.insertarEspecialidadRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarEspecialidadRequest();
+            inValue.especialidad = especialidad;
+            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarEspecialidadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2170,26 +2206,26 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionHumanaWS.eliminarPonenteResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarPonente(ProyectoOOIA.GestionHumanaWS.eliminarPonenteRequest request) {
-            return base.Channel.eliminarPonente(request);
+        ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarEspecialidad(ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadRequest request) {
+            return base.Channel.eliminarEspecialidad(request);
         }
         
-        public int eliminarPonente(int id_ponente) {
-            ProyectoOOIA.GestionHumanaWS.eliminarPonenteRequest inValue = new ProyectoOOIA.GestionHumanaWS.eliminarPonenteRequest();
-            inValue.id_ponente = id_ponente;
-            ProyectoOOIA.GestionHumanaWS.eliminarPonenteResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).eliminarPonente(inValue);
+        public int eliminarEspecialidad(int id_especialidad) {
+            ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadRequest inValue = new ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadRequest();
+            inValue.id_especialidad = id_especialidad;
+            ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).eliminarEspecialidad(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarPonenteResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarPonenteAsync(ProyectoOOIA.GestionHumanaWS.eliminarPonenteRequest request) {
-            return base.Channel.eliminarPonenteAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.eliminarEspecialidadAsync(ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadRequest request) {
+            return base.Channel.eliminarEspecialidadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarPonenteResponse> eliminarPonenteAsync(int id_ponente) {
-            ProyectoOOIA.GestionHumanaWS.eliminarPonenteRequest inValue = new ProyectoOOIA.GestionHumanaWS.eliminarPonenteRequest();
-            inValue.id_ponente = id_ponente;
-            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).eliminarPonenteAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadResponse> eliminarEspecialidadAsync(int id_especialidad) {
+            ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadRequest inValue = new ProyectoOOIA.GestionHumanaWS.eliminarEspecialidadRequest();
+            inValue.id_especialidad = id_especialidad;
+            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).eliminarEspecialidadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2553,26 +2589,26 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarCoordinador(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request) {
-            return base.Channel.insertarCoordinador(request);
+        ProyectoOOIA.GestionHumanaWS.modificarAlumnoResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.modificarAlumno(ProyectoOOIA.GestionHumanaWS.modificarAlumnoRequest request) {
+            return base.Channel.modificarAlumno(request);
         }
         
-        public int insertarCoordinador(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
-            ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest();
-            inValue.coordinador = coordinador;
-            ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarCoordinador(inValue);
+        public int modificarAlumno(ProyectoOOIA.GestionHumanaWS.alumno alumno) {
+            ProyectoOOIA.GestionHumanaWS.modificarAlumnoRequest inValue = new ProyectoOOIA.GestionHumanaWS.modificarAlumnoRequest();
+            inValue.alumno = alumno;
+            ProyectoOOIA.GestionHumanaWS.modificarAlumnoResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).modificarAlumno(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest request) {
-            return base.Channel.insertarCoordinadorAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarAlumnoResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.modificarAlumnoAsync(ProyectoOOIA.GestionHumanaWS.modificarAlumnoRequest request) {
+            return base.Channel.modificarAlumnoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.insertarCoordinadorResponse> insertarCoordinadorAsync(ProyectoOOIA.GestionHumanaWS.coordinador coordinador) {
-            ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest inValue = new ProyectoOOIA.GestionHumanaWS.insertarCoordinadorRequest();
-            inValue.coordinador = coordinador;
-            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).insertarCoordinadorAsync(inValue);
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.modificarAlumnoResponse> modificarAlumnoAsync(ProyectoOOIA.GestionHumanaWS.alumno alumno) {
+            ProyectoOOIA.GestionHumanaWS.modificarAlumnoRequest inValue = new ProyectoOOIA.GestionHumanaWS.modificarAlumnoRequest();
+            inValue.alumno = alumno;
+            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).modificarAlumnoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2670,26 +2706,26 @@ namespace ProyectoOOIA.GestionHumanaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.listar_coordinador_x_id(ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idRequest request) {
-            return base.Channel.listar_coordinador_x_id(request);
+        ProyectoOOIA.GestionHumanaWS.tipoUsuarioResponse ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.tipoUsuario(ProyectoOOIA.GestionHumanaWS.tipoUsuarioRequest request) {
+            return base.Channel.tipoUsuario(request);
         }
         
-        public ProyectoOOIA.GestionHumanaWS.coordinador listar_coordinador_x_id(int id_persona) {
-            ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idRequest inValue = new ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idRequest();
+        public int tipoUsuario(int id_persona) {
+            ProyectoOOIA.GestionHumanaWS.tipoUsuarioRequest inValue = new ProyectoOOIA.GestionHumanaWS.tipoUsuarioRequest();
             inValue.id_persona = id_persona;
-            ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listar_coordinador_x_id(inValue);
+            ProyectoOOIA.GestionHumanaWS.tipoUsuarioResponse retVal = ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).tipoUsuario(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.listar_coordinador_x_idAsync(ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idRequest request) {
-            return base.Channel.listar_coordinador_x_idAsync(request);
+        System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.tipoUsuarioResponse> ProyectoOOIA.GestionHumanaWS.GestionHumanaWS.tipoUsuarioAsync(ProyectoOOIA.GestionHumanaWS.tipoUsuarioRequest request) {
+            return base.Channel.tipoUsuarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idResponse> listar_coordinador_x_idAsync(int id_persona) {
-            ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idRequest inValue = new ProyectoOOIA.GestionHumanaWS.listar_coordinador_x_idRequest();
+        public System.Threading.Tasks.Task<ProyectoOOIA.GestionHumanaWS.tipoUsuarioResponse> tipoUsuarioAsync(int id_persona) {
+            ProyectoOOIA.GestionHumanaWS.tipoUsuarioRequest inValue = new ProyectoOOIA.GestionHumanaWS.tipoUsuarioRequest();
             inValue.id_persona = id_persona;
-            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).listar_coordinador_x_idAsync(inValue);
+            return ((ProyectoOOIA.GestionHumanaWS.GestionHumanaWS)(this)).tipoUsuarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

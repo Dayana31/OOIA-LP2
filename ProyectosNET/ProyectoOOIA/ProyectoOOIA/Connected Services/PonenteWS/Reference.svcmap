@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8082/AuxiliarWS/GestionAtencionWS?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/AuxiliarWS/GestionAtencionWS?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GestionAtencionWS1.xsd" MetadataType="Schema" ID="15b97663-0ba7-4d48-b1c6-88700793efff" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/GestionAtencionWS?xsd=1" />
-    <MetadataFile FileName="GestionAtencionWS1.wsdl" MetadataType="Wsdl" ID="a8ef9130-264b-4676-aab0-22c983c79c4e" SourceId="1" SourceUrl="http://localhost:8082/AuxiliarWS/GestionAtencionWS?WSDL" />
+    <MetadataFile FileName="GestionAtencionWS.wsdl" MetadataType="Wsdl" ID="44599907-f86f-4bb2-a21f-a6aadadadd22" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionAtencionWS?WSDL" />
+    <MetadataFile FileName="GestionAtencionWS.xsd" MetadataType="Schema" ID="410f1c6d-6fb4-42a2-9811-35f13f8eb11d" SourceId="1" SourceUrl="http://localhost:8080/AuxiliarWS/GestionAtencionWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

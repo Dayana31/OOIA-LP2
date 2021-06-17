@@ -106,12 +106,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\CursoLlevadoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\CursoWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\EspecialidadWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EvaluacionWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -205,89 +215,96 @@
     <Compile Include="Ventanas\Alumno\Eventos\frmAccesoEvento.Designer.cs">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmBuscarCursosLlevados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmBuscarCursosLlevados.Designer.cs">
+      <DependentUpon>frmBuscarCursosLlevados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmCargarCursos.cs">
     <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmCargarCursos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmCargarCursos.Designer.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarCursos.Designer.cs">
       <DependentUpon>frmCargarCursos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmCargarCursosLlevados.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarCursosLlevados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmCargarCursosLlevados.Designer.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarCursosLlevados.Designer.cs">
       <DependentUpon>frmCargarCursosLlevados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmCargarEvaluaciones.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarEvaluaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmCargarEvaluaciones.Designer.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarEvaluaciones.Designer.cs">
       <DependentUpon>frmCargarEvaluaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarPonente.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarCoordinador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarPonente.Designer.cs">
-      <DependentUpon>frmBuscarPonente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarCoordinador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarCoordinador.Designer.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarCoordinador.Designer.cs">
       <DependentUpon>frmBuscarCoordinador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarPonente.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPonente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarPonente.Designer.cs">
-      <DependentUpon>frmCargarPonente.cs</DependentUpon>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPonente.Designer.cs">
+      <DependentUpon>frmBuscarPonente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarEspecialidad.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPonente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarEspecialidad.Designer.cs">
-      <DependentUpon>frmCargarEspecialidad.cs</DependentUpon>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPonente.Designer.cs">
+      <DependentUpon>frmGestionarPonente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarPsicologo.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarEspecialidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarPsicologo.Designer.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarEspecialidad.Designer.cs">
+      <DependentUpon>frmGestionarEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPsicologo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPsicologo.Designer.cs">
       <DependentUpon>frmBuscarPsicologo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarProfesor.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarProfesor.Designer.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarProfesor.Designer.cs">
       <DependentUpon>frmBuscarProfesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarAlumno.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarAlumno.Designer.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarAlumno.Designer.cs">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarCoordinador.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarCoordinador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarCoordinador.Designer.cs">
-      <DependentUpon>frmCargarCoordinador.cs</DependentUpon>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarCoordinador.Designer.cs">
+      <DependentUpon>frmGestionarCoordinador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarPsicologo.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarPsicologo.Designer.cs">
-      <DependentUpon>frmCargarPsicologo.cs</DependentUpon>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPsicologo.Designer.cs">
+      <DependentUpon>frmGestionarPsicologo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarProfesor.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarProfesor.Designer.cs">
-      <DependentUpon>frmCargarProfesor.cs</DependentUpon>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarProfesor.Designer.cs">
+      <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarAlumno.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarAlumno.Designer.cs">
-      <DependentUpon>frmCargarAlumno.cs</DependentUpon>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarAlumno.Designer.cs">
+      <DependentUpon>frmGestionarAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Old\frmCargarCSVAlumnos.cs">
       <SubType>Form</SubType>
@@ -313,16 +330,16 @@
     <Compile Include="Ventanas\Coordinador\Eventos\frmMostrarPonentes.Designer.cs">
       <DependentUpon>frmMostrarPonentes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\frmCargarDatos.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\frmGestionarDatos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\frmCargarDatos.Designer.cs">
-      <DependentUpon>frmCargarDatos.cs</DependentUpon>
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\frmGestionarDatos.Designer.cs">
+      <DependentUpon>frmGestionarDatos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Atencion\frmCodigosAtencion.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Atencion\frmCodigosAtencion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventanas\Coordinador\Cargar Datos\Gestion_Atencion\frmCodigosAtencion.Designer.cs">
+    <Compile Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Atencion\frmCodigosAtencion.Designer.cs">
       <DependentUpon>frmCodigosAtencion.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Old\frmAgregarEventoAlumno.cs">
@@ -534,47 +551,50 @@
     <EmbeddedResource Include="Ventanas\Alumno\Eventos\frmAccesoEvento.resx">
       <DependentUpon>frmAccesoEvento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmBuscarCursosLlevados.resx">
+      <DependentUpon>frmBuscarCursosLlevados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmCargarCursos.resx">
       <DependentUpon>frmCargarCursos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmCargarCursosLlevados.resx">
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarCursosLlevados.resx">
       <DependentUpon>frmCargarCursosLlevados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Academica\frmCargarEvaluaciones.resx">
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Academica\frmCargarEvaluaciones.resx">
       <DependentUpon>frmCargarEvaluaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarPonente.resx">
-      <DependentUpon>frmBuscarPonente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarCoordinador.resx">
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarCoordinador.resx">
       <DependentUpon>frmBuscarCoordinador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarPsicologo.resx">
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPsicologo.resx">
       <DependentUpon>frmBuscarPsicologo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarProfesor.resx">
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarProfesor.resx">
       <DependentUpon>frmBuscarProfesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmBuscarAlumno.resx">
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarAlumno.resx">
       <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarPonente.resx">
-      <DependentUpon>frmCargarPonente.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Busqueda\frmBuscarPonente.resx">
+      <DependentUpon>frmBuscarPonente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarEspecialidad.resx">
-      <DependentUpon>frmCargarEspecialidad.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPonente.resx">
+      <DependentUpon>frmGestionarPonente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarCoordinador.resx">
-      <DependentUpon>frmCargarCoordinador.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarEspecialidad.resx">
+      <DependentUpon>frmGestionarEspecialidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarPsicologo.resx">
-      <DependentUpon>frmCargarPsicologo.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarCoordinador.resx">
+      <DependentUpon>frmGestionarCoordinador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarProfesor.resx">
-      <DependentUpon>frmCargarProfesor.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarPsicologo.resx">
+      <DependentUpon>frmGestionarPsicologo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Humana\frmCargarAlumno.resx">
-      <DependentUpon>frmCargarAlumno.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarProfesor.resx">
+      <DependentUpon>frmGestionarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Humana\Gestion\frmGestionarAlumno.resx">
+      <DependentUpon>frmGestionarAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Old\frmCargarCSVAlumnos.resx">
       <DependentUpon>frmCargarCSVAlumnos.cs</DependentUpon>
@@ -588,10 +608,10 @@
     <EmbeddedResource Include="Ventanas\Coordinador\Eventos\frmMostrarPonentes.resx">
       <DependentUpon>frmMostrarPonentes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\frmCargarDatos.resx">
-      <DependentUpon>frmCargarDatos.cs</DependentUpon>
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\frmGestionarDatos.resx">
+      <DependentUpon>frmGestionarDatos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventanas\Coordinador\Cargar Datos\Gestion_Atencion\frmCodigosAtencion.resx">
+    <EmbeddedResource Include="Ventanas\Coordinador\Gestionar Datos\Gestion_Atencion\frmCodigosAtencion.resx">
       <DependentUpon>frmCodigosAtencion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Old\frmAgregarEventoAlumno.resx">
@@ -822,6 +842,22 @@
     <None Include="Connected Services\CoordinadorWS\ProyectoOOIA.CoordinadorWS.modificarCoordinadorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\CursoLlevadoWS\CursoLlevadoWS.wsdl" />
+    <None Include="Connected Services\CursoLlevadoWS\CursoLlevadoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CursoLlevadoWS\ProyectoOOIA.CursoLlevadoWS.cursoLlevado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoLlevadoWS\ProyectoOOIA.CursoLlevadoWS.insertarCursoLlevadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoLlevadoWS\ProyectoOOIA.CursoLlevadoWS.listarCursoLlevadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CursoLlevadoWS\ProyectoOOIA.CursoLlevadoWS.modificarCursoLlevadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CursoWS\CursoWS.wsdl" />
     <None Include="Connected Services\CursoWS\CursoWS.xsd">
       <SubType>Designer</SubType>
@@ -858,6 +894,22 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EspecialidadWS\ProyectoOOIA.EspecialidadWS.modificarEspecialidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvaluacionWS\EvaluacionWS.wsdl" />
+    <None Include="Connected Services\EvaluacionWS\EvaluacionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EvaluacionWS\ProyectoOOIA.EvaluacionWS.evaluacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvaluacionWS\ProyectoOOIA.EvaluacionWS.insertarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvaluacionWS\ProyectoOOIA.EvaluacionWS.listarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EvaluacionWS\ProyectoOOIA.EvaluacionWS.modificarEvaluacionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\EventoAlumnoWS\EventoAlumno.wsdl" />
@@ -1148,8 +1200,8 @@
     <None Include="Connected Services\HorarioWS\ProyectoOOIA.HorarioWS.modificarHorarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\PonenteWS\GestionAtencionWS1.wsdl" />
-    <None Include="Connected Services\PonenteWS\GestionAtencionWS1.xsd">
+    <None Include="Connected Services\PonenteWS\GestionAtencionWS.wsdl" />
+    <None Include="Connected Services\PonenteWS\GestionAtencionWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\PonenteWS\ProyectoOOIA.PonenteWS.cita.datasource">
@@ -1401,6 +1453,18 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\CursoLlevadoWS\configuration91.svcinfo" />
+    <None Include="Connected Services\CursoLlevadoWS\configuration.svcinfo" />
+    <None Include="Connected Services\CursoLlevadoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\EvaluacionWS\configuration91.svcinfo" />
+    <None Include="Connected Services\EvaluacionWS\configuration.svcinfo" />
+    <None Include="Connected Services\EvaluacionWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Resources\Bunifu_UI_v1.5.dll" />
     <None Include="Resources\menos.png" />
     <None Include="Resources\mas.png" />
@@ -1423,8 +1487,10 @@
     <WCFMetadataStorage Include="Connected Services\CodigoAtencionWS\" />
     <WCFMetadataStorage Include="Connected Services\CodigoWS\" />
     <WCFMetadataStorage Include="Connected Services\CoordinadorWS\" />
+    <WCFMetadataStorage Include="Connected Services\CursoLlevadoWS\" />
     <WCFMetadataStorage Include="Connected Services\CursoWS\" />
     <WCFMetadataStorage Include="Connected Services\EspecialidadWS\" />
+    <WCFMetadataStorage Include="Connected Services\EvaluacionWS\" />
     <WCFMetadataStorage Include="Connected Services\EventoAlumnoWS\" />
     <WCFMetadataStorage Include="Connected Services\EventoWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionAtencionWS\" />

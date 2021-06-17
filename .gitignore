@@ -1,3 +1,27 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+
+/ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug/
+/ProyectosNET/ProyectoOOIA/ProyectoOOIA/bin/Debug/
 /SISTEMA-OOIA/nbproject/private/
 /GestionAcademicaModel/nbproject/private/
 /GestionAtencionModel/nbproject/private/
@@ -116,20 +140,16 @@ ProyectosJAVA/OOIAConfigMySql/nbproject/private/private.properties
 /ProyectosJAVA/ooiaCargaMasivaCSV/nbproject/private/
 /ProyectosJAVA/ooiaCargaMasivaCSV/build/
 /ProyectosJAVA/ooiaCargaMasivaCSV/dist/
-*.properties
+ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug/ProyectoOOIA.csproj.FileListAbsolute.txt
+*.cache
+ProyectosNET/ProyectoOOIA/ProyectoOOIA/bin/Debug/ProyectoOOIA.exe
+ProyectosNET/ProyectoOOIA/.vs/ProyectoOOIA/v16/.suo
 *.jar
-ProyectosJAVA/ooiaGestAtencionController/dist/lib/ooiaGestHumanaModel.jar
-ProyectosJAVA/ooiaGestAtencionController/dist/ooiaGestAtencionController.jar
-ProyectosJAVA/ooiaGestAtencionModel/build/built-jar.properties
-ProyectosJAVA/ooiaGestAtencionModel/dist/lib/ooiaGestHumanaModel.jar
-ProyectosJAVA/ooiaGestAtencionModel/dist/ooiaGestAtencionModel.jar
-ProyectosJAVA/ooiaGestEventosController/build/built-jar.properties
-*.class
-ProyectosJAVA/ooiaGestEventosController/build/classes/pe/edu/pucp/gestion_eventos/mysql/EventoMySQL.class
-ProyectosJAVA/ooiaGestEventosController/dist/lib/Interfaces.jar
-ProyectosJAVA/ooiaGestEventosController/dist/lib/OOIAConfigMySql.jar
-ProyectosJAVA/ooiaGestEventosController/dist/lib/ooiaGestEventosModel.jar
-ProyectosJAVA/ooiaGestEventosController/dist/lib/ooiaGestHumanaController.jar
-ProyectosJAVA/ooiaGestEventosController/dist/lib/ooiaGestHumanaModel.jar
-ProyectosJAVA/ooiaGestEventosController/dist/ooiaGestEventosController.jar
-ProyectosJAVA/ooiaGestEventosModel/dist/ooiaGestEventosModel.jar
+ProyectosNET/ProyectoOOIA/.vs/ProyectoOOIA/v16/.suo
+ProyectosNET/ProyectoOOIA/ProyectoOOIA/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.jar
+*.jar
+*.resources
+ProyectosNET/ProyectoOOIA/UpgradeLog6.htm
+*.htm
+ProyectosNET/ProyectoOOIA/.vs/ProyectoOOIA/v16/.suo

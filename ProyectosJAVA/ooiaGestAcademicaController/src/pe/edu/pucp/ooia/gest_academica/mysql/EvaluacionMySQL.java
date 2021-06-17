@@ -25,7 +25,7 @@ public class EvaluacionMySQL implements EvaluacionDAO{
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(DBManager.url, DBManager.user, DBManager.password);
-            cs = con.prepareCall("{call LISTAR_EVALUACION(?)}");
+            cs = con.prepareCall("{call LISTAR_EVALUCION(?)}");
             cs.setInt("_id_curso_llevado",id_curso_llevado);
             rs = cs.executeQuery();
             while(rs.next()){
